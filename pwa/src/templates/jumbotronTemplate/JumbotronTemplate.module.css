@@ -1,0 +1,28 @@
+.wrapper {
+  padding-block: 48px;
+  background-color: var(--utrecht-page-header-background-color) !important;
+}
+
+.container {
+  display: flex;
+  gap: var(--utrecht-space-inline-xl);
+}
+
+.content > * {
+  color: var(--utrecht-page-header-color);
+  --utrecht-heading-1-color: var(--utrecht-page-header-color);
+}
+
+.subtitle {
+  position: relative;
+  font-style: italic;
+  display: block;
+  margin-block-end: var(--utrecht-space-block-md);
+  font-size: var(--utrecht-heading-4-font-size);
+}
+
+.image {
+  width: 50% !important;
+  max-height: 400px;
+  object-fit: contain;
+}

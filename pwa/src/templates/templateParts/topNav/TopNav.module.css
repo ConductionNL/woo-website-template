@@ -1,0 +1,62 @@
+.container {
+  color: var(--utrecht-page-header-color);
+}
+
+.container,
+.dropDownList {
+  --utrecht-unordered-list-item-padding-inline-start: 0;
+  --utrecht-unordered-list-padding-inline-start: 0;
+  --utrecht-unordered-list-item-margin-block-end: 0;
+  --utrecht-unordered-list-item-margin-block-start: 0;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+
+  --utrecht-unordered-list-margin-block-start: 0;
+}
+.list > section {
+  display: flex;
+  align-items: center;
+}
+
+.list > section > *:hover > .dropDownList {
+  display: block;
+}
+
+.list > section > *,
+.dropDownList > * {
+  position: relative;
+  padding-inline: 14px !important;
+  padding-block: 14px !important;
+}
+
+.list > section > *:hover,
+.dropDownList > *:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.list > section > *::marker,
+.dropDownList > *::marker {
+  content: "" !important;
+}
+
+.dropDownList {
+  left: 0;
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  margin-block-start: 14px !important;
+  max-height: 430px;
+  overflow-y: scroll;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  max-height: 50px;
+  max-width: 200px;
+  vertical-align: middle;
+}

@@ -1,0 +1,30 @@
+.footer {
+  --utrecht-unordered-list-item-padding-inline-start: 0;
+  --utrecht-unordered-list-padding-inline-start: 0;
+  --utrecht-unordered-list-item-margin-block-end: 0;
+  --utrecht-unordered-list-item-margin-block-start: 0;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.list > .linksContainer > *:not(:last-child) {
+  margin-block-end: 16px;
+}
+
+.list > section > *:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.list > section li::marker {
+  content: "" !important;
+}
+
+.iconsContainer {
+  display: flex;
+  gap: 16px;
+}
