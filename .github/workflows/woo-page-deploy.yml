@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get the Product Website Template Code
+      - name: Get the WOO Website Template Code
         uses: actions/checkout@v2
         with:
-          repository: ConductionNL/product-website-template
+          repository: ConductionNL/woo-website-template
           ref: main
 
       # With special thanxs to https://github.com/SpicyPizza/create-envfile
