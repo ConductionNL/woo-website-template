@@ -5,7 +5,7 @@ import { PageHeader } from "@utrecht/component-library-react/dist/css-module";
 
 export const HeaderTemplate: React.FC = () => {
   return (
-    <PageHeader className={styles.wrapper}>
+    <PageHeader>
       <div className={styles.container}>Header</div>
     </PageHeader>
   );
