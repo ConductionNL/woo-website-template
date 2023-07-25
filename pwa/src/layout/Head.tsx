@@ -10,7 +10,7 @@ export const Head: React.FC = () => {
 
   return (
     <Helmet>
-      <title>{`Common Gateway | ${
+      <title>{`WOO | ${
         getPageTitle(gatsbyContext.pageContext?.breadcrumb.crumbs, gatsbyContext.location) ?? "Error"
       }`}</title>
       <link rel="icon" type="svg" href={process.env.GATSBY_FAVICON_URL} />

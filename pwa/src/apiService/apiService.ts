@@ -1,8 +1,6 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
 import toast from "react-hot-toast";
 
-import GitHub from "./resources/gitHub";
-
 interface PromiseMessage {
   loading?: string;
   success?: string;
@@ -24,10 +22,6 @@ export default class APIService {
         Accept: "application/vnd.github.html",
       },
     });
-  }
-
-  public get GitHub(): GitHub {
-    return new GitHub(this.gitHubClient, this.Send);
   }
 
   // Send method
