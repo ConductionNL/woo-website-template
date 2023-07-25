@@ -10,8 +10,6 @@ interface HeaderTemplateProps {
 
 export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName }) => {
   return (
-    <UtrechtPageHeader className={clsx(styles.container, [layoutClassName && layoutClassName])}>
-      To-do: make header
-    </UtrechtPageHeader>
+    <UtrechtPageHeader className={clsx([layoutClassName && layoutClassName])}>To-do: make header</UtrechtPageHeader>
   );
 };
