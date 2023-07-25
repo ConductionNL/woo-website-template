@@ -1,7 +1,12 @@
 import * as React from "react";
 import * as styles from "./FooterTemplate.module.css";
-import { UtrechtPageFooter } from "@utrecht/web-component-library-react";
+
+import { PageFooter } from "@utrecht/component-library-react/dist/css-module";
 
 export const FooterTemplate: React.FC = () => {
-  return <UtrechtPageFooter>To-do: make footer</UtrechtPageFooter>;
+  return (
+    <PageFooter>
+      <div className={styles.container}>To-do: make footer</div>
+    </PageFooter>
+  );
 };

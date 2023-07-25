@@ -1,15 +1,12 @@
 import * as React from "react";
 import * as styles from "./HeaderTemplate.module.css";
-import clsx from "clsx";
 
-import { UtrechtPageHeader } from "@utrecht/web-component-library-react";
+import { PageHeader } from "@utrecht/component-library-react/dist/css-module";
 
-interface HeaderTemplateProps {
-  layoutClassName?: string;
-}
-
-export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName }) => {
+export const HeaderTemplate: React.FC = () => {
   return (
-    <UtrechtPageHeader className={clsx([layoutClassName && layoutClassName])}>To-do: make header</UtrechtPageHeader>
+    <PageHeader className={styles.wrapper}>
+      <div className={styles.container}>Header</div>
+    </PageHeader>
   );
 };
