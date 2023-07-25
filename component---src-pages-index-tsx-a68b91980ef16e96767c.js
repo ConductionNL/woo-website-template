@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkproduct_website_template=self.webpackChunkproduct_website_template||[]).push([[6691],{9768:function(e,t,n){n.r(t),n.d(t,{default:function(){return u}});var a=n(5893);const s=()=>(0,a.jsx)("div",{children:"To-do: make landing template."});var u=()=>(0,a.jsx)(s,{})}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-a68b91980ef16e96767c.js.map
