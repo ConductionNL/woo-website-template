@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Page, PageContent, Heading1, Paragraph } from "@utrecht/component-library-react/dist/css-module";
 import { FiltersTemplate } from "../templateParts/filters/FiltersTemplate";
+import { RestulstTableTemplate } from "../templateParts/resultsTable/ResultsTableTemplate";
 
 export const LandingTemplate: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ export const LandingTemplate: React.FC = () => {
         </Paragraph>
 
         <FiltersTemplate />
+        <RestulstTableTemplate />
       </PageContent>
     </Page>
   );
