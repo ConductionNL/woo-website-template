@@ -23,7 +23,7 @@ export const WooCard: React.FC<WooCardProps> = ({ id, title, description, decisi
         <FontAwesomeIcon icon={faClock} /> {translateDate(i18n.language, decisionDate) ?? "-"}
       </div>
       <Heading2 className={styles.titleLink}>{title}</Heading2>
-      <Paragraph className={styles.description}>{description}</Paragraph>
+      <Paragraph>{description}</Paragraph>
     </div>
   );
 };
