@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid hsl(0 0% 82%);
+  padding-inline-start: 18px;
+  padding-inline-end: 18px;
+  padding-block-start: 18px;
+  padding-block-end: 18px;
+  max-width: 300px;
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+.container:hover > .titleLink {
+  text-decoration: underline;
+}
+
+.titleLink {
+  font-size: 28px;
+  overflow-wrap: break-word;
+  margin-block-end: 16px;
+}
+
+.date {
+  font-size: 16px;
+  margin-block-end: 8px;
+  font-weight: 100;
+}

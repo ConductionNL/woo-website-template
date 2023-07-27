@@ -1,0 +1,12 @@
+.container {
+  margin-block-start: var(--utrecht-space-block-3xl);
+}
+
+.container > *:not(:last-child) {
+  margin-block-end: var(--utrecht-space-block-lg);
+}
+
+.landingDisplaySwitchButtons {
+  align-items: center;
+  justify-content: flex-end;
+}

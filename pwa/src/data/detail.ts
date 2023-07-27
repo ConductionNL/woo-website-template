@@ -1,4 +1,4 @@
-export const TEMP_DETAIL_DATA = [
+export const TEMP_OBJECTS = [
   {
     id: "92620d6e-7112-4853-9f9d-a10859ea7e3d",
     name: "Voorbereiding en plaatsing schakelkast glasvezelnetwerk",
