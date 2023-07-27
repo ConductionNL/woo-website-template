@@ -1,8 +1,0 @@
-.tableRow {
-    cursor: pointer;
-  }
-  
-  .tableRow > * {
-    vertical-align: middle !important;
-  }
-  
