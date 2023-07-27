@@ -12,7 +12,7 @@ import {
   UnorderedListItem,
   Link,
 } from "@utrecht/component-library-react/dist/css-module";
-import { TEMP_DETAIL_DATA } from "../../data/detail";
+import { TEMP_OBJECTS } from "../../data/detail";
 import { translateDate } from "../../services/dateFormat";
 import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
@@ -26,7 +26,7 @@ interface ObjectDetailTemplateProps {
 export const ObjectDetailTemplate: React.FC<ObjectDetailTemplateProps> = ({ objectId }) => {
   const { t, i18n } = useTranslation();
 
-  const object = TEMP_DETAIL_DATA.find((object) => object.id === objectId);
+  const object = TEMP_OBJECTS.find((object) => object.id === objectId);
 
   return (
     <Page>
