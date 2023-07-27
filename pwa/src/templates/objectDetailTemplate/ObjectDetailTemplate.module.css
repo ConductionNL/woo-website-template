@@ -1,0 +1,16 @@
+.container {
+  margin-block-start: var(--utrecht-space-block-3xl);
+}
+
+.container > *:not(:last-child) {
+  margin-block-end: var(--utrecht-space-block-lg);
+}
+
+.backLink:hover {
+  cursor: pointer;
+}
+
+.list {
+    width: 100% !important;
+  }
+  

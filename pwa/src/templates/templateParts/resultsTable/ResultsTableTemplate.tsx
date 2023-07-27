@@ -33,7 +33,7 @@ export const RestulstTableTemplate: React.FC = () => {
 };
 
 const TEMP_OBJECTS = [
-  { id: "92620d6e-7112-4853-9f9d-a10859ea7e3d", name: "Object 1" },
-  { id: "142ea10e-7660-49dc-9eef-d49e87874d44", name: "Object 2" },
-  { id: "cc2a2f12-7ef0-4563-8338-ae7a1979178e", name: "Object 3" },
+  { id: "92620d6e-7112-4853-9f9d-a10859ea7e3d", name: "Voorbereiding en plaatsing schakelkast glasvezelnetwerk" },
+  { id: "142ea10e-7660-49dc-9eef-d49e87874d44", name: "Aantal WMO-vragen ingediend in 2020, 2021 en 2022" },
+  { id: "cc2a2f12-7ef0-4563-8338-ae7a1979178e", name: "Exploitatievergunningen Diggels Barendrecht B.V., Ristorante Papi en Café De Uitspanning B.V." },
 ];
