@@ -5,3 +5,11 @@
   padding-inline-start: var(--utrecht-page-padding-inline-start);
   padding-inline-end: var(--utrecht-page-padding-inline-end);
 }
+
+.title {
+  user-select: none;
+}
+
+.title:hover {
+  cursor: pointer;
+}
