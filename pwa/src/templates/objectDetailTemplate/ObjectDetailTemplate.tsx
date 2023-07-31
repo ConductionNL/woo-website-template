@@ -36,9 +36,11 @@ export const ObjectDetailTemplate: React.FC<ObjectDetailTemplateProps> = ({ obje
             <FontAwesomeIcon icon={faArrowLeft} /> Terug naar home
           </Link>
         </div>
+
         {object && (
           <>
             <Heading1>{object.name}</Heading1>
+
             <Table>
               <TableBody>
                 {object.reference && (
@@ -54,18 +56,21 @@ export const ObjectDetailTemplate: React.FC<ObjectDetailTemplateProps> = ({ obje
                     <TableCell>{object.subject}</TableCell>
                   </TableRow>
                 )}
+
                 {object.resume && (
                   <TableRow>
                     <TableCell>{t("Samenvatting")}</TableCell>
                     <TableCell>{object.resume}</TableCell>
                   </TableRow>
                 )}
+
                 {object.termOverrun && (
                   <TableRow>
                     <TableCell>{t("Termijnoverschrijding")}</TableCell>
                     <TableCell>{object.termOverrun}</TableCell>
                   </TableRow>
                 )}
+
                 {object.receiptDate && (
                   <TableRow>
                     <TableCell>{t("Ontvangstdatum")}</TableCell>
@@ -73,24 +78,28 @@ export const ObjectDetailTemplate: React.FC<ObjectDetailTemplateProps> = ({ obje
                     <TableCell>{translateDate(i18n.language, object.receiptDate) ?? "-"}</TableCell>
                   </TableRow>
                 )}
+
                 {object.decisionDate && (
                   <TableRow>
                     <TableCell>{t("Besluitdatum")} </TableCell>
                     <TableCell>{translateDate(i18n.language, object.decisionDate) ?? "-"}</TableCell>
                   </TableRow>
                 )}
+
                 {object.decision && (
                   <TableRow>
                     <TableCell>{t("Besluit")}</TableCell>
                     <TableCell>{object.decision}</TableCell>
                   </TableRow>
                 )}
+
                 {object?.["Theme's"] && (
                   <TableRow>
                     <TableCell>{t("Thema's")}</TableCell>
                     <TableCell>{object?.["Theme's"]}</TableCell>
                   </TableRow>
                 )}
+
                 {object?.["attachment information request"] && (
                   <TableRow>
                     <TableCell>{t("Bijlage informatieverzoek")}</TableCell>
@@ -101,6 +110,7 @@ export const ObjectDetailTemplate: React.FC<ObjectDetailTemplateProps> = ({ obje
                     </TableCell>
                   </TableRow>
                 )}
+
                 {object?.["attachment inventory list"] && (
                   <TableRow>
                     <TableCell>{t("Bijlage inventarisatielijst")}</TableCell>
@@ -121,6 +131,7 @@ export const ObjectDetailTemplate: React.FC<ObjectDetailTemplateProps> = ({ obje
                     </TableCell>
                   </TableRow>
                 )}
+
                 {object.attachments && (
                   <TableRow>
                     <TableCell>{t("Bijlagen")}</TableCell>
