@@ -1,4 +1,6 @@
 .container {
+  display: flex;
+  justify-content: space-between;
   margin: auto;
   box-sizing: border-box;
   max-inline-size: var(--utrecht-page-max-inline-size);
