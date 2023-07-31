@@ -1,0 +1,21 @@
+name: Build Check
+
+on:
+  pull_request:
+    branches:
+      - development
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: cd pwa && npm i
+
+      - name: Build
+        run: cd pwa && npm run build
