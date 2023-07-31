@@ -1,0 +1,13 @@
+.tableRow {
+  cursor: pointer;
+}
+
+.tableRow > * {
+  vertical-align: middle !important;
+}
+
+.ComponentsGrid {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
