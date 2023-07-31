@@ -1,15 +1,13 @@
 import * as React from "react";
 import { GlobalContext } from "./global";
 
-export type TLandingDisplayLayout = "cards" | "table";
+export type TResultsDisplayLayout = "cards" | "table";
 
 export interface IDisplayContext {
-  landingDisplayLayout: TLandingDisplayLayout;
+  [key: string]: TResultsDisplayLayout;
 }
 
-export const defaultDisplayContext: IDisplayContext = {
-  landingDisplayLayout: "cards",
-};
+export const defaultDisplayContext: IDisplayContext = {};
 
 export const useDisplayContext = () => {
   const [globalContext, setGlobalContext] = React.useContext(GlobalContext);
