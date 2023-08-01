@@ -3,7 +3,7 @@ import * as styles from "./ResultsDisplaySwitch.module.css";
 import clsx from "clsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGripVertical, faTable } from "@fortawesome/free-solid-svg-icons";
-import { TResultsDisplayLayout, useDisplayContext } from "../../context/displays";
+import { useDisplayContext } from "../../context/displays";
 import { Button, ButtonGroup } from "@utrecht/component-library-react/dist/css-module";
 
 interface ResultsDisplaySwitchProps {
@@ -12,18 +12,15 @@ interface ResultsDisplaySwitchProps {
 }
 
 const ResultsDisplaySwitch: React.FC<ResultsDisplaySwitchProps> = ({ layoutClassName, displayKey }) => {
-  const { displays, setDisplay } = useDisplayContext();
-
-  const getButtonAppearance = (display: TResultsDisplayLayout) =>
-    display === displays[displayKey] ? "secondary-action-button" : "subtle-button";
+  const { setDisplay } = useDisplayContext();
 
   return (
     <ButtonGroup className={clsx(styles.container, layoutClassName && layoutClassName)}>
-      <Button onClick={() => setDisplay({ [displayKey]: "cards" })} appearance={getButtonAppearance("cards")}>
+      <Button className={styles.button} onClick={() => setDisplay({ [displayKey]: "cards" })}>
         <FontAwesomeIcon icon={faGripVertical} /> Cards
       </Button>
 
-      <Button onClick={() => setDisplay({ [displayKey]: "table" })} appearance={getButtonAppearance("table")}>
+      <Button className={styles.button} onClick={() => setDisplay({ [displayKey]: "table" })}>
         <FontAwesomeIcon icon={faTable} /> Table
       </Button>
     </ButtonGroup>

@@ -1,3 +1,11 @@
 .container {
   align-items: center;
 }
+
+.button {
+  gap: var(--utrecht-icon-gap);
+}
+
+.button:hover {
+  cursor: pointer;
+}

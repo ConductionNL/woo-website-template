@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { InputText, SelectSingle } from "@conduction/components";
 import { useFiltersContext } from "../../../context/filters";
 import { Button } from "@utrecht/component-library-react/dist/css-module";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export const FiltersTemplate: React.FC = () => {
   const { filters, setFilters } = useFiltersContext();
@@ -38,7 +40,9 @@ export const FiltersTemplate: React.FC = () => {
         {...{ register, errors, control }}
       />
 
-      <Button type="submit">Zoeken</Button>
+      <Button className={styles.button} type="submit">
+        <FontAwesomeIcon icon={faMagnifyingGlass} /> Zoeken
+      </Button>
     </form>
   );
 };
