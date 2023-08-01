@@ -3,7 +3,7 @@
 }
 
 .button {
-  gap: var(--utrecht-icon-gap);
+  gap: var(--utrecht-icon-gap) !important;
 }
 
 .button:hover {
