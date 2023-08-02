@@ -6,10 +6,13 @@
   padding-inline-end: var(--utrecht-page-padding-inline-end);
 }
 
-.title {
-  user-select: none;
+.image {
+  max-height: 20px;
+  max-width: 200px;
+  vertical-align: middle;
+  margin-inline-end: 10px;
 }
 
-.title:hover {
+.image:hover {
   cursor: pointer;
 }

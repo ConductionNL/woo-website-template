@@ -1,9 +1,15 @@
-.form {
+.dropdownContent {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.form > * {
+.dropdownContent > * {
   flex: 1;
+}
+
+.dropdownContent > :not(:last-child) {
+  margin-inline-end: 8px;
 }
 
 .button {
@@ -12,4 +18,19 @@
 
 .button:hover {
   cursor: pointer;
+}
+
+.searchContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchContent > :not(:last-child) {
+  margin-inline-end: 8px;
+}
+
+.displaySwitchContainer {
+  display: flex;
+  justify-content: flex-end;
 }
