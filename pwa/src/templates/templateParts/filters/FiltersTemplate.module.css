@@ -5,3 +5,11 @@
 .form > * {
   flex: 1;
 }
+
+.button {
+  gap: var(--utrecht-icon-gap) !important;
+}
+
+.button:hover {
+  cursor: pointer;
+}

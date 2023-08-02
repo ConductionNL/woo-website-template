@@ -1,3 +1,11 @@
-.resultsDisplaySwitchButtons {
+.container {
   align-items: center;
+}
+
+.button {
+  gap: var(--utrecht-icon-gap) !important;
+}
+
+.button:hover {
+  cursor: pointer;
 }

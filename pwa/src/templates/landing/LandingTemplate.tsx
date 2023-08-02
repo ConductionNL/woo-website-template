@@ -2,13 +2,9 @@ import * as React from "react";
 import * as styles from "./LandingTemplate.module.css";
 import { Page, PageContent, Heading1, Paragraph } from "@utrecht/component-library-react/dist/css-module";
 import { FiltersTemplate } from "../templateParts/filters/FiltersTemplate";
-import { LandingDisplayTemplate } from "../templateParts/landingDisplayTemplate/LandingDisplayTemplate";
-import ResultsDisplaySwitch from "../../components/resultsDisplaySwitch/ResultsDisplaySwitch";
-import { useDisplayContext } from "../../context/displays";
+import { ResultsDisplayTemplate } from "../templateParts/resultsDisplayTemplate/ResultsDisplayTemplate";
 
 export const LandingTemplate: React.FC = () => {
-  const { displays } = useDisplayContext();
-
   return (
     <Page>
       <PageContent className={styles.container}>
@@ -22,12 +18,7 @@ export const LandingTemplate: React.FC = () => {
 
         <FiltersTemplate />
 
-        <ResultsDisplaySwitch
-          resultsDisplayType="landingDisplayLayout"
-          layoutClassName={styles.landingDisplaySwitchButtons}
-        />
-
-        <LandingDisplayTemplate type={displays.landingDisplayLayout} />
+        <ResultsDisplayTemplate displayKey="landing-results" />
       </PageContent>
     </Page>
   );

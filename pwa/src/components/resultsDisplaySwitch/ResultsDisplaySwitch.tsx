@@ -1,52 +1,28 @@
 import * as React from "react";
 import * as styles from "./ResultsDisplaySwitch.module.css";
-import _ from "lodash";
 import clsx from "clsx";
-import { Button, ButtonGroup } from "@utrecht/component-library-react/dist/css-module";
-import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGripVertical, faTable } from "@fortawesome/free-solid-svg-icons";
 import { useDisplayContext } from "../../context/displays";
-
-interface AcceptedFilters {
-  landingDisplayLayout: ["cards", "table"];
-}
+import { Button, ButtonGroup } from "@utrecht/component-library-react/dist/css-module";
 
 interface ResultsDisplaySwitchProps {
+  displayKey: string; // should implement with an unique key
   layoutClassName?: string;
-  resultsDisplayType: "landingDisplayLayout";
 }
 
-const ResultsDisplaySwitch: React.FC<ResultsDisplaySwitchProps> = ({ layoutClassName, resultsDisplayType }) => {
-  const { t } = useTranslation();
-  const { displays, setDisplay } = useDisplayContext();
-
-  const acceptedFilters: AcceptedFilters = {
-    landingDisplayLayout: ["cards", "table"],
-  };
+const ResultsDisplaySwitch: React.FC<ResultsDisplaySwitchProps> = ({ layoutClassName, displayKey }) => {
+  const { setDisplay } = useDisplayContext();
 
   return (
-    <ButtonGroup className={clsx(styles.resultsDisplaySwitchButtons, [layoutClassName] && layoutClassName)}>
-      {acceptedFilters[resultsDisplayType].map((displayType, idx: number) => {
-        let icon = faTable;
+    <ButtonGroup className={clsx(styles.container, layoutClassName && layoutClassName)}>
+      <Button className={styles.button} onClick={() => setDisplay({ [displayKey]: "cards" })}>
+        <FontAwesomeIcon icon={faGripVertical} /> Cards
+      </Button>
 
-        if (displayType === "table") icon = faTable;
-        if (displayType === "cards") icon = faGripVertical;
-
-        // TODO: Once the Rotterdam design system supports the "pressed" state,
-        // remove the `appereance` switch, and use the same appearance for each button.
-        return (
-          <Button
-            key={idx}
-            pressed={displays[resultsDisplayType] === displayType}
-            appearance={displays[resultsDisplayType] === displayType ? "secondary-action-button" : "subtle-button"}
-            onClick={() => setDisplay({ ...displays, [resultsDisplayType]: displayType })}
-          >
-            <FontAwesomeIcon icon={icon} />
-            <span>{t(_.upperFirst(displayType))}</span>
-          </Button>
-        );
-      })}
+      <Button className={styles.button} onClick={() => setDisplay({ [displayKey]: "table" })}>
+        <FontAwesomeIcon icon={faTable} /> Table
+      </Button>
     </ButtonGroup>
   );
 };
