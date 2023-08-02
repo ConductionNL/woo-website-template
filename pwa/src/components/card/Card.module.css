@@ -1,12 +1,15 @@
 .container {
   display: flex;
   flex-direction: column;
-  border: 1px solid hsl(0 0% 82%);
-  padding-inline-start: 18px;
-  padding-inline-end: 18px;
-  padding-block-start: 18px;
-  padding-block-end: 18px;
+  padding-inline-start: var(--utrecht-card-padding-inline-start);
+  padding-inline-end: var(--utrecht-card-padding-inline-end);
+  padding-block-start: var(--utrecht-card-padding-block-start);
+  padding-block-end: var(--utrecht-card-padding-block-end);
   max-width: 300px;
+
+  background-color: var(--utrecht-card-background-color);
+  border-radius: var(--utrehct-card-border-radius);
+  color: var(--utrecht-card-color);
 }
 
 .container:hover {
@@ -21,6 +24,7 @@
   font-size: 28px;
   overflow-wrap: break-word;
   margin-block-end: 16px;
+  color: var(--utrecht-card-color) !important;
 }
 
 .date {
