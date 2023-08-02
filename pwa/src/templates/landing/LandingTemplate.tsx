@@ -8,13 +8,9 @@ export const LandingTemplate: React.FC = () => {
   return (
     <Page>
       <PageContent className={styles.container}>
-        <Heading1>Title</Heading1>
+        <Heading1>Wooo dossiers van {process.env.GATSBY_ORGANISATION_NAME}</Heading1>
 
-        <Paragraph lead>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis pellentesque nisi quis venenatis.
-          Vestibulum sed metus ac augue dapibus feugiat. Aliquam erat volutpat. Praesent euismod ultricies rhoncus.
-          Donec rutrum tellus id turpis ornare, in imperdiet arcu commodo.{" "}
-        </Paragraph>
+        <Paragraph lead>Op deze pagina vind u de Woo dossiers van {process.env.GATSBY_ORGANISATION_NAME}</Paragraph>
 
         <FiltersTemplate />
 
