@@ -37,27 +37,23 @@ export const FiltersTemplate: React.FC = () => {
       </div>
 
       <div className={styles.dropdownContent}>
-        <div>
-          <FormLabel>Jaar</FormLabel>
-          <SelectSingle
-            options={TEMP_YEARS}
-            name="Jaar"
-            defaultValue={TEMP_YEARS.find((option) => option.value === filters.selectOne)}
-            isClearable
-            {...{ register, errors, control }}
-          />
-        </div>
+        <SelectSingle
+          options={TEMP_YEARS}
+          name="Jaar"
+          placeholder="Jaar"
+          defaultValue={TEMP_YEARS.find((option) => option.value === filters.selectOne)}
+          isClearable
+          {...{ register, errors, control }}
+        />
 
-        <div>
-          <FormLabel>Publicatietype</FormLabel>
-          <SelectSingle
-            options={TEMP_PUBLICATION_TYPES}
-            name="Publicatietype"
-            defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.selectOne)}
-            isClearable
-            {...{ register, errors, control }}
-          />
-        </div>
+        <SelectSingle
+          options={TEMP_PUBLICATION_TYPES}
+          name="Publicatietype"
+          placeholder="Publicatietype"
+          defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.selectOne)}
+          isClearable
+          {...{ register, errors, control }}
+        />
 
         <div className={styles.displaySwitchContainer}>
           <ResultsDisplaySwitch {...{ displayKey }} />
