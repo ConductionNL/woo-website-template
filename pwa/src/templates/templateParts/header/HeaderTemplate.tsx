@@ -8,9 +8,14 @@ export const HeaderTemplate: React.FC = () => {
   return (
     <PageHeader>
       <div className={styles.container}>
-        <span onClick={() => navigate("/")} className={styles.title}>
-          Wet open overheid (Woo)
-        </span>
+        <div className={styles.content}>
+          <img
+            className={styles.image}
+            onClick={() => navigate("/")}
+            src={process.env.GATSBY_HEADER_LOGO_URL}
+            alt={"Navbar-logo"}
+          />
+        </div>
       </div>
     </PageHeader>
   );
