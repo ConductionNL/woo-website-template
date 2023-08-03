@@ -1,4 +1,5 @@
 import { IFiltersContext } from "../../context/filters";
+import { filtersToQueryParams } from "../../services/filtersToQueryParams";
 import { TSendFunction } from "../apiService";
 import { AxiosInstance } from "axios";
 
@@ -12,7 +13,7 @@ export default class Verzoeken {
   }
 
   public getAll = async (filters?: IFiltersContext): Promise<any> => {
-    const { data } = await this._send(this._instance, "GET", `/openWOO`);
+    const { data } = await this._send(this._instance, "GET", `/openWOO?extend[]=all${filtersToQueryParams(filters)}`);
 
     return data;
   };
