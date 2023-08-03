@@ -5,15 +5,7 @@
   padding: 5rem 0 10rem;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%;
-}
-
-.content {
+.card {
   background-color: var(--utrecht-card-background-color);
   border-radius: var(--utrehct-card-border-radius);
   width: fit-content;
@@ -21,10 +13,8 @@
   padding-inline-end: 48px;
   padding-block-start: 40px;
   padding-block-end: 40px;
-
-  margin-inline-start: 48px;
 }
 
-.content > * {
+.card > * {
   color: var(--utrecht-card-color) !important;
 }
