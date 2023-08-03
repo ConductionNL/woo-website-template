@@ -4,10 +4,11 @@ import { CardsResultsTemplate } from "../cardsResultsTemplate/CardsResultsTempla
 import { TableResultsTemplate } from "../tableResultsTemplate/TableResultsTemplate";
 
 interface ResultsDisplayTemplateProps {
+  requests: any[];
   displayKey: string; // should implement with an unique key
 }
 
-export const ResultsDisplayTemplate: React.FC<ResultsDisplayTemplateProps> = ({ displayKey }) => {
+export const ResultsDisplayTemplate: React.FC<ResultsDisplayTemplateProps> = ({ requests, displayKey }) => {
   const { displays, setDisplay } = useDisplayContext();
 
   React.useEffect(() => {
@@ -18,8 +19,8 @@ export const ResultsDisplayTemplate: React.FC<ResultsDisplayTemplateProps> = ({ 
 
   return (
     <>
-      {displays[displayKey] === "cards" && <CardsResultsTemplate />}
-      {displays[displayKey] === "table" && <TableResultsTemplate />}
+      {displays[displayKey] === "cards" && <CardsResultsTemplate {...{ requests }} />}
+      {displays[displayKey] === "table" && <TableResultsTemplate {...{ requests }} />}
     </>
   );
 };

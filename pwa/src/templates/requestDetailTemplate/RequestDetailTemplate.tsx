@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as styles from "./ObjectDetailTemplate.module.css";
+import * as styles from "./RequestDetailTemplate.module.css";
 import {
   Page,
   PageContent,
@@ -12,21 +12,25 @@ import {
   UnorderedListItem,
   Link,
 } from "@utrecht/component-library-react/dist/css-module";
-import { TEMP_OBJECTS } from "../../data/detail";
 import { translateDate } from "../../services/dateFormat";
 import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { QueryClient } from "react-query";
+import { useWooRequests } from "../../hooks/wooRequests";
+import Skeleton from "react-loading-skeleton";
+import { getPDFName } from "../../services/getPDFName";
 
-interface ObjectDetailTemplateProps {
-  objectId: string;
+interface RequestDetailTemplateProps {
+  requestId: string;
 }
 
-export const ObjectDetailTemplate: React.FC<ObjectDetailTemplateProps> = ({ objectId }) => {
+export const RequestDetailTemplate: React.FC<RequestDetailTemplateProps> = ({ requestId }) => {
   const { t, i18n } = useTranslation();
 
-  const object = TEMP_OBJECTS.find((object) => object.id === objectId);
+  const queryClient = new QueryClient();
+  const getRequest = useWooRequests(queryClient).getOne(requestId);
 
   return (
     <Page>
@@ -37,110 +41,117 @@ export const ObjectDetailTemplate: React.FC<ObjectDetailTemplateProps> = ({ obje
           </Link>
         </div>
 
-        {object && (
+        {getRequest.isSuccess && (
           <>
-            <Heading1>{object.name}</Heading1>
+            <Heading1>{getRequest.data.Titel}</Heading1>
 
             <Table>
               <TableBody>
-                {object.reference && (
+                {getRequest.data.ID && (
                   <TableRow>
                     <TableCell>{t("Kenmerk")}</TableCell>
-                    <TableCell>{object.reference}</TableCell>
+                    <TableCell>{getRequest.data.ID}</TableCell>
                   </TableRow>
                 )}
 
-                {object.subject && (
+                {getRequest.data.Titel && (
                   <TableRow>
                     <TableCell>{t("Onderwerp")}</TableCell>
-                    <TableCell>{object.subject}</TableCell>
+                    <TableCell>{getRequest.data.Titel}</TableCell>
                   </TableRow>
                 )}
 
-                {object.resume && (
+                {getRequest.data.Samenvatting && (
                   <TableRow>
                     <TableCell>{t("Samenvatting")}</TableCell>
-                    <TableCell>{object.resume}</TableCell>
+                    <TableCell>{getRequest.data.Samenvatting}</TableCell>
                   </TableRow>
                 )}
 
-                {object.termOverrun && (
+                {getRequest.data.Termijnoverschrijding && (
                   <TableRow>
                     <TableCell>{t("Termijnoverschrijding")}</TableCell>
-                    <TableCell>{object.termOverrun}</TableCell>
+                    <TableCell>{getRequest.data.Termijnoverschrijding}</TableCell>
                   </TableRow>
                 )}
 
-                {object.receiptDate && (
+                {getRequest.data.Ontvangstdatum && (
                   <TableRow>
                     <TableCell>{t("Ontvangstdatum")}</TableCell>
 
-                    <TableCell>{translateDate(i18n.language, object.receiptDate) ?? "-"}</TableCell>
+                    <TableCell>{translateDate(i18n.language, getRequest.data.Ontvangstdatum) ?? "-"}</TableCell>
                   </TableRow>
                 )}
 
-                {object.decisionDate && (
+                {getRequest.data.Besluitdatum && (
                   <TableRow>
                     <TableCell>{t("Besluitdatum")} </TableCell>
-                    <TableCell>{translateDate(i18n.language, object.decisionDate) ?? "-"}</TableCell>
+                    <TableCell>{translateDate(i18n.language, getRequest.data.Besluitdatum) ?? "-"}</TableCell>
                   </TableRow>
                 )}
 
-                {object.decision && (
+                {getRequest.data.Besluit && (
                   <TableRow>
                     <TableCell>{t("Besluit")}</TableCell>
-                    <TableCell>{object.decision}</TableCell>
+                    <TableCell>{getRequest.data.Besluit}</TableCell>
                   </TableRow>
                 )}
 
-                {object?.["Theme's"] && (
+                {getRequest.data?.embedded?.Themas && (
                   <TableRow>
                     <TableCell>{t("Thema's")}</TableCell>
-                    <TableCell>{object?.["Theme's"]}</TableCell>
+                    <TableCell>
+                      {getRequest.data?.embedded?.Themas.map((thema: any, idx: number) => (
+                        <span key={idx}>
+                          {thema.Hoofdthema + (idx !== getRequest.data?.embedded?.Themas.length - 1 ? ", " : "")}
+                        </span>
+                      ))}
+                    </TableCell>
                   </TableRow>
                 )}
 
-                {object?.["attachment information request"] && (
+                {getRequest.data.URL_informatieverzoek && (
                   <TableRow>
                     <TableCell>{t("Bijlage informatieverzoek")}</TableCell>
                     <TableCell>
-                      <Link href={object?.["attachment information request"].href} target="blank">
-                        {object?.["attachment information request"].name}
+                      <Link href={getRequest.data.URL_informatieverzoek} target="blank">
+                        {getPDFName(getRequest.data.URL_informatieverzoek)}
                       </Link>
                     </TableCell>
                   </TableRow>
                 )}
 
-                {object?.["attachment inventory list"] && (
+                {getRequest.data.URL_inventarisatielijst && (
                   <TableRow>
                     <TableCell>{t("Bijlage inventarisatielijst")}</TableCell>
                     <TableCell>
-                      <Link href={object?.["attachment inventory list"].href} target="blank">
-                        {object?.["attachment inventory list"].name}
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                )}
-                {object?.["attachment decision"] && (
-                  <TableRow>
-                    <TableCell>{t("Bijlage besluit")}</TableCell>
-                    <TableCell>
-                      <Link href={object?.["attachment decision"].href} target="blank">
-                        {object?.["attachment decision"].name}
+                      <Link href={getRequest.data.URL_inventarisatielijst} target="blank">
+                        {getPDFName(getRequest.data.URL_inventarisatielijst)}
                       </Link>
                     </TableCell>
                   </TableRow>
                 )}
 
-                {object.attachments && (
+                {getRequest.data.URL_besluit && (
+                  <TableRow>
+                    <TableCell>{t("Bijlage besluit")}</TableCell>
+                    <TableCell>
+                      <Link href={getRequest.data.URL_besluit} target="blank">
+                        {getPDFName(getRequest.data.URL_besluit)}
+                      </Link>
+                    </TableCell>
+                  </TableRow>
+                )}
+
+                {getRequest.data?.embedded?.Bijlagen && (
                   <TableRow>
                     <TableCell>{t("Bijlagen")}</TableCell>
                     <TableCell>
-                      <UnorderedList className={styles.list}>
-                        {object.attachments.map((attachment) => (
+                      <UnorderedList>
+                        {getRequest.data?.embedded?.Bijlagen.map((bijlage: any, idx: number) => (
                           <UnorderedListItem>
-                            <Link href={attachment.href} target="blank">
-                              {attachment.name}
+                            <Link href={bijlage.URL_Bijlage} target="blank">
+                              {bijlage.Titel_Bijlage}
                             </Link>
                           </UnorderedListItem>
                         ))}
@@ -152,6 +163,7 @@ export const ObjectDetailTemplate: React.FC<ObjectDetailTemplateProps> = ({ obje
             </Table>
           </>
         )}
+        {getRequest.isLoading && <Skeleton height={"200px"} />}
       </PageContent>
     </Page>
   );

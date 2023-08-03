@@ -1,14 +1,25 @@
 import * as React from "react";
 import * as styles from "./CardsResultsTemplate.module.css";
-import { TEMP_OBJECTS } from "../../../data/detail";
 import { Card } from "../../../components/card/Card";
 
-export const CardsResultsTemplate: React.FC = () => {
+interface CardsResultsTemplateProps {
+  requests: any[];
+}
+
+export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requests }) => {
   return (
-    <div className={styles.ComponentsGrid}>
-      {TEMP_OBJECTS.map(({ id, name, resume, decisionDate }) => (
-        <Card key={id} id={id} title={name} description={resume} decisionDate={decisionDate} />
-      ))}
-    </div>
+    <>
+      <div className={styles.ComponentsGrid}>
+        {requests.map((request) => (
+          <Card
+            key={request.id}
+            id={request.id}
+            title={request.Titel}
+            description={request.Samenvatting}
+            decisionDate={request.Besluitdatum}
+          />
+        ))}
+      </div>
+    </>
   );
 };
