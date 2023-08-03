@@ -16,4 +16,10 @@ export default class Verzoeken {
 
     return data;
   };
+
+  public getOne = async (id: string): Promise<any> => {
+    const { data } = await this._send(this._instance, "GET", `/openWOO/${id}`);
+
+    return data;
+  };
 }

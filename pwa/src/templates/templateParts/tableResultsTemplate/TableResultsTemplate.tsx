@@ -9,11 +9,14 @@ import {
   TableCell,
 } from "@utrecht/component-library-react/dist/css-module";
 import { navigate } from "gatsby";
-import { TEMP_OBJECTS } from "../../../data/detail";
 import { translateDate } from "../../../services/dateFormat";
 import { useTranslation } from "react-i18next";
 
-export const TableResultsTemplate: React.FC = () => {
+interface TableResultsTemplateProps {
+  requests: any[];
+}
+
+export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requests }) => {
   const { i18n } = useTranslation();
 
   return (
@@ -23,16 +26,16 @@ export const TableResultsTemplate: React.FC = () => {
           <TableHeaderCell>Name</TableHeaderCell>
           <TableHeaderCell>Ontvangstdatum</TableHeaderCell>
           <TableHeaderCell>Besluitdatum</TableHeaderCell>
-          <TableHeaderCell>Kenmerk</TableHeaderCell>
+          <TableHeaderCell>Besluit</TableHeaderCell>
         </TableRow>
       </TableHeader>
       <TableBody>
-        {TEMP_OBJECTS.map((object) => (
-          <TableRow className={styles.tableRow} key={object.id} onClick={() => navigate(object.id)}>
-            <TableCell>{object.name}</TableCell>
-            <TableCell>{translateDate(i18n.language, object.receiptDate) ?? "-"}</TableCell>
-            <TableCell>{translateDate(i18n.language, object.decisionDate) ?? "-"}</TableCell>
-            <TableCell>{object.reference}</TableCell>
+        {requests.map((request) => (
+          <TableRow className={styles.tableRow} key={request.id} onClick={() => navigate(request.id)}>
+            <TableCell>{request.Titel}</TableCell>
+            <TableCell>{translateDate(i18n.language, request.Ontvangstdatum) ?? "-"}</TableCell>
+            <TableCell>{translateDate(i18n.language, request.Besluitdatum) ?? "-"}</TableCell>
+            <TableCell>{request.Besluit}</TableCell>
           </TableRow>
         ))}
       </TableBody>
