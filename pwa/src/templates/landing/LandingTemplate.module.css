@@ -5,8 +5,3 @@
 .container > *:not(:last-child) {
   margin-block-end: var(--utrecht-space-block-lg);
 }
-
-.landingDisplaySwitchButtons {
-  align-items: center;
-  justify-content: flex-end;
-}
