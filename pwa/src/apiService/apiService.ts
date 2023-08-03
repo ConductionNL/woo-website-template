@@ -1,6 +1,9 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
 import toast from "react-hot-toast";
 
+// Resources
+import wooRequests from "./resources/wooRequests";
+
 interface PromiseMessage {
   loading?: string;
   success?: string;
@@ -15,6 +18,20 @@ export type TSendFunction = (
 ) => Promise<AxiosResponse>;
 
 export default class APIService {
+  public get BaseClient(): AxiosInstance {
+    return axios.create({
+      baseURL: process.env.GATSBY_API_BASE_URL,
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+  }
+
+  public get wooRequests(): wooRequests {
+    return new wooRequests(this.BaseClient, this.Send);
+  }
+
   // Send method
   public Send: TSendFunction = (instance, method, endpoint, payload, promiseMessage) => {
     const _payload = JSON.stringify(payload);
