@@ -9,6 +9,7 @@ env: # Change these to your preferences any image url can also be a base encoded
   ORGANISATION_NAME: "xxllnc"
   JUMBOTRON_IMAGE_URL: "https://uploads.magnetme-images.com/bf3b2064d7a7c8a51b2c66608b62160f01ee478ab2df8a493635c92069405d35?auto=compress&auto=format&fit=crop&frame=0&h=1125&w=2000"
   FOOTER_LOGO_URL: "https://xxllnc.nl/wp-content/uploads/2021/04/xxllnc-kleur.svg"
+  FOOTER_LOGO_HREF: "https://xxllnc.nl/"
 
 on:
   push:
@@ -37,6 +38,7 @@ jobs:
           envkey_GATSBY_ORGANISATION_NAME: ${{ env.ORGANISATION_NAME }}
           envkey_GATSBY_JUMBOTRON_IMAGE_URL: ${{ env.JUMBOTRON_IMAGE_URL }}
           envkey_GATSBY_FOOTER_LOGO_URL: ${{ env.FOOTER_LOGO_URL }}
+          envkey_GATSBY_FOOTER_LOGO_HREF: ${{ env.FOOTER_LOGO_HREF }}
           directory: pwa/static
           file_name: .env.production
           fail_on_empty: true
