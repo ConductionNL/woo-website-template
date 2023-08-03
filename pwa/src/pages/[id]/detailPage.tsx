@@ -1,9 +1,9 @@
 import * as React from "react";
 import _ from "lodash";
 import { PageProps } from "gatsby";
-import { ObjectDetailTemplate } from "../../templates/objectDetailTemplate/ObjectDetailTemplate";
+import { RequestDetailTemplate } from "../../templates/requestDetailTemplate/RequestDetailTemplate";
 
 const DetailPage: React.FC<PageProps> = (props: PageProps) => {
-  return <ObjectDetailTemplate objectId={props.params.id} />;
+  return <RequestDetailTemplate requestId={props.params.id} />;
 };
 export default DetailPage;
