@@ -5,7 +5,7 @@
   padding: 5rem 0 10rem;
 }
 
-.content {
+.card {
   background-color: var(--utrecht-card-background-color);
   border-radius: var(--utrehct-card-border-radius);
   width: fit-content;
@@ -15,6 +15,6 @@
   padding-block-end: 40px;
 }
 
-.content > * {
+.card > * {
   color: var(--utrecht-card-color) !important;
 }

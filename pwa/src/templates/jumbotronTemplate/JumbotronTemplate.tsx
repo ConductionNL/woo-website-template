@@ -8,7 +8,7 @@ export const JumbotronTemplate: React.FC = () => {
       <Page>
         <PageContent>
           <div>
-            <div className={styles.content}>
+            <div className={styles.card}>
               <Heading2>Woo dossiers van {process.env.GATSBY_ORGANISATION_NAME}</Heading2>
 
               <Paragraph lead>
