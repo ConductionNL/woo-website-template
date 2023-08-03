@@ -2,15 +2,15 @@ import * as React from "react";
 import { GlobalContext } from "./global";
 
 export interface IFiltersContext {
-  name: string | undefined;
-  selectOne: string | undefined;
-  selectTwo: string | undefined;
+  _search: string | undefined;
+  year: string | undefined;
+  publicationType: string | undefined;
 }
 
 export const defaultFiltersContext: IFiltersContext = {
-  name: undefined,
-  selectOne: undefined,
-  selectTwo: undefined,
+  _search: undefined,
+  year: undefined,
+  publicationType: undefined,
 };
 
 export const useFiltersContext = () => {

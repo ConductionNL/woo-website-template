@@ -23,7 +23,11 @@ export const LandingTemplate: React.FC = () => {
         <PageContent className={styles.container}>
           <FiltersTemplate />
 
-          {getRequests.isSuccess && (
+          {getRequests.data?.results?.length === 0 && !getRequests.isLoading && (
+            <span>Geen WOO verzoeken gevonden.</span>
+          )}
+
+          {getRequests.data?.results && getRequests.data?.results?.length > 0 && (
             <ResultsDisplayTemplate displayKey="landing-results" requests={getRequests.data.results} />
           )}
 
