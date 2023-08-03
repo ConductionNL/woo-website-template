@@ -3,10 +3,15 @@ import * as styles from "./HeaderTemplate.module.css";
 
 import { PageHeader } from "@utrecht/component-library-react/dist/css-module";
 import { navigate } from "gatsby";
+import clsx from "clsx";
 
-export const HeaderTemplate: React.FC = () => {
+interface HeaderTemplateProps {
+  layoutClassName: string;
+}
+
+export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName }) => {
   return (
-    <PageHeader>
+    <PageHeader className={clsx(layoutClassName && layoutClassName)}>
       <div className={styles.container}>
         <img
           className={styles.image}
