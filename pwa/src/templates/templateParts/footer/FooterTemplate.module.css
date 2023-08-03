@@ -16,31 +16,6 @@
   --utrecht-unordered-list-item-margin-block-start: 0;
 }
 
-.list {
-  margin: auto;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  max-inline-size: var(--utrecht-page-max-inline-size);
-}
-
-.list > .linksContainer > *:not(:last-child) {
-  margin-block-end: 16px;
-}
-
-.list > section > *:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.list > section li::marker {
-  content: "" !important;
-}
-
-.test :not(:last-child) {
-  margin-block-end: 36px;
-}
-
 .image {
   max-height: 20px;
   max-width: 200px;
