@@ -12,7 +12,9 @@ export const FooterTemplate: React.FC = () => {
       <div className={styles.container}>
         <img
           className={styles.image}
-          onClick={() => navigate("/")}
+          onClick={() =>
+            process.env.GATSBY_FOOTER_LOGO_HREF ? open(process.env.GATSBY_FOOTER_LOGO_HREF) : navigate("/")
+          }
           src={process.env.GATSBY_FOOTER_LOGO_URL}
           alt={"Footer-logo"}
         />
