@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as styles from "./RequestDetailTemplate.module.css";
+import * as styles from "./WOOItemDetailTemplate.module.css";
 import {
   Page,
   PageContent,
