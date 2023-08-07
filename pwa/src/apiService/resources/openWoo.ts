@@ -3,7 +3,7 @@ import { filtersToQueryParams } from "../../services/filtersToQueryParams";
 import { TSendFunction } from "../apiService";
 import { AxiosInstance } from "axios";
 
-export default class Verzoeken {
+export default class OpenWoo {
   private _instance: AxiosInstance;
   private _send: TSendFunction;
 

@@ -18,19 +18,19 @@ import { navigate } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { QueryClient } from "react-query";
-import { useWooRequests } from "../../hooks/wooRequests";
+import { useOpenWoo } from "../../hooks/openWoo";
 import Skeleton from "react-loading-skeleton";
 import { getPDFName } from "../../services/getPDFName";
 
-interface RequestDetailTemplateProps {
-  requestId: string;
+interface WOOItemDetailTemplateProps {
+  wooItemId: string;
 }
 
-export const RequestDetailTemplate: React.FC<RequestDetailTemplateProps> = ({ requestId }) => {
+export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wooItemId }) => {
   const { t, i18n } = useTranslation();
 
   const queryClient = new QueryClient();
-  const getRequest = useWooRequests(queryClient).getOne(requestId);
+  const getItems = useOpenWoo(queryClient).getOne(wooItemId);
 
   return (
     <Page>
@@ -41,114 +41,114 @@ export const RequestDetailTemplate: React.FC<RequestDetailTemplateProps> = ({ re
           </Link>
         </div>
 
-        {getRequest.isSuccess && (
+        {getItems.isSuccess && (
           <>
-            <Heading1>{getRequest.data.Titel}</Heading1>
+            <Heading1>{getItems.data.Titel}</Heading1>
 
             <Table>
               <TableBody>
-                {getRequest.data.ID && (
+                {getItems.data.ID && (
                   <TableRow>
                     <TableCell>{t("Kenmerk")}</TableCell>
-                    <TableCell>{getRequest.data.ID}</TableCell>
+                    <TableCell>{getItems.data.ID}</TableCell>
                   </TableRow>
                 )}
 
-                {getRequest.data.Titel && (
+                {getItems.data.Titel && (
                   <TableRow>
                     <TableCell>{t("Onderwerp")}</TableCell>
-                    <TableCell>{getRequest.data.Titel}</TableCell>
+                    <TableCell>{getItems.data.Titel}</TableCell>
                   </TableRow>
                 )}
 
-                {getRequest.data.Samenvatting && (
+                {getItems.data.Samenvatting && (
                   <TableRow>
                     <TableCell>{t("Samenvatting")}</TableCell>
-                    <TableCell>{getRequest.data.Samenvatting}</TableCell>
+                    <TableCell>{getItems.data.Samenvatting}</TableCell>
                   </TableRow>
                 )}
 
-                {getRequest.data.Termijnoverschrijding && (
+                {getItems.data.Termijnoverschrijding && (
                   <TableRow>
                     <TableCell>{t("Termijnoverschrijding")}</TableCell>
-                    <TableCell>{getRequest.data.Termijnoverschrijding}</TableCell>
+                    <TableCell>{getItems.data.Termijnoverschrijding}</TableCell>
                   </TableRow>
                 )}
 
-                {getRequest.data.Ontvangstdatum && (
+                {getItems.data.Ontvangstdatum && (
                   <TableRow>
                     <TableCell>{t("Ontvangstdatum")}</TableCell>
 
-                    <TableCell>{translateDate(i18n.language, getRequest.data.Ontvangstdatum) ?? "-"}</TableCell>
+                    <TableCell>{translateDate(i18n.language, getItems.data.Ontvangstdatum) ?? "-"}</TableCell>
                   </TableRow>
                 )}
 
-                {getRequest.data.Besluitdatum && (
+                {getItems.data.Besluitdatum && (
                   <TableRow>
                     <TableCell>{t("Besluitdatum")} </TableCell>
-                    <TableCell>{translateDate(i18n.language, getRequest.data.Besluitdatum) ?? "-"}</TableCell>
+                    <TableCell>{translateDate(i18n.language, getItems.data.Besluitdatum) ?? "-"}</TableCell>
                   </TableRow>
                 )}
 
-                {getRequest.data.Besluit && (
+                {getItems.data.Besluit && (
                   <TableRow>
                     <TableCell>{t("Besluit")}</TableCell>
-                    <TableCell>{getRequest.data.Besluit}</TableCell>
+                    <TableCell>{getItems.data.Besluit}</TableCell>
                   </TableRow>
                 )}
 
-                {getRequest.data?.embedded?.Themas && (
+                {getItems.data?.embedded?.Themas && (
                   <TableRow>
                     <TableCell>{t("Thema's")}</TableCell>
                     <TableCell>
-                      {getRequest.data?.embedded?.Themas.map((thema: any, idx: number) => (
+                      {getItems.data?.embedded?.Themas.map((thema: any, idx: number) => (
                         <span key={idx}>
-                          {thema.Hoofdthema + (idx !== getRequest.data?.embedded?.Themas.length - 1 ? ", " : "")}
+                          {thema.Hoofdthema + (idx !== getItems.data?.embedded?.Themas.length - 1 ? ", " : "")}
                         </span>
                       ))}
                     </TableCell>
                   </TableRow>
                 )}
 
-                {getRequest.data.URL_informatieverzoek && (
+                {getItems.data.URL_informatieverzoek && (
                   <TableRow>
                     <TableCell>{t("Bijlage informatieverzoek")}</TableCell>
                     <TableCell>
-                      <Link href={getRequest.data.URL_informatieverzoek} target="blank">
-                        {getPDFName(getRequest.data.URL_informatieverzoek)}
+                      <Link href={getItems.data.URL_informatieverzoek} target="blank">
+                        {getPDFName(getItems.data.URL_informatieverzoek)}
                       </Link>
                     </TableCell>
                   </TableRow>
                 )}
 
-                {getRequest.data.URL_inventarisatielijst && (
+                {getItems.data.URL_inventarisatielijst && (
                   <TableRow>
                     <TableCell>{t("Bijlage inventarisatielijst")}</TableCell>
                     <TableCell>
-                      <Link href={getRequest.data.URL_inventarisatielijst} target="blank">
-                        {getPDFName(getRequest.data.URL_inventarisatielijst)}
+                      <Link href={getItems.data.URL_inventarisatielijst} target="blank">
+                        {getPDFName(getItems.data.URL_inventarisatielijst)}
                       </Link>
                     </TableCell>
                   </TableRow>
                 )}
 
-                {getRequest.data.URL_besluit && (
+                {getItems.data.URL_besluit && (
                   <TableRow>
                     <TableCell>{t("Bijlage besluit")}</TableCell>
                     <TableCell>
-                      <Link href={getRequest.data.URL_besluit} target="blank">
-                        {getPDFName(getRequest.data.URL_besluit)}
+                      <Link href={getItems.data.URL_besluit} target="blank">
+                        {getPDFName(getItems.data.URL_besluit)}
                       </Link>
                     </TableCell>
                   </TableRow>
                 )}
 
-                {getRequest.data?.embedded?.Bijlagen && (
+                {getItems.data?.embedded?.Bijlagen && (
                   <TableRow>
                     <TableCell>{t("Bijlagen")}</TableCell>
                     <TableCell>
                       <UnorderedList>
-                        {getRequest.data?.embedded?.Bijlagen.map((bijlage: any, idx: number) => (
+                        {getItems.data?.embedded?.Bijlagen.map((bijlage: any, idx: number) => (
                           <UnorderedListItem>
                             <Link href={bijlage.URL_Bijlage} target="blank">
                               {bijlage.Titel_Bijlage}
@@ -163,7 +163,7 @@ export const RequestDetailTemplate: React.FC<RequestDetailTemplateProps> = ({ re
             </Table>
           </>
         )}
-        {getRequest.isLoading && <Skeleton height={"200px"} />}
+        {getItems.isLoading && <Skeleton height={"200px"} />}
       </PageContent>
     </Page>
   );
