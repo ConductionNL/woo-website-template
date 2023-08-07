@@ -21,29 +21,29 @@ export const FiltersTemplate: React.FC = () => {
   } = useForm();
 
   const onSubmit = (data: any) => {
-    setFilters({ name: data.name, selectOne: data.selectOne?.value, selectTwo: data.selectTwo?.value });
+    setFilters({ _search: data.title, year: data.year?.value, publicationType: data.publicationType?.value });
   };
 
   const displayKey = "landing-results";
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-      <InputText name="search" placeholder="Zoek.." defaultValue={filters.name} {...{ register, errors }} />
+      <InputText name="title" placeholder="Zoek.." defaultValue={filters._search} {...{ register, errors }} />
 
       <SelectSingle
         options={TEMP_YEARS}
-        name="Jaar"
-        placeholder="Jaar"
-        defaultValue={TEMP_YEARS.find((option) => option.value === filters.selectOne)}
+        name="year"
+        placeholder="year"
+        defaultValue={TEMP_YEARS.find((option) => option.value === filters.year)}
         isClearable
         {...{ register, errors, control }}
       />
 
       <SelectSingle
         options={TEMP_PUBLICATION_TYPES}
-        name="Publicatietype"
+        name="publicationType"
         placeholder="Publicatietype"
-        defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.selectOne)}
+        defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.publicationType)}
         isClearable
         {...{ register, errors, control }}
       />
