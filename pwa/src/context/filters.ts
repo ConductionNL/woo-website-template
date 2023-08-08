@@ -8,7 +8,7 @@ export interface IFiltersContext {
 }
 
 export const defaultFiltersContext: IFiltersContext = {
-  _search: undefined,
+  _search: "",
   year: undefined,
   publicationType: undefined,
 };

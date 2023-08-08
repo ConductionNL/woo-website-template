@@ -4,27 +4,39 @@ import ResultsDisplaySwitch from "../../../components/resultsDisplaySwitch/Resul
 import { useForm } from "react-hook-form";
 import { InputText, SelectSingle } from "@conduction/components";
 import { useFiltersContext } from "../../../context/filters";
-import { Button, ButtonGroup } from "@utrecht/component-library-react/dist/css-module";
+import { Button } from "@utrecht/component-library-react/dist/css-module";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { TEMP_YEARS } from "../../../data/years";
 import { TEMP_PUBLICATION_TYPES } from "../../../data/PublicationType";
 
-export const FiltersTemplate: React.FC = () => {
+interface FiltersTemplateProps {
+  isLoading: boolean;
+}
+
+export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) => {
   const { filters, setFilters } = useFiltersContext();
+  const filterTimeout = React.useRef<NodeJS.Timeout | null>(null);
 
   const {
     control,
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm();
+
+  const watcher = watch();
 
   const onSubmit = (data: any) => {
     setFilters({ _search: data.title, year: data.year?.value, publicationType: data.publicationType?.value });
   };
 
-  const displayKey = "landing-results";
+  React.useEffect(() => {
+    if (filterTimeout.current) clearTimeout(filterTimeout.current);
+
+    filterTimeout.current = setTimeout(() => onSubmit(watcher), 500);
+  }, [watcher]);
 
   return (
     <div className={styles.container}>
@@ -49,12 +61,12 @@ export const FiltersTemplate: React.FC = () => {
           {...{ register, errors, control }}
         />
 
-        <Button type="submit" className={styles.button}>
-          <FontAwesomeIcon icon={faMagnifyingGlass} /> Zoeken
+        <Button type="submit" className={styles.button} disabled={isLoading}>
+          <FontAwesomeIcon icon={!isLoading ? faMagnifyingGlass : faSpinner} /> {!isLoading && "Zoeken"}
         </Button>
       </form>
 
-      <ResultsDisplaySwitch {...{ displayKey }} />
+      <ResultsDisplaySwitch displayKey="landing-results" />
     </div>
   );
 };

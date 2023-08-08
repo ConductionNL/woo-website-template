@@ -21,7 +21,7 @@ export const LandingTemplate: React.FC = () => {
 
       <Page>
         <PageContent className={styles.container}>
-          <FiltersTemplate />
+          <FiltersTemplate isLoading={getItems.isLoading} />
 
           {getItems.data?.results?.length === 0 && !getItems.isLoading && <span>Geen WOO verzoeken gevonden.</span>}
 
