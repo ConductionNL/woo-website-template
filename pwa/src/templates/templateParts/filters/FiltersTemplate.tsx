@@ -27,34 +27,34 @@ export const FiltersTemplate: React.FC = () => {
   const displayKey = "landing-results";
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-      <InputText name="title" placeholder="Zoek.." defaultValue={filters._search} {...{ register, errors }} />
+    <div className={styles.container}>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        <InputText name="title" placeholder="Zoek.." defaultValue={filters._search} {...{ register, errors }} />
 
-      <SelectSingle
-        options={TEMP_YEARS}
-        name="year"
-        placeholder="year"
-        defaultValue={TEMP_YEARS.find((option) => option.value === filters.year)}
-        isClearable
-        {...{ register, errors, control }}
-      />
+        <SelectSingle
+          options={TEMP_YEARS}
+          name="year"
+          placeholder="year"
+          defaultValue={TEMP_YEARS.find((option) => option.value === filters.year)}
+          isClearable
+          {...{ register, errors, control }}
+        />
 
-      <SelectSingle
-        options={TEMP_PUBLICATION_TYPES}
-        name="publicationType"
-        placeholder="Publicatietype"
-        defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.publicationType)}
-        isClearable
-        {...{ register, errors, control }}
-      />
+        <SelectSingle
+          options={TEMP_PUBLICATION_TYPES}
+          name="publicationType"
+          placeholder="Publicatietype"
+          defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.publicationType)}
+          isClearable
+          {...{ register, errors, control }}
+        />
 
-      <ButtonGroup className={styles.buttonContainer}>
         <Button type="submit" className={styles.button}>
           <FontAwesomeIcon icon={faMagnifyingGlass} /> Zoeken
         </Button>
-      </ButtonGroup>
+      </form>
 
       <ResultsDisplaySwitch {...{ displayKey }} />
-    </form>
+    </div>
   );
 };

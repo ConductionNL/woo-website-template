@@ -12,15 +12,23 @@ interface ResultsDisplaySwitchProps {
 }
 
 const ResultsDisplaySwitch: React.FC<ResultsDisplaySwitchProps> = ({ layoutClassName, displayKey }) => {
-  const { setDisplay } = useDisplayContext();
+  const { setDisplay, isActive } = useDisplayContext();
 
   return (
     <ButtonGroup className={clsx(styles.container, layoutClassName && layoutClassName)}>
-      <Button className={styles.button} onClick={() => setDisplay({ [displayKey]: "cards" })}>
+      <Button
+        appearance={isActive(displayKey, "cards") ? "primary-action-button" : "secondary-action-button"}
+        className={styles.button}
+        onClick={() => setDisplay({ [displayKey]: "cards" })}
+      >
         <FontAwesomeIcon icon={faGripVertical} /> Cards
       </Button>
 
-      <Button className={styles.button} onClick={() => setDisplay({ [displayKey]: "table" })}>
+      <Button
+        appearance={isActive(displayKey, "table") ? "primary-action-button" : "secondary-action-button"}
+        className={styles.button}
+        onClick={() => setDisplay({ [displayKey]: "table" })}
+      >
         <FontAwesomeIcon icon={faTable} /> Table
       </Button>
     </ButtonGroup>
