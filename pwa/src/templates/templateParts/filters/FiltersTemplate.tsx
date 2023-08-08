@@ -41,12 +41,12 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        <InputText name="title" placeholder="Zoek.." defaultValue={filters._search} {...{ register, errors }} />
+        <InputText name="title" placeholder="Zoeken.." defaultValue={filters._search} {...{ register, errors }} />
 
         <SelectSingle
           options={TEMP_YEARS}
           name="year"
-          placeholder="year"
+          placeholder="Jaar"
           defaultValue={TEMP_YEARS.find((option) => option.value === filters.year)}
           isClearable
           {...{ register, errors, control }}
