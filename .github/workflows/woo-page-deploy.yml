@@ -51,14 +51,11 @@ jobs:
         with:
           node-version: 14
 
-      - name: Remove old Npm cache
-        run: npm cache clean --force
+      - name: Install dependencies
+        run: cd pwa && npm install
 
       - name: Remove old Gatsby cache
         run: rm -rf pwa/.cache
-
-      - name: Install dependencies
-        run: cd pwa && npm install
 
       - name: Build application
         run: cd pwa && npm run build
