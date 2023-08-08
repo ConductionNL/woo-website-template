@@ -7,7 +7,7 @@
 
 .card {
   background-color: var(--utrecht-card-background-color);
-  border-radius: var(--utrehct-card-border-radius);
+  border-radius: var(--utrecht-card-border-radius);
   width: fit-content;
   padding-inline-start: 48px;
   padding-inline-end: 48px;

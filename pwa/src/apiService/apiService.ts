@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosResponse } from "axios";
 import toast from "react-hot-toast";
 
 // Resources
-import wooRequests from "./resources/wooRequests";
+import OpenWoo from "./resources/openWoo";
 
 interface PromiseMessage {
   loading?: string;
@@ -28,8 +28,8 @@ export default class APIService {
     });
   }
 
-  public get wooRequests(): wooRequests {
-    return new wooRequests(this.BaseClient, this.Send);
+  public get OpenWoo(): OpenWoo {
+    return new OpenWoo(this.BaseClient, this.Send);
   }
 
   // Send method
