@@ -14,8 +14,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Cleanup environment
-        run: rm -rf pwa/node_modules && rm -rf pwa/.cache && rm -rf pwa/public && npm cache clean --force && rm pwa/package-lock.json
+      - name: Remove cache, modules and public
+        run: rm -rf pwa/node_modules && rm -rf pwa/.cache && rm -rf pwa/public
 
       - name: Parcel/watcher
         run: npm i @parcel/watcher
