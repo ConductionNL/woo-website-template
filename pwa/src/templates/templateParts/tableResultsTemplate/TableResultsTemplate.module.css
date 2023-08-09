@@ -1,9 +1,19 @@
-.tableRow {
-  cursor: pointer;
+.table {
+  background-color: var(--utrecht-table-background-color) !important;
+}
+
+.tableHeader > * {
+  border-block-end: var(--utrecht-table-header-border-block-end-width) solid
+    var(--utrecht-table-header-border-block-end-color);
 }
 
 .tableRow > * {
   vertical-align: middle !important;
+}
+
+.tableRow:hover {
+  cursor: pointer;
+  background-color: var(--utrecht-table-row-hover-background-color) !important;
 }
 
 .ComponentsGrid {

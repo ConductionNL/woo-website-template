@@ -20,8 +20,8 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
   const { i18n } = useTranslation();
 
   return (
-    <Table>
-      <TableHeader>
+    <Table className={styles.table}>
+      <TableHeader className={styles.tableHeader}>
         <TableRow>
           <TableHeaderCell>Name</TableHeaderCell>
           <TableHeaderCell>Ontvangstdatum</TableHeaderCell>

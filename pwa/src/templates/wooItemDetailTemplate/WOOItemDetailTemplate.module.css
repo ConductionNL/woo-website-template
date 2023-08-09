@@ -1,3 +1,7 @@
+.table {
+  background-color: var(--utrecht-table-background-color) !important;
+}
+
 .container {
   margin-block-start: var(--utrecht-space-block-3xl);
 }

@@ -2,7 +2,7 @@
 @import "react-loading-skeleton/dist/skeleton.css";
 
 /* Design Tokens maintained by Conduction */
-@import "./../../node_modules/@conduction/theme/theme.css";
+@import "./../../node_modules/@conduction/theme/conduction-design-tokens/dist/index.css";
 @import "./../../node_modules/@conduction/theme/municipalities/leiden.css";
 @import "./../../node_modules/@conduction/theme/municipalities/xxllnc-design-tokens/dist/index.css";
 
