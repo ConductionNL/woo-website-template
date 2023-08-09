@@ -24,6 +24,9 @@
   font-size: 28px;
   overflow-wrap: break-word;
   margin-block-end: 16px;
+}
+
+.textColor {
   color: var(--utrecht-card-color) !important;
 }
 
