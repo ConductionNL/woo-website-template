@@ -24,6 +24,10 @@
   font-size: 28px;
   overflow-wrap: break-word;
   margin-block-end: 16px;
+}
+
+.title,
+.description {
   color: var(--utrecht-card-color) !important;
 }
 
