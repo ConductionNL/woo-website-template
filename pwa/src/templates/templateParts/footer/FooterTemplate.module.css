@@ -6,7 +6,6 @@
   max-inline-size: var(--utrecht-page-max-inline-size);
   padding-inline-start: var(--utrecht-page-padding-inline-start);
   padding-inline-end: var(--utrecht-page-padding-inline-end);
-  /* margin-block-start: 36px; */
   width: 100%;
 }
 
