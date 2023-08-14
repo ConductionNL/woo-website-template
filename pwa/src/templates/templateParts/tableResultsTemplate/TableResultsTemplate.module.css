@@ -1,5 +1,5 @@
 .table {
-  background-color: var(--utrecht-table-background-color) !important;
+  background-color: var(--utrecht-table-background-color);
 }
 
 .tableHeader > * {
@@ -13,7 +13,7 @@
 
 .tableRow:hover {
   cursor: pointer;
-  background-color: var(--utrecht-table-row-hover-background-color) !important;
+  background-color: var(--utrecht-table-row-hover-background-color);
 }
 
 .ComponentsGrid {

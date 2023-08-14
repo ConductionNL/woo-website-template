@@ -1,5 +1,5 @@
 .table {
-  background-color: var(--utrecht-table-background-color) !important;
+  background-color: var(--utrecht-table-background-color);
 }
 
 .container {

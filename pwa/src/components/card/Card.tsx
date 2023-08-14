@@ -24,9 +24,9 @@ export const Card: React.FC<CardProps> = ({ id, title, description, decisionDate
         <FontAwesomeIcon icon={faClock} /> {translateDate(i18n.language, decisionDate) ?? "-"}
       </div>
 
-      <Heading2 className={clsx(styles.title, styles.textColor)}>{title}</Heading2>
+      <Heading2 className={styles.title}>{title}</Heading2>
 
-      <Paragraph className={styles.textColor}>{description}</Paragraph>
+      <Paragraph className={styles.description}>{description}</Paragraph>
     </div>
   );
 };

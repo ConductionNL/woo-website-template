@@ -26,7 +26,8 @@
   margin-block-end: 16px;
 }
 
-.textColor {
+.title,
+.description {
   color: var(--utrecht-card-color) !important;
 }
 
