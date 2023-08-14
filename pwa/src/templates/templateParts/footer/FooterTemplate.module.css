@@ -6,7 +6,8 @@
   max-inline-size: var(--utrecht-page-max-inline-size);
   padding-inline-start: var(--utrecht-page-padding-inline-start);
   padding-inline-end: var(--utrecht-page-padding-inline-end);
-  margin-block-start: 36px;
+  /* margin-block-start: 36px; */
+  width: 100%;
 }
 
 .footer {
@@ -14,6 +15,11 @@
   --utrecht-unordered-list-padding-inline-start: 0;
   --utrecht-unordered-list-item-margin-block-end: 0;
   --utrecht-unordered-list-item-margin-block-start: 0;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: var(--utrecht-page-footer-min-height);
 }
 
 .image {

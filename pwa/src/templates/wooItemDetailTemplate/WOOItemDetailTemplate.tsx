@@ -46,37 +46,37 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
             <Heading1>{getItems.data.Titel}</Heading1>
 
             <Table className={styles.table}>
-              <TableBody>
+              <TableBody className={styles.tableBody}>
                 {getItems.data.ID && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Kenmerk")}</TableCell>
                     <TableCell>{getItems.data.ID}</TableCell>
                   </TableRow>
                 )}
 
                 {getItems.data.Titel && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Onderwerp")}</TableCell>
                     <TableCell>{getItems.data.Titel}</TableCell>
                   </TableRow>
                 )}
 
                 {getItems.data.Samenvatting && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Samenvatting")}</TableCell>
                     <TableCell>{getItems.data.Samenvatting}</TableCell>
                   </TableRow>
                 )}
 
                 {getItems.data.Termijnoverschrijding && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Termijnoverschrijding")}</TableCell>
                     <TableCell>{getItems.data.Termijnoverschrijding}</TableCell>
                   </TableRow>
                 )}
 
                 {getItems.data.Ontvangstdatum && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Ontvangstdatum")}</TableCell>
 
                     <TableCell>{translateDate(i18n.language, getItems.data.Ontvangstdatum) ?? "-"}</TableCell>
@@ -84,21 +84,21 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                 )}
 
                 {getItems.data.Besluitdatum && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Besluitdatum")} </TableCell>
                     <TableCell>{translateDate(i18n.language, getItems.data.Besluitdatum) ?? "-"}</TableCell>
                   </TableRow>
                 )}
 
                 {getItems.data.Besluit && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Besluit")}</TableCell>
                     <TableCell>{getItems.data.Besluit}</TableCell>
                   </TableRow>
                 )}
 
                 {getItems.data?.embedded?.Themas && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Thema's")}</TableCell>
                     <TableCell>
                       {getItems.data?.embedded?.Themas.map((thema: any, idx: number) => (
@@ -111,7 +111,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                 )}
 
                 {getItems.data.URL_informatieverzoek && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Bijlage informatieverzoek")}</TableCell>
                     <TableCell>
                       <Link href={getItems.data.URL_informatieverzoek} target="blank">
@@ -122,7 +122,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                 )}
 
                 {getItems.data.URL_inventarisatielijst && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Bijlage inventarisatielijst")}</TableCell>
                     <TableCell>
                       <Link href={getItems.data.URL_inventarisatielijst} target="blank">
@@ -133,7 +133,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                 )}
 
                 {getItems.data.URL_besluit && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Bijlage besluit")}</TableCell>
                     <TableCell>
                       <Link href={getItems.data.URL_besluit} target="blank">
@@ -144,7 +144,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                 )}
 
                 {getItems.data?.embedded?.Bijlagen && (
-                  <TableRow>
+                  <TableRow className={styles.tableRow}>
                     <TableCell>{t("Bijlagen")}</TableCell>
                     <TableCell>
                       <UnorderedList>
