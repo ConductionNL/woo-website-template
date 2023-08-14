@@ -4,7 +4,7 @@ import { Page, PageContent } from "@utrecht/component-library-react/dist/css-mod
 import { FiltersTemplate } from "../templateParts/filters/FiltersTemplate";
 import { ResultsDisplayTemplate } from "../templateParts/resultsDisplayTemplate/ResultsDisplayTemplate";
 import { JumbotronTemplate } from "../jumbotronTemplate/JumbotronTemplate";
-import { useWooRequests } from "../../hooks/wooRequests";
+import { useOpenWoo } from "../../hooks/openWoo";
 import { useFiltersContext } from "../../context/filters";
 import Skeleton from "react-loading-skeleton";
 import { QueryClient } from "react-query";
@@ -13,7 +13,7 @@ export const LandingTemplate: React.FC = () => {
   const { filters } = useFiltersContext();
 
   const queryClient = new QueryClient();
-  const getRequests = useWooRequests(queryClient).getAll({ ...filters });
+  const getItems = useOpenWoo(queryClient).getAll({ ...filters });
 
   return (
     <>
@@ -21,17 +21,15 @@ export const LandingTemplate: React.FC = () => {
 
       <Page>
         <PageContent className={styles.container}>
-          <FiltersTemplate />
+          <FiltersTemplate isLoading={getItems.isLoading} />
 
-          {getRequests.data?.results?.length === 0 && !getRequests.isLoading && (
-            <span>Geen WOO verzoeken gevonden.</span>
+          {getItems.data?.results?.length === 0 && !getItems.isLoading && <span>Geen WOO verzoeken gevonden.</span>}
+
+          {getItems.data?.results && getItems.data?.results?.length > 0 && (
+            <ResultsDisplayTemplate displayKey="landing-results" requests={getItems.data.results} />
           )}
 
-          {getRequests.data?.results && getRequests.data?.results?.length > 0 && (
-            <ResultsDisplayTemplate displayKey="landing-results" requests={getRequests.data.results} />
-          )}
-
-          {getRequests.isLoading && <Skeleton height={"200px"} />}
+          {getItems.isLoading && <Skeleton height={"200px"} />}
         </PageContent>
       </Page>
     </>

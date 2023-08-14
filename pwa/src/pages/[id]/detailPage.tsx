@@ -1,9 +1,9 @@
 import * as React from "react";
 import _ from "lodash";
 import { PageProps } from "gatsby";
-import { RequestDetailTemplate } from "../../templates/requestDetailTemplate/RequestDetailTemplate";
+import { WOOItemDetailTemplate } from "../../templates/wooItemDetailTemplate/WOOItemDetailTemplate";
 
 const DetailPage: React.FC<PageProps> = (props: PageProps) => {
-  return <RequestDetailTemplate requestId={props.params.id} />;
+  return <WOOItemDetailTemplate wooItemId={props.params.id} />;
 };
 export default DetailPage;

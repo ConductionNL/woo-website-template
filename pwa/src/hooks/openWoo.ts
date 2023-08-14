@@ -4,20 +4,20 @@ import APIService from "../apiService/apiService";
 import APIContext from "../apiService/apiContext";
 import { IFiltersContext } from "../context/filters";
 
-export const useWooRequests = (queryClient: QueryClient) => {
+export const useOpenWoo = (queryClient: QueryClient) => {
   const API: APIService | null = React.useContext(APIContext);
 
   const getAll = (filters: IFiltersContext) =>
-    useQuery<any, Error>(["wooRequests", filters], () => API?.wooRequests.getAll(filters), {
+    useQuery<any, Error>(["OpenWoo", filters], () => API?.OpenWoo.getAll(filters), {
       onError: (error) => {
         console.warn(error.message);
       },
     });
 
   const getOne = (requestId: string) =>
-    useQuery<any, Error>(["wooRequests", requestId], () => API?.wooRequests.getOne(requestId), {
+    useQuery<any, Error>(["OpenWoo", requestId], () => API?.OpenWoo.getOne(requestId), {
       initialData: () =>
-        queryClient.getQueryData<any[]>("wooRequests")?.find((_wooRequests) => _wooRequests.id === requestId),
+        queryClient.getQueryData<any[]>("OpenWoo")?.find((_OpenWoo) => _OpenWoo.id === requestId),
       onError: (error) => {
         throw new Error(error.message);
       },

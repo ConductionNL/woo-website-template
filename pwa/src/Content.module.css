@@ -11,7 +11,3 @@
   min-height: 100vh;
   margin-block-end: 48px;
 }
-
-.container > .header {
-  padding-block-end: 48px;
-}

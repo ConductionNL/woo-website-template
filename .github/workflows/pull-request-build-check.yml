@@ -14,6 +14,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Remove cache, modules and public
+        run: rm -rf pwa/node_modules && rm -rf pwa/.cache && rm -rf pwa/public
+
+      - name: Parcel/watcher
+        run: npm i @parcel/watcher
+
       - name: Install dependencies
         run: cd pwa && npm i
 

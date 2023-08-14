@@ -18,5 +18,7 @@ export const useDisplayContext = () => {
     setGlobalContext((oldGlobalContext) => ({ ...oldGlobalContext, displays: newDisplay }));
   };
 
-  return { displays, setDisplay };
+  const isActive = (key: string, expectedValue: TResultsDisplayLayout): boolean => displays[key] === expectedValue;
+
+  return { displays, setDisplay, isActive };
 };

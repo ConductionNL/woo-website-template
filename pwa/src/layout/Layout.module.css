@@ -10,3 +10,7 @@
 .pageContent {
   min-height: 100vh;
 }
+
+.document {
+  background-color: var(--utrecht-document-background-color);
+}
