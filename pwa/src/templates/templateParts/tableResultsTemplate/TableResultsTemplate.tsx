@@ -20,8 +20,8 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
   const { i18n } = useTranslation();
 
   return (
-    <Table>
-      <TableHeader>
+    <Table className={styles.table}>
+      <TableHeader className={styles.tableHeader}>
         <TableRow>
           <TableHeaderCell>Name</TableHeaderCell>
           <TableHeaderCell>Ontvangstdatum</TableHeaderCell>
@@ -29,7 +29,7 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
           <TableHeaderCell>Besluit</TableHeaderCell>
         </TableRow>
       </TableHeader>
-      <TableBody>
+      <TableBody className={styles.tableBody}>
         {requests.map((request) => (
           <TableRow className={styles.tableRow} key={request.id} onClick={() => navigate(request.id)}>
             <TableCell>{request.Titel}</TableCell>
