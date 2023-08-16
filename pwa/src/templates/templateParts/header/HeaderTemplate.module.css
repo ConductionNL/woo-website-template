@@ -6,11 +6,17 @@
   padding-inline-end: var(--utrecht-page-padding-inline-end);
 }
 
+.imageContainer {
+  height: var(--utrecht-page-header-logo-max-height);
+  width: var(--utrecht-page-header-logo-max-width);
+}
+
 .image {
-  max-height: 20px;
-  max-width: 200px;
   vertical-align: middle;
   margin-inline-end: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .image:hover {
