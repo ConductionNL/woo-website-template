@@ -13,7 +13,10 @@
 }
 
 .container:hover {
-  background-color: var(--utrecht-card-hover-background-color);
+  background-color: var(
+    --utrecht-card-hover-background-color,
+    var(--utrecht-card-background-color)
+  );
   cursor: pointer;
 }
 
@@ -25,7 +28,7 @@
   overflow-wrap: break-word;
   margin-block-end: 16px;
   border-block-end: var(--utrecht-card-header-border-block-end);
-  color: var(--utrecht-card-header-color, --utrecht-card-color) !important;
+  color: var(--utrecht-card-header-color, var(--utrecht-card-color)) !important;
 }
 
 .container:hover .title {
