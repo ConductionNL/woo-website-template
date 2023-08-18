@@ -9,7 +9,7 @@ export const JumbotronTemplate: React.FC = () => {
         <PageContent>
           <div>
             <div className={styles.card}>
-              <Heading2>Woo dossiers van {process.env.GATSBY_ORGANISATION_NAME}</Heading2>
+              <Heading2 className={styles.title}>Woo dossiers van {process.env.GATSBY_ORGANISATION_NAME}</Heading2>
 
               <Paragraph lead>
                 Op deze pagina vind u de Woo dossiers van {process.env.GATSBY_ORGANISATION_NAME}
