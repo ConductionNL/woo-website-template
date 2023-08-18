@@ -21,5 +21,5 @@
 
 .title {
   border-block-end: var(--utrecht-card-header-border-block-end);
-  color: var(--utrecht-card-header-color, --utrecht-card-color) !important;
+  color: var(--utrecht-card-header-color, var(--utrecht-card-color)) !important;
 }
