@@ -1,21 +1,21 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding-inline-start: var(--utrecht-card-padding-inline-start);
-  padding-inline-end: var(--utrecht-card-padding-inline-end);
-  padding-block-start: var(--utrecht-card-padding-block-start);
-  padding-block-end: var(--utrecht-card-padding-block-end);
+  padding-inline-start: var(--conduction-card-wrapper-padding-inline-start);
+  padding-inline-end: var(--conduction-card-wrapper-padding-inline-end);
+  padding-block-start: var(--conduction-card-wrapper-padding-block-start);
+  padding-block-end: var(--conduction-card-wrapper-padding-block-end);
   max-width: 300px;
 
-  background-color: var(--utrecht-card-background-color);
-  border-radius: var(--utrecht-card-border-radius);
-  color: var(--utrecht-card-color);
+  background-color: var(--conduction-card-wrapper-background-color);
+  border-radius: var(--conduction-card-wrapper-border-radius);
+  color: var(--conduction-card-wrapper-color);
 }
 
 .container:hover {
   background-color: var(
-    --utrecht-card-hover-background-color,
-    var(--utrecht-card-background-color)
+    --conduction-card-wrapper-hover-background-color,
+    var(--conduction-card-wrapper-background-color)
   );
   cursor: pointer;
 }
@@ -27,16 +27,21 @@
 .title {
   overflow-wrap: break-word;
   margin-block-end: 16px;
-  border-block-end: var(--utrecht-card-header-border-block-end);
-  color: var(--utrecht-card-header-color, var(--utrecht-card-color)) !important;
+  border-block-end: var(--conduction-card-wrapper-header-border-block-end);
+  color: var(
+    --conduction-card-wrapper-header-color,
+    var(--conduction-card-wrapper-color)
+  ) !important;
 }
 
 .container:hover .title {
-  border-block-end: var(--utrecht-card-header-hover-border-block-end);
+  border-block-end: var(
+    --conduction-card-wrapper-header-hover-border-block-end
+  );
 }
 
 .description {
-  color: var(--utrecht-card-color) !important;
+  color: var(--conduction-card-wrapper-color) !important;
 }
 
 .date {

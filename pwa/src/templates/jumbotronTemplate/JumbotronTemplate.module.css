@@ -6,8 +6,8 @@
 }
 
 .card {
-  background-color: var(--utrecht-card-background-color);
-  border-radius: var(--utrecht-card-border-radius);
+  background-color: var(--conduction-card-wrapper-background-color);
+  border-radius: var(--conduction-card-wrapper-border-radius);
   width: fit-content;
   padding-inline-start: 48px;
   padding-inline-end: 48px;
@@ -16,10 +16,10 @@
 }
 
 .card > * {
-  color: var(--utrecht-card-color) !important;
+  color: var(--conduction-card-wrapper-color) !important;
 }
 
 .title {
-  border-block-end: var(--utrecht-card-header-border-block-end);
-  color: var(--utrecht-card-header-color, var(--utrecht-card-color)) !important;
+  border-block-end: var(--conduction-card-wrapper-header-border-block-end);
+  color: var(--conduction-card-wrapper-header-color, var(--conduction-card-wrapper-color)) !important;
 }
