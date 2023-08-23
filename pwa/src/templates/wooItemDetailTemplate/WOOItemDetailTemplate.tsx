@@ -43,7 +43,9 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
 
         {getItems.isSuccess && (
           <>
-            <Heading1>{getItems.data.Titel}</Heading1>
+            {/* This heading is temporary untill all denhaag dependencies are removed from @conduction-components package */}
+            <h1 className={styles.heading1}>{getItems.data.Titel}</h1>
+            {/* <Heading1>{getItems.data.Titel}</Heading1> */}
 
             <Table className={styles.table}>
               <TableBody className={styles.tableBody}>
