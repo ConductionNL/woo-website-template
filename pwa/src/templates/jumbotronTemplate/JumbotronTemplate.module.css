@@ -13,6 +13,11 @@
   padding-block-end: 40px;
 }
 
+.card:hover {
+  background-color: var(--conduction-card-wrapper-background-color);
+  cursor: default;
+}
+
 .description {
   color: var(--conduction-card-wrapper-color) !important;
 }
@@ -20,7 +25,7 @@
 .title {
   border-block-end: var(--conduction-card-wrapper-header-border-block-end);
   color: var(
-    --conduction-card-wrapper-header-color,
+    --conduction-card-header-title-color,
     var(--conduction-card-wrapper-color)
   ) !important;
 }
