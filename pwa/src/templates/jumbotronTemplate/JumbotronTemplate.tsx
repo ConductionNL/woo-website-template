@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as styles from "./JumbotronTemplate.module.css";
 import { Heading2, Paragraph, Page, PageContent } from "@utrecht/component-library-react/dist/css-module";
+import { CardWrapper } from "@conduction/components/lib/components/card";
 
 export const JumbotronTemplate: React.FC = () => {
   return (
@@ -8,13 +9,13 @@ export const JumbotronTemplate: React.FC = () => {
       <Page>
         <PageContent>
           <div>
-            <div className={styles.card}>
+            <CardWrapper className={styles.card}>
               <Heading2 className={styles.title}>Woo dossiers van {process.env.GATSBY_ORGANISATION_NAME}</Heading2>
 
-              <Paragraph lead>
+              <Paragraph className={styles.description}>
                 Op deze pagina vind u de Woo dossiers van {process.env.GATSBY_ORGANISATION_NAME}
               </Paragraph>
-            </div>
+            </CardWrapper>
           </div>
         </PageContent>
       </Page>

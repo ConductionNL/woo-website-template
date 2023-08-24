@@ -2,12 +2,34 @@
   background-color: var(--utrecht-table-background-color);
   border-collapse: var(--utrecht-table-border-collapse);
 }
+
 .container {
   margin-block-start: var(--utrecht-space-block-3xl);
 }
 
 .container > *:not(:last-child) {
   margin-block-end: var(--utrecht-space-block-lg);
+}
+
+.heading1 {
+  color: var(
+    --utrecht-heading-1-color,
+    var(--utrecht-heading-color, var(--utrecht-document-color, inherit))
+  );
+  font-family: var(
+    --utrecht-heading-1-font-family,
+    var(--utrecht-heading-font-family, var(--utrecht-document-font-family))
+  );
+  font-size: var(--utrecht-heading-1-font-size);
+  font-weight: var(
+    --utrecht-heading-1-font-weight,
+    var(--utrecht-heading-font-weight, bold)
+  );
+  letter-spacing: var(--utrecht-heading-1-letter-spacing);
+  line-height: var(--utrecht-heading-1-line-height);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-transform: var(--utrecht-heading-1-text-transform, inherit);
 }
 
 .backLink:hover {
