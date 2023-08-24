@@ -13,12 +13,14 @@ export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName 
   return (
     <PageHeader className={clsx(layoutClassName && layoutClassName)}>
       <div className={styles.container}>
-        <img
-          className={styles.image}
-          onClick={() => navigate("/")}
-          src={process.env.GATSBY_HEADER_LOGO_URL}
-          alt={"Navbar-logo"}
-        />
+        <div className={styles.imageContainer}>
+          <img
+            className={styles.image}
+            onClick={() => navigate("/")}
+            src={process.env.GATSBY_HEADER_LOGO_URL}
+            alt={"Navbar-logo"}
+          />
+        </div>
       </div>
     </PageHeader>
   );

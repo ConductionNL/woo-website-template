@@ -43,7 +43,9 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
 
         {getItems.isSuccess && (
           <>
-            <Heading1>{getItems.data.Titel}</Heading1>
+            {/* This heading is temporary untill all denhaag dependencies are removed from @conduction-components package */}
+            <h1 className={styles.heading1}>{getItems.data.Titel}</h1>
+            {/* <Heading1>{getItems.data.Titel}</Heading1> */}
 
             <Table className={styles.table}>
               <TableBody className={styles.tableBody}>
@@ -149,8 +151,11 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     <TableCell>
                       <UnorderedList>
                         {getItems.data?.embedded?.Bijlagen.map((bijlage: any, idx: number) => (
-                          <UnorderedListItem>
-                            <Link href={bijlage.URL_Bijlage} target="blank">
+                          <UnorderedListItem key={idx}>
+                            <Link
+                              href={bijlage.URL_Bijlage.length !== 0 ? bijlage.URL_Bijlage : "#"}
+                              target={bijlage.URL_Bijlage.length !== 0 ? "blank" : ""}
+                            >
                               {bijlage.Titel_Bijlage}
                             </Link>
                           </UnorderedListItem>

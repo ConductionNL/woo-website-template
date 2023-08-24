@@ -10,14 +10,16 @@ export const FooterTemplate: React.FC = () => {
   return (
     <PageFooter className={styles.footer}>
       <div className={styles.container}>
-        <img
-          className={styles.image}
-          onClick={() =>
-            process.env.GATSBY_FOOTER_LOGO_HREF ? open(process.env.GATSBY_FOOTER_LOGO_HREF) : navigate("/")
-          }
-          src={process.env.GATSBY_FOOTER_LOGO_URL}
-          alt={"Footer-logo"}
-        />
+        <div className={styles.imageContainer}>
+          <img
+            className={styles.image}
+            onClick={() =>
+              process.env.GATSBY_FOOTER_LOGO_HREF ? open(process.env.GATSBY_FOOTER_LOGO_HREF) : navigate("/")
+            }
+            src={process.env.GATSBY_FOOTER_LOGO_URL}
+            alt={"Footer-logo"}
+          />
+        </div>
         <div>
           <Link className={styles.link} href="https://github.com/ConductionNL/woo-website-template" target="_blank">
             <FontAwesomeIcon icon={faCode} />
