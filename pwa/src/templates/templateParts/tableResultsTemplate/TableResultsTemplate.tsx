@@ -35,7 +35,7 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
             <TableCell>{request.Titel}</TableCell>
             <TableCell>{translateDate(i18n.language, request.Ontvangstdatum) ?? "-"}</TableCell>
             <TableCell>{translateDate(i18n.language, request.Besluitdatum) ?? "-"}</TableCell>
-            <TableCell>{request.Besluit}</TableCell>
+            <TableCell>{request.Besluit ?? "Geen besluit beschikbaar"}</TableCell>
           </TableRow>
         ))}
       </TableBody>
