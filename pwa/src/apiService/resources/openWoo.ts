@@ -13,7 +13,13 @@ export default class OpenWoo {
   }
 
   public getAll = async (filters?: IFiltersContext): Promise<any> => {
-    const { data } = await this._send(this._instance, "GET", `/openWOO?extend[]=all${filtersToQueryParams(filters)}`);
+    let url = `/openWOO?extend[]=all${filtersToQueryParams(filters)}`;
+
+    if (process.env.GATSBY_OIDN_NUMMER) {
+      url += `&oidn=${process.env.GATSBY_OIDN_NUMMER}`;
+    }
+
+    const { data } = await this._send(this._instance, "GET", url);
 
     return data;
   };
