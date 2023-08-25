@@ -29,7 +29,12 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   const watcher = watch();
 
   const onSubmit = (data: any) => {
-    setFilters({ _search: data.title, year: data.year?.value, publicationType: data.publicationType?.value });
+    setFilters({
+      _search: data.title,
+      "Ontvangstdatum[after]": data.year?.after,
+      "Ontvangstdatum[before]": data.year?.before,
+      publicationType: data.publicationType?.value,
+    });
   };
 
   React.useEffect(() => {
@@ -47,7 +52,6 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
           options={TEMP_YEARS}
           name="year"
           placeholder="Jaar"
-          defaultValue={TEMP_YEARS.find((option) => option.value === filters.year)}
           isClearable
           {...{ register, errors, control }}
         />
@@ -58,6 +62,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
           placeholder="Publicatietype"
           defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.publicationType)}
           isClearable
+          disabled
           {...{ register, errors, control }}
         />
 
