@@ -1,4 +1,4 @@
-export const TEMP_YEARS = [
+export const YEARS = [
   {
     label: "2023",
     value: "2023",

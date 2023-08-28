@@ -7,8 +7,7 @@ import { useFiltersContext } from "../../../context/filters";
 import { Button } from "@utrecht/component-library-react/dist/css-module";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faSpinner } from "@fortawesome/free-solid-svg-icons";
-import { TEMP_YEARS } from "../../../data/years";
-import { TEMP_PUBLICATION_TYPES } from "../../../data/PublicationType";
+import { YEARS } from "../../../data/years";
 
 interface FiltersTemplateProps {
   isLoading: boolean;
@@ -48,23 +47,16 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <InputText name="title" placeholder="Zoeken.." defaultValue={filters._search} {...{ register, errors }} />
 
-        <SelectSingle
-          options={TEMP_YEARS}
-          name="year"
-          placeholder="Jaar"
-          isClearable
-          {...{ register, errors, control }}
-        />
+        <SelectSingle options={YEARS} name="year" placeholder="Jaar" isClearable {...{ register, errors, control }} />
 
-        <SelectSingle
+        {/* <SelectSingle
           options={TEMP_PUBLICATION_TYPES}
           name="publicationType"
           placeholder="Publicatietype"
           defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.publicationType)}
           isClearable
-          disabled
           {...{ register, errors, control }}
-        />
+        /> */}
 
         <Button type="submit" className={styles.button} disabled={isLoading}>
           <FontAwesomeIcon icon={!isLoading ? faMagnifyingGlass : faSpinner} /> {!isLoading && "Zoeken"}
