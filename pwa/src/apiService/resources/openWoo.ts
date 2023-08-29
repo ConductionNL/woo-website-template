@@ -3,7 +3,7 @@ import { filtersToQueryParams } from "../../services/filtersToQueryParams";
 import { TSendFunction } from "../apiService";
 import { AxiosInstance } from "axios";
 
-export const OPEN_WOO_LIMIT = 1;
+export const OPEN_WOO_LIMIT = 6;
 
 export default class OpenWoo {
   private _instance: AxiosInstance;
