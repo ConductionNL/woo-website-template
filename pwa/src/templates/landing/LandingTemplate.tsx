@@ -9,19 +9,14 @@ import { useFiltersContext } from "../../context/filters";
 import Skeleton from "react-loading-skeleton";
 import { QueryClient } from "react-query";
 import { Pagination } from "@conduction/components";
-import { OPEN_WOO_LIMIT } from "../../apiService/resources/openWoo";
+import { usePaginationContext } from "../../context/pagination";
 
 export const LandingTemplate: React.FC = () => {
+  const { currentPage, setCurrentPage } = usePaginationContext();
   const { filters } = useFiltersContext();
-  const [currentPage, setCurrentPage] = React.useState<number>(1);
 
   const queryClient = new QueryClient();
-  const getItems = useOpenWoo(queryClient).getAll({ ...filters });
-
-  // count: getLogs.data.results.length,
-  // offset: CHANNEL_LOG_LIMIT * (currentLogsPage - 1),
-  // pages: getLogs.data.pages,
-  // total: getLogs.data.total,
+  const getItems = useOpenWoo(queryClient).getAll(filters, currentPage);
 
   return (
     <>
@@ -36,7 +31,7 @@ export const LandingTemplate: React.FC = () => {
             <>
               <ResultsDisplayTemplate displayKey="landing-results" requests={getItems.data.results} />
 
-              <Pagination totalPages={getItems.data.total} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+              <Pagination totalPages={getItems.data.pages} {...{ currentPage, setCurrentPage }} />
             </>
           )}
 
