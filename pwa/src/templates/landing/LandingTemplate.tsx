@@ -8,12 +8,20 @@ import { useOpenWoo } from "../../hooks/openWoo";
 import { useFiltersContext } from "../../context/filters";
 import Skeleton from "react-loading-skeleton";
 import { QueryClient } from "react-query";
+import { Pagination } from "@conduction/components";
+import { OPEN_WOO_LIMIT } from "../../apiService/resources/openWoo";
 
 export const LandingTemplate: React.FC = () => {
   const { filters } = useFiltersContext();
+  const [currentPage, setCurrentPage] = React.useState<number>(1);
 
   const queryClient = new QueryClient();
   const getItems = useOpenWoo(queryClient).getAll({ ...filters });
+
+  // count: getLogs.data.results.length,
+  // offset: CHANNEL_LOG_LIMIT * (currentLogsPage - 1),
+  // pages: getLogs.data.pages,
+  // total: getLogs.data.total,
 
   return (
     <>
@@ -25,7 +33,11 @@ export const LandingTemplate: React.FC = () => {
           {getItems.data?.results?.length === 0 && !getItems.isLoading && <span>Geen WOO verzoeken gevonden.</span>}
 
           {getItems.data?.results && getItems.data?.results?.length > 0 && (
-            <ResultsDisplayTemplate displayKey="landing-results" requests={getItems.data.results} />
+            <>
+              <ResultsDisplayTemplate displayKey="landing-results" requests={getItems.data.results} />
+
+              <Pagination totalPages={getItems.data.total} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+            </>
           )}
 
           {getItems.isLoading && <Skeleton height={"200px"} />}

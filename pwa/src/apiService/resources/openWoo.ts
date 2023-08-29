@@ -3,6 +3,8 @@ import { filtersToQueryParams } from "../../services/filtersToQueryParams";
 import { TSendFunction } from "../apiService";
 import { AxiosInstance } from "axios";
 
+export const OPEN_WOO_LIMIT = 1;
+
 export default class OpenWoo {
   private _instance: AxiosInstance;
   private _send: TSendFunction;
@@ -13,7 +15,7 @@ export default class OpenWoo {
   }
 
   public getAll = async (filters?: IFiltersContext): Promise<any> => {
-    let url = `/openWOO?extend[]=all${filtersToQueryParams(filters)}`;
+    let url = `/openWOO?extend[]=all${filtersToQueryParams(filters)}&_limit=${OPEN_WOO_LIMIT}`;
 
     if (process.env.GATSBY_OIDN_NUMBER && process.env.GATSBY_OIDN_NUMBER !== " ") {
       url += `&oidn=${process.env.GATSBY_OIDN_NUMBER}`;
