@@ -3,6 +3,8 @@ import { filtersToQueryParams } from "../../services/filtersToQueryParams";
 import { TSendFunction } from "../apiService";
 import { AxiosInstance } from "axios";
 
+export const OPEN_WOO_LIMIT = 6;
+
 export default class OpenWoo {
   private _instance: AxiosInstance;
   private _send: TSendFunction;
@@ -12,8 +14,8 @@ export default class OpenWoo {
     this._send = send;
   }
 
-  public getAll = async (filters?: IFiltersContext): Promise<any> => {
-    let endpoint = `/openWOO?extend[]=all${filtersToQueryParams(filters)}`;
+  public getAll = async (filters: IFiltersContext, currentPage: number): Promise<any> => {
+    let endpoint = `/openWOO?extend[]=all${filtersToQueryParams(filters)}&_limit=${OPEN_WOO_LIMIT}&_page=${currentPage}`;
 
     if (process.env.GATSBY_OIDN_NUMBER) {
       endpoint += `&oidn=${process.env.GATSBY_OIDN_NUMBER}`;
