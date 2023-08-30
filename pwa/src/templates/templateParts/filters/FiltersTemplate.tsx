@@ -7,7 +7,7 @@ import { useFiltersContext } from "../../../context/filters";
 import { Button } from "@utrecht/component-library-react/dist/css-module";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faSpinner } from "@fortawesome/free-solid-svg-icons";
-import { YEARS } from "../../../data/years";
+import { generateYearsArray } from "../../../data/years";
 
 interface FiltersTemplateProps {
   isLoading: boolean;
@@ -47,7 +47,13 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <InputText name="title" placeholder="Zoeken.." defaultValue={filters._search} {...{ register, errors }} />
 
-        <SelectSingle options={YEARS} name="year" placeholder="Jaar" isClearable {...{ register, errors, control }} />
+        <SelectSingle
+          options={generateYearsArray(28)}
+          name="year"
+          placeholder="Jaar"
+          isClearable
+          {...{ register, errors, control }}
+        />
 
         {/* <SelectSingle
           options={TEMP_PUBLICATION_TYPES}

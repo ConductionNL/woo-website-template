@@ -1,170 +1,20 @@
-export const YEARS = [
-  {
-    label: "2023",
-    value: "2023",
-    before: "2024-01-01",
-    after: "2022-12-31",
-  },
-  {
-    label: "2022",
-    value: "2022",
-    before: "2023-01-01",
-    after: "2021-12-31",
-  },
-  {
-    label: "2021",
-    value: "2021",
-    before: "2022-01-01",
-    after: "2020-12-31",
-  },
-  {
-    label: "2020",
-    value: "2020",
-    before: "2021-01-01",
-    after: "2019-12-31",
-  },
-  {
-    label: "2019",
-    value: "2019",
-    before: "2020-01-01",
-    after: "2018-12-31",
-  },
-  {
-    label: "2018",
-    value: "2018",
-    before: "2019-01-01",
-    after: "2017-12-31",
-  },
-  {
-    label: "2017",
-    value: "2017",
-    before: "2018-01-01",
-    after: "2016-12-31",
-  },
-  {
-    label: "2016",
-    value: "2016",
-    before: "2017-01-01",
-    after: "2015-12-31",
-  },
-  {
-    label: "2015",
-    value: "2015",
-    before: "2016-01-01",
-    after: "2014-12-31",
-  },
-  {
-    label: "2014",
-    value: "2014",
-    before: "2015-01-01",
-    after: "2013-12-31",
-  },
-  {
-    label: "2013",
-    value: "2013",
-    before: "2014-01-01",
-    after: "2012-12-31",
-  },
-  {
-    label: "2012",
-    value: "2012",
-    before: "2013-01-01",
-    after: "2011-12-31",
-  },
-  {
-    label: "2011",
-    value: "2011",
-    before: "2012-01-01",
-    after: "2010-12-31",
-  },
-  {
-    label: "2010",
-    value: "2010",
-    before: "2011-01-01",
-    after: "2009-12-31",
-  },
-  {
-    label: "2009",
-    value: "2009",
-    before: "2010-01-01",
-    after: "2008-12-31",
-  },
-  {
-    label: "2008",
-    value: "2008",
-    before: "2009-01-01",
-    after: "2007-12-31",
-  },
-  {
-    label: "2007",
-    value: "2007",
-    before: "2008-01-01",
-    after: "2006-12-31",
-  },
-  {
-    label: "2006",
-    value: "2006",
-    before: "2007-01-01",
-    after: "2005-12-31",
-  },
-  {
-    label: "2005",
-    value: "2005",
-    before: "2006-01-01",
-    after: "2004-12-31",
-  },
-  {
-    label: "2004",
-    value: "2004",
-    before: "2005-01-01",
-    after: "2003-12-31",
-  },
-  {
-    label: "2003",
-    value: "2003",
-    before: "2004-01-01",
-    after: "2002-12-31",
-  },
-  {
-    label: "2002",
-    value: "2002",
-    before: "2003-01-01",
-    after: "2001-12-31",
-  },
-  {
-    label: "2001",
-    value: "2001",
-    before: "2002-01-01",
-    after: "2000-12-31",
-  },
-  {
-    label: "2000",
-    value: "2000",
-    before: "2001-01-01",
-    after: "1999-12-31",
-  },
-  {
-    label: "1999",
-    value: "1999",
-    before: "2000-01-01",
-    after: "1998-12-31",
-  },
-  {
-    label: "1998",
-    value: "1998",
-    before: "1999-01-01",
-    after: "1997-12-31",
-  },
-  {
-    label: "1997",
-    value: "1997",
-    before: "1998-01-01",
-    after: "1996-12-31",
-  },
-  {
-    label: "1996",
-    value: "1996",
-    before: "1997-01-01",
-    after: "1995-12-31",
-  },
-];
+export const generateYearsArray = (amountOfYears: number) => {
+  const currentYear = new Date().getFullYear();
+
+  const yearsArray = [];
+
+  for (let i = 0; i < amountOfYears; i++) {
+    const year = currentYear - i;
+    const beforeDate = `${year + 1}-01-01`;
+    const afterDate = `${year - 1}-12-31`;
+
+    yearsArray.push({
+      label: `${year}`,
+      value: `${year}`,
+      before: beforeDate,
+      after: afterDate,
+    });
+  }
+
+  return yearsArray;
+};
