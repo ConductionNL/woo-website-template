@@ -41,7 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children, pageContext, location }) => {
         <Head />
         <APIProvider value={API}>
           <Surface>
-            <Document className={process.env.GATSBY_NL_DESIGN_THEME_CLASSNAME}>
+            <Document>
               <Toaster position="bottom-right" />
 
               <div className={styles.container}>
