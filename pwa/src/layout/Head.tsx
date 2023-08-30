@@ -9,7 +9,11 @@ export const Head: React.FC = () => {
   const { gatsbyContext } = useGatsbyContext();
 
   return (
-    <Helmet>
+    <Helmet
+      bodyAttributes={{
+        class: process.env.GATSBY_NL_DESIGN_THEME_CLASSNAME,
+      }}
+    >
       <title>{`WOO | ${
         getPageTitle(gatsbyContext.pageContext?.breadcrumb.crumbs, gatsbyContext.location) ?? "Error"
       }`}</title>
