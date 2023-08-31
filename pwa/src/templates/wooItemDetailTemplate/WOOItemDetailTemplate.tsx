@@ -21,6 +21,7 @@ import { QueryClient } from "react-query";
 import { useOpenWoo } from "../../hooks/openWoo";
 import Skeleton from "react-loading-skeleton";
 import { getPDFName } from "../../services/getPDFName";
+import { isUUID } from "../../services/isUUID";
 
 interface WOOItemDetailTemplateProps {
   wooItemId: string;
@@ -52,7 +53,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                 {getItems.data.ID && (
                   <TableRow className={styles.tableRow}>
                     <TableCell>{t("Kenmerk")}</TableCell>
-                    <TableCell>{getItems.data.ID}</TableCell>
+                    <TableCell>{isUUID(getItems.data.ID) ? getItems.data.Object_ID : getItems.data.ID}</TableCell>
                   </TableRow>
                 )}
 
