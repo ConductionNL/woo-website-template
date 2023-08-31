@@ -11,11 +11,17 @@
   padding-inline-end: 48px;
   padding-block-start: 40px;
   padding-block-end: 40px;
+  border-bottom: var(--conduction-card-wrapper-border-width)
+    var(--conduction-card-wrapper-border-style)
+    var(--conduction-card-wrapper-border-color);
 }
 
 .card:hover {
   background-color: var(--conduction-card-wrapper-background-color);
   cursor: default;
+  border-bottom: var(--conduction-card-wrapper-border-width)
+    var(--conduction-card-wrapper-border-style)
+    var(--conduction-card-wrapper-border-color);
 }
 
 .description {
