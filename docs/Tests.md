@@ -1,4 +1,4 @@
-# Testscript
+# Testscenario's
 
 We kunnen de testscript opsplitsen in de volgende categorieën:
 
