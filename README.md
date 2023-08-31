@@ -30,12 +30,12 @@ Geen handwerk: Door directe bron integratie is het niet nodig WOO-verzoeken etc 
 
 ## Voorbeelden
 
-- [Noordwijk](https://conductionnl.github.io/woo-website-xxllnc/)
+- [Noordwijk](https://conductionnl.github.io/woo-website-noordwijk/)
 - [Tubbergen](https://conductionnl.github.io/woo-website-tubbergen/)
 - [Epe](https://conductionnl.github.io/woo-website-epe/)
 - [Dinkelland](https://conductionnl.github.io/woo-website-dinkelland/)
 - [Noaberkracht](https://conductionnl.github.io/woo-website-noaberkracht/)
-- [Leiden (Alleen vormgeving)](https://conductionnl.github.io/woo-website-xxllnc/)
+- [Leiden (Alleen vormgeving)](https://conductionnl.github.io/woo-website-leiden/)
 - [Xxllnc (Demo omgeving)](https://conductionnl.github.io/woo-website-xxllnc/)
 
 ## Documentatie
