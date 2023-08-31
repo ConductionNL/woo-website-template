@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@conduction/components": "2.1.40",
-    "@conduction/theme": "1.0.33",
+    "@conduction/theme": "1.0.35",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.1.18",
