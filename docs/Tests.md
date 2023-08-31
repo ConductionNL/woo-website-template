@@ -110,8 +110,6 @@ We kunnen de testscript opsplitsen in de volgende categorieën:
 - De omschrijving moet zichtbaar zijn onder Samenvatting
 - De niet publieke bijlagen moeten niet worden weergegeven
 
-
-
  
 ## 3. Schoonmaak
    Verwijder alle testdata uit het zaaksysteem en de WOO-website.
