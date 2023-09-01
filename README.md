@@ -8,7 +8,7 @@ Deze pagina kan rechtstreeks vanaf GitHub (serverless) of los op een eigen omgev
 
 ### WOO 1.0
 
-Voor de eerste opzet van de WOO Index van BZK is het belangrijk dat ogranisaties zelf hun WOO publicaites op een doorzoekbare index publiceren. BZK houdt vervolgens een overzichtspagina bij waarop per organisatie de algemene organisatiesgegevens en de organisaties specifieke indexpagina vindbaar zijn.
+Voor de eerste opzet van de WOO Index van BZK is het belangrijk dat organisaties zelf hun WOO publicaties op een doorzoekbare index publiceren. BZK houdt vervolgens een overzichtspagina bij waarop per organisatie de algemene organisatiesgegevens en de organisaties specifieke indexpagina vindbaar zijn.
 
 ### WOO 2.0
 
@@ -16,7 +16,7 @@ BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouw
 
 ### Open versus WOO
 
-De WOO specificered een aantal categorieën (xie configuratie) die door een organisaties moeten worden ontsloten, dit template ondersteund dat maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het conept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
+De WOO specificeerd een aantal categorieën (xie configuratie) die door een organisaties moeten worden ontsloten, dit template ondersteund dat maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het conept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
 
 ## Varianten
 
