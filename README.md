@@ -19,7 +19,7 @@ De WOO specificierd een aantal categorien (xie configuraite) die door een organi
 ## Varianten
 ### Open Webconcept variant
 
-Als de voorkant direct wordt gedraaid op de Open Webconcept plugin kunnen WOO-verzoeken en convenanten gemakkelijk worden beheerd vanuit de reeds bestaande webomgeving en CMS.  In dit geval zijn er aan de kant van de overheid geen verdere installatie of beheerstichtingen nodig. In combinatie met het serverless kunnen draaien van de voorkant betekent dit een oplossing zonder server of hosting kosten waarbij simpelweg hergebruik gemaakt kan worden van bestaande Common Ground componenten
+Als de voorkant direct wordt gedraaid op de Open Webconcept plugin kunnen WOO-verzoeken en convenanten gemakkelijk worden beheerd vanuit de reeds bestaande webomgeving en CMS.  In dit geval zijn er aan de kant van de organisatie geen verdere installatie of beheerstichtingen nodig (mits de organisatie beschickt over een OpenWebconcept installatie met de Open Woo en Open Convenanten plugins). In combinatie met het serverless kunnen draaien van de voorkant betekent dit een oplossing zonder server of hosting kosten waarbij simpelweg hergebruik gemaakt kan worden van bestaande Common Ground componenten
 
 Nadeel van deze oplossingsrichting is dat WOO-verzoeken en convenanten handmatig moeten worden geüpload in de CMS-omgeving en dat de zoekbalk niet wordt ondersteund.
 
@@ -57,11 +57,13 @@ Geen handwerk: Door directe bron integratie is het niet nodig WOO-verzoeken etc 
  |[Xxllnc (Demo omgeving)](https://conductionnl.github.io/woo-website-xxllnc/)| [Pagina](https://conductionnl.github.io/woo-website-xxllnc/)| Demo                    |
 
 ## Architectuur
+![docs/components.svg](docs/components.svg "components Architecture")
 
 ## Roadmap
-- Koppelen van Raadsinformatie Systeem (RIS) 
-- Uitleg pagina over categorien
-- Landingspagina met themas aan de hand van tiles
+- Koppelen van Raadsinformatie Systeem (RIS), begin ontwikkeling medio september
+- Bechickbaarstellen robot.txt en sitemap.xml tbv bzk, begin ontwikkeling begin oktober
+- Uitleg pagina over categorien, nog geen ontwikkeling geplanned
+- Landingspagina met themas aan de hand van tiles, nog geen ontwikkeling geplanned
 
 ## Documentatie
 
