@@ -13,7 +13,7 @@ component "Raadsinformatie Systeem" as Raadsinfo
 
 ' Relationships
 Website -down-> Gateway : Directly connected
-Harvester -down-> Gateway : Genereted from
+Harvester -up-> Gateway : Generated from
 Gateway -down-> CMS : Scrapes periodically\nUses as source
 Gateway -down-> Zaaksysteem : Scrapes periodically\nUses as source
 Gateway -down-> Raadsinfo : Scrapes periodically\nUses as source
