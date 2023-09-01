@@ -3,13 +3,15 @@ import { GlobalContext } from "./global";
 
 export interface IFiltersContext {
   _search: string | undefined;
-  year: string | undefined;
+  "Ontvangstdatum[after]": string | undefined;
+  "Ontvangstdatum[before]": string | undefined;
   publicationType: string | undefined;
 }
 
 export const defaultFiltersContext: IFiltersContext = {
   _search: "",
-  year: undefined,
+  "Ontvangstdatum[after]": undefined,
+  "Ontvangstdatum[before]": undefined,
   publicationType: undefined,
 };
 

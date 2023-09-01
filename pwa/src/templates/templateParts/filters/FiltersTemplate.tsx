@@ -7,8 +7,7 @@ import { useFiltersContext } from "../../../context/filters";
 import { Button } from "@utrecht/component-library-react/dist/css-module";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faSpinner } from "@fortawesome/free-solid-svg-icons";
-import { TEMP_YEARS } from "../../../data/years";
-import { TEMP_PUBLICATION_TYPES } from "../../../data/PublicationType";
+import { generateYearsArray } from "../../../data/years";
 
 interface FiltersTemplateProps {
   isLoading: boolean;
@@ -29,7 +28,12 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   const watcher = watch();
 
   const onSubmit = (data: any) => {
-    setFilters({ _search: data.title, year: data.year?.value, publicationType: data.publicationType?.value });
+    setFilters({
+      _search: data.title,
+      "Ontvangstdatum[after]": data.year?.after,
+      "Ontvangstdatum[before]": data.year?.before,
+      publicationType: data.publicationType?.value,
+    });
   };
 
   React.useEffect(() => {
@@ -44,22 +48,21 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
         <InputText name="title" placeholder="Zoeken.." defaultValue={filters._search} {...{ register, errors }} />
 
         <SelectSingle
-          options={TEMP_YEARS}
+          options={generateYearsArray(28)}
           name="year"
           placeholder="Jaar"
-          defaultValue={TEMP_YEARS.find((option) => option.value === filters.year)}
           isClearable
           {...{ register, errors, control }}
         />
 
-        <SelectSingle
+        {/* <SelectSingle
           options={TEMP_PUBLICATION_TYPES}
           name="publicationType"
           placeholder="Publicatietype"
           defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.publicationType)}
           isClearable
           {...{ register, errors, control }}
-        />
+        /> */}
 
         <Button type="submit" className={styles.button} disabled={isLoading}>
           <FontAwesomeIcon icon={!isLoading ? faMagnifyingGlass : faSpinner} /> {!isLoading && "Zoeken"}
