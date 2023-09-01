@@ -8,7 +8,7 @@ interface "Static Open WOO Website" as Website
 component "Source" as Source
 
 ' Relationships
-Website -down-> Source : Directly connected
+Website -down-> Source : Directly connected trough API
 
 
 @enduml
