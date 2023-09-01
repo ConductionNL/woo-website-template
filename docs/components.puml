@@ -1,24 +1,14 @@
 @startuml
-title (Open) WOO Website Template Architecture
+title Generic Architecture
 
 ' User Interface Component
-interface "Open WOO Website" as Website
+interface "Static Open WOO Website" as Website
 
 ' Backend Components
-component "Open Webconcept CMS" as CMS
-component "Common Gateway" as Gateway
-component "Zaaksysteem" as Zaaksysteem
-component "Raadsinformatie Systeem" as Raadsinfo
+component "Source" as Source
 
 ' Relationships
-Website -down-> CMS : Directly connected
-Website -down-> Gateway : Connected via
-Gateway -down-> CMS : Scrapes periodically\nUses as source
-Gateway -down-> Zaaksysteem : Scrapes periodically\nUses as source
-Gateway -down-> Raadsinfo : Scrapes periodically\nUses as source
+Website -down-> Source : Directly connected
 
-' Notifications
-CMS -up-> Gateway : Notifies of changes or deletes
-Zaaksysteem -up-> Gateway : Notifies of changes or deletes
 
 @enduml
