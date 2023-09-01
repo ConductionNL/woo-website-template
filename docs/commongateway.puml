@@ -12,8 +12,8 @@ component "Zaaksysteem" as Zaaksysteem
 component "Raadsinformatiesysteem" as Raadsinfo
 
 ' Relationships
-Website -down-> Gateway : Directly connected trough API
-Harvester - down-> Gateway : Generated from index
+Website -down-> Gateway : Directly connected
+Harvester -down-> Gateway : Generated from
 Gateway -down-> CMS : Scrapes periodically\nUses as source
 Gateway -down-> ZGW Zaaksysteem : Scrapes periodically\nUses as source
 Gateway -down-> Raadsinfo : Scrapes periodically\nUses as source

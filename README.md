@@ -8,15 +8,15 @@ Deze pagina kan rechtstreeks vanaf GitHub (serverless) of los op een eigen omgev
 
 ### WOO 1.0
 
-Voor de eerste opzet van de WOO Index van BZK is het belangrijk dat organisaties zelf hun WOO publicaties op een doorzoekbare index publiceren. BZK houdt vervolgens een overzichtspagina bij waarop per organisatie de algemene organisatiesgegevens en de organisaties specifieke indexpagina vindbaar zijn.
+Voor de eerste opzet van de WOO Index van BZK is het belangrijk dat organisaties zelf hun WOO-publicaties op een doorzoekbare index publiceren. BZK houdt vervolgens een overzichtspagina bij waarop per organisatie de algemene organisatiegegevens en de organisaties specifieke indexpagina vindbaar zijn.
 
 ### WOO 2.0
 
-BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouwen op open.overheid.nl. Deze harvesters maakt gebruik van `robot.txt` en `sitemap.xml`-bestanden om de verschillende pagina's en metadata van de organisatie specifieke index te vinden en over te nemen. Dat betekend dat ook binnen de 2.0 variant van WOO een eigen indexpagina noodzakelijk blijft. Sterker nog de kwaliteit van de ontsluiting wordt in grote mate afhankelijk van de kwaliteit van de index.
+BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouwen op open.overheid.nl. Deze harvesters maakt gebruik van `robot.txt` en `sitemap.xml`-bestanden om de verschillende pagina's en metadata van de organisatie specifieke index te vinden en over te nemen. Dat betekent dat ook binnen de 2.0 variant van WOO een eigen indexpagina noodzakelijk blijft. Sterker nog, de kwaliteit van de ontsluiting wordt in grote mate afhankelijk van de kwaliteit van de index.
 
 ### Open versus WOO
 
-De WOO specificeerd een aantal categorieën (xie configuratie) die door een organisaties moeten worden ontsloten, dit template ondersteund dat maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het conept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
+De WOO specificeert een aantal categorieën (xie configuratie) die door een organisatie moeten worden ontsloten, dit template ondersteund dat, maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het concept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
 
 ## Varianten
 
@@ -30,7 +30,7 @@ Nadeel van deze oplossingsrichting is dat WOO-verzoeken en convenanten handmatig
 
 ### Common Gateway variant
 
-Het is ook mogelijk om de voorkant te koppelen aan een Common Gateway-installatie met daarop de Open WOO-plugin. Het voordeel hiervan is dat er kan worden doorgekoppeld op het zaaksysteem waardoor WOO-verzoeken en convenanten rechtstreeks kunnen worden gepubliceerd. Dit scheelt handwerk en voorkomt fouten. Tevens ondersteund deze richting de zoekbalk. Het is ook mogelijk om dit te combineren met het binnentrekken van gegevens uit andere bronnen zoals een raadsinformatiesysteem op Open Webconcept CMS.
+Het is ook mogelijk om de voorkant te koppelen aan een Common Gateway-installatie met daarop de Open WOO-plugin. Het voordeel hiervan is dat er kan worden doorgekoppeld op het zaaksysteem waardoor WOO-verzoeken en convenanten rechtstreeks kunnen worden gepubliceerd. Dit scheelt handwerk en voorkomt fouten. Tevens ondersteunt deze richting de zoekbalk. Het is ook mogelijk om dit te combineren met het binnentrekken van gegevens uit andere bronnen zoals een raadsinformatiesysteem op Open Webconcept CMS.
 
 Nadeel van deze oplossingsrichting is dat de gemeente de Common Gateway (open source framework) of zelf zal moeten installeren of als SAAS afnemen.
 
