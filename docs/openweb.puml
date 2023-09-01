@@ -8,7 +8,7 @@ interface "Open WOO Website" as Website
 component "Open Webconcept CMS" as CMS
 
 ' Relationships
-Website -down-> CMS : Directly connected
+Website -down-> CMS : Directly connected trough API
 
 
 @enduml
