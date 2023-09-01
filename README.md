@@ -16,7 +16,7 @@ BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouw
 
 ### Open versus WOO
 
-De WOO specificered een aantal categorieën (xie configuratie) die door een organisaties moeten worden ontsloten, dit template ondersteund dat maar gaat een stap verder door organisaties ook categorien te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het conept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
+De WOO specificered een aantal categorieën (xie configuratie) die door een organisaties moeten worden ontsloten, dit template ondersteund dat maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het conept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
 
 ## Varianten
 
