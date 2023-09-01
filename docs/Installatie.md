@@ -8,7 +8,7 @@ Om dit template te gebruiken moet je beschikken over:
 
 - NL Design Token voor je organisatie ([lees hier hoe je die kan verkrijgen](https://conductionnl.github.io/product-website-template/pages/Features/NL_Design)
 - Een GitHub organisatie en beheerders rechten daarop OF (Zie [Serverless Installatie](#serverless-installatie))
-- Een APACHE/NGINX server(Zie [Server Installatie]())
+- Een APACHE/NGINX server(Zie [Server Installatie](#server-installatie))
 - Een Open Webconcept CMS (WordPress) met de [Open WOO](https://github.com/OpenWebconcept/plugin-openwoo)) en [Open Convenanten](https://github.com/OpenWebconcept/plugin-openconvenanten) plugins OF
 - Een Common Gateway installatie (On premise of SAAS) met de [WOO Bundle](https://github.com/ConductionNL/WooBundle/tree/main)
 
@@ -24,7 +24,7 @@ Dit template is in eerste instantie opgezet om serverless gebruikt te worden via
 ### Server Installatie
 
 1. Volg de stappen hiervoor op de [Productpage template](https://github.com/ConductionNL/product-website-template)
-2. Pas het de configuratie aan zo als vermeld onder configuratie
+2. Pas het de configuratie aan zoals vermeld onder configuratie
 
 ### Configuratie
 
@@ -50,29 +50,29 @@ Voor de backend zijn twee opties beschikbaar, in beide gevallen moet de resulter
 
 ### Open webconcept met Open WOO en Open Convenanten plugin
 
-Volg de installatie handleiding op [https://github.com/OpenWebconcept/plugin-openwoo](https://github.com/OpenWebconcept/plugin-openwoo) en op [https://github.com/OpenWebconcept/plugin-openconvenanten](https://github.com/OpenWebconcept/plugin-openconvenanten)
+Volg de installatiehandleiding op [https://github.com/OpenWebconcept/plugin-openwoo](https://github.com/OpenWebconcept/plugin-openwoo) en op [https://github.com/OpenWebconcept/plugin-openconvenanten](https://github.com/OpenWebconcept/plugin-openconvenanten)
 
 ### Common Gateway met Open WOO Plugin
 
-Volg de installatie handleiding op [WOO Bundle](https://github.com/ConductionNL/WooBundle/tree/main).
+Volg de installatiehandleiding op [WOO Bundle](https://github.com/ConductionNL/WooBundle/tree/main).
 
 ## Externe systemen
 
 ### Inrichting Zaaksysteem
 
-Voor het kunnen publiceren van zaken vanuit het zaaksysteem is het belangrijk dat het zaaksysteem beschikt over de juiste inrichting. Indien er via de Common Gateway Open Woo plugin zaken worden opgehaald gelden daarvoor de volgende spelregels.
+Voor het kunnen publiceren van zaken vanuit het zaaksysteem is het belangrijk dat het zaaksysteem beschikt over de juiste inrichting. Indien er via de Common Gateway (met Open Woo plugin) zaken worden opgehaald gelden daarvoor de volgende spelregels.
 
 Zaken dienen te beschikken over de volgende properties (zaak attributen):
 
 | Property            | Required | Usage                                                                                                 | Allowed Value              |
 |---------------------|----------|-------------------------------------------------------------------------------------------------------|----------------------------|
 | woo_publicatiedatum | Yes      | De datum vanaf wanneer de publicatie wordt gepubliceerd, bij leeg wordt de publicatie niet gepubliceerd | date-time or NULL          |
-| woo_categorie       | Yes      | De categorie van de WOO-Publicatie                                                                    | One of ("Wetten en algemeen verbindende voorschriften","Overige besluiten van algemene strekking","Ontwerpen van wet- en regelgeving met adviesaanvraag","Organisatie en werkwijze","Bereikbaarheidsgegevens","Bij vertegenwoordigende organen ingekomen stukken","Vergaderstukken Staten-Generaal","Vergaderstukken decentrale overheden","Agenda's en besluitenlijsten bestuurscolleges","Adviezen","Convenanten","Jaarplannen en jaarverslagen","Subsidieverplichtingen anders dan met beschikking","Woo-verzoeken en -besluiten","Onderzoeksrapporten","Beschikkingen","Klachtoordelen")               |
+| woo_categorie       | Yes      | De categorie van de WOO-Publicatie                                                                    | One of ("Wetten en algemeen verbindende voorschriften","Overige besluiten van algemene strekking","Ontwerpen van wet- en regelgeving met adviesaanvraag","Organisatie en werkwijze","Bereikbaarheidsgegevens","Bij vertegenwoordigende organen ingekomen stukken","Vergaderstukken Staten-Generaal","Vergaderstukken decentrale overheden","Agenda's en besluitenlijsten bestuurscolleges","Adviezen","Convenanten","Jaarplannen en jaarverslagen","Subsidieverplichtingen anders dan met beschikking","WOO-verzoeken en -besluiten","Onderzoeksrapporten","Beschikkingen","Klachtoordelen")               |
 | woo_thema           | No       | Een optionele titel van thema waar de zaak onder valt                                                 | string, max 255 characters |
 
 Daarnaast is het mogelijk om bijlagen van publicaties te clusteren aan de hand van labels.
 
-Note: Op dit moment doet Open WOO nog niets met thema's behalve ze weergeven bij de zaak. Er zijn echter plannen om in de toekomst een thema overzicht pagina te maken en WOO-publicaties filterbaar te maken op thema.
+Note: Op dit moment doet Open WOO nog niets met thema's behalve ze weergeven bij de zaak. Er zijn echter plannen om in de toekomst een thema overzichtspagina te maken en WOO-publicaties filterbaar te maken op thema.
 
 #### Voor XXLLNC (zaaksysteem.nl)
 
@@ -80,7 +80,7 @@ Er kan worden gekoppeld via de zoeken-optie
 
 ### Ophalen informatie
 
-In principe "Scraped" de Open WOO plugin elke nacht alle relevante zaken, hierbij zijn de stappen
+In principe "scraped" de Open WOO plugin elke nacht alle relevante zaken, hierbij zijn de stappen
 
 1. Ophalen alle zaaktypen
 2. Per zaaktype controleren op beschikbare eigenschappen (zie inrichting zaaksysteem)
