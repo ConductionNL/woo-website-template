@@ -10,10 +10,10 @@ export const JumbotronTemplate: React.FC = () => {
         <PageContent>
           <div>
             <CardWrapper className={styles.card}>
-              <Heading2 className={styles.title}>WOO-publicaties van {process.env.GATSBY_ORGANISATION_NAME}</Heading2>
+              <Heading2 className={styles.title}>Woo-publicaties van {process.env.GATSBY_ORGANISATION_NAME}</Heading2>
 
               <Paragraph className={styles.description}>
-                Op deze pagina vind u de WOO-publicaties van {process.env.GATSBY_ORGANISATION_NAME}
+                Op deze pagina vind u de Woo-publicaties van {process.env.GATSBY_ORGANISATION_NAME}
               </Paragraph>
             </CardWrapper>
           </div>
