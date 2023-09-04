@@ -7,8 +7,8 @@ import { IFiltersContext } from "../context/filters";
 export const useOpenWoo = (queryClient: QueryClient) => {
   const API: APIService | null = React.useContext(APIContext);
 
-  const getAll = (filters: IFiltersContext) =>
-    useQuery<any, Error>(["OpenWoo", filters], () => API?.OpenWoo.getAll(filters), {
+  const getAll = (filters: IFiltersContext, currentPage: number) =>
+    useQuery<any, Error>(["OpenWoo", filters, currentPage], () => API?.OpenWoo.getAll(filters, currentPage), {
       onError: (error) => {
         console.warn(error.message);
       },
@@ -16,8 +16,7 @@ export const useOpenWoo = (queryClient: QueryClient) => {
 
   const getOne = (requestId: string) =>
     useQuery<any, Error>(["OpenWoo", requestId], () => API?.OpenWoo.getOne(requestId), {
-      initialData: () =>
-        queryClient.getQueryData<any[]>("OpenWoo")?.find((_OpenWoo) => _OpenWoo.id === requestId),
+      initialData: () => queryClient.getQueryData<any[]>("OpenWoo")?.find((_OpenWoo) => _OpenWoo.id === requestId),
       onError: (error) => {
         throw new Error(error.message);
       },
