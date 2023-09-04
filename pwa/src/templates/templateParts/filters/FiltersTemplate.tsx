@@ -28,11 +28,18 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
 
   const watcher = watch();
 
+  const today = new Date();
+
+  const currentMonth = today.getMonth() + 1;
+  const currentYear = today.getFullYear();
+  const _currentDate = today.getDate();
+  const currentDate = currentYear + "-" + currentMonth + "-" + _currentDate;
+
   const onSubmit = (data: any) => {
     setFilters({
       _search: data.title,
-      "Ontvangstdatum[after]": data.year?.after,
-      "Ontvangstdatum[before]": data.year?.before,
+      "Besluitdatum[after]": data.year?.after,
+      "Besluitdatum[before]": data.year?.before ?? currentDate,
       publicationType: data.publicationType?.value,
     });
   };
@@ -47,9 +54,8 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
     <div className={styles.container}>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <InputText name="title" placeholder="Zoeken.." defaultValue={filters._search} {...{ register, errors }} />
-
         <SelectSingle
-          options={generateYearsArray(28)}
+          options={generateYearsArray(currentYear - 1995)}
           name="year"
           placeholder="Jaar"
           isClearable

@@ -1,5 +1,10 @@
 export const generateYearsArray = (amountOfYears: number) => {
-  const currentYear = new Date().getFullYear();
+  const today = new Date();
+
+  const currentMonth = today.getMonth() + 1;
+  const currentYear = today.getFullYear();
+  const _currentDate = today.getDate();
+  const currentDate = currentYear + "-" + currentMonth + "-" + _currentDate;
 
   const yearsArray = [];
 
@@ -15,6 +20,8 @@ export const generateYearsArray = (amountOfYears: number) => {
       after: afterDate,
     });
   }
+
+  yearsArray[0].before = currentDate;
 
   return yearsArray;
 };
