@@ -18,6 +18,10 @@ BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouw
 
 De WOO specificeert een aantal categorieën (xie configuratie) die door een organisatie moeten worden ontsloten, dit template ondersteund dat, maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het concept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
 
+## Architectuur
+
+![docs/components.svg](docs/components.svg "components Architecture")
+
 ## Varianten
 
 ### Open Webconcept variant
@@ -59,9 +63,6 @@ Geen handwerk: Door directe bron integratie is het niet nodig WOO-verzoeken etc 
  |[Leiden (Alleen vormgeving)](https://conductionnl.github.io/woo-website-leiden/)| [Pagina](https://conductionnl.github.io/woo-website-leiden/)| Demo                    |
  |[Xxllnc (Demo omgeving)](https://conductionnl.github.io/woo-website-xxllnc/)| [Pagina](https://conductionnl.github.io/woo-website-xxllnc/)| Demo                    |
 
-## Architectuur
-
-![docs/components.svg](docs/components.svg "components Architecture")
 
 ## Roadmap
 
@@ -69,6 +70,7 @@ Geen handwerk: Door directe bron integratie is het niet nodig WOO-verzoeken etc 
 - Beschikbaarstellen robot.txt en sitemap.xml tbv bzk, begin ontwikkeling begin oktober
 - Uitleg pagina over categorien, nog geen ontwikkeling geplanned
 - Landingspagina met themas aan de hand van tiles, nog geen ontwikkeling geplanned
+- Kaartweergave, nog geen ontwikkeling geplanned
 
 ## Documentatie
 
