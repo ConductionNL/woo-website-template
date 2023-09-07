@@ -47,7 +47,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ConductionNL/product-website-template
-          ref: main
+          ref: development
 
       # With special thanxs to https://github.com/SpicyPizza/create-envfile
       - name: Make envfile
