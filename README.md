@@ -77,3 +77,5 @@ Geen handwerk: Door directe bron integratie is het niet nodig WOO-verzoeken etc 
 - [Installatiehandleiding](docs/Installatie.md)
 - [Configuratie](docs/Configuratie.md)
 - [Testscenario's](docs/Tests.md)
+
+.
