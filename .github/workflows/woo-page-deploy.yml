@@ -20,7 +20,7 @@ env: # Change these to your preferences any image url can also be a base encoded
 on:
   push:
     branches:
-      - bugfix/XW-62/woo-template-link
+      - development
 
 jobs:
   build:
