@@ -2,6 +2,10 @@ name: Deploy the Product Page to GitHub Pages
 
 env: # Change these to your preferences any image url can also be a base encoded image
   GITHUB_PAGES_BRANCH: gh-pages
+
+  # options: "true" | "false"
+  USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX: "true"
+
   GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
   API_BASE_URL: "https://api.gateway.commonground.nu/api"
   NL_DESIGN_THEME_CLASSNAME: "conduction-theme"
@@ -16,7 +20,7 @@ env: # Change these to your preferences any image url can also be a base encoded
 on:
   push:
     branches:
-      - development
+      - bugfix/XW-62/woo-template-link
 
 jobs:
   build:
@@ -34,6 +38,7 @@ jobs:
         uses: SpicyPizza/create-envfile@v2.0
         with:
           envkey_GITHUB_REPOSITORY_NAME: ${{ env.GITHUB_REPOSITORY_NAME }}
+          envkey_USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX: ${{ env.USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX }}
           envkey_GATSBY_API_BASE_URL: ${{ env.API_BASE_URL }}
           envkey_GATSBY_NL_DESIGN_THEME_CLASSNAME: ${{ env.NL_DESIGN_THEME_CLASSNAME }}
           envkey_GATSBY_FAVICON_URL: ${{ env.FAVICON_URL }}
