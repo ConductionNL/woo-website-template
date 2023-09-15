@@ -3,6 +3,9 @@ name: Deploy the Product Page to GitHub Pages
 env: # Change these to your preferences any image url can also be a base encoded image
   GITHUB_PAGES_BRANCH: gh-pages
 
+  # options: "true" | "false"
+  USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX: "true"
+
   # Connected Repository
   GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
   GITHUB_REPOSITORY_URL: ${{ github.event.repository.url }}
@@ -49,11 +52,12 @@ jobs:
           repository: ConductionNL/product-website-template
           ref: development
 
-      # With special thanxs to https://github.com/SpicyPizza/create-envfile
+      # With special thanks to https://github.com/SpicyPizza/create-envfile
       - name: Make envfile
         uses: SpicyPizza/create-envfile@v2.0
         with:
           envkey_GITHUB_REPOSITORY_NAME: ${{ env.GITHUB_REPOSITORY_NAME }}
+          envkey_USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX: ${{ env.USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX }}
           envkey_GATSBY_GITHUB_API_BASE_URL: ${{ env.GITHUB_API_BASE_URL }}
           envkey_GATSBY_FAVICON_URL: ${{ env.FAVICON_URL }}
           envkey_GATSBY_NAVBAR_LOGO_URL: ${{ env.NAVBAR_LOGO_URL }}
