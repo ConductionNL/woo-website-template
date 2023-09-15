@@ -16,7 +16,7 @@ Voor de pagina maakt het niet uit wie de bron is, zolang deze zich maar aan de s
 Meer details hierover vind u onder [architectuur](/docs/Architectuur.md).
 
 
-![docs/components.svg](docs/components.svg "Website Architecture")
+![https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/components.svg](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/components.svg "Website Architecture")
 
 ### WOO 1.0
 
@@ -30,23 +30,7 @@ BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouw
 
 De WOO specificeert een aantal categorieën (zie configuratie) die door een organisatie moeten worden ontsloten, dit template ondersteund dat, maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het concept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
 
-## Varianten
 
-### Open Webconcept variant
-
-Als de voorkant direct wordt gedraaid op de Open Webconcept plugin kunnen WOO-verzoeken en convenanten gemakkelijk worden beheerd vanuit de reeds bestaande webomgeving en CMS.  In dit geval zijn er aan de kant van de organisatie geen verdere installatie of beheerstichtingen nodig (mits de organisatie beschickt over een OpenWebconcept installatie met de Open Woo en Open Convenanten plugins). In combinatie met het serverless kunnen draaien van de voorkant betekent dit een oplossing zonder server of hosting kosten waarbij simpelweg hergebruik gemaakt kan worden van bestaande Common Ground componenten
-
-Nadeel van deze oplossingsrichting is dat WOO-verzoeken en convenanten handmatig moeten worden geüpload in de CMS-omgeving en dat de zoekbalk niet wordt ondersteund.
-
-![docs/openweb.svg](docs/openweb.svg "OpenWeb Architecture")
-
-### Common Gateway variant
-
-Het is ook mogelijk om de voorkant te koppelen aan een Common Gateway-installatie met daarop de Open WOO-plugin. Het voordeel hiervan is dat er kan worden doorgekoppeld op het zaaksysteem waardoor WOO-verzoeken en convenanten rechtstreeks kunnen worden gepubliceerd. Dit scheelt handwerk en voorkomt fouten. Tevens ondersteunt deze richting de zoekbalk. Het is ook mogelijk om dit te combineren met het binnentrekken van gegevens uit andere bronnen zoals een raadsinformatiesysteem op Open Webconcept CMS.
-
-Nadeel van deze oplossingsrichting is dat de gemeente de Common Gateway (open source framework) of zelf zal moeten installeren of als SAAS afnemen.
-
-![docs/commongateway.svg](docs/commongateway.svg "Commongateway Architecture")
 
 ## Functionaliteiten
 
