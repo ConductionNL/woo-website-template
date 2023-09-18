@@ -15,7 +15,7 @@ export default class OpenWoo {
   }
 
   public getAll = async (filters: IFiltersContext, currentPage: number): Promise<any> => {
-    let endpoint = `/openWOO?extend[]=all${filtersToQueryParams(filters)}&_limit=${OPEN_WOO_LIMIT}&_page=${currentPage}`;
+    let endpoint = `/openWOO?extend[]=all${filtersToQueryParams(filters)}&_order[Besluitdatum]=desc&_limit=${OPEN_WOO_LIMIT}&_page=${currentPage}`;
 
     if (process.env.GATSBY_OIDN_NUMBER) {
       endpoint += `&oidn=${process.env.GATSBY_OIDN_NUMBER}`;
