@@ -1,0 +1,25 @@
+@startuml
+title Commongateway Architecture
+
+' User Interface Component
+interface "Open WOO Website" as Website
+interface "Open WOO XML" as Harvester
+
+' Backend Components
+component "Open Webconcept CMS" as CMS
+component "Common Gateway" as Gateway
+component "Zaaksysteem" as Zaaksysteem
+component "Raadsinformatiesysteem" as Raadsinfo
+
+' Relationships
+Website -down-> Gateway : Directly connected
+Harvester -down-> Gateway : Generated from
+Gateway -down-> CMS : Scrapes periodically\nUses as source
+Gateway -down-> ZGW Zaaksysteem : Scrapes periodically\nUses as source
+Gateway -down-> Raadsinfo : Scrapes periodically\nUses as source
+
+' Notifications
+CMS -up-> Gateway : Notifies of changes or deletes
+Zaaksysteem -up-> Gateway : Notifies of changes or deletes
+
+@enduml

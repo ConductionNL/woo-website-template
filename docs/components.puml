@@ -1,0 +1,14 @@
+@startuml
+title Generic Architecture
+
+' User Interface Component
+interface "Static Open WOO Website" as Website
+
+' Backend Components
+component "Source" as Source
+
+' Relationships
+Website -down-> Source : Directly connected trough API
+
+
+@enduml
