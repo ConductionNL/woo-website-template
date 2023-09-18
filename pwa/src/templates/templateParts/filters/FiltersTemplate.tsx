@@ -33,7 +33,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
       _search: data.title,
       "Ontvangstdatum[after]": data.year?.after,
       "Ontvangstdatum[before]": data.year?.before,
-      publicationType: data.publicationType?.value,
+      Categorie: data.category?.value,
     });
   };
 
@@ -58,9 +58,9 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
 
         <SelectSingle
           options={TEMP_PUBLICATION_TYPES}
-          name="publicationType"
-          placeholder="Publicatietype"
-          defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.publicationType)}
+          name="category"
+          placeholder="Onderwerp"
+          defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.Categorie)}
           isClearable
           {...{ register, errors, control }}
         />
