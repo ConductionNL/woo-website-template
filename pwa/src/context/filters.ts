@@ -5,14 +5,14 @@ export interface IFiltersContext {
   _search: string | undefined;
   "Ontvangstdatum[after]": string | undefined;
   "Ontvangstdatum[before]": string | undefined;
-  publicationType: string | undefined;
+  Categorie: string | undefined;
 }
 
 export const defaultFiltersContext: IFiltersContext = {
   _search: "",
   "Ontvangstdatum[after]": undefined,
   "Ontvangstdatum[before]": undefined,
-  publicationType: undefined,
+  Categorie: undefined,
 };
 
 export const useFiltersContext = () => {
