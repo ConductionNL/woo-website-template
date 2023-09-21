@@ -1,10 +1,22 @@
-# (Open) WOO Website Template
+# Open WOO Website Template
 
 Dit is een zelfstandig bruikbare uitbreiding op [Open WOO](https://github.com/OpenWebconcept/plugin-openwoo) van het [Open Webconcept](https://openwebconcept.nl/). Het maakt hergebruik van [NL Design (React componenten)](https://nldesignsystem.nl/meedoen/introductie) om aan de hand van [Design Tokens](https://nldesignsystem.nl/meedoen/design-tokens/) een gemeentelijk specifieke [WOO-index](https://www.koopoverheid.nl/voor-overheden/rijksoverheid/woo-index) pagina's te genereren die voldoet aan alle [WCAG](https://wcag.nl/kennis/richtlijnen/) en [wettelijke eisen](https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo).
 
 ## Opzet
 
-Deze pagina kan rechtstreeks vanaf GitHub (serverless) of los op een eigen omgeving gehost worden. Vervolgens kan de voorkant rechtstreeks worden gekoppeld op de API van de Open WOO Open Webconcept plugin of de Open WOO Common Gateway plugin.
+Deze pagina kan rechtstreeks vanaf GitHub (serverless) of los op een eigen omgeving gehost worden. Voor de getoonde data wordt vervolgens gebruik gemaakt van de Open WOO API definitie.  Dat betekend dat één van de volgende bronnen kan worden gebruikt
+
+- Een ([Open Webconcept](https://openwebconcept.nl/)) Wordpress installatie met de [Open WOO Plugin](https://github.com/OpenWebconcept/plugin-openwoo)
+- Een ([Common Gateway](https://commongateway.app/)) Syfmony installatie met de [Open WOO bundle](https://github.com/CommonGateway/WooBundle)
+- Een ([Open Online](https://www.dimpact.nl/nieuws/gemeente-vught-live-met-open-online)) Drupal installatie met de Open WOO plugin ([roadmap](/docs/Roadmap.md)).
+- Een los JSON bestand dat de data bevat vanuit de repository ([roadmap](/docs/Roadmap.md)).
+- Een rechtstreeks vanuit het zaak en/of raadsinformatie systeem ontsloten API 
+
+Voor de pagina maakt het niet uit wie de bron is, zolang deze zich maar aan de standaard houdt. 
+Meer details hierover vind u onder [architectuur](/docs/Architectuur.md).
+
+
+![https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/components.svg](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/components.svg "Website Architecture")
 
 ### WOO 1.0
 
@@ -16,25 +28,9 @@ BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouw
 
 ### Open versus WOO
 
-De WOO specificeert een aantal categorieën (xie configuratie) die door een organisatie moeten worden ontsloten, dit template ondersteund dat, maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het concept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
+De WOO specificeert een aantal categorieën (zie configuratie) die door een organisatie moeten worden ontsloten, dit template ondersteund dat, maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het concept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
 
-## Varianten
 
-### Open Webconcept variant
-
-Als de voorkant direct wordt gedraaid op de Open Webconcept plugin kunnen WOO-verzoeken en convenanten gemakkelijk worden beheerd vanuit de reeds bestaande webomgeving en CMS.  In dit geval zijn er aan de kant van de organisatie geen verdere installatie of beheerstichtingen nodig (mits de organisatie beschickt over een OpenWebconcept installatie met de Open Woo en Open Convenanten plugins). In combinatie met het serverless kunnen draaien van de voorkant betekent dit een oplossing zonder server of hosting kosten waarbij simpelweg hergebruik gemaakt kan worden van bestaande Common Ground componenten
-
-Nadeel van deze oplossingsrichting is dat WOO-verzoeken en convenanten handmatig moeten worden geüpload in de CMS-omgeving en dat de zoekbalk niet wordt ondersteund.
-
-![docs/openweb.svg](docs/openweb.svg "OpenWeb Architecture")
-
-### Common Gateway variant
-
-Het is ook mogelijk om de voorkant te koppelen aan een Common Gateway-installatie met daarop de Open WOO-plugin. Het voordeel hiervan is dat er kan worden doorgekoppeld op het zaaksysteem waardoor WOO-verzoeken en convenanten rechtstreeks kunnen worden gepubliceerd. Dit scheelt handwerk en voorkomt fouten. Tevens ondersteunt deze richting de zoekbalk. Het is ook mogelijk om dit te combineren met het binnentrekken van gegevens uit andere bronnen zoals een raadsinformatiesysteem op Open Webconcept CMS.
-
-Nadeel van deze oplossingsrichting is dat de gemeente de Common Gateway (open source framework) of zelf zal moeten installeren of als SAAS afnemen.
-
-![docs/commongateway.svg](docs/commongateway.svg "Commongateway Architecture")
 
 ## Functionaliteiten
 
@@ -50,28 +46,20 @@ Geen handwerk: Door directe bron integratie is het niet nodig WOO-verzoeken etc 
 
 | Organisatie | WOO Pagina | WOO Bron(en)            |
 |-------------|------------|-------------------------|
-| [Noordwijk](https://conductionnl.github.io/woo-website-noordwijk/) | [Pagina](https://conductionnl.github.io/woo-website-noordwijk/) | Zaaksyteem (acceptatie) |
-| [Tubbergen](https://conductionnl.github.io/woo-website-tubbergen/)| [Pagina](https://conductionnl.github.io/woo-website-tubbergen/)| Demo                    |
-|[Epe](https://conductionnl.github.io/woo-website-epe/)| [Pagina](https://conductionnl.github.io/woo-website-epe/)| Demo                    |
-|[Dinkelland](https://conductionnl.github.io/woo-website-dinkelland/)| [Pagina](https://conductionnl.github.io/woo-website-dinkelland/)| Demo                    |
-|[Rotterdam](https://conductionnl.github.io/woo-website-rotterdam/)| [Pagina](https://conductionnl.github.io/woo-website-rotterdam/)| Demo                    |
-|[Noaberkracht](https://conductionnl.github.io/woo-website-noaberkracht/)| [Pagina](https://conductionnl.github.io/woo-website-noaberkracht/)| Demo                    |
+| [Noordwijk](https://conductionnl.github.io/woo-website-noordwijk/) | [Pagina](https://conductionnl.github.io/woo-website-noordwijk/) | Zaaksysteem (acceptatie) |
+| [Tubbergen](https://conductionnl.github.io/woo-website-tubbergen/)| [Pagina](https://conductionnl.github.io/woo-website-tubbergen/)| Zaaksysteem (acceptatie) |
+|[Epe](https://conductionnl.github.io/woo-website-epe/)| [Pagina](https://conductionnl.github.io/woo-website-epe/)| Zaaksysteem (acceptatie) |
+|[Dinkelland](https://conductionnl.github.io/woo-website-dinkelland/)| [Pagina](https://conductionnl.github.io/woo-website-dinkelland/)| Zaaksysteem (acceptatie) |
+|[Rotterdam (Alleen vormgeving)](https://conductionnl.github.io/woo-website-rotterdam/)| [Pagina](https://conductionnl.github.io/woo-website-rotterdam/)| Demo                    |
+|[Noaberkracht](https://conductionnl.github.io/woo-website-noaberkracht/)| [Pagina](https://conductionnl.github.io/woo-website-noaberkracht/)| Zaaksysteem (acceptatie) |
  |[Leiden (Alleen vormgeving)](https://conductionnl.github.io/woo-website-leiden/)| [Pagina](https://conductionnl.github.io/woo-website-leiden/)| Demo                    |
  |[Xxllnc (Demo omgeving)](https://conductionnl.github.io/woo-website-xxllnc/)| [Pagina](https://conductionnl.github.io/woo-website-xxllnc/)| Demo                    |
-
-## Architectuur
-
-![docs/components.svg](docs/components.svg "components Architecture")
-
-## Roadmap
-
-- Koppelen van Raadsinformatiesysteem (RIS), begin ontwikkeling medio september
-- Beschikbaarstellen robot.txt en sitemap.xml tbv bzk, begin ontwikkeling begin oktober
-- Uitleg pagina over categorien, nog geen ontwikkeling geplanned
-- Landingspagina met themas aan de hand van tiles, nog geen ontwikkeling geplanned
 
 ## Documentatie
 
 - [Installatiehandleiding](docs/Installatie.md)
+- [Architectuur](docs/Architectuur.md)
+- [Roadmap](docs/Roadmap.md)
 - [Configuratie](docs/Configuratie.md)
 - [Testscenario's](docs/Tests.md)
+.

@@ -21,7 +21,7 @@ const ResultsDisplaySwitch: React.FC<ResultsDisplaySwitchProps> = ({ layoutClass
         className={styles.button}
         onClick={() => setDisplay({ [displayKey]: "cards" })}
       >
-        <FontAwesomeIcon icon={faGripVertical} /> Cards
+        <FontAwesomeIcon icon={faGripVertical} /> Tegels
       </Button>
 
       <Button
@@ -29,7 +29,7 @@ const ResultsDisplaySwitch: React.FC<ResultsDisplaySwitchProps> = ({ layoutClass
         className={styles.button}
         onClick={() => setDisplay({ [displayKey]: "table" })}
       >
-        <FontAwesomeIcon icon={faTable} /> Table
+        <FontAwesomeIcon icon={faTable} /> Tabel
       </Button>
     </ButtonGroup>
   );
