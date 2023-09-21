@@ -1,7 +1,15 @@
 # Configuratie
 Om te zorgen dat de Open WOO Website goed werkt, is het belangrijk dat de onderliggende (zaak)systemen op de juiste manier zijn geconfigureerd. Zo kunnen zij de informatie aanleveren die op de voorkant benodigd is voor het opbouwen van de index. Daarbij is het belangrijk om te weten welke waarden waar worden gebruikt en wat het effect is van configuratiekeuzes.
 
+- [Gebruik variabelen]()
+- [Algemene inrichting van zaaksysteem]()
+- [Mapping vanuit ZGW]()
+- [Mapping vanuit zaaksysteem.nl search endpoint]()
+
+
 ## Gebruik variabelen
+Centraal in de Open WOO Website staat het publicatie oject, het publicatie object vertegenwoordigd een WOO publicatie, zijnde een verzoek, besluit convenant of overige (een defintitie van het WOO publicatoe object vind je onder Architectuur). 
+
 
 **Zoekbalk**
 
