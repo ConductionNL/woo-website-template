@@ -14,7 +14,7 @@ Gebaseerd op: https://github.com/CommonGateway/WooBundle/blob/main/Installation/
 | Volgnummer                        | (Empty)                          |
 | Titel                             | values.case.subject_external        |
 | Beschrijving                      | values.attribute.woo_beschrijving              |
-| Samenvatting                      | values.values.attribute.woo_samenvatting              |
+| Samenvatting                      | values.attribute.woo_samenvatting              |
 | Categorie                         | values.attribute.woo_categorie   |
 | Verzoeker                         | (Empty)         |
 | Ontvangstdatum                    | values.case.date_of_registration |
