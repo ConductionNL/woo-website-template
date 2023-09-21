@@ -1,37 +1,39 @@
 # Architectuur
 
 ## WOO Publicatie Object
+Het WOO Publicatie Object vormt de kern van zowel de WOO API als de WOO-website. Dit object bevat alle essentiële informatie over een WOO-publicatie, inclusief metadata, publicatiedatum, bijlagen en andere relevante eigenschappen. Het dient als de centrale entiteit waaromheen de functionaliteiten van de API en de website zijn gebouwd. Door deze gecentraliseerde aanpak is het eenvoudiger om WOO-publicaties efficiënt te beheren, op te halen en weer te geven, en draagt het bij aan een coherente en gestroomlijnde gebruikerservaring.
 
-[NL API Strategie over property namen](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/#veldnamen-in-snake_case-camelcase-uppercamelcase-of-kebab-case)
-
-
+Toegepaste norm: [NL API Strategie over property namen](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/#veldnamen-in-snake_case-camelcase-uppercamelcase-of-kebab-case)
 
 ## Varianten
 
 ### Open Webconcept variant
 
-Als de voorkant direct wordt gedraaid op de Open Webconcept plugin kunnen WOO-verzoeken en convenanten gemakkelijk worden beheerd vanuit de reeds bestaande webomgeving en CMS.  In dit geval zijn er aan de kant van de organisatie geen verdere installatie of beheerstichtingen nodig (mits de organisatie beschickt over een OpenWebconcept installatie met de Open Woo en Open Convenanten plugins). In combinatie met het serverless kunnen draaien van de voorkant betekent dit een oplossing zonder server of hosting kosten waarbij simpelweg hergebruik gemaakt kan worden van bestaande Common Ground componenten
+Met deze variant kunnen WOO-verzoeken en convenanten eenvoudig worden beheerd vanuit de bestaande webomgeving en CMS door middel van de Open Webconcept plugin. Dit vereist geen extra installatie of beheerinspanningen van de organisatie, op voorwaarde dat er al een OpenWebconcept-installatie met de benodigde plugins beschikbaar is. Dit biedt een serverloze en kostenefficiënte oplossing door het hergebruik van bestaande Common Ground-componenten.
 
-Nadeel van deze oplossingsrichting is dat WOO-verzoeken en convenanten handmatig moeten worden geüpload in de CMS-omgeving en dat de zoekbalk niet wordt ondersteund.
+**Nadelen:**
+- WOO-verzoeken en convenanten moeten handmatig worden geüpload in de CMS-omgeving.
+- De zoekbalk wordt niet ondersteund.
 
-![https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/openweb.svg](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/openweb.svg "OpenWeb Architecture")
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/openweb.svg)
 
 ### Common Gateway variant
 
-Het is ook mogelijk om de voorkant te koppelen aan een Common Gateway-installatie met daarop de Open WOO-plugin. Het voordeel hiervan is dat er kan worden doorgekoppeld op het zaaksysteem waardoor WOO-verzoeken en convenanten rechtstreeks kunnen worden gepubliceerd. Dit scheelt handwerk en voorkomt fouten. Tevens ondersteunt deze richting de zoekbalk. Het is ook mogelijk om dit te combineren met het binnentrekken van gegevens uit andere bronnen zoals een raadsinformatiesysteem op Open Webconcept CMS.
+Deze variant maakt het mogelijk om de front-end te koppelen aan een Common Gateway-installatie met de Open WOO-plugin. Dit biedt de mogelijkheid om direct te koppelen aan het zaaksysteem, waardoor WOO-verzoeken en convenanten automatisch kunnen worden gepubliceerd. Dit bespaart handmatig werk en vermindert de kans op fouten. De zoekbalk wordt in deze variant wel ondersteund. Het is tevens mogelijk om gegevens uit andere bronnen te integreren, zoals een raadsinformatiesysteem of een Open Webconcept CMS.
 
-Nadeel van deze oplossingsrichting is dat de gemeente de Common Gateway (open source framework) of zelf zal moeten installeren of als SAAS afnemen.
+**Nadelen:**
+- De organisatie moet de Common Gateway zelf installeren of als SaaS afnemen.
 
-![https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/commongateway.svg](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/commongateway.svg "Commongateway Architecture")
+![Commongateway Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/commongateway.svg)
 
 ### Ophalen informatie
 
-In principe "scraped" de Open WOO plugin elke nacht alle relevante zaken, hierbij zijn de stappen
+De Open WOO-plugin "scraped" elke nacht alle relevante zaken. De stappen zijn als volgt:
 
-1. Ophalen alle zaaktypen
-2. Per zaaktype controleren op beschikbare eigenschappen (zie inrichting zaaksysteem)
-3. Per zaaktype dat aan de voorwaarden voldoet de zaken ophalen
-4. Per zaak controleren of er een publicatiedatum is, indien ja de zaak opnemen in de index
-5. Zaken die niet in bovenstaande loop zijn gevonden, maar momenteel wel in de index zijn opgenomen verwijderen
+1. Ophalen van alle zaaktypen.
+2. Per zaaktype worden de beschikbare eigenschappen gecontroleerd (zie inrichting zaaksysteem).
+3. Voor elk zaaktype dat aan de voorwaarden voldoet, worden de zaken opgehaald.
+4. Per zaak wordt gecontroleerd of er een publicatiedatum is; zo ja, wordt de zaak opgenomen in de index.
+5. Zaken die niet zijn gevonden in bovenstaande loop maar wel in de index staan, worden verwijderd.
 
-In principe is bovenstaande genoeg om te zorgen dat het zaaksysteem leidend is en zaken zowel gepubliceerd als gedepubliceerd kunnen worden.
+Dit proces zorgt ervoor dat het zaaksysteem leidend is en dat zaken zowel kunnen worden gepubliceerd als gedepubliceerd.
