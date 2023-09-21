@@ -36,6 +36,8 @@ Het is mogenlijk om de Open WOO Website rechtstreeks aan uw zaaksysteem te koppe
 > Via een Stuf <-> ZGW koppelvlak is het in theorie ook mogelijk een zaaksysteem te koppelen aan de hand van Stuf, dit is in de praktijk echter nog niet beproeft.
 
 ## Inrichting zaaksysteem.nl
+Indien uw organisatie gebruik maakt van zaaksysteem.nl is het mogenlijk om ondersteuning/consultancy te krijgen bij het inrichten van uw zaaktypen en Search endpoint.  
+
 | Dienst                       | Kosten                 |
 |------------------------------|------------------------|
-| Implementatie zoekendpoint   | €3000,- (eenmalig)     |
+| Implementatie searchendpoint | €3000,- (eenmalig)     |
