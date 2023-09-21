@@ -9,7 +9,6 @@ Om te zorgen dat de Open WOO Website goed werkt, is het belangrijk dat de onderl
 - Onder 'Onderwerp' worden de categorieën weergegeven waarvoor een WOO-publicatie bestaat.
 
 ![img_2.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/img_2.png)
-![img_2.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/img_2.png)
 
 **Cards**
 
