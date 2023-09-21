@@ -43,47 +43,105 @@ Zaken dienen te beschikken over de volgende properties (zaakattributen):
 | woo_thema           | Nee       | Een optionele titel van het thema waar de zaak onder valt                                               | string, max 255 characters |
 | woo_samenvatting    | Nee       | De KORTE samenvatting van de publicatie zoals online getoond                                            | string, max 255 characters |
 | woo_beschrijving    | Nee       | De UITGEBREIDE beschrijving van de publicatie zoals online getoond                                      | string, max 2555 characters |
-| woo_datum_besluit   | Nee       |                                                                                                         | string formatted as date-time (e.g., 2023-09-12 09:00) or string formatted as date (e.g., 2023-09-12). If a date is presented instead of a date-time, the time will be automatically set to 00:00. |
+| woo_datum_besluit   | Nee       | De datum woorop het besluit over de zaak genomen is                                                     | string formatted as date-time (e.g., 2023-09-12 09:00) or string formatted as date (e.g., 2023-09-12). If a date is presented instead of a date-time, the time will be automatically set to 00:00. |
 
 Daarnaast is het mogelijk om bijlagen van publicaties te clusteren aan de hand van labels.
 
 > **Note**
 > Op dit moment doet Open WOO nog niets met thema's behalve ze weergeven bij de zaak. Er zijn echter plannen om in de toekomst een thema-overzichtspagina te maken en WOO-publicaties filterbaar te maken op thema.
 
-## Mapping van XXLLNC zaken (opgehaald via search endpoint)
+
+## Categoriën
+Hoewel we er vanuit gaan dat categoriën voldoen aan de onder [Algemene inrichting zaaksysteem]() vermelde kenmerken voor `woo_categorie` is het technisch mogenlijk voor organisaties om eigen categoriën te hanteren. Het toevoegen van een eigen ccategorië (e.g. algoritme's of dataset) leid er uitomatisch toe dat deze in de voorkant wordt opgenomen in de `onderwerpen` lijst (mits er ten minimale één publicatie type van deze categorie gepubliceeerd is). Deze toegevoegde categorie en publicaties daarin worden echter **NIET** doorgegeven aan de landelijke index van COOP.
+ 
+## Bijlagen
+Bijlagen nemen een bijzondere positie in binnen de Open WOO Website ze vormen de kern van de naar de bezoeker over te dragen informatie en zijn het centrale onderdeel van de WOO. De manier waarop deze worden getoond word beinvloed door labels. Daarvoor gelden de volgende regels:
+
+
+| Label                   | Effect van label                                                                                              |
+|-------------------------|---------------------------------------------------------------------------------------------------------------|
+| woo_publicatie          | Alleen documenten met dit label worden weergegeven op de voorkant onder bijlage                               |
+| woo_informatieverzoek   | Documenten met dit label worden weergegeven onder de titel 'Informatieverzoek' in plaats van onder bijlagen   |
+| woo_inventarisatielijst | Documenten met dit label worden weergegeven onder de titel 'Inventarisatielijst' in plaats van onder bijlagen |
+| woo_besluit             | Documenten met dit label worden weergegeven onder de titel 'Besluit' in plaats van onder bijlagen             |
+| woo_convenant           | Documenten met dit label worden weergegeven onder de titel 'Convenant' in plaats van onder bijlagen           |
+
+> **Spelregels omtrend labels**
+> - Het is mogenlijk om als organisatie zelf extra labels toe te voegen, als deze het juist format volgen `woo_[[labelnaam]]]` worden deze automatisch overgenomen in de weergave door boven de rij `Bijlagen` een extra rij toe te voegen in de form `[[labelnaam]]: Alle hieraan gekopelde bestanden`. 
+> - Bestanden die geen ander label hebben dan `woo_publicatie` worden getoond onder bijlagen
+> - Als bestanden meerde labels hebben worden ze op meerdere plekken getoond (met uitzondering van bijlagen)
+> - Bestanden zonder het label `woo_publicatie` worden niet getoond (ook al zijn ze wel van een ander `woo_` label voorzien)
+
+
+## Mapping ZGW
+Gebaseerd op: [VNG ZGW Standaard]()
+
+| WOO Publicatie Object      | ZGW Zaak                                         | Gebruik                               |
+|----------------------------|--------------------------------------------------|---------------------------------------|
+| id                         | id                                               | Metadata                              |
+| kenmerk                    | objectId                                         | Metadata, Detail pagina               |
+| portalUrl                  | {{config}}/{{id}}                                | Metadata                              |
+| behandelendBestuursorgaan  | {{config}}                                       | Metadata                              |
+| ontvangerInformatieverzoek | (Empty)                                          | Metadata                              |
+| volgnummer                 | (Empty)                                          | n.v.t                                 |
+| titel                      | values.case.subject_external                     | Metadata, Index pagina, Detail pagina |
+| beschrijving               | values.attribute.woo_veschrijving                | Metadata, Index pagina, Detail pagina |
+| samenvatting               | values.attribute.woo_samenvatting                | Metadata, Index pagina, Detail pagina |
+| categorie                  | values.attribute.woo_categorie                   | Metadata, Index pagina, Detail pagina |
+| verzoeker                  | (Empty)                                          | n.v.t                                 |
+| ontvangstdatum             | values.case.date_of_registration                 | Metadata, Detail pagina               |
+| besluitdatum               | values.attribute.woo_datum_besluit               | Metadata                              |
+| behandelstatus             | values.case.status                               | Metadata, Detail pagina               |
+| publicatiedatum            | values.attribute.woo_publicatiedatum             | Metadata, Index pagina, Detail pagina |
+| besluit                    | is de bijlage gelabeld als "besluit"             | Detail pagina                         |
+| termijnoverschrijding      | case.dateTarget - case.dateOfCompletion          | Detail pagina                         |
+| urlInformatieverzoek       | is de bijlage gelabeld als "informatieverzoek"   | Metadata, Detail pagina               |
+| urlInventarisatielijst     | is de bijlage gelabeld als "inventarisatielijst" | Metadata, Detail pagina               |
+| urlBesluit                 | is de bijlage gelabeld als "besluit"             | Metadata, Detail pagina               |
+| geografischGebied          | (Empty)                                          | n.v.t                                 |
+| bagId                      | (Empty)                                          | n.v.t                                 |
+| bgtId                      | (Empty)                                          | n.v.t                                 |
+| postcodegebied             | (Empty)                                          | n.v.t                                 |
+| adres                      | (Empty)                                          | n.v.t                                 |
+| coords                     | (Empty)                                          | n.v.t                                 |
+| geografischePositie        | (Empty)                                          | n.v.t                                 |
+| bijlagen                   | values.attribute.test_documenten                 | Metadata, Detail pagina               |
+
+
+## Mapping vanuit zaaksysteem.nl search endpoint
 Gebaseerd op: [XXLLNC zaken mapping](https://github.com/CommonGateway/WooBundle/blob/main/Installation/Mapping/woo.xxllncCaseToWoo.mapping.json)
 
-| WOO-publicatie (conform open web) | Zaaksysteemveld                                 |
-|-----------------------------------|-------------------------------------------------|
-| UUID                              | id                                              |
-| ID                                | id                                              |
-| Object_ID                         | object_id                                       |
-| Portal_url                        | {{config}}/{{id}}                               |
-| Behandelend_bestuursorgaan        | {{config}}                                      |
-| Ontvanger_informatieverzoek       | (Empty)                                         |
-| Volgnummer                        | (Empty)                                         |
-| Titel                             | values.case.subject_external                    |
-| Beschrijving                      | values.attribute.woo_beschrijving               |
-| Samenvatting                      | values.attribute.woo_samenvatting               |
-| Categorie                         | values.attribute.woo_categorie                  |
-| Verzoeker                         | (Empty)                                         |
-| Ontvangstdatum                    | values.case.date_of_registration                |
-| Besluitdatum                      | values.attribute.woo_datum_besluit              |
-| Behandelstatus                    | values.case.status                              |
-| Publicatiedatum                   | values.attribute.woo_publicatiedatum            |
-| Besluit                           | is de bijlage gelabeld als "besluit"            |
-| Termijnoverschrijding             | case.date_target - case.date_of_completion      |
-| URL_informatieverzoek             | is de bijlage gelabeld als "informatieverzoek"  |
-| URL_inventarisatielijst           | is de bijlage gelabeld als "inventarisatielijst"|
-| URL_besluit                       | is de bijlage gelabeld als "besluit"            |
-| Geografisch_gebied                | (Empty)                                         |
-| BAG_ID                            | (Empty)                                         |
-| BGT_ID                            | (Empty)                                         |
-| Postcodegebied                    | (Empty)                                         |
-| Adres                             | (Empty)                                         |
-| COORDS                            | (Empty)                                         |
-| Geografische_positie              | (Empty)                                         |
-| Bijlagen                          | values.attribute.test_documenten                |
+
+| WOO Publicatie Object    | Zaaksysteemveld                                 | Gebruik                               |
+|---------------------------|--------------------------------------------------|---------------------------------------|
+| id                         | id                                               | Metadata                              |
+| kenmerk                    | objectId                                         | Metadata, Detail pagina               |
+| portalUrl                  | {{config}}/{{id}}                                | Metadata                              |
+| behandelendBestuursorgaan  | {{config}}                                       | Metadata                              |
+| ontvangerInformatieverzoek | (Empty)                                          | Metadata                              |
+| volgnummer                 | (Empty)                                          | n.v.t                                 |
+| titel                      | values.case.subject_external                     | Metadata, Index pagina, Detail pagina |
+| beschrijving               | values.attribute.woo_veschrijving                | Metadata, Index pagina, Detail pagina |
+| samenvatting               | values.attribute.woo_samenvatting                | Metadata, Index pagina, Detail pagina |
+| categorie                  | values.attribute.woo_categorie                   | Metadata, Index pagina, Detail pagina |
+| verzoeker                  | (Empty)                                          | n.v.t                                 |
+| ontvangstdatum             | values.case.date_of_registration                 | Metadata, Detail pagina               |
+| besluitdatum               | values.attribute.woo_datum_besluit               | Metadata                              |
+| behandelstatus             | values.case.status                               | Metadata, Detail pagina               |
+| publicatiedatum            | values.attribute.woo_publicatiedatum             | Metadata, Index pagina, Detail pagina |
+| besluit                    | is de bijlage gelabeld als "besluit"             | Detail pagina                         |
+| termijnoverschrijding      | case.dateTarget - case.dateOfCompletion          | Detail pagina                         |
+| urlInformatieverzoek       | is de bijlage gelabeld als "informatieverzoek"   | Metadata, Detail pagina               |
+| urlInventarisatielijst     | is de bijlage gelabeld als "inventarisatielijst" | Metadata, Detail pagina               |
+| urlBesluit                 | is de bijlage gelabeld als "besluit"             | Metadata, Detail pagina               |
+| geografischGebied          | (Empty)                                          | n.v.t                                 |
+| bagId                      | (Empty)                                          | n.v.t                                 |
+| bgtId                      | (Empty)                                          | n.v.t                                 |
+| postcodegebied             | (Empty)                                          | n.v.t                                 |
+| adres                      | (Empty)                                          | n.v.t                                 |
+| coords                     | (Empty)                                          | n.v.t                                 |
+| geografischePositie        | (Empty)                                          | n.v.t                                 |
+| bijlagen                   | values.attribute.test_documenten                 | Metadata, Detail pagina               |
 
 Bijlagen
 
@@ -95,13 +153,4 @@ Bijlagen
 | Titel_Bijlage                      | filename                                        |
 | URL_Bijlage                        | (Empty)                                         |
 
-De plek waarop bijlagen worden weergegeven wordt bepaald door de labels.
 
-| Label                  | Effect van label                                                                                          |
-|------------------------|-----------------------------------------------------------------------------------------------------------|
-| woo_publicatie         | Alleen documenten met dit label worden weergegeven op de voorkant onder bijlage                           |
-| woo_informatieverzoek  | Documenten met dit label worden weergegeven onder de titel 'informatieverzoek' in plaats van onder bijlagen|
-| woo_inventarisatielijst| Documenten met dit label worden weergegeven onder de titel 'inventarisatielijst' in plaats van onder bijlagen|
-| woo_besluit            | Documenten met dit label worden weergegeven onder de titel 'besluit' in plaats van onder bijlagen          |
-
-Let op: Alleen documenten die zijn gelabeld als woo_publiceren worden daadwerkelijk overgenomen door de plugin.

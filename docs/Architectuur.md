@@ -1,5 +1,11 @@
 # Architectuur
 
+## WOO Publicatie Object
+
+[NL API Strategie over property namen](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/#veldnamen-in-snake_case-camelcase-uppercamelcase-of-kebab-case)
+
+
+
 ## Varianten
 
 ### Open Webconcept variant
