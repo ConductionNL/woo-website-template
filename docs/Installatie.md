@@ -18,15 +18,26 @@ Om dit template te gebruiken moet je beschikken over:
 
 ### Serverless Installatie
 
-Dit template is in eerste instantie opgezet om serverless gebruikt te worden via GitHub. Dat scheelt niet alleen in de kosten, maar levert ook voordeel op in de beschikbaarheid en belasting. Simpel gezegd de GitHub CDN is gebouwd om flink wat meer aan te kunnen dan de gemiddelde gemeente.
+De Open WOO Website is in eerste instantie opgezet om serverless gebruikt te worden via GitHub. Dat scheelt niet alleen in de kosten, maar levert ook voordeel op in de beschikbaarheid en belasting. Simpel gezegd de GitHub CDN is gebouwd om flink wat meer aan te kunnen dan de gemiddelde gemeente.
 
-1. Rechts boven deze repro staat een knop “gebruiken als template” druk daarop en maak een nieuwe repository aan op uw GitHub-organisatie.
-2. Pas de configuratie aan zo als vermeld onder configuratie
+> **Stappen**
+>1. Rechts boven deze repro staat een knop [“gebruiken als template”](https://github.com/new?template_name=woo-website-template&template_owner=ConductionNL) druk daarop (of [klik hier](https://github.com/new?template_name=woo-website-template&template_owner=ConductionNL)) en maak een nieuwe repository aan op uw GitHub-organisatie.
+>2. Ga in de repository naar de folder .github/workflows/
+>3. Verwijder de workflwo ``product-page-deploy`` als deze er nog staad
+>4. Open de workflow  ``woo-page-deploy`` en pas de branche aan van `never` naar main
+>3. Pas de verdere configuratie in ``woo-page-deploy`` aan zo als hieronder vermeld onder configuratie en sla deze op
+>4. Ga naar acties en wacht tot de actie ``Deploy the WOO Page to GitHub Pages`` succesvol is afgerond
+>4. Ga naar settings->pages, selecteer onder source `deploy form branche` en geef als branche op `gh-pages`
+>5. Boven aan de pagina verschijnt nu de url waarop u uw Open WOO Website kan terugvinden
+>6. Als u de Open WOO Website wilt hosten onder een subdomein van uw organisatie en voorzien van een PKI certificaat kunt u daarvoor de normale github pages handleidingen volgen of een SLA afsluiten voor ondersteuning (zie [kosten]()
+
 
 ### Server Installatie
+Als je de Open Woo Website liever vanaf een eigen server draaid kan dat uiteraard ook, in dat geval is er wel sprake van een iets wat meer ingewikkelde installatie waarvoor beter de handleiding van het onderliggende framework kan worden gevolgd.
 
-1. Volg de stappen hiervoor op de [Productpage template](https://github.com/ConductionNL/product-website-template)
-2. Pas het de configuratie aan zoals vermeld onder configuratie
+> **Stappen**
+> 1. Volg de stappen hiervoor op de [Productpage template](https://github.com/ConductionNL/product-website-template)
+> 2. Pas het de configuratie aan zoals hieronder onder vermeld bij configuratie
 
 ### Configuratie
 
