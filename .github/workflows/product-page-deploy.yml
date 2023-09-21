@@ -24,8 +24,8 @@ env: # Change these to your preferences any image url can also be a base encoded
   FOOTER_LOGO_HREF: "https://xxllnc.nl/"
 
   # Jumbotron
-  JUMBOTRON_TITLE: "(Open) WOO Website Template"
-  JUMBOTRON_SUBTITLE: "Product page"
+  JUMBOTRON_TITLE: "Open WOO Website"
+  JUMBOTRON_SUBTITLE: "Een index pagina voor woo publicaties"
   JUMBOTRON_DESCRIPTION: ${{ github.event.repository.description }}
   JUMBOTRON_SVG: "https://uploads.magnetme-images.com/bf3b2064d7a7c8a51b2c66608b62160f01ee478ab2df8a493635c92069405d35?auto=compress&auto=format&fit=crop&frame=0&h=1125&w=2000"
 
