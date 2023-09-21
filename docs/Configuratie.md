@@ -33,7 +33,7 @@ Gebaseerd op: https://github.com/CommonGateway/WooBundle/blob/main/Installation/
 | Volgnummer                        | (Empty)                                          |
 | Titel                             | values.case.subject_external                     |
 | Beschrijving                      | values.attribute.woo_beschrijving                |
-| Samenvatting                      | values.values.attribute.woo_samenvatting         |
+| Samenvatting                      | values.attribute.woo_samenvatting         |
 | Categorie                         | values.attribute.woo_categorie                   |
 | Verzoeker                         | (Empty)                                          |
 | Ontvangstdatum                    | values.case.date_of_registration                 |
@@ -64,12 +64,12 @@ Bijlagen
 | Titel_Bijlage                      | filename                                               |
 | URL_Bijlage                        | (Empty)                                                |
 
-Bijlagen labels
+De plek waarop bijlagen worden weergegeven worden bepaald door de labels. 
 
 | Labbel                  | Effect van labbel                                                                                             |
 |-------------------------|---------------------------------------------------------------------------------------------------------------|
-| woo_publicatie          | Alleen documenten met dit label worden weergegeven op de voorkant                                             |
-| woo_informatieverzoek   | Documenten met dit label worden weergegeven onder de titel `informaite verzoek` in plaats van onder bijlagen    |
+| woo_publicatie          | Alleen documenten met dit label worden weergegeven op de voorkant on bijlage                                  |
+| woo_informatieverzoek   | Documenten met dit label worden weergegeven onder de titel `informatie verzoek` in plaats van onder bijlagen  |
 | woo_inventarisatielijst | Documenten met dit label worden weergegeven onder de titel `inventarisatielijst` in plaats van onder bijlagen |
 | woo_besluit             | Documenten met dit label worden weergegeven onder de titel `besluit` in plaats van onder bijlagen             |
 
