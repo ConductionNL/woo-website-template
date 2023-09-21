@@ -54,6 +54,8 @@ Gebaseerd op: https://github.com/CommonGateway/WooBundle/blob/main/Installation/
 | Geografische_positie              | (Empty)                                          |
 | Bijlagen                          | values.attribute.test_documenten                 |
 
+Bijlagen
+
 | Bijlage                            | values.attribute.test_documenten                       |
 |------------------------------------|--------------------------------------------------------|
 | Type_Bijlage                       | mimetype                                               |
@@ -61,5 +63,14 @@ Gebaseerd op: https://github.com/CommonGateway/WooBundle/blob/main/Installation/
 | Tijdstip_laatste_wijziging_bijlage | (Empty)                                                |
 | Titel_Bijlage                      | filename                                               |
 | URL_Bijlage                        | (Empty)                                                |
+
+Bijlagen labels
+
+| Labbel                  | Effect van labbel                                                                                             |
+|-------------------------|---------------------------------------------------------------------------------------------------------------|
+| woo_publicatie          | Alleen documenten met dit label worden weergegeven op de voorkant                                             |
+| woo_informatieverzoek   | Documenten met dit label worden weergegeven onder de titel `informaite verzoek` in plaats van onder bijlagen    |
+| woo_inventarisatielijst | Documenten met dit label worden weergegeven onder de titel `inventarisatielijst` in plaats van onder bijlagen |
+| woo_besluit             | Documenten met dit label worden weergegeven onder de titel `besluit` in plaats van onder bijlagen             |
 
 Let op: Alleen documenten die zijn gelabeld als woo_publiceren worden daadwerkenlijk overgenomen door de plugin
