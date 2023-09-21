@@ -8,19 +8,20 @@ Om te zorgen dat de Open WOO Website goed werkt, is het belangrijk dat de onderl
 - Onder 'jaar' worden alleen de jaren weergegeven waarbinnen er een WOO-publicatie bestaat.
 - Onder 'Onderwerp' worden de categorieën weergegeven waarvoor een WOO-publicatie bestaat.
 
-![img_2.png](img_2.png)
+![img_2.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/img_2.png)
+![img_2.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/img_2.png)
 
 **Cards**
 
 In de cards worden de properties op de volgende plekken weergegeven.
 
-![img_1.png](img_1.png)
+![img_1.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/img_1.png)
 
 **Overzichtspagina**
 
 In de overzichtspagina worden de properties op de volgende plekken weergegeven.
 
-![img_4.png](img_4.png)
+![img_4.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/img_4.png)
 
 ## Algemene inrichting zaaksysteem
 
