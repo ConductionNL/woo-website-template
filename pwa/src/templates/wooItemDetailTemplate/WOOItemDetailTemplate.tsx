@@ -70,6 +70,12 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     <TableCell>{getItems.data.Samenvatting}</TableCell>
                   </TableRow>
                 )}
+                {getItems.data.Beschrijving && (
+                  <TableRow className={styles.tableRow}>
+                    <TableCell>{t("Beschrijving")}</TableCell>
+                    <TableCell>{getItems.data.Beschrijving}</TableCell>
+                  </TableRow>
+                )}
 
                 {getItems.data.Termijnoverschrijding && (
                   <TableRow className={styles.tableRow}>
