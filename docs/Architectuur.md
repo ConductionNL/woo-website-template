@@ -17,3 +17,15 @@ Het is ook mogelijk om de voorkant te koppelen aan een Common Gateway-installati
 Nadeel van deze oplossingsrichting is dat de gemeente de Common Gateway (open source framework) of zelf zal moeten installeren of als SAAS afnemen.
 
 ![https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/commongateway.svg](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/commongateway.svg "Commongateway Architecture")
+
+### Ophalen informatie
+
+In principe "scraped" de Open WOO plugin elke nacht alle relevante zaken, hierbij zijn de stappen
+
+1. Ophalen alle zaaktypen
+2. Per zaaktype controleren op beschikbare eigenschappen (zie inrichting zaaksysteem)
+3. Per zaaktype dat aan de voorwaarden voldoet de zaken ophalen
+4. Per zaak controleren of er een publicatiedatum is, indien ja de zaak opnemen in de index
+5. Zaken die niet in bovenstaande loop zijn gevonden, maar momenteel wel in de index zijn opgenomen verwijderen
+
+In principe is bovenstaande genoeg om te zorgen dat het zaaksysteem leidend is en zaken zowel gepubliceerd als gedepubliceerd kunnen worden.
