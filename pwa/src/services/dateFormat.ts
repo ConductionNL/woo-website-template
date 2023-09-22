@@ -1,8 +1,6 @@
 import dateFormat from "dateformat";
 
 export const translateDate = (language: string, date: Date): string => {
-  if (!date) return "NVT";
-
   switch (language) {
     case "nl":
       return dateFormat(date, "dd-mm-yyyy");

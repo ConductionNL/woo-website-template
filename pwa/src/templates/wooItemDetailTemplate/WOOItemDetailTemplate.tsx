@@ -84,6 +84,17 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                   </TableRow>
                 )}
 
+                {getItems.data.Publicatiedatum && (
+                  <TableRow className={styles.tableRow}>
+                    <TableCell>{t("Publicatiedatum")}</TableCell>
+                    <TableCell>
+                      {getItems.data.Publicatiedatum
+                        ? translateDate(i18n.language, getItems.data.Publicatiedatum)
+                        : "-"}
+                    </TableCell>
+                  </TableRow>
+                )}
+
                 {getItems.data.Ontvangstdatum && (
                   <TableRow className={styles.tableRow}>
                     <TableCell>{t("Ontvangstdatum")}</TableCell>

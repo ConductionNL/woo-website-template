@@ -22,7 +22,8 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
           <CardWrapper key={request.id} className={styles.cardContainer} onClick={() => navigate(request.id)}>
             <CardHeader>
               <CardHeaderDate>
-                <FontAwesomeIcon icon={faClock} /> {translateDate(i18n.language, request.Publicatiedatum) ?? "-"}
+                <FontAwesomeIcon icon={faClock} />{" "}
+                {request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : "NVT"}
               </CardHeaderDate>
               <CardHeaderTitle className={styles.title}>
                 <Heading2>{request.Titel}</Heading2>
