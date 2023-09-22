@@ -6,12 +6,12 @@ Bent u geïnteresseerd of wilt u meer informatie? Neem dan contact op met een va
 
 ## Leveranciers
 | Leverancier | Contactpersoon                               |
-|-------------|----------------------------------------------|
-| Conduction  | Ruben van der Linde (info@conduction.nl)     |
-| xxlnce      | Remco Damhuis (sales.zaakgericht@@xxllnc.nl) |
+|------------|----------------------------------------------|
+| Conduction | Ruben van der Linde (info@conduction.nl)     |
+| xxllnc     | Remco Damhuis (sales.zaakgericht@@xxllnc.nl) |
 
 ## Frontend
-Kijk op [https://conductionnl.github.io/woo-website-xxllnc/](de demo pagina) voor een voorbeeld van de omgeving of op [de product home page](https://openwoo.app/) voor een overzicht van de omgevingen die in ontwikkeling zijn.
+Kijk op [de demo pagina](https://conductionnl.github.io/woo-website-xxllnc) voor een voorbeeld van de omgeving of op [de product home page](https://openwoo.app/) voor een overzicht van de omgevingen die in ontwikkeling zijn.
 
 | Dienst                                         | Kosten                 |
 |------------------------------------------------|------------------------|
