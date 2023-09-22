@@ -5,8 +5,8 @@ export const generateYearsArray = (amountOfYears: number) => {
 
   for (let i = 0; i < amountOfYears; i++) {
     const year = currentYear - i;
-    const beforeDate = `${year + 1}-01-01`;
-    const afterDate = `${year - 1}-12-31`;
+    const beforeDate = `${year + 1}-01-01T00:00:00Z`;
+    const afterDate = `${year - 1}-12-31T23:59:59Z`;
 
     yearsArray.push({
       label: `${year}`,

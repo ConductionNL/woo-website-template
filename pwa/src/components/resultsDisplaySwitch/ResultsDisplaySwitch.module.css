@@ -1,6 +1,6 @@
 .container {
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap !important;
   margin-inline-start: 12px;
 }
 
