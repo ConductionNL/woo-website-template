@@ -32,6 +32,7 @@ env: # Change these to your preferences any image url can also be a base encoded
 
   # Other
   FAVICON_URL: "https://xxllnc.nl/wp-content/uploads/2021/07/cropped-fav-xxllnc-32x32.png"
+  PAGE_TITLE: "OpenWoo"
 
   # NL Design Theme
   NL_DESIGN_THEME_CLASSNAME: "xxllnc-theme"
@@ -60,9 +61,11 @@ jobs:
           envkey_USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX: ${{ env.USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX }}
           envkey_GATSBY_GITHUB_API_BASE_URL: ${{ env.GITHUB_API_BASE_URL }}
           envkey_GATSBY_FAVICON_URL: ${{ env.FAVICON_URL }}
+          envkey_GATSBY_PAGE_TITLE: ${{ env.PAGE_TITLE }}
           envkey_GATSBY_NAVBAR_LOGO_URL: ${{ env.NAVBAR_LOGO_URL }}
           envkey_GATSBY_GITHUB_DOCS_DIRECTORY_PATHS: ${{ env.GITHUB_DOCS_DIRECTORY_PATHS }}
           envkey_GATSBY_SLACK_URL: ${{ env.SLACK_URL }}
+          envkey_GATSBY_READ_THE_DOCS_URL: ${{ env.READ_THE_DOCS_URL }}
           envkey_GATSBY_GITHUB_REPOSITORY_URL: ${{ env.GITHUB_REPOSITORY_URL }}
           envkey_GATSBY_JUMBOTRON_TITLE: ${{ env.JUMBOTRON_TITLE }}
           envkey_GATSBY_JUMBOTRON_SUBTITLE: ${{ env.JUMBOTRON_SUBTITLE }}
