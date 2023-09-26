@@ -14,7 +14,7 @@ Centraal in de Open WOO Website staat het publicatie oject, het publicatie objec
 **Zoekbalk**
 
 - Onder 'jaar' worden alleen de jaren weergegeven waarbinnen er een WOO-publicatie bestaat.
-- Onder 'Onderwerp' worden de categorieën weergegeven waarvoor een WOO-publicatie bestaat.
+- Onder 'Categorie' worden de categorieën weergegeven waarvoor een WOO-publicatie bestaat.
 
 ![img_2.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/img_2.png)
 
