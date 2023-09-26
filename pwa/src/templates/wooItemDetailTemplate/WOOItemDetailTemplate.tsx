@@ -59,8 +59,8 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
 
                 {getItems.data.Titel && (
                   <TableRow className={styles.tableRow}>
-                    <TableCell>{t("Onderwerp")}</TableCell>
-                    <TableCell>{getItems.data.Titel}</TableCell>
+                    <TableCell>{t("Categorie")}</TableCell>
+                    <TableCell>{getItems.data.Categorie ?? "-"}</TableCell>
                   </TableRow>
                 )}
 
