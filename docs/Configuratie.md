@@ -51,8 +51,8 @@ Daarnaast is het mogelijk om bijlagen van publicaties te clusteren aan de hand v
 > Op dit moment doet Open WOO nog niets met thema's behalve ze weergeven bij de zaak. Er zijn echter plannen om in de toekomst een thema-overzichtspagina te maken en WOO-publicaties filterbaar te maken op thema.
 
 
-## Categoriën
-Hoewel we er vanuit gaan dat categoriën voldoen aan de onder [Algemene inrichting zaaksysteem]() vermelde kenmerken voor `woo_categorie` is het technisch mogenlijk voor organisaties om eigen categoriën te hanteren. Het toevoegen van een eigen ccategorië (e.g. algoritme's of dataset) leid er uitomatisch toe dat deze in de voorkant wordt opgenomen in de `onderwerpen` lijst (mits er ten minimale één publicatie type van deze categorie gepubliceeerd is). Deze toegevoegde categorie en publicaties daarin worden echter **NIET** doorgegeven aan de landelijke index van COOP.
+## Categorieën
+Hoewel we er vanuit gaan dat categorieën voldoen aan de onder [Algemene inrichting zaaksysteem]() vermelde kenmerken voor `woo_categorie` is het technisch mogenlijk voor organisaties om eigen categorieën te hanteren. Het toevoegen van een eigen categorië (e.g. algoritme's of dataset) leidt er automatisch toe dat deze in de voorkant wordt opgenomen in de `onderwerpen` lijst (mits er ten minimale één publicatietype van deze categorie gepubliceeerd is). Deze toegevoegde categorie en publicaties daarin worden echter **NIET** doorgegeven aan de landelijke index van COOP.
  
 ## Bijlagen
 Bijlagen nemen een bijzondere positie in binnen de Open WOO Website ze vormen de kern van de naar de bezoeker over te dragen informatie en zijn het centrale onderdeel van de WOO. De manier waarop deze worden getoond word beinvloed door labels. Daarvoor gelden de volgende regels:
