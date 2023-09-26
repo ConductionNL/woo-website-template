@@ -24,7 +24,7 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
       <TableHeader className={styles.tableHeader}>
         <TableRow>
           <TableHeaderCell>Woo-verzoek</TableHeaderCell>
-          <TableHeaderCell>Onderwerp</TableHeaderCell>
+          <TableHeaderCell>Categorie</TableHeaderCell>
           <TableHeaderCell>Publicatiedatum</TableHeaderCell>
           <TableHeaderCell>Ontvangstdatum</TableHeaderCell>
           <TableHeaderCell>Besluitdatum</TableHeaderCell>

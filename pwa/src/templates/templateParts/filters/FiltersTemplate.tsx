@@ -62,7 +62,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
         <SelectSingle
           options={TEMP_PUBLICATION_TYPES}
           name="category"
-          placeholder="Onderwerp"
+          placeholder="Categorie"
           defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.Categorie)}
           isClearable
           {...{ register, errors, control }}
