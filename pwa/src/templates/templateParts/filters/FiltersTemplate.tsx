@@ -28,12 +28,15 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
 
   const watcher = watch();
 
+  const today = new Date();
+  const currentYear = today.getFullYear();
+
   const onSubmit = (data: any) => {
     setFilters({
       _search: data.title,
-      "Ontvangstdatum[after]": data.year?.after,
-      "Ontvangstdatum[before]": data.year?.before,
-      publicationType: data.publicationType?.value,
+      "Publicatiedatum[after]": data.year?.after,
+      "Publicatiedatum[before]": data.year?.before,
+      Categorie: data.category?.value,
     });
   };
 
@@ -49,7 +52,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
         <InputText name="title" placeholder="Zoeken.." defaultValue={filters._search} {...{ register, errors }} />
 
         <SelectSingle
-          options={generateYearsArray(28)}
+          options={generateYearsArray(currentYear - 1995)}
           name="year"
           placeholder="Jaar"
           isClearable
@@ -58,9 +61,9 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
 
         <SelectSingle
           options={TEMP_PUBLICATION_TYPES}
-          name="publicationType"
-          placeholder="Publicatietype"
-          defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.publicationType)}
+          name="category"
+          placeholder="Categorie"
+          defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.Categorie)}
           isClearable
           {...{ register, errors, control }}
         />

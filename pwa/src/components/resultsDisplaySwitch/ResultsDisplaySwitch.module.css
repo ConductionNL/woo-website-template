@@ -1,5 +1,7 @@
 .container {
   align-items: center;
+  flex-wrap: nowrap !important;
+  margin-inline-start: 12px;
 }
 
 .button:hover {
