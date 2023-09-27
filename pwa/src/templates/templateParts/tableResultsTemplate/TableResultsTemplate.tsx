@@ -34,7 +34,7 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
       <TableBody className={styles.tableBody}>
         {requests.map((request) => (
           <TableRow className={styles.tableRow} key={request.id} onClick={() => navigate(request.id)}>
-            <TableCell>{request.Titel}</TableCell>
+            <TableCell>{request.Titel !== "" ? request.Titel : "Geen titel beschikbaar"}</TableCell>
             <TableCell>{request.Categorie ?? "-"}</TableCell>
             <TableCell>
               {request.Publicatiedatum
