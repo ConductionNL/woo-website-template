@@ -85,7 +85,7 @@ Gebaseerd op: [VNG ZGW Standaard]()
 | ontvangerInformatieverzoek | (Empty)                                          | Metadata                              |
 | volgnummer                 | (Empty)                                          | n.v.t                                 |
 | titel                      | values.case.subject_external                     | Metadata, Index pagina, Detail pagina |
-| beschrijving               | values.attribute.woo_veschrijving                | Metadata, Index pagina, Detail pagina |
+| beschrijving               | values.attribute.woo_beschrijving                | Metadata, Index pagina, Detail pagina |
 | samenvatting               | values.attribute.woo_samenvatting                | Metadata, Index pagina, Detail pagina |
 | categorie                  | values.attribute.woo_categorie                   | Metadata, Index pagina, Detail pagina |
 | verzoeker                  | (Empty)                                          | n.v.t                                 |
@@ -121,7 +121,7 @@ Gebaseerd op: [XXLLNC zaken mapping](https://github.com/CommonGateway/WooBundle/
 | ontvangerInformatieverzoek | (Empty)                                          | Metadata                              |
 | volgnummer                 | (Empty)                                          | n.v.t                                 |
 | titel                      | values.case.subject_external                     | Metadata, Index pagina, Detail pagina |
-| beschrijving               | values.attribute.woo_veschrijving                | Metadata, Index pagina, Detail pagina |
+| beschrijving               | values.attribute.woo_beschrijving                | Metadata, Index pagina, Detail pagina |
 | samenvatting               | values.attribute.woo_samenvatting                | Metadata, Index pagina, Detail pagina |
 | categorie                  | values.attribute.woo_categorie                   | Metadata, Index pagina, Detail pagina |
 | verzoeker                  | (Empty)                                          | n.v.t                                 |
