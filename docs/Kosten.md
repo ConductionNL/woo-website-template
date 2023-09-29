@@ -17,9 +17,9 @@ Kijk op [https://conductionnl.github.io/woo-website-xxllnc/](de demo pagina) voo
 
 | Dienst                                         | Kosten                 |
 |------------------------------------------------|------------------------|
-| Implementatie                                  | € 1750,- (eenmalig)     |
-| Design Tokens (indien nog niet beschikbaar)    | € 2000,- (eenmalig)     |
-| SLA of SAAS-frontend                           | € 250,- (maandelijks)   |
+| Implementatie                                  | €1750,- (eenmalig)     |
+| NL Design Tokens (indien nog niet beschikbaar) | €2000,- (eenmalig)     |
+| SLA of SAAS frontend                           | €250,- (maandelijks)   |
 
 **Waarop zijn de maandelijkse kosten gebaseerd?**
 Lost van hosting verwachten we naar aanleiding van eerdere ervaringen dat de frontend maandelijks moet worden bijgewerkt in verband met veiligheidsupdates, nieuwe functionaliteit of aanpassingen in NL Design. Met name de ontwikkelingen in de Woo zullen ervoor zorgen dat de pagina de komende jaren continu in beweging is.
@@ -40,6 +40,7 @@ Het is mogelijk om de Open Woo Website rechtstreeks aan uw zaaksysteem te koppel
 > Via een Stuf <-> ZGW koppelvlak is het in theorie ook mogelijk een zaaksysteem te koppelen aan de hand van Stuf, dit is in de praktijk echter nog niet beproeft. Andere koppelvlakken en maatwerk zijn uiteraard bespreekbaar, neem daarvoor contact op met een leverancier.
 
 ## Configuratie en inrichting xxllnc Zaken
+Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het modelzaaktype tbv WOO-publicatie en de configuratie van de integratie gebruik maken van een Consultant.
 
 Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het modelzaaktype tbv Woo-publicatie en de configuratie van de integratie gebruikmaken van een Consultant.
 

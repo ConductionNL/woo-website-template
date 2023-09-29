@@ -12,6 +12,9 @@ Medio september gaat de gebruikersgroep verkennen of het mogelijk is om ook de R
 
 Begin oktober wil COOP graag de decentrale portalen harvesten om een centrale index op te bouwen. Dit zal de zoekbaarheid van overheidsinformatie verbeteren, wat de dienstverlening aan de inwoners ten goede komt. Het past ook binnen de kaders van de Wet Open Overheid door het vergroten van de toegankelijkheid van overheidsinformatie.
 
+## Aanleveren DROP
+**Inschatting: Nog geen inschatting**
+
 ## Open Online Plugin (Geen ontwikkeling gepland)
 **Inschatting: 80 uur**
 
