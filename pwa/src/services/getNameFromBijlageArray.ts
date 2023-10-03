@@ -1,8 +1,3 @@
-export const getNameFromBijlageArray = (url: string, array: any[]) => {
-  if (!array) return;
-  const bijlage = array.find((option) => {
-    return option.URL_Bijlage === url;
-  });
-
-  return bijlage?.Titel_Bijlage;
+export const getBijlageTitleFromURL = (url: string, bijlagen: any[]): string | undefined => {
+  return bijlagen.find((bijlage) => bijlage.URL_Bijlage === url)?.Titel_Bijlage;
 };
