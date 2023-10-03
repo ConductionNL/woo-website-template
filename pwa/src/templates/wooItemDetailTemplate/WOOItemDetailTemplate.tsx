@@ -22,6 +22,7 @@ import { useOpenWoo } from "../../hooks/openWoo";
 import Skeleton from "react-loading-skeleton";
 import { getPDFName } from "../../services/getPDFName";
 import { isUUID } from "../../services/isUUID";
+import { getBijlageTitleFromURL } from "../../services/getNameFromBijlageArray";
 
 interface WOOItemDetailTemplateProps {
   wooItemId: string;
@@ -133,7 +134,10 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     <TableCell>{t("Bijlage informatieverzoek")}</TableCell>
                     <TableCell>
                       <Link href={getItems.data.URL_informatieverzoek} target="blank">
-                        {getPDFName(getItems.data.URL_informatieverzoek)}
+                        {getBijlageTitleFromURL(
+                          getItems.data.URL_informatieverzoek,
+                          getItems.data?.embedded?.Bijlagen,
+                        ) ?? getPDFName(getItems.data.URL_informatieverzoek)}
                       </Link>
                     </TableCell>
                   </TableRow>
@@ -144,8 +148,19 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     <TableCell>{t("Bijlage inventarisatielijst")}</TableCell>
                     <TableCell>
                       <Link href={getItems.data.URL_inventarisatielijst} target="blank">
-                        {getPDFName(getItems.data.URL_inventarisatielijst)}
+                        {getBijlageTitleFromURL(
+                          getItems.data.URL_inventarisatielijst,
+                          getItems.data?.embedded?.Bijlagen,
+                        ) ?? getPDFName(getItems.data.URL_inventarisatielijst)}
                       </Link>
+                      <>
+                        {console.log(
+                          getBijlageTitleFromURL(
+                            getItems.data.URL_inventarisatielijst,
+                            getItems.data?.embedded?.Bijlagen,
+                          ),
+                        )}
+                      </>
                     </TableCell>
                   </TableRow>
                 )}
@@ -155,7 +170,8 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     <TableCell>{t("Bijlage besluit")}</TableCell>
                     <TableCell>
                       <Link href={getItems.data.URL_besluit} target="blank">
-                        {getPDFName(getItems.data.URL_besluit)}
+                        {getBijlageTitleFromURL(getItems.data.URL_besluit, getItems.data?.embedded?.Bijlagen) ??
+                          getPDFName(getItems.data.URL_besluit)}
                       </Link>
                     </TableCell>
                   </TableRow>
