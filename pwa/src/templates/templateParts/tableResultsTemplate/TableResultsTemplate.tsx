@@ -34,7 +34,7 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
       <TableBody className={styles.tableBody}>
         {requests.map((request) => (
           <TableRow className={styles.tableRow} key={request.id} onClick={() => navigate(request.id)}>
-            <TableCell>{request.Titel !== "" ? request.Titel : "Geen titel beschikbaar"}</TableCell>
+            <TableCell>{request.Titel ?? "Geen titel beschikbaar"}</TableCell>
             <TableCell>{request.Categorie ?? "-"}</TableCell>
             <TableCell>
               {request.Publicatiedatum
@@ -51,7 +51,7 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
                 ? translateDate(i18n.language, request.Besluitdatum)
                 : "Geen besluitdatum beschikbaar"}
             </TableCell>
-            <TableCell>{request.Besluit !== "" ? request.Besluit : "Geen besluit beschikbaar"}</TableCell>
+            <TableCell>{request.Besluit ?? "Geen besluit beschikbaar"}</TableCell>
           </TableRow>
         ))}
       </TableBody>
