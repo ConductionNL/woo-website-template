@@ -1,6 +1,6 @@
 # Kosten
 
-Het is mogelijk om de Woo Website af te nemen als SAAS of ondersteuning te krijgen op uw eigen installatie in de vorm van een SLA of implementatie. Conduction en xxlnce bieden momenteel de volgende ondersteuningsmogelijkheden aan.
+Het is mogelijk om de Woo Website af te nemen als SAAS of ondersteuning te krijgen op uw eigen installatie in de vorm van een SLA of implementatie. Conduction en xxllnce bieden momenteel de volgende ondersteuningsmogelijkheden aan.
 
 Bent u geïnteresseerd of wilt u meer informatie? Neem dan contact op met een van de leveranciers.
 
@@ -9,7 +9,7 @@ Bent u geïnteresseerd of wilt u meer informatie? Neem dan contact op met een va
 | Leverancier | Contactpersoon                               |
 |-------------|----------------------------------------------|
 | Conduction  | Ruben van der Linde (<info@conduction.nl>)     |
-| xxlnce      | Remco Damhuis (<sales.zaakgericht@xxllnc.nl>) |
+| xxllnce     | Remco Damhuis (<sales.zaakgericht@xxllnc.nl>) |
 
 ## Frontend
 
