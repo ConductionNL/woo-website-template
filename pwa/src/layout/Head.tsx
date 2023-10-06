@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 export const Head: React.FC = () => {
   const { gatsbyContext } = useGatsbyContext();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const translatedCrumbs = gatsbyContext.pageContext?.breadcrumb.crumbs.map((crumb: any) => ({
     ...crumb,
@@ -18,7 +18,7 @@ export const Head: React.FC = () => {
   return (
     <Helmet
       htmlAttributes={{
-        lang: "nl",
+        lang: i18n.language,
       }}
       bodyAttributes={{
         class: process.env.GATSBY_NL_DESIGN_THEME_CLASSNAME,
