@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { getPageTitle } from "../services/getPageTitle";
 import { useGatsbyContext } from "../context/gatsby";
 import { useTranslation } from "react-i18next";
+import { languageOptions } from "../data/languageOptions";
 
 export const Head: React.FC = () => {
   const { gatsbyContext } = useGatsbyContext();
@@ -15,10 +16,14 @@ export const Head: React.FC = () => {
     crumbLabel: t(_.upperFirst(crumb.crumbLabel)),
   }));
 
+  const currentLanguage = languageOptions.find(
+    (language) => language.label === (i18n.language.toUpperCase() === "EN" ? "US" : i18n.language.toUpperCase()),
+  )?.value;
+
   return (
     <Helmet
       htmlAttributes={{
-        lang: i18n.language,
+        lang: currentLanguage,
       }}
       bodyAttributes={{
         class: process.env.GATSBY_NL_DESIGN_THEME_CLASSNAME,
