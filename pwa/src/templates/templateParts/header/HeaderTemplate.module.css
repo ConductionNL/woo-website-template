@@ -4,6 +4,8 @@
   max-inline-size: var(--utrecht-page-max-inline-size);
   padding-inline-start: var(--utrecht-page-margin-inline-start);
   padding-inline-end: var(--utrecht-page-margin-inline-end);
+  display: flex;
+  justify-content: space-between;
 }
 
 .imageContainer {
@@ -21,4 +23,20 @@
 
 .image:hover {
   cursor: pointer;
+}
+
+.languageSelectContainer {
+  align-self: center;
+}
+
+.languageSelect {
+  user-select: none;
+}
+
+.languageSelect:hover:not(.languageSelectDisabled) {
+  cursor: pointer;
+}
+
+.languageSelectDisabled {
+  opacity: 50%;
 }
