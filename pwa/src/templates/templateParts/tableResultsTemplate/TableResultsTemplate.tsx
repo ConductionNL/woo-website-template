@@ -17,27 +17,27 @@ interface TableResultsTemplateProps {
 }
 
 export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requests }) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <Table className={styles.table}>
       <TableHeader className={styles.tableHeader}>
         <TableRow>
-          <TableHeaderCell>Onderwerp</TableHeaderCell>
-          <TableHeaderCell>Publicatiedatum</TableHeaderCell>
-          <TableHeaderCell>Samenvatting</TableHeaderCell>
+          <TableHeaderCell>{t("Subject")}</TableHeaderCell>
+          <TableHeaderCell>{t("Publication date")}</TableHeaderCell>
+          <TableHeaderCell>{t("Summary")}</TableHeaderCell>
         </TableRow>
       </TableHeader>
       <TableBody className={styles.tableBody}>
         {requests.map((request) => (
           <TableRow className={styles.tableRow} key={request.id} onClick={() => navigate(request.id)}>
-            <TableCell>{request.Titel ?? "Geen onderwerp beschikbaar"}</TableCell>
+            <TableCell>{request.Titel ?? t("No subject available")}</TableCell>
             <TableCell>
               {request.Publicatiedatum
                 ? translateDate(i18n.language, request.Publicatiedatum)
-                : "Geen publicatiedatum beschikbaar"}
+                : t("No publication date available")}
             </TableCell>
-            <TableCell>{request.Samenvatting ?? "Geen samenvatting beschikbaar"}</TableCell>
+            <TableCell>{request.Samenvatting ?? t("No summary available")}</TableCell>
           </TableRow>
         ))}
       </TableBody>

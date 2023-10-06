@@ -1,8 +1,6 @@
 import * as React from "react";
 import * as styles from "./CardsResultsTemplate.module.css";
 import { Heading2, Paragraph } from "@utrecht/component-library-react/dist/css-module";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { translateDate } from "../../../services/dateFormat";
 import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
@@ -13,7 +11,7 @@ interface CardsResultsTemplateProps {
 }
 
 export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requests }) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -22,10 +20,10 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
           <CardWrapper key={request.id} className={styles.cardContainer} onClick={() => navigate(request.id)}>
             <CardHeader>
               <CardHeaderDate>
-                {request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : "N.v.t."}
+                {request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : t("N/A")}
               </CardHeaderDate>
               <CardHeaderTitle className={styles.title}>
-                <Heading2>{request.Titel ?? "Geen titel beschikbaar"}</Heading2>
+                <Heading2>{request.Titel ?? t("No title available")}</Heading2>
               </CardHeaderTitle>
             </CardHeader>
 

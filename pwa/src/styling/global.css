@@ -9,3 +9,12 @@ html,
 body {
   margin: 0;
 }
+
+.utrecht-link {
+  display: flex;
+  align-items: center;
+}
+
+.utrecht-link > svg {
+  margin-inline-end: var(--utrecht-icon-gap);
+}
