@@ -109,13 +109,6 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                   </TableRow>
                 )}
 
-                {getItems.data.Besluit && (
-                  <TableRow className={styles.tableRow}>
-                    <TableCell>{t("Besluit")}</TableCell>
-                    <TableCell>{getItems.data.Besluit}</TableCell>
-                  </TableRow>
-                )}
-
                 {getItems.data?.embedded?.Themas && (
                   <TableRow className={styles.tableRow}>
                     <TableCell>{t("Thema's")}</TableCell>
@@ -131,7 +124,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
 
                 {getItems.data.URL_informatieverzoek && (
                   <TableRow className={styles.tableRow}>
-                    <TableCell>{t("Bijlage informatieverzoek")}</TableCell>
+                    <TableCell>{t("Informatieverzoek")}</TableCell>
                     <TableCell>
                       <Link href={getItems.data.URL_informatieverzoek} target="blank">
                         {getBijlageTitleFromURL(
@@ -143,35 +136,31 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                   </TableRow>
                 )}
 
+                {(getItems.data.Besluit || getItems.data.URL_besluit) && (
+                  <TableRow className={styles.tableRow}>
+                    <TableCell>{t("Besluit")}</TableCell>
+                    <TableCell>
+                      {getItems.data.Besluit}
+                      {getItems.data.Besluit && getItems.data.URL_besluit && ","}{" "}
+                      {getItems.data.URL_besluit && (
+                        <Link href={getItems.data.URL_besluit} target="blank">
+                          {getBijlageTitleFromURL(getItems.data.URL_besluit, getItems.data?.embedded?.Bijlagen) ??
+                            getPDFName(getItems.data.URL_besluit)}
+                        </Link>
+                      )}
+                    </TableCell>
+                  </TableRow>
+                )}
+
                 {getItems.data.URL_inventarisatielijst && (
                   <TableRow className={styles.tableRow}>
-                    <TableCell>{t("Bijlage inventarisatielijst")}</TableCell>
+                    <TableCell>{t("Inventarisatielijst")}</TableCell>
                     <TableCell>
                       <Link href={getItems.data.URL_inventarisatielijst} target="blank">
                         {getBijlageTitleFromURL(
                           getItems.data.URL_inventarisatielijst,
                           getItems.data?.embedded?.Bijlagen,
                         ) ?? getPDFName(getItems.data.URL_inventarisatielijst)}
-                      </Link>
-                      <>
-                        {console.log(
-                          getBijlageTitleFromURL(
-                            getItems.data.URL_inventarisatielijst,
-                            getItems.data?.embedded?.Bijlagen,
-                          ),
-                        )}
-                      </>
-                    </TableCell>
-                  </TableRow>
-                )}
-
-                {getItems.data.URL_besluit && (
-                  <TableRow className={styles.tableRow}>
-                    <TableCell>{t("Bijlage besluit")}</TableCell>
-                    <TableCell>
-                      <Link href={getItems.data.URL_besluit} target="blank">
-                        {getBijlageTitleFromURL(getItems.data.URL_besluit, getItems.data?.embedded?.Bijlagen) ??
-                          getPDFName(getItems.data.URL_besluit)}
                       </Link>
                     </TableCell>
                   </TableRow>
@@ -185,8 +174,8 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                         {getItems.data?.embedded?.Bijlagen.map((bijlage: any, idx: number) => (
                           <UnorderedListItem key={idx}>
                             <Link
-                              href={bijlage.URL_Bijlage.length !== 0 ? bijlage.URL_Bijlage : "#"}
-                              target={bijlage.URL_Bijlage.length !== 0 ? "blank" : ""}
+                              href={bijlage.URL_Bijlage?.length !== 0 ? bijlage.URL_Bijlage : "#"}
+                              target={bijlage.URL_Bijlage?.length !== 0 ? "blank" : ""}
                             >
                               {bijlage.Titel_Bijlage}
                             </Link>
