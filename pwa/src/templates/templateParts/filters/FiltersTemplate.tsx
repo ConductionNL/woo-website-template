@@ -49,7 +49,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   }, [watcher]);
 
   return (
-    <div className={styles.container}>
+    <div id="filters" className={styles.container}>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <InputText
           name="title"

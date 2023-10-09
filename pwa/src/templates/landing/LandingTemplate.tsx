@@ -28,13 +28,12 @@ export const LandingTemplate: React.FC = () => {
           {getItems.data?.results?.length === 0 && !getItems.isLoading && <span>Geen Woo verzoeken gevonden.</span>}
 
           {getItems.data?.results && getItems.data?.results?.length > 0 && (
-            <>
+            <div id="mainContent">
               <ResultsDisplayTemplate displayKey="landing-results" requests={getItems.data.results} />
 
               <Pagination totalPages={getItems.data.pages} {...{ currentPage, setCurrentPage }} />
-            </>
+            </div>
           )}
-
           {getItems.isLoading && <Skeleton height={"200px"} />}
         </PageContent>
       </Page>

@@ -32,4 +32,9 @@ export const en = {
   "No publication date available": "No publication date available",
   "No summary available": "No summary available",
   "Navbar-Logo": "Navbar-Logo",
+  "Opens a new window": "Opens a new window",
+  "Translate page to Dutch": "Translate page to Dutch",
+  "Translate page to English": "Translate page to English",
+  "Skip to filters": "Skip to filters",
+  "Skip to main content": "Skip to main content",
 };

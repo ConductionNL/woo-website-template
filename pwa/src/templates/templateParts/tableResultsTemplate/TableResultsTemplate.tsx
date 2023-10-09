@@ -30,7 +30,7 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
       </TableHeader>
       <TableBody className={styles.tableBody}>
         {requests.map((request) => (
-          <TableRow className={styles.tableRow} key={request.id} onClick={() => navigate(request.id)}>
+          <TableRow className={styles.tableRow} key={request.id} onClick={() => navigate(request.id)} tabIndex={0}>
             <TableCell>{request.Titel ?? t("No subject available")}</TableCell>
             <TableCell>
               {request.Publicatiedatum

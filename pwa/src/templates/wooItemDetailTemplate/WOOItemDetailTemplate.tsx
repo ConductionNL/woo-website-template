@@ -39,14 +39,16 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
     <Page>
       <PageContent className={styles.container}>
         <div>
-          <Link className={styles.backLink} onClick={() => navigate("/")}>
+          <Link className={styles.backLink} onClick={() => navigate("/")} tabIndex={0}>
             <FontAwesomeIcon icon={faArrowLeft} /> <span>{t("Back to homepage")}</span>
           </Link>
         </div>
 
         {getItems.isSuccess && (
           <>
-            <Heading1>{getItems.data.Titel !== "" ? getItems.data.Titel : t("No title available")}</Heading1>
+            <Heading1 id="mainContent">
+              {getItems.data.Titel !== "" ? getItems.data.Titel : t("No title available")}
+            </Heading1>
 
             <Table className={styles.table}>
               <TableBody className={styles.tableBody}>

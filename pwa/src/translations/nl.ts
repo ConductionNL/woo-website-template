@@ -31,5 +31,10 @@ export const nl = {
   "No subject available": "Geen onderwerp beschikbaar",
   "No publication date available": "Geen publicatiedatum beschikbaar",
   "No summary available": "Geen samenvatting beschikbaar",
-  "Navbar-Logo": "Navigatie-Logo"
+  "Navbar-Logo": "Navigatie-Logo",
+  "Opens a new window": "Opent een nieuw venster",
+  "Translate page to Dutch": "Vertaal pagina naar het Nederlands",
+  "Translate page to English": "Vertaal pagina naar het Engels",
+  "Skip to filters": "Ga naar de filters",
+  "Skip to main content": "Ga naar de hoofdinhoud",
 };

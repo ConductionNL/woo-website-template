@@ -29,7 +29,7 @@ export const FooterTemplate: React.FC = () => {
             className={styles.link}
             href="https://github.com/ConductionNL/woo-website-template"
             target="_blank"
-            description={t("Link to github repository")}
+            aria-label={`${t("Link to github repository")}, ${t("Opens a new window")}`}
           >
             <FontAwesomeIcon icon={faCode} />
           </Link>{" "}
@@ -38,7 +38,7 @@ export const FooterTemplate: React.FC = () => {
             className={styles.link}
             href="https://github.com/ConductionNL/woo-website-template/graphs/contributors"
             target="_blank"
-            name={t("Link to github contributors page")}
+            aria-label={`${t("Link to github contributors page")}, ${t("Opens a new window")}`}
           >
             ❤️
           </Link>{" "}
@@ -47,7 +47,7 @@ export const FooterTemplate: React.FC = () => {
             className={styles.link}
             href="https://conduction.nl"
             target="_blank"
-            description={t("Link to conduction website")}
+            aria-label={`${t("Link to conduction website")}, ${t("Opens a new window")}`}
           >
             Conduction.
           </Link>
