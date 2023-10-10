@@ -41,4 +41,7 @@ export const en = {
   "Skip to footer content": "Skip to footer content",
   "Phone number": "Phone number",
   "Email address": "Email address",
+  "Select year": "Select year",
+  "Select category": "Select category",
+  
 };

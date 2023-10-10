@@ -41,4 +41,6 @@ export const nl = {
   "Skip to footer content": "Ga naar de voettekst",
   "Phone number": "Telefoonnummer",
   "Email address": "E-mailadres",
+  "Select year": "Selecteer jaar",
+  "Select category": "Selecteer categorie",
 };

@@ -72,6 +72,7 @@ const DynamicSection: React.FC<{ content: TDynamicContentItem }> = ({ content })
               onClick={() => navigate(item.link ?? "")}
               tabIndex={0}
               aria-label={`${t(item.label)}, ${t(item.value)}`}
+              role="button"
             >
               {item.value}
             </Link>

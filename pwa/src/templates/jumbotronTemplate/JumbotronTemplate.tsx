@@ -8,7 +8,12 @@ export const JumbotronTemplate: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div style={{ backgroundImage: `url(${process.env.GATSBY_JUMBOTRON_IMAGE_URL})` }} className={styles.wrapper}>
+    <div
+      aria-label={t("Jumbotron")}
+      role="contentinfo"
+      style={{ backgroundImage: `url(${process.env.GATSBY_JUMBOTRON_IMAGE_URL})` }}
+      className={styles.wrapper}
+    >
       <Page>
         <PageContent>
           <div>
