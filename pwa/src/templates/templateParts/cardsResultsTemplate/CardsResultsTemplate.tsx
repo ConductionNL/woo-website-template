@@ -22,6 +22,9 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
             className={styles.cardContainer}
             onClick={() => navigate(request.id)}
             tabIndex={0}
+            aria-label={`${request.Titel}, ${request.Samenvatting}, ${
+              request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : t("N/A")
+            }`}
           >
             <CardHeader>
               <CardHeaderDate>

@@ -30,7 +30,15 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
       </TableHeader>
       <TableBody className={styles.tableBody}>
         {requests.map((request) => (
-          <TableRow className={styles.tableRow} key={request.id} onClick={() => navigate(request.id)} tabIndex={0}>
+          <TableRow
+            className={styles.tableRow}
+            key={request.id}
+            onClick={() => navigate(request.id)}
+            tabIndex={0}
+            aria-label={`${request.Titel},  ${
+              request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : t("N/A")
+            }, ${request.Samenvatting}`}
+          >
             <TableCell>{request.Titel ?? t("No subject available")}</TableCell>
             <TableCell>
               {request.Publicatiedatum

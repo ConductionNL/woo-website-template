@@ -40,7 +40,7 @@ export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName 
               className={clsx(styles.languageSelect, i18n.language === "nl" && styles.languageSelectDisabled)}
               onClick={() => i18n.changeLanguage("nl")}
               tabIndex={0}
-              aria-label={t("Translate page to Dutch")}
+              aria-label="Vertaal pagina naar het Nederlands"
             >
               NL
             </span>{" "}
@@ -49,7 +49,7 @@ export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName 
               className={clsx(styles.languageSelect, i18n.language === "en" && styles.languageSelectDisabled)}
               onClick={() => i18n.changeLanguage("en")}
               tabIndex={0}
-              aria-label={t("Translate page to English")}
+              aria-label="Translate page to English"
             >
               EN
             </span>
