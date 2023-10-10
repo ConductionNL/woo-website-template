@@ -17,7 +17,15 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
     <>
       <div className={styles.componentsGrid}>
         {requests.map((request) => (
-          <CardWrapper key={request.id} className={styles.cardContainer} onClick={() => navigate(request.id)}>
+          <CardWrapper
+            key={request.id}
+            className={styles.cardContainer}
+            onClick={() => navigate(request.id)}
+            tabIndex={0}
+            aria-label={`${request.Titel}, ${request.Samenvatting}, ${
+              request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : t("N/A")
+            }`}
+          >
             <CardHeader>
               <CardHeaderDate>
                 {request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : t("N/A")}

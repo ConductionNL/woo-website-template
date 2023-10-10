@@ -43,24 +43,36 @@ export const FooterTemplate: React.FC = () => {
 };
 
 const DynamicSection: React.FC<{ content: TDynamicContentItem }> = ({ content }) => {
+  const { t } = useTranslation();
+
   return (
     <section>
-      <Heading3 className={styles.dynamicSectionTitle}>{content.title}</Heading3>
+      <Heading3 className={styles.dynamicSectionTitle}>{t(content.title)}</Heading3>
 
       {content.items.map((item, idx) => (
         <div key={idx} className={styles.dynamicSectionContent}>
-          <strong>{item.label}</strong>
-
+          <strong>{t(item.label)}</strong>
           {/* External Link */}
           {item.link && item.link.includes("http") && (
-            <Link className={styles.link} href={item.link} target="_blank">
+            <Link
+              className={styles.link}
+              href={item.link}
+              target="_blank"
+              tabIndex={0}
+              aria-label={`${t(item.label)}, ${t("Opens a new window")}`}
+            >
               {item.value}
             </Link>
           )}
 
           {/* Internal Link */}
           {item.link && !item.link.includes("http") && (
-            <Link className={styles.link} onClick={() => navigate(item.link ?? "")}>
+            <Link
+              className={styles.link}
+              onClick={() => navigate(item.link ?? "")}
+              tabIndex={0}
+              aria-label={`${t(item.label)}, ${t(item.value)}`}
+            >
               {item.value}
             </Link>
           )}
@@ -99,7 +111,7 @@ const WithLoveByConduction: React.FC = () => {
         className={styles.withLoveLink}
         href="https://github.com/ConductionNL/woo-website-template"
         target="_blank"
-        description={t("Link to github repository")}
+        aria-label={`${t("Link to github repository")}, ${t("Opens a new window")}`}
       >
         <FontAwesomeIcon icon={faCode} />
       </Link>{" "}
@@ -108,7 +120,7 @@ const WithLoveByConduction: React.FC = () => {
         className={styles.withLoveLink}
         href="https://github.com/ConductionNL/woo-website-template/graphs/contributors"
         target="_blank"
-        name={t("Link to github contributors page")}
+        aria-label={`${t("Link to github contributors page")}, ${t("Opens a new window")}`}
       >
         <FontAwesomeIcon icon={faHeart} />
       </Link>{" "}
@@ -117,7 +129,7 @@ const WithLoveByConduction: React.FC = () => {
         className={styles.withLoveLink}
         href="https://conduction.nl"
         target="_blank"
-        description={t("Link to conduction website")}
+        aria-label={`${t("Link to conduction website")}, ${t("Opens a new window")}`}
       >
         <span className={styles.withLoveConductionLink}> Conduction.</span>
       </Link>
