@@ -5,6 +5,14 @@
   padding-inline-start: var(--utrecht-page-margin-inline-start);
   padding-inline-end: var(--utrecht-page-margin-inline-end);
   display: flex;
+}
+.skipLinkContainer:focus-within {
+  margin-inline-end: 10%;
+}
+
+.navContainer {
+  flex: 1;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -39,13 +47,4 @@
 
 .languageSelectDisabled {
   opacity: 50%;
-}
-
-.visuallyHidden {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  color: red;
 }
