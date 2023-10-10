@@ -34,7 +34,23 @@
 }
 
 .link:hover {
-  color: black !important;
+  cursor: pointer;
+}
+
+.withLoveConductionLink {
+  display: inline-block;
+}
+.withLoveConductionLink:hover {
+  margin-inline-start: 10px;
+}
+
+.withLoveLink:hover > :first-child {
+  transform: scale(1.2);
+}
+.withLoveLink > :first-child {
+  transition: all 1s;
+  transform-origin: 50% 50%;
+  margin-inline-end: unset;
 }
 
 .contentGrid {
@@ -45,6 +61,7 @@
 
 .dynamicSectionTitle {
   margin-block-end: 18px;
+  color: inherit !important;
 }
 
 .dynamicSectionContent {

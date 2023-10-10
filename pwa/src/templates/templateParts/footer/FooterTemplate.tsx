@@ -3,7 +3,7 @@ import * as styles from "./FooterTemplate.module.css";
 import { PageFooter, Link, Heading3 } from "@utrecht/component-library-react/dist/css-module";
 import { navigate } from "gatsby-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 type TDynamicContentItem = {
@@ -53,14 +53,16 @@ const DynamicSection: React.FC<{ content: TDynamicContentItem }> = ({ content })
 
           {/* External Link */}
           {item.link && item.link.includes("http") && (
-            <a href={item.link} target="_blank">
+            <Link className={styles.link} href={item.link} target="_blank">
               {item.value}
-            </a>
+            </Link>
           )}
 
           {/* Internal Link */}
           {item.link && !item.link.includes("http") && (
-            <Link onClick={() => navigate(item.link ?? "")}>{item.value}</Link>
+            <Link className={styles.link} onClick={() => navigate(item.link ?? "")}>
+              {item.value}
+            </Link>
           )}
 
           {/* No Link */}
@@ -94,7 +96,7 @@ const WithLoveByConduction: React.FC = () => {
   return (
     <div>
       <Link
-        className={styles.link}
+        className={styles.withLoveLink}
         href="https://github.com/ConductionNL/woo-website-template"
         target="_blank"
         description={t("Link to github repository")}
@@ -103,21 +105,21 @@ const WithLoveByConduction: React.FC = () => {
       </Link>{" "}
       with{" "}
       <Link
-        className={styles.link}
+        className={styles.withLoveLink}
         href="https://github.com/ConductionNL/woo-website-template/graphs/contributors"
         target="_blank"
         name={t("Link to github contributors page")}
       >
-        ❤️
+        <FontAwesomeIcon icon={faHeart} />
       </Link>{" "}
       by{" "}
       <Link
-        className={styles.link}
+        className={styles.withLoveLink}
         href="https://conduction.nl"
         target="_blank"
         description={t("Link to conduction website")}
       >
-        Conduction.
+        <span className={styles.withLoveConductionLink}> Conduction.</span>
       </Link>
     </div>
   );
