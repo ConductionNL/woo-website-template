@@ -21,7 +21,7 @@ export const nl = {
   "Inventory list": "Inventarisatielijst",
   "Exceeding the term": "Termijnoverschrijding",
   "Publication date": "Publicatiedatum",
-  "Received date": "Ontvangstdatum",
+  "Registration date": "Registratiedatum",
   "Decision date": "Besluitdatum",
   "Cards view": "Tegelweergave",
   "Table view": "Tabelweergave",

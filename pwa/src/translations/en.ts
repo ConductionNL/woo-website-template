@@ -21,7 +21,7 @@ export const en = {
   "Inventory list": "Inventory list",
   "Exceeding the term": "Exceeding the term",
   "Publication date": "Publication date",
-  "Received date": "Received date",
+  "Registration date": "Registration date",
   "Decision date": "Decision date",
   "Cards view": "Cards view",
   "Table view": "Table view",
