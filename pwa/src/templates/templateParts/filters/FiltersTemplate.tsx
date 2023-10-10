@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { generateYearsArray } from "../../../data/years";
 import { TEMP_PUBLICATION_TYPES } from "../../../data/PublicationType";
+import { useTranslation } from "react-i18next";
 
 interface FiltersTemplateProps {
   isLoading: boolean;
@@ -16,6 +17,7 @@ interface FiltersTemplateProps {
 
 export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) => {
   const { filters, setFilters } = useFiltersContext();
+  const { t } = useTranslation();
   const filterTimeout = React.useRef<NodeJS.Timeout | null>(null);
 
   const {
@@ -49,27 +51,30 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        <InputText name="title" placeholder="Zoeken.." defaultValue={filters._search} {...{ register, errors }} />
-
+        <InputText
+          name="title"
+          placeholder={`${t("Search")}..`}
+          defaultValue={filters._search}
+          {...{ register, errors }}
+        />
         <SelectSingle
           options={generateYearsArray(currentYear - 1995)}
           name="year"
-          placeholder="Jaar"
+          placeholder={t("Year")}
           isClearable
           {...{ register, errors, control }}
         />
-
         <SelectSingle
           options={TEMP_PUBLICATION_TYPES}
           name="category"
-          placeholder="Categorie"
+          placeholder={t("Category")}
           defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.Categorie)}
           isClearable
           {...{ register, errors, control }}
         />
 
         <Button type="submit" className={styles.button} disabled={isLoading}>
-          <FontAwesomeIcon icon={!isLoading ? faMagnifyingGlass : faSpinner} /> {!isLoading && "Zoeken"}
+          <FontAwesomeIcon icon={!isLoading ? faMagnifyingGlass : faSpinner} /> {!isLoading && t("Search")}
         </Button>
       </form>
 

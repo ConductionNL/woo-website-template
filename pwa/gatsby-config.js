@@ -28,6 +28,12 @@ module.exports = {
           separator: ".",
         },
         autoGenHomeLabel: "Home",
+        crumbLabelUpdates: [
+          {
+            pathname: "/[id]",
+            crumbLabel: "Details page",
+          },
+        ],
       },
     },
   ],
