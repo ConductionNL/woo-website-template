@@ -16,17 +16,15 @@ export const JumbotronTemplate: React.FC = () => {
     >
       <Page>
         <PageContent>
-          <div>
-            <CardWrapper aria-label={t("Jumbotron card")} role="contentinfo" className={styles.card}>
-              <Heading2 className={styles.title}>
-                {t("Woo-publications of")} {process.env.GATSBY_ORGANISATION_NAME}
-              </Heading2>
+          <CardWrapper aria-label={t("Jumbotron card")} role="contentinfo" className={styles.card}>
+            <Heading2 className={styles.title}>
+              {t("Woo-publications of")} {process.env.GATSBY_ORGANISATION_NAME}
+            </Heading2>
 
-              <Paragraph className={styles.description}>
-                {t("On this page you will find the Woo-publications of")} {process.env.GATSBY_ORGANISATION_NAME}
-              </Paragraph>
-            </CardWrapper>
-          </div>
+            <Paragraph className={styles.description}>
+              {t("On this page you will find the Woo-publications of")} {process.env.GATSBY_ORGANISATION_NAME}
+            </Paragraph>
+          </CardWrapper>
         </PageContent>
       </Page>
     </div>
