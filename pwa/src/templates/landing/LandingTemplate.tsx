@@ -64,6 +64,7 @@ export const LandingTemplate: React.FC = () => {
 
   return (
     <>
+      <h1 className={styles.header1}></h1>
       <JumbotronTemplate />
 
       <Page>
