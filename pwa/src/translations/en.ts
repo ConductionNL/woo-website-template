@@ -13,6 +13,8 @@ export const en = {
   Subject: "Subject",
   Address: "Address",
   Page: "Page",
+  Jumbotron: "Jumbotron",
+  "Jumbotron card": "Jumbotron card",
   "N/A": "N/A",
   "Details page": "Details page",
   "Back to homepage": "Back to homepage",
@@ -48,4 +50,5 @@ export const en = {
   "Next page": "Next page",
   "Can open a new window": "Can open a new window",
   "No results found": "No results found",
+  "Enter search query": "Enter search query",
 };

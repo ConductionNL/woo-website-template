@@ -55,7 +55,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
           name="title"
           placeholder={`${t("Search")}..`}
           defaultValue={filters._search}
-          aria-label={t("Search")}
+          ariaLabel={t("Enter search query")}
           {...{ register, errors }}
         />
         <SelectSingle
