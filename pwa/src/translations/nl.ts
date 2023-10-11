@@ -13,6 +13,8 @@ export const nl = {
   Subject: "Onderwerp",
   Address: "Adres",
   Page: "Pagina",
+  Jumbotron: "Jumbotron",
+  "Jumbotron card": "Jumbotron tegel",
   "N/A": "N.v.t",
   "Details page": "Detailpagina",
   "Back to homepage": "Terug naar home",
@@ -48,4 +50,5 @@ export const nl = {
   "Next page": "Volgende pagina",
   "Can open a new window": "Kan een nieuw venster openen",
   "No results found": "Geen resultaten gevonden",
+  "Enter search query": "Voer zoekopdracht in",
 };
