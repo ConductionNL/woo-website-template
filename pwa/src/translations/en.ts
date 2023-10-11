@@ -12,6 +12,7 @@ export const en = {
   Decision: "Decision",
   Subject: "Subject",
   Address: "Address",
+  Page: "Page",
   "N/A": "N/A",
   "Details page": "Details page",
   "Back to homepage": "Back to homepage",
@@ -43,5 +44,8 @@ export const en = {
   "Email address": "Email address",
   "Select year": "Select year",
   "Select category": "Select category",
-  
+  "Previous page": "Previous page",
+  "Next page": "Next page",
+  "Can open a new window": "Can open a new window",
+  "No results found": "No results found",
 };

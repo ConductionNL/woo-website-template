@@ -12,6 +12,7 @@ export const nl = {
   Decision: "Besluit",
   Subject: "Onderwerp",
   Address: "Adres",
+  Page: "Pagina",
   "N/A": "N.v.t",
   "Details page": "Detailpagina",
   "Back to homepage": "Terug naar home",
@@ -43,4 +44,8 @@ export const nl = {
   "Email address": "E-mailadres",
   "Select year": "Selecteer jaar",
   "Select category": "Selecteer categorie",
+  "Previous page": "Vorige pagina",
+  "Next page": "Volgende pagina",
+  "Can open a new window": "Kan een nieuw venster openen",
+  "No results found": "Geen resultaten gevonden",
 };

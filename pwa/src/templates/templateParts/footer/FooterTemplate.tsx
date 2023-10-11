@@ -88,6 +88,7 @@ const DynamicSection: React.FC<{ content: TDynamicContentItem }> = ({ content })
 
 const Logo: React.FC = () => {
   if (process.env.GATSBY_FOOTER_LOGO_URL === "false") return <></>;
+  const { t } = useTranslation();
 
   return (
     <div className={styles.imageContainer}>
@@ -97,7 +98,9 @@ const Logo: React.FC = () => {
           process.env.GATSBY_FOOTER_LOGO_HREF ? open(process.env.GATSBY_FOOTER_LOGO_HREF) : navigate("/")
         }
         src={process.env.GATSBY_FOOTER_LOGO_URL}
-        alt={"Footer-logo"}
+        alt={t("Footer-logo")}
+        aria-label={`${t("Footer-logo")}, ${t("Can open a new window")}`}
+        tabIndex={0}
       />
     </div>
   );
