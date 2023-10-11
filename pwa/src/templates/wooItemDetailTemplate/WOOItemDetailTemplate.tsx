@@ -99,7 +99,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
 
                 {getItems.data.Ontvangstdatum && (
                   <TableRow className={styles.tableRow}>
-                    <TableCell>{t("Received date")}</TableCell>
+                    <TableCell>{t("Registration date")}</TableCell>
 
                     <TableCell>{translateDate(i18n.language, getItems.data.Ontvangstdatum) ?? "-"}</TableCell>
                   </TableRow>

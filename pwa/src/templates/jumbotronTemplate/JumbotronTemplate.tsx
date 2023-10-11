@@ -1,14 +1,19 @@
 import * as React from "react";
 import * as styles from "./JumbotronTemplate.module.css";
 import { Heading2, Paragraph, Page, PageContent } from "@utrecht/component-library-react/dist/css-module";
-import { CardWrapper } from "@conduction/components/lib/components/card";
+import { CardWrapper } from "@conduction/components";
 import { useTranslation } from "react-i18next";
 
 export const JumbotronTemplate: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div style={{ backgroundImage: `url(${process.env.GATSBY_JUMBOTRON_IMAGE_URL})` }} className={styles.wrapper}>
+    <div
+      aria-label={t("Jumbotron")}
+      role="contentinfo"
+      style={{ backgroundImage: `url(${process.env.GATSBY_JUMBOTRON_IMAGE_URL})` }}
+      className={styles.wrapper}
+    >
       <Page>
         <PageContent>
           <div>

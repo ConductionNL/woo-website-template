@@ -4,7 +4,7 @@ import { Heading2, Paragraph } from "@utrecht/component-library-react/dist/css-m
 import { translateDate } from "../../../services/dateFormat";
 import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
-import { CardHeader, CardHeaderDate, CardHeaderTitle, CardWrapper } from "@conduction/components/lib/components/card";
+import { CardHeader, CardHeaderDate, CardHeaderTitle, CardWrapper } from "@conduction/components";
 
 interface CardsResultsTemplateProps {
   requests: any[];
