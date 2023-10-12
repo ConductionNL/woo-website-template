@@ -36,6 +36,11 @@
   cursor: pointer;
 }
 
+.backLink {
+  display: flex;
+  align-items: center;
+}
+
 .tableBody {
   border: var(--utrecht-table-body-border);
 }
