@@ -44,6 +44,7 @@ Zaken dienen te beschikken over de volgende properties (zaakattributen):
 | woo_samenvatting    | Nee       | De KORTE samenvatting van de publicatie zoals online getoond                                            | string, max 255 characters |
 | woo_beschrijving    | Nee       | De UITGEBREIDE beschrijving van de publicatie zoals online getoond                                      | string, max 2555 characters |
 | woo_datum_besluit   | Nee       | De datum woorop het besluit over de zaak genomen is                                                     | string formatted as date-time (e.g., 2023-09-12 09:00) or string formatted as date (e.g., 2023-09-12). If a date is presented instead of a date-time, the time will be automatically set to 00:00. |
+| woo_datum_ontvangst | Nee       | De datum woorop de zaak genomen is geregistreerd                                                        | string formatted as date-time (e.g., 2023-09-12 09:00) or string formatted as date (e.g., 2023-09-12). If a date is presented instead of a date-time, the time will be automatically set to 00:00. |
 
 Daarnaast is het mogelijk om bijlagen van publicaties te clusteren aan de hand van labels.
 

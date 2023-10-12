@@ -140,3 +140,14 @@ Zorg ervoor dat het zaaksysteem is geconfigureerd zoals beschreven in de documen
 
 Verwijder alle testdata uit het zaaksysteem en de WOO-website.
 
+## Technische test
+Naast functioneele tests is het ook belangrijk om te controleren of de website voldoet aan de teschnsiche eisen voor overheids websites.
+
+### WCAG
+Er is een [WCAG raportage beschickbaar](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/WCAG-Raportage.pdf) voor de website.
+
+U kunt de test zelf herhalen, vervang in de volgende url https://conductionnl.github.io/woo-website-xxllnc/ door het addres van uw OpenWOO app
+[https://accessibe.com/accessscan?website=https://conductionnl.github.io/woo-website-xxllnc/](https://accessibe.com/accessscan?website=https://conductionnl.github.io/woo-website-xxllnc/)
+
+### Pentest
+Er word momenteel een pentest uitgevoerd
