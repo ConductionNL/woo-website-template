@@ -1,6 +1,6 @@
 .table {
   background-color: var(--utrecht-table-background-color);
-  border-collapse: var(--utrecht-table-border-collapse);
+  border-collapse: var(--utrecht-table-border-collapse) !important;
 }
 
 .tableHeader > * {
