@@ -49,12 +49,13 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   }, [watcher]);
 
   return (
-    <div className={styles.container}>
+    <div id="filters" className={styles.container}>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <InputText
           name="title"
           placeholder={`${t("Search")}..`}
           defaultValue={filters._search}
+          ariaLabel={t("Enter search query")}
           {...{ register, errors }}
         />
         <SelectSingle
@@ -63,6 +64,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
           placeholder={t("Year")}
           isClearable
           {...{ register, errors, control }}
+          ariaLabel={t("Select year")}
         />
         <SelectSingle
           options={TEMP_PUBLICATION_TYPES}
@@ -71,9 +73,15 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
           defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.Categorie)}
           isClearable
           {...{ register, errors, control }}
+          ariaLabel={t("Select category")}
         />
 
-        <Button type="submit" className={styles.button} disabled={isLoading}>
+        <Button
+          type="submit"
+          className={styles.button}
+          disabled={isLoading}
+          aria-label={!isLoading ? t("Search") : t("Loading results")}
+        >
           <FontAwesomeIcon icon={!isLoading ? faMagnifyingGlass : faSpinner} /> {!isLoading && t("Search")}
         </Button>
       </form>

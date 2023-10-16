@@ -22,7 +22,7 @@ const ResultsDisplaySwitch: React.FC<ResultsDisplaySwitchProps> = ({ layoutClass
         appearance={isActive(displayKey, "cards") ? "primary-action-button" : "secondary-action-button"}
         className={styles.button}
         onClick={() => setDisplay({ [displayKey]: "cards" })}
-        discription={t("Show cards")}
+        aria-label={t("Cards view")}
       >
         <FontAwesomeIcon icon={faGripVertical} /> {t("Cards")}
       </Button>
@@ -31,7 +31,7 @@ const ResultsDisplaySwitch: React.FC<ResultsDisplaySwitchProps> = ({ layoutClass
         appearance={isActive(displayKey, "table") ? "primary-action-button" : "secondary-action-button"}
         className={styles.button}
         onClick={() => setDisplay({ [displayKey]: "table" })}
-        discription={t("Show table")}
+        aria-label={t("Table view")}
       >
         <FontAwesomeIcon icon={faTable} /> {t("Table")}
       </Button>
