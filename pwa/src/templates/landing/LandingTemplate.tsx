@@ -11,18 +11,20 @@ import { QueryClient } from "react-query";
 import { Pagination } from "@conduction/components";
 import { usePaginationContext } from "../../context/pagination";
 import { useTranslation } from "react-i18next";
+import { useQueryLimitContext } from "../../context/queryLimit";
+import { PaginationLimitSelectComponent } from "../../components/paginationLimitSelect/PaginationLimitSelect";
 
 export const LandingTemplate: React.FC = () => {
   const { currentPage, setCurrentPage } = usePaginationContext();
   const { filters } = useFiltersContext();
   const { t } = useTranslation();
+  const { queryLimit } = useQueryLimitContext();
 
   const queryClient = new QueryClient();
-  const getItems = useOpenWoo(queryClient).getAll(filters, currentPage);
+  const getItems = useOpenWoo(queryClient).getAll(filters, currentPage, queryLimit.objectsQueryLimit);
 
   return (
     <>
-      <h1 className={styles.header1}></h1>
       <JumbotronTemplate />
 
       <Page>
@@ -33,12 +35,14 @@ export const LandingTemplate: React.FC = () => {
           {getItems.data?.results && getItems.data?.results?.length > 0 && (
             <div id="mainContent">
               <ResultsDisplayTemplate displayKey="landing-results" requests={getItems.data.results} />
-
-              <Pagination
-                ariaLabels={{ previousPage: t("Previous page"), nextPage: t("Next page"), page: t("Page") }}
-                totalPages={getItems.data.pages}
-                {...{ currentPage, setCurrentPage }}
-              />
+              <div className={styles.pagination}>
+                <Pagination
+                  ariaLabels={{ previousPage: t("Previous page"), nextPage: t("Next page"), page: t("Page") }}
+                  totalPages={getItems.data.pages}
+                  {...{ currentPage, setCurrentPage }}
+                />
+                <PaginationLimitSelectComponent queryLimitName={"objectsQueryLimit"} />
+              </div>
             </div>
           )}
           {getItems.isLoading && <Skeleton height={"200px"} />}
