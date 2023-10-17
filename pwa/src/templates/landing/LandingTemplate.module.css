@@ -6,6 +6,71 @@
   margin-block-end: var(--utrecht-space-block-lg);
 }
 
+.breadcrumbsContainer {
+  padding-block-start: var(--skeleton-size-sm);
+  padding-block-end: var(--skeleton-size-sm);
+}
+
+.breadcrumbs {
+  background-color: var(--utrecht-breadcrumb-background-color);
+  padding-inline-start: var(--utrecht-breadcrumb-padding-inline-start);
+  padding-inline-end: var(--utrecht-breadcrumb-padding-inline-end);
+  padding-block-start: var(--utrecht-breadcrumb-padding-block-start);
+  padding-block-end: var(--utrecht-breadcrumb-padding-block-end);
+}
+
+.breadcrumbs > ol {
+  align-items: baseline;
+}
+
+.breadcrumbDisabled {
+  color: var(
+    --utrecht-link-placeholder-color,
+    --web-app-color-disabled
+  ) !important;
+}
+
+.breadcrumbDisabled:hover {
+  color: var(
+    --utrecht-link-placeholder-color,
+    --web-app-color-disabled
+  ) !important;
+  user-select: none !important;
+}
+.breadcrumbNavLink:hover {
+  --utrecht-link-hover-color: var(
+    --utrecht-breadcrumb-link-hover-color
+  ) !important;
+}
+
+.info svg {
+  fill: var(--utrecht-alert-icon-color);
+}
+.info p {
+  color: var(--utrecht-alert-color);
+}
+
+.warning svg {
+  fill: var(--utrecht-alert-icon-warning-color);
+}
+.warning p {
+  color: var(--utrecht-alert-warning-color);
+}
+
+.error svg {
+  fill: var(--utrecht-alert-icon-error-color);
+}
+.error p {
+  color: var(--utrecht-alert-error-color);
+}
+
+.ok svg {
+  fill: var(--utrecht-alert-icon-ok-color);
+}
+.ok p {
+  color: var(--utrecht-alert-ok-color);
+}
+
 .header1 {
   margin-block-start: 0px;
   margin-block-end: 0px;
