@@ -54,4 +54,6 @@ export const nl = {
   "Enter search query": "Voer zoekopdracht in",
   "Results per page": "Resultaten per pagina",
   "Select result limit": "Selecteer resultaten limiet",
+  "Scroll table to the left": "Scroll tabel naar links",
+  "Scroll table to the right": "Scroll tabel naar rechts",
 };

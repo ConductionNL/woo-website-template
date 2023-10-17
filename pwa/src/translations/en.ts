@@ -54,4 +54,6 @@ export const en = {
   "Enter search query": "Enter search query",
   "Results per page": "Results per page",
   "Select result limit": "Select result limit",
+  "Scroll table to the left": "Scroll table to the left",
+  "Scroll table to the right": "Scroll table to the right",
 };
