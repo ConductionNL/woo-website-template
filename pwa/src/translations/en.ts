@@ -14,6 +14,7 @@ export const en = {
   Address: "Address",
   Page: "Page",
   Jumbotron: "Jumbotron",
+  Limit: "Limit",
   "Jumbotron card": "Jumbotron card",
   "N/A": "N/A",
   "Details page": "Details page",
@@ -51,4 +52,6 @@ export const en = {
   "Can open a new window": "Can open a new window",
   "No results found": "No results found",
   "Enter search query": "Enter search query",
+  "Results per page": "Results per page",
+  "Select result limit": "Select result limit",
 };

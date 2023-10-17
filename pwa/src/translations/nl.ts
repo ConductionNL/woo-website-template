@@ -14,6 +14,7 @@ export const nl = {
   Address: "Adres",
   Page: "Pagina",
   Jumbotron: "Jumbotron",
+  Limit: "Limiet",
   "Jumbotron card": "Jumbotron tegel",
   "N/A": "N.v.t",
   "Details page": "Detailpagina",
@@ -51,4 +52,6 @@ export const nl = {
   "Can open a new window": "Kan een nieuw venster openen",
   "No results found": "Geen resultaten gevonden",
   "Enter search query": "Voer zoekopdracht in",
+  "Results per page": "Resultaten per pagina",
+  "Select result limit": "Selecteer resultaten limiet",
 };
