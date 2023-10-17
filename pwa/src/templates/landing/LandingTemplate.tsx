@@ -25,8 +25,6 @@ export const LandingTemplate: React.FC = () => {
 
   return (
     <>
-      <h1 className={styles.header1}></h1>
-
       <JumbotronTemplate />
 
       <Page>
@@ -37,14 +35,14 @@ export const LandingTemplate: React.FC = () => {
           {getItems.data?.results && getItems.data?.results?.length > 0 && (
             <div id="mainContent">
               <ResultsDisplayTemplate displayKey="landing-results" requests={getItems.data.results} />
-
-              <Pagination
-                ariaLabels={{ previousPage: t("Previous page"), nextPage: t("Next page"), page: t("Page") }}
-                totalPages={getItems.data.pages}
-                {...{ currentPage, setCurrentPage }}
-              />
-
-              <PaginationLimitSelectComponent queryLimitName={"objectsQueryLimit"} />
+              <div className={styles.pagination}>
+                <Pagination
+                  ariaLabels={{ previousPage: t("Previous page"), nextPage: t("Next page"), page: t("Page") }}
+                  totalPages={getItems.data.pages}
+                  {...{ currentPage, setCurrentPage }}
+                />
+                <PaginationLimitSelectComponent queryLimitName={"objectsQueryLimit"} />
+              </div>
             </div>
           )}
           {getItems.isLoading && <Skeleton height={"200px"} />}
