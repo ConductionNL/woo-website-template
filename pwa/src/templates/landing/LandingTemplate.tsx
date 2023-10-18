@@ -23,6 +23,10 @@ export const LandingTemplate: React.FC = () => {
   const queryClient = new QueryClient();
   const getItems = useOpenWoo(queryClient).getAll(filters, currentPage, queryLimit.objectsQueryLimit);
 
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [queryLimit.objectsQueryLimit]);
+
   return (
     <>
       <JumbotronTemplate />
