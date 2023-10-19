@@ -4,7 +4,7 @@ import { Heading2, Paragraph } from "@utrecht/component-library-react/dist/css-m
 import { translateDate } from "../../../services/dateFormat";
 import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
-import { CardHeader, CardHeaderDate, CardHeaderTitle, CardWrapper } from "@conduction/components/lib/components/card";
+import { CardHeader, CardHeaderDate, CardHeaderTitle, CardWrapper } from "@conduction/components";
 
 interface CardsResultsTemplateProps {
   requests: any[];
@@ -17,7 +17,15 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
     <>
       <div className={styles.componentsGrid}>
         {requests.map((request) => (
-          <CardWrapper key={request.id} className={styles.cardContainer} onClick={() => navigate(request.id)}>
+          <CardWrapper
+            key={request.id}
+            className={styles.cardContainer}
+            onClick={() => navigate(request.id)}
+            tabIndex={0}
+            aria-label={`${request.Titel}, ${request.Samenvatting}, ${
+              request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : t("N/A")
+            }`}
+          >
             <CardHeader>
               <CardHeaderDate>
                 {request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : t("N/A")}
