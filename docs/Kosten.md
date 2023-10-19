@@ -13,7 +13,7 @@ Bent u geïnteresseerd of wilt u meer informatie? Neem dan contact op met een va
 
 ## Frontend
 
-Kijk op [https://conductionnl.github.io/woo-website-xxllnc/](de demo pagina) voor een voorbeeld van de omgeving of op [de product homepage](https://openwoo.app/) voor een overzicht van de omgevingen die in ontwikkeling zijn.
+Kijk op [de demo pagina](https://conductionnl.github.io/woo-website-xxllnc/) voor een voorbeeld van de omgeving of op [de product homepage](https://openwoo.app/) voor een overzicht van de omgevingen die in ontwikkeling zijn.
 
 | Dienst                                         | Kosten                 |
 |------------------------------------------------|------------------------|
