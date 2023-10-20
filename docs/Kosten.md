@@ -13,7 +13,7 @@ Bent u geïnteresseerd of wilt u meer informatie? Neem dan contact op met een va
 
 ## Frontend
 
-Kijk op [https://conductionnl.github.io/woo-website-xxllnc/](de demo pagina) voor een voorbeeld van de omgeving of op [de product homepage](https://openwoo.app/) voor een overzicht van de omgevingen die in ontwikkeling zijn.
+Kijk op [de demo pagina](https://conductionnl.github.io/woo-website-xxllnc/) voor een voorbeeld van de omgeving of op [de product homepage](https://openwoo.app/) voor een overzicht van de omgevingen die in ontwikkeling zijn.
 
 | Dienst                                         | Kosten                 |
 |------------------------------------------------|------------------------|
@@ -37,12 +37,12 @@ Het is mogelijk om de Open Woo Website rechtstreeks aan uw zaaksysteem te koppel
 | SAAS                                         | € 250,- (maandelijks)   |
 
 > **Opmerking**
-> Via een Stuf <-> ZGW koppelvlak is het in theorie ook mogelijk een zaaksysteem te koppelen aan de hand van Stuf, dit is in de praktijk echter nog niet beproeft. Andere koppelvlakken en maatwerk zijn uiteraard bespreekbaar, neem daarvoor contact op met een leverancier.
+> Via een Stuf ↔ ZGW-koppelvlak is het in theorie ook mogelijk een zaaksysteem te koppelen aan de hand van Stuf, dit is in de praktijk echter nog niet beproeft. Andere koppelvlakken en maatwerk zijn uiteraard bespreekbaar, neem daarvoor contact op met een leverancier.
 
 ## Configuratie en inrichting xxllnc Zaken
-Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het modelzaaktype tbv WOO-publicatie en de configuratie van de integratie gebruik maken van een Consultant.
+Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het modelzaaktype t.b.v. WOO-publicatie en de configuratie van de integratie gebruik maken van een Consultant.
 
-Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het modelzaaktype tbv Woo-publicatie en de configuratie van de integratie gebruikmaken van een Consultant.
+Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het modelzaaktype t.b.v. Woo-publicatie en de configuratie van de integratie gebruikmaken van een Consultant.
 
 | Dienst                       | Kosten                 |
 |------------------------------|------------------------|
