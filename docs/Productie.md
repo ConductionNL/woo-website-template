@@ -1,9 +1,9 @@
 # In productie nemen
 
 Het in productie nemen van de OpenWOO app voor uw organisatie is makkelijker dan u wellicht denkt, het is vooral belangrijk dat u 
-- Kies een [leverancier](https://openwoo.app/pages/Documentatie/Kosten) om de OpenWOO App bij af te nemen. OF implementeer hem zelfstandig.
-- Van tevoren alle benodigde informatie verzameld
-- tijdig een PKI-certificaat en DNS wijziging aanvraagt bij uw ICT-leverancier(s)
+- een [leverancier](https://openwoo.app/pages/Documentatie/Kosten) uitkiest om de OpenWOO App bij af te nemen. Of implementeer hem zelfstandig.
+- Van tevoren alle benodigde informatie verzamelt
+- tijdig een certificaat en DNS wijziging aanvraagt bij uw ICT-leverancier(s)
 - Tijd beschikbaar heeft voor het grondig doortesten van de keten aan de hand van de testscenario's
 
 Als u de OpenWOO APP zelfstandig installeert zult u de [acties voor leverancier](#acties-voor-leverancier) uiteraard zelf moeten uitvoeren.
