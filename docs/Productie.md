@@ -6,12 +6,12 @@ Het in productie nemen van de OpenWOO app voor uw organisatie is makkelijker dan
 - tijdig een PKI-certificaat en DNS wijziging aanvraagt bij uw ICT-leverancier(s)
 - Tijd beschikbaar heeft voor het grondig doortesten van de keten aan de hand van de testscenario's
 
-Als u de OpenWOO APP zelfstandig installeerd zult u de [acties voor leverancier](#acties-voor-leverancier) uiteraard zelf moeten uitvoeren.
+Als u de OpenWOO APP zelfstandig installeert zult u de [acties voor leverancier](#acties-voor-leverancier) uiteraard zelf moeten uitvoeren.
 
 ## Benodigde informatie voor de vormgeving
 - Logo in vectorformaat (e.g. `.svg`, `.eps` of `.ai`)
-- Huisstijl handboek of website die als voorbeeld gebruikt kan worden
-- Contactgegevens (naam, email adres, telefoonnummer en functie) van een medewerker die eventuele vragen over de huisstijl kan beantwoorden.
+- Huisstijlhandboek of website die als voorbeeld gebruikt kan worden
+- Contactgegevens (naam, e-mailadres, telefoonnummer en functie) van een medewerker die eventuele vragen over de huisstijl kan beantwoorden.
 
 ## Benodigde informatie voor de inrichting
 - Welke afbeelding moet er worden getoond in de jumbotron? (afbeelding boven aan de landingspagina)
@@ -29,7 +29,7 @@ Als u de OpenWOO APP zelfstandig installeerd zult u de [acties voor leverancier]
 - Wordt er gekoppeld op een of meerder raadsinformatie systemen? Zo ja, welke?
 - Wordt er gekoppeld op CMS van de huidige website? Zo ja, welke?
 - Is er een wens voor het koppelen op overige systemen? (zoals geo, DROP-publicaties of PowerBrowser)
-- Emailadres waar eventueel foutraportages naar kunnen worden verstuurd.
+- E-mailadres waar eventueel foutraportages naar kunnen worden verstuurd.
 
 ## Acties voor uitvragende organisatie
 
@@ -42,8 +42,8 @@ Als u de OpenWOO APP zelfstandig installeerd zult u de [acties voor leverancier]
   - [ ] Credentials (hoe kan de OpenWoo App zich authentiseren).
   - [ ] Protocol (welk protocol moet er worden gebruik e.g. xxllnc search, ZGW, StUF, ZDS etc.).
 - [ ] Verzamelen en aanleveren beoogde raadsinformatie denk hierbij aan:
-   - [ ] Endoint (waar kan de OpenWoo App bevragen).
-   - [ ] Credentials (hoe kan de OpenWoo App zich authentiseren).
+   - [ ] Endpoint (waar kan de OpenWoo App bevragen).
+   - [ ] Credentials (hoe kan de OpenWoo App zich authenticeren).
 - [ ] Verzamelen en aanleveren gegevens van websitekoppeling indien gewenst.
 - [ ] DPIA opstellen.
 - [ ] Inregelen DNS voor (sub)domein.
@@ -58,8 +58,8 @@ Als u de OpenWOO APP zelfstandig installeerd zult u de [acties voor leverancier]
 - [ ] Aan uitvrager laten weten dat er een acceptatie kan plaatsvinden.
 
 Wat doet de leverancier niet
-- Aanleveren WCAG raportage (deze staat [hier]())
-- Aanleveren pen test (deze staat [hier]())
+- Aanleveren WCAG rapportage (deze staat [hier]())
+- Aanleveren pentest (deze staat [hier]())
 
 ## Naar productie (Acceptatie)
 
