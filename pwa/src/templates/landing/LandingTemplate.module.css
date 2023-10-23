@@ -10,3 +10,21 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media only screen and (max-width: 576px) {
+  /* Mobile */
+  .container {
+    margin-block-start: unset;
+  }
+
+  .container > *:not(:last-child) {
+    margin-block-end: var(--utrecht-space-block-2xl);
+  }
+
+  .pagination {
+    display: grid;
+    justify-content: unset;
+    justify-items: center;
+    margin-block-start: var(--utrecht-space-block-lg);
+  }
+}
