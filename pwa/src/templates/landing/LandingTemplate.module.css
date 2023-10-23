@@ -6,7 +6,7 @@
   margin-block-end: var(--utrecht-space-block-lg);
 }
 
-.header1 {
-  margin-block-start: 0px;
-  margin-block-end: 0px;
+.pagination {
+  display: flex;
+  justify-content: space-between;
 }
