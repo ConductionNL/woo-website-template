@@ -3,7 +3,7 @@ import * as styles from "./PaginationLimitSelect.module.css";
 import clsx from "clsx";
 import { useForm } from "react-hook-form";
 import { SelectSingle } from "@conduction/components";
-import { IQueryLimitContext, queryLimitDefault, useQueryLimitContext } from "../../context/queryLimit";
+import { IQueryLimitContext, QUERY_LIMIT_DEFAULT, useQueryLimitContext } from "../../context/queryLimit";
 import { useTranslation } from "react-i18next";
 
 interface PaginationLimitSelectProps {
@@ -33,25 +33,27 @@ export const PaginationLimitSelectComponent: React.FC<PaginationLimitSelectProps
     if (!watchLimit) return;
     if (parseInt(watchLimit.value) === value) return;
 
-    const selectedLimit = limitSelectOptions.find((LimitOption) => LimitOption.value === watchLimit.value);
+    const selectedLimit = limitSelectOptions.find((limitOption) => limitOption.value === watchLimit.value);
 
-    selectedLimit !== undefined && setQueryLimit({ ...queryLimit, [queryLimitName]: parseInt(selectedLimit.value) });
+    if (selectedLimit) {
+      setQueryLimit({ ...queryLimit, [queryLimitName]: parseInt(selectedLimit.value) });
+    }
   }, [watchLimit]);
 
   React.useEffect(() => {
     setValue(
       "limit",
-      limitSelectOptions.find((LimitOption) => LimitOption.value === (value !== undefined && value.toString())),
+      limitSelectOptions.find((limitOption) => limitOption.value === (value !== undefined && value.toString())),
     );
   }, []);
 
   return (
     <div className={clsx(styles.container, layoutClassName && layoutClassName)}>
-      <span>{`${t("Results per page")}:`}</span>
+      <span>{t("Results per page")}:</span>
       <SelectSingle
         ariaLabel={t("Select result limit")}
         {...{ register, errors, control }}
-        defaultValue={queryLimitDefault}
+        defaultValue={QUERY_LIMIT_DEFAULT}
         name="limit"
         options={limitSelectOptions}
         menuPlacement="auto"
