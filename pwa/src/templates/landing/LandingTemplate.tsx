@@ -21,11 +21,11 @@ export const LandingTemplate: React.FC = () => {
   const { queryLimit } = useQueryLimitContext();
 
   const queryClient = new QueryClient();
-  const getItems = useOpenWoo(queryClient).getAll(filters, currentPage, queryLimit.objectsQueryLimit);
+  const getItems = useOpenWoo(queryClient).getAll(filters, currentPage, queryLimit.openWooObjectsQueryLimit);
 
   React.useEffect(() => {
     setCurrentPage(1);
-  }, [queryLimit.objectsQueryLimit]);
+  }, [queryLimit.openWooObjectsQueryLimit]);
 
   return (
     <>
@@ -45,7 +45,7 @@ export const LandingTemplate: React.FC = () => {
                   totalPages={getItems.data.pages}
                   {...{ currentPage, setCurrentPage }}
                 />
-                <PaginationLimitSelectComponent queryLimitName={"objectsQueryLimit"} />
+                <PaginationLimitSelectComponent queryLimitName={"openWooObjectsQueryLimit"} />
               </div>
             </div>
           )}

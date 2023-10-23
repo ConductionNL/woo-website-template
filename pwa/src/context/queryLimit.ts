@@ -1,14 +1,14 @@
 import * as React from "react";
 import { GlobalContext } from "./global";
 
-export const queryLimitDefault = 12;
+export const QUERY_LIMIT_DEFAULT = 12;
 
 export interface IQueryLimitContext {
-  objectsQueryLimit: number;
+  openWooObjectsQueryLimit: number;
 }
 
 export const defaultQueryLimitContext: IQueryLimitContext = {
-  objectsQueryLimit: queryLimitDefault,
+  openWooObjectsQueryLimit: QUERY_LIMIT_DEFAULT,
 };
 
 export const useQueryLimitContext = () => {
