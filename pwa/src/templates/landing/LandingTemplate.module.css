@@ -14,7 +14,7 @@
 @media only screen and (max-width: 576px) {
   /* Mobile */
   .container {
-    margin-block-start: unset;
+    margin-block-start: var(--utrecht-space-block-lg) !important;
   }
 
   .container > *:not(:last-child) {
