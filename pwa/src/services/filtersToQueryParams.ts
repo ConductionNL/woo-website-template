@@ -1,80 +1,43 @@
 export const filtersToQueryParams = (filters: any): string => {
-  Object.keys(filters)
-    .filter((key) => filterKeysToRemove.includes(key))
-    .forEach((key) => {
-      delete filters[key];
-    });
+  const cleanedFilters = Object.fromEntries(
+    Object.entries(filters).filter(([key]) => !filterKeysToRemove.includes(key)),
+  );
 
-  let params: string = "";
+  const params = Object.entries(cleanedFilters)
+    .map(([key, value]) => {
+      if (!value) return null;
 
-  for (const [key, value] of Object.entries(filters)) {
-    if (!value) continue;
+      const formattedValue = Array.isArray(value)
+        ? value.map((v: string) => v.replace(/\s+/g, "_")).join(`&${key}[]=`)
+        : (value as string).replace(/\s+/g, "_");
 
-    if (typeof value === "string") {
-      params += `&${key}=${value}`;
-    }
+      return `${Array.isArray(value) ? `${key}[]` : key}=${formattedValue}`;
+    })
+    .filter(Boolean)
+    .join("&");
 
-    if (Array.isArray(value)) {
-      let arrayParams = "";
-
-      value.forEach((value) => {
-        arrayParams += `&${key}[]=${value}`;
-      });
-
-      params += arrayParams;
-    }
-  }
-
-  return params;
+  return params ? `&${params}` : "";
 };
 
-export const filtersToUrlQueryParams = (filters: any): string => {
-  Object.keys(filters)
-    .filter((key) => filterKeysToRemove.includes(key))
-    .forEach((key) => {
-      delete filters[key];
-    });
+export const filtersToUrlQueryParams = (filters: Record<string, any>): string => {
+  const cleanedFilters = Object.fromEntries(
+    Object.entries(filters).filter(([key]) => !filterKeysToRemove.includes(key)),
+  );
 
-  let params: string = "";
+  const params = Object.entries(cleanedFilters)
+    .map(([key, value]) => {
+      if (!value) return null;
 
-  var first_iteration = true;
-  for (const [key, value] of Object.entries(filters)) {
-    if (!value) continue;
+      const formattedValue = Array.isArray(value)
+        ? value.map((v: string) => v.replace(/\s+/g, "_")).join(`&${key}[]=`)
+        : (value as string).replace(/\s+/g, "_");
 
-    if (first_iteration) {
-      if (typeof value === "string") {
-        params += `?${key}=${value.replace(/\s+/g, "_")}`;
-      }
+      return `${Array.isArray(value) ? `${key}[]` : key}=${formattedValue}`;
+    })
+    .filter(Boolean)
+    .join("&");
 
-      if (Array.isArray(value)) {
-        let arrayParams = "";
-
-        value.forEach((value) => {
-          arrayParams += `?${key}[]=${value.replace(/\s+/g, "_")}`;
-        });
-
-        params += arrayParams;
-      }
-
-      first_iteration = false;
-    } else {
-      if (typeof value === "string") {
-        params += `&${key}=${value.replace(/\s+/g, "_")}`;
-      }
-
-      if (Array.isArray(value)) {
-        let arrayParams = "";
-
-        value.forEach((value) => {
-          arrayParams += `&${key}[]=${value.replace(/\s+/g, "_")}`;
-        });
-
-        params += arrayParams;
-      }
-    }
-  }
-
-  return params;
+  return params ? `?${params}` : "";
 };
 
 const filterKeysToRemove: string[] = [];
