@@ -56,7 +56,7 @@
 .contentGrid {
   gap: 28px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .dynamicSectionTitle {
@@ -75,4 +75,32 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+@media only screen and (max-width: 992px) {
+  /* Tablet */
+  .contentGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  /* Mobile */
+  .footer {
+    background-position: var(
+      --utrecht-page-footer-mobile-background-position,
+      var(--utrecht-page-footer-background-position)
+    );
+  }
+  .contentGrid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .imageContainer {
+    margin-block-end: 15px;
+  }
+
+  .logoAndConduction {
+    display: block;
+  }
 }
