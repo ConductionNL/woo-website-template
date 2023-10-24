@@ -9,7 +9,7 @@ export const filtersToQueryParams = (filters: any): string => {
 
       const formattedValue = Array.isArray(value)
         ? value.map((v: string) => v.replace(/\s+/g, "_")).join(`&${key}[]=`)
-        : (value as string).replace(/\s+/g, "_");
+        : (value as string);
 
       return `${Array.isArray(value) ? `${key}[]` : key}=${formattedValue}`;
     })
