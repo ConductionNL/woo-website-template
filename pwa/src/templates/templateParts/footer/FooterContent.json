@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Contact",
+    "items": [
+      {
+        "ariaLabel": "Phone number",
+        "value": "+31 (0)85 3036840",
+        "link": "tel:+31 (0)85 3036840",
+        "icon": { "prefix": "fas", "icon": "phone", "placement": "left" }
+      },
+      {
+        "ariaLabel": "Email address",
+        "value": "info@conduction.nl",
+        "link": "mailto:info@conduction.nl",
+        "icon": { "prefix": "fas", "icon": "envelope", "placement": "left" }
+      },
+      {
+        "label": "Address",
+        "ariaLabel": "Address",
+        "value": "Lauriergracht 14h"
+      }
+    ]
+  }
+]
