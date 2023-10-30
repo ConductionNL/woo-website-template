@@ -52,7 +52,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
     setValue(
       "year",
       generateYearsArray(currentYear - 1995).find((year: any) => {
-        return year.after === params.Publicatiedatum?.after && year.before === params.Publicatiedatum?.before;
+        return year.value === params.year;
       }),
     );
 

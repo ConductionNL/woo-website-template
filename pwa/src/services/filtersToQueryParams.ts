@@ -1,3 +1,5 @@
+import { generateYearsArray } from "../data/years";
+
 export const filtersToQueryParams = (filters: any): string => {
   const cleanedFilters = Object.fromEntries(
     Object.entries(filters).filter(([key]) => !filterKeysToRemove.includes(key)),
@@ -9,7 +11,7 @@ export const filtersToQueryParams = (filters: any): string => {
 
       const formattedValue = Array.isArray(value)
         ? value.map((v: string) => v.replace(/\s+/g, "_")).join(`&${key}[]=`)
-        : (value as string).replace(/\s+/g, "_");
+        : (value as string);
 
       return `${Array.isArray(value) ? `${key}[]` : key}=${formattedValue}`;
     })
@@ -20,6 +22,9 @@ export const filtersToQueryParams = (filters: any): string => {
 };
 
 export const filtersToUrlQueryParams = (filters: Record<string, any>): string => {
+  const today = new Date();
+  const currentYear = today.getFullYear();
+
   const cleanedFilters = Object.fromEntries(
     Object.entries(filters).filter(([key]) => !filterKeysToRemove.includes(key)),
   );
@@ -32,6 +37,13 @@ export const filtersToUrlQueryParams = (filters: Record<string, any>): string =>
         ? value.map((v: string) => v.replace(/\s+/g, "_")).join(`&${key}[]=`)
         : (value as string).replace(/\s+/g, "_");
 
+      if (key == "Publicatiedatum[after]") return;
+      if (key == "Publicatiedatum[before]")
+        return `year=${
+          generateYearsArray(currentYear - 1995).find((year: any) => {
+            return year.before === value;
+          })?.value
+        }`;
       return `${Array.isArray(value) ? `${key}[]` : key}=${formattedValue}`;
     })
     .filter(Boolean)
