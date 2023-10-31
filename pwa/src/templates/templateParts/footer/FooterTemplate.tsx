@@ -5,6 +5,7 @@ import { navigate } from "gatsby-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import { Logo } from "@conduction/components";
 
 type TDynamicContentItem = {
   title: string;
@@ -34,7 +35,15 @@ export const FooterTemplate: React.FC = () => {
         </div>
 
         <div className={styles.logoAndConduction}>
-          <Logo />
+          {process.env.GATSBY_FOOTER_LOGO_URL !== "false" && (
+            <Logo
+              size="lg"
+              onClick={() =>
+                process.env.GATSBY_FOOTER_LOGO_HREF ? open(process.env.GATSBY_FOOTER_LOGO_HREF) : navigate("/")
+              }
+            />
+          )}
+
           <WithLoveByConduction />
         </div>
       </div>
@@ -83,26 +92,6 @@ const DynamicSection: React.FC<{ content: TDynamicContentItem }> = ({ content })
         </div>
       ))}
     </section>
-  );
-};
-
-const Logo: React.FC = () => {
-  if (process.env.GATSBY_FOOTER_LOGO_URL === "false") return <></>;
-  const { t } = useTranslation();
-
-  return (
-    <div className={styles.imageContainer}>
-      <img
-        className={styles.image}
-        onClick={() =>
-          process.env.GATSBY_FOOTER_LOGO_HREF ? open(process.env.GATSBY_FOOTER_LOGO_HREF) : navigate("/")
-        }
-        src={process.env.GATSBY_FOOTER_LOGO_URL}
-        alt={t("Footer-logo")}
-        aria-label={`${t("Footer-logo")}, ${t("Can open a new window")}`}
-        tabIndex={0}
-      />
-    </div>
   );
 };
 
