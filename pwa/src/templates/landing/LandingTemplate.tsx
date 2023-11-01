@@ -64,7 +64,7 @@ export const LandingTemplate: React.FC = () => {
       <JumbotronTemplate />
 
       <Container layoutClassName={styles.breadcrumbsContainer}>
-        <BreadcrumbNav className={styles.breadcrumbs} label="Kruimelpad">
+        <BreadcrumbNav className={styles.breadcrumbs} label={t("Breadcrumbs")}>
           {translatedCrumbs.map((crumb: any, idx: number) => {
             if (translatedCrumbs.length !== idx + 1) {
               return (

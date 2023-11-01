@@ -7,20 +7,25 @@
 }
 
 .breadcrumbsContainer {
-  padding-block-start: var(--skeleton-size-sm);
-  padding-block-end: var(--skeleton-size-sm);
+  margin-block-start: var(--web-app-size-sm);
+  padding-block-start: var(--web-app-size-sm);
+  padding-block-end: var(--web-app-size-sm);
 }
 
 .breadcrumbs {
-  background-color: var(--utrecht-breadcrumb-background-color);
-  padding-inline-start: var(--utrecht-breadcrumb-padding-inline-start);
-  padding-inline-end: var(--utrecht-breadcrumb-padding-inline-end);
-  padding-block-start: var(--utrecht-breadcrumb-padding-block-start);
-  padding-block-end: var(--utrecht-breadcrumb-padding-block-end);
+  background-color: var(--utrecht-breadcrumb-nav-background-color);
+  border-radius: var(--utrecht-breadcrumb-nav-border-radius);
+  background-color: var(--utrecht-breadcrumb-nav-background-color);
+  padding-inline-start: var(--utrecht-breadcrumb-nav-padding-inline-start);
+  padding-inline-end: var(--utrecht-breadcrumb-nav-padding-inline-end);
+  padding-block-start: var(--utrecht-breadcrumb-nav-padding-block-start);
+  padding-block-end: var(--utrecht-breadcrumb-nav-padding-block-end);
 }
 
-.breadcrumbs > ol {
-  align-items: baseline;
+.breadcrumbNavLink:hover {
+  --utrecht-link-hover-color: var(
+    --utrecht-breadcrumb-link-hover-color
+  ) !important;
 }
 
 .breadcrumbDisabled {
@@ -37,10 +42,9 @@
   ) !important;
   user-select: none !important;
 }
-.breadcrumbNavLink:hover {
-  --utrecht-link-hover-color: var(
-    --utrecht-breadcrumb-link-hover-color
-  ) !important;
+
+.breadcrumbs > ol {
+  align-items: baseline;
 }
 
 .info svg {
