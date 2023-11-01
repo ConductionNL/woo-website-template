@@ -48,15 +48,15 @@ export const FooterTemplate: React.FC = () => {
   const getFooterContent = _useFooterContent.getContent();
 
   // For production
-  React.useEffect(() => {
-    setFooterContent(getFooterContent.data);
-  }, [getFooterContent]);
+  // React.useEffect(() => {
+  //   setFooterContent(getFooterContent.data);
+  // }, [getFooterContent]);
 
   // For development
-  // React.useEffect(() => {
-  //   const data = require("./FooterContent.json");
-  //   setFooterContent(data);
-  // }, []);
+  React.useEffect(() => {
+    const data = require("./FooterContent.json");
+    setFooterContent(data);
+  }, []);
 
   React.useEffect(() => {
     if (!process.env.GATSBY_FOOTER_CONTENT) return;
@@ -269,7 +269,7 @@ const MarkdownLink: React.FC<LinkComponentProps> = ({ item }) => {
     <Link
       className={styles.link}
       onClick={(e: any) => {
-        e.preventDefault(), navigate(`/${item.value.replaceAll(" ", "_")}/?link=${item.markdownLink}`);
+        e.preventDefault(), navigate(`/markdown/${item.value.replaceAll(" ", "_")}/?link=${item.markdownLink}`);
       }}
       tabIndex={0}
       aria-label={`${t(item.ariaLabel)}, ${t(item.markdownLink)}`}
