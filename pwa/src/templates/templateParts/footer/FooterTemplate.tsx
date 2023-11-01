@@ -1,7 +1,16 @@
 import * as React from "react";
 import * as styles from "./FooterTemplate.module.css";
 import parse from "html-react-parser";
-import { PageFooter, Link, Heading3, Icon } from "@utrecht/component-library-react/dist/css-module";
+import {
+  PageFooter,
+  Link,
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  Heading5,
+  Icon,
+} from "@utrecht/component-library-react/dist/css-module";
 import { navigate } from "gatsby-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -46,7 +55,7 @@ export const FooterTemplate: React.FC = () => {
   // For development
   // React.useEffect(() => {
   //   const data = require("./FooterContent.json");
-  //   setFooterContent1(data);
+  //   setFooterContent(data);
   // }, []);
 
   React.useEffect(() => {
@@ -82,7 +91,7 @@ const DynamicSection: React.FC<{ content: TDynamicContentItem }> = ({ content })
 
   return (
     <section>
-      <Heading3 className={styles.dynamicSectionTitle}>{t(content.title)}</Heading3>
+      <DynamicSectionHeading heading={process.env.GATSBY_FOOTER_CONTENT_HEADER} {...{ content }} />
 
       {content.items.map((item, idx) => (
         <div key={idx} className={styles.dynamicSectionContent}>
@@ -102,6 +111,25 @@ const DynamicSection: React.FC<{ content: TDynamicContentItem }> = ({ content })
       ))}
     </section>
   );
+};
+
+const DynamicSectionHeading: React.FC<{ content: TDynamicContentItem; heading?: string }> = ({ content, heading }) => {
+  const { t } = useTranslation();
+
+  switch (heading) {
+    case "heading-1":
+      return <Heading1 className={styles.dynamicSectionTitle}>{t(content.title)}</Heading1>;
+    case "heading-2":
+      return <Heading2 className={styles.dynamicSectionTitle}>{t(content.title)}</Heading2>;
+    case "heading-3":
+      return <Heading3 className={styles.dynamicSectionTitle}>{t(content.title)}</Heading3>;
+    case "heading-4":
+      return <Heading4 className={styles.dynamicSectionTitle}>{t(content.title)}</Heading4>;
+    case "heading-5":
+      return <Heading5 className={styles.dynamicSectionTitle}>{t(content.title)}</Heading5>;
+    default:
+      return <Heading3 className={styles.dynamicSectionTitle}>{t(content.title)}</Heading3>;
+  }
 };
 
 const Logo: React.FC = () => {
@@ -135,7 +163,9 @@ const WithLoveByConduction: React.FC = () => {
         target="_blank"
         aria-label={`${t("Link to github repository")}, ${t("Opens a new window")}`}
       >
-        <FontAwesomeIcon icon={faCode} />
+        <Icon>
+          <FontAwesomeIcon icon={faCode} />
+        </Icon>
       </Link>{" "}
       with{" "}
       <Link
@@ -144,7 +174,9 @@ const WithLoveByConduction: React.FC = () => {
         target="_blank"
         aria-label={`${t("Link to github contributors page")}, ${t("Opens a new window")}`}
       >
-        <FontAwesomeIcon icon={faHeart} />
+        <Icon>
+          <FontAwesomeIcon icon={faHeart} />
+        </Icon>
       </Link>{" "}
       by{" "}
       <Link
@@ -201,10 +233,13 @@ const InternalLink: React.FC<LinkComponentProps> = ({ item }) => {
   return (
     <Link
       className={styles.link}
-      onClick={() => navigate(item.link ?? "")}
+      onClick={(e: any) => {
+        e.preventDefault(), navigate(item.link ?? "");
+      }}
       tabIndex={0}
       aria-label={`${t(item.ariaLabel)}, ${t(item.value)}`}
       role="button"
+      href={item.link}
     >
       {item.icon && item.icon.placement === "left" && (
         <FontAwesomeIcon className={styles.iconLeft} icon={[item.icon.prefix, item.icon.icon]} />
@@ -233,10 +268,13 @@ const MarkdownLink: React.FC<LinkComponentProps> = ({ item }) => {
   return (
     <Link
       className={styles.link}
-      onClick={() => navigate(`/github/${item.value.replaceAll(" ", "_")}/?link=${item.markdownLink}`)}
+      onClick={(e: any) => {
+        e.preventDefault(), navigate(`/${item.value.replaceAll(" ", "_")}/?link=${item.markdownLink}`);
+      }}
       tabIndex={0}
       aria-label={`${t(item.ariaLabel)}, ${t(item.markdownLink)}`}
       role="button"
+      href={item.link}
     >
       {item.icon && item.icon.placement === "left" && (
         <FontAwesomeIcon className={styles.iconLeft} icon={[item.icon.prefix, item.icon.icon]} />
