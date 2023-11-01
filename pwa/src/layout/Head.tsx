@@ -29,7 +29,9 @@ export const Head: React.FC = () => {
         class: process.env.GATSBY_NL_DESIGN_THEME_CLASSNAME,
       }}
     >
-      <title>{`Woo | ${getPageTitle(translatedCrumbs, gatsbyContext.location) ?? "Error"}`}</title>
+      <title>{`Woo | ${process.env.GATSBY_ORGANISATION_NAME} | ${
+        getPageTitle(translatedCrumbs, gatsbyContext.location) ?? "Error"
+      }`}</title>
       <link rel="icon" type="svg" href={process.env.GATSBY_FAVICON_URL} />
     </Helmet>
   );
