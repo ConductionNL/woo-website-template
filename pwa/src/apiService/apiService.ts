@@ -1,8 +1,11 @@
-import axios, { AxiosInstance, AxiosResponse } from "axios";
 import toast from "react-hot-toast";
+import axios, { AxiosInstance, AxiosResponse } from "axios";
+import { removeFileNameFromUrl } from "../services/FileNameFromUrl";
+import { DEFAULT_FOOTER_CONTENT_URL } from "../templates/templateParts/footer/FooterTemplate";
 
 // Resources
 import OpenWoo from "./resources/openWoo";
+import FooterContent from "./resources/footerContent";
 
 interface PromiseMessage {
   loading?: string;
@@ -28,8 +31,21 @@ export default class APIService {
     });
   }
 
+  public get FooterContentClient(): AxiosInstance {
+    return axios.create({
+      baseURL: removeFileNameFromUrl(
+        process.env.GATSBY_FOOTER_CONTENT !== undefined && process.env.GATSBY_FOOTER_CONTENT.length !== 0
+          ? process.env.GATSBY_FOOTER_CONTENT
+          : DEFAULT_FOOTER_CONTENT_URL,
+      ),
+    });
+  }
+
   public get OpenWoo(): OpenWoo {
     return new OpenWoo(this.BaseClient, this.Send);
+  }
+  public get FooterContent(): FooterContent {
+    return new FooterContent(this.FooterContentClient, this.Send);
   }
 
   // Send method

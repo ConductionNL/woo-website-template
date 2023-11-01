@@ -67,7 +67,7 @@
 .dynamicSectionContent {
   display: flex;
   flex-direction: column;
-  margin-block-end: 8px;
+  margin-block-end: 12px;
 }
 
 .logoAndConduction {
@@ -75,6 +75,13 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.iconLeft {
+  margin-inline-end: var(--utrecht-icon-gap);
+}
+.iconRight {
+  margin-inline-start: var(--utrecht-icon-gap);
 }
 
 @media only screen and (max-width: 992px) {
