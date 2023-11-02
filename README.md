@@ -1,20 +1,22 @@
-# Open WOO App
+# Over de Open WOO App
 
 > **WOObinar op 15 November**
+>
 > 
 > Meer weten over deze oplossing? Dat kan!
-> 
-> De leverancier xxllnc organiseerd op 15 november 13:00 een [WOObinar](https://www.linkedin.com/events/woobinar7125512622950494208/comments/), inschrijven kan [hier](https://www.linkedin.com/events/woobinar7125512622950494208/comments/). Tijdens deze bijeenkomst wordt zowel deze oplossing toegelicht als dat er mogelijkheid is voor het stellen van (technische) vragen. 
+>
+>
+> De leverancier [xxllnc](https://xxllnc.nl/) organiseerd op 15 november 13:00 een [WOObinar](https://www.linkedin.com/events/woobinar7125512622950494208/comments/), inschrijven kan [hier](https://www.linkedin.com/events/woobinar7125512622950494208/comments/). Tijdens deze bijeenkomst wordt zowel deze oplossing toegelicht als dat er de mogelijkheid is voor het stellen van (technische) vragen. 
 
 De Wet Open Overheid (WOO) is een initiatief gericht op het verbeteren van de openbaarheid van overheidsinformatie. Het doel is om overheidsinformatie beter toegankelijk te maken voor iedereen. Meer informatie over de Wet Open Overheid kan [hier](https://www.open-overheid.nl/themas/wet-open-overheid/) worden gevonden.
 
 De implementatie van de Wet Open Overheid brengt twee kernuitdagingen met zich mee:
 
 1. **Diversificatie van Publicatie Typen:**
-   Met de tijd zijn er steeds meer typen van publicaties ontstaan, variërend van rapporten en besluiten tot datasets en onderzoeksresultaten. Deze diversiteit vereist een flexibel systeem dat in staat is om verschillende typen van publicaties adequaat te hanteren.
+   Met de tijd zullen er steeds meer typen van publicaties ontstaan, variërend van rapporten en besluiten tot datasets en onderzoeksresultaten. Deze diversiteit vereist een flexibel systeem dat in staat is om verschillende typen van publicaties adequaat te hanteren. Dat maakt het op voorhand onmogenlijk om één bron (zoals zaaksysteem of raadsinformaite syteem) richting de toekomst aan te wijzen.
 
 2. **Proactieve Publicatie:**
-   Overheidseenheden worden aangemoedigd om informatie proactief te publiceren. Dit vergt een systeem dat kan anticiperen op en zich aanpassen aan de voortdurend evoluerende informatiebehoeften.
+   Overheden moeten informatie proactief te publiceren. Dit betekend dat publicatie onderdeel moet worden van het normale werkprocces. Hiermee is het richting de toekomst niet haalbaar om WOO publicaties handmatig via een appart systeem (bijvoorbeeld CMS website) te laten verlopen.
 
 ## Probleemstelling
 
@@ -39,7 +41,13 @@ De Open WOO APP biedt een geïntegreerde oplossing die bestaat een aantal hoofdc
 Deze geïntegreerde aanpak zorgt voor een naadloze, efficiënte en effectieve implementatie van de Wet Open Overheid, waardoor overheidsorganisaties hun informatie op een gebruiksvriendelijke en toegankelijke wijze kunnen delen.
 
 
-Dit is een zelfstandig bruikbare uitbreiding op [Open Woo](https://github.com/OpenWebconcept/plugin-openwoo) van het [Open Webconcept](https://openwebconcept.nl/). Het maakt hergebruik van [NL Design (React componenten)](https://nldesignsystem.nl/meedoen/introductie) om aan de hand van [Design Tokens](https://nldesignsystem.nl/meedoen/design-tokens/) gemeentelijk specifieke [Woo-index](https://www.koopoverheid.nl/voor-overheden/rijksoverheid/woo-index) pagina's te genereren die voldoen aan alle [WCAG](https://wcag.nl/kennis/richtlijnen/) en [wettelijke eisen](https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo).
+## Functionaliteiten
+- Één index pagina voor uw organisatie
+- Weergave van data uit meerdere bronnen (zaaksysteem, website, raadsinformatie systeem en archief)
+- Aanlevering bij KOOP aan de hand van sitemap.xml bestanden
+- Automatisch en pro-actief publiceren
+- Op de toekomst voorbereid
+
 
 ![epe.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/epe.png "Woo Website van de Gemeente Epe")
 
@@ -58,6 +66,10 @@ Meer details hierover vindt u onder [architectuur](/docs/Architectuur.md).
 
 ![Website Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/components.svg "Website Architecture")
 
+
+Dit is een zelfstandig bruikbare uitbreiding op [Open Woo](https://github.com/OpenWebconcept/plugin-openwoo) van het [Open Webconcept](https://openwebconcept.nl/). Het maakt hergebruik van [NL Design (React componenten)](https://nldesignsystem.nl/meedoen/introductie) om aan de hand van [Design Tokens](https://nldesignsystem.nl/meedoen/design-tokens/) gemeentelijk specifieke [Woo-index](https://www.koopoverheid.nl/voor-overheden/rijksoverheid/woo-index) pagina's te genereren die voldoen aan alle [WCAG](https://wcag.nl/kennis/richtlijnen/) en [wettelijke eisen](https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo).
+
+
 ### Woo 1.0
 
 Voor de eerste opzet van de Woo-index van BZK is het belangrijk dat organisaties zelf hun Woo-publicaties op een doorzoekbare index publiceren. BZK houdt vervolgens een overzichtspagina bij waarop per organisatie de algemene organisatiegegevens en de organisatiespecifieke indexpagina vindbaar zijn.
@@ -70,15 +82,6 @@ BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouw
 
 De Woo specificeert een aantal categorieën (zie configuratie) die door een organisatie moeten worden ontsloten. Dit template ondersteunt dat, maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het concept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
 
-## Functionaliteiten
-
-- Serverless: Common Woo maakt gebruik van de RAD-architectuurprincipes voor het leveren van een serverless voorkant.
-- Eigen huisstijl: Via NL Design tokens kan de gemeente haar eigen huisstijl gebruiken. Als er nog geen NL Design tokens voor uw organisatie zijn, helpen wij u uiteraard verder.
-- Geen handwerk: Door directe bronintegratie is het niet nodig Woo-verzoeken actief te publiceren.
-- Als de gemeente gebruikmaakt van Open Woo, kan er direct op de Open Woo-API worden gekoppeld.
-- Als de gemeente een zaaksysteem heeft dat ZGW gebruikt, kan er via een gateway op het zaaksysteem worden gekoppeld (bijvoorbeeld xllnc, Roxit).
-- Woo-verzoeken kunnen ook los worden toegevoegd als JSON-bestand.
-- Kosteloos: Als de gemeente beschikt over een bron, NL Design tokens en de interfaceservers draait, zijn er geen kosten aan het gebruik verbonden.
 
 ## Voorbeelden
 
