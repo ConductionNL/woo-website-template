@@ -1,4 +1,43 @@
-# Over de Open Woo Website
+# Open WOO App
+
+> **WOObinar op 15 November**
+> 
+> Meer weten over deze oplossing? Dat kan!
+> 
+> De leverancier xxllnc organiseerd op 15 november 13:00 een [WOObinar](https://www.linkedin.com/events/woobinar7125512622950494208/comments/), inschrijven kan [hier](https://www.linkedin.com/events/woobinar7125512622950494208/comments/). Tijdens deze bijeenkomst wordt zowel deze oplossing toegelicht als dat er mogelijkheid is voor het stellen van (technische) vragen. 
+
+De Wet Open Overheid (WOO) is een initiatief gericht op het verbeteren van de openbaarheid van overheidsinformatie. Het doel is om overheidsinformatie beter toegankelijk te maken voor iedereen. Meer informatie over de Wet Open Overheid kan [hier](https://www.open-overheid.nl/themas/wet-open-overheid/) worden gevonden.
+
+De implementatie van de Wet Open Overheid brengt twee kernuitdagingen met zich mee:
+
+1. **Diversificatie van Publicatie Typen:**
+   Met de tijd zijn er steeds meer typen van publicaties ontstaan, variërend van rapporten en besluiten tot datasets en onderzoeksresultaten. Deze diversiteit vereist een flexibel systeem dat in staat is om verschillende typen van publicaties adequaat te hanteren.
+
+2. **Proactieve Publicatie:**
+   Overheidseenheden worden aangemoedigd om informatie proactief te publiceren. Dit vergt een systeem dat kan anticiperen op en zich aanpassen aan de voortdurend evoluerende informatiebehoeften.
+
+## Probleemstelling
+
+Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Management Systeem (CMS) of door levering vanuit één systeem. Handmatige publicatie van alle overheidsinformatie zou een aanzienlijke personele inzet vereisen, wat onpraktisch is. Daarbij komt dat de verscheidenheid aan publicatietypen vaak verdeeld is over meerdere systemen, wat de situatie verder compliceert.
+
+## Oplossing
+
+De Open WOO APP biedt een geïntegreerde oplossing die bestaat een aantal hoofdcomponenten:
+
+1. **Koppelvlak naar COOP en WOOGLE voor de Landelijke Index:**
+   Een interface die zorgt voor een gestandaardiseerde verbinding met de Collectieve Opdrachtverlening Overheidspartijen (COOP), waardoor een landelijke index van overheidsinformatie wordt gecreëerd.
+
+2. **Organisatieweergave:**
+   Een interface waarmee belanghebbenden binnen een organisatie naar relevante informatie kunnen zoeken.
+
+3. **Koppelvlak:**
+   Een module die in staat is om informatie uit verschillende systemen te verzamelen, waardoor een gecentraliseerde toegang tot diverse publicatietypen mogelijk wordt.
+
+4. **CMS-module:**
+   Een aanvullende module voor het handmatig invoeren van informatie die niet automatisch kan worden opgehaald, en voor het beheren van de gepubliceerde pagina's.
+
+Deze geïntegreerde aanpak zorgt voor een naadloze, efficiënte en effectieve implementatie van de Wet Open Overheid, waardoor overheidsorganisaties hun informatie op een gebruiksvriendelijke en toegankelijke wijze kunnen delen.
+
 
 Dit is een zelfstandig bruikbare uitbreiding op [Open Woo](https://github.com/OpenWebconcept/plugin-openwoo) van het [Open Webconcept](https://openwebconcept.nl/). Het maakt hergebruik van [NL Design (React componenten)](https://nldesignsystem.nl/meedoen/introductie) om aan de hand van [Design Tokens](https://nldesignsystem.nl/meedoen/design-tokens/) gemeentelijk specifieke [Woo-index](https://www.koopoverheid.nl/voor-overheden/rijksoverheid/woo-index) pagina's te genereren die voldoen aan alle [WCAG](https://wcag.nl/kennis/richtlijnen/) en [wettelijke eisen](https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo).
 

@@ -144,10 +144,11 @@ Verwijder alle testdata uit het zaaksysteem en de WOO-website.
 Naast functioneele tests is het ook belangrijk om te controleren of de website voldoet aan de teschnsiche eisen voor overheids websites.
 
 ### WCAG
-Er is een [WCAG raportage beschickbaar](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/WCAG-Raportage.pdf) voor de website.
+Er is een [WCAG raportage](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/WCAG-Raportage.pdf) beschickbaar voor de website.
 
 U kunt de test zelf herhalen, vervang in de volgende url https://conductionnl.github.io/woo-website-xxllnc/ door het addres van uw OpenWOO app
 [https://accessibe.com/accessscan?website=https://conductionnl.github.io/woo-website-xxllnc/](https://accessibe.com/accessscan?website=https://conductionnl.github.io/woo-website-xxllnc/)
 
 ### Pentest
-Er word momenteel een pentest uitgevoerd
+
+Er is een [Pentest raportage](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/PENTEST-Raportage.pdf) beschickbaar voor de website.
