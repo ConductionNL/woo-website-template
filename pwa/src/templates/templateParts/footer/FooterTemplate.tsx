@@ -274,7 +274,7 @@ const MarkdownLink: React.FC<LinkComponentProps> = ({ item }) => {
       tabIndex={0}
       aria-label={`${t(item.ariaLabel)}, ${t(item.markdownLink)}`}
       role="button"
-      href={item.link}
+      href={item.markdownLink}
     >
       {item.icon && item.icon.placement === "left" && (
         <FontAwesomeIcon className={styles.iconLeft} icon={[item.icon.prefix, item.icon.icon]} />
