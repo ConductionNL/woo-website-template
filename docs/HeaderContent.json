@@ -10,7 +10,7 @@
         "label": "Architectuur",
         "type": "readme",
         "current": {
-          "pathname": "/over/us",
+          "pathname": "/over/architectuur",
           "operator": "equals"
         },
         "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md" }
@@ -19,7 +19,7 @@
         "label": "Kosten",
         "type": "readme",
         "current": {
-          "pathname": "/over/us",
+          "pathname": "/over/kosten",
           "operator": "equals"
         },
         "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md" }
@@ -28,16 +28,16 @@
         "label": "Privacy",
         "type": "readme",
         "current": {
-          "pathname": "/over/us",
+          "pathname": "/over/privacy",
           "operator": "equals"
         },
         "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Privacyverklaring.md" }
       },
       {
-        "label": "Security",
+        "label": "Beveiliging",
         "type": "readme",
         "current": {
-          "pathname": "/over/us",
+          "pathname": "/over/security",
           "operator": "equals"
         },
         "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/SECURITY.md" }
@@ -46,7 +46,7 @@
         "label": "Toegankenlijkheid",
         "type": "readme",
         "current": {
-          "pathname": "/over/us",
+          "pathname": "/over/toegankelijkheid",
           "operator": "equals"
         },
         "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Toegankelijkheid.md" }
@@ -55,10 +55,19 @@
         "label": "Roadmap",
         "type": "readme",
         "current": {
-          "pathname": "/over/us",
+          "pathname": "/over/roadmap",
           "operator": "equals"
         },
         "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md" }
+      },
+      {
+        "label": "Veel gestelde vragen",
+        "type": "readme",
+        "current": {
+          "pathname": "/over/faq",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/FAQ.md" }
       }
     ]
   },
