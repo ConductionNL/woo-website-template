@@ -40,3 +40,31 @@ De Open Woo-plugin "scraped" elke nacht alle relevante zaken. De stappen zijn al
 5. Zaken die niet zijn gevonden in bovenstaande loop maar wel in de index staan, worden verwijderd.
 
 Dit proces zorgt ervoor dat het zaaksysteem leidend is en dat zaken zowel kunnen worden gepubliceerd als gedepubliceerd.
+
+## Federatie via OpenCatalogi
+
+OpenWoo.app maakt gebruik van het federatieve stelstel van OpenCatalogi om de verschillende varianten te kunnen ontsluiten. Dit betekent dat organisaties zelf kunnen bepalen welke variant ze willen gebruiken en dat ze niet afhankelijk zijn van een centrale partij.
+
+## Landelijke API
+
+Iedereen kan de landelijke API bevragen om alle Woo-verzoeken en convenanten op te halen. De landelijke API is te vinden op []() . De API is gebaseerd op de [NL API Strategie](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/). De API is te bevragen via de volgende endpoints:
+
+## Componenten
+
+Een variant bestaat uit een aantal componenten die samen de functionaliteit van de variant vormen. Deze componenten zijn:
+
+- [Woo API]()
+- [Woo Website]()
+- [Woo Plugin]()
+- [Woogle](https://woogle.wooverheid.nl/search?q=*)
+- [Raadsinformatie Systeem]()
+- [KOOP-index]()
+- [Common Gateway]()
+- [Open Webconcept CMS]()
+- [Zaaksysteem]()
+
+Alle componenten worden getest met [zaaksysteem.nl](https://xxllnc.nl/zaakgericht/), Rx.Fundament en Decos JOIN
+
+## Roadmap
+
+Organisaties kunnen bijdragen aan de ontwikkeling van deze componenten door items aan te dragen, deze zelf op te pakken en uit te voeren, of door de uitvoering ervan te financieren. Voor het huidige overzicht, zie [Roadmap](/docs/Roadmap.md).
