@@ -22,7 +22,7 @@ Kijk op [de demo pagina](https://conductionnl.github.io/woo-website-xxllnc/) voo
 | SLA of SAAS frontend                           | €250,- (maandelijks)   |
 
 **Waarop zijn de maandelijkse kosten gebaseerd?**
-Lost van hosting verwachten we naar aanleiding van eerdere ervaringen dat de frontend maandelijks moet worden bijgewerkt in verband met veiligheidsupdates, nieuwe functionaliteit of aanpassingen in NL Design. Met name de ontwikkelingen in de Woo zullen ervoor zorgen dat de pagina de komende jaren continu in beweging is.
+Los van hosting verwachten we naar aanleiding van eerdere ervaringen dat de frontend maandelijks moet worden bijgewerkt in verband met veiligheidsupdates, nieuwe functionaliteit of aanpassingen in NL Design. Met name de ontwikkelingen in de Woo zullen ervoor zorgen dat de pagina de komende jaren continu in beweging is.
 
 > **Opmerking**
 > NL Design tokens zijn een randvoorwaarde (vereiste) voor het gebruik van de frontend. Als uw organisatie hier reeds over beschikt, hoeven deze uiteraard niet opnieuw te worden gemaakt. Wel is het mogelijk dat uw huidige token set moet worden uitgebreid; in dat geval volgt een maatwerkofferte. Let op! De prijsstelling is gebaseerd op een aangeleverde en volledige huisstijlgids. Indien deze niet beschikbaar is, moeten de tokens worden gereverse-engineerd vanaf uw website. Daar zijn extra kosten aan verbonden.
