@@ -91,3 +91,7 @@ De Woo specificeert een aantal categorieën (zie configuratie) die door een orga
 - [Roadmap](docs/Roadmap.md)
 - [Configuratie](docs/Configuratie.md)
 - [Testscenario's](docs/Tests.md)
+
+## Toekomstplannen
+
+Er komen steeds meer toepassingen voor het publiceren van overheidsinformatie. Denk bijvoorbeeld aan het publiceren van datasets, algoritmes en besluiten. Deze toepassingen zullen in de toekomst ook onderdeel worden van de Wet Open Overheid. Daarom is het belangrijk dat de Open WOO App flexibel is en kan worden aangepast aan de veranderende behoeften van de overheid. Kijk voor meer informatie over onze ontwikkelplannen op de [roadmap](./docs/Roadmap.md)
