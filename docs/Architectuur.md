@@ -10,7 +10,7 @@ Toegepaste norm: [NL API Strategie over property namen](https://docs.geostandaar
 
 ### Open Webconcept variant
 
-Met deze variant kunnen Woo-verzoeken en convenanten eenvoudig worden beheerd vanuit de bestaande webomgeving en CMS door middel van de Open Webconcept plugin. Dit vereist geen extra installatie of beheerinspanningen van de organisatie, op voorwaarde dat er al een OpenWebconcept-installatie met de benodigde plugins beschikbaar is. Dit biedt een serverloze en kostenefficiënte oplossing door het hergebruik van bestaande Common Ground-componenten.
+Met deze variant kunnen Woo-verzoeken en convenanten eenvoudig worden beheerd vanuit de bestaande webomgeving en CMS door middel van een directe koppeling met de gateway. Dit vereist geen extra installatie of beheerinspanningen van de organisatie, op voorwaarde dat er al een OpenWebconcept-installatie met de benodigde plugins beschikbaar is. Dit biedt een serverloze en kostenefficiënte oplossing door het hergebruik van bestaande Common Ground-componenten.
 
 **Nadelen:**
 
@@ -40,3 +40,37 @@ De Open Woo-plugin "scraped" elke nacht alle relevante zaken. De stappen zijn al
 5. Zaken die niet zijn gevonden in bovenstaande loop maar wel in de index staan, worden verwijderd.
 
 Dit proces zorgt ervoor dat het zaaksysteem leidend is en dat zaken zowel kunnen worden gepubliceerd als gedepubliceerd.
+
+## Federatie via OpenCatalogi
+
+OpenWoo.app maakt gebruik van het federatieve stelstel van OpenCatalogi om de verschillende varianten te kunnen ontsluiten. Dit betekent dat organisaties zelf kunnen bepalen welke variant ze willen gebruiken en dat ze niet afhankelijk zijn van een centrale partij.
+
+## Landelijke API
+
+Iedereen kan de landelijke API bevragen om alle Woo-verzoeken en convenanten op te halen. De API is gebaseerd op de [NL API Strategie](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/).
+
+(wordt nog aangevuld)
+
+## Componenten
+
+Een variant bestaat uit een aantal componenten die samen de functionaliteit van de variant vormen. Deze componenten zijn:
+
+- [Woo API]()
+- [Woo Website]()
+- [Woo Plugin]()
+- [Woogle](https://woogle.wooverheid.nl/search?q=*)
+- [Raadsinformatie Systeem]()
+- [KOOP-index]()
+- [Common Gateway]()
+- [Open Webconcept CMS]()
+- [Zaaksysteem]()
+
+Alle componenten worden getest met [zaaksysteem.nl](https://xxllnc.nl/zaakgericht/), Rx.Fundament en Decos JOIN
+
+## Verschil OpenWoo.app en de OpenWoo plugin
+
+De OpenWoo.app is een verzameling van componenten die samen een oplossing vormen voor het publiceren van Woo-verzoeken en convenanten. De OpenWoo plugin is een onderdeel van deze oplossing en kan worden gebruikt om Woo-verzoeken en convenanten te publiceren vanuit een Open Webconcept CMS. De OpenWoo plugin is een onderdeel van deze oplossing en kan worden gebruikt om Woo-verzoeken en convenanten te publiceren vanuit een Open Webconcept CMS.
+
+## Roadmap
+
+Organisaties kunnen bijdragen aan de ontwikkeling van deze componenten door items aan te dragen, deze zelf op te pakken en uit te voeren, of door de uitvoering ervan te financieren. Voor het huidige overzicht, zie [Roadmap](/docs/Roadmap.md).

@@ -74,3 +74,7 @@ Volg de installatiehandleiding op [Woo Bundle](https://github.com/ConductionNL/W
 ## Externe Systemen
 
 Voor het koppelen van externe systemen geldt dat zij op de juiste manier moeten zijn geconfigureerd. Kijk daarvoor onder [configuratie](/Configuratie).
+
+## Verdere documentatie
+
+Voor verdere documentatie verwijzen we naar de [documentatie van het Productpage-template](https://conductionnl.github.io/product-website-template/).

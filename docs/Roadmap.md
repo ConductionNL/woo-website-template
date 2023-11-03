@@ -2,6 +2,14 @@
 
 Organisaties kunnen bijdragen aan deze roadmap door items aan te dragen, deze zelf op te pakken en uit te voeren, of door de uitvoering ervan te financieren.
 
+## Woo 1.0
+
+Voor de eerste opzet van de Woo-index van BZK is het belangrijk dat organisaties zelf hun Woo-publicaties op een doorzoekbare index publiceren. BZK houdt vervolgens een overzichtspagina bij waarop per organisatie de algemene organisatiegegevens en de organisatiespecifieke indexpagina vindbaar zijn.
+
+## Woo 2.0
+
+BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouwen op open.overheid.nl. Deze harvester maakt gebruik van `robots.txt` en `sitemap.xml`-bestanden om de verschillende pagina's en metadata van de organisatiespecifieke index te vinden en over te nemen. Dat betekent dat ook binnen de 2.0 variant van Woo een eigen indexpagina noodzakelijk blijft. Sterker nog, de kwaliteit van de ontsluiting wordt in grote mate afhankelijk van de kwaliteit van de index.
+
 ## Raadsinformatie Systemen (Medio November)
 
 **Inschatting: 40 uur per RIS**
