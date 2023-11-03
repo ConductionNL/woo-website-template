@@ -5,7 +5,7 @@
       {
         "value": "Architectuur",
         "type": "readme",
-        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md"
+        "handleClick": {"link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md"}
       },
       {
         "value": "Kosten",
