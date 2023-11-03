@@ -3,32 +3,32 @@
     "title": "Documentatie",
     "items": [
       {
-        "label": "Architectuur",
+        "value": "Architectuur",
         "type": "readme",
-        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md" 
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md"
       },
       {
-        "label": "Kosten",
+        "value": "Kosten",
         "type": "readme",
         "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md"
       },
       {
-        "label": "Privacy",
+        "value": "Privacy",
         "type": "readme",
         "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Privacyverklaring.md"
       },
       {
-        "label": "Security",
+        "value": "Security",
         "type": "readme",
         "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/SECURITY.md"
       },
       {
-        "label": "Toegankenlijkheid",
+        "value": "Toegankenlijkheid",
         "type": "readme",
         "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Toegankelijkheid.md"
       },
       {
-        "label": "Roadmap",
+        "value": "Roadmap",
         "type": "readme",
         "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md"
       }
@@ -38,22 +38,22 @@
     "title": "Installatie",
     "items": [
       {
-        "label": "Installatie",
+        "value": "Installatie",
         "type": "readme",
         "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Installatie.md"
       },
       {
-        "label": "Configuratie",
+        "value": "Configuratie",
         "type": "readme",
         "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuratie.md"
       },
       {
-        "label": "Naar Productie",
+        "value": "Naar Productie",
         "type": "readme",
         "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md"
       },
       {
-        "label": "Testscenario's",
+        "value": "Testscenario's",
         "type": "readme",
         "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Tests.md"
       }
