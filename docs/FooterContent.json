@@ -5,56 +5,32 @@
       {
         "label": "Architectuur",
         "type": "readme",
-        "current": {
-          "pathname": "/over/us",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/profile/Architectuur.md" }
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md" 
       },
       {
         "label": "Kosten",
         "type": "readme",
-        "current": {
-          "pathname": "/over/us",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md" }
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md"
       },
       {
         "label": "Privacy",
         "type": "readme",
-        "current": {
-          "pathname": "/over/us",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Privacy.md" }
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Privacyverklaring.md"
       },
       {
         "label": "Security",
         "type": "readme",
-        "current": {
-          "pathname": "/over/us",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/SECURITY.md" }
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/SECURITY.md"
       },
       {
         "label": "Toegankenlijkheid",
         "type": "readme",
-        "current": {
-          "pathname": "/over/us",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Accessibility.md" }
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Toegankelijkheid.md"
       },
       {
         "label": "Roadmap",
         "type": "readme",
-        "current": {
-          "pathname": "/over/us",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/ROADMAP.md" }
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md"
       }
     ]
   },
@@ -64,38 +40,22 @@
       {
         "label": "Installatie",
         "type": "readme",
-        "current": {
-          "pathname": "/over/us",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Installatie.md" }
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Installatie.md"
       },
       {
         "label": "Configuratie",
         "type": "readme",
-        "current": {
-          "pathname": "/over/products",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuraite.md" }
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuratie.md"
       },
       {
         "label": "Naar Productie",
         "type": "readme",
-        "current": {
-          "pathname": "/over/pricing",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md" }
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md"
       },
       {
-        "label": "Tests",
+        "label": "Testscenario's",
         "type": "readme",
-        "current": {
-          "pathname": "/about/vacancies",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Tests.md" }
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Tests.md"
       }
     ]
   },
