@@ -67,14 +67,6 @@ Meer details hierover vindt u onder [architectuur](/docs/Architectuur.md).
 
 Dit is een zelfstandig bruikbare uitbreiding op [Open Woo](https://github.com/OpenWebconcept/plugin-openwoo) van het [Open Webconcept](https://openwebconcept.nl/). Het maakt hergebruik van [NL Design (React componenten)](https://nldesignsystem.nl/meedoen/introductie) om aan de hand van [Design Tokens](https://nldesignsystem.nl/meedoen/design-tokens/) gemeentelijk specifieke [Woo-index](https://www.koopoverheid.nl/voor-overheden/rijksoverheid/woo-index) pagina's te genereren die voldoen aan alle [WCAG](https://wcag.nl/kennis/richtlijnen/) en [wettelijke eisen](https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo).
 
-### Woo 1.0
-
-Voor de eerste opzet van de Woo-index van BZK is het belangrijk dat organisaties zelf hun Woo-publicaties op een doorzoekbare index publiceren. BZK houdt vervolgens een overzichtspagina bij waarop per organisatie de algemene organisatiegegevens en de organisatiespecifieke indexpagina vindbaar zijn.
-
-### Woo 2.0
-
-BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouwen op open.overheid.nl. Deze harvester maakt gebruik van `robots.txt` en `sitemap.xml`-bestanden om de verschillende pagina's en metadata van de organisatiespecifieke index te vinden en over te nemen. Dat betekent dat ook binnen de 2.0 variant van Woo een eigen indexpagina noodzakelijk blijft. Sterker nog, de kwaliteit van de ontsluiting wordt in grote mate afhankelijk van de kwaliteit van de index.
-
 ### Open versus Woo
 
 De Woo specificeert een aantal categorieën (zie configuratie) die door een organisatie moeten worden ontsloten. Dit template ondersteunt dat, maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het concept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
