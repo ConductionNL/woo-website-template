@@ -20,8 +20,8 @@ jobs:
           nl_design_theme_classname: "open-webconcept-theme"
           pull_from_branche: 'development'
           start_page: 'https://github.com/ConductionNL/woo-website-template/blob/main/README.md'
-          footer_content: 'https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/FooterContent.json'
-          navbar_content: 'https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/HeaderContent.json'
+          footer_content: 'https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/FooterContent.json'
+          navbar_content: 'https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/HeaderContent.json'
           favicon_logo: "https://openwebconcept.nl/wp-content/uploads/2019/07/cropped-Favicon-32x32.png"
           navbar_logo: "https://openwebconcept.nl/wp-content/themes/openwebconcept/assets/src/images/logo@2x.png"
           footer_logo: "https://openwebconcept.nl/wp-content/themes/openwebconcept/assets/src/images/logo@2x.png"
