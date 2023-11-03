@@ -2,21 +2,21 @@
 
 > **WOObinar op 15 November**
 >
-> 
+>
 > Meer weten over deze oplossing? Dat kan!
 >
 >
-> De leverancier [xxllnc](https://xxllnc.nl/) organiseerd op 15 november 13:00 een [WOObinar](https://www.linkedin.com/events/woobinar7125512622950494208/comments/), inschrijven kan [hier](https://www.linkedin.com/events/woobinar7125512622950494208/comments/). Tijdens deze bijeenkomst wordt zowel deze oplossing toegelicht als dat er de mogelijkheid is voor het stellen van (technische) vragen. 
+> De leverancier [xxllnc](https://xxllnc.nl/) organiseerd op 15 november 13:00 een [WOObinar](https://www.linkedin.com/events/woobinar7125512622950494208/comments/), inschrijven kan [hier](https://www.linkedin.com/events/woobinar7125512622950494208/comments/). Tijdens deze bijeenkomst wordt zowel deze oplossing toegelicht als dat er de mogelijkheid is voor het stellen van (technische) vragen.
 
 De Wet Open Overheid (WOO) is een initiatief gericht op het verbeteren van de openbaarheid van overheidsinformatie. Het doel is om overheidsinformatie beter toegankelijk te maken voor iedereen. Meer informatie over de Wet Open Overheid kan [hier](https://www.open-overheid.nl/themas/wet-open-overheid/) worden gevonden.
 
 De implementatie van de Wet Open Overheid brengt twee kernuitdagingen met zich mee:
 
 1. **Diversificatie van Publicatie Typen:**
-   Met de tijd zullen er steeds meer typen van publicaties ontstaan, variërend van rapporten en besluiten tot datasets en onderzoeksresultaten. Deze diversiteit vereist een flexibel systeem dat in staat is om verschillende typen van publicaties adequaat te hanteren. Dat maakt het op voorhand onmogenlijk om één bron (zoals zaaksysteem of raadsinformaite syteem) richting de toekomst aan te wijzen.
+   Met de tijd zullen er steeds meer typen van publicaties ontstaan, variërend van rapporten en besluiten tot datasets en onderzoeksresultaten. Deze diversiteit vereist een flexibel systeem dat in staat is om verschillende typen van publicaties adequaat te hanteren. Dat maakt het op voorhand onmogelijk om één bron (zoals zaaksysteem of raadsinformatiesyteem) richting de toekomst aan te wijzen.
 
 2. **Proactieve Publicatie:**
-   Overheden moeten informatie proactief te publiceren. Dit betekend dat publicatie onderdeel moet worden van het normale werkprocces. Hiermee is het richting de toekomst niet haalbaar om WOO publicaties handmatig via een appart systeem (bijvoorbeeld CMS website) te laten verlopen.
+   Overheden moeten informatie proactief te publiceren. Dit betekent dat publicatie onderdeel moet worden van het normale werkproces. Hiermee is het richting de toekomst niet haalbaar om Woo-publicaties handmatig via een apart systeem (bijvoorbeeld CMS website) te laten verlopen.
 
 ## Probleemstelling
 
@@ -24,10 +24,10 @@ Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Ma
 
 ## Oplossing
 
-De Open WOO APP biedt een geïntegreerde oplossing die bestaat een aantal hoofdcomponenten:
+De Open WOO APP biedt een geïntegreerde oplossing die bestaat uit een aantal hoofdcomponenten:
 
-1. **Koppelvlak naar COOP en WOOGLE voor de Landelijke Index:**
-   Een interface die zorgt voor een gestandaardiseerde verbinding met de Collectieve Opdrachtverlening Overheidspartijen (COOP), waardoor een landelijke index van overheidsinformatie wordt gecreëerd.
+1. **Koppelvlak naar KOOP en WOOGLE voor de Landelijke Index:**
+   Een interface die zorgt voor een gestandaardiseerde verbinding met de [Kennis- en Exploitatiecentrum en Officiële Publicaties](https://www.koopoverheid.nl/)(KOOP), waardoor een landelijke index van overheidsinformatie wordt gecreëerd.
 
 2. **Organisatieweergave:**
    Een interface waarmee belanghebbenden binnen een organisatie naar relevante informatie kunnen zoeken.
@@ -40,14 +40,13 @@ De Open WOO APP biedt een geïntegreerde oplossing die bestaat een aantal hoofdc
 
 Deze geïntegreerde aanpak zorgt voor een naadloze, efficiënte en effectieve implementatie van de Wet Open Overheid, waardoor overheidsorganisaties hun informatie op een gebruiksvriendelijke en toegankelijke wijze kunnen delen.
 
-
 ## Functionaliteiten
+
 - Één index pagina voor uw organisatie
 - Weergave van data uit meerdere bronnen (zaaksysteem, website, raadsinformatie systeem en archief)
-- Aanlevering bij KOOP aan de hand van sitemap.xml bestanden
+- Aanlevering bij KOOP aan de hand van `sitemap.xml`-bestanden
 - Automatisch en pro-actief publiceren
 - Op de toekomst voorbereid
-
 
 ![epe.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/epe.png "Woo Website van de Gemeente Epe")
 
@@ -66,9 +65,7 @@ Meer details hierover vindt u onder [architectuur](/docs/Architectuur.md).
 
 ![Website Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/components.svg "Website Architecture")
 
-
 Dit is een zelfstandig bruikbare uitbreiding op [Open Woo](https://github.com/OpenWebconcept/plugin-openwoo) van het [Open Webconcept](https://openwebconcept.nl/). Het maakt hergebruik van [NL Design (React componenten)](https://nldesignsystem.nl/meedoen/introductie) om aan de hand van [Design Tokens](https://nldesignsystem.nl/meedoen/design-tokens/) gemeentelijk specifieke [Woo-index](https://www.koopoverheid.nl/voor-overheden/rijksoverheid/woo-index) pagina's te genereren die voldoen aan alle [WCAG](https://wcag.nl/kennis/richtlijnen/) en [wettelijke eisen](https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo).
-
 
 ### Woo 1.0
 
@@ -81,7 +78,6 @@ BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouw
 ### Open versus Woo
 
 De Woo specificeert een aantal categorieën (zie configuratie) die door een organisatie moeten worden ontsloten. Dit template ondersteunt dat, maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het concept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
-
 
 ## Voorbeelden
 
