@@ -24,7 +24,7 @@ Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Ma
 
 ## Oplossing
 
-De Open WOO APP biedt een geïntegreerde oplossing die bestaat uit een aantal hoofdcomponenten:
+De Open Woo-app biedt een geïntegreerde oplossing die bestaat uit een aantal hoofdcomponenten:
 
 1. **Koppelvlak naar KOOP en WOOGLE voor de Landelijke Index:**
    Een interface die zorgt voor een gestandaardiseerde verbinding met de [Kennis- en Exploitatiecentrum en Officiële Publicaties](https://www.koopoverheid.nl/)(KOOP), waardoor een landelijke index van overheidsinformatie wordt gecreëerd.
@@ -84,13 +84,9 @@ De Woo specificeert een aantal categorieën (zie configuratie) die door een orga
 | [Leiden (Alleen vormgeving)](https://conductionnl.github.io/woo-website-leiden/) | [Pagina](https://conductionnl.github.io/woo-website-leiden/) | Demo |
 | [Xxllnc (Demo omgeving)](https://conductionnl.github.io/woo-website-xxllnc/) | [Pagina](https://conductionnl.github.io/woo-website-xxllnc/) | Demo |
 
-## Documentatie
+## Architectuur
 
-- [Installatiehandleiding](docs/Installatie.md)
-- [Architectuur](docs/Architectuur.md)
-- [Roadmap](docs/Roadmap.md)
-- [Configuratie](docs/Configuratie.md)
-- [Testscenario's](docs/Tests.md)
+Wil je meer weten over de architectuur van de Open Woo-app en uit welke componenten het bestaat? Kijk dan op de [architectuur pagina](./docs/Architectuur.md).
 
 ## Toekomstplannen
 

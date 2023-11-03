@@ -53,4 +53,4 @@ Mocht u nog niet beschikken over xxllnc Zaken (zaaksysteem.nl) maar wel behoefte
 
 ## Leverancier worden?
 
-Bent u leverancier van een zaaksysteem, een raadsinformatiesysteem of een ander systeem dat kan worden gekoppeld aan de Open Woo Website? Neem dan contact op met een van de leveranciers om de mogelijkheden te bespreken.
+Bent u enthousiast over de Woo Website en wilt u deze ook aanbieden aan uw klanten? Neem dan contact op met Conduction en mail ons op <info@conduction.nl>.

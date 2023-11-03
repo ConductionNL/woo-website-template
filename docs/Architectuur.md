@@ -47,7 +47,9 @@ OpenWoo.app maakt gebruik van het federatieve stelstel van OpenCatalogi om de ve
 
 ## Landelijke API
 
-Iedereen kan de landelijke API bevragen om alle Woo-verzoeken en convenanten op te halen. De landelijke API is te vinden op []() . De API is gebaseerd op de [NL API Strategie](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/). De API is te bevragen via de volgende endpoints:
+Iedereen kan de landelijke API bevragen om alle Woo-verzoeken en convenanten op te halen. De API is gebaseerd op de [NL API Strategie](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/).
+
+(wordt nog aangevuld)
 
 ## Componenten
 
@@ -64,6 +66,10 @@ Een variant bestaat uit een aantal componenten die samen de functionaliteit van 
 - [Zaaksysteem]()
 
 Alle componenten worden getest met [zaaksysteem.nl](https://xxllnc.nl/zaakgericht/), Rx.Fundament en Decos JOIN
+
+## Verschil OpenWoo.app en de OpenWoo plugin
+
+De OpenWoo.app is een verzameling van componenten die samen een oplossing vormen voor het publiceren van Woo-verzoeken en convenanten. De OpenWoo plugin is een onderdeel van deze oplossing en kan worden gebruikt om Woo-verzoeken en convenanten te publiceren vanuit een Open Webconcept CMS. De OpenWoo plugin is een onderdeel van deze oplossing en kan worden gebruikt om Woo-verzoeken en convenanten te publiceren vanuit een Open Webconcept CMS.
 
 ## Roadmap
 
