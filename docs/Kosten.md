@@ -40,6 +40,7 @@ Het is mogelijk om de Open Woo Website rechtstreeks aan uw zaaksysteem te koppel
 > Via een Stuf ↔ ZGW-koppelvlak is het in theorie ook mogelijk een zaaksysteem te koppelen aan de hand van Stuf, dit is in de praktijk echter nog niet beproeft. Andere koppelvlakken en maatwerk zijn uiteraard bespreekbaar, neem daarvoor contact op met een leverancier.
 
 ## Configuratie en inrichting xxllnc Zaken
+
 Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het modelzaaktype t.b.v. WOO-publicatie en de configuratie van de integratie gebruik maken van een Consultant.
 
 Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het modelzaaktype t.b.v. Woo-publicatie en de configuratie van de integratie gebruikmaken van een Consultant.
@@ -49,3 +50,7 @@ Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het mode
 | Installatie en configuratie Woo-index integratie | € 3000,- (eenmalig)     |
 
 Mocht u nog niet beschikken over xxllnc Zaken (zaaksysteem.nl) maar wel behoefte hebben aan een manier om de documenten conform een ingericht proces te gaan publiceren en achteraf correct te kunnen archiveren neem dan contact met ons op via: <sales.zaakgericht@xxllnc.nl>. Wij gaan graag in gesprek over de mogelijkheden hiervoor!
+
+## Leverancier worden?
+
+Bent u leverancier van een zaaksysteem, een raadsinformatiesysteem of een ander systeem dat kan worden gekoppeld aan de Open Woo Website? Neem dan contact op met een van de leveranciers om de mogelijkheden te bespreken.
