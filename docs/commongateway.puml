@@ -3,7 +3,7 @@ title Commongateway Architecture
 
 ' User Interface Component
 interface "Open WOO Website" as Website
-interface "Sitemap.XML /  robot.txt" as Harvester
+interface "Sitemap XML" as Harvester
 
 ' Backend Components
 component "Open Webconcept CMS" as CMS
