@@ -5,7 +5,7 @@
       {
         "value": "Architectuur",
         "type": "readme",
-        "handleClick": {"link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md"}
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md"
       },
       {
         "value": "Kosten",
@@ -15,22 +15,22 @@
       {
         "value": "Privacy",
         "type": "readme",
-        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Privacyverklaring.md"
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Privacyverklaring.md"
       },
       {
         "value": "Security",
         "type": "readme",
-        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/SECURITY.md"
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/SECURITY.md"
       },
       {
         "value": "Toegankenlijkheid",
         "type": "readme",
-        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Toegankelijkheid.md"
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Toegankelijkheid.md"
       },
       {
         "value": "Roadmap",
         "type": "readme",
-        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md"
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md"
       }
     ]
   },
@@ -40,22 +40,22 @@
       {
         "value": "Installatie",
         "type": "readme",
-        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Installatie.md"
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Installatie.md"
       },
       {
         "value": "Configuratie",
         "type": "readme",
-        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuratie.md"
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuratie.md"
       },
       {
         "value": "Naar Productie",
         "type": "readme",
-        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md"
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md"
       },
       {
         "value": "Testscenario's",
         "type": "readme",
-        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Tests.md"
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Tests.md"
       }
     ]
   },
