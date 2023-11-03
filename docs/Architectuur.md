@@ -10,7 +10,7 @@ Toegepaste norm: [NL API Strategie over property namen](https://docs.geostandaar
 
 ### Open Webconcept variant
 
-Met deze variant kunnen Woo-verzoeken en convenanten eenvoudig worden beheerd vanuit de bestaande webomgeving en CMS door middel van de Open Webconcept plugin. Dit vereist geen extra installatie of beheerinspanningen van de organisatie, op voorwaarde dat er al een OpenWebconcept-installatie met de benodigde plugins beschikbaar is. Dit biedt een serverloze en kostenefficiënte oplossing door het hergebruik van bestaande Common Ground-componenten.
+Met deze variant kunnen Woo-verzoeken en convenanten eenvoudig worden beheerd vanuit de bestaande webomgeving en CMS door middel van een directe koppeling met de gateway. Dit vereist geen extra installatie of beheerinspanningen van de organisatie, op voorwaarde dat er al een OpenWebconcept-installatie met de benodigde plugins beschikbaar is. Dit biedt een serverloze en kostenefficiënte oplossing door het hergebruik van bestaande Common Ground-componenten.
 
 **Nadelen:**
 
