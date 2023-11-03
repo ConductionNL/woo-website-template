@@ -10,6 +10,14 @@ Voor de eerste opzet van de Woo-index van BZK is het belangrijk dat organisaties
 
 BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouwen op open.overheid.nl. Deze harvester maakt gebruik van `robots.txt` en `sitemap.xml`-bestanden om de verschillende pagina's en metadata van de organisatiespecifieke index te vinden en over te nemen. Dat betekent dat ook binnen de 2.0 variant van Woo een eigen indexpagina noodzakelijk blijft. Sterker nog, de kwaliteit van de ontsluiting wordt in grote mate afhankelijk van de kwaliteit van de index.
 
+## Installeren via Helm Chart
+
+Het is mogelijk om de openwoo.app te installeren via een Helm Chart. Dit maakt het gemakkelijker om de website te installeren op een Kubernetes cluster, wat de operationele kosten verlaagt en de betrouwbaarheid verhoogt. Dit draagt bij aan de dienstverlening door de beschikbaarheid van de website te vergroten. De Helm chart zal voldoen aan de Haven-standaard.
+
+## Installeren via GitHub Actions
+
+De serverless Woo-pagina kan ook geinstalleerd worden via een GitHub Action. Door de installatie te automatiseren wordt het gemakkelijker om de website te installeren en te onderhouden, wat de operationele kosten verlaagt en de betrouwbaarheid verhoogt. Dit draagt bij aan de dienstverlening door de beschikbaarheid van de website te vergroten.
+
 ## Raadsinformatie Systemen (Medio November)
 
 **Inschatting: 40 uur per RIS**

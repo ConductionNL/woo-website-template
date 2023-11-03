@@ -1,8 +1,5 @@
 name: Deploy the Product Page to GitHub Pages
 
-
-name: My Open Catalogi Workflow
-
 on:
   push:
     branches:
