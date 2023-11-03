@@ -3,7 +3,7 @@ title Commongateway Architecture
 
 ' User Interface Component
 interface "Open WOO Website" as Website
-interface "Sitemap XML" as Harvester
+interface "Sitemap XML / robot.txt" as Harvester
 
 ' Backend Components
 component "Open Webconcept CMS" as CMS
@@ -15,7 +15,7 @@ component "Raadsinformatiesysteem" as Raadsinfo
 Website -down-> Gateway : Directly connected
 Harvester -down-> Gateway : Generated from
 Gateway -down-> CMS : Scrapes periodically\nUses as source
-Gateway -down-> ZGW Zaaksysteem : Scrapes periodically\nUses as source
+Gateway -down-> Zaaksysteem : Scrapes periodically\nUses as source
 Gateway -down-> Raadsinfo : Scrapes periodically\nUses as source
 
 ' Notifications
