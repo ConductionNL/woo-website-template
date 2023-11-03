@@ -2,10 +2,10 @@
 
 Om te zorgen dat de Open WOO Website goed werkt, is het belangrijk dat de onderliggende (zaak)systemen op de juiste manier zijn geconfigureerd. Zo kunnen zij de informatie aanleveren die op de voorkant benodigd is voor het opbouwen van de index. Daarbij is het belangrijk om te weten welke waarden waar worden gebruikt en wat het effect is van configuratiekeuzes.
 
-- [Gebruik variabelen]()
-- [Algemene inrichting van zaaksysteem]()
-- [Mapping vanuit ZGW]()
-- [Mapping vanuit zaaksysteem.nl search endpoint]()
+- [Gebruik variabelen](#gebruik-variabelen)
+- [Algemene inrichting van zaaksysteem](#algemene-inrichting-zaaksysteem)
+- [Mapping vanuit ZGW](#mapping-zgw)
+- [Mapping vanuit zaaksysteem.nl search endpoint](#mapping-vanuit-zaaksysteemnl-search-endpoint)
 
 ## Gebruik variabelen
 
