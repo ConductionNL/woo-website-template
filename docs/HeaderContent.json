@@ -1,0 +1,128 @@
+[
+  {
+    "label": "Home",
+    "type": "readme",
+    "current": {
+      "pathname": "/",
+      "operator": "equals"
+    },
+    "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Catalogi.md" }
+  },
+  {
+    "label": "Documentatie",
+    "current": {
+      "pathname": "/components",
+      "operator": "includes"
+    },
+    "subItems": [
+      {
+        "label": "Architectuur",
+        "type": "readme",
+        "current": {
+          "pathname": "/over/us",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/profile/Architectuur.md" }
+      },
+      {
+        "label": "Kosten",
+        "type": "readme",
+        "current": {
+          "pathname": "/over/us",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md" }
+      },
+      {
+        "label": "Privacy",
+        "type": "readme",
+        "current": {
+          "pathname": "/over/us",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Privacy.md" }
+      },
+      {
+        "label": "Security",
+        "type": "readme",
+        "current": {
+          "pathname": "/over/us",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/SECURITY.md" }
+      },
+      {
+        "label": "Toegankenlijkheid",
+        "type": "readme",
+        "current": {
+          "pathname": "/over/us",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Accessibility.md" }
+      },
+      {
+        "label": "Roadmap",
+        "type": "readme",
+        "current": {
+          "pathname": "/over/us",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/ROADMAP.md" }
+      }
+    ]
+  },
+  {
+    "label": "Installatie",
+    "current": {
+      "pathname": "/over",
+      "operator": "includes"
+    },
+    "subItems": [
+      {
+        "label": "Installatie",
+        "type": "readme",
+        "current": {
+          "pathname": "/over/us",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Installatie.md" }
+      },
+      {
+        "label": "Configuratie",
+        "type": "readme",
+        "current": {
+          "pathname": "/over/products",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuraite.md" }
+      },
+      {
+        "label": "Naar Productie",
+        "type": "readme",
+        "current": {
+          "pathname": "/over/pricing",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md" }
+      },
+      {
+        "label": "Tests",
+        "type": "readme",
+        "current": {
+          "pathname": "/about/vacancies",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Tests.md" }
+      }
+    ]
+  },
+  {
+    "label": "Over Open Webconcept",
+    "type": "external",
+    "current": {
+      "pathname": "/",
+      "operator": "equals"
+    },
+    "handleClick": { "link": "https://openwebconcept.nl/" }
+  }
+]
