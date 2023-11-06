@@ -4,7 +4,7 @@ Dit zijn de algemene veelgestelde vragen over het gebruik en de configuratie van
 
 **Q. Heb ik WordPress nodig om de OpenWoo.app te gebruiken?**
 
-A. Nee, het enige wat je nodig hebt is een bron. Dit zal veelal je zaaksysteem zijn, maar zou zelfs een Excel-lijst kunnen zijn.
+A. Nee, het enige wat je nodig hebt, is een bron. Dit zal veelal je zaaksysteem zijn, maar zou zelfs een Excel-lijst kunnen zijn.
 
 *Q. Heb ik Haven nodig?*
 
