@@ -37,7 +37,7 @@ export const FooterTemplate: React.FC = () => {
         <div className={styles.logoAndConduction}>
           {process.env.GATSBY_FOOTER_LOGO_URL !== "false" && (
             <Logo
-              size="lg"
+              variant="footer"
               onClick={() =>
                 process.env.GATSBY_FOOTER_LOGO_HREF ? open(process.env.GATSBY_FOOTER_LOGO_HREF) : navigate("/")
               }
