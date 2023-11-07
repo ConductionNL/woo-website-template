@@ -2,9 +2,10 @@ import * as React from "react";
 import * as styles from "./HeaderTemplate.module.css";
 import clsx from "clsx";
 import { PageHeader, SkipLink } from "@utrecht/component-library-react/dist/css-module";
-import { navigate } from "gatsby";
 import { useTranslation } from "react-i18next";
 import { useGatsbyContext } from "../../../context/gatsby";
+import { navigate } from "gatsby";
+import { Logo } from "@conduction/components";
 
 interface HeaderTemplateProps {
   layoutClassName: string;
@@ -26,15 +27,8 @@ export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName 
           </SkipLink>
         </div>
         <div className={styles.navContainer}>
-          <div className={styles.imageContainer}>
-            <img
-              className={styles.image}
-              onClick={() => navigate("/")}
-              src={process.env.GATSBY_HEADER_LOGO_URL}
-              alt={t("Navbar-Logo")}
-              tabIndex={0}
-            />
-          </div>
+          <Logo onClick={() => navigate("/")} />
+
           <div className={styles.languageSelectContainer}>
             <span
               className={clsx(styles.languageSelect, i18n.language === "nl" && styles.languageSelectDisabled)}
