@@ -141,26 +141,6 @@ const DynamicSectionHeading: React.FC<{ content: TDynamicContentItem; heading?: 
   }
 };
 
-const Logo: React.FC = () => {
-  if (process.env.GATSBY_FOOTER_LOGO_URL === "false") return <></>;
-  const { t } = useTranslation();
-
-  return (
-    <div className={styles.imageContainer}>
-      <img
-        className={styles.image}
-        onClick={() =>
-          process.env.GATSBY_FOOTER_LOGO_HREF ? open(process.env.GATSBY_FOOTER_LOGO_HREF) : navigate("/")
-        }
-        src={process.env.GATSBY_FOOTER_LOGO_URL}
-        alt={t("Footer-logo")}
-        aria-label={`${t("Footer-logo")}, ${t("Can open a new window")}`}
-        tabIndex={0}
-      />
-    </div>
-  );
-};
-
 const WithLoveByConduction: React.FC = () => {
   const { t } = useTranslation();
 
