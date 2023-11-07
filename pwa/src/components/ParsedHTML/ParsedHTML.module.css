@@ -1,0 +1,17 @@
+.container {
+  margin-block-start: var(--utrecht-space-block-3xl);
+}
+
+.container > div > article > *:not(:last-child),
+.backLink {
+  margin-block-end: var(--utrecht-space-block-lg);
+}
+
+.backLink:hover {
+  cursor: pointer;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+}
