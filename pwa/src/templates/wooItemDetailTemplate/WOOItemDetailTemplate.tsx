@@ -38,7 +38,14 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
     <Page>
       <PageContent className={styles.container}>
         <div>
-          <Link className={styles.backLink} onClick={() => navigate("/")} tabIndex={0}>
+          <Link
+            className={styles.backLink}
+            href="/"
+            onClick={(e: any) => {
+              e.preventDefault(), navigate("/");
+            }}
+            tabIndex={0}
+          >
             <FontAwesomeIcon icon={faArrowLeft} /> <span>{t("Back to homepage")}</span>
           </Link>
         </div>
