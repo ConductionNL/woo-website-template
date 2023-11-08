@@ -12,6 +12,9 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { IconPack, library } from "@fortawesome/fontawesome-svg-core";
+import { ToolTip } from "@conduction/components";
+
+export const TOOLTIP_ID = "cb8f47c3-7151-4a46-954d-784a531b01e6";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -48,6 +51,8 @@ const Layout: React.FC<LayoutProps> = ({ children, pageContext, location }) => {
         <APIProvider value={API}>
           <Surface>
             <Document>
+              <ToolTip id={TOOLTIP_ID} />
+
               <Toaster position="bottom-right" />
 
               <div className={styles.container}>

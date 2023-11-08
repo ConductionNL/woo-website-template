@@ -24,21 +24,18 @@ import {
   Heading3,
   Heading4,
   Heading5,
+  DataBadge,
 } from "@utrecht/component-library-react";
 import { navigate } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheck,
-  faChevronRight,
-  faCircleCheck,
-  faCircleInfo,
-  faInfo,
-  faWarning,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faCircleCheck, faCircleInfo, faWarning } from "@fortawesome/free-solid-svg-icons";
 import { BadgeCounter } from "@utrecht/component-library-react";
 import { Tab, TabList, TabPanel, Tabs } from "@conduction/components";
 import { useQueryLimitContext } from "../../context/queryLimit";
 import { PaginationLimitSelectComponent } from "../../components/paginationLimitSelect/PaginationLimitSelect";
+import { getTokenValue } from "../../services/getTokenValue";
+import { PieChart } from "react-minimal-pie-chart";
+import { TOOLTIP_ID } from "../../layout/Layout";
 
 export const LandingTemplate: React.FC = () => {
   const { currentPage, setCurrentPage } = usePaginationContext();
@@ -248,6 +245,32 @@ export const LandingTemplate: React.FC = () => {
           <Heading3>Heading3</Heading3>
           <Heading4>Heading4</Heading4>
           <Heading5>Heading5</Heading5>
+
+          <div className={styles.pieChartContainer}>
+            <PieChart
+              className={styles.ratingPieChart}
+              data={[{ value: 1, key: 1, color: getTokenValue(styles.ratingBarActiveColor), title: `4/11` }]}
+              reveal={(4 / 11) * 100}
+              lineWidth={20}
+              background={getTokenValue(styles.ratingBarBackgroundColor)}
+              startAngle={270}
+              lengthAngle={360}
+              rounded
+              animate
+              animationDuration={1750}
+              label={({ dataEntry }) => dataEntry.title}
+              labelStyle={{
+                fontSize: getTokenValue(styles.ratingFontSize),
+                fontFamily: getTokenValue(styles.ratingFontFamily),
+                fill: getTokenValue(styles.ratingBarActiveColor),
+              }}
+              labelPosition={0}
+            />
+          </div>
+
+          <DataBadge data-tooltip-id={TOOLTIP_ID} data-tooltip-content={"Tooltip"} className={styles.tagWidth}>
+            DataBadge with Tooltip
+          </DataBadge>
 
           <FiltersTemplate isLoading={getItems.isLoading} />
           {getItems.data?.results?.length === 0 && !getItems.isLoading && <span>{t("No results found")}.</span>}

@@ -48,3 +48,6 @@
 
 /* Theme overrides styling */
 @import "./theme-overrides.css";
+
+/* Skeleton Design Tokens */
+@import "./design-tokens/skeleton-design-tokens.css";
