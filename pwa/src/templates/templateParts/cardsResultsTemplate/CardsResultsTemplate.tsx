@@ -26,7 +26,7 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
               request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : t("N/A")
             }`}
           >
-            <CardHeader>
+            <CardHeader className={styles.cardHeader}>
               <CardHeaderDate>
                 {request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : t("N/A")}
               </CardHeaderDate>
