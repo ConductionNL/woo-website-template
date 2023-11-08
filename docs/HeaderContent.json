@@ -43,7 +43,7 @@
         "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/SECURITY.md" }
       },
       {
-        "label": "Toegankenlijkheid",
+        "label": "Toegankelijkheid",
         "type": "markdown",
         "current": {
           "pathname": "/over/toegankelijkheid",
