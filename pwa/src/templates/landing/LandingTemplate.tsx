@@ -37,14 +37,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { BadgeCounter } from "@utrecht/component-library-react";
 import { Tab, TabList, TabPanel, Tabs } from "@conduction/components";
+import { useQueryLimitContext } from "../../context/queryLimit";
+import { PaginationLimitSelectComponent } from "../../components/paginationLimitSelect/PaginationLimitSelect";
 
 export const LandingTemplate: React.FC = () => {
   const { currentPage, setCurrentPage } = usePaginationContext();
   const { filters } = useFiltersContext();
   const { t } = useTranslation();
+  const { queryLimit } = useQueryLimitContext();
 
   const queryClient = new QueryClient();
-  const getItems = useOpenWoo(queryClient).getAll(filters, currentPage);
+  const getItems = useOpenWoo(queryClient).getAll(filters, currentPage, queryLimit.openWooObjectsQueryLimit);
 
   const translatedCrumbs = [
     { crumbLabel: "OpenCatalogi", pathname: "/" },
@@ -58,9 +61,12 @@ export const LandingTemplate: React.FC = () => {
     navigate(pathname);
   };
 
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [queryLimit.openWooObjectsQueryLimit]);
+
   return (
     <>
-      <h1 className={styles.header1}></h1>
       <JumbotronTemplate />
 
       <Container layoutClassName={styles.breadcrumbsContainer}>
@@ -249,12 +255,14 @@ export const LandingTemplate: React.FC = () => {
           {getItems.data?.results && getItems.data?.results?.length > 0 && (
             <div id="mainContent">
               <ResultsDisplayTemplate displayKey="landing-results" requests={getItems.data.results} />
-
-              <Pagination
-                ariaLabels={{ previousPage: t("Previous page"), nextPage: t("Next page"), page: t("Page") }}
-                totalPages={getItems.data.pages}
-                {...{ currentPage, setCurrentPage }}
-              />
+              <div className={styles.pagination}>
+                <Pagination
+                  ariaLabels={{ previousPage: t("Previous page"), nextPage: t("Next page"), page: t("Page") }}
+                  totalPages={getItems.data.pages}
+                  {...{ currentPage, setCurrentPage }}
+                />
+                <PaginationLimitSelectComponent queryLimitName={"openWooObjectsQueryLimit"} />
+              </div>
             </div>
           )}
           {getItems.isLoading && <Skeleton height={"200px"} />}

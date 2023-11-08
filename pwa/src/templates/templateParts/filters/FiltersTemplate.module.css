@@ -33,3 +33,28 @@
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-width: 992px) {
+  /* Tablet */
+  .container {
+    display: grid;
+    justify-content: unset;
+  }
+
+  .form {
+    margin-block-end: 12px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  /* Mobile */
+  .container {
+    display: grid;
+    justify-content: unset;
+  }
+
+  .form {
+    display: grid;
+    margin-block-end: 12px;
+  }
+}
