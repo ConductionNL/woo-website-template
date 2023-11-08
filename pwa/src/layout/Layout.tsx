@@ -8,6 +8,10 @@ import { Head } from "./Head";
 import { Content } from "../Content";
 import { Document, Surface } from "@utrecht/component-library-react/dist/css-module";
 import { Toaster } from "react-hot-toast";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { IconPack, library } from "@fortawesome/fontawesome-svg-core";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -18,6 +22,8 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, pageContext, location }) => {
   const [API, setAPI] = React.useState<APIService>(React.useContext(APIContext));
   const [globalContext, setGlobalContext] = React.useState<IGlobalContext>(defaultGlobalContext);
+
+  library.add(fas, fab as IconPack, far as IconPack);
 
   React.useEffect(() => {
     setAPI(new APIService());

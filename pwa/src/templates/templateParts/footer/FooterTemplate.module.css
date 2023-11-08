@@ -35,11 +35,41 @@
 
 .link:hover {
   cursor: pointer;
+  color: var(--utrecht-page-footer-link-hover-color, inherit) !important;
+  text-decoration-line: var(
+    --utrecht-page-footer-link-hover-text-decoration,
+    inherit
+  ) !important;
+  text-decoration-thickness: var(
+    --utrecht-page-footer-link-hover-text-decoration-thickness,
+    inherit
+  ) !important;
+}
+
+.link {
+  color: var(--utrecht-page-footer-link-color, inherit) !important;
+  text-decoration-line: var(
+    --utrecht-page-footer-link-text-decoration,
+    inherit
+  ) !important;
+  text-decoration-color: var(
+    --utrecht-page-footer-link-text-decoration-color,
+    inherit
+  ) !important;
+  text-decoration-thickness: var(
+    --utrecht-page-footer-link-text-decoration-thickness,
+    inherit
+  ) !important;
+  text-underline-offset: var(
+    --utrecht-page-footer-link-text-underline-offset,
+    inherit
+  ) !important;
 }
 
 .withLoveConductionLink {
   display: inline-block;
 }
+
 .withLoveConductionLink:hover {
   margin-inline-start: 10px;
 }
@@ -47,6 +77,7 @@
 .withLoveLink:hover > :first-child {
   transform: scale(1.2);
 }
+
 .withLoveLink > :first-child {
   transition: all 1s;
   transform-origin: 50% 50%;
@@ -60,14 +91,14 @@
 }
 
 .dynamicSectionTitle {
-  margin-block-end: 18px;
-  color: inherit !important;
+  margin-block-end: 18px !important;
+  color: var(--utrecht-page-footer-heading-color, inherit) !important;
 }
 
 .dynamicSectionContent {
   display: flex;
   flex-direction: column;
-  margin-block-end: 8px;
+  margin-block-end: 12px;
 }
 
 .logoAndConduction {
@@ -75,6 +106,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.iconLeft {
+  margin-inline-end: var(--utrecht-icon-gap);
+  color: var(--utrecht-page-footer-icon-color, inherit);
+}
+
+.iconRight {
+  margin-inline-start: var(--utrecht-icon-gap);
+  color: var(--utrecht-page-footer-icon-color, inherit);
 }
 
 @media only screen and (max-width: 992px) {
@@ -92,6 +133,7 @@
       var(--utrecht-page-footer-background-position)
     );
   }
+
   .contentGrid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
