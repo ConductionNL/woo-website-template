@@ -11,7 +11,11 @@ export default class FilterCount {
   }
 
   public getCategoryCount = async (): Promise<any> => {
-    const endpoint = "/openWOO?_queries[]=Categorie";
+    let endpoint = "/openWOO?_queries[]=Categorie";
+
+    if (process.env.GATSBY_OIDN_NUMBER) {
+      endpoint += `&oidn=${process.env.GATSBY_OIDN_NUMBER}`;
+    }
 
     const { data } = await this._send(this._instance, "GET", endpoint);
 
