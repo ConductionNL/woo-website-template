@@ -7,6 +7,7 @@ import { DEFAULT_FOOTER_CONTENT_URL } from "../templates/templateParts/footer/Fo
 import OpenWoo from "./resources/openWoo";
 import FooterContent from "./resources/footerContent";
 import Markdown from "./resources/markdown";
+import FilterCount from "./resources/filterCount";
 
 interface PromiseMessage {
   loading?: string;
@@ -27,6 +28,16 @@ export default class APIService {
       baseURL: process.env.GATSBY_API_BASE_URL,
       headers: {
         Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+  }
+
+  public get FilterCountClient(): AxiosInstance {
+    return axios.create({
+      baseURL: process.env.GATSBY_API_BASE_URL,
+      headers: {
+        Accept: "application/json+aggregations",
         "Content-Type": "application/json",
       },
     });
@@ -53,6 +64,10 @@ export default class APIService {
 
   public get OpenWoo(): OpenWoo {
     return new OpenWoo(this.BaseClient, this.Send);
+  }
+
+  public get FilterCount(): FilterCount {
+    return new FilterCount(this.FilterCountClient, this.Send);
   }
 
   public get FooterContent(): FooterContent {
