@@ -1,8 +1,6 @@
 import { TSendFunction } from "../apiService";
 import { AxiosInstance } from "axios";
 
-export const OPEN_WOO_LIMIT = 6;
-
 export default class FilterCount {
   private _instance: AxiosInstance;
   private _send: TSendFunction;
