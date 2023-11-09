@@ -3,6 +3,7 @@ import * as styles from "./FiltersTemplate.module.css";
 import ResultsDisplaySwitch from "../../../components/resultsDisplaySwitch/ResultsDisplaySwitch";
 import _ from "lodash";
 import qs from "qs";
+import Skeleton from "react-loading-skeleton";
 import { useForm } from "react-hook-form";
 import { InputText, SelectSingle } from "@conduction/components";
 import { IFiltersContext, defaultFiltersContext, useFiltersContext } from "../../../context/filters";
@@ -15,6 +16,7 @@ import { useTranslation } from "react-i18next";
 import { filtersToUrlQueryParams } from "../../../services/filtersToQueryParams";
 import { navigate } from "gatsby";
 import { useGatsbyContext } from "../../../context/gatsby";
+import { useFilterCount } from "../../../hooks/filterCount";
 
 interface FiltersTemplateProps {
   isLoading: boolean;
@@ -25,6 +27,8 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   const { filters, setFilters } = useFiltersContext();
   const { gatsbyContext } = useGatsbyContext();
   const [queryParams, setQueryParams] = React.useState<IFiltersContext>(defaultFiltersContext);
+  const [categoryParams, setCategoryParams] = React.useState<any>();
+  const [categoryOptions, setCategoryOptions] = React.useState<any>();
   const filterTimeout = React.useRef<NodeJS.Timeout | null>(null);
 
   const {
@@ -51,15 +55,18 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
 
     setValue(
       "year",
-      generateYearsArray(currentYear - 1995).find((year: any) => {
+      generateYearsArray(currentYear - 2021).find((year: any) => {
         return year.value === params.year;
       }),
     );
+  };
 
-    setValue(
-      "category",
-      TEMP_PUBLICATION_TYPES.find((option) => option.value === params.Categorie?.replace(/_/g, " ")),
-    );
+  const handleSetSelectFormValues = (params: any): void => {
+    getItems.isSuccess &&
+      setValue(
+        "category",
+        categoryOptions.find((option: any) => option.value === params.Categorie?.replace(/_/g, " ")),
+      );
   };
 
   const onSubmit = (data: any) => {
@@ -79,9 +86,16 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
 
   React.useEffect(() => {
     if (_.isEmpty(parsedParams)) return;
-
+    setCategoryParams(parsedParams);
     handleSetFormValues(parsedParams);
   }, []);
+
+  React.useEffect(() => {
+    if (_.isEmpty(categoryOptions)) return;
+    if (_.isEmpty(categoryParams)) return;
+
+    handleSetSelectFormValues(categoryParams);
+  }, [categoryOptions]);
 
   React.useEffect(() => {
     //Prevents loop that puts user at top of page after scroll
@@ -90,6 +104,20 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
     setQueryParams(filters);
     navigate(`/${filtersToUrlQueryParams(filters)}`);
   }, [filters]);
+
+  const getItems = useFilterCount().getCategoryCount();
+
+  React.useEffect(() => {
+    if (!getItems.isSuccess) return;
+
+    const categoriesWithData = getItems.data.Categorie.map((test: any) => {
+      return TEMP_PUBLICATION_TYPES?.find((option) => {
+        return option.value === test._id.toLowerCase();
+      });
+    });
+
+    setCategoryOptions(Array.from(new Set(categoriesWithData)));
+  }, [getItems.isSuccess]);
 
   return (
     <div id="filters" className={styles.container}>
@@ -103,11 +131,11 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
         />
 
         <SelectSingle
-          options={generateYearsArray(currentYear - 1995)}
+          options={generateYearsArray(currentYear - 2021)}
           name="year"
           placeholder={t("Year")}
           isClearable
-          defaultValue={generateYearsArray(currentYear - 1995).find((year: any) => {
+          defaultValue={generateYearsArray(currentYear - 2021).find((year: any) => {
             return (
               year.after === filters["Publicatiedatum[after]"] && year.before === filters["Publicatiedatum[before]"]
             );
@@ -116,15 +144,19 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
           ariaLabel={t("Select year")}
         />
 
-        <SelectSingle
-          options={TEMP_PUBLICATION_TYPES}
-          name="category"
-          placeholder={t("Category")}
-          defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.Categorie)}
-          isClearable
-          {...{ register, errors, control }}
-          ariaLabel={t("Select category")}
-        />
+        {getItems.isLoading && <Skeleton height="50px" />}
+        {getItems.isSuccess && (
+          <SelectSingle
+            options={categoryOptions}
+            name="category"
+            placeholder={t("Category")}
+            defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.Categorie)}
+            isClearable
+            disabled={getItems.isLoading}
+            {...{ register, errors, control }}
+            ariaLabel={t("Select category")}
+          />
+        )}
 
         <Button
           type="submit"

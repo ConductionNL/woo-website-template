@@ -8,11 +8,15 @@ export const useOpenWoo = (queryClient: QueryClient) => {
   const API: APIService | null = React.useContext(APIContext);
 
   const getAll = (filters: IFiltersContext, currentPage: number, limit: number) =>
-    useQuery<any, Error>(["OpenWoo", filters, currentPage, limit], () => API?.OpenWoo.getAll(filters, currentPage, limit), {
-      onError: (error) => {
-        console.warn(error.message);
+    useQuery<any, Error>(
+      ["OpenWoo", filters, currentPage, limit],
+      () => API?.OpenWoo.getAll(filters, currentPage, limit),
+      {
+        onError: (error) => {
+          console.warn(error.message);
+        },
       },
-    });
+    );
 
   const getOne = (requestId: string) =>
     useQuery<any, Error>(["OpenWoo", requestId], () => API?.OpenWoo.getOne(requestId), {
