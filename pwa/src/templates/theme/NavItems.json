@@ -1,0 +1,80 @@
+[
+  {
+    "label": "Item Current",
+    "type": "internal",
+    "current": {
+      "pathname": "/theme"
+    },
+    "handleClick": {
+      "link": "/theme"
+    }
+  },
+  {
+    "label": "Item",
+    "type": "internal",
+    "current": {
+      "pathname": "/notHome"
+    },
+    "handleClick": {
+      "link": "/theme"
+    }
+  },
+  {
+    "label": "Item With Subitems Current",
+    "type": "internal",
+    "current": {
+      "pathname": "/theme"
+    },
+    "subItems": [
+      {
+        "label": "Subitem Current",
+        "type": "internal",
+        "current": {
+          "pathname": "/theme"
+        },
+        "handleClick": {
+          "link": "/theme"
+        }
+      },
+      {
+        "label": "PrimaryTopNavSubItem",
+        "type": "internal",
+        "current": {
+          "pathname": "/notHome"
+        },
+        "handleClick": {
+          "link": "/theme"
+        }
+      }
+    ]
+  },
+  {
+    "label": "Item With SubItems",
+    "type": "internal",
+    "current": {
+      "pathname": "/notHome"
+    },
+    "subItems": [
+      {
+        "label": "PrimaryTopNavSubItem",
+        "type": "internal",
+        "current": {
+          "pathname": "/notHome"
+        },
+        "handleClick": {
+          "link": "/theme"
+        }
+      },
+      {
+        "label": "PrimaryTopNavSubItem",
+        "type": "internal",
+        "current": {
+          "pathname": "/notHome"
+        },
+        "handleClick": {
+          "link": "/theme"
+        }
+      }
+    ]
+  }
+]

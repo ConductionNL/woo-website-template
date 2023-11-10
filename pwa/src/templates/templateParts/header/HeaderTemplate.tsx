@@ -27,7 +27,7 @@ export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName 
           </SkipLink>
         </div>
         <div className={styles.navContainer}>
-          <Logo onClick={() => navigate("/")} />
+          <Logo variant="header" onClick={() => navigate("/")} />
 
           <div className={styles.languageSelectContainer}>
             <span
