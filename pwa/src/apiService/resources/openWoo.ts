@@ -19,8 +19,8 @@ export default class OpenWoo {
       filters,
     )}&_order[Publicatiedatum]=desc&_limit=${limit}&_page=${currentPage}`;
 
-    if (process.env.GATSBY_OIDN_NUMBER) {
-      endpoint += `&oidn=${process.env.GATSBY_OIDN_NUMBER}`;
+    if (window.sessionStorage.getItem("OIDN_NUMBER")) {
+      endpoint += `&oidn=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
     }
 
     const { data } = await this._send(this._instance, "GET", endpoint);
