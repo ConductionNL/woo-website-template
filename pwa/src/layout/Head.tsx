@@ -26,13 +26,13 @@ export const Head: React.FC = () => {
         lang: currentLanguage,
       }}
       bodyAttributes={{
-        class: process.env.GATSBY_NL_DESIGN_THEME_CLASSNAME,
+        class: window.sessionStorage.getItem("NL_DESIGN_THEME_CLASSNAME"),
       }}
     >
-      <title>{`Woo | ${process.env.GATSBY_ORGANISATION_NAME} | ${
+      <title>{`Woo | ${window.sessionStorage.getItem("ORGANISATION_NAME")} | ${
         getPageTitle(translatedCrumbs, gatsbyContext.location) ?? "Error"
       }`}</title>
-      <link rel="icon" type="svg" href={process.env.GATSBY_FAVICON_URL} />
+      <link rel="icon" type="svg" href={window.sessionStorage.getItem("FAVICON_URL") ?? ""} />
     </Helmet>
   );
 };
