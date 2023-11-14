@@ -1,0 +1,11 @@
+{
+  "GATSBY_API_BASE_URL": "https://api.gateway.commonground.nu/api",
+  "GATSBY_NL_DESIGN_THEME_CLASSNAME": "epe-theme",
+  "GATSBY_FAVICON_URL": "https://www.epe.nl/sites/default/themes/custom/toptasks_sub_theme/favicon/favicon-32x32.png",
+  "GATSBY_ORGANISATION_NAME": "Gemeente Epe",
+  "GATSBY_JUMBOTRON_IMAGE_URL": "https://www.epe.nl/sites/default/files/styles/hero_medium/public/2023-09/Koeien.jpg?h=18223889&itok=BSberuIC",
+  "GATSBY_FOOTER_LOGO_HREF": "https://www.epe.nl/",
+  "GATSBY_FOOTER_CONTENT": "https://raw.githubusercontent.com/ConductionNL/woo-website-epe/main/FooterContent.json",
+  "GATSBY_FOOTER_CONTENT_HEADER": "heading-3",
+  "GATSBY_OIDN_NUMBER": "00000001001104524000"
+}
