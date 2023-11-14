@@ -11,7 +11,7 @@ export const JumbotronTemplate: React.FC = () => {
     <div
       aria-label={t("Jumbotron")}
       role="contentinfo"
-      style={{ backgroundImage: `url(${window.sessionStorage.getItem("JUMBOTRON_IMAGE_URL")})` }}
+      style={{ backgroundImage: `url("${window.sessionStorage.getItem("JUMBOTRON_IMAGE_URL")}")` }}
       className={styles.wrapper}
     >
       <Page>

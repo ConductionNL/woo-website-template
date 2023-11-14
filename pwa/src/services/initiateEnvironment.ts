@@ -31,18 +31,3 @@ export const initiateEnvironment = () => {
   window.sessionStorage.setItem("FOOTER_CONTENT_HEADER", config.GATSBY_FOOTER_CONTENT_HEADER ?? "");
   window.sessionStorage.setItem("OIDN_NUMBER", config.GATSBY_OIDN_NUMBER ?? "");
 };
-
-export const getPathPrefix = (): string => {
-  const varsAvailable = process.env.GATSBY_ENV_VARS_SET === "true";
-  const config = getConfig(window.location.hostname);
-
-  if (varsAvailable && process.env.USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX === "true") {
-    return `/${process.env.GITHUB_REPOSITORY_NAME}`;
-  }
-
-  if (config && config.USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX) {
-    return `/${config.GITHUB_REPOSITORY_NAME}`;
-  }
-
-  return "";
-};
