@@ -3,16 +3,12 @@ name: Docker Image CI
 on:
   pull_request:
     branches:
-      - master
-      - staging
+      - main
       - development
-      - refinement-demo
   push:
     branches:
-      - master
-      - staging
+      - main
       - development
-      - refinement-demo
 
 jobs:
   build:
