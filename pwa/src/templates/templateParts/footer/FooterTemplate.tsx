@@ -59,16 +59,6 @@ export const FooterTemplate: React.FC = () => {
   //   setFooterContent(data);
   // }, []);
 
-  React.useEffect(() => {
-    if (!window.sessionStorage.getItem("FOOTER_CONTENT")) return;
-
-    try {
-      setFooterContent(JSON.parse(window.sessionStorage.getItem("FOOTER_CONTENT") ?? ""));
-    } catch {
-      console.warn("Could not parse footer content.");
-    }
-  }, [window.sessionStorage.getItem("FOOTER_CONTENT")]);
-
   return (
     <PageFooter className={styles.footer}>
       <div className={styles.container}>

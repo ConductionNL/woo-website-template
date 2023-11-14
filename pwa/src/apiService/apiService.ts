@@ -7,7 +7,7 @@ import { DEFAULT_FOOTER_CONTENT_URL } from "../templates/templateParts/footer/Fo
 import OpenWoo from "./resources/openWoo";
 import FooterContent from "./resources/footerContent";
 import Markdown from "./resources/markdown";
-import FilterCount from "./resources/filterCount";
+import AvailableFilters from "./resources/availableFilters";
 
 interface PromiseMessage {
   loading?: string;
@@ -33,7 +33,7 @@ export default class APIService {
     });
   }
 
-  public get FilterCountClient(): AxiosInstance {
+  public get AvailableFiltersClient(): AxiosInstance {
     return axios.create({
       baseURL: window.sessionStorage.getItem("API_BASE_URL") ?? "",
       headers: {
@@ -62,8 +62,8 @@ export default class APIService {
     return new OpenWoo(this.BaseClient, this.Send);
   }
 
-  public get FilterCount(): FilterCount {
-    return new FilterCount(this.FilterCountClient, this.Send);
+  public get AvailableFilters(): AvailableFilters {
+    return new AvailableFilters(this.AvailableFiltersClient, this.Send);
   }
 
   public get FooterContent(): FooterContent {
