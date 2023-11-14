@@ -104,7 +104,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
     navigate(`/${filtersToUrlQueryParams(filters)}`);
   }, [filters]);
 
-  const getCategories = useAvailableFilters().getCategory();
+  const getCategories = useAvailableFilters().getCategories();
 
   React.useEffect(() => {
     if (!getCategories.isSuccess) return;

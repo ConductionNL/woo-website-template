@@ -6,12 +6,12 @@ import APIContext from "../apiService/apiContext";
 export const useAvailableFilters = () => {
   const API: APIService | null = React.useContext(APIContext);
 
-  const getCategory = () =>
-    useQuery<any, Error>(["available_catagories"], () => API?.AvailableFilters.getCategory(), {
+  const getCategories = () =>
+    useQuery<any, Error>(["available_catagories"], () => API?.AvailableFilters.getCategories(), {
       onError: (error) => {
         console.warn(error.message);
       },
     });
 
-  return { getCategory };
+  return { getCategories };
 };

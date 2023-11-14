@@ -10,7 +10,7 @@ export default class AvailableFilters {
     this._send = send;
   }
 
-  public getCategory = async (): Promise<any> => {
+  public getCategories = async (): Promise<any> => {
     let endpoint = "/openWOO?_queries[]=Categorie";
 
     if (process.env.GATSBY_OIDN_NUMBER) {
