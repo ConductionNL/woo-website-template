@@ -240,7 +240,7 @@ export const ThemeTemplate: React.FC = () => {
         </div>
 
         <div>
-          <h3 className={styles.header}>DataBadge:</h3>
+          <h3 className={styles.header}>DataBadge / Badge:</h3>
           <DataBadge className={styles.tagWidth}>DataBadge</DataBadge>
         </div>
 
