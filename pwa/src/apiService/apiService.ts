@@ -25,7 +25,7 @@ export type TSendFunction = (
 export default class APIService {
   public get BaseClient(): AxiosInstance {
     return axios.create({
-      baseURL: process.env.GATSBY_API_BASE_URL,
+      baseURL: window.sessionStorage.getItem("API_BASE_URL") ?? "",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export default class APIService {
 
   public get FilterCountClient(): AxiosInstance {
     return axios.create({
-      baseURL: process.env.GATSBY_API_BASE_URL,
+      baseURL: window.sessionStorage.getItem("API_BASE_URL") ?? "",
       headers: {
         Accept: "application/json+aggregations",
         "Content-Type": "application/json",
@@ -45,17 +45,13 @@ export default class APIService {
 
   public get FooterContentClient(): AxiosInstance {
     return axios.create({
-      baseURL: removeFileNameFromUrl(
-        process.env.GATSBY_FOOTER_CONTENT !== undefined && process.env.GATSBY_FOOTER_CONTENT.length !== 0
-          ? process.env.GATSBY_FOOTER_CONTENT
-          : DEFAULT_FOOTER_CONTENT_URL,
-      ),
+      baseURL: removeFileNameFromUrl(window.sessionStorage.getItem("FOOTER_CONTENT") ?? DEFAULT_FOOTER_CONTENT_URL),
     });
   }
 
   public get MarkdownClient(): AxiosInstance {
     return axios.create({
-      baseURL: process.env.GATSBY_BASE_URL ?? undefined,
+      baseURL: window.sessionStorage.getItem("BASE_URL") ?? undefined,
       headers: {
         Accept: "application/vnd.github.html",
       },
