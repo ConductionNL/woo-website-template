@@ -9,7 +9,7 @@ Bent u geïnteresseerd of wilt u meer informatie? Neem dan contact op met een va
 | Leverancier | Contactpersoon                               |
 |-------------|----------------------------------------------|
 | Conduction  | Ruben van der Linde (<info@conduction.nl>)     |
-| xxllnce     | Remco Damhuis (<sales.zaakgericht@xxllnc.nl>) |
+| xxllnc     | Remco Damhuis (<sales.zaakgericht@xxllnc.nl>) |
 
 ## Frontend
 
