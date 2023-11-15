@@ -59,16 +59,6 @@ export const FooterTemplate: React.FC = () => {
   //   setFooterContent(data);
   // }, []);
 
-  React.useEffect(() => {
-    if (!process.env.GATSBY_FOOTER_CONTENT) return;
-
-    try {
-      setFooterContent(JSON.parse(process.env.GATSBY_FOOTER_CONTENT));
-    } catch {
-      console.warn("Could not parse footer content.");
-    }
-  }, [process.env.GATSBY_FOOTER_CONTENT]);
-
   return (
     <PageFooter className={styles.footer}>
       <div className={styles.container}>
@@ -79,11 +69,13 @@ export const FooterTemplate: React.FC = () => {
         </div>
 
         <div className={styles.logoAndConduction}>
-          {process.env.GATSBY_FOOTER_LOGO_URL !== "false" && (
+          {window.sessionStorage.getItem("FOOTER_LOGO_URL") !== "false" && (
             <Logo
               variant="footer"
               onClick={() =>
-                process.env.GATSBY_FOOTER_LOGO_HREF ? open(process.env.GATSBY_FOOTER_LOGO_HREF) : navigate("/")
+                window.sessionStorage.getItem("FOOTER_LOGO_HREF")
+                  ? open(window.sessionStorage.getItem("FOOTER_LOGO_HREF") ?? "")
+                  : navigate("/")
               }
             />
           )}
@@ -100,7 +92,7 @@ const DynamicSection: React.FC<{ content: TDynamicContentItem }> = ({ content })
 
   return (
     <section>
-      <DynamicSectionHeading heading={process.env.GATSBY_FOOTER_CONTENT_HEADER} {...{ content }} />
+      <DynamicSectionHeading heading={window.sessionStorage.getItem("FOOTER_CONTENT_HEADER") ?? ""} {...{ content }} />
 
       {content.items.map((item, idx) => (
         <div key={idx} className={styles.dynamicSectionContent}>

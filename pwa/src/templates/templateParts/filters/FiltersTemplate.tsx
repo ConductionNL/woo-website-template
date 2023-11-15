@@ -11,12 +11,11 @@ import { Button } from "@utrecht/component-library-react/dist/css-module";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { generateYearsArray } from "../../../data/years";
-import { TEMP_PUBLICATION_TYPES } from "../../../data/PublicationType";
 import { useTranslation } from "react-i18next";
 import { filtersToUrlQueryParams } from "../../../services/filtersToQueryParams";
 import { navigate } from "gatsby";
 import { useGatsbyContext } from "../../../context/gatsby";
-import { useFilterCount } from "../../../hooks/filterCount";
+import { useAvailableFilters } from "../../../hooks/availableFilters";
 
 interface FiltersTemplateProps {
   isLoading: boolean;
@@ -62,7 +61,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   };
 
   const handleSetSelectFormValues = (params: any): void => {
-    getItems.isSuccess &&
+    getCategories.isSuccess &&
       setValue(
         "category",
         categoryOptions.find((option: any) => option.value === params.Categorie?.replace(/_/g, " ")),
@@ -105,19 +104,18 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
     navigate(`/${filtersToUrlQueryParams(filters)}`);
   }, [filters]);
 
-  const getItems = useFilterCount().getCategoryCount();
+  const getCategories = useAvailableFilters().getCategories();
 
   React.useEffect(() => {
-    if (!getItems.isSuccess) return;
+    if (!getCategories.isSuccess) return;
 
-    const categoriesWithData = getItems.data.Categorie.map((test: any) => {
-      return TEMP_PUBLICATION_TYPES?.find((option) => {
-        return option.value === test._id.toLowerCase();
-      });
-    });
+    const categoriesWithData = getCategories.data.Categorie.map((category: any) => ({
+      label: _.upperFirst(category._id.toLowerCase()),
+      value: category._id.toLowerCase(),
+    }));
 
-    setCategoryOptions(Array.from(new Set(categoriesWithData)));
-  }, [getItems.isSuccess]);
+    setCategoryOptions(_.orderBy(_.uniqBy(categoriesWithData, "value"), "label", "asc"));
+  }, [getCategories.isSuccess]);
 
   return (
     <div id="filters" className={styles.container}>
@@ -144,15 +142,15 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
           ariaLabel={t("Select year")}
         />
 
-        {getItems.isLoading && <Skeleton height="50px" />}
-        {getItems.isSuccess && (
+        {getCategories.isLoading && <Skeleton height="50px" />}
+        {getCategories.isSuccess && (
           <SelectSingle
             options={categoryOptions}
             name="category"
             placeholder={t("Category")}
-            defaultValue={TEMP_PUBLICATION_TYPES.find((option) => option.value === filters.Categorie)}
+            defaultValue={categoryOptions && categoryOptions.find((option: any) => option.value === filters.Categorie)}
             isClearable
-            disabled={getItems.isLoading}
+            disabled={getCategories.isLoading}
             {...{ register, errors, control }}
             ariaLabel={t("Select category")}
           />

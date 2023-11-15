@@ -11,18 +11,19 @@ export const JumbotronTemplate: React.FC = () => {
     <div
       aria-label={t("Jumbotron")}
       role="contentinfo"
-      style={{ backgroundImage: `url(${process.env.GATSBY_JUMBOTRON_IMAGE_URL})` }}
+      style={{ backgroundImage: `url("${window.sessionStorage.getItem("JUMBOTRON_IMAGE_URL")}")` }}
       className={styles.wrapper}
     >
       <Page>
         <PageContent>
           <CardWrapper aria-label={t("Jumbotron card")} role="contentinfo" className={styles.card}>
             <Heading1 className={styles.title}>
-              {t("Woo-publications of")} {process.env.GATSBY_ORGANISATION_NAME}
+              {t("Woo-publications of")} {window.sessionStorage.getItem("ORGANISATION_NAME")}
             </Heading1>
 
             <Paragraph className={styles.description}>
-              {t("On this page you will find the Woo-publications of")} {process.env.GATSBY_ORGANISATION_NAME}
+              {t("On this page you will find the Woo-publications of")}{" "}
+              {window.sessionStorage.getItem("ORGANISATION_NAME")}
             </Paragraph>
           </CardWrapper>
         </PageContent>

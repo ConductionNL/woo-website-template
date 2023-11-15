@@ -7,7 +7,7 @@ import { DEFAULT_FOOTER_CONTENT_URL } from "../templates/templateParts/footer/Fo
 import OpenWoo from "./resources/openWoo";
 import FooterContent from "./resources/footerContent";
 import Markdown from "./resources/markdown";
-import FilterCount from "./resources/filterCount";
+import AvailableFilters from "./resources/availableFilters";
 
 interface PromiseMessage {
   loading?: string;
@@ -25,7 +25,7 @@ export type TSendFunction = (
 export default class APIService {
   public get BaseClient(): AxiosInstance {
     return axios.create({
-      baseURL: process.env.GATSBY_API_BASE_URL,
+      baseURL: window.sessionStorage.getItem("API_BASE_URL") ?? "",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -33,9 +33,9 @@ export default class APIService {
     });
   }
 
-  public get FilterCountClient(): AxiosInstance {
+  public get AvailableFiltersClient(): AxiosInstance {
     return axios.create({
-      baseURL: process.env.GATSBY_API_BASE_URL,
+      baseURL: window.sessionStorage.getItem("API_BASE_URL") ?? "",
       headers: {
         Accept: "application/json+aggregations",
         "Content-Type": "application/json",
@@ -45,17 +45,13 @@ export default class APIService {
 
   public get FooterContentClient(): AxiosInstance {
     return axios.create({
-      baseURL: removeFileNameFromUrl(
-        process.env.GATSBY_FOOTER_CONTENT !== undefined && process.env.GATSBY_FOOTER_CONTENT.length !== 0
-          ? process.env.GATSBY_FOOTER_CONTENT
-          : DEFAULT_FOOTER_CONTENT_URL,
-      ),
+      baseURL: removeFileNameFromUrl(window.sessionStorage.getItem("FOOTER_CONTENT") ?? DEFAULT_FOOTER_CONTENT_URL),
     });
   }
 
   public get MarkdownClient(): AxiosInstance {
     return axios.create({
-      baseURL: process.env.GATSBY_BASE_URL ?? undefined,
+      baseURL: window.sessionStorage.getItem("BASE_URL") ?? undefined,
       headers: {
         Accept: "application/vnd.github.html",
       },
@@ -66,8 +62,8 @@ export default class APIService {
     return new OpenWoo(this.BaseClient, this.Send);
   }
 
-  public get FilterCount(): FilterCount {
-    return new FilterCount(this.FilterCountClient, this.Send);
+  public get AvailableFilters(): AvailableFilters {
+    return new AvailableFilters(this.AvailableFiltersClient, this.Send);
   }
 
   public get FooterContent(): FooterContent {

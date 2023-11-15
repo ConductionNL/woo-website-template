@@ -12,6 +12,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { IconPack, library } from "@fortawesome/fontawesome-svg-core";
+import { initiateEnvironment } from "../services/initiateEnvironment";
 import { ToolTip } from "@conduction/components";
 
 export const TOOLTIP_ID = "cb8f47c3-7151-4a46-954d-784a531b01e6";
@@ -27,6 +28,10 @@ const Layout: React.FC<LayoutProps> = ({ children, pageContext, location }) => {
   const [globalContext, setGlobalContext] = React.useState<IGlobalContext>(defaultGlobalContext);
 
   library.add(fas, fab as IconPack, far as IconPack);
+
+  React.useEffect(() => {
+    initiateEnvironment();
+  }, []);
 
   React.useEffect(() => {
     setAPI(new APIService());

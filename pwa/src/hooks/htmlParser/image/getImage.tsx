@@ -4,7 +4,7 @@ export const getImage = (props: any) => {
   let src = props.src;
 
   if (!props.src.includes("https://" || "http://")) {
-    const sessionUrl = process.env.GATSBY_GITHUB_REPOSITORY_URL;
+    const sessionUrl = window.sessionStorage.getItem("GITHUB_REPOSITORY_URL");
     const url = sessionUrl?.replace("https://github.com/", "");
 
     src = `https://raw.githubusercontent.com/${url}/master/docs/features/${props.src}`;

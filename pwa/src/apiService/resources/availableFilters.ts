@@ -1,7 +1,7 @@
 import { TSendFunction } from "../apiService";
 import { AxiosInstance } from "axios";
 
-export default class FilterCount {
+export default class AvailableFilters {
   private _instance: AxiosInstance;
   private _send: TSendFunction;
 
@@ -10,11 +10,11 @@ export default class FilterCount {
     this._send = send;
   }
 
-  public getCategoryCount = async (): Promise<any> => {
+  public getCategories = async (): Promise<any> => {
     let endpoint = "/openWOO?_queries[]=Categorie";
 
-    if (process.env.GATSBY_OIDN_NUMBER) {
-      endpoint += `&oidn=${process.env.GATSBY_OIDN_NUMBER}`;
+    if (window.sessionStorage.getItem("OIDN_NUMBER")) {
+      endpoint += `&oidn=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
     }
 
     const { data } = await this._send(this._instance, "GET", endpoint);
