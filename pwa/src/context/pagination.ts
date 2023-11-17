@@ -11,15 +11,11 @@ export const defaultPaginationContext: IPaginationContext = {
 
 export const usePaginationContext = () => {
   const [globalContext, setGlobalContext] = React.useContext(GlobalContext);
-  const [currentPage, setCurrentPage] = React.useState<number>(globalContext.pagination.currentPage);
-
-  React.useEffect(() => {
-    setPagination({ currentPage });
-  }, [currentPage]);
+  const pagination: IPaginationContext = globalContext.pagination;
 
   const setPagination = (newFilters: IPaginationContext) => {
-    setGlobalContext((oldGlobalContext) => ({ ...oldGlobalContext, pagination: newFilters }));
+    setGlobalContext((context) => ({ ...context, pagination: { ...globalContext.pagination, ...newFilters } }));
   };
 
-  return { currentPage, setCurrentPage };
+  return { pagination, setPagination };
 };
