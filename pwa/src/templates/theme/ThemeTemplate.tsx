@@ -21,6 +21,7 @@ import {
   TabList,
   TabPanel,
   Tabs,
+  InputCheckbox,
 } from "@conduction/components";
 import {
   BreadcrumbNav,
@@ -50,6 +51,7 @@ import {
   TableHeaderCell,
   TableBody,
   TableCell,
+  Checkbox,
 } from "@utrecht/component-library-react";
 import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
@@ -466,6 +468,23 @@ export const ThemeTemplate: React.FC = () => {
               temporibus id. Quo, quasi!
             </p>
           </CardWrapper>
+        </div>
+
+        <div>
+          <h3 className={styles.header}>Checkbox</h3>
+          <ButtonGroup className={styles.buttonContainer}>
+            <input id="CheckboxTest" type="checkbox" />
+            <InputCheckbox name="default" label="default" {...{ register, errors, control }} />
+            <InputCheckbox name="Checked" label="Checked" defaultChecked {...{ register, errors, control }} />
+
+            <InputCheckbox
+              name="Disabled"
+              label="Disabled"
+              defaultChecked
+              disabled
+              {...{ register, errors, control }}
+            />
+          </ButtonGroup>
         </div>
 
         <div>
