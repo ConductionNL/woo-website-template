@@ -1,12 +1,11 @@
-# Over de Open WOO App
+# Over de WOO en Open Woo App
 
-> **WOObinar op 15 November**
+> **WooBinar**
 >
+> Meer weten over deze oplossing? Dat kan! Vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
 >
-> Meer weten over deze oplossing? Dat kan!
->
->
-> De leverancier [xxllnc](https://xxllnc.nl/) organiseerd op 15 november 13:00 een [WOObinar](https://www.linkedin.com/events/woobinar7125512622950494208/comments/), inschrijven kan [hier](https://www.linkedin.com/events/woobinar7125512622950494208/comments/). Tijdens deze bijeenkomst wordt zowel deze oplossing toegelicht als dat er de mogelijkheid is voor het stellen van (technische) vragen.
+> Terug kijken afgelopen webinars?
+> [xxllnc Woobinar 17-11-2023](https://www.youtube.com/watch?v=NCnLDEoPh5A)
 
 De Wet Open Overheid (WOO) is een initiatief gericht op het verbeteren van de openbaarheid van overheidsinformatie. Het doel is om overheidsinformatie beter toegankelijk te maken voor iedereen. Meer informatie over de Wet Open Overheid kan [hier](https://www.open-overheid.nl/themas/wet-open-overheid/) worden gevonden.
 
@@ -18,8 +17,6 @@ De implementatie van de Wet Open Overheid brengt twee kernuitdagingen met zich m
 2. **Proactieve Publicatie:**
    Overheden moeten informatie proactief te publiceren. Dit betekent dat publicatie onderdeel moet worden van het normale werkproces. Hiermee is het richting de toekomst niet haalbaar om Woo-publicaties handmatig via een apart systeem (bijvoorbeeld CMS website) te laten verlopen.
 
-## Probleemstelling
-
 Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Management Systeem (CMS) of door levering vanuit één systeem. Handmatige publicatie van alle overheidsinformatie zou een aanzienlijke personele inzet vereisen, wat onpraktisch is. Daarbij komt dat de verscheidenheid aan publicatietypen vaak verdeeld is over meerdere systemen, wat de situatie verder compliceert.
 
 ## Oplossing
@@ -27,7 +24,7 @@ Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Ma
 De Open Woo-app biedt een geïntegreerde oplossing die bestaat uit een aantal hoofdcomponenten:
 
 1. **Koppelvlak naar KOOP en WOOGLE voor de Landelijke Index:**
-   Een interface die zorgt voor een gestandaardiseerde verbinding met de [Kennis- en Exploitatiecentrum en Officiële Publicaties](https://www.koopoverheid.nl/)(KOOP), waardoor een landelijke index van overheidsinformatie wordt gecreëerd.
+   Een interface die zorgt voor een gestandaardiseerde verbinding met de [Kennis- en Exploitatiecentrum en Officiële Publicaties](https://www.koopoverheid.nl/)(KOOP), waardoor een landelijke index van overheidsinformatie wordt gecreëerd. Daarnaast is er een integratie met [WOOgle](https://woogle.wooverheid.nl/search?q=*) van [WOOverheid](https://wooverheid.nl/) van de UvA.
 
 2. **Organisatieweergave:**
    Een interface waarmee belanghebbenden binnen een organisatie naar relevante informatie kunnen zoeken.
@@ -41,16 +38,18 @@ De Open Woo-app biedt een geïntegreerde oplossing die bestaat uit een aantal ho
 Deze geïntegreerde aanpak zorgt voor een naadloze, efficiënte en effectieve implementatie van de Wet Open Overheid, waardoor overheidsorganisaties hun informatie op een gebruiksvriendelijke en toegankelijke wijze kunnen delen.
 
 ## Functionaliteiten
+De OpenWoo.app ondersteund de volgende functionaliteiten. 
 
 - Één index pagina voor uw organisatie
 - Weergave van data uit meerdere bronnen (zaaksysteem, website, raadsinformatie systeem en archief)
 - Aanlevering bij KOOP aan de hand van `sitemap.xml`-bestanden
+- Aanlevering bij WOOgle aan de hand van api
 - Automatisch en pro-actief publiceren
 - Op de toekomst voorbereid
 
 ![epe.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/epe.png "Woo Website van de Gemeente Epe")
 
-## Opzet
+## Techniek
 
 Deze pagina kan rechtstreeks vanaf GitHub (serverless) of los op een eigen omgeving gehost worden. Voor de getoonde data wordt gebruikgemaakt van de Open Woo API-definitie. Dat betekent dat een van de volgende bronnen kan worden gebruikt:
 

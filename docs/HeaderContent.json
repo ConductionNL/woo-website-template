@@ -1,20 +1,11 @@
 [
   {
-    "label": "Documentatie",
+    "label": "Product",
     "current": {
       "pathname": "/components",
       "operator": "includes"
     },
     "subItems": [
-      {
-        "label": "Architectuur",
-        "type": "markdown",
-        "current": {
-          "pathname": "/over/architectuur",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md" }
-      },
       {
         "label": "Kosten",
         "type": "markdown",
@@ -72,12 +63,21 @@
     ]
   },
   {
-    "label": "Installatie",
+    "label": "Techniek",
     "current": {
       "pathname": "/over",
       "operator": "includes"
     },
     "subItems": [
+      {
+        "label": "Architectuur",
+        "type": "markdown",
+        "current": {
+          "pathname": "/over/architectuur",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md" }
+      },
       {
         "label": "Installatie",
         "type": "markdown",
