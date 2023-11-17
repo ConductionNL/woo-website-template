@@ -5,10 +5,12 @@ export const QUERY_LIMIT_DEFAULT = 12;
 
 export interface IQueryLimitContext {
   openWooObjectsQueryLimit: number;
+  previousOpenWooObjectsQueryLimit: number;
 }
 
 export const defaultQueryLimitContext: IQueryLimitContext = {
   openWooObjectsQueryLimit: QUERY_LIMIT_DEFAULT,
+  previousOpenWooObjectsQueryLimit: QUERY_LIMIT_DEFAULT,
 };
 
 export const useQueryLimitContext = () => {
