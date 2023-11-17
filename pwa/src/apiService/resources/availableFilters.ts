@@ -14,7 +14,7 @@ export default class AvailableFilters {
     let endpoint = "/openWOO?_queries[]=Categorie";
 
     if (window.sessionStorage.getItem("OIDN_NUMBER")) {
-      endpoint += `&oidn=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
+      endpoint += `&behandelendBestuursorgaan.oidn=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
     }
 
     const { data } = await this._send(this._instance, "GET", endpoint);
