@@ -1,6 +1,6 @@
 import { getConfig } from "./getConfig";
 
-export const initiateEnvironment = () => {
+export const initiateEnvironment = (themeOrDomainName: string) => {
   const varsAvailable = process.env.GATSBY_ENV_VARS_SET === "true";
 
   if (varsAvailable) {
@@ -17,7 +17,7 @@ export const initiateEnvironment = () => {
     return; // all vars are set in sessionStorage, nothing else to do
   }
 
-  const config = getConfig(window.location.hostname);
+  const config = getConfig(themeOrDomainName);
 
   if (!config) return; // no config found, nothing else to do
 

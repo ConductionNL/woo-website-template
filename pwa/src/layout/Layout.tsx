@@ -27,7 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children, pageContext, location }) => {
   library.add(fas, fab as IconPack, far as IconPack);
 
   React.useEffect(() => {
-    initiateEnvironment();
+    initiateEnvironment(window.location.hostname);
   }, []);
 
   React.useEffect(() => {
