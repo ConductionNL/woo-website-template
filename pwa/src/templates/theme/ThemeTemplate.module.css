@@ -48,8 +48,16 @@
   background-color: var(--utrecht-page-header-background-color);
 }
 
+.logoHeader > * {
+  margin-inline-start: var(--skeleton-size-md);
+}
+
 .logoFooter {
   background-color: var(--utrecht-page-footer-background-color);
+}
+
+.logoFooter > * {
+  margin-inline-start: var(--skeleton-size-md);
 }
 
 .SelectMaxWith {

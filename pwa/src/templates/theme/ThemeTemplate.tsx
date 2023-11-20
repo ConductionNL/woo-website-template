@@ -79,6 +79,7 @@ export const ThemeTemplate: React.FC = () => {
   const [currentPage, setCurrentPage] = React.useState<number>(1);
   const [buttonsDisabled, setButtonsDisabled] = React.useState<boolean>(false);
   const [selectMaxWith, setSelectMaxWith] = React.useState<boolean>(true);
+  const [refreshPieChartColor, setRefreshPieChartColor] = React.useState<boolean>(true);
   const { gatsbyContext } = useGatsbyContext();
 
   const { filters } = useFiltersContext();
@@ -427,6 +428,7 @@ export const ThemeTemplate: React.FC = () => {
         <h2>OpenCatalogi Components:</h2>
         <div>
           <h3 className={styles.header}>PieChart:</h3>
+          <button onClick={() => setRefreshPieChartColor(!refreshPieChartColor)}>Refresh color</button>
           <div className={styles.pieChartContainer}>
             <PieChart
               className={styles.ratingPieChart}
@@ -470,10 +472,10 @@ export const ThemeTemplate: React.FC = () => {
           </CardWrapper>
         </div>
 
-        <div>
+        <div id={"currentwork"}>
           <h3 className={styles.header}>Checkbox</h3>
           <ButtonGroup className={styles.buttonContainer}>
-            <input id="CheckboxTest" type="checkbox" />
+            <input type="checkbox"></input>
             <InputCheckbox name="default" label="default" {...{ register, errors, control }} />
             <InputCheckbox name="Checked" label="Checked" defaultChecked {...{ register, errors, control }} />
 
@@ -519,7 +521,6 @@ export const ThemeTemplate: React.FC = () => {
                     <Logo onClick={() => console.log("click")} />
                   </div>
                 }
-                layoutClassName={styles.textColor}
                 items={headerTopNavItems}
               />
             </Container>
