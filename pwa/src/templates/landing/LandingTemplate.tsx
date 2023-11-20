@@ -15,16 +15,19 @@ import { useQueryLimitContext } from "../../context/queryLimit";
 import { PaginationLimitSelectComponent } from "../../components/paginationLimitSelect/PaginationLimitSelect";
 
 export const LandingTemplate: React.FC = () => {
-  const { currentPage, setCurrentPage } = usePaginationContext();
-  const { filters } = useFiltersContext();
   const { t } = useTranslation();
-  const { queryLimit } = useQueryLimitContext();
+  const { filters } = useFiltersContext();
+  const { pagination, setPagination } = usePaginationContext();
+  const { queryLimit, setQueryLimit } = useQueryLimitContext();
 
   const queryClient = new QueryClient();
-  const getItems = useOpenWoo(queryClient).getAll(filters, currentPage, queryLimit.openWooObjectsQueryLimit);
+  const getItems = useOpenWoo(queryClient).getAll(filters, pagination.currentPage, queryLimit.openWooObjectsQueryLimit);
 
   React.useEffect(() => {
-    setCurrentPage(1);
+    if (queryLimit.openWooObjectsQueryLimit === queryLimit.previousOpenWooObjectsQueryLimit) return;
+
+    setPagination({ currentPage: 1 });
+    setQueryLimit({ ...queryLimit, previousOpenWooObjectsQueryLimit: queryLimit.openWooObjectsQueryLimit });
   }, [queryLimit.openWooObjectsQueryLimit]);
 
   return (
@@ -43,7 +46,8 @@ export const LandingTemplate: React.FC = () => {
                 <Pagination
                   ariaLabels={{ previousPage: t("Previous page"), nextPage: t("Next page"), page: t("Page") }}
                   totalPages={getItems.data.pages}
-                  {...{ currentPage, setCurrentPage }}
+                  currentPage={getItems.data.page}
+                  setCurrentPage={(page: any) => setPagination({ currentPage: page })}
                 />
                 <PaginationLimitSelectComponent queryLimitName={"openWooObjectsQueryLimit"} />
               </div>

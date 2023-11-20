@@ -16,6 +16,7 @@ import { filtersToUrlQueryParams } from "../../../services/filtersToQueryParams"
 import { navigate } from "gatsby";
 import { useGatsbyContext } from "../../../context/gatsby";
 import { useAvailableFilters } from "../../../hooks/availableFilters";
+import { usePaginationContext } from "../../../context/pagination";
 
 interface FiltersTemplateProps {
   isLoading: boolean;
@@ -24,6 +25,7 @@ interface FiltersTemplateProps {
 export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) => {
   const { t } = useTranslation();
   const { filters, setFilters } = useFiltersContext();
+  const { setPagination } = usePaginationContext();
   const { gatsbyContext } = useGatsbyContext();
   const [queryParams, setQueryParams] = React.useState<IFiltersContext>(defaultFiltersContext);
   const [categoryParams, setCategoryParams] = React.useState<any>();
@@ -102,6 +104,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
 
     setQueryParams(filters);
     navigate(`/${filtersToUrlQueryParams(filters)}`);
+    setPagination({ currentPage: 1 });
   }, [filters]);
 
   const getCategories = useAvailableFilters().getCategories();
