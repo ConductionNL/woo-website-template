@@ -64,10 +64,12 @@ Configuratie vindt plaats via environment (env) waardes. In het geval van een se
 Voor de backend zijn twee opties beschikbaar. In beide gevallen moet de resulterende URL worden opgenomen onder `API_BASE_URL` in de frontend-configuratie.
 
 ### Open Webconcept met Open Woo en Open Convenanten Plugin
+In dit geval koppel je de react frontend rechtstreek op een wordpress installatie, dat betekend dat alle publicaties handmatig moeten worden geupload.
 
 Volg de installatiehandleiding op [https://github.com/OpenWebconcept/plugin-openwoo](https://github.com/OpenWebconcept/plugin-openwoo) en op [https://github.com/OpenWebconcept/plugin-openconvenanten](https://github.com/OpenWebconcept/plugin-openconvenanten).
 
 ### Common Gateway met Open Woo Plugin
+In dit geval koppel je de react frontend op een gatewat installatie, dat betekend dat alle publicaties automatisch worden opgehaald uit bestaande bronnen.
 
 Volg de installatiehandleiding op [Woo Bundle](https://github.com/ConductionNL/WooBundle/tree/main).
 

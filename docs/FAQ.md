@@ -22,6 +22,6 @@ A. Het is wel mogelijk om de OpenWoo.app te koppelen aan een zaaksysteem zonder 
 
 A. Voor nieuwe bronnen, of gewenste features kunt u een issue aanmaken op onze [GitHub-pagina](https://github.com/ConductionNL/woo-website-template/issues). Deze worden dan gereviewd door de stuurgroep en indien mogelijk toegevoegd aan de roadmap. Voor meer informatie over de stuurgroep, zie [Governance](./Governance.md).
 
-*Q. Kan ik een Service Level Agreement(SLA) krijgen?*
+*Q. Kan ik worden ontzorgd?*
 
-A. Ja, dat is mogelijk. Zie [Kosten](./Kosten.md) voor meer informatie.
+A. Ja, dat is mogelijk. Er zijn leveranciers voor zowel SAAS als Service Level Agreement(SLA) beschikbaar Zie [Kosten](./Kosten.md) voor meer informatie.

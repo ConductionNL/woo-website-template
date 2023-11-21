@@ -70,6 +70,15 @@
     },
     "subItems": [
       {
+        "label": "Naar Productie",
+        "type": "markdown",
+        "current": {
+          "pathname": "/over/pricing",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md" }
+      },
+      {
         "label": "Architectuur",
         "type": "markdown",
         "current": {
@@ -95,15 +104,6 @@
           "operator": "equals"
         },
         "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuratie.md" }
-      },
-      {
-        "label": "Naar Productie",
-        "type": "markdown",
-        "current": {
-          "pathname": "/over/pricing",
-          "operator": "equals"
-        },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md" }
       },
       {
         "label": "Testscenario's",

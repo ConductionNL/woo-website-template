@@ -11,8 +11,8 @@ De Wet Open Overheid (WOO) is een initiatief gericht op het verbeteren van de op
 
 De implementatie van de Wet Open Overheid brengt twee kernuitdagingen met zich mee:
 
-1. **Diversificatie van Publicatie Typen:**
-   Met de tijd zullen er steeds meer typen van publicaties ontstaan, variërend van rapporten en besluiten tot datasets en onderzoeksresultaten. Deze diversiteit vereist een flexibel systeem dat in staat is om verschillende typen van publicaties adequaat te hanteren. Dat maakt het op voorhand onmogelijk om één bron (zoals zaaksysteem of raadsinformatiesyteem) richting de toekomst aan te wijzen.
+1. **Diversificatie van categorieën:**
+   Met de tijd zullen er steeds meer categorieën, variërend van rapporten en besluiten tot datasets en onderzoeksresultaten. Deze diversiteit vereist een flexibel systeem dat in staat is om verschillende typen categorieën adequaat te hanteren. Dat maakt het op voorhand onmogelijk om één bron (zoals zaaksysteem of raadsinformatiesyteem) richting de toekomst aan te wijzen.
 
 2. **Proactieve Publicatie:**
    Overheden moeten informatie proactief te publiceren. Dit betekent dat publicatie onderdeel moet worden van het normale werkproces. Hiermee is het richting de toekomst niet haalbaar om Woo-publicaties handmatig via een apart systeem (bijvoorbeeld CMS website) te laten verlopen.
@@ -66,22 +66,23 @@ Meer details hierover vindt u onder [architectuur](/docs/Architectuur.md).
 
 Dit is een zelfstandig bruikbare uitbreiding op [Open Woo](https://github.com/OpenWebconcept/plugin-openwoo) van het [Open Webconcept](https://openwebconcept.nl/). Het maakt hergebruik van [NL Design (React componenten)](https://nldesignsystem.nl/meedoen/introductie) om aan de hand van [Design Tokens](https://nldesignsystem.nl/meedoen/design-tokens/) gemeentelijk specifieke [Woo-index](https://www.koopoverheid.nl/voor-overheden/rijksoverheid/woo-index) pagina's te genereren die voldoen aan alle [WCAG](https://wcag.nl/kennis/richtlijnen/) en [wettelijke eisen](https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo).
 
-### Open versus Woo
+### Meer open dan Woo
 
 De Woo specificeert een aantal categorieën (zie configuratie) die door een organisatie moeten worden ontsloten. Dit template ondersteunt dat, maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het concept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
 
-## Voorbeelden
+## Praktijk voorbeelden
+Op dit moment wordt de OpenWoo.app al door een aantal organisaties gebruikt
 
-| Organisatie | Woo Pagina | Woo Bron(en) |
-|-------------|------------|--------------|
-| [Noordwijk](https://conductionnl.github.io/woo-website-noordwijk/) | [Pagina](https://conductionnl.github.io/woo-website-noordwijk/) | Zaaksysteem (acceptatie) |
-| [Tubbergen](https://conductionnl.github.io/woo-website-tubbergen/) | [Pagina](https://conductionnl.github.io/woo-website-tubbergen/) | Zaaksysteem (acceptatie) |
-| [Epe](https://conductionnl.github.io/woo-website-epe/) | [Pagina](https://conductionnl.github.io/woo-website-epe/) | Zaaksysteem (acceptatie) |
-| [Dinkelland](https://conductionnl.github.io/woo-website-dinkelland/) | [Pagina](https://conductionnl.github.io/woo-website-dinkelland/) | Zaaksysteem (acceptatie) |
-| [Rotterdam (Alleen vormgeving)](https://conductionnl.github.io/woo-website-rotterdam/) | [Pagina](https://conductionnl.github.io/woo-website-rotterdam/) | Demo |
-| [Noaberkracht](https://conductionnl.github.io/woo-website-noaberkracht/) | [Pagina](https://conductionnl.github.io/woo-website-noaberkracht/) | Zaaksysteem (acceptatie) |
-| [Leiden (Alleen vormgeving)](https://conductionnl.github.io/woo-website-leiden/) | [Pagina](https://conductionnl.github.io/woo-website-leiden/) | Demo |
-| [Xxllnc (Demo omgeving)](https://conductionnl.github.io/woo-website-xxllnc/) | [Pagina](https://conductionnl.github.io/woo-website-xxllnc/) | Demo |
+| Organisatie | Type | Woo Pagina | Woo Bron(en)            | Status     |
+|-------------|------------|-------------------------|------------|
+| [Noordwijk](https://www.noordwijk.nl/) | Gemeente |  [Pagina](https://conductionnl.github.io/woo-website-noordwijk/) | Zaaksysteem  | Acceptatie | 
+| [Tubbergen](https://www.tubbergen.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-tubbergen/) | Zaaksysteem  | Acceptatie | 
+| [Epe](https://www.epe.nl/) | Gemeente |[Pagina](https://open.epe.nl/) | Zaaksysteem | Productie  |
+| [Dinkelland](https://www.dinkelland.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-dinkelland/) | Zaaksysteem | Acceptatie | 
+| [Rotterdam (Alleen vormgeving)](https://www.rotterdam.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-rotterdam/) | Demo Omgeving                   | Demo       | 
+| [Noaberkracht](https://www.dinkelland.nl/noaberkracht-dinkelland-tubbergen) | Samenwerkingsverband | [Pagina](https://conductionnl.github.io/woo-website-noaberkracht/) | Zaaksysteem | Acceptatie | 
+| [Leiden (Alleen vormgeving)](https://gemeente.leiden.nl/) | Gemeente | [Pagina](https://conductionnl.github.io/woo-website-leiden/) | Demo Omgeving           | Demo       | 
+| [Xxllnc (Demo omgeving)](https://xxllnc.nl/) | Leverancier | [Pagina](https://conductionnl.github.io/woo-website-xxllnc/) | Demo Omgeving           | Demo       | 
 
 ## Architectuur
 
