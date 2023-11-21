@@ -12,7 +12,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { IconPack, library } from "@fortawesome/fontawesome-svg-core";
-import { initiateEnvironment } from "../services/initiateEnvironment";
+import { useEnvironment } from "../hooks/useEnvironment";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -23,11 +23,16 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, pageContext, location }) => {
   const [API, setAPI] = React.useState<APIService>(React.useContext(APIContext));
   const [globalContext, setGlobalContext] = React.useState<IGlobalContext>(defaultGlobalContext);
+  const { initiateFromEnv, initiateFromJSON } = useEnvironment();
 
   library.add(fas, fab as IconPack, far as IconPack);
 
   React.useEffect(() => {
-    initiateEnvironment();
+    if (process.env.GATSBY_ENV_VARS_SET === "true") {
+      initiateFromEnv();
+    } else {
+      initiateFromJSON(window.location.hostname);
+    }
   }, []);
 
   React.useEffect(() => {
