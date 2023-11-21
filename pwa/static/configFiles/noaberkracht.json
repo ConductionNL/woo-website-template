@@ -1,0 +1,11 @@
+{
+  "GATSBY_API_BASE_URL": "https://api.gateway.commonground.nu/api",
+  "GATSBY_NL_DESIGN_THEME_CLASSNAME": "noaberkracht-theme",
+  "GATSBY_FAVICON_URL": "https://werkenbijnoaberkracht.nl/favicon-32x32.png",
+  "GATSBY_ORGANISATION_NAME": "Noaberkracht",
+  "GATSBY_JUMBOTRON_IMAGE_URL": "https://werkenbijnoaberkracht.nl/imager/hero/2253/862_0d33baa1153e758942327cdee707898a.webp",
+  "GATSBY_FOOTER_LOGO_HREF": "https://werkenbijnoaberkracht.nl/",
+  "GATSBY_FOOTER_CONTENT": "https://raw.githubusercontent.com/ConductionNL/woo-website-noaberkracht/main/FooterContent.json",
+  "GATSBY_FOOTER_CONTENT_HEADER": "",
+  "GATSBY_OIDN_NUMBER": "00000001852070706000"
+}
