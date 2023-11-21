@@ -186,16 +186,19 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       <TableCell>{t("Attachments")}</TableCell>
                       <TableCell>
                         <UnorderedList>
-                          {getItems.data?.embedded?.bijlagen.map((bijlage: any, idx: number) => (
-                            <UnorderedListItem key={idx}>
-                              <Link
-                                href={bijlage.url?.length !== 0 ? bijlage.url : "#"}
-                                target={bijlage.url?.length !== 0 ? "blank" : ""}
-                              >
-                                {bijlage.titel}
-                              </Link>
-                            </UnorderedListItem>
-                          ))}
+                          {getItems.data?.embedded?.bijlagen.map(
+                            (bijlage: any, idx: number) =>
+                              bijlage.titel && (
+                                <UnorderedListItem key={idx}>
+                                  <Link
+                                    href={bijlage.url?.length !== 0 ? bijlage.url : "#"}
+                                    target={bijlage.url?.length !== 0 ? "blank" : ""}
+                                  >
+                                    {bijlage.titel}
+                                  </Link>
+                                </UnorderedListItem>
+                              ),
+                          )}
                         </UnorderedList>
                       </TableCell>
                     </TableRow>
