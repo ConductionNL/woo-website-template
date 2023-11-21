@@ -1,0 +1,21 @@
+.container {
+  top: 12px;
+  width: 80%;
+  z-index: 100;
+  padding: 18px;
+  display: flex;
+  position: sticky;
+  align-items: center;
+  margin: 0 auto 24px;
+  background-color: white;
+  justify-content: space-between;
+  box-shadow: rgb(0, 0, 0, 0.1) 0px 0px 11px 0px;
+}
+
+.container > * {
+  flex: 1;
+}
+
+.label {
+  font-weight: 700 !important;
+}

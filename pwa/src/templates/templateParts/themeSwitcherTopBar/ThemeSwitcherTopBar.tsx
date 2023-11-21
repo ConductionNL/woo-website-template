@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { availableThemes } from "../../../services/getConfig";
 import { useEnvironment } from "../../../hooks/useEnvironment";
 import { navigate } from "gatsby";
+import clsx from "clsx";
+import { Heading3, Paragraph } from "@utrecht/component-library-react";
 
 export const ThemeSwitcherTopBar: React.FC = () => {
   const { initiateFromJSON } = useEnvironment();
@@ -37,13 +39,23 @@ export const ThemeSwitcherTopBar: React.FC = () => {
   }, [watchTheme]);
 
   return (
-    <section className={styles.container}>
-      <SelectSingle
-        options={availableThemes}
-        name="theme"
-        ariaLabel="Theme selector"
-        {...{ register, errors, control }}
-      />
+    <section className={clsx(styles.container, "open-webconcept-theme")}>
+      <div>
+        <Heading3>Koophulpje</Heading3>
+
+        <Paragraph>Bekijk de Woo-berichten van verschillende gemeenten</Paragraph>
+      </div>
+
+      <div>
+        <Paragraph className={styles.label}>Huidige gemeente</Paragraph>
+
+        <SelectSingle
+          options={availableThemes}
+          name="theme"
+          ariaLabel="Theme selector"
+          {...{ register, errors, control }}
+        />
+      </div>
     </section>
   );
 };
