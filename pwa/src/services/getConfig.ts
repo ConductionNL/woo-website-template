@@ -3,6 +3,7 @@ import Dinkelland from "./../../static/configFiles/dinkelland.json";
 import Epe from "./../../static/configFiles/epe.json";
 import Noaberkracht from "./../../static/configFiles/noaberkracht.json";
 import Noordwijk from "./../../static/configFiles/noordwijk.json";
+import OpenWebconcept from "./../../static/configFiles/open-webconcept.json";
 import Rotterdam from "./../../static/configFiles/rotterdam.json";
 import Tubbergen from "./../../static/configFiles/tubbergen.json";
 import Xxllnc from "./../../static/configFiles/xxllnc.json";
@@ -11,27 +12,30 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
   switch (themeOrDomainName) {
     case "open.epe.nl":
     case "epe-theme":
-      return Epe as Record<string, any>;
+      return Epe;
     case "open.noordwijk.nl":
     case "noordwijk-theme":
-      return Noordwijk as Record<string, any>;
+      return Noordwijk;
     case "open.rotterdam.nl":
     case "rotterdam-theme":
-      return Rotterdam as Record<string, any>;
+      return Rotterdam;
     case "open.noaberkracht.nl":
     case "noaberkracht-theme":
-      return Noaberkracht as Record<string, any>;
+      return Noaberkracht;
     case "open.tubbergen.nl":
     case "tubbergen-theme":
-      return Tubbergen as Record<string, any>;
+      return Tubbergen;
     case "open.dinkelland.nl":
     case "dinkelland-theme":
-      return Dinkelland as Record<string, any>;
+      return Dinkelland;
     case "open.xxllnc.nl":
     case "xxllnc-theme":
-      return Xxllnc as Record<string, any>;
+      return Xxllnc;
+    case "koophulpje.nl":
+    case "open-webconcept-theme":
+      return OpenWebconcept;
     default:
-      return Conduction as Record<string, any>;
+      return Conduction;
   }
 };
 
