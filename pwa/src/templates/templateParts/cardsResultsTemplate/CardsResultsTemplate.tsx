@@ -18,24 +18,24 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
       <div className={styles.componentsGrid}>
         {requests.map((request) => (
           <CardWrapper
-            key={request.id}
+            key={request._self.id}
             className={styles.cardContainer}
-            onClick={() => navigate(request.id)}
+            onClick={() => navigate(request._self.id)}
             tabIndex={0}
-            aria-label={`${request.Titel}, ${request.Samenvatting}, ${
-              request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : t("N/A")
+            aria-label={`${request.titel}, ${request.samenvatting}, ${
+              request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")
             }`}
           >
             <CardHeader className={styles.cardHeader}>
               <CardHeaderDate>
-                {request.Publicatiedatum ? translateDate(i18n.language, request.Publicatiedatum) : t("N/A")}
+                {request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")}
               </CardHeaderDate>
               <CardHeaderTitle className={styles.title}>
-                <Heading2>{request.Titel ?? t("No title available")}</Heading2>
+                <Heading2>{request.titel ?? t("No title available")}</Heading2>
               </CardHeaderTitle>
             </CardHeader>
 
-            <Paragraph className={styles.description}>{request.Samenvatting}</Paragraph>
+            <Paragraph className={styles.description}>{request.samenvatting}</Paragraph>
           </CardWrapper>
         ))}
       </div>

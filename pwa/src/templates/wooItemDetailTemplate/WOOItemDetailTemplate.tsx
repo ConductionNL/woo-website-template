@@ -53,7 +53,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
         {getItems.isSuccess && (
           <>
             <Heading1 id="mainContent">
-              {getItems.data.Titel !== "" ? getItems.data.Titel : t("No title available")}
+              {getItems.data.titel !== "" ? getItems.data.titel : t("No title available")}
             </Heading1>
 
             <HorizontalOverflowWrapper
@@ -64,73 +64,77 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
             >
               <Table className={styles.table}>
                 <TableBody className={styles.tableBody}>
-                  {getItems.data.ID && (
+                  {getItems.data.id && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Feature")}</TableCell>
-                      <TableCell>{isUUID(getItems.data.ID) ? getItems.data.Object_ID : getItems.data.ID}</TableCell>
+                      <TableCell>
+                        {isUUID(getItems.data._self.id) ? getItems.data.id : getItems.data._self.id}
+                      </TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data.Titel && (
+                  {getItems.data.titel && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Category")}</TableCell>
-                      <TableCell>{getItems.data.Categorie ?? "-"}</TableCell>
+                      <TableCell>{getItems.data.categorie ?? "-"}</TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data.Samenvatting && (
+                  {getItems.data.samenvatting && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Summary")}</TableCell>
-                      <TableCell>{getItems.data.Samenvatting}</TableCell>
+                      <TableCell>{getItems.data.samenvatting}</TableCell>
                     </TableRow>
                   )}
-                  {getItems.data.Beschrijving && (
+                  {getItems.data.beschrijving && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Description")}</TableCell>
-                      <TableCell>{getItems.data.Beschrijving}</TableCell>
+                      <TableCell>{getItems.data.beschrijving}</TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data.Termijnoverschrijding && (
+                  {getItems.data.termijnoverschrijding && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Exceeding the term")}</TableCell>
-                      <TableCell>{getItems.data.Termijnoverschrijding}</TableCell>
+                      <TableCell>{getItems.data.termijnoverschrijding}</TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data.Publicatiedatum && (
+                  {getItems.data.publicatiedatum && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Publication date")}</TableCell>
                       <TableCell>
-                        {getItems.data.Publicatiedatum
-                          ? translateDate(i18n.language, getItems.data.Publicatiedatum)
+                        {getItems.data.publicatiedatum
+                          ? translateDate(i18n.language, getItems.data.publicatiedatum)
                           : "-"}
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data.Ontvangstdatum && (
+                  {getItems.data.ontvangstdatum && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Registration date")}</TableCell>
 
-                      <TableCell>{translateDate(i18n.language, getItems.data.Ontvangstdatum) ?? "-"}</TableCell>
+                      <TableCell>{translateDate(i18n.language, getItems.data.ontvangstdatum) ?? "-"}</TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data.Besluitdatum && (
+                  {getItems.data.embedded?.metadata?.besluitdatum && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Decision date")} </TableCell>
-                      <TableCell>{translateDate(i18n.language, getItems.data.Besluitdatum) ?? "-"}</TableCell>
+                      <TableCell>
+                        {translateDate(i18n.language, getItems.data.embedded?.metadata?.besluitdatum) ?? "-"}
+                      </TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data?.embedded?.Themas && (
+                  {getItems.data?.embedded?.themas && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Themes")}</TableCell>
                       <TableCell>
-                        {getItems.data?.embedded?.Themas.map((thema: any, idx: number) => (
+                        {getItems.data?.embedded?.themas.map((thema: any, idx: number) => (
                           <span key={idx}>
-                            {thema.Hoofdthema + (idx !== getItems.data?.embedded?.Themas.length - 1 ? ", " : "")}
+                            {thema.hoofdthema + (idx !== getItems.data?.embedded?.themas?.length - 1 ? ", " : "")}
                           </span>
                         ))}
                       </TableCell>
@@ -141,27 +145,25 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Information request")}</TableCell>
                       <TableCell>
-                        <Link href={getItems.data?.embedded?.informatieverzoek.URL_Bijlage} target="blank">
-                          {getItems.data?.embedded?.informatieverzoek?.Titel_Bijlage}
+                        <Link href={getItems.data?.embedded?.informatieverzoek?.url} target="blank">
+                          {getItems.data?.embedded?.informatieverzoek?.titel}
                         </Link>
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {(getItems.data.Besluit || (getItems.data?.embedded?.besluit ?? getItems.data.URL_besluit)) && (
+                  {(getItems.data?.besluit ||
+                    (getItems.data?.embedded?.besluit ?? getItems.data?.embedded?.besluit?.url)) && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Decision")}</TableCell>
                       <TableCell>
-                        {getItems.data.Besluit}
-                        {getItems.data.Besluit &&
-                          (getItems.data?.embedded?.besluit ?? getItems.data.URL_besluit) &&
-                          ","}{" "}
-                        {(getItems.data?.embedded?.besluit ?? getItems.data.URL_besluit) && (
+                        {(getItems.data?.embedded?.besluit ?? getItems.data?.embedded?.besluit?.url) && (
                           <Link
-                            href={getItems.data?.embedded?.besluit?.URL_Bijlage ?? getItems.data.URL_besluit}
+                            href={getItems.data?.embedded?.besluit?.url ?? getItems.data?.embedded?.besluit?.url}
                             target="blank"
                           >
-                            {getItems.data?.embedded?.besluit?.Titel_Bijlage ?? getPDFName(getItems.data.URL_besluit)}
+                            {getItems.data?.embedded?.besluit?.titel ??
+                              getPDFName(getItems.data?.embedded?.besluit?.url)}
                           </Link>
                         )}
                       </TableCell>
@@ -172,28 +174,31 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Inventory list")}</TableCell>
                       <TableCell>
-                        <Link href={getItems.data?.embedded?.inventarisatielijst?.URL_Bijlage} target="blank">
-                          {getItems.data?.embedded?.inventarisatielijst?.Titel_Bijlage}
+                        <Link href={getItems.data?.embedded?.inventarisatielijst?.url} target="blank">
+                          {getItems.data?.embedded?.inventarisatielijst?.titel}
                         </Link>
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data?.embedded?.Bijlagen && (
+                  {getItems.data?.embedded?.bijlagen && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Attachments")}</TableCell>
                       <TableCell>
                         <UnorderedList>
-                          {getItems.data?.embedded?.Bijlagen.map((bijlage: any, idx: number) => (
-                            <UnorderedListItem key={idx}>
-                              <Link
-                                href={bijlage.URL_Bijlage?.length !== 0 ? bijlage.URL_Bijlage : "#"}
-                                target={bijlage.URL_Bijlage?.length !== 0 ? "blank" : ""}
-                              >
-                                {bijlage.Titel_Bijlage}
-                              </Link>
-                            </UnorderedListItem>
-                          ))}
+                          {getItems.data?.embedded?.bijlagen.map(
+                            (bijlage: any, idx: number) =>
+                              bijlage.titel && (
+                                <UnorderedListItem key={idx}>
+                                  <Link
+                                    href={bijlage.url?.length !== 0 ? bijlage.url : "#"}
+                                    target={bijlage.url?.length !== 0 ? "blank" : ""}
+                                  >
+                                    {bijlage.titel}
+                                  </Link>
+                                </UnorderedListItem>
+                              ),
+                          )}
                         </UnorderedList>
                       </TableCell>
                     </TableRow>

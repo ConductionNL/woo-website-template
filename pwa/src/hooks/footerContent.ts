@@ -11,11 +11,15 @@ export const useFooterContent = () => {
   const fileName = getFileNameFromUrl(window.sessionStorage.getItem("FOOTER_CONTENT") ?? DEFAULT_FOOTER_CONTENT_URL);
 
   const getContent = () =>
-    useQuery<any, Error>(["contents", fileName], () => API?.FooterContent.getContent(fileName), {
-      onError: (error) => {
-        console.warn(error.message);
+    useQuery<any, Error>(
+      ["contents", window.sessionStorage.getItem("FOOTER_CONTENT")],
+      () => API?.FooterContent.getContent(fileName),
+      {
+        onError: (error) => {
+          console.warn(error.message);
+        },
       },
-    });
+    );
 
   return { getContent };
 };
