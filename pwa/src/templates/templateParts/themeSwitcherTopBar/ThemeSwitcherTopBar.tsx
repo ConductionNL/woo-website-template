@@ -4,6 +4,7 @@ import { SelectSingle } from "@conduction/components";
 import { useForm } from "react-hook-form";
 import { availableThemes } from "../../../services/getConfig";
 import { useEnvironment } from "../../../hooks/useEnvironment";
+import { navigate } from "gatsby";
 
 export const ThemeSwitcherTopBar: React.FC = () => {
   const { initiateFromJSON } = useEnvironment();
@@ -29,6 +30,8 @@ export const ThemeSwitcherTopBar: React.FC = () => {
 
   React.useEffect(() => {
     if (!watchTheme) return;
+
+    navigate("/");
 
     initiateFromJSON(watchTheme.value);
   }, [watchTheme]);
