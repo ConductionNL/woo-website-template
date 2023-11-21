@@ -1,0 +1,187 @@
+openapi: 3.0.0
+info:
+  title: WOO
+  version: 1.0.0
+servers:
+  - url: https://commongateway.nl/
+paths:
+  /api/openWOO:
+    get:
+      summary: Retrieve WOO collection
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OpenWOO'
+  /api/openWOO/{id}:
+    get:
+      summary: Retrieve a WOO object
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: UUID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OpenWOO'
+components:
+  schemas:
+    OpenWOO:
+      type: object
+      description: ''
+      properties:
+        oidn:
+          type: string
+          description: The public available code for the designated organisation (municipality) this object is meant for.
+        UUID:
+          type: string
+        ID:
+          type: string
+        Object_ID:
+          type: integer
+        Portal_url:
+          type: string
+          format: uri
+        Behandelend_bestuursorgaan:
+          type: string
+        Ontvanger_informatieverzoek:
+          type: string
+        Volgnummer:
+          type: string
+        Titel:
+          type: string
+        Beschrijving:
+          type: string
+        Samenvatting:
+          type: string
+        Categorie:
+          type: string
+        Verzoeker:
+          type: string
+        Ontvangstdatum:
+          type: string
+          format: date
+          description: The format should be Y-m-d.
+        Besluitdatum:
+          type: string
+          format: date
+          description: The format should be Y-m-d.
+        Publicatiedatum:
+          type: string
+          format: date
+          description: Publicatiedatum van een Woo object is nooit in de toekomst.
+        Behandelstatus:
+          type: string
+        Besluit:
+          type: string
+        Termijnoverschrijding:
+          type: string
+        URL_informatieverzoek:
+          type: string
+          format: uri
+        URL_inventarisatielijst:
+          type: string
+          format: uri
+        URL_besluit:
+          type: string
+          format: uri
+        informatieverzoek:
+          $ref: '#/components/schemas/Bijlage'
+        inventarisatielijst:
+          $ref: '#/components/schemas/Bijlage'
+        besluit:
+          $ref: '#/components/schemas/Bijlage'
+        Geografisch_gebied:
+          type: string
+        BAG_ID:
+          type: string
+        BGT_ID:
+          type: string
+        Postcodegebied:
+          type: string
+        Adres:
+          type: string
+        COORDS:
+          type: array
+          items:
+            $ref: '#/components/schemas/COORDS'
+        Geografische_positie:
+          type: array
+          items:
+            $ref: '#/components/schemas/GeografischePositie'
+        Bijlagen:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bijlage'
+        Themas:
+          type: array
+          items:
+            $ref: '#/components/schemas/Thema'
+      required:
+        - Categorie
+        - Publicatiedatum
+    Bijlage:
+      title: Bijlage
+      type: object
+      description: ''
+      required:
+        - Titel_Bijlage
+      properties:
+        Type_Bijlage:
+          type: string
+        Status_Bijlage:
+          type: string
+        Tijdstip_laatste_wijziging_bijlage:
+          type: string
+          format: date-time
+          description: The datetime of the last change in the bijlage, format Y-m-d\TH:i:s
+        Titel_Bijlage:
+          type: string
+        URL_Bijlage:
+          type: string
+          format: uri
+    COORDS:
+      title: COORDS
+      type: object
+      description: ''
+      required:
+        - X
+        - Y
+      properties:
+        X:
+          type: string
+        Y:
+          type: string
+    GeografischePositie:
+      title: GeografischePositie
+      type: object
+      description: ''
+      required:
+        - Longitude
+        - Latitude
+      properties:
+        Longitude:
+          type: string
+        Latitude:
+          type: string
+    Thema:
+      title: Thema
+      type: object
+      description: ''
+      required:
+        - Hoofdthema
+      properties:
+        Hoofdthema:
+          type: string
+        Subthema:
+          type: string
+        Aanvullend_thema:
+          type: string
