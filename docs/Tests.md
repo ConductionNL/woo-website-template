@@ -1,6 +1,6 @@
 # Testscenario's
 
-Om de Open WOO Website zelfstandig te kunnen installeren of doorontwikkelen, is het belangrijk om ook over herbruikbare testscenario's te beschikken.
+Om de Open WOO Website zelfstandig te kunnen installeren of doorontwikkelen, is het belangrijk om ook over herbruikbare testscenario's te beschikken. Daarnaast wilt u als afnemer ook graag weten of uw SAAS of SLA product graag werkt. Daarvoor hebben we de volgende testscripts uitgeschreven. 
 
 We kunnen de testscripts opsplitsen in de volgende categorieën:
 
