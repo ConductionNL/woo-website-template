@@ -3,9 +3,11 @@ import * as styles from "./ThemeSwitcherTopBar.module.css";
 import { SelectSingle } from "@conduction/components";
 import { useForm } from "react-hook-form";
 import { availableThemes } from "../../../services/getConfig";
-import { initiateEnvironmentFromJSONConfig } from "../../../services/initiateEnvironment";
+import { useEnvironment } from "../../../hooks/useEnvironment";
 
 export const ThemeSwitcherTopBar: React.FC = () => {
+  const { initiateFromJSON } = useEnvironment();
+
   const {
     control,
     register,
@@ -28,7 +30,7 @@ export const ThemeSwitcherTopBar: React.FC = () => {
   React.useEffect(() => {
     if (!watchTheme) return;
 
-    initiateEnvironmentFromJSONConfig(watchTheme.value);
+    initiateFromJSON(watchTheme.value);
   }, [watchTheme]);
 
   return (
