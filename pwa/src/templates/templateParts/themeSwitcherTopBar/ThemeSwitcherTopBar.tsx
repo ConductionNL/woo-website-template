@@ -3,7 +3,7 @@ import * as styles from "./ThemeSwitcherTopBar.module.css";
 import { SelectSingle } from "@conduction/components";
 import { useForm } from "react-hook-form";
 import { availableThemes } from "../../../services/getConfig";
-import { initiateEnvironment } from "../../../services/initiateEnvironment";
+import { initiateEnvironmentFromJSONConfig } from "../../../services/initiateEnvironment";
 
 export const ThemeSwitcherTopBar: React.FC = () => {
   const {
@@ -23,12 +23,12 @@ export const ThemeSwitcherTopBar: React.FC = () => {
       "theme",
       availableThemes.find((theme) => theme.value === window.sessionStorage.getItem("NL_DESIGN_THEME_CLASSNAME")),
     ); // init select field based on domain name
-  }, [window.sessionStorage.getItem("NL_DESIGN_THEME_CLASSNAME")]);
+  }, []);
 
   React.useEffect(() => {
     if (!watchTheme) return;
 
-    initiateEnvironment(watchTheme.value);
+    initiateEnvironmentFromJSONConfig(watchTheme.value);
   }, [watchTheme]);
 
   return (
