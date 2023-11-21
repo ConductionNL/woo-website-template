@@ -73,14 +73,14 @@ De Woo specificeert een aantal categorieën (zie configuratie) die door een orga
 ## Praktijk voorbeelden
 Op dit moment wordt de OpenWoo.app al door een aantal organisaties gebruikt
 
-| Organisatie | Type | Woo Pagina | Woo Bron(en)            | Status     |
-|-------------|------------|-------------------------|------------|
-| [Noordwijk](https://www.noordwijk.nl/) | Gemeente |  [Pagina](https://conductionnl.github.io/woo-website-noordwijk/) | Zaaksysteem  | Acceptatie | 
-| [Tubbergen](https://www.tubbergen.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-tubbergen/) | Zaaksysteem  | Acceptatie | 
+| Organisatie | Type | Woo Pagina | Woo Bron(en) | Zaaksysteem | Status |
+|-------------|------|------------|--------------|-------------|--------|
+| [Noordwijk](https://www.noordwijk.nl/) | Gemeente |  [Pagina](https://conductionnl.github.io/woo-website-noordwijk/) | Zaaksysteem.nl  | Acceptatie | 
+| [Tubbergen](https://www.tubbergen.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-tubbergen/) | Zaaksysteem.nl  | Acceptatie | 
 | [Epe](https://www.epe.nl/) | Gemeente |[Pagina](https://open.epe.nl/) | Zaaksysteem | Productie  |
-| [Dinkelland](https://www.dinkelland.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-dinkelland/) | Zaaksysteem | Acceptatie | 
+| [Dinkelland](https://www.dinkelland.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-dinkelland/) | Zaaksysteem.nl | Acceptatie | 
 | [Rotterdam (Alleen vormgeving)](https://www.rotterdam.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-rotterdam/) | Demo Omgeving                   | Demo       | 
-| [Noaberkracht](https://www.dinkelland.nl/noaberkracht-dinkelland-tubbergen) | Samenwerkingsverband | [Pagina](https://conductionnl.github.io/woo-website-noaberkracht/) | Zaaksysteem | Acceptatie | 
+| [Noaberkracht](https://www.dinkelland.nl/noaberkracht-dinkelland-tubbergen) | Samenwerkingsverband | [Pagina](https://conductionnl.github.io/woo-website-noaberkracht/) | Zaaksysteem.nl | Acceptatie | 
 | [Leiden (Alleen vormgeving)](https://gemeente.leiden.nl/) | Gemeente | [Pagina](https://conductionnl.github.io/woo-website-leiden/) | Demo Omgeving           | Demo       | 
 | [Xxllnc (Demo omgeving)](https://xxllnc.nl/) | Leverancier | [Pagina](https://conductionnl.github.io/woo-website-xxllnc/) | Demo Omgeving           | Demo       | 
 
