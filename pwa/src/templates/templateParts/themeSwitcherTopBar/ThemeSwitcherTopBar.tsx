@@ -38,6 +38,10 @@ export const ThemeSwitcherTopBar: React.FC = () => {
     initiateFromJSON(watchTheme.value);
   }, [watchTheme]);
 
+  if (window.sessionStorage.getItem("SHOW_THEME_SWITCHER") === "false") {
+    return <></>;
+  }
+
   return (
     <section className={clsx(styles.container, "open-webconcept-theme")}>
       <div>
@@ -47,7 +51,7 @@ export const ThemeSwitcherTopBar: React.FC = () => {
       </div>
 
       <div>
-        <Paragraph className={styles.label}>Huidige gemeente</Paragraph>
+        <Paragraph className={styles.label}>Selecteer een gemeente</Paragraph>
 
         <SelectSingle
           options={availableThemes}

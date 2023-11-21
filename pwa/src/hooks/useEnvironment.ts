@@ -22,6 +22,7 @@ export const useEnvironment = () => {
   }, []);
 
   const initiateFromEnv = () => {
+    window.sessionStorage.setItem("SHOW_THEME_SWITCHER", process.env.GATSBY_SHOW_THEME_SWITCHER ?? "");
     window.sessionStorage.setItem("API_BASE_URL", process.env.GATSBY_API_BASE_URL ?? "");
     window.sessionStorage.setItem("NL_DESIGN_THEME_CLASSNAME", process.env.GATSBY_NL_DESIGN_THEME_CLASSNAME ?? "");
     window.sessionStorage.setItem("FAVICON_URL", process.env.GATSBY_FAVICON_URL ?? "");
@@ -40,6 +41,7 @@ export const useEnvironment = () => {
 
     if (!config) return; // no config found, nothing else to do
 
+    window.sessionStorage.setItem("SHOW_THEME_SWITCHER", config.GATSBY_SHOW_THEME_SWITCHER ?? "");
     window.sessionStorage.setItem("API_BASE_URL", config.GATSBY_API_BASE_URL ?? "");
     window.sessionStorage.setItem("NL_DESIGN_THEME_CLASSNAME", config.GATSBY_NL_DESIGN_THEME_CLASSNAME ?? "");
     window.sessionStorage.setItem("FAVICON_URL", config.GATSBY_FAVICON_URL ?? "");

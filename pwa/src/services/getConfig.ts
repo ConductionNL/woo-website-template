@@ -33,6 +33,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
       return Xxllnc;
     case "koophulpje.nl":
     case "open-webconcept-theme":
+    case "localhost":
       return OpenWebconcept;
     default:
       return Conduction;
