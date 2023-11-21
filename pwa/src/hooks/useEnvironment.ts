@@ -59,7 +59,7 @@ export const useEnvironment = () => {
   const themeSwitcherMiddleware = () => {
     switch (window.location.hostname) {
       case "koophulpje.nl":
-        // case "localhost.nl": // development purposes
+        // case "localhost": // development purposes
         window.sessionStorage.setItem("SHOW_THEME_SWITCHER", "true");
         break;
     }
