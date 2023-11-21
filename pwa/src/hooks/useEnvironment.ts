@@ -63,6 +63,8 @@ export const useEnvironment = () => {
         window.sessionStorage.setItem("SHOW_THEME_SWITCHER", "true");
         break;
     }
+
+    if (process.env.GATSBY_SHOW_THEME_SWITCHER === "true") window.sessionStorage.setItem("SHOW_THEME_SWITCHER", "true");
   };
 
   return { initiateFromEnv, initiateFromJSON };
