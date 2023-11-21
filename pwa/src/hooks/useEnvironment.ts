@@ -7,6 +7,7 @@ export const useEnvironment = () => {
 
   const handleStorageChange = () => {
     setSessionStorageUpdatedId(uniqueId());
+    themeSwitcherMiddleware();
   };
 
   const updateSessionStorage = () => {
@@ -53,6 +54,15 @@ export const useEnvironment = () => {
     window.sessionStorage.setItem("OIDN_NUMBER", config.GATSBY_OIDN_NUMBER ?? "");
 
     updateSessionStorage();
+  };
+
+  const themeSwitcherMiddleware = () => {
+    switch (window.location.hostname) {
+      case "koophulpje.nl":
+        // case "localhost.nl": // development purposes
+        window.sessionStorage.setItem("SHOW_THEME_SWITCHER", "true");
+        break;
+    }
   };
 
   return { initiateFromEnv, initiateFromJSON };
