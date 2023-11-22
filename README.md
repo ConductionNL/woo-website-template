@@ -74,7 +74,7 @@ De Woo specificeert een aantal categorieën (zie configuratie) die door een orga
 Op dit moment wordt de OpenWoo.app al door een aantal organisaties gebruikt
 
 | Organisatie | Type | Woo Pagina | Woo Bron | Status |
-|-------------|------|------------|--------------|-------------|--------|
+|-------------|------|------------|--------------|--------|
 | [Noordwijk](https://www.noordwijk.nl/) | Gemeente |  [Pagina](https://conductionnl.github.io/woo-website-noordwijk/) | Zaaksysteem.nl  | Acceptatie | 
 | [Tubbergen](https://www.tubbergen.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-tubbergen/) | Zaaksysteem.nl  | Acceptatie | 
 | [Epe](https://www.epe.nl/) | Gemeente |[Pagina](https://open.epe.nl/) | Zaaksysteem | Productie  |
