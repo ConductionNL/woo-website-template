@@ -1,0 +1,19 @@
+name: Bugmelding
+description: Meld een probleem of fout
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Beschrijving van de bug
+      placeholder: "Beschrijf wat er gebeurde toen de bug optrad."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce-steps
+    attributes:
+      label: Stappen om te reproduceren
+      placeholder: "Beschrijf de stappen die nodig zijn om de bug opnieuw te laten optreden."
+    validations:
+      required: true

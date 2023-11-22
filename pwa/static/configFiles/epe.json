@@ -1,5 +1,6 @@
 {
-  "GATSBY_API_BASE_URL": "https://api.gateway.commonground.nu/api",
+  "GATSBY_SHOW_THEME_SWITCHER": "false",
+  "GATSBY_API_BASE_URL": "https://api.common-gateway.commonground.nu/api",
   "GATSBY_NL_DESIGN_THEME_CLASSNAME": "epe-theme",
   "GATSBY_FAVICON_URL": "https://www.epe.nl/sites/default/themes/custom/toptasks_sub_theme/favicon/favicon-32x32.png",
   "GATSBY_ORGANISATION_NAME": "Gemeente Epe",

@@ -1,0 +1,79 @@
+[
+  {
+    "title": "Documentatie",
+    "items": [
+      {
+        "value": "Architectuur",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md"
+      },
+      {
+        "value": "Kosten",
+        "type": "readme",
+        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md"
+      },
+      {
+        "value": "Privacy",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Privacyverklaring.md"
+      },
+      {
+        "value": "Security",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/SECURITY.md"
+      },
+      {
+        "value": "Toegankelijkheid",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Toegankelijkheid.md"
+      },
+      {
+        "value": "Roadmap",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md"
+      }
+    ]
+  },
+  {
+    "title": "Installatie",
+    "items": [
+      {
+        "value": "Installatie",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Installatie.md"
+      },
+      {
+        "value": "Configuratie",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuratie.md"
+      },
+      {
+        "value": "Naar Productie",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md"
+      },
+      {
+        "value": "Testscenario's",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Tests.md"
+      }
+    ]
+  },
+  {
+    "title": "Links",
+    "items": [
+      {
+        "value": "Github",
+        "ariaLabel": "Github",
+        "link": "https://github.com/ConductionNL/woo-website-template",
+        "icon": { "prefix": "fas", "icon": "external-link", "placement": "left" }
+      },
+      {
+        "value": "Open Webconcept",
+        "ariaLabel": "Github",
+        "link": "https://openwebconcept.nl/",
+        "icon": { "prefix": "fas", "icon": "external-link", "placement": "left" }
+      }
+    ]
+  }
+]
