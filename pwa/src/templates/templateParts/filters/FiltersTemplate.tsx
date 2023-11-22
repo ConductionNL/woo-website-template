@@ -114,7 +114,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
 
     const categoriesWithData = getCategories.data.categorie.map((category: any) => ({
       label: _.upperFirst(category._id.toLowerCase()),
-      value: category._id.toLowerCase(),
+      value: _.upperFirst(category._id.toLowerCase()),
     }));
 
     setCategoryOptions(_.orderBy(_.uniqBy(categoriesWithData, "value"), "label", "asc"));
