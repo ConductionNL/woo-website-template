@@ -17,7 +17,7 @@ De implementatie van de Wet Open Overheid brengt twee kernuitdagingen met zich m
 2. **Proactieve Publicatie:**
    Overheden moeten informatie proactief te publiceren. Dit betekent dat publicatie onderdeel moet worden van het normale werkproces. Hiermee is het richting de toekomst niet haalbaar om Woo-publicaties handmatig via een apart systeem (bijvoorbeeld CMS website) te laten verlopen.
 
-Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Management Systeem (CMS) of door levering vanuit één systeem. Handmatige publicatie van alle overheidsinformatie zou een aanzienlijke personele inzet vereisen, wat onpraktisch is. Daarbij komt dat de verscheidenheid aan publicatietypen vaak verdeeld is over meerdere systemen, wat de situatie verder compliceert.
+Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Management Systeem (CMS) of door levering vanuit één systeem. Handmatige publicatie van alle overheidsinformatie zou een aanzienlijke personele inzet vereisen, wat onpraktisch is. Daarbij komt het voor dat verscheidende categorieën vaak verdeeld zijn over meerdere systemen, wat de situatie verder compliceert.
 
 ## Oplossing
 
@@ -30,7 +30,7 @@ De Open Woo-app biedt een geïntegreerde oplossing die bestaat uit een aantal ho
    Een interface waarmee belanghebbenden binnen een organisatie naar relevante informatie kunnen zoeken.
 
 3. **Koppelvlak:**
-   Een module die in staat is om informatie uit verschillende systemen te verzamelen, waardoor een gecentraliseerde toegang tot diverse publicatietypen mogelijk wordt.
+   Een module die in staat is om informatie uit verschillende systemen te verzamelen, waardoor een gecentraliseerde toegang tot diverse categorieën mogelijk wordt.
 
 4. **CMS-module:**
    Een aanvullende module voor het handmatig invoeren van informatie die niet automatisch kan worden opgehaald, en voor het beheren van de gepubliceerde pagina's.
@@ -73,8 +73,8 @@ De Woo specificeert een aantal categorieën (zie configuratie) die door een orga
 ## Praktijk voorbeelden
 Op dit moment wordt de OpenWoo.app al door een aantal organisaties gebruikt
 
-| Organisatie | Type | Woo Pagina | Woo Bron(en) | Zaaksysteem | Status |
-|-------------|------|------------|--------------|-------------|--------|
+| Organisatie | Type | Woo Pagina | Woo Bron | Status |
+|-------------|------|------------|--------------|--------|
 | [Noordwijk](https://www.noordwijk.nl/) | Gemeente |  [Pagina](https://conductionnl.github.io/woo-website-noordwijk/) | Zaaksysteem.nl  | Acceptatie | 
 | [Tubbergen](https://www.tubbergen.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-tubbergen/) | Zaaksysteem.nl  | Acceptatie | 
 | [Epe](https://www.epe.nl/) | Gemeente |[Pagina](https://open.epe.nl/) | Zaaksysteem | Productie  |
