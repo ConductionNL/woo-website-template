@@ -17,10 +17,10 @@ export default class OpenWoo {
   public getAll = async (filters: IFiltersContext, currentPage: number, limit: number): Promise<any> => {
     let endpoint = `/openWOO?extend[]=all${filtersToQueryParams(
       filters,
-    )}&_order[Publicatiedatum]=desc&_limit=${limit}&_page=${currentPage}`;
+    )}&_order[publicatiedatum]=desc&_limit=${limit}&_page=${currentPage}`;
 
     if (window.sessionStorage.getItem("OIDN_NUMBER")) {
-      endpoint += `&behandelendBestuursorgaan.oidn=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
+      endpoint += `&embedded.behandelendBestuursorgaan.oidn=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
     }
 
     const { data } = await this._send(this._instance, "GET", endpoint);

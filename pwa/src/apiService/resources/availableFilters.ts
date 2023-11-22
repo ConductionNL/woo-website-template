@@ -11,10 +11,10 @@ export default class AvailableFilters {
   }
 
   public getCategories = async (): Promise<any> => {
-    let endpoint = "/openWOO?_queries[]=Categorie";
+    let endpoint = "/openWOO?_queries[]=categorie";
 
     if (window.sessionStorage.getItem("OIDN_NUMBER")) {
-      endpoint += `&behandelendBestuursorgaan.oidn=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
+      endpoint += `&embedded.behandelendBestuursorgaan.oidn=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
     }
 
     const { data } = await this._send(this._instance, "GET", endpoint);

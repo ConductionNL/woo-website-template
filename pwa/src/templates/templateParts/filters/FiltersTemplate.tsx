@@ -66,16 +66,16 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
     getCategories.isSuccess &&
       setValue(
         "category",
-        categoryOptions.find((option: any) => option.value === params.Categorie?.replace(/_/g, " ")),
+        categoryOptions.find((option: any) => option.value === params.categorie?.replace(/_/g, " ")),
       );
   };
 
   const onSubmit = (data: any) => {
     setFilters({
       _search: data._search,
-      "Publicatiedatum[after]": data.year?.after,
-      "Publicatiedatum[before]": data.year?.before,
-      Categorie: data.category?.value,
+      "publicatiedatum[after]": data.year?.after,
+      "publicatiedatum[before]": data.year?.before,
+      categorie: data.category?.value,
     });
   };
 
@@ -112,7 +112,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   React.useEffect(() => {
     if (!getCategories.isSuccess) return;
 
-    const categoriesWithData = getCategories.data.Categorie.map((category: any) => ({
+    const categoriesWithData = getCategories.data.categorie.map((category: any) => ({
       label: _.upperFirst(category._id.toLowerCase()),
       value: category._id.toLowerCase(),
     }));
@@ -138,7 +138,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
           isClearable
           defaultValue={generateYearsArray(currentYear - 2021).find((year: any) => {
             return (
-              year.after === filters["Publicatiedatum[after]"] && year.before === filters["Publicatiedatum[before]"]
+              year.after === filters["publicatiedatum[after]"] && year.before === filters["publicatiedatum[before]"]
             );
           })}
           {...{ register, errors, control }}
@@ -151,7 +151,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
             options={categoryOptions}
             name="category"
             placeholder={t("Category")}
-            defaultValue={categoryOptions && categoryOptions.find((option: any) => option.value === filters.Categorie)}
+            defaultValue={categoryOptions && categoryOptions.find((option: any) => option.value === filters.categorie)}
             isClearable
             disabled={getCategories.isLoading}
             {...{ register, errors, control }}
