@@ -38,28 +38,28 @@ export const ThemeSwitcherTopBar: React.FC = () => {
     initiateFromJSON(watchTheme.value);
   }, [watchTheme]);
 
-  if (window.sessionStorage.getItem("SHOW_THEME_SWITCHER") === "false") {
-    return <></>;
+  if (window.sessionStorage.getItem("SHOW_THEME_SWITCHER") === "true") {
+    return (
+      <section className={clsx(styles.container, "open-webconcept-theme")}>
+        <div>
+          <Heading3>Koophulpje</Heading3>
+
+          <Paragraph>Bekijk de Woo-berichten van verschillende gemeenten</Paragraph>
+        </div>
+
+        <div>
+          <Paragraph className={styles.label}>Selecteer een gemeente</Paragraph>
+
+          <SelectSingle
+            options={availableThemes}
+            name="theme"
+            ariaLabel="Theme selector"
+            {...{ register, errors, control }}
+          />
+        </div>
+      </section>
+    );
   }
 
-  return (
-    <section className={clsx(styles.container, "open-webconcept-theme")}>
-      <div>
-        <Heading3>Koophulpje</Heading3>
-
-        <Paragraph>Bekijk de Woo-berichten van verschillende gemeenten</Paragraph>
-      </div>
-
-      <div>
-        <Paragraph className={styles.label}>Selecteer een gemeente</Paragraph>
-
-        <SelectSingle
-          options={availableThemes}
-          name="theme"
-          ariaLabel="Theme selector"
-          {...{ register, errors, control }}
-        />
-      </div>
-    </section>
-  );
+  return <></>;
 };
