@@ -45,8 +45,6 @@ export const useEnvironment = () => {
   const initiateFromJSON = (themeOrDomainName: string) => {
     const config = getConfig(themeOrDomainName);
 
-    console.log(config);
-
     if (!config) return; // no config found, nothing else to do
 
     window.sessionStorage.setItem("SHOW_THEME_SWITCHER", config.GATSBY_SHOW_THEME_SWITCHER ?? "");
