@@ -7,6 +7,16 @@ import OpenWebconcept from "./../../static/configFiles/open-webconcept.json";
 import Rotterdam from "./../../static/configFiles/rotterdam.json";
 import Tubbergen from "./../../static/configFiles/tubbergen.json";
 import Xxllnc from "./../../static/configFiles/xxllnc.json";
+import Barendrecht from "./../../static/configFiles/barendrecht.json";
+import Ridderkerk from "./../../static/configFiles/ridderkerk.json";
+import Buren from "./../../static/configFiles/buren.json";
+import Albrandswaard from "./../../static/configFiles/albrandswaard.json";
+import StedeBroec from "./../../static/configFiles/stede-broec.json";
+import Lansingerland from "./../../static/configFiles/lansingerland.json";
+import Waddinxveen from "./../../static/configFiles/waddinxveen..json";
+import RijssenHolten from "./../../static/configFiles/rijssen-holten.json";
+import HoekscheWaard from "./../../static/configFiles/hoeksche-waard.json";
+import Texel from "./../../static/configFiles/texel.json";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
   switch (themeOrDomainName) {
@@ -33,8 +43,30 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
       return Xxllnc;
     case "koophulpje.nl":
     case "open-webconcept-theme":
-      // case "localhost": // development purposes
+    case "localhost": // development purposes
       return OpenWebconcept;
+
+    case "barendrecht":
+      return Barendrecht;
+    case "ridderkerk":
+      return Ridderkerk;
+    case "buren":
+      return Buren;
+    case "albrandswaard":
+      return Albrandswaard;
+    case "stedebroec":
+      return StedeBroec;
+    case "lansingerland":
+      return Lansingerland;
+    case "waddinxveen":
+      return Waddinxveen;
+    case "rijssen-holten":
+      return RijssenHolten;
+    case "hoeksche-waard":
+      return HoekscheWaard;
+    case "texel":
+      return Texel;
+
     default:
       return Conduction;
   }
@@ -44,6 +76,18 @@ export const availableThemes: { label: string; value: string }[] = [
   {
     label: "Koophulpje",
     value: "open-webconcept-theme",
+  },
+  {
+    label: "Albrandswaard",
+    value: "albrandswaard",
+  },
+  {
+    label: "Barendrecht",
+    value: "barendrecht",
+  },
+  {
+    label: "Buren",
+    value: "buren",
   },
   {
     label: "Conduction",
@@ -58,6 +102,14 @@ export const availableThemes: { label: string; value: string }[] = [
     value: "epe-theme",
   },
   {
+    label: "Hoeksche Waard",
+    value: "hoeksche-waard",
+  },
+  {
+    label: "Lansingerland",
+    value: "lansingerland",
+  },
+  {
     label: "Noaberkracht",
     value: "noaberkracht-theme",
   },
@@ -66,12 +118,32 @@ export const availableThemes: { label: string; value: string }[] = [
     value: "noordwijk-theme",
   },
   {
+    label: "Ridderkerk",
+    value: "ridderkerk",
+  },
+  {
+    label: "Rijssen-Holten",
+    value: "rijssen-holten",
+  },
+  {
     label: "Rotterdam",
     value: "rotterdam-theme",
   },
   {
+    label: "Stede Broec",
+    value: "stedebroec",
+  },
+  {
+    label: "Texel",
+    value: "texel",
+  },
+  {
     label: "Tubbergen",
     value: "tubbergen-theme",
+  },
+  {
+    label: "Waddinxveen",
+    value: "waddinxveen",
   },
   {
     label: "XXLLNC",
