@@ -43,7 +43,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
       return Xxllnc;
     case "koophulpje.nl":
     case "open-webconcept-theme":
-    case "localhost": // development purposes
+      // case "localhost": // development purposes
       return OpenWebconcept;
 
     case "barendrecht":
@@ -74,7 +74,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
 
 export const availableThemes: { label: string; value: string }[] = [
   {
-    label: "Koophulpje",
+    label: "Alle organisaties",
     value: "open-webconcept-theme",
   },
   {
@@ -89,10 +89,11 @@ export const availableThemes: { label: string; value: string }[] = [
     label: "Buren",
     value: "buren",
   },
-  {
-    label: "Conduction",
-    value: "conduction-theme",
-  },
+  // {
+  //   label: "Conduction",
+  //   value: "conduction-theme",
+  // },
+  // development purposes
   {
     label: "Dinkelland",
     value: "dinkelland-theme",
@@ -145,8 +146,9 @@ export const availableThemes: { label: string; value: string }[] = [
     label: "Waddinxveen",
     value: "waddinxveen",
   },
-  {
-    label: "XXLLNC",
-    value: "xxllnc-theme",
-  },
+  // {
+  //   label: "XXLLNC",
+  //   value: "xxllnc-theme",
+  // },
+  // development purposes
 ];
