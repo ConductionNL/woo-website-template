@@ -17,6 +17,7 @@ import Waddinxveen from "./../../static/configFiles/waddinxveen..json";
 import RijssenHolten from "./../../static/configFiles/rijssen-holten.json";
 import HoekscheWaard from "./../../static/configFiles/hoeksche-waard.json";
 import Texel from "./../../static/configFiles/texel.json";
+import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
   switch (themeOrDomainName) {
@@ -72,83 +73,34 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
   }
 };
 
-export const availableThemes: { label: string; value: string }[] = [
+export const availableThemes: TGroupedSelectOption[] = [
   {
-    label: "Alle organisaties",
-    value: "open-webconcept-theme",
+    label: "Organisaties",
+    options: [
+      { label: "Alle organisaties", value: "open-webconcept-theme" },
+      { label: "Conduction", value: "conduction-theme" },
+      { label: "Noaberkracht", value: "noaberkracht-theme" },
+      { label: "XXLLNC", value: "xxllnc-theme" },
+    ],
   },
   {
-    label: "Albrandswaard",
-    value: "albrandswaard",
+    label: "Gemeenten",
+    options: [
+      { label: "Albrandswaard", value: "albrandswaard" },
+      { label: "Barendrecht", value: "barendrecht" },
+      { label: "Buren", value: "buren" },
+      { label: "Dinkelland", value: "dinkelland-theme" },
+      { label: "Epe", value: "epe-theme" },
+      { label: "Hoeksche Waard", value: "hoeksche-waard" },
+      { label: "Lansingerland", value: "lansingerland" },
+      { label: "Noordwijk", value: "noordwijk-theme" },
+      { label: "Ridderkerk", value: "ridderkerk" },
+      { label: "Rijssen-Holten", value: "rijssen-holten" },
+      { label: "Rotterdam", value: "rotterdam-theme" },
+      { label: "Stede Broec", value: "stedebroec" },
+      { label: "Texel", value: "texel" },
+      { label: "Tubbergen", value: "tubbergen-theme" },
+      { label: "Waddinxveen", value: "waddinxveen" },
+    ],
   },
-  {
-    label: "Barendrecht",
-    value: "barendrecht",
-  },
-  {
-    label: "Buren",
-    value: "buren",
-  },
-  // {
-  //   label: "Conduction",
-  //   value: "conduction-theme",
-  // },
-  // development purposes
-  {
-    label: "Dinkelland",
-    value: "dinkelland-theme",
-  },
-  {
-    label: "Epe",
-    value: "epe-theme",
-  },
-  {
-    label: "Hoeksche Waard",
-    value: "hoeksche-waard",
-  },
-  {
-    label: "Lansingerland",
-    value: "lansingerland",
-  },
-  {
-    label: "Noaberkracht",
-    value: "noaberkracht-theme",
-  },
-  {
-    label: "Noordwijk",
-    value: "noordwijk-theme",
-  },
-  {
-    label: "Ridderkerk",
-    value: "ridderkerk",
-  },
-  {
-    label: "Rijssen-Holten",
-    value: "rijssen-holten",
-  },
-  {
-    label: "Rotterdam",
-    value: "rotterdam-theme",
-  },
-  {
-    label: "Stede Broec",
-    value: "stedebroec",
-  },
-  {
-    label: "Texel",
-    value: "texel",
-  },
-  {
-    label: "Tubbergen",
-    value: "tubbergen-theme",
-  },
-  {
-    label: "Waddinxveen",
-    value: "waddinxveen",
-  },
-  // {
-  //   label: "XXLLNC",
-  //   value: "xxllnc-theme",
-  // },
-  // development purposes
 ];
