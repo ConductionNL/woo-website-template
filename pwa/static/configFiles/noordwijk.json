@@ -1,4 +1,5 @@
 {
+  "GATSBY_SHOW_THEME_SWITCHER": "false",
   "GATSBY_API_BASE_URL": "https://api.gateway.commonground.nu/api",
   "GATSBY_NL_DESIGN_THEME_CLASSNAME": "noordwijk-theme",
   "GATSBY_FAVICON_URL": "https://www.noordwijk.nl/wp-content/uploads/2023/02/cropped-favicon-32x32.png",
