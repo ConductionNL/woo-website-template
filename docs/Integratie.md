@@ -1,24 +1,30 @@
 # Integratie
 
-OpenWoo.app is essentie een koppelvlak waar aan de bovenkant meerdere weergaven of user interfaces op kunnen worden gekoppeld en aan de onderkant meerdere bronnen ontsloten. 
+OpenWoo.app is essentie een koppelvlak waar aan de bovenkant meerdere weergaven of user interfaces op kunnen worden gekoppeld en aan de onderkant meerdere bronnen ontsloten.
 
 ## Het koppelen van een user interface
-Als u als organisatie of leverancier OpenWoo.app wilt koppelen aan een huidige interface (bijvoorbeeld door de resulaten uit uw gemeente in uw website te integegreren) and kunt u daarvoor gebruik maken van de OpenWoo.app api.
+
+Als u als organisatie of leverancier OpenWoo.app wilt koppelen aan een huidige interface (bijvoorbeeld door de resultaten uit uw gemeente in uw website te integereren) and kunt u daarvoor gebruikmaken van de OpenWoo.app API.
 
 ### Locatie en Authenticatie
-U vind de API op [https://api.OpenWoo.app](https://api.OpenWoo.app). Voor het stellen van zoekvragen is géén authenticatie vereist (het doel van OpenWOO.app is immers het verspreiden van openbare informatie). Er is echter wel sprake van trotheling op responce tijden (de api reageert langsamer) en ratelimiting (het aantal bevragingen per minuut en uur zijn beperkt) zonder authenticatie. Ook zijn alleen de GET (ophalen) acties toegestaan zonder authenticatie.
 
-Als u vanuit uw casus een API nodig heeft zonder throtheling, ratelimit of namens een organisatie wijzigingen wilt doen (POST,PUT,DELETE) dan zijn er twee mogenlijkheden. 
-- Beschikt uw organisatie reeds over FSC? Dan kunt u ons via FSC toegangs verzoek doen
-- Beschikt uw organisatie nog niet over FSC? Dan kunt u een mail sturen naar info@conduction.nl
+U vindt de API op [https://api.OpenWoo.app](https://api.OpenWoo.app). Voor het stellen van zoekvragen is géén authenticatie vereist (het doel van OpenWOO.app is immers het verspreiden van openbare informatie). Er is echter wel sprake van throttling op response tijden (de API reageert langzamer) en rate-limiting (het aantal bevragingen per minuut en uur zijn beperkt) zonder authenticatie. Ook zijn alleen de GET (ophalen) acties toegestaan zonder authenticatie.
+
+Als u vanuit uw casus een API nodig heeft zonder throttling, ratelimit of namens een organisatie wijzigingen wilt doen (POST,PUT,DELETE) dan zijn er twee mogelijkheden.
+
+- Beschikt uw organisatie reeds over FSC? Dan kunt u ons via FSC toegangsverzoek doen
+- Beschikt uw organisatie nog niet over FSC? Dan kunt u een mail sturen naar <info@conduction.nl>
 
 ### Documentatie
-Voor de API is een [redoc documentatie]() beschickbaar met voorbeelden van de verschillende API endpoints, calls en resultaten. Omdat de API daarnaast kan worden gebruikt zonder authenticatie is deze ook goed te beproeven via onze [postman collectie](). We raden developers van ook van harte aan om aan de hand van deze collectie te spelen en ontwikkelen.
+
+Voor de API is een [redoc documentatie]() beschikbaar met voorbeelden van de verschillende API endpoints, calls en resultaten. Omdat de API daarnaast kan worden gebruikt zonder authenticatie is deze ook goed te beproeven via onze [Postman collectie](). We raden developers van ook van harte aan om aan de hand van deze collectie te spelen en ontwikkelen.
 
 ### Voorbeelden
-In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo publicaties van OpenWoo.app, het enpoint daarvoor is: https://api.OpenWoo.app/publicaties. Er zijn 4 voor de hand liggende zoek parameters waarmee gezocht word (overige opties vind ut terug in de [redoc documentatie]().
-1. Op een of meerdere zoek woorden, b.v. _search=test
-2. Op organisatie, dit gaat aan de hand van OIN (de volledige OIN lijst vind u [hier](https://oinregister.logius.nl/oin-register).
+
+In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.OpenWoo.app/publicaties>. Er zijn 4 voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties vind u terug in de [Redoc documentatie]()).
+
+1. Op een of meerdere zoek woorden, b.v. `_search=test`
+2. Op organisatie, dit gaat aan de hand van OIN (de volledige OIN lijst vind u [hier](https://oinregister.logius.nl/oin-register)).
 3. Op categorie, categorie=Convenant
 4. Op datum, Hierbij kunt u een begin en eindatum opgeven om een periode (bijvoorbeeld jaar) te doorzoeken publicatiedatum[after]=2022-12-31T23:59:59Z&publicatiedatum[before]=2024-01-01T00:00:00Z&
 
@@ -280,7 +286,7 @@ Response
 }
 ````
 
-Vanuit een het weergeven van een zoek formulier is het goed mogenlijk dat u alleen bestaande waardes wilt weergeven (bijvoorbeeld bij jaartal of categorie). U kunt daarvoor de queries parameter gebruiken, deze verteld uw welke zoekwaarde welke resultaten opleveren. 
+Vanuit een het weergeven van een zoekformulier is het goed mogelijk dat u alleen bestaande waardes wilt weergeven (bijvoorbeeld bij jaartal of categorie). U kunt daarvoor de queries parameter gebruiken, deze verteld u welke zoekwaarde welke resultaten opleveren.
 
 ````cli
 GET 'https://api.OpenWoo.app/publicaties?_queries[]=categorie'
@@ -302,14 +308,17 @@ Response
 ````
 
 ### Spelregels
-- Er mogen géén kopien worden gemaakt van data uit de API, dit zodat overheden de mogenlijkheid hebben data te depubliceren (bijvoorbeeld bij het per abuis publiceren van persoons gegevens)
-- Er mag wel gebruik worden gemaakt van cashing voor het verbeteren van performance, maar er mag niet langer worden gecashed dan aangegeven in de cashing header van het responce object. Ofwel de bron bepaald hoe lang er gecashed mag worden.
+
+- Er mogen géén kopiën worden gemaakt van data uit de API, dit zodat overheden de mogelijkheid hebben data te depubliceren (bijvoorbeeld bij het per abuis publiceren van persoonsgegevens)
+- Er mag wel gebruik worden gemaakt van caching voor het verbeteren van performance, maar er mag niet langer worden gecachet dan aangegeven in de caching header van het responseobject. Ofwel de bron bepaald hoe lang er gecachet mag worden.
 
 ## Het koppelen van een bron
-Er zijn twéé manieren waarop een bron kan worden gekoppeld, bijde vereisen dat de bron beschikt over een koppelvlak dat benaderbaar is door de OpenWoo.app.
 
-1. **De bron bied een reeds door OpenWoo.app ondersteund koppelvlak aan of ontwikkelt deze.** Dit is vanuit de OpenWoo.app natuurlijk de snelste route
-2. **OpenWoo.app ontwikkeld ondersteuning voor een bron specifiek koppelvlak.** Deze route vergt minder van de aan te sluiten bron (die zal doorgaans al over een koppelvlak zo als API beschikken). Maar vergt inspanning aan de kant van de OpenWoo.app leveranciers. Daarnaast zal de OpenWoo.app community acoord moeten gaan met de ontwikkeling en bekostiging (in de praktijk zal de aanvragen worden gevraagd de kosten te dekken).
+Er zijn twéé manieren waarop een bron kan worden gekoppeld, beide vereisen dat de bron beschikt over een koppelvlak dat benaderbaar is door de OpenWoo.app.
+
+1. **De bron biedt een reeds door OpenWoo.app ondersteund koppelvlak aan of ontwikkelt deze.** Dit is vanuit de OpenWoo.app natuurlijk de snelste route
+2. **OpenWoo.app ontwikkeld ondersteuning voor een bron specifiek koppelvlak.** Deze route vergt minder van de aan te sluiten bron (die zal doorgaans al over een koppelvlak zo als API beschikken). Maar vergt inspanning aan de kant van de OpenWoo.app leveranciers. Daarnaast zal de OpenWoo.app community akkoord moeten gaan met de ontwikkeling en bekostiging (in de praktijk zal de aanvragen worden gevraagd de kosten te dekken).
 
 ## Het koppelen van een organisatie
-Zie voor het koppelen van een organisatie de [naar productie pagina](). 
+
+Zie voor het koppelen van een organisatie de [naar productie pagina]().
