@@ -9,7 +9,7 @@ export const useOpenWoo = (queryClient: QueryClient) => {
 
   const getAll = (filters: IFiltersContext, currentPage: number, limit: number) =>
     useQuery<any, Error>(
-      ["OpenWoo", filters, currentPage, limit],
+      ["OpenWoo", filters, currentPage, limit, window.sessionStorage.getItem("OIDN_NUMBER")],
       () => API?.OpenWoo.getAll(filters, currentPage, limit),
       {
         onError: (error) => {
@@ -19,13 +19,17 @@ export const useOpenWoo = (queryClient: QueryClient) => {
     );
 
   const getOne = (requestId: string) =>
-    useQuery<any, Error>(["OpenWoo", requestId], () => API?.OpenWoo.getOne(requestId), {
-      initialData: () => queryClient.getQueryData<any[]>("OpenWoo")?.find((_OpenWoo) => _OpenWoo.id === requestId),
-      onError: (error) => {
-        throw new Error(error.message);
+    useQuery<any, Error>(
+      ["OpenWoo", requestId, window.sessionStorage.getItem("OIDN_NUMBER")],
+      () => API?.OpenWoo.getOne(requestId),
+      {
+        initialData: () => queryClient.getQueryData<any[]>("OpenWoo")?.find((_OpenWoo) => _OpenWoo.id === requestId),
+        onError: (error) => {
+          throw new Error(error.message);
+        },
+        enabled: !!requestId,
       },
-      enabled: !!requestId,
-    });
+    );
 
   return { getAll, getOne };
 };

@@ -37,8 +37,8 @@ export const filtersToUrlQueryParams = (filters: Record<string, any>): string =>
         ? value.map((v: string) => v.replace(/\s+/g, "_")).join(`&${key}[]=`)
         : (value as string).replace(/\s+/g, "_");
 
-      if (key == "Publicatiedatum[after]") return;
-      if (key == "Publicatiedatum[before]")
+      if (key == "publicatiedatum[after]") return;
+      if (key == "publicatiedatum[before]")
         return `year=${
           generateYearsArray(currentYear - 1995).find((year: any) => {
             return year.before === value;
