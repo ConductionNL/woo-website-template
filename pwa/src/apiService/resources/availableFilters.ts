@@ -11,7 +11,7 @@ export default class AvailableFilters {
   }
 
   public getCategories = async (): Promise<any> => {
-    let endpoint = "/openWOO?_queries[]=categorie";
+    let endpoint = "/publicaties?_queries[]=categorie";
 
     if (window.sessionStorage.getItem("OIDN_NUMBER")) {
       endpoint += `&organisatie.oin=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
