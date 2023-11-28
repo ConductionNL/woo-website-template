@@ -90,7 +90,7 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
                 </>
               )}
               <TableCell>
-                <div className={styles.test}>{request.samenvatting ?? t("No summary available")}</div>
+                <div className={styles.description}>{request.samenvatting ?? t("No summary available")}</div>
               </TableCell>
             </TableRow>
           ))}
