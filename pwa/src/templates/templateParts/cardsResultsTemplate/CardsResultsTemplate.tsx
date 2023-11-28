@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as styles from "./CardsResultsTemplate.module.css";
-import clsx from "clsx";
 import { Heading2, Paragraph } from "@utrecht/component-library-react/dist/css-module";
 import { translateDate } from "../../../services/dateFormat";
 import { useTranslation } from "react-i18next";
@@ -14,8 +13,6 @@ interface CardsResultsTemplateProps {
 
 export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requests }) => {
   const { t, i18n } = useTranslation();
-
-  const themesWithBefore = ["epe-theme"];
 
   return (
     <>
@@ -38,12 +35,7 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
                 : ""
             }`}
           >
-            <CardHeader
-              className={clsx(
-                themesWithBefore.includes(window.sessionStorage.getItem("NL_DESIGN_THEME_CLASSNAME") ?? "") &&
-                  styles.cardHeader,
-              )}
-            >
+            <CardHeader className={styles.cardHeader}>
               <CardHeaderDate>
                 {request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")}
               </CardHeaderDate>

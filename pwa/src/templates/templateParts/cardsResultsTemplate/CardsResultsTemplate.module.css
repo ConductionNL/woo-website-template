@@ -10,14 +10,8 @@
   flex-direction: column;
 }
 
-.cardHeader:before {
-  z-index: 1;
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.cardContainer:hover .cardHeader {
+  border-bottom-color: var(--conduction-card-header-hover-border-bottom-color);
 }
 
 .title {
