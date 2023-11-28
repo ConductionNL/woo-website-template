@@ -75,12 +75,11 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
 
 export const availableThemes: TGroupedSelectOption[] = [
   {
-    label: "Organisaties",
+    label: "Alle overheidsorganisaties",
     options: [
-      { label: "Alle organisaties", value: "open-webconcept-theme" },
-      { label: "Conduction", value: "conduction-theme" },
-      { label: "Noaberkracht", value: "noaberkracht-theme" },
-      { label: "XXLLNC", value: "xxllnc-theme" },
+      { label: "Alle overheidsorganisaties", value: "open-webconcept-theme" },
+      // { label: "Conduction", value: "conduction-theme" },
+      // { label: "XXLLNC", value: "xxllnc-theme" },
     ],
   },
   {
@@ -102,5 +101,9 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Tubbergen", value: "tubbergen-theme" },
       { label: "Waddinxveen", value: "waddinxveen" },
     ],
+  },
+  {
+    label: "Regionale samenwerkingsorganen",
+    options: [{ label: "Noaberkracht", value: "noaberkracht-theme" }],
   },
 ];
