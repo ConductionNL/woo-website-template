@@ -13,7 +13,7 @@ import Buren from "./../../static/configFiles/buren.json";
 import Albrandswaard from "./../../static/configFiles/albrandswaard.json";
 import StedeBroec from "./../../static/configFiles/stede-broec.json";
 import Lansingerland from "./../../static/configFiles/lansingerland.json";
-import Waddinxveen from "./../../static/configFiles/waddinxveen..json";
+import Waddinxveen from "./../../static/configFiles/waddinxveen.json";
 import RijssenHolten from "./../../static/configFiles/rijssen-holten.json";
 import HoekscheWaard from "./../../static/configFiles/hoeksche-waard.json";
 import Texel from "./../../static/configFiles/texel.json";
