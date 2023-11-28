@@ -15,6 +15,7 @@ export const en = {
   Page: "Page",
   Jumbotron: "Jumbotron",
   Limit: "Limit",
+  Municipality: "Municipality",
   "Jumbotron card": "Jumbotron card",
   "N/A": "N/A",
   "Details page": "Details page",
@@ -56,4 +57,6 @@ export const en = {
   "Select result limit": "Select result limit",
   "Scroll table to the left": "Scroll table to the left",
   "Scroll table to the right": "Scroll table to the right",
+  "No category available": "No category available",
+  "No municipality available": "No municipality available",
 };

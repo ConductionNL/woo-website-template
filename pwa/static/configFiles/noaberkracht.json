@@ -8,5 +8,7 @@
   "GATSBY_FOOTER_LOGO_HREF": "https://werkenbijnoaberkracht.nl/",
   "GATSBY_FOOTER_CONTENT": "https://raw.githubusercontent.com/ConductionNL/woo-website-noaberkracht/main/FooterContent.json",
   "GATSBY_FOOTER_CONTENT_HEADER": "",
-  "GATSBY_OIDN_NUMBER": "00000001852070706000"
+  "GATSBY_OIDN_NUMBER": "00000001852070706000",
+  "GATSBY_SHOW_CATEGORY": "",
+  "GATSBY_SHOW_ORGANIZATION": ""
 }
