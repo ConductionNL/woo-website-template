@@ -20,7 +20,7 @@ export default class OpenWoo {
     )}&_order[publicatiedatum]=desc&_limit=${limit}&_page=${currentPage}`;
 
     if (window.sessionStorage.getItem("OIDN_NUMBER")) {
-      endpoint += `&embedded.behandelendBestuursorgaan.oidn=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
+      endpoint += `&organisatie.oin=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
     }
 
     const { data } = await this._send(this._instance, "GET", endpoint);
