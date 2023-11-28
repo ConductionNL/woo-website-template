@@ -49,3 +49,19 @@
   grid-gap: 24px;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+td {
+  width: min-content;
+}
+
+.categoryAndMunicipality {
+  text-wrap: nowrap;
+}
+
+.test {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

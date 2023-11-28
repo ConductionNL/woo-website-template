@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as styles from "./TableResultsTemplate.module.css";
+import clsx from "clsx";
 import {
   Table,
   TableHeader,
@@ -32,6 +33,17 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
           <TableRow>
             <TableHeaderCell>{t("Subject")}</TableHeaderCell>
             <TableHeaderCell>{t("Publication date")}</TableHeaderCell>
+            {(window.sessionStorage.getItem("SHOW_CATEGORY") === "true" ||
+              window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true") && (
+              <>
+                {window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true" && (
+                  <TableHeaderCell>{t("Municipality")}</TableHeaderCell>
+                )}
+                {window.sessionStorage.getItem("SHOW_CATEGORY") === "true" && (
+                  <TableHeaderCell>{t("Category")}</TableHeaderCell>
+                )}
+              </>
+            )}
             <TableHeaderCell>{t("Summary")}</TableHeaderCell>
           </TableRow>
         </TableHeader>
@@ -44,7 +56,13 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
               tabIndex={0}
               aria-label={`${request.titel},  ${
                 request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")
-              }, ${request.samenvatting}`}
+              } ${
+                window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true"
+                  ? `,${request.embedded?.behandelendBestuursorgaan?.naam}`
+                  : ""
+              } ${window.sessionStorage.getItem("SHOW_CATEGORY") === "true" ? `, ${request.categorie}` : ""}, ${
+                request.samenvatting
+              }`}
             >
               <TableCell>{request.titel ?? t("No subject available")}</TableCell>
               <TableCell>
@@ -52,7 +70,28 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
                   ? translateDate(i18n.language, request.publicatiedatum)
                   : t("No publication date available")}
               </TableCell>
-              <TableCell>{request.samenvatting ?? t("No summary available")}</TableCell>
+              {(window.sessionStorage.getItem("SHOW_CATEGORY") === "true" ||
+                window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true") && (
+                <>
+                  {window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true" && (
+                    <TableCell className={styles.categoryAndMunicipality}>
+                      {request.embedded?.behandelendBestuursorgaan?.naam ?? t("No municipality available")}
+                    </TableCell>
+                  )}
+                  {window.sessionStorage.getItem("SHOW_CATEGORY") === "true" && (
+                    <TableCell
+                      className={clsx(
+                        window.sessionStorage.getItem("SHOW_ORGANIZATION") !== "true" && styles.categoryAndMunicipality,
+                      )}
+                    >
+                      {request.categorie ?? t("No category available")}
+                    </TableCell>
+                  )}
+                </>
+              )}
+              <TableCell>
+                <div className={styles.test}>{request.samenvatting ?? t("No summary available")}</div>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
