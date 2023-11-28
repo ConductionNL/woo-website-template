@@ -7,6 +7,7 @@ import { useEnvironment } from "../../../hooks/useEnvironment";
 import { navigate } from "gatsby";
 import clsx from "clsx";
 import { Heading3, Paragraph } from "@utrecht/component-library-react";
+import { TSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const ThemeSwitcherTopBar: React.FC = () => {
   const { initiateFromJSON } = useEnvironment();
@@ -24,9 +25,11 @@ export const ThemeSwitcherTopBar: React.FC = () => {
   React.useEffect(() => {
     if (watchTheme) return;
 
+    const themeOptions: TSelectOption[] = availableThemes.flatMap((group) => group.options);
+
     setValue(
       "theme",
-      availableThemes.find((theme) => theme.value === window.sessionStorage.getItem("NL_DESIGN_THEME_CLASSNAME")),
+      themeOptions.find((theme) => theme.value === window.sessionStorage.getItem("NL_DESIGN_THEME_CLASSNAME")),
     ); // init select field based on domain name
   }, []);
 
