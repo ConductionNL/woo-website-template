@@ -51,8 +51,8 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
           {requests.map((request) => (
             <TableRow
               className={styles.tableRow}
-              key={request.id}
-              onClick={() => navigate(request.id)}
+              key={request._id}
+              onClick={() => navigate(request._id)}
               tabIndex={0}
               aria-label={`${request.titel},  ${
                 request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")

@@ -1,5 +1,7 @@
 import * as React from "react";
 import * as styles from "./WOOItemDetailTemplate.module.css";
+import _ from "lodash";
+import Skeleton from "react-loading-skeleton";
 import {
   Page,
   PageContent,
@@ -19,7 +21,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { QueryClient } from "react-query";
 import { useOpenWoo } from "../../hooks/openWoo";
-import Skeleton from "react-loading-skeleton";
 import { getPDFName } from "../../services/getPDFName";
 import { HorizontalOverflowWrapper } from "@conduction/components";
 
@@ -52,7 +53,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
         {getItems.isSuccess && (
           <>
             <Heading1 id="mainContent">
-              {getItems.data.titel !== "" ? getItems.data.titel : t("No title available")}
+              {getItems.data?.titel !== "" ? getItems.data?.titel : t("No title available")}
             </Heading1>
 
             <HorizontalOverflowWrapper
@@ -63,27 +64,27 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
             >
               <Table className={styles.table}>
                 <TableBody className={styles.tableBody}>
-                  {getItems.data.id && (
+                  {getItems.data?.id && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Feature")}</TableCell>
-                      <TableCell>{getItems.data?.metadata?.volgnummer}</TableCell>
+                      <TableCell>{getItems.data?.id}</TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data.titel && (
+                  {getItems.data?.titel && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Category")}</TableCell>
                       <TableCell>{getItems.data.categorie ?? "-"}</TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data.samenvatting && (
+                  {getItems.data?.samenvatting && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Summary")}</TableCell>
                       <TableCell>{getItems.data.samenvatting}</TableCell>
                     </TableRow>
                   )}
-                  {getItems.data.beschrijving && (
+                  {getItems.data?.beschrijving && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Description")}</TableCell>
                       <TableCell>{getItems.data.beschrijving}</TableCell>
@@ -97,12 +98,12 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     </TableRow>
                   )}
 
-                  {getItems.data.publicatiedatum && (
+                  {getItems.data?.publicatiedatum && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Publication date")}</TableCell>
                       <TableCell>
-                        {getItems.data.publicatiedatum
-                          ? translateDate(i18n.language, getItems.data.publicatiedatum)
+                        {getItems.data?.publicatiedatum
+                          ? translateDate(i18n.language, getItems.data?.publicatiedatum)
                           : "-"}
                       </TableCell>
                     </TableRow>
@@ -118,7 +119,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     </TableRow>
                   )}
 
-                  {getItems.data.metadata?.besluitdatum && (
+                  {getItems.data?.metadata?.besluitdatum && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Decision date")} </TableCell>
                       <TableCell>
@@ -127,7 +128,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     </TableRow>
                   )}
 
-                  {getItems.data?.themas && (
+                  {!_.isEmpty(getItems.data?.themas) && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Themes")}</TableCell>
                       <TableCell>
@@ -145,13 +146,14 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       <TableCell>{t("Information request")}</TableCell>
                       <TableCell>
                         <Link href={getItems.data?.metadata?.verzoek?.informatieverzoek?.url} target="blank">
-                          {getItems.data?.metadata?.verzoek?.informatieverzoek?.titel}
+                          {getItems.data?.metadata?.verzoek?.informatieverzoek?.titel ??
+                            getPDFName(getItems.data?.metadata?.verzoek?.informatieverzoek?.url)}
                         </Link>
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {(getItems.data?.metadata?.verzoek.besluit ||
+                  {(getItems.data?.metadata?.verzoek?.besluit ||
                     (getItems.data?.metadata?.verzoek?.besluit ?? getItems.data?.metadata?.verzoek?.besluit?.url)) && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Decision")}</TableCell>
@@ -178,13 +180,14 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       <TableCell>{t("Inventory list")}</TableCell>
                       <TableCell>
                         <Link href={getItems.data?.metadata.verzoek?.inventarisatielijst?.url} target="blank">
-                          {getItems.data?.metadata.verzoek?.inventarisatielijst?.titel}
+                          {getItems.data?.metadata.verzoek?.inventarisatielijst?.titel ??
+                            getPDFName(getItems.data?.metadata?.verzoek?.inventarisatielijst?.url)}
                         </Link>
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data?.bijlagen && (
+                  {!_.isEmpty(getItems.data?.bijlagen) && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Attachments")}</TableCell>
                       <TableCell>

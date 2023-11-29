@@ -19,9 +19,9 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
       <div className={styles.componentsGrid}>
         {requests.map((request) => (
           <CardWrapper
-            key={request.id}
+            key={request._id}
             className={styles.cardContainer}
-            onClick={() => navigate(request.id)}
+            onClick={() => navigate(request._id)}
             tabIndex={0}
             aria-label={`${
               request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")
