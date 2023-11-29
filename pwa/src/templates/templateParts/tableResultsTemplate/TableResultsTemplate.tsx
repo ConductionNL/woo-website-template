@@ -51,15 +51,13 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
           {requests.map((request) => (
             <TableRow
               className={styles.tableRow}
-              key={request._self.id}
-              onClick={() => navigate(request._self.id)}
+              key={request._id}
+              onClick={() => navigate(request._id)}
               tabIndex={0}
               aria-label={`${request.titel},  ${
                 request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")
               } ${
-                window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true"
-                  ? `,${request.embedded?.behandelendBestuursorgaan?.naam}`
-                  : ""
+                window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true" ? `,${request.organisatie?.naam}` : ""
               } ${window.sessionStorage.getItem("SHOW_CATEGORY") === "true" ? `, ${request.categorie}` : ""}, ${
                 request.samenvatting
               }`}
@@ -75,7 +73,7 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
                 <>
                   {window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true" && (
                     <TableCell className={styles.categoryAndMunicipality}>
-                      {request.embedded?.behandelendBestuursorgaan?.naam ?? t("No municipality available")}
+                      {request.organisatie?.naam ?? t("No municipality available")}
                     </TableCell>
                   )}
                   {window.sessionStorage.getItem("SHOW_CATEGORY") === "true" && (
