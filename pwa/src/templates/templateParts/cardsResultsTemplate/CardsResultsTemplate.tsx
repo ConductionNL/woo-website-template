@@ -19,14 +19,16 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
       <div className={styles.componentsGrid}>
         {requests.map((request) => (
           <CardWrapper
-            key={request._id}
+            key={request._self.id}
             className={styles.cardContainer}
-            onClick={() => navigate(request._id)}
+            onClick={() => navigate(request._self.id)}
             tabIndex={0}
             aria-label={`${
               request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")
             }, ${request.titel}, ${request.samenvatting} ${
-              window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true" ? `,${request.organisatie?.naam}` : ""
+              window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true"
+                ? `,${request.embedded?.behandelendBestuursorgaan?.naam}`
+                : ""
             } ${
               window.sessionStorage.getItem("SHOW_CATEGORY") === "true"
                 ? `, ${t("Category")}, ${request.categorie}`
@@ -50,7 +52,7 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
                 {window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true" && (
                   <CardHeaderDate>
                     <span data-tooltip-id={TOOLTIP_ID} data-tooltip-content={t("Municipality")}>
-                      {request.organisatie?.naam}
+                      {request.embedded?.behandelendBestuursorgaan?.naam}
                     </span>
                   </CardHeaderDate>
                 )}
