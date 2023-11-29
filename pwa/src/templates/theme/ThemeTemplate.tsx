@@ -22,6 +22,7 @@ import {
   TabPanel,
   Tabs,
   InputCheckbox,
+  DownloadCard,
 } from "@conduction/components";
 import {
   BreadcrumbNav,
@@ -472,7 +473,7 @@ export const ThemeTemplate: React.FC = () => {
           </CardWrapper>
         </div>
 
-        <div id={"currentwork"}>
+        <div>
           <h3 className={styles.header}>Checkbox</h3>
           <ButtonGroup className={styles.buttonContainer}>
             <input type="checkbox"></input>
@@ -487,6 +488,26 @@ export const ThemeTemplate: React.FC = () => {
               {...{ register, errors, control }}
             />
           </ButtonGroup>
+        </div>
+
+        <div id={"currentwork"}>
+          <h3 className={styles.header}>Checkbox</h3>
+          <DownloadCard
+            label={"Download png"}
+            type={"PNG"}
+            size="428"
+            handleClick={() => {
+              console.log("click");
+            }}
+          />
+          <DownloadCard
+            label={"https://github.com/CommonGateway/ZGWBundle/archive/refs/heads/main.zip"}
+            type={"ZIP"}
+            size="111"
+            handleClick={() => {
+              console.log("click");
+            }}
+          />
         </div>
 
         <div>
