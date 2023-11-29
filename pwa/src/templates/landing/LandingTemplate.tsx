@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as styles from "./LandingTemplate.module.css";
-import Skeleton from "react-loading-skeleton";
 import { Page, PageContent } from "@utrecht/component-library-react/dist/css-module";
 import { FiltersTemplate } from "../templateParts/filters/FiltersTemplate";
 import { ResultsDisplayTemplate } from "../templateParts/resultsDisplayTemplate/ResultsDisplayTemplate";
 import { JumbotronTemplate } from "../jumbotronTemplate/JumbotronTemplate";
 import { useOpenWoo } from "../../hooks/openWoo";
 import { useFiltersContext } from "../../context/filters";
+import Skeleton from "react-loading-skeleton";
 import { QueryClient } from "react-query";
 import { Pagination } from "@conduction/components";
 import { usePaginationContext } from "../../context/pagination";
