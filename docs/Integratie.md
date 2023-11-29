@@ -8,7 +8,7 @@ Als u als organisatie of leverancier OpenWoo.app wilt koppelen aan een huidige i
 
 ### Locatie en Authenticatie
 
-U vindt de API op [https://api.OpenWoo.app](https://api.OpenWoo.app). Voor het stellen van zoekvragen is géén authenticatie vereist (het doel van OpenWOO.app is immers het verspreiden van openbare informatie). Er is echter wel sprake van throttling op response tijden (de API reageert langzamer) en rate-limiting (het aantal bevragingen per minuut en uur zijn beperkt) zonder authenticatie. Ook zijn alleen de GET (ophalen) acties toegestaan zonder authenticatie.
+U vindt de API op [https://api.gateway.commonground.nu/api/publicaties](https://api.gateway.commonground.nu/api/publicaties). Voor het stellen van zoekvragen is géén authenticatie vereist (het doel van OpenWOO.app is immers het verspreiden van openbare informatie). Er is echter wel sprake van throttling op response tijden (de API reageert langzamer) en rate-limiting (het aantal bevragingen per minuut en uur zijn beperkt) zonder authenticatie. Ook zijn alleen de GET (ophalen) acties toegestaan zonder authenticatie.
 
 Als u vanuit uw casus een API nodig heeft zonder throttling, ratelimit of namens een organisatie wijzigingen wilt doen (POST,PUT,DELETE) dan zijn er twee mogelijkheden.
 
@@ -21,15 +21,15 @@ Voor de API is een [redoc documentatie]() beschikbaar met voorbeelden van de ver
 
 ### Voorbeelden
 
-In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.OpenWoo.app/publicaties>. Er zijn 4 voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties vind u terug in de [Redoc documentatie]()).
+In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.gateway.commonground.nu/api/publicaties>. Er zijn 4 voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties vind u terug in de [Redoc documentatie]()).
 
 1. Op een of meerdere zoek woorden, b.v. `_search=test`
-2. Op organisatie, dit gaat aan de hand van OIN (de volledige OIN lijst vind u [hier](https://oinregister.logius.nl/oin-register)).
-3. Op categorie, categorie=Convenant
+2. Op organisatie, dit gaat aan de hand van OIN (de volledige OIN lijst vind u [hier](https://oinregister.logius.nl/oin-register)) b.v. `oin=00000001001299992000`
+3. Op categorie, `categorie=Convenant`
 4. Op datum, Hierbij kunt u een begin en eindatum opgeven om een periode (bijvoorbeeld jaar) te doorzoeken publicatiedatum[after]=2022-12-31T23:59:59Z&publicatiedatum[before]=2024-01-01T00:00:00Z&
 
 ````cli
-GET 'https://api.OpenWoo.app/publicaties?extend[]=all&_search=Afvalwaterakkoord&_order[publicatiedatum]=desc&_limit=12&_page=1'
+GET 'https://api.gateway.commonground.nu/api/publicaties?extend[]=all&_search=Afvalwaterakkoord&_order[publicatiedatum]=desc&_limit=12&_page=1'
 
 Response
 
@@ -468,7 +468,7 @@ Response
 Vanuit een het weergeven van een zoekformulier is het goed mogelijk dat u alleen bestaande waardes wilt weergeven (bijvoorbeeld bij jaartal of categorie). U kunt daarvoor de queries parameter gebruiken, deze verteld u welke zoekwaarde welke resultaten opleveren.
 
 ````cli
-GET 'https://api.OpenWoo.app/publicaties?_queries[]=categorie'
+GET 'https://api.gateway.commonground.nu/api/publicaties?_queries[]=categorie'
 
 Response
 
