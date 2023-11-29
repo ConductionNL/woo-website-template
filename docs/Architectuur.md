@@ -6,7 +6,26 @@ Het Woo Publicatie Object vormt de kern van zowel de Woo API als de Woo-website.
 
 Toegepaste norm: [NL API Strategie over property namen](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/#veldnamen-in-snake_case-camelcase-uppercamelcase-of-kebab-case)
 
-## Varianten
+## Opzeten
+OpenWoo.app bestaad in essentie uit een aantal componnenten de samenwerken rondom een koppelvlak, het lijnt daarmee uit met de lagen architectuur van common ground. Daarbij is de keuze aan de onsluitende overheid welke componenten van welke leveranciers zij inzet. Het is daarmee bewust de bedoeling dat de inrichting per overheid kan verschillen zodat deze beter in het landschap van die betrefende overheid past. Binnen OpenWoo.app kennen we momententeel de volgende componenten
+
+
+| Voorkant | OpenWOO Site   | React | Conduction | Een losse NL Design zoek pagina in de huisstijl van uw organisatie |
+| Voorkant | OpenWoo Plugin | Wordpress | Acato | Een NL Design weergave component voor wordpress websites |
+| Voorkant | ---------------| Typo-3 | Open Gemeente | Een NL Design weergave component voor typo 3 websites |
+| Voorkant | ---------------| Drupal | Sim Groep |   |
+| Integratie | ---------------| Common Gateway | Conduction |   |
+| Bronnen | ---------------| ZGW | Conduction | Automatisch ontsluiten vanuit ZGW zaaksystemen is standaard onderdeel van de integratie oplossing |
+| Bronnen | ---------------| ZDS | Conduction | Automatisch ontsluiten vanuit ZGW zaaksystemen is standaard onderdeel van de integratie oplossing |
+| Bronnen | ---------------| Stuf | Conduction | Automatisch ontsluiten vanuit ZGW zaaksystemen is standaard onderdeel van de integratie oplossing |
+| Bronnen | Open Pub | Nieuwsberichten  | Yard | |
+| Bronnen | Xllnc | Zaaksysteem | Yard | |
+| Bronnen | Join | Zaaksysteem | Decos | |
+| Bronnen | Fundament | Zaaksysteem | RX Visma | |
+
+
+
+
 
 ### Open Webconcept variant
 

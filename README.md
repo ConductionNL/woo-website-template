@@ -1,11 +1,13 @@
 # Over de WOO en Open Woo App
 
-> **WooBinar**
+> **Ondersteuning en bijeenkomsten**
 >
-> Meer weten over deze oplossing? Dat kan! Vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
->
+> Meer weten over deze oplossing? Dat kan! Hiervoor hebben we een appart [slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen commonground. We helpen je daar graag verder
+> 
+> Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
+> 
 > Terug kijken afgelopen webinars?
-> [xxllnc Woobinar 17-11-2023](https://www.youtube.com/watch?v=NCnLDEoPh5A)
+> - [xxllnc Woobinar 17-11-2023](https://www.youtube.com/watch?v=NCnLDEoPh5A)
 
 De Wet Open Overheid (WOO) is een initiatief gericht op het verbeteren van de openbaarheid van overheidsinformatie. Het doel is om overheidsinformatie beter toegankelijk te maken voor iedereen. Meer informatie over de Wet Open Overheid kan [hier](https://www.open-overheid.nl/themas/wet-open-overheid/) worden gevonden.
 
