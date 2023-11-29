@@ -36,6 +36,8 @@ export const ThemeSwitcherTopBar: React.FC = () => {
   React.useEffect(() => {
     if (!watchTheme) return;
 
+    if (window.sessionStorage.getItem("SHOW_THEME_SWITCHER") !== "true") return;
+
     navigate("/");
 
     initiateFromJSON(watchTheme.value);
