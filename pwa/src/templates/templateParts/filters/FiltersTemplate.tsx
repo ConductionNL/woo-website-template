@@ -17,6 +17,7 @@ import { navigate } from "gatsby";
 import { useGatsbyContext } from "../../../context/gatsby";
 import { useAvailableFilters } from "../../../hooks/availableFilters";
 import { usePaginationContext } from "../../../context/pagination";
+import { useCategoriesContext } from "../../../context/categoryOptions";
 
 interface FiltersTemplateProps {
   isLoading: boolean;
@@ -24,12 +25,12 @@ interface FiltersTemplateProps {
 
 export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) => {
   const { t } = useTranslation();
-  const { filters, setFilters } = useFiltersContext();
   const { setPagination } = usePaginationContext();
   const { gatsbyContext } = useGatsbyContext();
+  const { filters, setFilters } = useFiltersContext();
+  const { categoryOptions, setCategoryOptions } = useCategoriesContext();
   const [queryParams, setQueryParams] = React.useState<IFiltersContext>(defaultFiltersContext);
   const [categoryParams, setCategoryParams] = React.useState<any>();
-  const [categoryOptions, setCategoryOptions] = React.useState<any>();
   const filterTimeout = React.useRef<NodeJS.Timeout | null>(null);
 
   const {
@@ -66,7 +67,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
     getCategories.isSuccess &&
       setValue(
         "category",
-        categoryOptions.find((option: any) => option.value === params.categorie?.replace(/_/g, " ")),
+        categoryOptions.options.find((option: any) => option.value === params.categorie?.replace(/_/g, " ")),
       );
   };
 
@@ -117,7 +118,8 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
       value: _.upperFirst(category._id.toLowerCase()),
     }));
 
-    setCategoryOptions(_.orderBy(_.uniqBy(categoriesWithData, "value"), "label", "asc"));
+    const uniqueOptions: any[] = _.orderBy(_.uniqBy(categoriesWithData, "value"), "label", "asc");
+    setCategoryOptions({ options: uniqueOptions });
   }, [getCategories.isSuccess]);
 
   return (
@@ -148,10 +150,13 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
         {getCategories.isLoading && <Skeleton height="50px" />}
         {getCategories.isSuccess && (
           <SelectSingle
-            options={categoryOptions}
+            options={categoryOptions.options}
             name="category"
             placeholder={t("Category")}
-            defaultValue={categoryOptions && categoryOptions.find((option: any) => option.value === filters.categorie)}
+            defaultValue={
+              categoryOptions.options &&
+              categoryOptions.options.find((option: any) => option.value === filters.categorie)
+            }
             isClearable
             disabled={getCategories.isLoading}
             {...{ register, errors, control }}
