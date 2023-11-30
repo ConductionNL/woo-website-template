@@ -51,6 +51,8 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   const [, params] = url.split("?");
   const parsedParams = qs.parse(params);
 
+  const getCategories = useAvailableFilters().getCategories();
+
   const handleSetFormValues = (params: any): void => {
     const basicFields: string[] = ["_search", "category"];
     basicFields.forEach((field) => setValue(field, params[field]));
@@ -107,8 +109,6 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
     navigate(`/${filtersToUrlQueryParams(filters)}`);
     setPagination({ currentPage: 1 });
   }, [filters]);
-
-  const getCategories = useAvailableFilters().getCategories();
 
   React.useEffect(() => {
     if (!getCategories.isSuccess) return;
