@@ -4,6 +4,10 @@
 
 OpenWoo.app bestaat in essentie uit een aantal componenten die samenwerken rondom een integratievoorziening, het lijnt daarmee uit met de lagen architectuur van Common Ground. Daarbij is de keuze aan de ontsluitende overheid welke componenten van welke leveranciers zij inzet. Het is daarmee bewust de bedoeling dat de inrichting per overheid kan verschillen, zodat deze beter in het landschap van die betreffende overheid past. Binnen de OpenWoo.app kennen we momenteel de volgende componenten:
 
+> **Hulp nodig?**
+>
+> Hiervoor hebben we een appart [slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen commonground. We helpen je daar graag verder.
+
 ### Open Webconcept-variant zonder integratie
 
 Met deze variant kunnen Woo-verzoeken en convenanten eenvoudig worden beheerd vanuit de bestaande webomgeving en CMS . Dit vereist geen extra installatie of beheerinspanningen van de organisatie, op voorwaarde dat er al een OpenWebconcept-installatie met de benodigde plugins beschikbaar is.
