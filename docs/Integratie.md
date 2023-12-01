@@ -74,53 +74,6 @@ Response
                 "besluitdatum": "2022-12-21",
                 "verzoek": {
                     "inventarisatielijst": {
-                        "_self": {
-                            "id": "c9517757-a726-4aec-b666-6ae5d21281ee",
-                            "name": "Temporarily title so a object gets created for file fetching and url genering.",
-                            "self": "/api/bijlagen/c9517757-a726-4aec-b666-6ae5d21281ee",
-                            "schema": {
-                                "id": "fb4325dc-5f4e-4336-b2b5-f4c5f0872596",
-                                "name": "Bijlage",
-                                "ref": "https://commongateway.nl/woo.bijlage.schema.json"
-                            },
-                            "level": 3,
-                            "dateCreated": "2023-11-29T18:56:16+00:00",
-                            "dateModified": "2023-11-29T19:10:18+00:00",
-                            "owner": {
-                                "id": "b5d1f8b2-100a-4925-9faa-f0a435228ee6",
-                                "name": "Default User",
-                                "ref": "https://docs.commongateway.nl/user/default.user.json"
-                            },
-                            "organization": {
-                                "id": "a1c8e0b6-2f78-480d-a9fb-9792142f4761",
-                                "name": "Default Organization",
-                                "ref": "https://docs.commongateway.nl/organization/default.organization.json"
-                            },
-                            "application": {
-                                "id": null,
-                                "name": null,
-                                "ref": null
-                            },
-                            "synchronizations": [
-                                {
-                                    "id": "3d532126-45b6-461f-b713-36b2b94843dc",
-                                    "source": {
-                                        "id": "b4857337-cd1b-4834-9aeb-193c7170c488",
-                                        "ref": "https://commongateway.woo.nl/source/epe.zaaksysteem.source.json",
-                                        "name": "Epe zaaksysteem",
-                                        "description": "Epe zaaksysteem api",
-                                        "location": "https://zaaksysteem-accept.epe.nl/api"
-                                    },
-                                    "endpoint": null,
-                                    "sourceId": "5d68832e-b847-4671-8a8e-5030f61d9a0a",
-                                    "dateCreated": "2023-11-29T18:56:16+00:00",
-                                    "dateModified": "2023-11-29T18:56:16+00:00",
-                                    "lastChecked": null,
-                                    "lastSynced": null,
-                                    "sourceLastChanged": null
-                                }
-                            ]
-                        },
                         "categorie": null,
                         "type": null,
                         "status": "accepted",
@@ -183,6 +136,30 @@ Response
 }
 ````
 
+### Metadata
+De kern gegevens van een WOO publicatie zitten in het metadata object, de inhoud van dit object is 'semi' vrij, hij kan per publicatie `categorie` verschillen. Daarnaast zijn er een paar algemene properties die altijd kunnen voorkomen in de metadata
+
+#### Algemene properties
+
+| Property            | Verplicht | Gebruik                                                                                                 | Toegestane waardes |
+|---------------------|-----------|---------------------------------------------------------------------------------------------------------|--------------------|
+
+
+#### Convenanten
+
+| Property            | Verplicht | Gebruik                                                                                                 | Toegestane waardes |
+|---------------------|-----------|---------------------------------------------------------------------------------------------------------|--------------------|
+
+#### Woo verzoeken
+
+| Property            | Verplicht | Gebruik                                                                                                 | Toegestane waardes |
+|---------------------|-----------|---------------------------------------------------------------------------------------------------------|--------------------|
+
+#### Klachten
+
+| Property            | Verplicht | Gebruik                                                                                                 | Toegestane waardes |
+|---------------------|-----------|---------------------------------------------------------------------------------------------------------|--------------------|
+
 ### Spelregels
 
 - Er mogen géén kopiën worden gemaakt van data uit de API, dit zodat overheden de mogelijkheid hebben data te depubliceren (bijvoorbeeld bij het per abuis publiceren van persoonsgegevens)
@@ -197,4 +174,4 @@ Er zijn twéé manieren waarop een bron kan worden gekoppeld, beide vereisen dat
 
 ## Het koppelen van een organisatie
 
-Zie voor het koppelen van een organisatie de [naar productie pagina]().
+Zie voor het koppelen van een organisatie de [naar productie pagina](https://openwoo.app/github/Naar_Productie/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md).
