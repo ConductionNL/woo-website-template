@@ -2,7 +2,7 @@
 
 ## Opzet
 
-OpenWoo.app bestaat in essentie uit een aantal componenten die samenwerken rondom een integratievoorziening, het lijnt daarmee uit met de lagen architectuur van Common Ground. Daarbij is de keuze aan de ontsluitende overheid welke componenten van welke leveranciers zij inzet. Het is daarmee bewust de bedoeling dat de inrichting per overheid kan verschillen, zodat deze beter in het landschap van die betreffende overheid past. Binnen de OpenWoo.app kennen we momenteel de volgende componenten:
+OpenWoo.app bestaat in essentie uit een aantal componenten die samenwerken rondom een integratievoorziening, het lijnt daarmee uit met de architectuurlagen van Common Ground. Daarbij is de keuze aan de ontsluitende overheid welke componenten van welke leveranciers zij inzet. Het is daarmee bewust de bedoeling dat de inrichting per overheid kan verschillen, zodat deze beter in het landschap van die betreffende overheid past. Binnen de OpenWoo.app kennen we momenteel de volgende componenten:
 
 ### Open Webconcept-variant zonder integratie
 
@@ -17,7 +17,7 @@ Met deze variant kunnen Woo-verzoeken en convenanten eenvoudig worden beheerd va
 
 ### Open Webconcept met integratie
 
-Het is ook mogelijk om een bestaande Open Webconcept-omgeving te combineren met de integratievoorziening. In dat geval gebruikt de integratievoorziening Open Webconcept, zowel als bron als dat het naar Open Webconcept toe publiceerd. Dit betekent dat de organisatie de voordelen van de integratievoorziening kan benutten, terwijl de bestaande Open Webconcept-omgeving kan worden gebruikt om Woo-verzoeken en convenanten te beheren.
+Het is ook mogelijk om een bestaande Open Webconcept-omgeving te combineren met de integratievoorziening. In dat geval gebruikt de integratievoorziening Open Webconcept, zowel als bron als dat het naar Open Webconcept toe publiceert. Dit betekent dat de organisatie de voordelen van de integratievoorziening kan benutten, terwijl de bestaande Open Webconcept-omgeving kan worden gebruikt om Woo-verzoeken en convenanten te beheren.
 
 **Nadelen**
 
@@ -59,7 +59,7 @@ Er zijn diverse frontends die in theorie direct kunnen koppelen op de OpenWoo.ap
 
 Als er wordt gekozen voor het implementeren van het integratievoorziening, wordt het mogelijk om geautomatiseerd te publiceren vanuit meerdere bronnen.
 
-Dit bespaart handmatig werk en vermindert de kans op fouten. Tevens ondersteund het gebruik van het integratiemechanisme de integrale zoekvraag en is het mogelijk om ook gegevens uit andere bronnen te integreren, zoals een raadsinformatiesysteem of een Open Webconcept CMS.
+Dit bespaart handmatig werk en vermindert de kans op fouten. Tevens ondersteunt het gebruik van het integratiemechanisme de integrale zoekvraag en is het mogelijk om ook gegevens uit andere bronnen te integreren, zoals een raadsinformatiesysteem of een Open Webconcept CMS.
 
 **Nadelen**
 
@@ -89,11 +89,11 @@ Dit proces zorgt ervoor dat het zaaksysteem leidend is en dat zaken zowel kunnen
 
 ## Federatie (via OpenCatalogi)
 
-OpenWoo.app maakt gebruik van het federatieve stelstel van [OpenCatalogi](https://opencatalogi.nl/) om verschillende integratievoorzieningen samen te binden. Hierbij verhoudt de organisatiespecifieke voorziening zich tot wat we binnen OpenCatalogi een catalogus noemen.
+OpenWoo.app maakt gebruik van het federatieve stelsel van [OpenCatalogi](https://opencatalogi.nl/) om verschillende integratievoorzieningen samen te binden. Hierbij verhoudt de organisatiespecifieke voorziening zich tot wat we binnen OpenCatalogi een catalogus noemen.
 
-Dat betekent dat de integrale zoekvraag ook organisatie-overstijgend kan worden gesteld aan meerdere organisatie tegelijkertijd zonder dat er noodzaak is voor een landelijke index, dit concept is verder uitgewerkt in [koophulpje.nl](https://koophulpje.nl/) waarbij ook een voorziening is gerealiseerd voor het genereren van `robot.txt` en `sitemap.xml` bestanden.  Defacto is hiermee dus ook een landelijke Woo-API gerealiseerd met die beperking dat deze alleen organisaties bevat die participeren in OpenWoo.app
+Dat betekent dat de integrale zoekvraag ook organisatie-overstijgend kan worden gesteld aan meerdere organisatie tegelijkertijd zonder dat er noodzaak is voor een landelijke index, dit concept is verder uitgewerkt in [koophulpje.nl](https://koophulpje.nl/) waarbij ook een voorziening is gerealiseerd voor het genereren van `robot.txt` en `sitemap.xml` bestanden.  De facto is hiermee dus ook een landelijke Woo-API gerealiseerd met de beperking dat deze alleen organisaties bevat die participeren in OpenWoo.app
 
-De reden dat we hebben gekozen voor OpenCatalogi is dat in deze `variant` van FSC géén PKI of overige certificaten benodigd zijn. Dat lijnt uit met beter uit met de gedachte dat dit open data betreft die conform de wet juist annoniem toegankenlijk zou moeten zijn.
+De reden dat we hebben gekozen voor OpenCatalogi is dat in deze `variant` van FSC géén PKI of overige certificaten nodig zijn. Dat lijnt beter uit met de gedachte dat dit open data betreft die conform de wet juist anoniem toegankelijk zou moeten zijn.
 
 ![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Federatie.svg)
 
