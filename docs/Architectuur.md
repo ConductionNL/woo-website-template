@@ -1,56 +1,72 @@
 # Architectuur
 
-## Woo Publicatie Object
+## Opzet
+OpenWoo.app bestaad in essentie uit een aantal componnenten de samenwerken rondom een integratie voorziening, het lijnt daarmee uit met de lagen architectuur van common ground. Daarbij is de keuze aan de onsluitende overheid welke componenten van welke leveranciers zij inzet. Het is daarmee bewust de bedoeling dat de inrichting per overheid kan verschillen zodat deze beter in het landschap van die betrefende overheid past. Binnen OpenWoo.app kennen we momententeel de volgende componenten
 
-Het Woo Publicatie Object vormt de kern van zowel de Woo API als de Woo-website. Dit object bevat alle essentiële informatie over een Woo-publicatie, inclusief metadata, publicatiedatum, bijlagen en andere relevante eigenschappen. Het dient als de centrale entiteit waaromheen de functionaliteiten van de API en de website zijn gebouwd. Door deze gecentraliseerde aanpak is het eenvoudiger om Woo-publicaties efficiënt te beheren, op te halen en weer te geven, en draagt het bij aan een coherente en gestroomlijnde gebruikerservaring.
-
-Toegepaste norm: [NL API Strategie over property namen](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/#veldnamen-in-snake_case-camelcase-uppercamelcase-of-kebab-case)
-
-## Opzeten
-OpenWoo.app bestaad in essentie uit een aantal componnenten de samenwerken rondom een koppelvlak, het lijnt daarmee uit met de lagen architectuur van common ground. Daarbij is de keuze aan de onsluitende overheid welke componenten van welke leveranciers zij inzet. Het is daarmee bewust de bedoeling dat de inrichting per overheid kan verschillen zodat deze beter in het landschap van die betrefende overheid past. Binnen OpenWoo.app kennen we momententeel de volgende componenten
-
-
-| Voorkant | OpenWOO Site   | React | Conduction | Een losse NL Design zoek pagina in de huisstijl van uw organisatie |
-| Voorkant | OpenWoo Plugin | Wordpress | Acato | Een NL Design weergave component voor wordpress websites |
-| Voorkant | ---------------| Typo-3 | Open Gemeente | Een NL Design weergave component voor typo 3 websites |
-| Voorkant | ---------------| Drupal | Sim Groep |   |
-| Integratie | ---------------| Common Gateway | Conduction |   |
-| Bronnen | ---------------| ZGW | Conduction | Automatisch ontsluiten vanuit ZGW zaaksystemen is standaard onderdeel van de integratie oplossing |
-| Bronnen | ---------------| ZDS | Conduction | Automatisch ontsluiten vanuit ZGW zaaksystemen is standaard onderdeel van de integratie oplossing |
-| Bronnen | ---------------| Stuf | Conduction | Automatisch ontsluiten vanuit ZGW zaaksystemen is standaard onderdeel van de integratie oplossing |
-| Bronnen | Open Pub | Nieuwsberichten  | Yard | |
-| Bronnen | Xllnc | Zaaksysteem | Yard | |
-| Bronnen | Join | Zaaksysteem | Decos | |
-| Bronnen | Fundament | Zaaksysteem | RX Visma | |
-
-
-
-
-
-### Open Webconcept variant
-
-Met deze variant kunnen Woo-verzoeken en convenanten eenvoudig worden beheerd vanuit de bestaande webomgeving en CMS door middel van een directe koppeling met de gateway. Dit vereist geen extra installatie of beheerinspanningen van de organisatie, op voorwaarde dat er al een OpenWebconcept-installatie met de benodigde plugins beschikbaar is. Dit biedt een serverloze en kostenefficiënte oplossing door het hergebruik van bestaande Common Ground-componenten.
+### Open Webconcept variant zonder integratie
+Met deze variant kunnen Woo-verzoeken en convenanten eenvoudig worden beheerd vanuit de bestaande webomgeving en CMS . Dit vereist geen extra installatie of beheerinspanningen van de organisatie, op voorwaarde dat er al een OpenWebconcept-installatie met de benodigde plugins beschikbaar is. 
 
 **Nadelen:**
-
 - Woo-verzoeken en convenanten moeten handmatig worden geüpload in de CMS-omgeving.
-- De zoekbalk wordt niet ondersteund.
+- De integrale zoekvraag wordt alleen ondersteund op de in wordpress aanwezigen gegevens
 
-![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/openweb.svg)
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/OpenWebconceptZonder.svg)
 
-### Common Gateway variant
+### Open Webconcept met integratie
+Het is ook mogenlijk om een bestaande Open Webconcept omgeving te combineren met de integratie voorziening. In dat geval gebruikt de integratie voorzien Open Webconcept zowel als bron als dat het naar Open Webconcept toe publiseerd
 
-Deze variant maakt het mogelijk om de front-end te koppelen aan een Common Gateway-installatie met de Open Woo-plugin. Dit biedt de mogelijkheid om direct te koppelen aan het zaaksysteem, waardoor Woo-verzoeken en convenanten automatisch kunnen worden gepubliceerd. Dit bespaart handmatig werk en vermindert de kans op fouten. De zoekbalk wordt in deze variant wel ondersteund. Het is tevens mogelijk om gegevens uit andere bronnen te integreren, zoals een raadsinformatiesysteem of een Open Webconcept CMS.
+**Nadelen**
+- Er moet een integratie voorziening worden geinstaleerd of afgenomen
 
-**Nadelen:**
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/OpenWebconceptMet.svg)
 
-- De organisatie moet de Common Gateway zelf installeren of als SaaS afnemen.
+### (Losse) Frontend met integratie
+Er zijn diverse fronten's die in theorie direct kunnen koppelen op de OpenWoo.app API.
 
-![Commongateway Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/commongateway.svg)
+**Voordelen**
+- De frontend hoeft maar één api te koppelen voor toegang tot meerdere bronnen
+- De gerbuiker kan een integrale zoekvraag over meerdere bronnen heen stellen (bijvoorbeeld zaaksysteem en raads informatie systeem)
+- Als de frontend zelf een CMS is kan deze ook als bron dienen (voor bijvoorbeeld nieuwsberichten en categorie omschrijvingen)
+- Er kan worden gecombineerd met componenten (bijvoorbeeld de los staande NL Design React voorkant op de Openwebconcept verzoeken en convenanten plugins)
 
-### Ophalen informatie
+**Nadelen**
+- Er moet een integratie voorziening worden geinstaleerd of afgenomen
 
-De Open Woo-plugin "scraped" elke nacht alle relevante zaken. De stappen zijn als volgt:
+**Beschickbbare componenten voor frontend**
+| Component | Framework | Open Source | Leveranciers | Beschrijving |
+|-------------|------|------|------------|--------------|
+| OpenWOO Site  | NL Design (React) | Ja | [Conduction](https://conduction.nl/) | Een losse NL Design zoek pagina in de huisstijl van uw organisatie |
+| OpenWoo Plugin | Wordpress | Ja | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) | Een NL Design weergave component voor wordpress websites |
+| Open Gemeente | Typo-3 | Ja | [Open Gemeente](https://www.opengemeenten.nl/) | Een weergave component voor typo 3 websites |
+| Sim Drupal | Drupal | ? | [Sim Groep](https://www.simgroep.nl/) | Een weergave component voor Drupal |
+
+> **notice** 
+> Voor Open Source componenten bent u natuurlijk niet beperkt tot deze leveranciers, dit zijn de op dit moment bij ons bekende leveranciers.
+> 
+> Weet u niet welk frontend framework uw organisaite op dit moment gebruikt? Kijk dan eens op [digimonitor](https://www.digimonitor.nl/cms-en/gemeenten/)
+> 
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/LosseFrontend.svg)
+
+### Bronnen met integratie
+Als er word gekosen voor het implementeren van het integratie voorziening word het mogenlijk om geautomatiseerd te publiceren vanuit meerdere bronnen.
+Dit bespaart handmatig werk en vermindert de kans op fouten. Tevens ondersteund het gebruik van het integratie meschanisme denintegrale zoekvraag en is mogelijk om gegevens uit andere bronnen te integreren, zoals een raadsinformatiesysteem of een Open Webconcept CMS.
+
+**Nadelen**
+- Er moet een integratie voorziening worden geinstaleerd of afgenomen
+
+**Beschickbbare componenten voor bronnen**
+| Component | Framework | Open Source | Leveranciers | Beschrijving |
+|-------------|------|------|------------|--------------|
+|Zaaksysteem.nl | ZGW | Ja | [Xxllnc](https://xxllnc.nl/) |--------------|
+|RX Fundament | ZGW | Nee | [Roxit ](https://www.roxit.nl/) |--------------|
+|Decos Join | ZGW | Nee | [Decos](https://www.decos.com/nl) |--------------|
+|Open Zaak | ZGW | Ja | [Maykin media](https://www.maykinmedia.nl/nl/) |--------------|
+
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Bronnen.svg)
+
+### Hoe werkt dat scrapen vanuit de integratie voorziening
+
+De integratie voorziening "scraped" elke nacht alle relevante informatie en bouwt hier een organisaties specifieke index over op. De stappen zijn als volgt:
 
 1. Ophalen van alle zaaktypen.
 2. Per zaaktype worden de beschikbare eigenschappen gecontroleerd (zie inrichting zaaksysteem).
@@ -70,25 +86,15 @@ Iedereen kan de landelijke API bevragen om alle Woo-verzoeken en convenanten op 
 
 (wordt nog aangevuld)
 
-## Componenten
 
-Een variant bestaat uit een aantal componenten die samen de functionaliteit van de variant vormen. Deze componenten zijn:
+## Woo Publicatie Object
 
-- [Woo API]()
-- [Woo Website]()
-- [Woo Plugin]()
-- [Woogle](https://woogle.wooverheid.nl/search?q=*)
-- [Raadsinformatie Systeem]()
-- [KOOP-index]()
-- [Common Gateway]()
-- [Open Webconcept CMS]()
-- [Zaaksysteem]()
+Het Woo Publicatie Object vormt de kern van zowel de Woo API als de Woo-website. Dit object bevat alle essentiële informatie over een Woo-publicatie, inclusief metadata, publicatiedatum, bijlagen en andere relevante eigenschappen. Het dient als de centrale entiteit waaromheen de functionaliteiten van de API en de website zijn gebouwd. Door deze gecentraliseerde aanpak is het eenvoudiger om Woo-publicaties efficiënt te beheren, op te halen en weer te geven, en draagt het bij aan een coherente en gestroomlijnde gebruikerservaring.
+
+Toegepaste norm: [NL API Strategie over property namen](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/#veldnamen-in-snake_case-camelcase-uppercamelcase-of-kebab-case)
+
 
 Alle componenten worden getest met [zaaksysteem.nl](https://xxllnc.nl/zaakgericht/), Rx.Fundament en Decos JOIN
-
-## Verschil OpenWoo.app en de OpenWoo plugin
-
-De OpenWoo.app is een verzameling van componenten die samen een oplossing vormen voor het publiceren van Woo-verzoeken en convenanten. De OpenWoo plugin is een onderdeel van deze oplossing en kan worden gebruikt om Woo-verzoeken en convenanten te publiceren vanuit een Open Webconcept CMS. De OpenWoo plugin is een onderdeel van deze oplossing en kan worden gebruikt om Woo-verzoeken en convenanten te publiceren vanuit een Open Webconcept CMS.
 
 ## Roadmap
 
