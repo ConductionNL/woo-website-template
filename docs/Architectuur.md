@@ -76,25 +76,18 @@ De integratie voorziening "scraped" elke nacht alle relevante informatie en bouw
 
 Dit proces zorgt ervoor dat het zaaksysteem leidend is en dat zaken zowel kunnen worden gepubliceerd als gedepubliceerd.
 
-## Federatie via OpenCatalogi
+## Federatie (via OpenCatalogi)
+OpenWoo.app maakt gebruik van het federatieve stelstel van [OpenCatalogi](https://opencatalogi.nl/) om verchillende integratie voorzieningne tesamen te binden. Hierbij verhoudt de organsiatie specifieke voorziening zich tot wat we binnen OPenCatalogi een catalogus noemen. 
+Dat betekend dat de integralle zoekvraag ook organisatie overstijgend kan worden gesteld aan meerdere organisatie tegelijktijd zonder dat er noodzaak is voor een landelijke index, dit concept is verder uitgewerkt in [koophulpje.nl](https://koophulpje.nl/) waarbij ook een voorziening is gerealiseerd voor het genereren van robot.txt en sitemap.xml bestanden.  Defacto is hiermee dus ook een landerlijke WOO api gerealiseerd met die berpekend dat deze alleen organisaties bevat die participeren in OpenWoo.app
 
-OpenWoo.app maakt gebruik van het federatieve stelstel van OpenCatalogi om de verschillende varianten te kunnen ontsluiten. Dit betekent dat organisaties zelf kunnen bepalen welke variant ze willen gebruiken en dat ze niet afhankelijk zijn van een centrale partij.
+De reden dat we hebben gekozen voor OpenCatalogi is dat in deze `variant` van FSC géén PKI of overige certificaten benodigd zijn. Dat lijnt uit met beter uit met de gedachte dat dit open data betreft die conform de wet juist annoniem toegankenlijk zou moeten zijn. 
 
-## Landelijke API
-
-Iedereen kan de landelijke API bevragen om alle Woo-verzoeken en convenanten op te halen. De API is gebaseerd op de [NL API Strategie](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/).
-
-(wordt nog aangevuld)
-
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Federatie.svg)
 
 ## Woo Publicatie Object
 
 Het Woo Publicatie Object vormt de kern van zowel de Woo API als de Woo-website. Dit object bevat alle essentiële informatie over een Woo-publicatie, inclusief metadata, publicatiedatum, bijlagen en andere relevante eigenschappen. Het dient als de centrale entiteit waaromheen de functionaliteiten van de API en de website zijn gebouwd. Door deze gecentraliseerde aanpak is het eenvoudiger om Woo-publicaties efficiënt te beheren, op te halen en weer te geven, en draagt het bij aan een coherente en gestroomlijnde gebruikerservaring.
 
-Toegepaste norm: [NL API Strategie over property namen](https://docs.geostandaarden.nl/api/cv-hr-API-Strategie-20190213/#veldnamen-in-snake_case-camelcase-uppercamelcase-of-kebab-case)
-
-
-Alle componenten worden getest met [zaaksysteem.nl](https://xxllnc.nl/zaakgericht/), Rx.Fundament en Decos JOIN
 
 ## Roadmap
 
