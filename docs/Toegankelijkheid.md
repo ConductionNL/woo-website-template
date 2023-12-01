@@ -1,4 +1,5 @@
 # Toegankelijkheid
+
 De OpenWoo.app streeft er naar om Woo (pagina's) toegankelijk te maken voor een zo breed mogelijk publiek, ongeacht technologie of vermogen. Er daarom actief gewerkt aan het verhogen van de toegankelijkheid en bruikbaarheid van de react frontend en deze is gehouden aan veel van de beschikbare standaarden en richtlijnen.
 
 Deze oplossing streeft ernaar te voldoen aan niveau AA van de Web Content Accessibility Guidelines (WCAG 2.1). Deze richtlijnen leggen de basis voor het toegankelijk maken van webinhoud voor mensen met een scala aan beperkingen, waaronder visuele, auditieve, motorische en cognitieve beperkingen.

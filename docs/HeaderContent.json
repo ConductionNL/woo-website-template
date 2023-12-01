@@ -97,6 +97,15 @@
         "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Installatie.md" }
       },
       {
+        "label": "Integratie",
+        "type": "markdown",
+        "current": {
+          "pathname": "/over/us",
+          "operator": "equals"
+        },
+        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Integratie.md" }
+      },
+      {
         "label": "Configuratie",
         "type": "markdown",
         "current": {

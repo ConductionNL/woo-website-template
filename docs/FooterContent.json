@@ -1,6 +1,6 @@
 [
   {
-    "title": "Documentatie",
+    "title": "Over",
     "items": [
       {
         "value": "Architectuur",
@@ -18,7 +18,7 @@
         "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Privacyverklaring.md"
       },
       {
-        "value": "Security",
+        "value": "Beveiliging",
         "type": "readme",
         "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/SECURITY.md"
       },
@@ -31,26 +31,41 @@
         "value": "Roadmap",
         "type": "readme",
         "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md"
+      },
+      {
+        "value": "Veel gestelde vragen",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/FAQ.md"
       }
     ]
   },
   {
-    "title": "Installatie",
+    "title": "Techniek",
     "items": [
+      {
+        "value": "Naar Productie",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md"
+      },
+      {
+        "value": "Architectuur",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md"
+      },
       {
         "value": "Installatie",
         "type": "readme",
         "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Installatie.md"
       },
       {
+        "value": "Integratie",
+        "type": "readme",
+        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Integratie.md"
+      },
+      {
         "value": "Configuratie",
         "type": "readme",
         "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuratie.md"
-      },
-      {
-        "value": "Naar Productie",
-        "type": "readme",
-        "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md"
       },
       {
         "value": "Testscenario's",
