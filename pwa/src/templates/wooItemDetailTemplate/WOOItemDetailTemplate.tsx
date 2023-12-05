@@ -91,10 +91,10 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     </TableRow>
                   )}
 
-                  {getItems.data.metadata.verzoek?.termijnoverschrijding && (
+                  {getItems.data.metadata?.verzoek?.termijnoverschrijding && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Exceeding the term")}</TableCell>
-                      <TableCell>{getItems.data.metadata.verzoek?.termijnoverschrijding}</TableCell>
+                      <TableCell>{getItems.data.metadata?.verzoek?.termijnoverschrijding}</TableCell>
                     </TableRow>
                   )}
 
@@ -109,22 +109,20 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     </TableRow>
                   )}
 
-                  {getItems.data.metadata.verzoek?.ontvangstdatum && (
+                  {getItems.data.metadata?.verzoek?.ontvangstdatum && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Registration date")}</TableCell>
 
                       <TableCell>
-                        {translateDate(i18n.language, getItems.data.metadata.verzoek?.ontvangstdatum) ?? "-"}
+                        {translateDate(i18n.language, getItems.data.metadata?.verzoek?.ontvangstdatum) ?? "-"}
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data.metadata.besluitdatum && (
+                  {getItems.data.metadata?.besluitdatum && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Decision date")} </TableCell>
-                      <TableCell>
-                        {translateDate(i18n.language, getItems.data.metadata.besluitdatum) ?? "-"}
-                      </TableCell>
+                      <TableCell>{translateDate(i18n.language, getItems.data.metadata?.besluitdatum) ?? "-"}</TableCell>
                     </TableRow>
                   )}
 
@@ -141,47 +139,47 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     </TableRow>
                   )}
 
-                  {getItems.data.metadata.verzoek?.informatieverzoek && (
+                  {getItems.data.metadata?.verzoek?.informatieverzoek && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Information request")}</TableCell>
                       <TableCell>
-                        <Link href={getItems.data.metadata.verzoek?.informatieverzoek?.url} target="blank">
-                          {getItems.data.metadata.verzoek?.informatieverzoek?.titel ??
-                            getPDFName(getItems.data.metadata.verzoek?.informatieverzoek?.url)}
+                        <Link href={getItems.data.metadata?.verzoek?.informatieverzoek?.url} target="blank">
+                          {getItems.data.metadata?.verzoek?.informatieverzoek?.titel ??
+                            getPDFName(getItems.data.metadata?.verzoek?.informatieverzoek?.url)}
                         </Link>
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {(getItems.data.metadata.verzoek?.besluit ||
-                    (getItems.data.metadata.verzoek?.besluit ?? getItems.data.metadata.verzoek?.besluit?.url)) && (
+                  {(getItems.data.metadata?.verzoek?.besluit ||
+                    (getItems.data.metadata?.verzoek?.besluit ?? getItems.data.metadata?.verzoek?.besluit?.url)) && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Decision")}</TableCell>
                       <TableCell>
-                        {(getItems.data.metadata.verzoek?.besluit ??
-                          getItems.data.metadata.verzoek?.besluit?.url) && (
+                        {(getItems.data.metadata?.verzoek?.besluit ??
+                          getItems.data.metadata?.verzoek?.besluit?.url) && (
                           <Link
                             href={
-                              getItems.data.metadata.verzoek?.besluit?.url ??
-                              getItems.data.metadata.verzoek?.besluit?.url
+                              getItems.data.metadata?.verzoek?.besluit?.url ??
+                              getItems.data.metadata?.verzoek?.besluit?.url
                             }
                             target="blank"
                           >
-                            {getItems.data.metadata.verzoek?.besluit?.titel ??
-                              getPDFName(getItems.data.metadata.verzoek?.besluit?.url)}
+                            {getItems.data.metadata?.verzoek?.besluit?.titel ??
+                              getPDFName(getItems.data.metadata?.verzoek?.besluit?.url)}
                           </Link>
                         )}
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data.metadata.verzoek?.inventarisatielijst && (
+                  {getItems.data.metadata?.verzoek?.inventarisatielijst && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Inventory list")}</TableCell>
                       <TableCell>
-                        <Link href={getItems.data.metadata.verzoek?.inventarisatielijst?.url} target="blank">
-                          {getItems.data.metadata.verzoek?.inventarisatielijst?.titel ??
-                            getPDFName(getItems.data.metadata.verzoek?.inventarisatielijst?.url)}
+                        <Link href={getItems.data.metadata?.verzoek?.inventarisatielijst?.url} target="blank">
+                          {getItems.data.metadata?.verzoek?.inventarisatielijst?.titel ??
+                            getPDFName(getItems.data.metadata?.verzoek?.inventarisatielijst?.url)}
                         </Link>
                       </TableCell>
                     </TableRow>
