@@ -50,10 +50,10 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
           </Link>
         </div>
 
-        {getItems.isSuccess && (
+        {getItems.isSuccess && getItems.data && (
           <>
             <Heading1 id="mainContent">
-              {getItems.data?.titel !== "" ? getItems.data?.titel : t("No title available")}
+              {getItems.data.titel !== "" ? getItems.data.titel : t("No title available")}
             </Heading1>
 
             <HorizontalOverflowWrapper
@@ -64,135 +64,133 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
             >
               <Table className={styles.table}>
                 <TableBody className={styles.tableBody}>
-                  {getItems.data?.id && (
+                  {getItems.data.id && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Feature")}</TableCell>
-                      <TableCell>{getItems.data?.id}</TableCell>
+                      <TableCell>{getItems.data.id}</TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data?.titel && (
+                  {getItems.data.titel && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Category")}</TableCell>
                       <TableCell>{getItems.data.categorie ?? "-"}</TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data?.samenvatting && (
+                  {getItems.data.samenvatting && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Summary")}</TableCell>
                       <TableCell>{getItems.data.samenvatting}</TableCell>
                     </TableRow>
                   )}
-                  {getItems.data?.beschrijving && (
+                  {getItems.data.beschrijving && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Description")}</TableCell>
                       <TableCell>{getItems.data.beschrijving}</TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data?.metadata?.verzoek?.termijnoverschrijding && (
+                  {getItems.data.metadata?.verzoek?.termijnoverschrijding && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Exceeding the term")}</TableCell>
-                      <TableCell>{getItems.data?.metadata?.verzoek?.termijnoverschrijding}</TableCell>
+                      <TableCell>{getItems.data.metadata?.verzoek?.termijnoverschrijding}</TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data?.publicatiedatum && (
+                  {getItems.data.publicatiedatum && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Publication date")}</TableCell>
                       <TableCell>
-                        {getItems.data?.publicatiedatum
-                          ? translateDate(i18n.language, getItems.data?.publicatiedatum)
+                        {getItems.data.publicatiedatum
+                          ? translateDate(i18n.language, getItems.data.publicatiedatum)
                           : "-"}
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data?.metadata?.verzoek?.ontvangstdatum && (
+                  {getItems.data.metadata?.verzoek?.ontvangstdatum && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Registration date")}</TableCell>
 
                       <TableCell>
-                        {translateDate(i18n.language, getItems.data?.metadata?.verzoek?.ontvangstdatum) ?? "-"}
+                        {translateDate(i18n.language, getItems.data.metadata?.verzoek?.ontvangstdatum) ?? "-"}
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data?.metadata?.besluitdatum && (
+                  {getItems.data.metadata?.besluitdatum && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Decision date")} </TableCell>
-                      <TableCell>
-                        {translateDate(i18n.language, getItems.data?.metadata?.besluitdatum) ?? "-"}
-                      </TableCell>
+                      <TableCell>{translateDate(i18n.language, getItems.data.metadata?.besluitdatum) ?? "-"}</TableCell>
                     </TableRow>
                   )}
 
-                  {!_.isEmpty(getItems.data?.themas) && (
+                  {!_.isEmpty(getItems.data.themas) && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Themes")}</TableCell>
                       <TableCell>
-                        {getItems.data?.themas.map((thema: any, idx: number) => (
+                        {getItems.data.themas.map((thema: any, idx: number) => (
                           <span key={idx}>
-                            {thema.hoofdthema + (idx !== getItems.data?.themas?.length - 1 ? ", " : "")}
+                            {thema.hoofdthema + (idx !== getItems.data.themas?.length - 1 ? ", " : "")}
                           </span>
                         ))}
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data?.metadata?.verzoek?.informatieverzoek && (
+                  {getItems.data.metadata?.verzoek?.informatieverzoek && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Information request")}</TableCell>
                       <TableCell>
-                        <Link href={getItems.data?.metadata?.verzoek?.informatieverzoek?.url} target="blank">
-                          {getItems.data?.metadata?.verzoek?.informatieverzoek?.titel ??
-                            getPDFName(getItems.data?.metadata?.verzoek?.informatieverzoek?.url)}
+                        <Link href={getItems.data.metadata?.verzoek?.informatieverzoek?.url} target="blank">
+                          {getItems.data.metadata?.verzoek?.informatieverzoek?.titel ??
+                            getPDFName(getItems.data.metadata?.verzoek?.informatieverzoek?.url)}
                         </Link>
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {(getItems.data?.metadata?.verzoek?.besluit ||
-                    (getItems.data?.metadata?.verzoek?.besluit ?? getItems.data?.metadata?.verzoek?.besluit?.url)) && (
+                  {(getItems.data.metadata?.verzoek?.besluit ||
+                    (getItems.data.metadata?.verzoek?.besluit ?? getItems.data.metadata?.verzoek?.besluit?.url)) && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Decision")}</TableCell>
                       <TableCell>
-                        {(getItems.data?.metadata?.verzoek?.besluit ??
-                          getItems.data?.metadata?.verzoek?.besluit?.url) && (
+                        {(getItems.data.metadata?.verzoek?.besluit ??
+                          getItems.data.metadata?.verzoek?.besluit?.url) && (
                           <Link
                             href={
-                              getItems.data?.metadata?.verzoek?.besluit?.url ??
-                              getItems.data?.metadata?.verzoek?.besluit?.url
+                              getItems.data.metadata?.verzoek?.besluit?.url ??
+                              getItems.data.metadata?.verzoek?.besluit?.url
                             }
                             target="blank"
                           >
-                            {getItems.data?.metadata?.verzoek?.besluit?.titel ??
-                              getPDFName(getItems.data?.metadata?.verzoek?.besluit?.url)}
+                            {getItems.data.metadata?.verzoek?.besluit?.titel ??
+                              getPDFName(getItems.data.metadata?.verzoek?.besluit?.url)}
                           </Link>
                         )}
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {getItems.data?.metadata.verzoek?.inventarisatielijst && (
+                  {getItems.data.metadata?.verzoek?.inventarisatielijst && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Inventory list")}</TableCell>
                       <TableCell>
-                        <Link href={getItems.data?.metadata.verzoek?.inventarisatielijst?.url} target="blank">
-                          {getItems.data?.metadata.verzoek?.inventarisatielijst?.titel ??
-                            getPDFName(getItems.data?.metadata?.verzoek?.inventarisatielijst?.url)}
+                        <Link href={getItems.data.metadata?.verzoek?.inventarisatielijst?.url} target="blank">
+                          {getItems.data.metadata?.verzoek?.inventarisatielijst?.titel ??
+                            getPDFName(getItems.data.metadata?.verzoek?.inventarisatielijst?.url)}
                         </Link>
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {!_.isEmpty(getItems.data?.bijlagen) && (
+                  {!_.isEmpty(getItems.data.bijlagen) && (
                     <TableRow className={styles.tableRow}>
                       <TableCell>{t("Attachments")}</TableCell>
                       <TableCell>
                         <UnorderedList>
-                          {getItems.data?.bijlagen.map(
+                          {getItems.data.bijlagen.map(
                             (bijlage: any, idx: number) =>
                               bijlage.titel && (
                                 <UnorderedListItem key={idx}>
