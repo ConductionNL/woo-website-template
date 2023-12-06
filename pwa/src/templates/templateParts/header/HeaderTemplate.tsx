@@ -22,11 +22,21 @@ export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName 
           <SkipLink href="#filters" tabIndex={gatsbyContext.location.pathname === "/" ? 0 : -1}>
             {t("Skip to filters")}
           </SkipLink>
-          <SkipLink href="#mainContent" tabIndex={gatsbyContext.location.pathname !== "/theme" ? 0 : -1}>
+          <SkipLink
+            href="#mainContent"
+            tabIndex={
+              gatsbyContext.location.pathname !== "/theme" && gatsbyContext.location.pathname !== "/theme/" ? 0 : -1
+            }
+          >
             {t("Skip to main content")}
           </SkipLink>
 
-          <SkipLink href="#currentwork" tabIndex={gatsbyContext.location.pathname === "/theme" ? 0 : -1}>
+          <SkipLink
+            href="#currentwork"
+            tabIndex={
+              gatsbyContext.location.pathname === "/theme" || gatsbyContext.location.pathname === "/theme/" ? 0 : -1
+            }
+          >
             {t("Skip to current work")}
           </SkipLink>
         </div>

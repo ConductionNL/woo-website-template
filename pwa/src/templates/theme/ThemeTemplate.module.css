@@ -253,7 +253,8 @@
   border-radius: 0;
   padding: unset;
   background-color: unset;
-  margin-inline-end: var(--skeleton-size-xs);
+  margin-inline-end: 8px;
+  margin-inline-start: 18px;
 }
 
 .logoDesktop {
@@ -274,4 +275,13 @@
 
 .logoContainer > *:not(:last-child) {
   margin-inline-end: var(--skeleton-size-lg);
+}
+
+.radioLabel {
+  user-select: none;
+}
+
+.radioContainer {
+  display: flex;
+  gap: 4px;
 }

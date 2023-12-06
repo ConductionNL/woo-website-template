@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as styles from "./ThemeTemplate.module.css";
 import clsx from "clsx";
-import { Page, PageContent } from "@utrecht/component-library-react/dist/css-module";
 import { useFiltersContext } from "../../context/filters";
 import {
   CardHeader,
@@ -30,6 +29,7 @@ import {
   BreadcrumbNavSeparator,
   Icon,
   Alert,
+  BadgeCounter,
   CodeBlock,
   Code,
   Heading1,
@@ -52,7 +52,10 @@ import {
   TableHeaderCell,
   TableBody,
   TableCell,
-  Checkbox,
+  Paragraph,
+  Page,
+  PageContent,
+  RadioButton,
 } from "@utrecht/component-library-react";
 import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
@@ -65,7 +68,6 @@ import {
   faCircleUser,
   faWarning,
 } from "@fortawesome/free-solid-svg-icons";
-import { BadgeCounter } from "@utrecht/component-library-react";
 import { getTokenValue } from "../../services/getTokenValue";
 import { PieChart } from "react-minimal-pie-chart";
 import { TOOLTIP_ID } from "../../layout/Layout";
@@ -81,6 +83,8 @@ export const ThemeTemplate: React.FC = () => {
   const [buttonsDisabled, setButtonsDisabled] = React.useState<boolean>(false);
   const [selectMaxWith, setSelectMaxWith] = React.useState<boolean>(true);
   const [refreshPieChartColor, setRefreshPieChartColor] = React.useState<boolean>(true);
+  const [radioButtonChecked, setRadioButtonChecked] = React.useState<string>("checked");
+
   const { gatsbyContext } = useGatsbyContext();
 
   const { filters } = useFiltersContext();
@@ -119,6 +123,11 @@ export const ThemeTemplate: React.FC = () => {
       },
       icon: <FontAwesomeIcon icon={faCircleUser} />,
     },
+  ];
+
+  const radioButtons = [
+    { label: "Default", value: "default" },
+    { label: "Checked", value: "checked" },
   ];
 
   return (
@@ -324,7 +333,7 @@ export const ThemeTemplate: React.FC = () => {
 
         <div>
           <h3 className={styles.header}>Paragraph:</h3>
-          <p>
+          <Paragraph>
             This is a Lorem ipsum paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio pariatur
             adipisci nam odit? Pariatur facilis, eaque provident veritatis eos recusandae? Repellat cumque, modi dolor
             provident numquam porro officiis iste est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
@@ -333,7 +342,23 @@ export const ThemeTemplate: React.FC = () => {
             lobortis massa imperdiet quam. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Cum
             sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras id dui. Vestibulum
             purus quam, scelerisque ut, mollis sed, nonummy id, metus. Vestibulum eu odio. Vestibulum eu odio.
-          </p>
+          </Paragraph>
+        </div>
+
+        <div id={"currentwork"}>
+          <h3 className={styles.header}>Radio button:</h3>
+          {radioButtons.map((radioButton) => (
+            <div
+              className={styles.radioContainer}
+              onChange={() => setRadioButtonChecked(radioButton.value)}
+              key={radioButton.value}
+            >
+              <RadioButton value={radioButton.value} checked={radioButtonChecked === radioButton.value} />
+              <span className={styles.radioLabel} onClick={() => setRadioButtonChecked(radioButton.value)}>
+                {radioButton.label}
+              </span>
+            </div>
+          ))}
         </div>
 
         <div>
@@ -490,7 +515,7 @@ export const ThemeTemplate: React.FC = () => {
           </ButtonGroup>
         </div>
 
-        <div id={"currentwork"}>
+        <div>
           <h3 className={styles.header}>Checkbox</h3>
           <DownloadCard
             label={"Download png"}
@@ -525,6 +550,21 @@ export const ThemeTemplate: React.FC = () => {
             <div className={styles.logoFooter}>
               <Logo variant="footer" onClick={() => console.log("click")} />
             </div>
+
+            <span>NavBar:</span>
+            <Container layoutClassName={styles.primaryNavContainer}>
+              <div className={clsx(styles.logoContainer)}>
+                <Logo variant="navbar" onClick={() => console.log("click")} />
+              </div>
+              <PrimaryTopNav
+                mobileLogo={
+                  <div className={clsx(styles.logoContainer, styles.logoMobile)}>
+                    <Logo onClick={() => console.log("click")} />
+                  </div>
+                }
+                items={headerTopNavItems}
+              />
+            </Container>
           </section>
         </div>
 
