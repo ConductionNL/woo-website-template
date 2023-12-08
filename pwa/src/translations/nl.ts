@@ -15,6 +15,7 @@ export const nl = {
   Page: "Pagina",
   Jumbotron: "Jumbotron",
   Limit: "Limiet",
+  Municipality: "Gemeente",
   "Jumbotron card": "Jumbotron tegel",
   "N/A": "N.v.t",
   "Details page": "Detailpagina",
@@ -56,4 +57,6 @@ export const nl = {
   "Select result limit": "Selecteer resultaten limiet",
   "Scroll table to the left": "Scroll tabel naar links",
   "Scroll table to the right": "Scroll tabel naar rechts",
+  "No category available": "Geen categorie beschikbaar",
+  "No municipality available": "Geen gemeente beschikbaar",
 };
