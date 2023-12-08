@@ -6,11 +6,12 @@ Onderstaande treft u de bij ons bekende kosten per component die leveranciers in
 
 ## Contactgegevens leveranciers
 
-| Leverancier                          | Contactpersoon                                   |
-|--------------------------------------|--------------------------------------------------|
-| [Conduction](https://conduction.nl/) | Ruben van der Linde (<info@conduction.nl>)       |
-| [xxllnc](https://xxllnc.nl/)         | Arthur van Ulden (<sales.zaakgericht@xxllnc.nl>) |
-| [Sim Groep](https://www.simgroep.nl/)                        |                                                  |
+| Leverancier                                    | Contactpersoon                                                                       |
+|------------------------------------------------|--------------------------------------------------------------------------------------|
+| [Conduction](https://conduction.nl/)           | [Ruben van der Linde (info@conduction.nl)](mailto:info@conduction.nl)                |
+| [xxllnc](https://xxllnc.nl/)                   | [Arthur van Ulden (sales.zaakgericht@xxllnc.nl)](mailto:sales.zaakgericht@xxllnc.nl) |
+| [Sim Groep](https://www.simgroep.nl/)          | [Twan Meijerink(t.meijerink@simgroep.nl)](mailto:t.meijerink@simgroep.nl)                                   |
+| [OpenGemeenten](https://www.opengemeenten.nl/) | [Micheline Tasseron (micheline@opengemeenten.nl)](mailto:micheline@opengemeenten.nl) |
 
 ## Frontend
 
@@ -22,6 +23,7 @@ Kijk op [de demo pagina](https://conductionnl.github.io/woo-website-xxllnc/) voo
 | Integratie in Open Webconcept                  | Yard        | Onbekend    | Onbekend      |
 | Integratie in Open Webconcept                  | Acato       | Onbekend | Onbekend      |
 | Sim Site                                       | Sim Groep   | Onbekend | Onbekend      |
+| TYPO3                                          | OpenGemeenten   | Onbekend | Onbekend      |
 
 **Waarop zijn de maandelijkse kosten gebaseerd?**
 Los van hosting verwachten we naar aanleiding van eerdere ervaringen dat de frontend maandelijks moet worden bijgewerkt in verband met veiligheidsupdates, nieuwe functionaliteit of aanpassingen in NL Design. Met name de ontwikkelingen in de Woo zullen ervoor zorgen dat de pagina de komende jaren continu in beweging is.
