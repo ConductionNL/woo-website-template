@@ -22,8 +22,8 @@
     "prepare": "cd .. && husky install"
   },
   "dependencies": {
-    "@conduction/components": "2.2.40",
-    "@conduction/theme": "1.0.57",
+    "@conduction/components": "2.2.41",
+    "@conduction/theme": "1.0.60",
     "@fortawesome/fontawesome-svg-core": "^6.5.0",
     "@fortawesome/free-brands-svg-icons": "6.5.0",
     "@fortawesome/free-regular-svg-icons": "6.5.0",
@@ -82,10 +82,10 @@
     "react-hot-toast": "^2.4.1",
     "react-i18next": "^13.5.0",
     "react-loading-skeleton": "^3.3.1",
+    "react-minimal-pie-chart": "^8.4.0",
     "react-paginate": "^8.2.0",
     "react-query": "^3.39.3",
     "react-select": "^5.8.0",
-    "react-minimal-pie-chart": "^8.4.0",
     "showdown": "^2.1.0"
   },
   "devDependencies": {
@@ -94,9 +94,9 @@
     "@types/dedent": "^0.7.2",
     "@types/node": "^20.10.0",
     "@types/react-helmet": "^6.1.9",
+    "@types/showdown": "2.0.6",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
-    "@types/showdown": "2.0.6",
     "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.2",

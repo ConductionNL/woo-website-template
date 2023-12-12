@@ -353,7 +353,11 @@ export const ThemeTemplate: React.FC = () => {
               onChange={() => setRadioButtonChecked(radioButton.value)}
               key={radioButton.value}
             >
-              <RadioButton value={radioButton.value} checked={radioButtonChecked === radioButton.value} />
+              <RadioButton
+                className={styles.radioButton}
+                value={radioButton.value}
+                checked={radioButtonChecked === radioButton.value}
+              />
               <span className={styles.radioLabel} onClick={() => setRadioButtonChecked(radioButton.value)}>
                 {radioButton.label}
               </span>
@@ -518,7 +522,11 @@ export const ThemeTemplate: React.FC = () => {
         <div>
           <h3 className={styles.header}>Checkbox</h3>
           <DownloadCard
-            label={"Download png"}
+            label={"Download.png"}
+            labelTooltip={{
+              id: TOOLTIP_ID,
+              tooltip: "https://google.com/download.png",
+            }}
             type={"PNG"}
             size="428"
             handleClick={() => {
@@ -526,7 +534,11 @@ export const ThemeTemplate: React.FC = () => {
             }}
           />
           <DownloadCard
-            label={"https://github.com/CommonGateway/ZGWBundle/archive/refs/heads/main.zip"}
+            label={"main.zip"}
+            labelTooltip={{
+              id: TOOLTIP_ID,
+              tooltip: "https://github.com/CommonGateway/ZGWBundle/archive/refs/heads/main.zip",
+            }}
             type={"ZIP"}
             size="111"
             handleClick={() => {
@@ -647,7 +659,59 @@ export const ThemeTemplate: React.FC = () => {
         </div>
         <div>
           <h3 className={styles.header}>TableWrapper:</h3>
-          <span>No preview/component</span>
+          <HorizontalOverflowWrapper
+            ariaLabels={{ scrollLeftButton: t("Left scroll button"), scrollRightButton: t("Right scroll button") }}
+          >
+            <Table className={styles.table}>
+              <TableHeader className={styles.tableHeader}>
+                <TableRow>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                </TableRow>
+              </TableHeader>
+              <TableBody className={styles.tableBody}>
+                <TableRow className={styles.tableRow}>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                </TableRow>
+                <TableRow className={styles.tableRow}>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                  <TableCell>TableCell</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </HorizontalOverflowWrapper>
         </div>
 
         <div>
