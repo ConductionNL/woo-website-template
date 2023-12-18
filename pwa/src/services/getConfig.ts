@@ -17,6 +17,7 @@ import Waddinxveen from "./../../static/configFiles/waddinxveen.json";
 import RijssenHolten from "./../../static/configFiles/rijssen-holten.json";
 import HoekscheWaard from "./../../static/configFiles/hoeksche-waard.json";
 import Texel from "./../../static/configFiles/texel.json";
+import Zutphen from "./../../static/configFiles/zutphen.json";
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
@@ -42,6 +43,9 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "open.xxllnc.nl":
     case "xxllnc-theme":
       return Xxllnc;
+    case "open.zutphen.nl":
+    case "zutphen-theme":
+      return Zutphen;
     case "koophulpje.nl":
     case "open-webconcept-theme":
       // case "localhost": // development purposes
@@ -100,6 +104,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Texel", value: "texel" },
       { label: "Tubbergen", value: "tubbergen-theme" },
       { label: "Waddinxveen", value: "waddinxveen" },
+      { label: "Zutphen", value: "zutphen-theme" },
     ],
   },
   {
