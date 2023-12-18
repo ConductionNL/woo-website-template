@@ -18,6 +18,7 @@ import RijssenHolten from "./../../static/configFiles/rijssen-holten.json";
 import HoekscheWaard from "./../../static/configFiles/hoeksche-waard.json";
 import Texel from "./../../static/configFiles/texel.json";
 import Zutphen from "./../../static/configFiles/zutphen.json";
+import Sloterburg from "./../../static/configFiles/sloterburg.json";
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
@@ -69,6 +70,12 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "zutphen.openwoo.app":
     case "zutphen-theme":
       return Zutphen;
+
+    case "open.sloterburg.nl":
+    case "sloterburg.koophulpje.nl":
+    case "sloterburg.openwoo.app":
+    case "sloterburg-theme":
+      return Sloterburg;
 
     case "koophulpje.nl":
     case "open-webconcept-theme":
@@ -154,6 +161,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Ridderkerk", value: "ridderkerk" },
       { label: "Rijssen-Holten", value: "rijssen-holten" },
       { label: "Rotterdam", value: "rotterdam-theme" },
+      { label: "Sloterburg", value: "sloterburg-theme" },
       { label: "Stede Broec", value: "stedebroec" },
       { label: "Texel", value: "texel" },
       { label: "Tubbergen", value: "tubbergen-theme" },
