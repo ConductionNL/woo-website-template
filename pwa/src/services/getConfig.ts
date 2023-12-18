@@ -23,53 +23,107 @@ import { TGroupedSelectOption } from "@conduction/components/lib/components/form
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
   switch (themeOrDomainName) {
     case "open.epe.nl":
+    case "epe.koophulpje.nl":
+    case "epe.openwoo.app":
     case "epe-theme":
       return Epe;
+
     case "open.noordwijk.nl":
+    case "noordwijk.koophulpje.nl":
+    case "noordwijk.openwoo.app":
     case "noordwijk-theme":
       return Noordwijk;
+
     case "open.rotterdam.nl":
+    case "rotterdam.koophulpje.nl":
+    case "rotterdam.openwoo.app":
     case "rotterdam-theme":
       return Rotterdam;
+
     case "open.noaberkracht.nl":
+    case "noaberkracht.koophulpje.nl":
+    case "noaberkracht.openwoo.app":
     case "noaberkracht-theme":
       return Noaberkracht;
+
     case "open.tubbergen.nl":
+    case "tubbergen.koophulpje.nl":
+    case "tubbergen.openwoo.app":
     case "tubbergen-theme":
       return Tubbergen;
+
     case "open.dinkelland.nl":
+    case "dinkelland.koophulpje.nl":
+    case "dinkelland.openwoo.app":
     case "dinkelland-theme":
       return Dinkelland;
+
     case "open.xxllnc.nl":
+    case "xxllnc.koophulpje.nl":
+    case "xxllnc.openwoo.app":
     case "xxllnc-theme":
       return Xxllnc;
+
     case "open.zutphen.nl":
+    case "zutphen.koophulpje.nl":
+    case "zutphen.openwoo.app":
     case "zutphen-theme":
       return Zutphen;
+
     case "koophulpje.nl":
     case "open-webconcept-theme":
+    case "openwoo.app":
       // case "localhost": // development purposes
       return OpenWebconcept;
 
     case "barendrecht":
+    case "barendrecht.koophulpje.nl":
+    case "barendrecht.openwoo.app":
       return Barendrecht;
+
     case "ridderkerk":
+    case "ridderkerk.koophulpje.nl":
+    case "ridderkerk.openwoo.app":
       return Ridderkerk;
+
     case "buren":
+    case "buren.koophulpje.nl":
+    case "buren.openwoo.app":
       return Buren;
+
     case "albrandswaard":
+    case "albrandswaard.koophulpje.nl":
+    case "albrandswaard.openwoo.app":
       return Albrandswaard;
+
     case "stedebroec":
+    case "stedebroec.koophulpje.nl":
+    case "stedebroec.openwoo.app":
       return StedeBroec;
+
     case "lansingerland":
+    case "lansingerland.koophulpje.nl":
+    case "lansingerland.openwoo.app":
       return Lansingerland;
+
     case "waddinxveen":
+    case "waddinxveen.koophulpje.nl":
+    case "waddinxveen.openwoo.app":
       return Waddinxveen;
+
     case "rijssen-holten":
+    case "rijssen-holten.koophulpje.nl":
+    case "rijssen-holten.openwoo.app":
       return RijssenHolten;
+
     case "hoeksche-waard":
+    case "hoeksche-waard.koophulpje.nl":
+    case "hoeksche-waard.openwoo.app":
       return HoekscheWaard;
+
     case "texel":
+    case "texel.koophulpje.nl":
+    case "texel.openwoo.app":
       return Texel;
 
     default:
