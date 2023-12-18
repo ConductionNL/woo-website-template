@@ -166,6 +166,11 @@ export const ThemeTemplate: React.FC = () => {
         </div>
 
         <div>
+          <h3 className={styles.header}>Badge / DataBadge:</h3>
+          <DataBadge className={styles.tagWidth}>DataBadge</DataBadge>
+        </div>
+
+        <div>
           <h3 className={styles.header}>Blockquote:</h3>
           <span>No preview/component</span>
         </div>
@@ -207,7 +212,7 @@ export const ThemeTemplate: React.FC = () => {
         </div>
 
         <div>
-          <h3 className={styles.header}>Breadcumbs:</h3>
+          <h3 className={styles.header}>Buttons:</h3>
           <section className={styles.section}>
             <button onClick={() => setButtonsDisabled(!buttonsDisabled)}>toggle disabled</button>:{" "}
             <span>{buttonsDisabled.toString()}</span>
@@ -250,11 +255,6 @@ export const ThemeTemplate: React.FC = () => {
             this is a bit of <Code>code</Code> in a text about <Code>helm install </Code>
           </div>
           <CodeBlock>helm install [my-opencatalogi] open-catalogi/opencatalogi </CodeBlock>
-        </div>
-
-        <div>
-          <h3 className={styles.header}>DataBadge / Badge:</h3>
-          <DataBadge className={styles.tagWidth}>DataBadge</DataBadge>
         </div>
 
         <div>
@@ -695,7 +695,6 @@ export const ThemeTemplate: React.FC = () => {
                   <TableCell>TableCell</TableCell>
                 </TableRow>
                 <TableRow className={styles.tableRow}>
-                  <TableCell>TableCell</TableCell>
                   <TableCell>TableCell</TableCell>
                   <TableCell>TableCell</TableCell>
                   <TableCell>TableCell</TableCell>
