@@ -23,53 +23,88 @@ import { TGroupedSelectOption } from "@conduction/components/lib/components/form
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
   switch (themeOrDomainName) {
     case "open.epe.nl":
+    case "epe.koophulpje.nl":
     case "epe-theme":
       return Epe;
+
     case "open.noordwijk.nl":
+    case "noordwijk.koophulpje.nl":
     case "noordwijk-theme":
       return Noordwijk;
+
     case "open.rotterdam.nl":
+    case "rotterdam.koophulpje.nl":
     case "rotterdam-theme":
       return Rotterdam;
+
     case "open.noaberkracht.nl":
+    case "noaberkracht.koophulpje.nl":
     case "noaberkracht-theme":
       return Noaberkracht;
+
     case "open.tubbergen.nl":
+    case "tubbergen.koophulpje.nl":
     case "tubbergen-theme":
       return Tubbergen;
+
     case "open.dinkelland.nl":
+    case "dinkelland.koophulpje.nl":
     case "dinkelland-theme":
       return Dinkelland;
+
     case "open.xxllnc.nl":
+    case "xxllnc.koophulpje.nl":
     case "xxllnc-theme":
       return Xxllnc;
+
     case "open.zutphen.nl":
+    case "zutphen.koophulpje.nl":
     case "zutphen-theme":
       return Zutphen;
+
     case "koophulpje.nl":
     case "open-webconcept-theme":
       // case "localhost": // development purposes
       return OpenWebconcept;
 
     case "barendrecht":
+    case "barendrecht.koophulpje.nl":
       return Barendrecht;
+
     case "ridderkerk":
+    case "ridderkerk.koophulpje.nl":
       return Ridderkerk;
+
     case "buren":
+    case "buren.koophulpje.nl":
       return Buren;
+
     case "albrandswaard":
+    case "albrandswaard.koophulpje.nl":
       return Albrandswaard;
+
     case "stedebroec":
+    case "stedebroec.koophulpje.nl":
       return StedeBroec;
+
     case "lansingerland":
+    case "lansingerland.koophulpje.nl":
       return Lansingerland;
+
     case "waddinxveen":
+    case "lansingerland.koophulpje.nl":
       return Waddinxveen;
+
     case "rijssen-holten":
+    case "rijssen-holten.koophulpje.nl":
       return RijssenHolten;
+
     case "hoeksche-waard":
+    case "hoeksche-waard.koophulpje.nl":
       return HoekscheWaard;
+
     case "texel":
+    case "lansingerland.koophulpje.nl":
       return Texel;
 
     default:
