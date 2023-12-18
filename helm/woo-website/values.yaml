@@ -1,0 +1,105 @@
+# Default values for api-platform.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+pwa:
+  image:
+    image: "ghcr.io/conductionnl/woo-website"
+    pullPolicy: Always
+    tag: "dev"
+    # Overrides the image tag whose default is the chart appVersion.
+  apiUrl: "useDomain"
+  meUrl: "useDomain"
+  baseUrl: "useDomain"
+  frontendUrl: "useDomain"
+  organization: ""
+  redirectUrl: "vault"
+  adminUrl: "useDomain"
+  dashboardUrl: "useDomain"
+  # These values override the use of the default domain in global.domain
+
+replicacount: 2
+
+global:
+  domain: woo.commonground.nu
+  # The main domain the application should be run on. The api's will be available at api., the admin ui on admin.
+  tls: true
+  # Whether the helm file should take care of creating TLS certificates and adding them to the ingress resource.
+
+gateway:
+  enabled: true
+  # config:
+  #  trustedProxies: []
+  # If the application needs to run HTTPS only without any HTTP to HTTPS redirects, add in the internal IP of the
+  # load balancer in the field above. The application otherwise might redirect to HTTP addresses that should be HTTPS.
+  # This due to internal traffic in Kubernetes typically being without TLS. Adding the load balancer to the trusted proxies
+  # will tell the application that the traffic was sent in HTTPS.
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: false
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+# fsGroup: 2000
+
+securityContext:
+  {}
+  # capabilities:
+  #   drop:
+    #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+# runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  path: ""
+  pathType: ImplementationSpecific
+  className: nginx
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources:
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 10m
+  #   memory: 128Mi
+   requests:
+     cpu: 100m
+     memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
