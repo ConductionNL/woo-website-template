@@ -127,7 +127,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
       return Texel;
 
     default:
-      return Conduction;
+      return OpenWebconcept;
   }
 };
 
