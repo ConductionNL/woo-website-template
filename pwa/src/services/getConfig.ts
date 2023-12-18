@@ -92,7 +92,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
       return Lansingerland;
 
     case "waddinxveen":
-    case "lansingerland.koophulpje.nl":
+    case "waddinxveen.koophulpje.nl":
       return Waddinxveen;
 
     case "rijssen-holten":
@@ -104,7 +104,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
       return HoekscheWaard;
 
     case "texel":
-    case "lansingerland.koophulpje.nl":
+    case "texel.koophulpje.nl":
       return Texel;
 
     default:
