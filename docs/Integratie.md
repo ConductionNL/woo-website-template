@@ -1,14 +1,14 @@
 # Integratie
 
-OpenWoo.app is essentie een koppelvlak waar aan de bovenkant meerdere weergaven of user interfaces op kunnen worden gekoppeld en aan de onderkant meerdere bronnen ontsloten.
+OpenWoo.app is essentie een koppelvlak waar aan de bovenkant meerdere weergaven of user interfaces op kunnen worden gekoppeld en aan de onderkant worden meerdere bronnen ontsloten.
 
 > **Hulp nodig?**
 >
-> Hiervoor hebben we een appart [slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen commonground. We helpen je daar graag verder.
+> Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder.
 
 ## Het koppelen van een user interface
 
-Als u als organisatie of leverancier OpenWoo.app wilt koppelen aan een huidige interface (bijvoorbeeld door de resultaten uit uw gemeente in uw website te integereren) and kunt u daarvoor gebruikmaken van de OpenWoo.app API. 
+Als u als organisatie of leverancier OpenWoo.app wilt koppelen aan een huidige interface (bijvoorbeeld door de resultaten uit uw gemeente in uw website te integereren) and kunt u daarvoor gebruikmaken van de OpenWoo.app API.
 
 ### Locatie en Authenticatie
 
@@ -22,10 +22,10 @@ Voor de API is een [redoc documentatie](https://redocly.github.io/redoc/?url=htt
 
 ### Voorbeelden
 
-In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.gateway.commonground.nu/api/publicaties>. Er zijn 4 voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties vind u terug in de [Redoc documentatie]()).
+In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo-publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.gateway.commonground.nu/api/publicaties>. Er zijn 4 voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties vind u terug in de [Redoc documentatie]()).
 
 1. Op een of meerdere zoek woorden, b.v. `_search=test`
-2. Op organisatie, dit gaat aan de hand van OIN (de volledige OIN lijst vind u [hier](https://oinregister.logius.nl/oin-register)) b.v. `oin=00000001001299992000`
+2. Op organisatie, dit gaat aan de hand van OIN (de volledige OIN-lijst vind u [hier](https://oinregister.logius.nl/oin-register)) b.v. `oin=00000001001299992000`
 3. Op categorie, `categorie=Convenant`
 4. Op datum, Hierbij kunt u een begin en eindatum opgeven om een periode (bijvoorbeeld jaar) te doorzoeken publicatiedatum[after]=2022-12-31T23:59:59Z&publicatiedatum[before]=2024-01-01T00:00:00Z&
 
@@ -137,13 +137,13 @@ Response
 ````
 
 ### Metadata
-De kern gegevens van een WOO publicatie zitten in het metadata object, de inhoud van dit object is 'semi' vrij, hij kan per publicatie `categorie` verschillen. Daarnaast zijn er een paar algemene properties die altijd kunnen voorkomen in de metadata
+
+De kern gegevens van een WOO-publicatie zitten in het metadata-object, de inhoud van dit object is 'semi' vrij, hij kan per publicatie `categorie` verschillen. Daarnaast zijn er een paar algemene properties die altijd kunnen voorkomen in de metadata
 
 #### Algemene properties
 
 | Property            | Verplicht | Gebruik                                                                                                 | Toegestane waardes |
 |---------------------|-----------|---------------------------------------------------------------------------------------------------------|--------------------|
-
 
 #### Convenanten
 

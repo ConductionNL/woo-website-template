@@ -30,7 +30,7 @@ De Open WOO Website is in eerste instantie opgezet om serverless gebruikt te wor
 > 6. Ga naar acties en wacht tot de actie "Deploy the WOO Page to GitHub Pages" succesvol is afgerond
 > 7. Ga naar settings->pages, selecteer onder source `deploy from branch` en geef als branche op `gh-pages`
 > 8. Bovenaan de pagina verschijnt nu de URL waarop je je Open WOO Website kunt terugvinden
-> 9. Als je de Open WOO Website wilt hosten onder een subdomein van je organisatie en voorzien van een PKI-certificaat, kun je daarvoor de normale GitHub Pages-handleidingen volgen of een SLA afsluiten voor ondersteuning (zie [kosten]())
+> 9. Als je de Open WOO Website wilt hosten onder een subdomein van je organisatie en voorzien van een PKI-certificaat, kun je daarvoor de normale GitHub Pages-handleidingen volgen of een SLA afsluiten voor ondersteuning (zie [kosten](https://openwoo.app/github/Kosten/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md))
 
 ### Server Installatie
 
@@ -77,7 +77,7 @@ Volg de installatiehandleiding op [Woo Bundle](https://github.com/ConductionNL/W
 
 ## Externe Systemen
 
-Voor het koppelen van externe systemen geldt dat zij op de juiste manier moeten zijn geconfigureerd. Kijk daarvoor onder [configuratie](/Configuratie).
+Voor het koppelen van externe systemen geldt dat zij op de juiste manier moeten zijn geconfigureerd. Kijk daarvoor onder [configuratie](https://openwoo.app/github/Configuratie/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuratie.md).
 
 ## Verdere documentatie
 
