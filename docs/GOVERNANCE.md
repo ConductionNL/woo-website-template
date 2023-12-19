@@ -8,7 +8,7 @@ De Stuurgroep is samengesteld uit verschillende leden die een breed scala aan pe
 
 - **Conduction (Leverancier)**: Met een rijke ervaring in het leveren van technologische oplossingen, brengt Conduction waardevolle inzichten en technische expertise in het project.
 - **xxlnce (Leverancier)**: Als leverancier draagt xxlnce bij aan de technologische vooruitgang en zorgt ervoor dat het project blijft voldoen aan de behoeften van de gebruikers.
-- **Epe (Pilot emeente)**
+- **Epe (Pilot Gemeente)**
 - **Noordwijk (Pilot Gemeente)**
 - **Noaberkracht (Pilot Samenwerkingsverband)**
 
