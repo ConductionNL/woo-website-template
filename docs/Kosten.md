@@ -11,7 +11,7 @@ Onderstaande treft u de bij ons bekende kosten per component die leveranciers in
 | [Conduction](https://conduction.nl/)           | [Ruben van der Linde (info@conduction.nl)](mailto:info@conduction.nl)                |
 | [xxllnc](https://xxllnc.nl/)                   | [Arthur van Ulden (sales.zaakgericht@xxllnc.nl)](mailto:sales.zaakgericht@xxllnc.nl) |
 | [Sim Groep](https://www.simgroep.nl/)          | [Twan Meijerink(t.meijerink@simgroep.nl)](mailto:t.meijerink@simgroep.nl)                                   |
-| [OpenGemeenten](https://www.opengemeenten.nl/) | [Micheline Tasseron (micheline@opengemeenten.nl)](mailto:micheline@opengemeenten.nl) |
+| [OpenGemeenten](https://www.opengemeenten.nl/) | [Jan-Thijs Oosterhoudt (hallo@opengemeenten.nl)](mailto:hallo@opengemeenten.nl) |
 
 ## Frontend
 
@@ -22,24 +22,23 @@ Kijk op [de demo pagina](https://conductionnl.github.io/woo-website-xxllnc/) voo
 | Losse React pagina            | Conduction  | € 1750,- | € 250.-      |
 | Integratie in Open Webconcept | Yard        | Onbekend | Onbekend      |
 | Integratie in Open Webconcept | Acato       | Onbekend | Onbekend      |
-| Sim Site                      | Sim Groep   | Onbekend | Onbekend      |
+| Sim Site                      | SIM Groep   | Onbekend | Onbekend      |
 | TYPO3                         | OpenGemeenten   | Onbekend | Onbekend      |
 
 **Waarop zijn de maandelijkse kosten gebaseerd?**
 Los van hosting verwachten we naar aanleiding van eerdere ervaringen dat de frontend maandelijks moet worden bijgewerkt in verband met veiligheidsupdates, nieuwe functionaliteit of aanpassingen in NL Design. Met name de ontwikkelingen in de Woo zullen ervoor zorgen dat de pagina de komende jaren continu in beweging is.
 
-
-## Integratie voorziening
+## Integratievoorziening
 
 Het is mogelijk om de Open Woo Website rechtstreeks aan uw zaaksysteem te koppelen aan de hand van ZGW of een Search-endpoint (in het geval van Zaaksysteem.nl)
 
 | Component              | Leverancier | Eenmalig | Maandelijks |
 |------------------------|-------------|----------|-------------|
-| Integratie voorziening | Conduction  | €3000,-  | €250.-      |
-| Integratie voorziening | xxlnc       | €3000,-  | €250.-      |
+| Integratievoorziening | Conduction  | €3000,-  | €250.-      |
+| Integratievoorziening | xxllnc       | €3000,-  | €250.-      |
 
 > **Opmerking**
-> Via een Stuf ↔ ZGW-koppelvlak is het in theorie ook mogelijk een zaaksysteem te koppelen aan de hand van Stuf, dit is in de praktijk echter nog niet beproeft. Andere koppelvlakken en maatwerk zijn uiteraard bespreekbaar, neem daarvoor contact op met een leverancier.
+> Via een StUF ↔ ZGW-koppelvlak is het in theorie ook mogelijk een zaaksysteem te koppelen aan de hand van StUF, dit is in de praktijk echter nog niet beproeft. Andere koppelvlakken en maatwerk zijn uiteraard bespreekbaar, neem daarvoor contact op met een leverancier.
 
 ## Bronnen
 
@@ -48,12 +47,12 @@ Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het mode
 | Component         | Leverancier | Eenmalig | Maandenlijks |
 |-------------------|-------------|----------|--------------|
 | Zaaksysteem.nl    | xxllnce     | € 3000,-  | n.v.t        |
-| Open Pub          | Yard        | Onbekend  |Onbekend       |
+| OpenPub          | Yard        | Onbekend  |Onbekend       |
 | Open Verzoeken    | Yard        | Onbekend  |Onbekend       |
 | Open Conventanten | Yard        | Onbekend  |Onbekend       |
 | Open Klachten     | Yard        | Onbekend  |Onbekend       |
-| Open Zaak         | -           | Onbekend  |Onbekend       |
-| Join              | Decos       | Onbekend  |Onbekend       |
+| OpenZaak         | -           | Onbekend  |Onbekend       |
+| JOIN              | Decos       | Onbekend  |Onbekend       |
 | Fundament         | Roxit       | Onbekend  |Onbekend       |
 
 Mocht u nog niet beschikken over xxllnc Zaken (zaaksysteem.nl) maar wel behoefte hebben aan een manier om de documenten conform een ingericht proces te gaan publiceren en achteraf correct te kunnen archiveren neem dan contact met ons op via: <sales.zaakgericht@xxllnc.nl>. Wij gaan graag in gesprek over de mogelijkheden hiervoor!
@@ -68,7 +67,6 @@ Buiten het leveren van componenten om kan het ook zijn dat er nog overige dienst
 
 > **Opmerking**
 > NL Design tokens zijn een randvoorwaarde (vereiste) voor het gebruik van de react frontend. Als uw organisatie hier reeds over beschikt, hoeven deze uiteraard niet opnieuw te worden gemaakt. Wel is het mogelijk dat uw huidige token set moet worden uitgebreid; in dat geval volgt een maatwerkofferte. Let op! De prijsstelling is gebaseerd op een aangeleverde en volledige huisstijlgids. Indien deze niet beschikbaar is, moeten de tokens worden gereverse-engineerd vanaf uw website. Daar zijn extra kosten aan verbonden.
-
 
 ## Leverancier worden?
 

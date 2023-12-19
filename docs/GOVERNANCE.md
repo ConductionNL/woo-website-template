@@ -1,6 +1,6 @@
 # Bestuur
 
-Het succes en de continu verbetering van het OpenWoo.app project zijn afhankelijk van een effectieve governance-structuur. Een belangrijk onderdeel van deze structuur is de stuurgroep, die verantwoordelijk is voor het beoordelen en prioriteren van de issues die op GitHub worden ingediend, en voor het bepalen welke daarvan worden opgenomen in de roadmap van het project.
+Het succes en de continue verbetering van het OpenWoo.app project zijn afhankelijk van een effectieve governance-structuur. Een belangrijk onderdeel van deze structuur is de stuurgroep, die verantwoordelijk is voor het beoordelen en prioriteren van de issues die op GitHub worden ingediend, en voor het bepalen welke daarvan worden opgenomen in de roadmap van het project.
 
 ## Stuurgroep
 
@@ -8,7 +8,7 @@ De Stuurgroep is samengesteld uit verschillende leden die een breed scala aan pe
 
 - **Conduction (Leverancier)**: Met een rijke ervaring in het leveren van technologische oplossingen, brengt Conduction waardevolle inzichten en technische expertise in het project.
 - **xxlnce (Leverancier)**: Als leverancier draagt xxlnce bij aan de technologische vooruitgang en zorgt ervoor dat het project blijft voldoen aan de behoeften van de gebruikers.
-- **Epe (Pilot Gemeente)**
+- **Epe (Pilot emeente)**
 - **Noordwijk (Pilot Gemeente)**
 - **Noaberkracht (Pilot Samenwerkingsverband)**
 
