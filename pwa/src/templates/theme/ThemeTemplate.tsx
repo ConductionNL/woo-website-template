@@ -345,7 +345,7 @@ export const ThemeTemplate: React.FC = () => {
           </Paragraph>
         </div>
 
-        <div id={"currentwork"}>
+        <div>
           <h3 className={styles.header}>Radio button:</h3>
           {radioButtons.map((radioButton) => (
             <div
@@ -376,72 +376,63 @@ export const ThemeTemplate: React.FC = () => {
         </div>
 
         <div>
-          <h3 className={styles.header}>Table with overflow:</h3>
-          <HorizontalOverflowWrapper
-            ariaLabels={{ scrollLeftButton: t("Left scroll button"), scrollRightButton: t("Right scroll button") }}
-          >
-            <Table className={styles.table}>
-              <TableHeader className={styles.tableHeader}>
-                <TableRow>
-                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
-                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
-                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
-                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
-                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
-                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
-                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
-                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
-                  <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
-                </TableRow>
-              </TableHeader>
-              <TableBody className={styles.tableBody}>
-                <TableRow className={styles.tableRow}>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                </TableRow>
-                <TableRow className={styles.tableRow}>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                </TableRow>
-                <TableRow className={styles.tableRow}>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                </TableRow>
-                <TableRow className={styles.tableRow}>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                  <TableCell>TableCell</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
-          </HorizontalOverflowWrapper>
+          <h3 className={styles.header}>Table:</h3>
+          <Table className={styles.table}>
+            <TableHeader className={styles.tableHeader}>
+              <TableRow>
+                <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+                <TableHeaderCell>{t("TableHeader")}</TableHeaderCell>
+              </TableRow>
+            </TableHeader>
+            <TableBody className={styles.tableBody}>
+              <TableRow className={styles.tableRow}>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+              </TableRow>
+              <TableRow className={styles.tableRow}>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+              </TableRow>
+              <TableRow className={styles.tableRow}>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+              </TableRow>
+              <TableRow className={styles.tableRow}>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+                <TableCell>TableCell</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
         </div>
 
         <div>
@@ -528,7 +519,7 @@ export const ThemeTemplate: React.FC = () => {
               tooltip: "https://google.com/download.png",
             }}
             type={"PNG"}
-            size="428"
+            size="428kB"
             handleClick={() => {
               console.log("click");
             }}
@@ -540,7 +531,7 @@ export const ThemeTemplate: React.FC = () => {
               tooltip: "https://github.com/CommonGateway/ZGWBundle/archive/refs/heads/main.zip",
             }}
             type={"ZIP"}
-            size="111"
+            size="111kB"
             handleClick={() => {
               console.log("click");
             }}
@@ -580,7 +571,7 @@ export const ThemeTemplate: React.FC = () => {
           </section>
         </div>
 
-        <div>
+        <div id={"currentwork"}>
           <h3 className={styles.header}>TopNavigation:</h3>
           <section className={styles.section}>
             <div>PrimaryTopNav:</div>
