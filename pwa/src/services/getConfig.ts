@@ -19,6 +19,7 @@ import HoekscheWaard from "./../../static/configFiles/hoeksche-waard.json";
 import Texel from "./../../static/configFiles/texel.json";
 import Zutphen from "./../../static/configFiles/zutphen.json";
 import Sloterburg from "./../../static/configFiles/sloterburg.json";
+import Gouda from "./../../static/configFiles/gouda.json";
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
@@ -76,6 +77,12 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "sloterburg.openwoo.app":
     case "sloterburg-theme":
       return Sloterburg;
+
+    case "open.gouda.nl":
+    case "gouda.koophulpje.nl":
+    case "gouda.openwoo.app":
+    case "gouda-theme":
+      return Gouda;
 
     case "koophulpje.nl":
     case "open-webconcept-theme":
@@ -155,6 +162,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Buren", value: "buren" },
       { label: "Dinkelland", value: "dinkelland-theme" },
       { label: "Epe", value: "epe-theme" },
+      { label: "Gouda", value: "gouda-theme" },
       { label: "Hoeksche Waard", value: "hoeksche-waard" },
       { label: "Lansingerland", value: "lansingerland" },
       { label: "Noordwijk", value: "noordwijk-theme" },
