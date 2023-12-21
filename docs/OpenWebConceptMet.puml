@@ -1,0 +1,27 @@
+@startuml
+title Open Webconcept met integratie
+
+' User Interface Component
+interface "Open Webconcept Website" as Website
+interface "Koop Harvester" as Harvester
+interface "API" as Api
+
+' Backend Components
+component "Open Webconcept CMS" as CMS
+component "Integratie" as Integratie
+component "Zaaksysteem" as Zaaksysteem
+
+' Relationships
+API -down-> Integratie : Directly connected
+Website -down-> Integratie : Directly connected
+Harvester -down-> Integratie : Generated from
+Integratie -down-> CMS : Scrapes periodically\nUses as source
+Integratie -down-> Zaaksysteem : Scrapes periodically\nUses as source
+Integratie -down-> Raadsinfo : Scrapes periodically\nUses as source
+Integratie -down-> eDepot : Scrapes periodically\nUses as source
+
+' Notifications
+CMS -up-> Integratie : Notifies of changes or deletes
+Zaaksysteem -up-> Integratie : Notifies of changes or deletes
+
+@enduml

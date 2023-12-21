@@ -1,0 +1,25 @@
+@startuml
+title Federatie
+
+' User Interface Component
+interface "Landelijke API" as Api
+
+' Backend Components
+component "NLX/FSC/FDS" as NLX
+component "Intergratie voorziening Org 1" as Org1
+component "Intergratie voorziening Org 2" as Org2
+component "Intergratie voorziening Org 3" as Org3
+component "Bronnen" as BronnenOrg1
+component "Bronnen" as BronnenOrg2
+component "Bronnen" as BronnenOrg3
+
+' Relationships
+Api -down-> NLX : Connected trough outway
+NLX -down-> Org1 : Connected trough inway
+NLX -down-> Org2 : Connected trough inway
+NLX -down-> Org3 : Connected trough inway
+Org1 -down-> BronnenOrg1 : Internal connection
+Org2 -down-> BronnenOrg2 : Internal connection
+Org3 -down-> BronnenOrg3 : Internal connection
+
+@enduml
