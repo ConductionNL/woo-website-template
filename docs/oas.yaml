@@ -15,7 +15,7 @@ tags:
   - name: Publicaties
     description: Operations related to publicaties
 paths:
-  /api/publications:
+  /api/publicaties:
     get:
       tags:
         - Publicaties
@@ -31,7 +31,7 @@ paths:
                   $ref: '#/components/schemas/Publicatie'
       x-stoplight:
         id: rpubhvfqrqdnj
-      operationId: get-api-publications
+      operationId: get-api-publicaties
       parameters:
         - schema:
             type: string
@@ -48,7 +48,7 @@ paths:
       tags:
         - Publicaties
       summary: Create a publication
-      operationId: post-api-publications
+      operationId: post-api-publicaties
       responses:
         '200':
           description: OK
@@ -84,7 +84,7 @@ paths:
                 $ref: '#/components/schemas/Publicatie'
       x-stoplight:
         id: blywrcttz5w78
-      operationId: get-api-publications-id
+      operationId: get-api-publicaties-id
     parameters:
       - schema:
           type: string
