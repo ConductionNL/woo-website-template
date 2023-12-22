@@ -15,7 +15,7 @@ tags:
   - name: Publicaties
     description: Operations related to publicaties
 paths:
-  /api/publicaties:
+  /publicaties:
     get:
       tags:
         - Publicaties
@@ -63,7 +63,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/Publicatie'
-  '/api/publicaties/{id}':
+  '/publicaties/{id}':
     get:
       tags:
         - Publicaties
