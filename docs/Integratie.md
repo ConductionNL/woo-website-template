@@ -1,6 +1,6 @@
 # Integratie
 
-Deze pagina is bedoeld voor developers die meer info proberen op tehalen over de OpenWoo.app koppeling of hier al mee aan de slag willen.
+OpenWoo.app is essentie een koppelvlak waar aan de bovenkant meerdere weergaven of user interfaces op kunnen worden gekoppeld en aan de onderkant worden meerdere bronnen ontsloten.
 
 Als er tijdens of na het lezen zijn nog vragen zijn, neem een kijkje op de [FAQ](./FAQ.md).
 
@@ -10,11 +10,11 @@ OpenWoo.app is in essentie een API koppelvlak waar aan de bovenkant meerdere wee
 
 > **Hulp nodig?**
 >
-> Hiervoor hebben we een appart [slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen commonground. We helpen je daar graag verder.
+> Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder.
 
 ## Het koppelen van een user interface
 
-Als u als organisatie of leverancier OpenWoo.app wilt koppelen aan een huidige interface (bijvoorbeeld door de resultaten uit uw gemeente in uw website te integereren) dan kunt u daarvoor gebruikmaken van de OpenWoo.app API. Wij kunnen de bron synchroniseren naar ons koppelvlak en dan zal via de API uw resultaten zichtbaar zijn die u dan via uw user interface zou kunnen bevragen en gebruiken. 
+Als u als organisatie of leverancier OpenWoo.app wilt koppelen aan een huidige interface (bijvoorbeeld door de resultaten uit uw gemeente in uw website te integereren) and kunt u daarvoor gebruikmaken van de OpenWoo.app API.
 
 ### Locatie en Authenticatie
 
@@ -28,12 +28,12 @@ Voor de API is een [redoc documentatie](https://redocly.github.io/redoc/?url=htt
 
 ### Voorbeelden
 
-In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.gateway.commonground.nu/api/publicaties>. Er zijn 4 voor de hand liggende zoek query parameters waarmee gezocht wordt (overige opties vind u terug in de [Redoc documentatie]()).
+In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo-publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.gateway.commonground.nu/api/publicaties>. Er zijn 4 voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties vind u terug in de [Redoc documentatie]()).
 
-1. Op een of meerdere zoek woorden, b.v. `?_search=test`
-2. Op organisatie, dit gaat aan de hand van OIN (de volledige OIN lijst vind u [hier](https://oinregister.logius.nl/oin-register)) b.v. `?organisatie.in=00000001001299992000`
-3. Op categorie, `?categorie=Convenant`
-4. Op datum, Hierbij kunt u een begin en eindatum opgeven om een periode (bijvoorbeeld jaar) te doorzoeken `?publicatiedatum[after]=2022-12-31T23:59:59Z&publicatiedatum[before]=2024-01-01T00:00:00Z&`
+1. Op een of meerdere zoek woorden, b.v. `_search=test`
+2. Op organisatie, dit gaat aan de hand van OIN (de volledige OIN-lijst vind u [hier](https://oinregister.logius.nl/oin-register)) b.v. `oin=00000001001299992000`
+3. Op categorie, `categorie=Convenant`
+4. Op datum, Hierbij kunt u een begin en eindatum opgeven om een periode (bijvoorbeeld jaar) te doorzoeken publicatiedatum[after]=2022-12-31T23:59:59Z&publicatiedatum[before]=2024-01-01T00:00:00Z&
 
 ````cli
 GET 'https://api.gateway.commonground.nu/api/publicaties?extend[]=all&_search=Afvalwaterakkoord&_order[publicatiedatum]=desc&_limit=12&_page=1'
@@ -143,7 +143,8 @@ Response
 ````
 
 ### Metadata
-De kern gegevens van een Woo publicatie zitten in het metadata object, de inhoud van dit object is 'semi' vrij, hij kan per publicatie `categorie` verschillen. Daarnaast zijn er een paar algemene properties die altijd kunnen voorkomen in de metadata
+
+De kern gegevens van een WOO-publicatie zitten in het metadata-object, de inhoud van dit object is 'semi' vrij, hij kan per publicatie `categorie` verschillen. Daarnaast zijn er een paar algemene properties die altijd kunnen voorkomen in de metadata
 
 #### Algemene properties
 
@@ -155,7 +156,6 @@ De kern gegevens van een Woo publicatie zitten in het metadata object, de inhoud
 | besluit               | Nee           | Detailpagina | Bijlage object        |
 | inventarisatielijst   | Nee           | Detailpagina | Bijlage object        |
 | termijnoverschrijding | Nee           | Detailpagina | String                |
-
 
 #### Convenanten
 

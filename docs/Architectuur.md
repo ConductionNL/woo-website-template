@@ -6,7 +6,7 @@ OpenWoo.app bestaat in essentie uit een aantal componenten die samenwerken rondo
 
 > **Hulp nodig?**
 >
-> Hiervoor hebben we een appart [slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen commonground. We helpen je daar graag verder.
+> Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen coCommon Ground. We helpen je daar graag verder.
 
 ### Open Webconcept-variant zonder integratie
 
@@ -48,9 +48,9 @@ Er zijn diverse frontends die in theorie direct kunnen koppelen op de OpenWoo.ap
 | Component | Framework | Open Source | Leveranciers | Beschrijving |
 |-------------|------|------|------------|--------------|
 | OpenWOO Site  | NL Design (React) | Ja | [Conduction](https://conduction.nl/) | Een losse NL Design zoekpagina in de huisstijl van uw organisatie |
-| OpenWoo Plugin | Wordpress | Ja | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) | Een NL Design weergave component voor wWordPress-websites |
-| Open Gemeente | Typo-3 | Ja | [Open Gemeente](https://www.opengemeenten.nl/) | Een weergave component voor Typo3-websites |
-| SIM Drupal | Drupal | ? | [Sim Groep](https://www.simgroep.nl/) | Een weergave component voor Drupal |
+| OpenWoo Plugin | WordPress | Ja | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) | Een NL Design weergavecomponent voor WordPress-websites |
+| OpenGemeenten | TYPO3 | Ja | [OpenGemeenten](https://www.opengemeenten.nl/) | Een weergavecomponent voor TYPO3-websites |
+| SIM Drupal | Drupal | ? | [SIM Groep](https://www.simgroep.nl/) | Een weergavecomponent voor Drupal |
 
 > **notice**
 > Voor Open Source componenten bent u natuurlijk niet beperkt tot deze leveranciers, dit zijn de op dit moment bij ons bekende leveranciers.
@@ -61,7 +61,7 @@ Er zijn diverse frontends die in theorie direct kunnen koppelen op de OpenWoo.ap
 
 ### Bronnen met integratie
 
-Als er wordt gekozen voor het implementeren van het integratievoorziening, wordt het mogelijk om geautomatiseerd te publiceren vanuit meerdere bronnen.
+Als er wordt gekozen voor het implementeren van de integratievoorziening, wordt het mogelijk om geautomatiseerd te publiceren vanuit meerdere bronnen.
 
 Dit bespaart handmatig werk en vermindert de kans op fouten. Tevens ondersteunt het gebruik van het integratiemechanisme de integrale zoekvraag en is het mogelijk om ook gegevens uit andere bronnen te integreren, zoals een raadsinformatiesysteem of een Open Webconcept CMS.
 
@@ -74,8 +74,8 @@ Dit bespaart handmatig werk en vermindert de kans op fouten. Tevens ondersteunt 
 |-------------|------|------|------------|--------------|
 |Zaaksysteem.nl | ZGW | Ja | [Xxllnc](https://xxllnc.nl/) |--------------|
 |RX Fundament | ZGW | Nee | [Roxit](https://www.roxit.nl/) |--------------|
-|Decos Join | ZGW | Nee | [Decos](https://www.decos.com/nl) |--------------|
-|Open Zaak | ZGW | Ja | [Maykin media](https://www.maykinmedia.nl/nl/) |--------------|
+|Decos JOIN | ZGW | Nee | [Decos](https://www.decos.com/nl) |--------------|
+|OpenZaak | ZGW | Ja | [Maykin Media](https://www.maykinmedia.nl/nl/) |--------------|
 
 ![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Bronnen.svg)
 
