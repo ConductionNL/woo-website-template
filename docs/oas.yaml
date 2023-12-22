@@ -36,8 +36,8 @@ paths:
         - schema:
             type: string
           in: query
-          name: oin.organisation
-          description: Oin of a organisation to filter on.
+          name: organisatie.oin
+          description: Oin of a organisatie to filter on.
         - schema:
             type: string
           in: query
