@@ -1,6 +1,6 @@
 # Bestuur
 
-Het succes en de continu verbetering van het OpenWoo.app project zijn afhankelijk van een effectieve governance-structuur. Een belangrijk onderdeel van deze structuur is de stuurgroep, die verantwoordelijk is voor het beoordelen en prioriteren van de issues die op GitHub worden ingediend, en voor het bepalen welke daarvan worden opgenomen in de roadmap van het project.
+Het succes en de continue verbetering van het OpenWoo.app project zijn afhankelijk van een effectieve governance-structuur. Een belangrijk onderdeel van deze structuur is de stuurgroep, die verantwoordelijk is voor het beoordelen en prioriteren van de issues die op GitHub worden ingediend, en voor het bepalen welke daarvan worden opgenomen in de roadmap van het project.
 
 ## Stuurgroep
 

@@ -30,7 +30,7 @@ De Open WOO Website is in eerste instantie opgezet om serverless gebruikt te wor
 > 6. Ga naar acties en wacht tot de actie "Deploy the WOO Page to GitHub Pages" succesvol is afgerond
 > 7. Ga naar settings->pages, selecteer onder source `deploy from branch` en geef als branche op `gh-pages`
 > 8. Bovenaan de pagina verschijnt nu de URL waarop je je Open WOO Website kunt terugvinden
-> 9. Als je de Open WOO Website wilt hosten onder een subdomein van je organisatie en voorzien van een PKI-certificaat, kun je daarvoor de normale GitHub Pages-handleidingen volgen of een SLA afsluiten voor ondersteuning (zie [kosten]())
+> 9. Als je de Open WOO Website wilt hosten onder een subdomein van je organisatie en voorzien van een PKI-certificaat, kun je daarvoor de normale GitHub Pages-handleidingen volgen of een SLA afsluiten voor ondersteuning (zie [kosten](https://openwoo.app/github/Kosten/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md))
 
 ### Server Installatie
 
@@ -64,18 +64,20 @@ Configuratie vindt plaats via environment (env) waardes. In het geval van een se
 Voor de backend zijn twee opties beschikbaar. In beide gevallen moet de resulterende URL worden opgenomen onder `API_BASE_URL` in de frontend-configuratie.
 
 ### Open Webconcept met Open Woo en Open Convenanten Plugin
-In dit geval koppel je de react frontend rechtstreek op een wordpress installatie, dat betekend dat alle publicaties handmatig moeten worden geupload.
+
+In dit geval koppel je de React frontend rechtstreeks op een WordPress installatie, dat betekent dat alle publicaties handmatig moeten worden geüpload.
 
 Volg de installatiehandleiding op [https://github.com/OpenWebconcept/plugin-openwoo](https://github.com/OpenWebconcept/plugin-openwoo) en op [https://github.com/OpenWebconcept/plugin-openconvenanten](https://github.com/OpenWebconcept/plugin-openconvenanten).
 
 ### Common Gateway met Open Woo Plugin
-In dit geval koppel je de react frontend op een gatewat installatie, dat betekend dat alle publicaties automatisch worden opgehaald uit bestaande bronnen.
+
+In dit geval koppel je de React frontend op een gateway installatie, dat betekent dat alle publicaties automatisch worden opgehaald uit bestaande bronnen
 
 Volg de installatiehandleiding op [Woo Bundle](https://github.com/ConductionNL/WooBundle/tree/main).
 
 ## Externe Systemen
 
-Voor het koppelen van externe systemen geldt dat zij op de juiste manier moeten zijn geconfigureerd. Kijk daarvoor onder [configuratie](/Configuratie).
+Voor het koppelen van externe systemen geldt dat zij op de juiste manier moeten zijn geconfigureerd. Kijk daarvoor onder [configuratie](https://openwoo.app/github/Configuratie/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuratie.md).
 
 ## Verdere documentatie
 
