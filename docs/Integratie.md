@@ -18,7 +18,7 @@ Als u vanuit uw casus een API nodig heeft zonder throttling, ratelimit of namens
 
 ### Documentatie
 
-Voor de API is een [redoc documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/oas.yaml) beschikbaar met voorbeelden van de verschillende API endpoints, calls en resultaten. Omdat de API daarnaast kan worden gebruikt zonder authenticatie is deze ook goed te beproeven via onze [Postman collectie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Woo.postman_collection.json). We raden developers van ook van harte aan om aan de hand van deze collectie te spelen en te ontwikkelen.
+Voor de API is een [redoc documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/oas.yaml) beschikbaar met voorbeelden van de verschillende API endpoints, calls en resultaten. Omdat de API daarnaast kan worden gebruikt zonder authenticatie is deze ook goed te beproeven via onze [Postman collectie](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Woo.postman_collection.json). We raden developers van ook van harte aan om aan de hand van deze collectie te spelen en te ontwikkelen.
 
 ### Voorbeelden
 
