@@ -3,7 +3,7 @@ name: woo-website-template
 applicationSuite: null
 url: https://github.com/ConductionNL/woo-website-template
 landingURL: null
-isBasedOn: https://github.com/ConductionNL/PetstoreBundle
+isBasedOn: null
 softwareVersion: null
 logo: https://avatars.githubusercontent.com/u/106860777?v=4
 monochromeLogo: null
