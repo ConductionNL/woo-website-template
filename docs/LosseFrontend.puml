@@ -1,0 +1,23 @@
+@startuml
+title Losse frontend met integratie
+
+' User Interface Component
+interface "Open Webconcept Website" as Website
+interface "Koop Harvester" as Harvester
+interface "API" as Api
+
+' Backend Components
+component "Open Webconcept CMS" as CMS
+component "Integratie" as Integratie
+component "Bronnen" as Bronnen
+
+' Relationships
+API -down-> Integratie : Directly connected
+Website -down-> Integratie : Directly connected
+Integratie -down-> Bronnen : Scrapes periodically\nUses as source
+
+' Notifications
+CMS -up-> Integratie : Notifies of changes or deletes
+Zaaksysteem -up-> Integratie : Notifies of changes or deletes
+
+@enduml

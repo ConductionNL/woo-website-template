@@ -1,0 +1,29 @@
+@startuml
+title Integratie op bronnen
+
+' User Interface Component
+interface "Een of meerdere afnemers" as Afnemer
+
+' Backend Components
+component "Integratie" as Integratie
+component "Zaaksysteem" as Zaaksysteem
+component "CMS" as CMS
+component "Raads informatie systeem" as Raadsinfo
+component "eDepot" as eDepot
+component "DMS" as DMS
+component "VTH" as VTH
+
+' Relationships
+Afnemer -down-> Integratie : Directly connected
+Integratie -down-> CMS : Scrapes periodically\nUses as source
+Integratie -down-> Zaaksysteem : Scrapes periodically\nUses as source
+Integratie -down-> Raadsinfo : Scrapes periodically\nUses as source
+Integratie -down-> eDepot : Scrapes periodically\nUses as source
+Integratie -down-> DMS : Scrapes periodically\nUses as source
+Integratie -down-> VTH : Scrapes periodically\nUses as source
+
+' Notifications
+CMS -up-> Integratie : Notifies of changes or deletes
+Zaaksysteem -up-> Integratie : Notifies of changes or deletes
+
+@enduml

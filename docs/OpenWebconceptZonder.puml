@@ -1,0 +1,13 @@
+@startuml
+title Open Webconcept zonder integratie
+
+' User Interface Component
+interface "Open Webconcept Website" as Website
+
+' Backend Components
+component "Open Webconcept CMS" as CMS
+
+' Relationships
+Website -down-> CMS : Directly connected
+
+@enduml
