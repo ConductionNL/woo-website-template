@@ -86,6 +86,7 @@
 }
 
 .withLoveLink:hover > :first-child {
+  color: var(--utrecht-page-footer-link-hover-color);
   transform: scale(1.2);
 }
 
