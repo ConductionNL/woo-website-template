@@ -20,6 +20,7 @@ import Texel from "./../../static/configFiles/texel.json";
 import Zutphen from "./../../static/configFiles/zutphen.json";
 import Sloterburg from "./../../static/configFiles/sloterburg.json";
 import Gouda from "./../../static/configFiles/gouda.json";
+import Zuiddrecht from "./../../static/configFiles/zuiddrecht.json";
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
@@ -71,6 +72,12 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "zutphen.openwoo.app":
     case "zutphen-theme":
       return Zutphen;
+
+    case "open.zuiddrecht.nl":
+    case "zuiddrecht.koophulpje.nl":
+    case "zuiddrecht.openwoo.app":
+    case "zuiddrecht-theme":
+      return Zuiddrecht;
 
     case "open.sloterburg.nl":
     case "sloterburg.koophulpje.nl":
@@ -174,6 +181,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Texel", value: "texel" },
       { label: "Tubbergen", value: "tubbergen-theme" },
       { label: "Waddinxveen", value: "waddinxveen" },
+      { label: "Zuiddrecht", value: "zuiddrecht-theme" },
       { label: "Zutphen", value: "zutphen-theme" },
     ],
   },
