@@ -28,7 +28,7 @@ Voor de API is een [redoc documentatie](https://redocly.github.io/redoc/?url=htt
 
 ### Voorbeelden
 
-In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo-publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.gateway.commonground.nu/api/publicaties>. Er zijn 4 voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties vind u terug in de [Redoc documentatie]()).
+In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo-publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.gateway.commonground.nu/api/publicaties>. Er zijn 4 voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties vind u terug in de [Redoc documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/oas.yaml)).
 
 1. Op een of meerdere zoek woorden, b.v. `_search=test`
 2. Op organisatie, dit gaat aan de hand van OIN (de volledige OIN-lijst vind u [hier](https://oinregister.logius.nl/oin-register)) b.v. `oin=00000001001299992000`
