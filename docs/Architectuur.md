@@ -27,7 +27,7 @@ Het is ook mogelijk om een bestaande Open Webconcept-omgeving te combineren met 
 
 - Er moet een integratievoorziening worden geïnstalleerd of afgenomen
 
-![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/OpenWebconceptMet.svg)
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/OpenWebConceptMet.svg)
 
 ### (Losse) Frontend met integratie
 
@@ -107,4 +107,4 @@ Het Woo Publicatie Object vormt de kern van zowel de Woo API als de Woo-website.
 
 ## Roadmap
 
-Organisaties kunnen bijdragen aan de ontwikkeling van deze componenten door items aan te dragen, deze zelf op te pakken en uit te voeren, of door de uitvoering ervan te financieren. Voor het huidige overzicht, zie [Roadmap](/docs/Roadmap.md).
+Organisaties kunnen bijdragen aan de ontwikkeling van deze componenten door items aan te dragen, deze zelf op te pakken en uit te voeren, of door de uitvoering ervan te financieren. Voor het huidige overzicht, zie [Roadmap](https://openwoo.app/github/Roadmap/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md).

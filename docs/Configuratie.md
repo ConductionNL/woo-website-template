@@ -12,7 +12,7 @@ Om te zorgen dat de Open WOO Website goed werkt, is het belangrijk dat de onderl
 
 ## Gebruik variabelen
 
-Centraal in de Open WOO Website staat het publicatieobject, het publicatieobject vertegenwoordigt een Woo-publicatie, zijnde een verzoek, besluit, convenant of overige (een definitie van het Woo-publicatieobject vind je onder [Architectuur](./Architectuur.md)).
+Centraal in de Open WOO Website staat het publicatieobject, het publicatieobject vertegenwoordigt een Woo-publicatie, zijnde een verzoek, besluit, convenant of overige (een definitie van het Woo-publicatieobject vind je onder [Architectuur](https://openwoo.app/github/Architectuur/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md)).
 
 **Zoekbalk**
 
@@ -56,7 +56,7 @@ Daarnaast is het mogelijk om bijlagen van publicaties te clusteren aan de hand v
 
 ## Categorieën
 
-Hoewel we er vanuit gaan dat categorieën voldoen aan de onder [Algemene inrichting zaaksysteem]() vermelde kenmerken voor `woo_categorie` is het technisch mogelijk voor organisaties om eigen categorieën te hanteren. Het toevoegen van een eigen categorie (e.g. algoritmes of dataset) leidt er automatisch toe dat deze in de voorkant wordt opgenomen in de `onderwerpen` lijst (mits er ten minimale één publicatietype van deze categorie gepubliceerd is). Deze toegevoegde categorie en publicaties daarin worden echter **NIET** doorgegeven aan de landelijke index van KOOP.
+Hoewel we er vanuit gaan dat categorieën voldoen aan de onder <!-- [Algemene inrichting zaaksysteem]() --> Algemene inrichting zaaksysteem vermelde kenmerken voor `woo_categorie` is het technisch mogelijk voor organisaties om eigen categorieën te hanteren. Het toevoegen van een eigen categorie (e.g. algoritmes of dataset) leidt er automatisch toe dat deze in de voorkant wordt opgenomen in de `onderwerpen` lijst (mits er ten minimale één publicatietype van deze categorie gepubliceerd is). Deze toegevoegde categorie en publicaties daarin worden echter **NIET** doorgegeven aan de landelijke index van KOOP.
 
 ## Bijlagen
 
