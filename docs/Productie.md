@@ -2,7 +2,7 @@
 
 Het in productie nemen van OpenWoo.app voor uw organisatie is makkelijker dan u wellicht denkt. Hieronder vindt u de stappen die u moet volgen om succesvol over te gaan naar de productiefase.
 
-- (optioneel) Kies een [leverancier](https://openwoo.app/pages/Documentatie/Kosten) om de OpenWoo.app bij af te nemen. Of implementeer hem zelfstandig.
+- (optioneel) Kies een [leverancier](https://openwoo.app/github/Kosten/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md) om de OpenWoo.app bij af te nemen. Of implementeer hem zelfstandig.
 - Verzamel van tevoren alle benodigde informatie
 - Vraag tijdig een PKI-certificaat en DNS wijziginging aan bij uw ICT-leverancier(s)
 - Zorg dat u tijd beschikbaar hebt voor het grondig doortesten van de keten aan de hand van de testscenario's
@@ -73,13 +73,13 @@ Aan de hand van de acties voor de opdrachtgever kan uw leverancier vervolgens aa
 Wat doet de leverancier niet
 
 - Aanleveren WCAG raportage (deze staat [hier](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/WCAG-Raportage.pdf))
-- Aanleveren PEN test (deze staat [hier]())
+- Aanleveren PEN test (deze staat [hier](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/PENTEST-Raportage.pdf))
 
 ## Naar productie (Acceptatie)
 
 Als uw leverancier alles heeft klaar gezet is het tijd voor acceptatie en livegang
 
-- [ ] Doorlopen van de [Acceptatie tests](https://documentatie.opencatalogi.nl/pages/Handleidingen/Testen)
+- [ ] Doorlopen van de [Acceptatie tests](https://openwoo.app/github/Testscenario's/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Tests.md)
 - [ ] Website laten controleren en reviewen door communicatieafdeling
 - [ ] Indien alles correct, aan leverancier laten weten dat er geaccepteerd is.
 - [ ] Op eigen website verwijzen naar de Open Catalogi (deeplinks)
