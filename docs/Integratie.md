@@ -6,11 +6,11 @@ Als er tijdens of na het lezen zijn nog vragen zijn, neem een kijkje op de [FAQ]
 
 ## Wat is OpenWoo.app
 
-OpenWoo.app is in essentie een API koppelvlak waar aan de bovenkant meerdere weergaven of user interfaces (front-ends) op kunnen worden gekoppeld en aan de onderkant meerdere bronnen ontsloten. Als u meer wilt weten over OpenWoo.app kunt u meer lezen op [https://openwoo.app](https://openwoo.app).
+OpenWoo.app is in essentie een API-koppelvlak waar aan de bovenkant meerdere weergaven of user interfaces (front-ends) op kunnen worden gekoppeld en aan de onderkant meerdere bronnen ontsloten. Als u meer wilt weten over OpenWoo.app kunt u meer lezen op [https://openwoo.app](https://openwoo.app).
 
 > **Hulp nodig?**
 >
-> Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder.
+> Hiervoor hebben we een apart [Slack-kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder.
 
 ## Het koppelen van een user interface
 
@@ -20,15 +20,15 @@ Als u als organisatie of leverancier OpenWoo.app wilt koppelen aan een huidige i
 
 De API staat online en is beschikbaar op [https://api.gateway.commonground.nu/api/publicaties](https://api.gateway.commonground.nu/api/publicaties). Voor het stellen van zoekvragen is géén authenticatie vereist (het doel van OpenWOO.app is immers het verspreiden van openbare informatie). Er is echter wel sprake van throttling op response tijden (de API reageert langzamer) en rate-limiting (het aantal bevragingen per minuut en uur zijn beperkt) zonder authenticatie. Ook zijn alleen de GET (ophalen) acties toegestaan zonder authenticatie.
 
-Als u vanuit uw casus een API nodig heeft zonder throttling, ratelimit of namens een organisatie wijzigingen wilt doen (en POST, PUT, DELETE API requests wilt maken) dan kunt u een mail sturen naar <info@conduction.nl>.
+Als u vanuit uw casus een API nodig heeft zonder throttling, ratelimit of namens een organisatie wil wijzigingen (d.w.z POST, PUT, DELETE API requests wilt doen) dan kunt u een mail sturen naar <info@conduction.nl>.
 
 ### Documentatie
 
-Voor de API is een [redoc documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/oas.yaml) beschikbaar met voorbeelden van de verschillende API endpoints, calls en resultaten. Omdat de API daarnaast kan worden gebruikt zonder authenticatie is deze ook goed te beproeven via onze [Postman collectie](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Woo.postman_collection.json). We raden developers van ook van harte aan om aan de hand van deze collectie te spelen en te ontwikkelen.
+Voor de API is een [redoc documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/oas.yaml) beschikbaar met voorbeelden van de verschillende API-endpoints, calls en resultaten. Omdat de API daarnaast kan worden gebruikt zonder authenticatie is deze ook goed te beproeven via onze [Postman-collectie](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Woo.postman_collection.json). We raden developers van ook van harte aan om aan de hand van deze collectie te spelen en te ontwikkelen.
 
 ### Voorbeelden
 
-In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo-publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.gateway.commonground.nu/api/publicaties>. Er zijn 4 voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties vind u terug in de [Redoc documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/oas.yaml)).
+In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo-publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.gateway.commonground.nu/api/publicaties>. Er zijn 4 voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties vindt u terug in de [Redoc documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/oas.yaml)).
 
 1. Op een of meerdere zoek woorden, b.v. `_search=test`
 2. Op organisatie, dit gaat aan de hand van OIN (de volledige OIN-lijst vind u [hier](https://oinregister.logius.nl/oin-register)) b.v. `oin=00000001001299992000`
@@ -121,7 +121,7 @@ Response
 }
 ````
 
-Vanuit een het weergeven van een zoekformulier is het goed mogelijk dat u alleen bestaande waardes wilt weergeven (bijvoorbeeld bij jaartal of categorie). U kunt daarvoor de queries parameter gebruiken, deze verteld u welke zoekwaarde welke resultaten opleveren.
+Vanuit een het weergeven van een zoekformulier is het goed mogelijk dat u alleen bestaande waardes wilt weergeven (bijvoorbeeld bij jaartal of categorie). U kunt daarvoor de query-parameter gebruiken, deze vertelt u welke zoekwaarde welke resultaten opleveren.
 
 ````cli
 GET 'https://api.gateway.commonground.nu/api/publicaties?_queries[]=categorie'
@@ -174,8 +174,8 @@ De kern gegevens van een WOO-publicatie zitten in het metadata-object, de inhoud
 
 ### Spelregels
 
-- Er mogen géén kopiën worden gemaakt van data uit de API, dit zodat overheden de mogelijkheid hebben data te depubliceren (bijvoorbeeld bij het per abuis publiceren van persoonsgegevens)
-- Er mag wel gebruik worden gemaakt van caching voor het verbeteren van performance, maar er mag niet langer worden gecachet dan aangegeven in de caching header van het responseobject. Ofwel de bron bepaald hoe lang er gecachet mag worden.
+- Er mogen géén kopieën worden gemaakt van data uit de API, dit zodat overheden de mogelijkheid hebben data te depubliceren (bijvoorbeeld bij het per abuis publiceren van persoonsgegevens)
+- Er mag wel gebruik worden gemaakt van caching voor het verbeteren van performance, maar er mag niet langer worden gecachet dan aangegeven in de caching header van het response-object. Ofwel de bron bepaald hoe lang er gecachet mag worden.
 
 ## Het koppelen van een bron
 
