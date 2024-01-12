@@ -1,0 +1,87 @@
+publiccodeYmlVersion: '0.1'
+name: woo-website-template
+applicationSuite: null
+url: https://github.com/ConductionNL/woo-website-template
+landingURL: null
+isBasedOn: null
+softwareVersion: null
+logo: https://avatars.githubusercontent.com/u/106860777?v=4
+monochromeLogo: null
+platforms:
+  - web
+releaseDate: '2023-10-01'
+categories: 
+  - collaboration
+  - it-development
+developmentStatus: beta
+softwareType: softwareAddon
+description:
+  en:
+    localisedName: null
+    genericName: null
+    shortDescription: "Template for setting up a Woo page using NL Design tokens."
+    longDescription: "Template for setting up a Woo page using NL Design tokens."
+    documentation: null
+    apiDocumentation: null
+    features: []
+    screenshots: []
+    videos: []
+    awards: []
+  nl:
+    localisedName: null
+    genericName: null
+    shortDescription: "Template voor het opzetten van een Woo pagina aan de hand van NL Design tokens."
+    longDescription: "Template voor het opzetten van een Woo pagina aan de hand van NL Design tokens."
+    documentation: null
+    apiDocumentation: null
+    features: []
+    screenshots: []
+    videos: []
+    awards: []
+intendedaudience: 
+  countries: 
+    - nl
+  unsupportedCountries: []
+  scope: 
+    - government
+    - local-authorities
+legal: 
+  license: EUPL-1.2-or-later
+  mainCopyrightOwner: legal/authorsFile
+  repoOwner: ConductionNL
+  authorsFile: null
+maintenance: 
+  type: internal
+  contractors: 
+    - name: Conduction
+      until: 2035-01-01
+      email: info\x64conduction.nl
+      website: https://www.conduction.nl
+  contacts:
+    - name: Ruben van der Linde
+      email: info\x64conduction.nl
+      phone: 085 303 6840
+      affiliation: Conduction
+localisation:
+  localisationReady: true
+  availableLanguages: 
+     - en
+     - nl
+dependsOn: null
+roadmap: null
+inputTypes: null
+outputTypes: null
+nl: 
+  countryExtensionVersion: null
+  commonground: 
+    intendedOrganisations: []
+    installationType: null
+    layerType: interface
+  gemma:
+    bedrijfsfuncties: []
+    bedrijfsservices: []
+    applicatiefunctie: null
+    model: null
+  upl: []
+downloadUrls:
+  - https://github.com/ConductionNL/woo-website-template/archive/refs/heads/main.zip
