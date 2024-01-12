@@ -4,7 +4,7 @@ Het in productie nemen van OpenWoo.app voor uw organisatie is makkelijker dan u 
 
 - (optioneel) Kies een [leverancier](https://openwoo.app/github/Kosten/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md) om de OpenWoo.app bij af te nemen. Of implementeer hem zelfstandig.
 - Verzamel van tevoren alle benodigde informatie
-- Vraag tijdig een PKI-certificaat en DNS wijzigin aan bij uw ICT-leverancier(s)
+- Vraag tijdig een PKI-certificaat en DNS wijziging aan bij uw ICT-leverancier(s)
 - Zorg dat u tijd beschikbaar hebt voor het grondig doortesten van de keten aan de hand van de testscenario's
 
 Als u de OpenWOO APP zelfstandig installeerd zult u de [acties voor leverancier](#acties-voor-leverancier) uiteraard zelf moeten uitvoeren.
