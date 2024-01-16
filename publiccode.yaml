@@ -3,7 +3,7 @@ name: woo-website-template
 applicationSuite: null
 url: https://github.com/ConductionNL/woo-website-template
 landingURL: null
-isBasedOn: https://github.com/ConductionNL/PetstoreBundle
+isBasedOn: null
 softwareVersion: null
 logo: https://avatars.githubusercontent.com/u/106860777?v=4
 monochromeLogo: null
@@ -18,9 +18,9 @@ softwareType: softwareAddon
 description:
   en:
     localisedName: null
-    genericName: Template for setting up a Woo page using NL Design tokens.
-    shortDescription: woo-website-template
-    longDescription: Template for setting up a Woo page using NL Design tokens.
+    genericName: null
+    shortDescription: "Template for setting up a Woo page using NL Design tokens."
+    longDescription: "Template for setting up a Woo page using NL Design tokens."
     documentation: null
     apiDocumentation: null
     features: []
@@ -29,9 +29,9 @@ description:
     awards: []
   nl:
     localisedName: null
-    genericName: Template voor het opzetten van een Woo pagina aan de hand van NL Design tokens.
-    shortDescription: woo-website-template
-    longDescription: Template voor het opzetten van een Woo pagina aan de hand van NL Design tokens.
+    genericName: null
+    shortDescription: "Template voor het opzetten van een Woo pagina aan de hand van NL Design tokens."
+    longDescription: "Template voor het opzetten van een Woo pagina aan de hand van NL Design tokens."
     documentation: null
     apiDocumentation: null
     features: []

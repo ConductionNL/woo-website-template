@@ -27,6 +27,13 @@
   text-overflow: ellipsis;
 }
 
+.cardContainer:hover .description {
+  color: var(
+    --conduction-card-wrapper-hover-color,
+    var(--conduction-card-wrapper-color)
+  ) !important;
+}
+
 .cardFooter {
   margin-top: auto;
 }
