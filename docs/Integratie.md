@@ -14,7 +14,7 @@ OpenWoo.app is in essentie een API-koppelvlak waar aan de bovenkant meerdere wee
 
 ## Het koppelen van een user interface
 
-Als u als organisatie of leverancier OpenWoo.app wilt koppelen aan een huidige interface (bijvoorbeeld door de resultaten uit uw gemeente in uw website te integereren) and kunt u daarvoor gebruikmaken van de OpenWoo.app API.
+Indien u als organisatie of leverancier OpenWoo.app wilt koppelen aan een huidige interface (bijvoorbeeld door de resultaten uit uw gemeente in uw website te integereren), kunt u daarvoor gebruikmaken van de OpenWoo.app API.
 
 ### Locatie en Authenticatie
 
