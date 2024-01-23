@@ -81,34 +81,46 @@ Bijlagen nemen een bijzondere positie in binnen de Open Woo Website, ze vormen d
 
 Gebaseerd op: [VNG ZGW Standaard](https://vng.nl/projecten/zaakgericht-werken-api)
 
-| WOO Publicatie Object                       | ZGW Zaak                                         | Gebruik                               |
+Als er gesynchroniseerd moet worden vanuit een zgw bron moet er een zaaktype ingericht worden, die heeft het een en ander nodig.
+
+Het is belangrijk dat er eigenschappen zijn op het ingerichte zaaktype volgens de volgende namen (2e kolom):
+
+| WOO Publicatie Object                       | ZGW Eigenschap                                   | Gebruik                               |
 |---------------------------------------------|--------------------------------------------------|---------------------------------------|
-| id                                          | object_id                                        | Metadata                              |
-| portalUrl                                   | {{config}}/{{id}}                                | Metadata                              |
+| id                                          | uuid (uit zaak, geen eigenschap)                 | Metadata                              |
+| portalUrl                                   | {{config}}/{{uuid}}                              | Metadata                              |
 | organisatie.naam                            | {{config}}                                       | Metadata                              |
 | organisatie.oin                             | {{config}}                                       | Metadata                              |
 | volgnummer                                  | (Empty)                                          | n.v.t                                 |
-| titel                                       | values.case.subject_external                     | Metadata, Index pagina, Detail pagina |
-| beschrijving                                | values.attribute.woo_beschrijving                | Metadata, Index pagina, Detail pagina |
-| samenvatting                                | values.attribute.woo_samenvatting                | Metadata, Index pagina, Detail pagina |
-| categorie                                   | values.attribute.woo_categorie                   | Metadata, Index pagina, Detail pagina |
-| publicatiedatum                             | values.attribute.woo_publicatiedatum             | Metadata, Index pagina, Detail pagina |
-| metadata.besluitdatum                       | values.attribute.woo_datum_besluit               | Metadata                              |
+| titel                                       | subject_external                                 | Metadata, Index pagina, Detail pagina |
+| beschrijving                                | woo_beschrijving                                 | Metadata, Index pagina, Detail pagina |
+| samenvatting                                | woo_samenvatting                                 | Metadata, Index pagina, Detail pagina |
+| categorie                                   | woo_categorie                                    | Metadata, Index pagina, Detail pagina |
+| publicatiedatum                             | woo_publicatiedatum                              | Metadata, Index pagina, Detail pagina |
+| metadata.besluitdatum                       | woo_datum_besluit                                | Metadata                              |
 | metadata.volgnummer                         | (Empty)                                          | Metadata                              |
-| metadata.verzoek.ontvangstdatum             | values.case.date_of_registration                 | Metadata, Detail pagina               |
+| metadata.verzoek.ontvangstdatum             | date_of_registration                             | Metadata, Detail pagina               |
 | metadata.verzoek.status                     | (Empty)                                          | Metadata                              |
 | metadata.verzoek.ontvangerInformatieverzoek | (Empty)                                          | Metadata                              |
-| metadata.verzoek.informatieverzoek          | values.attribute.woo_informatieverzoek           | Detail pagina                         |
-| metadata.verzoek.inventarisatielijst        | values.attribute.woo_informatieverzoek           | Detail pagina                         |
-| metadata.verzoek.besluit                    | values.attribute.woo_informatieverzoek           | Detail pagina                         |
+| metadata.verzoek.informatieverzoek          | woo_informatieverzoek                            | Detail pagina                         |
+| metadata.verzoek.inventarisatielijst        | woo_informatieverzoek                            | Detail pagina                         |
+| metadata.verzoek.besluit                    | woo_informatieverzoek                            | Detail pagina                         |
 | metadata.verzoek.termijnoverschrijding      | case.dateTarget - case.dateOfCompletion          | Detail pagina                         |
-| bijlagen                                    | values.attribute.woo_publicatie                  | Metadata, Detail pagina               |
+| bijlagen                                    | verlengingstermijn (uit zaak, geen eigenschap)   | Metadata, Detail pagina               |
+
+Ook moeten er 4 informatieobjecttypen aan het zaaktype vastzitten met de omschrijvingen:
+- besluit
+- informatieverzoek
+- inventarisatielijst
+- bijlage
+
+Als de action voor de synchronisatie goed geconfigureerd is en dan afgetrapt wordt voor de ingestelde bron en zaaktype worden de zaken daarvan opgehaald en aan de hand van zijn eigenschappen en informatieobjecten Woo publicaties van gemaakt.
 
 ## Mapping vanuit zaaksysteem.nl search endpoint
 
 Gebaseerd op: [XXLLNC zaken mapping](https://github.com/CommonGateway/WooBundle/blob/main/Installation/Mapping/woo.xxllncCaseToWoo.mapping.json)
 
-| WOO Publicatie Object                       | Zaaksysteemveld                                  | Gebruik                               |
+| WOO Publicatie Object                       | Zaaksysteem veld                                 | Gebruik                               |
 |---------------------------------------------|--------------------------------------------------|---------------------------------------|
 | id                                          | object_id                                        | Metadata                              |
 | portalUrl                                   | {{config}}/{{id}}                                | Metadata                              |
