@@ -4,14 +4,13 @@
   "private": true,
   "description": "Product Website Template",
   "author": "Conduction",
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
+    "serve-page": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "lint": "npm-run-all lint:** ",
@@ -70,7 +69,6 @@
     "gatsby": "^5.13.3",
     "gatsby-plugin-breadcrumb": "^12.3.2",
     "gatsby-plugin-layout": "^4.13.1",
-    "gatsby-plugin-security-txt": "^1.2.1",
     "html-react-parser": "^5.1.1",
     "i18next": "^23.7.19",
     "jwt-decode": "^4.0.0",
