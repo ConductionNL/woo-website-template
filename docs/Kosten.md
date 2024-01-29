@@ -56,6 +56,17 @@ Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het mode
 | Join              | Decos       | Onbekend  |Onbekend       |
 | Fundament         | Roxit       | Onbekend  |Onbekend       |
 
+Naast specifieke applicaties worden er ook aantal standaarden ondersteund voor het inladen van publicaties
+
+| Standaard | Status  | Beschrijving |
+|-----------|---------|--------------|
+| RSS       | Roadmap |              |
+| Sitemap   | Roadmap |              |
+| ZGW       |||
+| Stuf      |         |              |
+| ZDS       |         |              |
+
+
 Mocht u nog niet beschikken over xxllnc Zaken (zaaksysteem.nl) maar wel behoefte hebben aan een manier om de documenten conform een ingericht proces te gaan publiceren en achteraf correct te kunnen archiveren neem dan contact met ons op via: <sales.zaakgericht@xxllnc.nl>. Wij gaan graag in gesprek over de mogelijkheden hiervoor!
 
 ## Overige
