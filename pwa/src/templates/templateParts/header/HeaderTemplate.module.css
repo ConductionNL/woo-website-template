@@ -35,3 +35,7 @@
 .languageSelectDisabled {
   opacity: 50%;
 }
+
+.languageSeperator {
+  user-select: none;
+}

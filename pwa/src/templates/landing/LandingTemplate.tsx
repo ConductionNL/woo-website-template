@@ -42,7 +42,7 @@ export const LandingTemplate: React.FC = () => {
           {getItems.data?.results && getItems.data?.results?.length > 0 && (
             <div id="mainContent">
               <ResultsDisplayTemplate displayKey="landing-results" requests={getItems.data.results} />
-              <div className={styles.pagination}>
+              <div role="region" aria-label={t("Pagination")} className={styles.pagination}>
                 <Pagination
                   ariaLabels={{ previousPage: t("Previous page"), nextPage: t("Next page"), page: t("Page") }}
                   totalPages={getItems.data.pages}
