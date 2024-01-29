@@ -4,8 +4,10 @@
 >
 > Meer weten over deze oplossing? Dat kan! Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder.
 >
-> Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
->
+> Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd. De eerstvolgende webinar is:
+> 
+> - [Open Gemeente Webinar 29-01-2024 14:00](https://www.youtube.com/watch?v=NCnLDEoPh5A)
+> 
 > Terug kijken afgelopen webinars?
 >
 > - [xxllnc Woobinar 17-11-2023](https://www.youtube.com/watch?v=NCnLDEoPh5A)
