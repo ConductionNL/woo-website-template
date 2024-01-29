@@ -4,7 +4,9 @@
   "private": true,
   "description": "Product Website Template",
   "author": "Conduction",
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -68,6 +70,7 @@
     "dedent": "^1.5.1",
     "gatsby": "^5.13.3",
     "gatsby-plugin-breadcrumb": "^12.3.2",
+    "gatsby-plugin-html-attributes": "^1.0.5",
     "gatsby-plugin-layout": "^4.13.1",
     "html-react-parser": "^5.1.1",
     "i18next": "^23.7.19",
