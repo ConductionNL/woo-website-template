@@ -4,16 +4,15 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-RUN npm install @parcel/watcher
-
-RUN npm install sass
-
-RUN npm install style-dictionary
-
 # Copy all files from current directory to working dir in image
 # install node modules and build assets
+RUN npm i sass
+
+RUN npm i style-dictionary
+
 RUN npm install
 
+RUN npm install @parcel/watcher
 
 COPY . .
 
