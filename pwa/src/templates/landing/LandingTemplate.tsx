@@ -16,7 +16,7 @@ import { PaginationLimitSelectComponent } from "../../components/paginationLimit
 
 export const LandingTemplate: React.FC = () => {
   const { t } = useTranslation();
-  const { filters } = useFiltersContext();
+  const { filters } = useFiltersContext(); 
   const { pagination, setPagination } = usePaginationContext();
   const { queryLimit, setQueryLimit } = useQueryLimitContext();
 
@@ -44,7 +44,12 @@ export const LandingTemplate: React.FC = () => {
               <ResultsDisplayTemplate displayKey="landing-results" requests={getItems.data.results} />
               <div role="region" aria-label={t("Pagination")} className={styles.pagination}>
                 <Pagination
-                  ariaLabels={{ previousPage: t("Previous page"), nextPage: t("Next page"), page: t("Page") }}
+                  ariaLabels={{
+                    pagination: t("Pagination"),
+                    previousPage: t("Previous page"),
+                    nextPage: t("Next page"),
+                    page: t("Page"),
+                  }}
                   totalPages={getItems.data.pages}
                   currentPage={getItems.data.page}
                   setCurrentPage={(page: any) => setPagination({ currentPage: page })}
