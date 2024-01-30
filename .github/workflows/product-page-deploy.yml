@@ -3,7 +3,7 @@ name: Deploy the Product Page to GitHub Pages
 on:
   push:
     branches:
-      - never
+      - main
 
 permissions:
   contents: write
@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create an Open Catalogi page
-        uses: OpenCatalogi/opencatalogi-action@1.1.1
+        uses: OpenCatalogi/opencatalogi-action@1.1.7
         with:
           github_repository_name_as_prefix: false
-          nl_design_theme_classname: "open-webconcept-theme"
+          nl_design_theme_classname: "commonground-theme"
           pull_from_branche: 'development'
           start_page: 'https://github.com/ConductionNL/woo-website-template/blob/main/README.md'
           footer_content: 'https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/FooterContent.json'
