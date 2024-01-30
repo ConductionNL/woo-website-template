@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  woo-website:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-11-14T14:22:03.775981517+01:00"
+    description: A Helm chart for the Skeleton Gatsby Application
+    digest: 49a13c2e43c2bc6dda02a40f032f70d68bb4b877b9979566ad3511071f086458
+    name: woo-website
+    type: application
+    urls:
+    - woo-website-1.0.6.tgz
+    version: 1.0.6
+generated: "2023-11-14T14:22:03.772476395+01:00"

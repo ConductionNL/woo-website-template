@@ -1,0 +1,10 @@
+# Information related to reporting security vulnerabilities of this site.
+
+# How to communicate about security issues.
+Contact: mailto:info@conduction.nl
+
+# Date and time after which this data is considered stale
+Expires: 2024-12-31T23:00:00.000Z
+
+# Preferred languages for communication.
+Preferred-Languages: nl, en
