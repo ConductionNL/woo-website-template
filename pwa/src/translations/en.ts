@@ -16,6 +16,9 @@ export const en = {
   Jumbotron: "Jumbotron",
   Limit: "Limit",
   Municipality: "Municipality",
+  Filters: "Filters",
+  View: "View",
+  Pagination: "Pagination",
   "Jumbotron card": "Jumbotron card",
   "N/A": "N/A",
   "Details page": "Details page",
@@ -59,4 +62,6 @@ export const en = {
   "Scroll table to the right": "Scroll table to the right",
   "No category available": "No category available",
   "No municipality available": "No municipality available",
+  "Woo Request": "Woo Request",
+  "Language select": "Language select",
 };
