@@ -25,7 +25,7 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
     <HorizontalOverflowWrapper
       ariaLabels={{ scrollLeftButton: t("Left scroll button"), scrollRightButton: t("Right scroll button") }}
     >
-      <Table className={styles.table}>
+      <Table className={styles.table} role="region" aria-label={t("Woo Request")}>
         <TableHeader className={styles.tableHeader}>
           <TableRow>
             <TableHeaderCell>{t("Subject")}</TableHeaderCell>
