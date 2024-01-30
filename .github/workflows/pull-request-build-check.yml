@@ -23,6 +23,9 @@ jobs:
       - name: Node-Sass
         run: npm i node-sass
 
+      - name: sass
+        run: npm i sass
+
       - name: Install dependencies
         run: cd pwa && npm i
 

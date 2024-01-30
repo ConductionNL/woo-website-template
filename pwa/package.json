@@ -23,7 +23,6 @@
     "prepare": "cd .. && husky install"
   },
   "dependencies": {
-    "node-sass": "^9.0.0",
     "@conduction/components": "2.2.45",
     "@conduction/theme": "1.1.15",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -75,6 +74,7 @@
     "i18next": "^23.7.19",
     "jwt-decode": "^4.0.0",
     "lodash": "^4.17.21",
+    "node-sass": "^9.0.0",
     "qs": "^6.11.2",
     "react": "^18.2.0",
     "react-collapsible": "^2.10.0",
@@ -88,6 +88,7 @@
     "react-paginate": "^8.2.0",
     "react-query": "^3.39.3",
     "react-select": "^5.8.0",
+    "sass": "^1.70.0",
     "showdown": "^2.1.0"
   },
   "devDependencies": {
