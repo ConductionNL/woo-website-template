@@ -4,7 +4,9 @@
   "private": true,
   "description": "Product Website Template",
   "author": "Conduction",
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -89,7 +91,8 @@
     "react-query": "^3.39.3",
     "react-select": "^5.8.0",
     "sass": "^1.70.0",
-    "showdown": "^2.1.0"
+    "showdown": "^2.1.0",
+    "style-dictionary": "^3.9.2"
   },
   "devDependencies": {
     "@parcel/watcher": "^2.4.0",
