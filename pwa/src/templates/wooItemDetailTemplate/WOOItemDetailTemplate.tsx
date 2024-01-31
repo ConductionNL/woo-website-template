@@ -37,7 +37,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
   return (
     <Page>
       <PageContent className={styles.container}>
-        <div>
+        <div role="navigation">
           <Link
             className={styles.backLink}
             href="/"
@@ -45,14 +45,19 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
               e.preventDefault(), navigate("/");
             }}
             tabIndex={0}
+            aria-label={t("Back to homepage")}
           >
             <FontAwesomeIcon icon={faArrowLeft} /> <span>{t("Back to homepage")}</span>
           </Link>
         </div>
 
         {getItems.isSuccess && getItems.data && (
-          <>
-            <Heading1 id="mainContent">
+          <div className={styles.content} role="region" aria-label={t("Details")}>
+            <Heading1
+              id="mainContent"
+              tabIndex={0}
+              aria-label={`${t("Title of woo request")}, ${getItems.data.titel !== "" ? getItems.data.titel : t("No title available")}`}
+            >
               {getItems.data.titel !== "" ? getItems.data.titel : t("No title available")}
             </Heading1>
 
@@ -65,41 +70,69 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
               <Table className={styles.table}>
                 <TableBody className={styles.tableBody}>
                   {getItems.data.id && (
-                    <TableRow className={styles.tableRow}>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Feature")}, ${getItems.data.id}`}
+                    >
                       <TableCell>{t("Feature")}</TableCell>
                       <TableCell>{getItems.data.id}</TableCell>
                     </TableRow>
                   )}
 
                   {getItems.data.titel && (
-                    <TableRow className={styles.tableRow}>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Category")}, ${getItems.data.categorie ?? "-"}`}
+                    >
                       <TableCell>{t("Category")}</TableCell>
                       <TableCell>{getItems.data.categorie ?? "-"}</TableCell>
                     </TableRow>
                   )}
 
                   {getItems.data.samenvatting && (
-                    <TableRow className={styles.tableRow}>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Summary")}, ${getItems.data.samenvatting}`}
+                    >
                       <TableCell>{t("Summary")}</TableCell>
                       <TableCell>{getItems.data.samenvatting}</TableCell>
                     </TableRow>
                   )}
                   {getItems.data.beschrijving && (
-                    <TableRow className={styles.tableRow}>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Description")}, ${getItems.data.beschrijving}`}
+                    >
                       <TableCell>{t("Description")}</TableCell>
                       <TableCell>{getItems.data.beschrijving}</TableCell>
                     </TableRow>
                   )}
 
                   {getItems.data.metadata?.verzoek?.termijnoverschrijding && (
-                    <TableRow className={styles.tableRow}>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Exceeding the term")}, ${getItems.data.metadata?.verzoek?.termijnoverschrijding}`}
+                    >
                       <TableCell>{t("Exceeding the term")}</TableCell>
                       <TableCell>{getItems.data.metadata?.verzoek?.termijnoverschrijding}</TableCell>
                     </TableRow>
                   )}
 
                   {getItems.data.publicatiedatum && (
-                    <TableRow className={styles.tableRow}>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Publication date")}, ${
+                        getItems.data.publicatiedatum
+                          ? translateDate(i18n.language, getItems.data.publicatiedatum)
+                          : "-"
+                      }`}
+                    >
                       <TableCell>{t("Publication date")}</TableCell>
                       <TableCell>
                         {getItems.data.publicatiedatum
@@ -110,7 +143,11 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                   )}
 
                   {getItems.data.metadata?.verzoek?.ontvangstdatum && (
-                    <TableRow className={styles.tableRow}>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Registration date")}, ${translateDate(i18n.language, getItems.data.metadata?.verzoek?.ontvangstdatum) ?? "-"}`}
+                    >
                       <TableCell>{t("Registration date")}</TableCell>
 
                       <TableCell>
@@ -120,16 +157,20 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                   )}
 
                   {getItems.data.metadata?.besluitdatum && (
-                    <TableRow className={styles.tableRow}>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Decision date")}, ${translateDate(i18n.language, getItems.data.metadata?.besluitdatum) ?? "-"}`}
+                    >
                       <TableCell>{t("Decision date")} </TableCell>
                       <TableCell>{translateDate(i18n.language, getItems.data.metadata?.besluitdatum) ?? "-"}</TableCell>
                     </TableRow>
                   )}
 
                   {!_.isEmpty(getItems.data.themas) && (
-                    <TableRow className={styles.tableRow}>
-                      <TableCell>{t("Themes")}</TableCell>
-                      <TableCell>
+                    <TableRow className={styles.tableRow} tabIndex={0} aria-labelledby={"themesName themesData"}>
+                      <TableCell id="themesName">{t("Themes")}</TableCell>
+                      <TableCell id="themesData">
                         {getItems.data.themas.map((thema: any, idx: number) => (
                           <span key={idx}>
                             {thema.hoofdthema + (idx !== getItems.data.themas?.length - 1 ? ", " : "")}
@@ -140,7 +181,14 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                   )}
 
                   {getItems.data.metadata?.verzoek?.informatieverzoek && (
-                    <TableRow className={styles.tableRow}>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Information request")}, ${
+                        getItems.data.metadata?.verzoek?.informatieverzoek?.titel ??
+                        getPDFName(getItems.data.metadata?.verzoek?.informatieverzoek?.url)
+                      }`}
+                    >
                       <TableCell>{t("Information request")}</TableCell>
                       <TableCell>
                         <Link href={getItems.data.metadata?.verzoek?.informatieverzoek?.url} target="blank">
@@ -153,7 +201,14 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
 
                   {(getItems.data.metadata?.verzoek?.besluit ||
                     (getItems.data.metadata?.verzoek?.besluit ?? getItems.data.metadata?.verzoek?.besluit?.url)) && (
-                    <TableRow className={styles.tableRow}>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Decision")}, ${
+                        getItems.data.metadata?.verzoek?.besluit?.titel ??
+                        getPDFName(getItems.data.metadata?.verzoek?.besluit?.url)
+                      }`}
+                    >
                       <TableCell>{t("Decision")}</TableCell>
                       <TableCell>
                         {(getItems.data.metadata?.verzoek?.besluit ??
@@ -174,7 +229,14 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                   )}
 
                   {getItems.data.metadata?.verzoek?.inventarisatielijst && (
-                    <TableRow className={styles.tableRow}>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Inventory list")}, ${
+                        getItems.data.metadata?.verzoek?.inventarisatielijst?.titel ??
+                        getPDFName(getItems.data.metadata?.verzoek?.inventarisatielijst?.url)
+                      }`}
+                    >
                       <TableCell>{t("Inventory list")}</TableCell>
                       <TableCell>
                         <Link href={getItems.data.metadata?.verzoek?.inventarisatielijst?.url} target="blank">
@@ -186,10 +248,14 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                   )}
 
                   {!_.isEmpty(getItems.data.bijlagen) && (
-                    <TableRow className={styles.tableRow}>
-                      <TableCell>{t("Attachments")}</TableCell>
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-labelledby="attachmentsName attachmentsData"
+                    >
+                      <TableCell id="attachmentsName">{t("Attachments")}</TableCell>
                       <TableCell>
-                        <UnorderedList>
+                        <UnorderedList id="attachmentsData">
                           {getItems.data.bijlagen.map(
                             (bijlage: any, idx: number) =>
                               bijlage.titel && (
@@ -198,7 +264,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                                     href={bijlage.url?.length !== 0 ? bijlage.url : "#"}
                                     target={bijlage.url?.length !== 0 ? "blank" : ""}
                                   >
-                                    {bijlage.titel}
+                                    {bijlage.titel}.
                                   </Link>
                                 </UnorderedListItem>
                               ),
@@ -210,7 +276,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                 </TableBody>
               </Table>
             </HorizontalOverflowWrapper>
-          </>
+          </div>
         )}
         {getItems.isLoading && <Skeleton height={"200px"} />}
       </PageContent>
