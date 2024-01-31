@@ -16,6 +16,9 @@ export const nl = {
   Jumbotron: "Jumbotron",
   Limit: "Limiet",
   Municipality: "Gemeente",
+  Filters: "Filters",
+  View: "Weergave",
+  Pagination: "Paginering",
   "Jumbotron card": "Jumbotron tegel",
   "N/A": "N.v.t",
   "Details page": "Detailpagina",
@@ -59,4 +62,6 @@ export const nl = {
   "Scroll table to the right": "Scroll tabel naar rechts",
   "No category available": "Geen categorie beschikbaar",
   "No municipality available": "Geen gemeente beschikbaar",
+  "Woo Request": "Woo Verzoek",
+  "Language select": "Taal kiezen",
 };

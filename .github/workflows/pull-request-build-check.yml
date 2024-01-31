@@ -20,6 +20,12 @@ jobs:
       - name: Parcel/watcher
         run: npm i @parcel/watcher
 
+      - name: Sass
+        run: npm i sass
+
+      - name: Style Dictionary
+        run: npm i style-dictionary
+
       - name: Install dependencies
         run: cd pwa && npm i
 

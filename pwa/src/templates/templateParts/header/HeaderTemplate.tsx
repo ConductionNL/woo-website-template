@@ -17,7 +17,7 @@ export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName 
 
   return (
     <PageHeader className={clsx(layoutClassName && layoutClassName)}>
-      <div className={styles.container}>
+      <div role="navigation" aria-label="skip" className={styles.container}>
         <div className={styles.skipLinkContainer}>
           <SkipLink href="#filters" tabIndex={gatsbyContext.location.pathname === "/" ? 0 : -1}>
             {t("Skip to filters")}
@@ -28,26 +28,34 @@ export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName 
         </div>
         <div className={styles.navContainer}>
           <Logo onClick={() => navigate("/")} />
-
-          <div className={styles.languageSelectContainer}>
+          <nav role="navigation" aria-label={t("Language select")} className={styles.languageSelectContainer}>
             <span
               className={clsx(styles.languageSelect, i18n.language === "nl" && styles.languageSelectDisabled)}
               onClick={() => i18n.changeLanguage("nl")}
               tabIndex={0}
               aria-label="Vertaal pagina naar het Nederlands"
+              role="button"
+              aria-pressed={i18n.language === "nl" ? true : false}
+              aria-disabled={i18n.language === "nl" ? true : false}
             >
               NL
-            </span>{" "}
-            /{" "}
+            </span>
+            <span className={styles.languageSeperator} aria-hidden="true">
+              {" "}
+              /{" "}
+            </span>
             <span
               className={clsx(styles.languageSelect, i18n.language === "en" && styles.languageSelectDisabled)}
               onClick={() => i18n.changeLanguage("en")}
               tabIndex={0}
               aria-label="Translate page to English"
+              role="button"
+              aria-pressed={i18n.language === "en" ? true : false}
+              aria-disabled={i18n.language === "en" ? true : false}
             >
               EN
             </span>
-          </div>
+          </nav>
         </div>
       </div>
     </PageHeader>

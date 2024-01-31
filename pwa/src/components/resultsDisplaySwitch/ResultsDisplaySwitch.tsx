@@ -17,7 +17,11 @@ const ResultsDisplaySwitch: React.FC<ResultsDisplaySwitchProps> = ({ layoutClass
   const { t } = useTranslation();
 
   return (
-    <ButtonGroup className={clsx(styles.container, layoutClassName && layoutClassName)}>
+    <ButtonGroup
+      role="region"
+      aria-label={t("View")}
+      className={clsx(styles.container, layoutClassName && layoutClassName)}
+    >
       <Button
         appearance={isActive(displayKey, "cards") ? "primary-action-button" : "secondary-action-button"}
         className={styles.button}
