@@ -10,7 +10,7 @@
       {
         "value": "Kosten",
         "type": "readme",
-        "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md"
+        "markdownlink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md"
       },
       {
         "value": "Privacy",
@@ -33,7 +33,7 @@
         "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md"
       },
       {
-        "value": "Veel gestelde vragen",
+        "value": "Veelgestelde vragen",
         "type": "readme",
         "markdownLink": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/FAQ.md"
       }

@@ -17,7 +17,7 @@ env: # Change these to your preferences any image url can also be a base encoded
   ORGANISATION_NAME: "Conduction"
   JUMBOTRON_IMAGE_URL: "https://www.conduction.nl/wp-content/uploads/2021/07/cropped-Conduction_HOME_0000_afb1-1.png"
   FOOTER_LOGO_URL: "true"
-  FOOTER_LOGO_HREF: "https://conduction.nl/",
+  FOOTER_LOGO_HREF: "https://conduction.nl/"
   FOOTER_CONTENT: "https://raw.githubusercontent.com/ConductionNL/${{github.event.repository.name}}/main/FooterContent.json"
   FOOTER_CONTENT_HEADER: "heading-2"
   # OIDN_NUMBER: " "
