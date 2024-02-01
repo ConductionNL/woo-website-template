@@ -24,7 +24,7 @@ jobs:
           read_the_docs_url: "false"
           navbar_content: "https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/NavbarContent.json"
           footer_show_logo: true
-          footer_logo_url: ""
+          footer_logo_href: "/"
           footer_content: "https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/FooterContent.json"
           footer_content_header: "heading-3"
           jumbotron_title: "Open WOO App"
