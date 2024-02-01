@@ -59,12 +59,12 @@ Deze pagina kan rechtstreeks vanaf GitHub (serverless) of los op een eigen omgev
 
 - Een ([Open Webconcept](https://openwebconcept.nl/)) WordPress installatie met de [Open Woo Plugin](https://github.com/OpenWebconcept/plugin-openwoo)
 - Een ([Common Gateway](https://commongateway.app/)) Symfony installatie met de [Open Woo bundle](https://github.com/CommonGateway/WooBundle)
-- Een ([Open Online](https://www.dimpact.nl/nieuws/gemeente-vught-live-met-open-online)) Drupal installatie met de Open Woo plugin ([roadmap](https://openwoo.app/github/Roadmap/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md))
-- Een los JSON-bestand dat de data bevat vanuit de repository ([roadmap](https://openwoo.app/github/Roadmap/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md))
+- Een ([Open Online](https://www.dimpact.nl/nieuws/gemeente-vught-live-met-open-online)) Drupal installatie met de Open Woo plugin ([roadmap](/docs/product/Roadmap.md))
+- Een los JSON-bestand dat de data bevat vanuit de repository ([roadmap](/docs/product/Roadmap.md))
 - Een rechtstreeks vanuit het zaak- en/of raadsinformatiesysteem ontsloten API
 
 Voor de pagina maakt het niet uit wie de bron is, zolang deze bron zich aan de standaard houdt.
-Meer details hierover vindt u onder [architectuur](https://openwoo.app/github/Architectuur/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md).
+Meer details hierover vindt u onder [architectuur](/docs/techniek/Architectuur.md).
 
 ![Website Architectuur](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/components.svg "Website Architectuur")
 
@@ -91,8 +91,8 @@ Op dit moment wordt de OpenWoo.app al door een aantal organisaties gebruikt
 
 ## Architectuur
 
-Wil je meer weten over de architectuur van de Open Woo-app en uit welke componenten het bestaat? Kijk dan op de [architectuur pagina](https://openwoo.app/github/Architectuur/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md).
+Wil je meer weten over de architectuur van de Open Woo-app en uit welke componenten het bestaat? Kijk dan op de [architectuur pagina](/docs/techniek/Architectuur.md).
 
 ## Toekomstplannen
 
-Er komen steeds meer toepassingen voor het publiceren van overheidsinformatie. Denk bijvoorbeeld aan het publiceren van datasets, algoritmes en besluiten. Deze toepassingen zullen in de toekomst ook onderdeel worden van de Wet Open Overheid. Daarom is het belangrijk dat de Open WOO App flexibel is en kan worden aangepast aan de veranderende behoeften van de overheid. Kijk voor meer informatie over onze ontwikkelplannen op de [roadmap](https://openwoo.app/github/Roadmap/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md)
+Er komen steeds meer toepassingen voor het publiceren van overheidsinformatie. Denk bijvoorbeeld aan het publiceren van datasets, algoritmes en besluiten. Deze toepassingen zullen in de toekomst ook onderdeel worden van de Wet Open Overheid. Daarom is het belangrijk dat de Open WOO App flexibel is en kan worden aangepast aan de veranderende behoeften van de overheid. Kijk voor meer informatie over onze ontwikkelplannen op de [roadmap](/docs/product/Roadmap.md)
