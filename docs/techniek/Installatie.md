@@ -8,7 +8,7 @@ Het Open Woo Website-template is gebaseerd op het Conduction [Productpage-templa
 
 Om dit template te gebruiken, moet je beschikken over:
 
-- NL Design Token voor je organisatie ([lees hier hoe je die kunt verkrijgen](https://conductionnl.github.io/product-website-template/pages/Features/NL_Design))
+- NL Design Token voor je organisatie ([lees hier hoe je die kunt verkrijgen](https://conductionnl.github.io/product-website-template/Features/NL_Design))
 - Een GitHub-organisatie en beheerdersrechten daarop OF (zie [Serverless Installatie](#serverless-installatie))
 - Een APACHE/NGINX-server (zie [Server Installatie](#server-installatie))
 - Een Open Webconcept CMS (WordPress) met de [Open Woo](https://github.com/OpenWebconcept/plugin-openwoo) en [Open Convenanten](https://github.com/OpenWebconcept/plugin-openconvenanten) plugins OF
