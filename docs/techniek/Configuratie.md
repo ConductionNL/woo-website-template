@@ -39,15 +39,15 @@ Voor het kunnen publiceren van zaken vanuit het zaaksysteem is het belangrijk da
 
 Zaken dienen te beschikken over de volgende properties (zaakattributen):
 
-| Property            | Verplicht | Gebruik                                                                                                 | Toegestane waardes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------- | --------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| woo_publicatiedatum | Ja        | De datum vanaf wanneer de publicatie wordt gepubliceerd, bij leeg wordt de publicatie niet gepubliceerd | string formatted as date-time (e.g., 2023-09-12 09:00) or string formatted as date (e.g., 2023-09-12) or NULL. If a date is presented instead of a date-time, the time will be automatically set to 00:00.                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Property            | Verplicht | Gebruik                                                                                                 | Toegestane waardes |
+|---------------------|-----------|---------------------------------------------------------------------------------------------------------|--------------------|
+| woo_publicatiedatum | Ja        | De datum vanaf wanneer de publicatie wordt gepubliceerd, bij leeg wordt de publicatie niet gepubliceerd | string formatted as date-time (e.g., 2023-09-12 09:00) or string formatted as date (e.g., 2023-09-12) or NULL. If a date is presented instead of a date-time, the time will be automatically set to 00:00. |
 | woo_categorie       | Ja        | De categorie van de WOO-publicatie                                                                      | One of ("Wetten en algemeen verbindende voorschriften", "Overige besluiten van algemene strekking", "Ontwerpen van wet- en regelgeving met adviesaanvraag", "Organisatie en werkwijze", "Bereikbaarheidsgegevens", "Bij vertegenwoordigende organen ingekomen stukken", "Vergaderstukken Staten-Generaal", "Vergaderstukken decentrale overheden", "Agenda's en besluitenlijsten bestuurscolleges", "Adviezen", "Convenanten", "Jaarplannen en jaarverslagen", "Subsidieverplichtingen anders dan met beschikking", "Woo-verzoeken en -besluiten", "Onderzoeksrapporten", "Beschikkingen", "Klachtoordelen") |
-| woo_thema           | Nee       | Een optionele titel van het thema waar de zaak onder valt                                               | string, max 255 characters                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| woo_samenvatting    | Nee       | De KORTE samenvatting van de publicatie zoals online getoond                                            | string, max 255 characters                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| woo_beschrijving    | Nee       | De UITGEBREIDE beschrijving van de publicatie zoals online getoond                                      | string, max 2555 characters                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| woo_datum_besluit   | Nee       | De datum waarop het besluit over de zaak genomen is                                                     | string formatted as date-time (e.g., 2023-09-12 09:00) or string formatted as date (e.g., 2023-09-12). If a date is presented instead of a date-time, the time will be automatically set to 00:00.                                                                                                                                                                                                                                                                                                                                                                                                           |
-| woo_datum_ontvangst | Nee       | De datum waarop de zaak genomen is geregistreerd                                                        | string formatted as date-time (e.g., 2023-09-12 09:00) or string formatted as date (e.g., 2023-09-12). If a date is presented instead of a date-time, the time will be automatically set to 00:00.                                                                                                                                                                                                                                                                                                                                                                                                           |
+| woo_thema           | Nee       | Een optionele titel van het thema waar de zaak onder valt                                               | string, max 255 characters |
+| woo_samenvatting    | Nee       | De KORTE samenvatting van de publicatie zoals online getoond                                            | string, max 255 characters |
+| woo_beschrijving    | Nee       | De UITGEBREIDE beschrijving van de publicatie zoals online getoond                                      | string, max 2555 characters |
+| woo_datum_besluit   | Nee       | De datum waarop het besluit over de zaak genomen is                                                     | string formatted as date-time (e.g., 2023-09-12 09:00) or string formatted as date (e.g., 2023-09-12). If a date is presented instead of a date-time, the time will be automatically set to 00:00. |
+| woo_datum_ontvangst | Nee       | De datum waarop de zaak genomen is geregistreerd                                                        | string formatted as date-time (e.g., 2023-09-12 09:00) or string formatted as date (e.g., 2023-09-12). If a date is presented instead of a date-time, the time will be automatically set to 00:00. |
 
 Daarnaast is het mogelijk om bijlagen van publicaties te clusteren aan de hand van labels.
 
@@ -63,7 +63,7 @@ Hoewel we er vanuit gaan dat categorieën voldoen aan de onder <!-- [Algemene in
 Bijlagen nemen een bijzondere positie in binnen de Open Woo Website, ze vormen de kern van de naar de bezoeker over te dragen informatie en zijn het centrale onderdeel van de Woo. De manier waarop deze worden getoond wordt beïnvloed door labels. Daarvoor gelden de volgende regels:
 
 | Label                   | Effect van label                                                                                              |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------- |
+|-------------------------|---------------------------------------------------------------------------------------------------------------|
 | woo_publicatie          | Alleen documenten met dit label worden weergegeven op de voorkant onder bijlage                               |
 | woo_informatieverzoek   | Documenten met dit label worden weergegeven onder de titel 'Informatieverzoek' in plaats van onder bijlagen   |
 | woo_inventarisatielijst | Documenten met dit label worden weergegeven onder de titel 'Inventarisatielijst' in plaats van onder bijlagen |
@@ -81,62 +81,62 @@ Bijlagen nemen een bijzondere positie in binnen de Open Woo Website, ze vormen d
 
 Gebaseerd op: [VNG ZGW Standaard](https://vng.nl/projecten/zaakgericht-werken-api)
 
-| WOO Publicatie Object                       | ZGW Zaak                                | Gebruik                               |
-| ------------------------------------------- | --------------------------------------- | ------------------------------------- |
-| id                                          | object_id                               | Metadata                              |
-| portalUrl                                   | {{config}}/{{id}}                       | Metadata                              |
-| organisatie.naam                            | {{config}}                              | Metadata                              |
-| organisatie.oin                             | {{config}}                              | Metadata                              |
-| volgnummer                                  | (Empty)                                 | n.v.t                                 |
-| titel                                       | values.case.subject_external            | Metadata, Index pagina, Detail pagina |
-| beschrijving                                | values.attribute.woo_beschrijving       | Metadata, Index pagina, Detail pagina |
-| samenvatting                                | values.attribute.woo_samenvatting       | Metadata, Index pagina, Detail pagina |
-| categorie                                   | values.attribute.woo_categorie          | Metadata, Index pagina, Detail pagina |
-| publicatiedatum                             | values.attribute.woo_publicatiedatum    | Metadata, Index pagina, Detail pagina |
-| metadata.besluitdatum                       | values.attribute.woo_datum_besluit      | Metadata                              |
-| metadata.volgnummer                         | (Empty)                                 | Metadata                              |
-| metadata.verzoek.ontvangstdatum             | values.case.date_of_registration        | Metadata, Detail pagina               |
-| metadata.verzoek.status                     | (Empty)                                 | Metadata                              |
-| metadata.verzoek.ontvangerInformatieverzoek | (Empty)                                 | Metadata                              |
-| metadata.verzoek.informatieverzoek          | values.attribute.woo_informatieverzoek  | Detail pagina                         |
-| metadata.verzoek.inventarisatielijst        | values.attribute.woo_informatieverzoek  | Detail pagina                         |
-| metadata.verzoek.besluit                    | values.attribute.woo_informatieverzoek  | Detail pagina                         |
-| metadata.verzoek.termijnoverschrijding      | case.dateTarget - case.dateOfCompletion | Detail pagina                         |
-| bijlagen                                    | values.attribute.woo_publicatie         | Metadata, Detail pagina               |
+| WOO Publicatie Object                       | ZGW Zaak                                         | Gebruik                               |
+|---------------------------------------------|--------------------------------------------------|---------------------------------------|
+| id                                          | object_id                                        | Metadata                              |
+| portalUrl                                   | {{config}}/{{id}}                                | Metadata                              |
+| organisatie.naam                            | {{config}}                                       | Metadata                              |
+| organisatie.oin                             | {{config}}                                       | Metadata                              |
+| volgnummer                                  | (Empty)                                          | n.v.t                                 |
+| titel                                       | values.case.subject_external                     | Metadata, Index pagina, Detail pagina |
+| beschrijving                                | values.attribute.woo_beschrijving                | Metadata, Index pagina, Detail pagina |
+| samenvatting                                | values.attribute.woo_samenvatting                | Metadata, Index pagina, Detail pagina |
+| categorie                                   | values.attribute.woo_categorie                   | Metadata, Index pagina, Detail pagina |
+| publicatiedatum                             | values.attribute.woo_publicatiedatum             | Metadata, Index pagina, Detail pagina |
+| metadata.besluitdatum                       | values.attribute.woo_datum_besluit               | Metadata                              |
+| metadata.volgnummer                         | (Empty)                                          | Metadata                              |
+| metadata.verzoek.ontvangstdatum             | values.case.date_of_registration                 | Metadata, Detail pagina               |
+| metadata.verzoek.status                     | (Empty)                                          | Metadata                              |
+| metadata.verzoek.ontvangerInformatieverzoek | (Empty)                                          | Metadata                              |
+| metadata.verzoek.informatieverzoek          | values.attribute.woo_informatieverzoek           | Detail pagina                         |
+| metadata.verzoek.inventarisatielijst        | values.attribute.woo_informatieverzoek           | Detail pagina                         |
+| metadata.verzoek.besluit                    | values.attribute.woo_informatieverzoek           | Detail pagina                         |
+| metadata.verzoek.termijnoverschrijding      | case.dateTarget - case.dateOfCompletion          | Detail pagina                         |
+| bijlagen                                    | values.attribute.woo_publicatie                  | Metadata, Detail pagina               |
 
 ## Mapping vanuit zaaksysteem.nl search endpoint
 
 Gebaseerd op: [XXLLNC zaken mapping](https://github.com/CommonGateway/WooBundle/blob/main/Installation/Mapping/woo.xxllncCaseToWoo.mapping.json)
 
-| WOO Publicatie Object                       | Zaaksysteemveld                         | Gebruik                               |
-| ------------------------------------------- | --------------------------------------- | ------------------------------------- |
-| id                                          | object_id                               | Metadata                              |
-| portalUrl                                   | {{config}}/{{id}}                       | Metadata                              |
-| organisatie.naam                            | {{config}}                              | Metadata                              |
-| organisatie.oin                             | {{config}}                              | Metadata                              |
-| volgnummer                                  | (Empty)                                 | n.v.t                                 |
-| titel                                       | values.case.subject_external            | Metadata, Index pagina, Detail pagina |
-| beschrijving                                | values.attribute.woo_beschrijving       | Metadata, Index pagina, Detail pagina |
-| samenvatting                                | values.attribute.woo_samenvatting       | Metadata, Index pagina, Detail pagina |
-| categorie                                   | values.attribute.woo_categorie          | Metadata, Index pagina, Detail pagina |
-| publicatiedatum                             | values.attribute.woo_publicatiedatum    | Metadata, Index pagina, Detail pagina |
-| metadata.besluitdatum                       | values.attribute.woo_datum_besluit      | Metadata                              |
-| metadata.volgnummer                         | (Empty)                                 | Metadata                              |
-| metadata.verzoek.ontvangstdatum             | values.case.date_of_registration        | Metadata, Detail pagina               |
-| metadata.verzoek.status                     | (Empty)                                 | Metadata                              |
-| metadata.verzoek.ontvangerInformatieverzoek | (Empty)                                 | Metadata                              |
-| metadata.verzoek.informatieverzoek          | values.attribute.woo_informatieverzoek  | Detail pagina                         |
-| metadata.verzoek.inventarisatielijst        | values.attribute.woo_informatieverzoek  | Detail pagina                         |
-| metadata.verzoek.besluit                    | values.attribute.woo_informatieverzoek  | Detail pagina                         |
-| metadata.verzoek.termijnoverschrijding      | case.dateTarget - case.dateOfCompletion | Detail pagina                         |
-| bijlagen                                    | values.attribute.woo_publicatie         | Metadata, Detail pagina               |
+| WOO Publicatie Object                       | Zaaksysteemveld                                  | Gebruik                               |
+|---------------------------------------------|--------------------------------------------------|---------------------------------------|
+| id                                          | object_id                                        | Metadata                              |
+| portalUrl                                   | {{config}}/{{id}}                                | Metadata                              |
+| organisatie.naam                            | {{config}}                                       | Metadata                              |
+| organisatie.oin                             | {{config}}                                       | Metadata                              |
+| volgnummer                                  | (Empty)                                          | n.v.t                                 |
+| titel                                       | values.case.subject_external                     | Metadata, Index pagina, Detail pagina |
+| beschrijving                                | values.attribute.woo_beschrijving                | Metadata, Index pagina, Detail pagina |
+| samenvatting                                | values.attribute.woo_samenvatting                | Metadata, Index pagina, Detail pagina |
+| categorie                                   | values.attribute.woo_categorie                   | Metadata, Index pagina, Detail pagina |
+| publicatiedatum                             | values.attribute.woo_publicatiedatum             | Metadata, Index pagina, Detail pagina |
+| metadata.besluitdatum                       | values.attribute.woo_datum_besluit               | Metadata                              |
+| metadata.volgnummer                         | (Empty)                                          | Metadata                              |
+| metadata.verzoek.ontvangstdatum             | values.case.date_of_registration                 | Metadata, Detail pagina               |
+| metadata.verzoek.status                     | (Empty)                                          | Metadata                              |
+| metadata.verzoek.ontvangerInformatieverzoek | (Empty)                                          | Metadata                              |
+| metadata.verzoek.informatieverzoek          | values.attribute.woo_informatieverzoek           | Detail pagina                         |
+| metadata.verzoek.inventarisatielijst        | values.attribute.woo_informatieverzoek           | Detail pagina                         |
+| metadata.verzoek.besluit                    | values.attribute.woo_informatieverzoek           | Detail pagina                         |
+| metadata.verzoek.termijnoverschrijding      | case.dateTarget - case.dateOfCompletion          | Detail pagina                         |
+| bijlagen                                    | values.attribute.woo_publicatie                  | Metadata, Detail pagina               |
 
 Bijlagen
 
-| Bijlage   | values.attribute.woo_publicatie |
-| --------- | ------------------------------- |
-| categorie | (Empty)                         |
-| type      | mimetype                        |
-| status    | accepted                        |
-| titel     | filename                        |
-| url       | {{fetchedFromZaaksysteem}}      |
+| Bijlage                            | values.attribute.woo_publicatie                 |
+|------------------------------------|-------------------------------------------------|
+| categorie                          | (Empty)                                         |
+| type                               | mimetype                                        |
+| status                             | accepted                                        |
+| titel                              | filename                                        |
+| url                                | {{fetchedFromZaaksysteem}}                      |

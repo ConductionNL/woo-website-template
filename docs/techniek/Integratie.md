@@ -35,7 +35,7 @@ In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de
 3. Op categorie, `categorie=Convenant`
 4. Op datum, Hierbij kunt u een begin en eindatum opgeven om een periode (bijvoorbeeld jaar) te doorzoeken publicatiedatum[after]=2022-12-31T23:59:59Z&publicatiedatum[before]=2024-01-01T00:00:00Z&
 
-```cli
+````cli
 GET 'https://api.gateway.commonground.nu/api/publicaties?extend[]=all&_search=Afvalwaterakkoord&_order[publicatiedatum]=desc&_limit=12&_page=1'
 
 Response
@@ -52,7 +52,7 @@ Response
             "publicatiedatum": "2023-11-24 11:31:47",
             "portalUrl": "https://conductionnl.github.io/woo-website-epe/19cdec3f-896f-4765-8d62-c6c8570926b7",
             "bijlagen": [
-                {
+                {                    
                     "id": null,
                     "titel": "Naam_Bijlage",
                     "categorie": null,
@@ -119,11 +119,11 @@ Response
     "page": 1,
     "pages": 1
 }
-```
+````
 
 Vanuit een het weergeven van een zoekformulier is het goed mogelijk dat u alleen bestaande waardes wilt weergeven (bijvoorbeeld bij jaartal of categorie). U kunt daarvoor de query-parameter gebruiken, deze vertelt u welke zoekwaarde welke resultaten opleveren.
 
-```cli
+````cli
 GET 'https://api.gateway.commonground.nu/api/publicaties?_queries[]=categorie'
 
 Response
@@ -140,7 +140,7 @@ Response
         }
     ]
 }
-```
+````
 
 ### Metadata
 
@@ -148,29 +148,29 @@ De kern gegevens van een WOO-publicatie zitten in het metadata-object, de inhoud
 
 #### Algemene properties
 
-| Property              | Verplicht | Gebruik      | Toegestane waardes    |
-| --------------------- | --------- | ------------ | --------------------- |
-| besluitdatum          | Nee       | Detailpagina | String in date format |
-| ontvangstdatum        | Nee       | Detailpagina | String in date format |
-| informatieverzoek     | Nee       | Detailpagina | Bijlage object        |
-| besluit               | Nee       | Detailpagina | Bijlage object        |
-| inventarisatielijst   | Nee       | Detailpagina | Bijlage object        |
-| termijnoverschrijding | Nee       | Detailpagina | String                |
+| Property              | Verplicht     | Gebruik      | Toegestane waardes    |
+|-----------------------|---------------|--------------|-----------------------|
+| besluitdatum          | Nee           | Detailpagina | String in date format |
+| ontvangstdatum        | Nee           | Detailpagina | String in date format |
+| informatieverzoek     | Nee           | Detailpagina | Bijlage object        |
+| besluit               | Nee           | Detailpagina | Bijlage object        |
+| inventarisatielijst   | Nee           | Detailpagina | Bijlage object        |
+| termijnoverschrijding | Nee           | Detailpagina | String                |
 
 #### Convenanten
 
-| Property | Verplicht | Gebruik | Toegestane waardes |
-| -------- | --------- | ------- | ------------------ |
+| Property              | Verplicht     | Gebruik      | Toegestane waardes    |
+|-----------------------|---------------|--------------|-----------------------|
 
 #### Woo verzoeken
 
-| Property | Verplicht | Gebruik | Toegestane waardes |
-| -------- | --------- | ------- | ------------------ |
+| Property              | Verplicht     | Gebruik      | Toegestane waardes    |
+|-----------------------|---------------|--------------|-----------------------|
 
 #### Klachten
 
-| Property | Verplicht | Gebruik | Toegestane waardes |
-| -------- | --------- | ------- | ------------------ |
+| Property              | Verplicht     | Gebruik      | Toegestane waardes    |
+|-----------------------|---------------|--------------|-----------------------|
 
 ### Spelregels
 

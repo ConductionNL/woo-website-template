@@ -47,7 +47,7 @@ Er zijn diverse frontends die in theorie direct kunnen koppelen op de OpenWoo.ap
 **Beschikbare componenten voor frontend**
 | Component | Framework | Open Source | Leveranciers | Beschrijving |
 |-------------|------|------|------------|--------------|
-| OpenWOO Site | NL Design (React) | Ja | [Conduction](https://conduction.nl/) | Een losse NL Design zoekpagina in de huisstijl van uw organisatie |
+| OpenWOO Site  | NL Design (React) | Ja | [Conduction](https://conduction.nl/) | Een losse NL Design zoekpagina in de huisstijl van uw organisatie |
 | OpenWoo Plugin | WordPress | Ja | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) | Een NL Design weergavecomponent voor WordPress-websites |
 | OpenGemeenten | TYPO3 | Ja | [OpenGemeenten](https://www.opengemeenten.nl/) | Een weergavecomponent voor TYPO3-websites |
 | SIM Drupal | Drupal | ? | [SIM Groep](https://www.simgroep.nl/) | Een weergavecomponent voor Drupal |
