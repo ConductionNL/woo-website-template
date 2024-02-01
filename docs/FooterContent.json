@@ -3,6 +3,18 @@
     "title": "Links",
     "items": [
       {
+        "ariaLabel": "Home",
+        "value": "Home",
+        "link": "/",
+        "icon": { "prefix": "fas", "icon": "home", "placement": "left" }
+      },
+      {
+        "ariaLabel": "Slack",
+        "value": "Slack",
+        "link": "https://samenorganiseren.slack.com/archives/C067Q3UE9F0",
+        "icon": { "prefix": "fab", "icon": "slack", "placement": "left" }
+      },
+      {
         "value": "GitHub",
         "ariaLabel": "GitHub",
         "link": "https://github.com/ConductionNL/woo-website-template",
