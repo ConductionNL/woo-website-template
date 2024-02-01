@@ -1,6 +1,6 @@
 # Installatie
 
-Deze installatiehandleiding is bedoeld voor overheden en leveranciers die zelfstandig aan de slag willen met Open Woo Website. Als je Open Woo Website als SaaS wilt afnemen, kijk dan onder [kosten](https://openwoo.app/github/Kosten/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md).
+Deze installatiehandleiding is bedoeld voor overheden en leveranciers die zelfstandig aan de slag willen met Open Woo Website. Als je Open Woo Website als SaaS wilt afnemen, kijk dan onder [kosten](/docs/product/Kosten.md).
 
 Het Open Woo Website-template is gebaseerd op het Conduction [Productpage-template](https://github.com/ConductionNL/product-website-template) voor CommonGround. Hieronder tref je een verkorte installatiehandleiding aan die vooral focust op de onderliggende bronnen. Voor meer en uitgebreidere details kun je de documentatie van het Productpage-website-template gebruiken.
 
@@ -30,7 +30,7 @@ De Open WOO Website is in eerste instantie opgezet om serverless gebruikt te wor
 > 6. Ga naar acties en wacht tot de actie "Deploy the WOO Page to GitHub Pages" succesvol is afgerond
 > 7. Ga naar settings->pages, selecteer onder source `deploy from branch` en geef als branche op `gh-pages`
 > 8. Bovenaan de pagina verschijnt nu de URL waarop je je Open WOO Website kunt terugvinden
-> 9. Als je de Open WOO Website wilt hosten onder een subdomein van je organisatie en voorzien van een PKI-certificaat, kun je daarvoor de normale GitHub Pages-handleidingen volgen of een SLA afsluiten voor ondersteuning (zie [kosten](https://openwoo.app/github/Kosten/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md))
+> 9. Als je de Open WOO Website wilt hosten onder een subdomein van je organisatie en voorzien van een PKI-certificaat, kun je daarvoor de normale GitHub Pages-handleidingen volgen of een SLA afsluiten voor ondersteuning (zie [kosten](/docs/product/Kosten.md))
 
 ### Server Installatie
 
@@ -45,19 +45,19 @@ Als je de Open Woo Website liever vanaf een eigen server draait, kan dat uiteraa
 
 Configuratie vindt plaats via environment (env) waardes. In het geval van een serverless configuratie moeten de env-waardes worden aangepast in de [page deploy workflow](https://github.com/ConductionNL/woo-website-template/blob/main/.github/workflows/product-page-deploy.yml). In het geval van een serverinstallatie in het `.env`-bestand in de Gatsby-rootmap. We ondersteunen de volgende configuratie-opties.
 
-| Key                       | Verplicht             | Usage                                                                                                               | Allowed Value                                        | Default / Example                                                                              |
-|---------------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| GITHUB_PAGES_BRANCH       | Alleen bij serverless | De branche waarop de pagina wordt gebouwd                                                                           | string, max 255 characters                           | gh-pages                                                                                       |
-| GITHUB_REPOSITORY_NAME    | Alleen bij serverless |                                                                                                                     | string, max 255 characters                           | `${{ github.event.repository.name }}`                                                          |
-| API_BASE_URL              | Ja                    | De locatie van de Open Woo API                                                                                      | string <URL>, string, max 255 characters             | "<https://api.gateway.commonground.nu/api>"                                                      |
-| NL_DESIGN_THEME_CLASSNAME | Ja                    | De naam van het thema van de organisatie                                                                            | string, max 255 characters                           | "conduction-theme"                                                                             |
-| FAVICON_URL               | Ja                    | De locatie van de favicon van de organisatie                                                                        | string <URL>, max 255 characters                     | "<https://conduction.nl/wp-content/uploads/2021/07/cropped-favicon-32x32.png>"                   |
-| HEADER_LOGO_URL           | Ja                    | De locatie van het primaire logo van de organisatie                                                                 | string, moet een base encoded afbeelding zijn OF url | "<https://conduction.nl/wp-content/uploads/2021/07/cropped-conductionlogo-1.png>"                |
-| ORGANISATION_NAME         | Ja                    | De naam van de organisatie                                                                                          | string, max 255 characters                           | "Conduction"                                                                                   |
-| JUMBOTRON_IMAGE_URL       | Nee                   | De locatie van de gebruikte header, bij leeg wordt er geen header getoond                                           | string <URL>, max 255 characters                     | "<https://www.conduction.nl/wp-content/uploads/2021/07/cropped-Conduction_HOME_0000_afb1-1.png>" |
-| FOOTER_LOGO_URL           | Ja                    | De locatie van het primaire logo van de organisatie                                                                 | string, moet een base encoded afbeelding zijn OF url | ...                                                                                            |
-| FOOTER_LOGO_HREF          | Ja                    | De homepage van de organisatie                                                                                      | string <URL>, max 255 characters                     | "<https://conduction.nl/>"                                                                       |
-| OIDN_NUMBER               | Nee                   | Het OIDN-nummer van de organisatie, bij leeg worden Woo-publicaties mogelijk niet beperkt tot de eigen organisatie  | integer, max 16 characters                           | 1234567890                                                                                     |
+| Key                       | Verplicht             | Usage                                                                                                              | Allowed Value                                        | Default / Example                                                                                |
+| ------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| GITHUB_PAGES_BRANCH       | Alleen bij serverless | De branche waarop de pagina wordt gebouwd                                                                          | string, max 255 characters                           | gh-pages                                                                                         |
+| GITHUB_REPOSITORY_NAME    | Alleen bij serverless |                                                                                                                    | string, max 255 characters                           | `${{ github.event.repository.name }}`                                                            |
+| API_BASE_URL              | Ja                    | De locatie van de Open Woo API                                                                                     | string <URL>, string, max 255 characters             | "<https://api.gateway.commonground.nu/api>"                                                      |
+| NL_DESIGN_THEME_CLASSNAME | Ja                    | De naam van het thema van de organisatie                                                                           | string, max 255 characters                           | "conduction-theme"                                                                               |
+| FAVICON_URL               | Ja                    | De locatie van de favicon van de organisatie                                                                       | string <URL>, max 255 characters                     | "<https://conduction.nl/wp-content/uploads/2021/07/cropped-favicon-32x32.png>"                   |
+| HEADER_LOGO_URL           | Ja                    | De locatie van het primaire logo van de organisatie                                                                | string, moet een base encoded afbeelding zijn OF url | "<https://conduction.nl/wp-content/uploads/2021/07/cropped-conductionlogo-1.png>"                |
+| ORGANISATION_NAME         | Ja                    | De naam van de organisatie                                                                                         | string, max 255 characters                           | "Conduction"                                                                                     |
+| JUMBOTRON_IMAGE_URL       | Nee                   | De locatie van de gebruikte header, bij leeg wordt er geen header getoond                                          | string <URL>, max 255 characters                     | "<https://www.conduction.nl/wp-content/uploads/2021/07/cropped-Conduction_HOME_0000_afb1-1.png>" |
+| FOOTER_LOGO_URL           | Ja                    | De locatie van het primaire logo van de organisatie                                                                | string, moet een base encoded afbeelding zijn OF url | ...                                                                                              |
+| FOOTER_LOGO_HREF          | Ja                    | De homepage van de organisatie                                                                                     | string <URL>, max 255 characters                     | "<https://conduction.nl/>"                                                                       |
+| OIDN_NUMBER               | Nee                   | Het OIDN-nummer van de organisatie, bij leeg worden Woo-publicaties mogelijk niet beperkt tot de eigen organisatie | integer, max 16 characters                           | 1234567890                                                                                       |
 
 ## Backend
 
@@ -77,7 +77,7 @@ Volg de installatiehandleiding op [Woo Bundle](https://github.com/ConductionNL/W
 
 ## Externe Systemen
 
-Voor het koppelen van externe systemen geldt dat zij op de juiste manier moeten zijn geconfigureerd. Kijk daarvoor onder [configuratie](https://openwoo.app/github/Configuratie/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuratie.md).
+Voor het koppelen van externe systemen geldt dat zij op de juiste manier moeten zijn geconfigureerd. Kijk daarvoor onder [configuratie](/docs/techniek/Configuratie.md).
 
 ## Verdere documentatie
 
