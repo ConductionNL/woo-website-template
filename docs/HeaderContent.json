@@ -2,132 +2,180 @@
   {
     "label": "Product",
     "current": {
-      "pathname": "/components",
-      "operator": "includes"
+      "pathname": "/Product"
     },
     "subItems": [
       {
         "label": "Kosten",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/over/kosten",
-          "operator": "equals"
+          "pathname": "/Product/Kosten"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "Kosten"
+          }
+        }
       },
       {
         "label": "Privacy",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/over/privacy",
-          "operator": "equals"
+          "pathname": "/Product/Privacy"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Privacyverklaring.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "Privacyverklaring"
+          }
+        }
       },
       {
         "label": "Beveiliging",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/over/security",
-          "operator": "equals"
+          "pathname": "/Product/Security"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/SECURITY.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "SECURITY"
+          }
+        }
       },
       {
         "label": "Toegankelijkheid",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/over/toegankelijkheid",
-          "operator": "equals"
+          "pathname": "/Product/toegankelijkheid"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Toegankelijkheid.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "Toegankelijkheid"
+          }
+        }
       },
       {
         "label": "Roadmap",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/over/roadmap",
-          "operator": "equals"
+          "pathname": "/Product/Roadmap"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "Roadmap"
+          }
+        }
       },
       {
         "label": "Veel gestelde vragen",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/over/faq",
-          "operator": "equals"
+          "pathname": "/Product/FAQ"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/FAQ.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "FAQ"
+          }
+        }
       }
     ]
   },
   {
     "label": "Techniek",
     "current": {
-      "pathname": "/over",
-      "operator": "includes"
+      "pathname": "/Techniek"
     },
     "subItems": [
       {
         "label": "Naar Productie",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/over/pricing",
-          "operator": "equals"
+          "pathname": "/Techniek/Productie"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Productie"
+          }
+        }
       },
       {
         "label": "Architectuur",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/over/architectuur",
-          "operator": "equals"
+          "pathname": "/Techniek/Architectuur"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Architectuur"
+          }
+        }
       },
       {
         "label": "Installatie",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/over/us",
-          "operator": "equals"
+          "pathname": "/Techniek/Installatie"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Installatie.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Installatie"
+          }
+        }
       },
       {
         "label": "Integratie",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/over/us",
-          "operator": "equals"
+          "pathname": "/Techniek/Integratie"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Integratie.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Integratie"
+          }
+        }
       },
       {
         "label": "Configuratie",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/over/products",
-          "operator": "equals"
+          "pathname": "/Techniek/Configuratie"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Configuratie.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Configuratie"
+          }
+        }
       },
       {
         "label": "Testscenario's",
-        "type": "markdown",
+        "type": "internalMarkdown",
         "current": {
-          "pathname": "/about/vacancies",
-          "operator": "equals"
+          "pathname": "/Techniek/Tests"
         },
-        "handleClick": { "link": "https://github.com/ConductionNL/woo-website-template/blob/main/docs/Tests.md" }
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Tests"
+          }
+        }
       }
     ]
   },
   {
     "label": "Over Open Webconcept",
     "type": "external",
-    "handleClick": { "link": "https://openwebconcept.nl/" }
+    "handleClick": {
+      "link": "https://openwebconcept.nl/"
+    }
   }
 ]
