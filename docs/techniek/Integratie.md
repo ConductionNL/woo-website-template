@@ -2,7 +2,7 @@
 
 OpenWoo.app is essentie een koppelvlak waar aan de bovenkant meerdere weergaven of user interfaces op kunnen worden gekoppeld en aan de onderkant worden meerdere bronnen ontsloten.
 
-Als er tijdens of na het lezen zijn nog vragen zijn, neem een kijkje op de [FAQ](./FAQ.md).
+Als er tijdens of na het lezen zijn nog vragen zijn, neem een kijkje op de [FAQ](/docs/product/FAQ.md).
 
 ## Wat is OpenWoo.app
 
@@ -186,4 +186,4 @@ Er zijn twéé manieren waarop een bron kan worden gekoppeld, beide vereisen dat
 
 ## Het koppelen van een organisatie
 
-Zie voor het koppelen van een organisatie de [naar productie pagina](https://openwoo.app/github/Naar_Productie/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Productie.md).
+Zie voor het koppelen van een organisatie de [naar productie pagina](/docs/techniek/Productie.md).

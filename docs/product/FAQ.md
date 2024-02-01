@@ -28,4 +28,4 @@ A. Voor nieuwe bronnen, of gewenste features kunt u een issue aanmaken op onze [
 
 **Q. Kan ik worden ontzorgd?**
 
-A. Ja, dat is mogelijk. Er zijn leveranciers voor zowel SAAS als Service Level Agreement(SLA) beschikbaar Zie [Kosten](https://openwoo.app/github/Kosten/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md) voor meer informatie.
+A. Ja, dat is mogelijk. Er zijn leveranciers voor zowel SAAS als Service Level Agreement(SLA) beschikbaar Zie [Kosten](/docs/product/Kosten.md) voor meer informatie.

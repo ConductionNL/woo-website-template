@@ -12,7 +12,7 @@ Om te zorgen dat de Open WOO Website goed werkt, is het belangrijk dat de onderl
 
 ## Gebruik variabelen
 
-Centraal in de Open WOO Website staat het publicatieobject, het publicatieobject vertegenwoordigt een Woo-publicatie, zijnde een verzoek, besluit, convenant of overige (een definitie van het Woo-publicatieobject vind je onder [Architectuur](https://openwoo.app/github/Architectuur/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md)).
+Centraal in de Open WOO Website staat het publicatieobject, het publicatieobject vertegenwoordigt een Woo-publicatie, zijnde een verzoek, besluit, convenant of overige (een definitie van het Woo-publicatieobject vind je onder [Architectuur](/docs/techniek/Architectuur.md)).
 
 **Zoekbalk**
 

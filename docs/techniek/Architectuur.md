@@ -57,7 +57,7 @@ Er zijn diverse frontends die in theorie direct kunnen koppelen op de OpenWoo.ap
 >
 > Weet u niet welk frontend framework uw organisatie op dit moment gebruikt? Kijk dan eens op [digimonitor](https://www.digimonitor.nl/cms-en/gemeenten/).
 >
-![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/LosseFrontend.svg)
+> ![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/LosseFrontend.svg)
 
 ### Bronnen met integratie
 
@@ -95,7 +95,7 @@ Dit proces zorgt ervoor dat het zaaksysteem leidend is en dat zaken zowel kunnen
 
 OpenWoo.app maakt gebruik van het federatieve stelsel van [OpenCatalogi](https://opencatalogi.nl/) om verschillende integratievoorzieningen samen te binden. Hierbij verhoudt de organisatiespecifieke voorziening zich tot wat we binnen OpenCatalogi een catalogus noemen.
 
-Dat betekent dat de integrale zoekvraag ook organisatie-overstijgend kan worden gesteld aan meerdere organisatie tegelijkertijd zonder dat er noodzaak is voor een landelijke index, dit concept is verder uitgewerkt in [koophulpje.nl](https://koophulpje.nl/) waarbij ook een voorziening is gerealiseerd voor het genereren van `robot.txt` en `sitemap.xml` bestanden.  De facto is hiermee dus ook een landelijke Woo-API gerealiseerd met de beperking dat deze alleen organisaties bevat die participeren in OpenWoo.app
+Dat betekent dat de integrale zoekvraag ook organisatie-overstijgend kan worden gesteld aan meerdere organisatie tegelijkertijd zonder dat er noodzaak is voor een landelijke index, dit concept is verder uitgewerkt in [koophulpje.nl](https://koophulpje.nl/) waarbij ook een voorziening is gerealiseerd voor het genereren van `robot.txt` en `sitemap.xml` bestanden. De facto is hiermee dus ook een landelijke Woo-API gerealiseerd met de beperking dat deze alleen organisaties bevat die participeren in OpenWoo.app
 
 De reden dat we hebben gekozen voor OpenCatalogi is dat in deze `variant` van FSC géén PKI of overige certificaten nodig zijn. Dat lijnt beter uit met de gedachte dat dit open data betreft die conform de wet juist anoniem toegankelijk zou moeten zijn.
 
@@ -107,4 +107,4 @@ Het Woo Publicatie Object vormt de kern van zowel de Woo API als de Woo-website.
 
 ## Roadmap
 
-Organisaties kunnen bijdragen aan de ontwikkeling van deze componenten door items aan te dragen, deze zelf op te pakken en uit te voeren, of door de uitvoering ervan te financieren. Voor het huidige overzicht, zie [Roadmap](https://openwoo.app/github/Roadmap/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Roadmap.md).
+Organisaties kunnen bijdragen aan de ontwikkeling van deze componenten door items aan te dragen, deze zelf op te pakken en uit te voeren, of door de uitvoering ervan te financieren. Voor het huidige overzicht, zie [Roadmap](/docs/product/roadmap).
