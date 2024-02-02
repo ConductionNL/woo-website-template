@@ -18,7 +18,7 @@ Begin oktober wil KOOP graag de decentrale portalen harvesten om een centrale in
 
 **Inschatting: 120 uur**
 
-DROP staat voor Decentrale Regelgeving en Officiële Publicaties. Dit platform helpt dubbele of foutieve invoer te voorkomen en draagt zo bij aan een sneller en correcter publicatieproces bij aanlevering naar het Gemeenteblad, Het Provinciaal blad, het Waterschapsblad en de Staatscourant.  
+DROP staat voor Decentrale Regelgeving en Officiële Publicaties. Dit platform helpt dubbele of foutieve invoer te voorkomen en draagt zo bij aan een sneller en correcter publicatieproces bij aanlevering naar het Gemeenteblad, Het Provinciaal blad, het Waterschapsblad en de Staatscourant.
 
 ## Koppelen e-Depot (Geen ontwikkeling gepland)
 

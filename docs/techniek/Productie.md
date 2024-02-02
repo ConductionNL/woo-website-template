@@ -2,9 +2,9 @@
 
 Het in productie nemen van OpenWoo.app voor uw organisatie is makkelijker dan u wellicht denkt. Hieronder vindt u de stappen die u moet volgen om succesvol over te gaan naar de productiefase.
 
-- (optioneel) Kies een [leverancier](https://openwoo.app/github/Kosten/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md) om de OpenWoo.app bij af te nemen. Of implementeer hem zelfstandig.
+- (optioneel) Kies een [leverancier](/docs/product/Kosten.md) om de OpenWoo.app bij af te nemen. Of implementeer hem zelfstandig.
 - Verzamel van tevoren alle benodigde informatie
-- Vraag tijdig een PKI-certificaat en DNS wijziginging aan bij uw ICT-leverancier(s)
+- Vraag tijdig een PKI-certificaat en DNS wijziging aan bij uw ICT-leverancier(s)
 - Zorg dat u tijd beschikbaar hebt voor het grondig doortesten van de keten aan de hand van de testscenario's
 
 Als u de OpenWOO APP zelfstandig installeerd zult u de [acties voor leverancier](#acties-voor-leverancier) uiteraard zelf moeten uitvoeren.
@@ -14,8 +14,8 @@ Als u de OpenWOO APP zelfstandig installeerd zult u de [acties voor leverancier]
 Om de vormgeving van OpenWoo.app aan te passen aan uw organisatie, heeft uw leverancier of u de volgende informatie nodig:
 
 - Logo in vector formaat (e.g. .svg, .eps of .ai)
-- Huisstijl handboek of website die als voorbeeld gebruikt kan worden
-- Contactgegevens (naam, email adres, telefoonnummer en functie) van een medewerker die eventuele vragen over de huisstijl kan beantwoorden.
+- Huisstijlhandboek of website die als voorbeeld gebruikt kan worden
+- Contactgegevens (naam, e-mailadres, telefoonnummer en functie) van een medewerker die eventuele vragen over de huisstijl kan beantwoorden.
 
 Om te beoordelen of uw organisatie NL Design tokens nodig heeft of moet aanpassen kunt u het [landelijke overzicht van NL Design tokens](https://github.com/nl-design-system/themes/tree/main/proprietary) raadplegen.
 
@@ -30,7 +30,7 @@ Voor de inrichting van OpenWoo.app heeft uw leverancier of u de volgende informa
   - Telefoonnummer
   - Website
   - e.v.t socialmedia (Facebook, Instagram etc)
-  - Verplichte context pagina's waarvoor word doorverwezen naar uw eigen site (privacy, over deze pagina, toegankelijkheid)
+  - Verplichte context pagina's waarvoor wordt doorverwezen naar uw eigen site (privacy, over deze pagina, toegankelijkheid)
   - Overige website waar u naar wilt verwijzen
 - Op welk (sub) domein moet de pagina worden getoond? b.v. open.`uw organisatienaam`.nl
 - Moet er gebruik worden gemaakt van een custom certificaat? bijvoorbeeld PKIo
@@ -49,12 +49,12 @@ Om het neerzetten van een omgeving soepel te laten verlopen, zijn er verschillen
 - [ ] Aanleveren voor beoogde (sub)domeinnaam
 - [ ] Aanvragen en aanleveren bij leverancier van certificaat (indien custom zoals PKIo)
 - [ ] Verzamelen en aanleveren beoogde zaaksystemen, denk hierbij aan:
-  - [ ] Endpoint (waar kan de OpenWoo App bevragen).
-  - [ ] Credentials (hoe kan de OpenWoo App zich authenticeren).
+  - [ ] Endpoint (waar kan de OpenWoo.app bevragen?).
+  - [ ] Credentials (hoe kan de OpenWoo.app zich authenticeren?).
   - [ ] Protocol (welk protocol moet er worden gebruik e.g. xxllnc search, ZGW, StUF, ZDS etc.).
 - [ ] Verzamelen en aanleveren beoogde raadsinformatie denk hierbij aan:
-  - [ ] Endpoint (waar kan de OpenWoo App bevragen).
-  - [ ] Credentials (hoe kan de OpenWoo App zich authenticeren).
+  - [ ] Endpoint (waar kan de OpenWoo.app bevragen?).
+  - [ ] Credentials (hoe kan de OpenWoo.app zich authenticeren?).
 - [ ] Verzamelen en aanleveren gegevens van websitekoppeling indien gewenst.
 - [ ] DPIA opstellen.
 - [ ] Inregelen DNS voor (sub)domein.
@@ -72,15 +72,15 @@ Aan de hand van de acties voor de opdrachtgever kan uw leverancier vervolgens aa
 
 Wat doet de leverancier niet
 
-- Aanleveren WCAG raportage (deze staat [hier](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/WCAG-Raportage.pdf))
-- Aanleveren PEN test (deze staat [hier](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/PENTEST-Raportage.pdf))
+- Aanleveren WCAG-rapportage (deze staat [hier](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/WCAG-Raportage.pdf))
+- Aanleveren PEN-test (deze staat [hier](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/PENTEST-Raportage.pdf))
 
 ## Naar productie (Acceptatie)
 
 Als uw leverancier alles heeft klaar gezet is het tijd voor acceptatie en livegang
 
-- [ ] Doorlopen van de [Acceptatie tests](https://openwoo.app/github/Testscenario's/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Tests.md)
+- [ ] Doorlopen van de [Acceptatietests](/docs/techniek/Tests.md)
 - [ ] Website laten controleren en reviewen door communicatieafdeling
 - [ ] Indien alles correct, aan leverancier laten weten dat er geaccepteerd is.
-- [ ] Op eigen website verwijzen naar de Open Catalogi (deeplinks)
+- [ ] Op eigen website verwijzen naar de OpenWoo.app (deeplinks)
 - [ ] Vier de livegang met een feestje

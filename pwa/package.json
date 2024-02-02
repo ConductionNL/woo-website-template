@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@conduction/components": "2.2.45",
-    "@conduction/theme": "1.1.15",
+    "@conduction/theme": "1.1.17",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "6.5.1",
     "@fortawesome/free-regular-svg-icons": "6.5.1",

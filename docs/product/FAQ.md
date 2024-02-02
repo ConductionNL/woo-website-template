@@ -24,8 +24,8 @@ A. Het is wel mogelijk om de OpenWoo.app te koppelen aan een zaaksysteem zonder 
 
 **Q. Wat als ik een bron wilt toevoegen die nog niet wordt ondersteund?**
 
-A. Voor nieuwe bronnen, of gewenste features kunt u een issue aanmaken op onze [GitHub-pagina](https://github.com/ConductionNL/woo-website-template/issues). Deze worden dan gereviewd door de stuurgroep en indien mogelijk toegevoegd aan de roadmap. Voor meer informatie over de stuurgroep, zie [Governance](https://openwoo.app/github/Bestuur/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/GOVERNANCE.md).
+A. Voor nieuwe bronnen, of gewenste features kunt u een issue aanmaken op onze [GitHub-pagina](https://github.com/ConductionNL/woo-website-template/issues). Deze worden dan gereviewd door de stuurgroep en indien mogelijk toegevoegd aan de roadmap. Voor meer informatie over de stuurgroep, zie [Governance](/docs/GOVERNANCE.md).
 
 **Q. Kan ik worden ontzorgd?**
 
-A. Ja, dat is mogelijk. Er zijn leveranciers voor zowel SAAS als Service Level Agreement(SLA) beschikbaar Zie [Kosten](https://openwoo.app/github/Kosten/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Kosten.md) voor meer informatie.
+A. Ja, dat is mogelijk. Er zijn leveranciers voor zowel SAAS als Service Level Agreement(SLA) beschikbaar Zie [Kosten](/docs/product/Kosten.md) voor meer informatie.

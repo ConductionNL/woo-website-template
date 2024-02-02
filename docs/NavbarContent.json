@@ -1,0 +1,181 @@
+[
+  {
+    "label": "Product",
+    "current": {
+      "pathname": "/Product"
+    },
+    "subItems": [
+      {
+        "label": "Kosten",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Product/Kosten"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "Kosten"
+          }
+        }
+      },
+      {
+        "label": "Privacy",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Product/Privacy"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "Privacyverklaring"
+          }
+        }
+      },
+      {
+        "label": "Beveiliging",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Product/Security"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "SECURITY"
+          }
+        }
+      },
+      {
+        "label": "Toegankelijkheid",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Product/toegankelijkheid"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "Toegankelijkheid"
+          }
+        }
+      },
+      {
+        "label": "Roadmap",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Product/Roadmap"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "Roadmap"
+          }
+        }
+      },
+      {
+        "label": "Veel gestelde vragen",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Product/FAQ"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "FAQ"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "label": "Techniek",
+    "current": {
+      "pathname": "/Techniek"
+    },
+    "subItems": [
+      {
+        "label": "Naar Productie",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Techniek/Productie"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Productie"
+          }
+        }
+      },
+      {
+        "label": "Architectuur",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Techniek/Architectuur"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Architectuur"
+          }
+        }
+      },
+      {
+        "label": "Installatie",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Techniek/Installatie"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Installatie"
+          }
+        }
+      },
+      {
+        "label": "Integratie",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Techniek/Integratie"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Integratie"
+          }
+        }
+      },
+      {
+        "label": "Configuratie",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Techniek/Configuratie"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Configuratie"
+          }
+        }
+      },
+      {
+        "label": "Testscenario's",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Techniek/Tests"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Techniek",
+            "fileName": "Tests"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "label": "Over Open Webconcept",
+    "type": "external",
+    "handleClick": {
+      "link": "https://openwebconcept.nl/"
+    }
+  }
+]
