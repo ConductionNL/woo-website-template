@@ -11,6 +11,10 @@
   margin-block-end: var(--utrecht-space-block-lg);
 }
 
+.content > *:not(:last-child) {
+  margin-block-end: var(--utrecht-space-block-lg);
+}
+
 .heading1 {
   color: var(
     --utrecht-heading-1-color,

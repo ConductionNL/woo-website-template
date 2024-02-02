@@ -19,6 +19,7 @@ export const nl = {
   Filters: "Filters",
   View: "Weergave",
   Pagination: "Paginering",
+  Details: "Details",
   "Jumbotron card": "Jumbotron tegel",
   "N/A": "N.v.t",
   "Details page": "Detailpagina",
@@ -64,4 +65,6 @@ export const nl = {
   "No municipality available": "Geen gemeente beschikbaar",
   "Woo Request": "Woo Verzoek",
   "Language select": "Taal kiezen",
+  "Details table": "Detail tabel",
+  "Title of woo request": "Titel van Woo verzoek",
 };
