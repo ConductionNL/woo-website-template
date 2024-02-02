@@ -1,6 +1,6 @@
 # Testscenario's
 
-Om de Open WOO Website zelfstandig te kunnen installeren of doorontwikkelen, is het belangrijk om ook over herbruikbare testscenario's te beschikken. Daarnaast wilt u als afnemer ook graag weten of uw SAAS of SLA product graag werkt. Daarvoor hebben we de volgende testscripts uitgeschreven. 
+Om de Open WOO Website zelfstandig te kunnen installeren of doorontwikkelen, is het belangrijk om ook over herbruikbare testscenario's te beschikken. Daarnaast wilt u als afnemer ook graag weten of uw SAAS of SLA product graag werkt. Daarvoor hebben we de volgende testscripts uitgeschreven.
 
 We kunnen de testscripts opsplitsen in de volgende categorieën:
 
@@ -141,9 +141,11 @@ Zorg ervoor dat het zaaksysteem is geconfigureerd zoals beschreven in de documen
 Verwijder alle testdata uit het zaaksysteem en de WOO-website.
 
 ## Technische test
+
 Naast functioneele tests is het ook belangrijk om te controleren of de website voldoet aan de teschnsiche eisen voor overheids websites.
 
 ### WCAG
+
 Er is een [WCAG raportage](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/WCAG-Raportage.pdf) beschickbaar voor de website.
 
 U kunt de test zelf herhalen, vervang in de volgende url https://conductionnl.github.io/woo-website-xxllnc/ door het addres van uw OpenWOO app

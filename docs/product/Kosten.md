@@ -2,7 +2,7 @@
 
 OpenWoo.app bestaat uit een collectie van Common Ground componenten waarbij u als organisatie zelf de keuze heeft welke componenten toepast (gaat u bijvoorbeeld integereren in uw huidige website of een losse pagina opstarten). De kosten hangen daarmee sterk af van uw wensen en keuzes. Niet te min proberen we de kosten vooraf zo goed en open mogelijk in beeld te brengen.
 
-Onderstaande treft u de bij ons bekende kosten per component die leveranciers in rekening brengen voor een SLA of SAAS. Als u een beter beeld wilt krijgen bij welke componenten uw organisatie wil toepassen kunt u kijken bij [architectuur](https://openwoo.app/github/Architectuur/?link=https://github.com/ConductionNL/woo-website-template/blob/main/docs/Architectuur.md).
+Onderstaande treft u de bij ons bekende kosten per component die leveranciers in rekening brengen voor een SLA of SAAS. Als u een beter beeld wilt krijgen bij welke componenten uw organisatie wil toepassen kunt u kijken bij [architectuur](/docs/techniek/Architectuur.md).
 
 ## Contactgegevens leveranciers
 
@@ -15,7 +15,7 @@ Onderstaande treft u de bij ons bekende kosten per component die leveranciers in
 
 ## Frontend
 
-Kijk op [de demo pagina](https://conductionnl.github.io/woo-website-xxllnc/) voor een voorbeeld van de omgeving of op [de product homepage](https://openwoo.app/) voor een overzicht van de omgevingen die in ontwikkeling zijn.
+Kijk op [de demopagina](https://conductionnl.github.io/woo-website-xxllnc/) voor een voorbeeld van de omgeving of op [de product homepage](https://openwoo.app/) voor een overzicht van de omgevingen die in ontwikkeling zijn.
 
 | Component                     | Leverancier | Eenmalig | Maandelijks |
 |-------------------------------|-------------|----------|-------------|
@@ -34,8 +34,8 @@ Het is mogelijk om de Open Woo Website rechtstreeks aan uw zaaksysteem te koppel
 
 | Component              | Leverancier | Eenmalig | Maandelijks |
 |------------------------|-------------|----------|-------------|
-| Integratievoorziening | Conduction  | €3000,-  | €250.-      |
-| Integratievoorziening | xxllnc       | €3000,-  | €250.-      |
+| Integratievoorziening | Conduction  | € 3000,-  | € 250.-      |
+| Integratievoorziening | xxllnc       | € 3000,-  | € 250.-      |
 
 > **Opmerking**
 > Via een StUF ↔ ZGW-koppelvlak is het in theorie ook mogelijk een zaaksysteem te koppelen aan de hand van StUF, dit is in de praktijk echter nog niet beproeft. Andere koppelvlakken en maatwerk zijn uiteraard bespreekbaar, neem daarvoor contact op met een leverancier.
@@ -44,12 +44,12 @@ Het is mogelijk om de Open Woo Website rechtstreeks aan uw zaaksysteem te koppel
 
 Klanten van xxllnc Zaken (zaaksysteem.nl) kunnen voor het inrichten van het modelzaaktype t.b.v. WOO-publicatie en de configuratie van de integratie gebruikmaken van een Consultant.
 
-| Component         | Leverancier | Eenmalig | Maandenlijks |
+| Component         | Leverancier | Eenmalig | Maandelijks |
 |-------------------|-------------|----------|--------------|
 | Zaaksysteem.nl    | xxllnce     | € 3000,-  | n.v.t        |
 | OpenPub          | Yard        | Onbekend  |Onbekend       |
 | Open Verzoeken    | Yard        | Onbekend  |Onbekend       |
-| Open Conventanten | Yard        | Onbekend  |Onbekend       |
+| Open Convenanten | Yard        | Onbekend  |Onbekend       |
 | Open Klachten     | Yard        | Onbekend  |Onbekend       |
 | OpenZaak         | -           | Onbekend  |Onbekend       |
 | JOIN              | Decos       | Onbekend  |Onbekend       |
@@ -61,7 +61,7 @@ Mocht u nog niet beschikken over xxllnc Zaken (zaaksysteem.nl) maar wel behoefte
 
 Buiten het leveren van componenten om kan het ook zijn dat er nog overige diensten noodzakelijk zijn (bijvoorbeeld omdat een component hiervan afhankelijk is),
 
-| Component                                      | Leverancier | Eenmalig             | Maandenlijks                |
+| Component                                      | Leverancier | Eenmalig             | Maandelijks                |
 |------------------------------------------------|----------------------|---------------|-----------------------------|
 | NL Design Tokens (indien nog niet beschikbaar) | Conduction | € 2000,- | € 250,- (SLA niet verplicht) |
 
