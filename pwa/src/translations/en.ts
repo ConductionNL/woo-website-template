@@ -19,6 +19,7 @@ export const en = {
   Filters: "Filters",
   View: "View",
   Pagination: "Pagination",
+  Details: "Details",
   "Jumbotron card": "Jumbotron card",
   "N/A": "N/A",
   "Details page": "Details page",
@@ -64,4 +65,6 @@ export const en = {
   "No municipality available": "No municipality available",
   "Woo Request": "Woo Request",
   "Language select": "Language select",
+  "Details table": "Details table",
+  "Title of woo request": "Title of woo request",
 };
