@@ -12,6 +12,8 @@ export const useEnvironment = () => {
 
   const updateSessionStorage = () => {
     window.dispatchEvent(new Event("sessionStorageChange"));
+    const analyticsElement = document.getElementById("analytics");
+    analyticsElement?.setAttribute("src", window.sessionStorage.getItem("ANALYTICS_URL") ?? "");
   };
 
   React.useEffect(() => {
@@ -40,6 +42,7 @@ export const useEnvironment = () => {
     window.sessionStorage.setItem("OIDN_NUMBER", process.env.GATSBY_OIDN_NUMBER ?? "");
     window.sessionStorage.setItem("SHOW_CATEGORY", process.env.GATSBY_SHOW_CATEGORY ?? "");
     window.sessionStorage.setItem("SHOW_ORGANIZATION", process.env.GATSBY_SHOW_ORGANIZATION ?? "");
+    window.sessionStorage.setItem("ANALYTICS_URL", process.env.GATSBY_ANALYTICS_URL ?? "");
 
     updateSessionStorage();
   };
@@ -66,6 +69,7 @@ export const useEnvironment = () => {
     window.sessionStorage.setItem("OIDN_NUMBER", config.GATSBY_OIDN_NUMBER ?? "");
     window.sessionStorage.setItem("SHOW_CATEGORY", config.GATSBY_SHOW_CATEGORY ?? "");
     window.sessionStorage.setItem("SHOW_ORGANIZATION", config.GATSBY_SHOW_ORGANIZATION ?? "");
+    window.sessionStorage.setItem("ANALYTICS_URL", config.GATSBY_ANALYTICS_URL ?? "");
 
     updateSessionStorage();
   };
