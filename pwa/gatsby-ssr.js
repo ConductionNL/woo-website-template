@@ -24,7 +24,17 @@ export const wrapRootElement = ({ element }) => {
   );
 };
 
-export const onRenderBody = ({ setHeadComponents }) => {
+export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
+  const isBrowser = () => typeof window !== "undefined";
   const HeadComponents = [<title key={0}>Woo Website Template</title>];
+  const BodyComponents = [
+    <script
+      key={0}
+      id="analytics"
+      async
+      src={isBrowser() ? window.sessionStorage.getItem("ANALYTICS_URL") : ""}
+    />,
+  ];
   setHeadComponents(HeadComponents);
+  setPostBodyComponents(BodyComponents);
 };
