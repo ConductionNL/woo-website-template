@@ -1,14 +1,52 @@
 @startuml
-title Generic Architecture
+title Algemene Architectuur en keuze mogenlijkheden
 
-' User Interface Component
-interface "Static Open WOO Website" as Website
+' Publicatie platformen (Laag 5 UI)
+frame "Publicatie platformen " {
+    actor "KOOP"  as KOOP #1abc9c
+    actor   "WOOGLE" as WOOGLE #1abc9c
+    interface "Website" AS Website #ffbc2c
+    interface "Thema site" as Themasite #ffbc2c
+    interface "Zoek pagina" as Searchsite #1abc9c
+}
 
-' Backend Components
-component "Source" as Source
+' Services(Laag 4)
+frame "Services" {
+    process "OpenWoo Service"  as OWS #1abc9c
+}
 
-' Relationships
-Website -down-> Source : Directly connected trough API
+' Integratie (Laag 3)
+frame "Integratie" {
+    database "Open Index"  as OI #1abc9c
+    component "Federatieve Connectie"  as FCS #1abc9c
+}
 
+' Bronnen (Laag 2)
+frame "Bronnen" {
+    database "Zaaksysteem (ZGW)" as ZRC #ffbc2c
+    database "Raadsinformatiesysteem (RIS)" as RIS #ffbc2c
+    database "Website (CMS)" as CMS #ffbc2c
+    database "Archief" as DEPOT #ffbc2c
+}
+
+frame "Legenda" {
+    component "Standaard onderdeel" #1abc9c
+    component "Optioneel" #ffbc2c
+
+}
+
+OWS -down-> ZRC: Indexeerd
+OWS -down-> RIS: Indexeerd
+OWS -down-> CMS: Indexeerd
+OWS -down-> DEPOT: Indexeerd
+OWS ..> OI: Slaat op in
+
+FCS ..> OI : Bevraagd
+
+KOOP -down-> FCS : Indexeerd (XML Sitemap)
+WOOGLE -down-> FCS : Indexeerd (API)
+Website -down-> FCS : Bevraagd (API)
+Themasite -down-> FCS : Bevraagd (API)
+Searchsite -down-> FCS : Bevraagd (API)
 
 @enduml
