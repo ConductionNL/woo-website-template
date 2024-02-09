@@ -22,57 +22,33 @@ De implementatie van de Wet Open Overheid brengt twee kernuitdagingen met zich m
 
 Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Management Systeem (CMS) of door levering vanuit één systeem. Handmatige publicatie van alle overheidsinformatie zou een aanzienlijke personele inzet vereisen, wat onpraktisch is. Daarbij komt het voor dat verscheidende categorieën vaak verdeeld zijn over meerdere systemen, wat de situatie verder compliceert.
 
-## Oplossing
-
-De Open Woo-app biedt een geïntegreerde oplossing die bestaat uit een aantal hoofdcomponenten:
-
-1. **Koppelvlak naar KOOP en Woogle voor de Landelijke Index:**
-   Een interface die zorgt voor een gestandaardiseerde verbinding met de [Kennis- en Exploitatiecentrum en Officiële Publicaties](https://www.koopoverheid.nl/)(KOOP), waardoor een landelijke index van overheidsinformatie wordt gecreëerd. Daarnaast is er een integratie met [Woogle](https://Woogle.wooverheid.nl/search?q=*) van [WOOverheid](https://wooverheid.nl/) van de UvA.
-
-2. **Organisatieweergave:**
-   Een interface waarmee belanghebbenden binnen een organisatie naar relevante informatie kunnen zoeken.
-
-3. **Koppelvlak:**
-   Een module die in staat is om informatie uit verschillende systemen te verzamelen, waardoor een gecentraliseerde toegang tot diverse categorieën mogelijk wordt.
-
-4. **CMS-module:**
-   Een aanvullende module voor het handmatig invoeren van informatie die niet automatisch kan worden opgehaald, en voor het beheren van de gepubliceerde pagina's.
-
-Deze geïntegreerde aanpak zorgt voor een naadloze, efficiënte en effectieve implementatie van de Wet Open Overheid, waardoor overheidsorganisaties hun informatie op een gebruiksvriendelijke en toegankelijke wijze kunnen delen.
-
-## Functionaliteiten
-
-De OpenWoo.app ondersteunt de volgende functionaliteiten.
-
-- Één index pagina voor uw organisatie
-- Weergave van data uit meerdere bronnen (zaaksysteem, website, raadsinformatie systeem en archief)
-- Aanlevering bij KOOP aan de hand van `sitemap.xml`-bestanden
-- Aanlevering bij Woogle aan de hand van API
-- Automatisch en pro-actief publiceren
-- Op de toekomst voorbereid
+## Belangrijkste functionaliteiten en voordelen van OpenWoo.app:
+- Centrale Index Pagina: Een overzichtelijke locatie voor alle openbare data van uw organisatie, verbetert de vindbaarheid van informatie.
+- Multibron Dataweergave: Een naadloze integratie en presentatie van data uit diverse bronnen, zoals het zaaksysteem, websites, raadsinformatiesystemen en archieven.
+- Keuze uit Publicatieplatformen: Met opties zoals NL Design React en Open Gemeente Typo 3, biedt OpenWoo.app flexibiliteit in de manier waarop uw gegevens gepubliceerd worden, terwijl het tegelijkertijd eenvoudig integreerbaar is in uw huidige website.
+- Automatische Data-aanlevering: Efficiënte aanlevering bij landelijke indexen zoals KOOP en Woogle, door middel van sitemap.xml-bestanden en API's, vergroot het bereik en de zichtbaarheid van uw gegevens.
+- Proactieve Publicatie: Automatiseer het publicatieproces en verminder handmatige inspanningen met de slimme, proactieve publicatiefuncties van OpenWoo.app.
+- Toekomstbestendig en Veilig: Bereid uw organisatie voor op toekomstige ontwikkelingen met configureerbare publicatietypen en verhoog de veiligheid en efficiëntie door het verminderen vandirecte bevragingen op bronnen. 
 
 ![epe.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/epe.png "Woo Website van de Gemeente Epe")
 
-## Techniek
+## Oplossing van OpenWoo.app:
 
-Deze pagina kan rechtstreeks vanaf GitHub (serverless) of los op een eigen omgeving gehost worden. Voor de getoonde data wordt gebruikgemaakt van de Open Woo API-definitie. Dat betekent dat een van de volgende bronnen kan worden gebruikt:
+OpenWoo.app gaat verder dan alleen deze basisfunctionaliteiten door een geïntegreerde oplossing aan te bieden die bestaat uit essentiële componenten:
 
-- Een ([Open Webconcept](https://openwebconcept.nl/)) WordPress installatie met de [Open Woo Plugin](https://github.com/OpenWebconcept/plugin-openwoo)
-- Een ([Common Gateway](https://commongateway.app/)) Symfony installatie met de [Open Woo bundle](https://github.com/CommonGateway/WooBundle)
-- Een ([Open Online](https://www.dimpact.nl/nieuws/gemeente-vught-live-met-open-online)) Drupal installatie met de Open Woo plugin ([roadmap](/docs/product/Roadmap.md))
-- Een los JSON-bestand dat de data bevat vanuit de repository ([roadmap](/docs/product/Roadmap.md))
-- Een rechtstreeks vanuit het zaak- en/of raadsinformatiesysteem ontsloten API
+1. **Koppelvlak naar KOOP en Woogle voor de Landelijke Index:** Deze interface faciliteert een gestandaardiseerde verbinding met het Kennis- en Exploitatiecentrum Officiële Publicaties (KOOP) en Woogle van de WOOverheid van de UvA.
+2. **Federatieve Connectie:** Door gebruik te maken van een op FSC/NLX gebaseerde connectie, worden de zoekindexen van deelnemende organisaties samengevoegd tot één virtuele zoekindex.
+3. **Zoekpagina (Optioneel):** Een op NL Design gebaseerd publicatieplatform dat belanghebbenden in staat stelt om naar relevante informatie te zoeken.
+4. **Open WooService:** Deze module verzamelt informatie uit verschillende bronnen, waardoor een gecentraliseerde toegang tot diverse categorieën van gegevens mogelijk wordt.
+5. **Open Index:** Een opgebouwde index van openbare informatie die samen met andere zoekindexen een landelijke federatie vormt.
+6. **Overige Bronnen (Optioneel):** Bronnen zoals het Zaaksysteem, Raadsinformatiesysteem en archief kunnen optioneel worden gekoppeld, met ondersteuning voor handmatige uploads via het CMS van uw huidige website. 
 
-Voor de pagina maakt het niet uit wie de bron is, zolang deze bron zich aan de standaard houdt.
-Meer details hierover vindt u onder [architectuur](/docs/techniek/Architectuur.md).
+
+Deze geïntegreerde aanpak zorgt voor een naadloze, efficiënte en effectieve implementatie van de Wet Open Overheid (Woo), waardoor overheidsorganisaties hun informatie op een gebruiksvriendelijke en toegankelijke wijze kunnen delen. OpenWoo.app is niet alleen een tool om te voldoen aan de Wet open overheid (Woo), maar een strategische partner die handwerk vermindert, transparantie bevordert, en de toegankelijkheid van overheidsinformatie aanzienlijk verbetert.
 
 ![Website Architectuur](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/components.svg "Website Architectuur")
 
-Dit is een zelfstandig bruikbare uitbreiding op [Open Woo](https://github.com/OpenWebconcept/plugin-openwoo) van het [Open Webconcept](https://openwebconcept.nl/). Het maakt hergebruik van [NL Design (React componenten)](https://nldesignsystem.nl/meedoen/introductie) om aan de hand van [Design Tokens](https://nldesignsystem.nl/meedoen/design-tokens/) gemeentelijk specifieke [Woo-index](https://www.koopoverheid.nl/voor-overheden/rijksoverheid/woo-index) pagina's te genereren die voldoen aan alle [WCAG](https://wcag.nl/kennis/richtlijnen/) en [wettelijke eisen](https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo).
-
-### Meer open dan Woo
-
-De Woo specificeert een aantal categorieën (zie configuratie) die door een organisatie moeten worden ontsloten. Dit template ondersteunt dat, maar gaat een stap verder door organisaties ook categorieën te laten toevoegen. Hierdoor kan bredere invulling worden gegeven aan het concept "open" en kunnen bijvoorbeeld ook datasets of algoritmes worden ontsloten.
+Wil je meer weten over de architectuur van de Open Woo-app en uit welke componenten het bestaat? Kijk dan op de [architectuur pagina](/docs/techniek/Architectuur.md).
 
 ## Praktijkvoorbeelden
 
@@ -88,10 +64,6 @@ Op dit moment wordt de OpenWoo.app al door een aantal organisaties gebruikt
 | [Noaberkracht](https://www.dinkelland.nl/noaberkracht-dinkelland-tubbergen) | Samenwerkingsverband | [Pagina](https://conductionnl.github.io/woo-website-noaberkracht/) | Zaaksysteem.nl | Acceptatie |
 | [Leiden (Alleen vormgeving)](https://gemeente.leiden.nl/) | Gemeente | [Pagina](https://conductionnl.github.io/woo-website-leiden/) | Demo Omgeving           | Demo       |
 | [Xxllnc (Demo omgeving)](https://xxllnc.nl/) | Leverancier | [Pagina](https://conductionnl.github.io/woo-website-xxllnc/) | Demo Omgeving           | Demo       |
-
-## Architectuur
-
-Wil je meer weten over de architectuur van de Open Woo-app en uit welke componenten het bestaat? Kijk dan op de [architectuur pagina](/docs/techniek/Architectuur.md).
 
 ## Toekomstplannen
 
