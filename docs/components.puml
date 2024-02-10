@@ -5,8 +5,8 @@ title Algemene Architectuur en keuze mogenlijkheden
 frame "Publicatie platformen " {
     actor "KOOP"  as KOOP #1abc9c
     actor   "WOOGLE" as WOOGLE #1abc9c
-    interface "Website" AS Website #ffbc2c
-    interface "Thema site" as Themasite #ffbc2c
+    interface "Website" AS Website #cce5ff
+    interface "Thema site" as Themasite #cce5ff
     interface "Zoek pagina" as Searchsite #1abc9c
 }
 
@@ -23,15 +23,15 @@ frame "Integratie" {
 
 ' Bronnen (Laag 2)
 frame "Bronnen" {
-    database "Zaaksysteem (ZGW)" as ZRC #ffbc2c
-    database "Raadsinformatiesysteem (RIS)" as RIS #ffbc2c
-    database "Website (CMS)" as CMS #ffbc2c
-    database "Archief" as DEPOT #ffbc2c
+    database "Zaaksysteem (ZGW)" as ZRC #cce5ff
+    database "Raadsinformatiesysteem (RIS)" as RIS #cce5ff
+    database "Website (CMS)" as CMS #cce5ff
+    database "Archief" as DEPOT #cce5ff
 }
 
 frame "Legenda" {
     component "Standaard onderdeel" #1abc9c
-    component "Optioneel" #ffbc2c
+    component "Optioneel" #cce5ff
 
 }
 

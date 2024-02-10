@@ -1,9 +1,9 @@
 @startuml
-title Open Webconcept met integratie
+title Publiceren vanuit Zaaksysteem
 
 ' Publicatie platformen (Laag 5 UI)
 frame "Publicatie platformen " {
-    interface "Open Webconcept Website" as Website #cce5ff
+    interface "Zoek pagina" as Searchsite #1abc9c
 }
 
 ' Services(Laag 4)
@@ -18,10 +18,11 @@ frame "Integratie" {
 
 ' Bronnen (Laag 2)
 frame "Bronnen" {
-    database "Website (CMS)" as CMS #cce5ff
+    database "Zaaksysteem (ZGW)" as ZRC #cce5ff
 }
 
-OWS -down-> CMS: Indexeerd
+
+OWS -down-> ZRC: Indexeerd
 OWS ..> OI: Slaat op in
 
 Searchsite -down-> IO : Bevraagd (API)

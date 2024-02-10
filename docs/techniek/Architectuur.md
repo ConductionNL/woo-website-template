@@ -1,23 +1,33 @@
 # Architectuur
 
-## Opzet
-
-OpenWoo.app bestaat in essentie uit een aantal componenten die samenwerken rondom een integratievoorziening, het lijnt daarmee uit met de architectuurlagen van Common Ground. Daarbij is de keuze aan de ontsluitende overheid welke componenten van welke leveranciers zij inzet. Het is daarmee bewust de bedoeling dat de inrichting per overheid kan verschillen, zodat deze beter in het landschap van die betreffende overheid past. Binnen de OpenWoo.app kennen we momenteel de volgende componenten:
-
 > **Hulp nodig?**
 >
 > Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder.
 
-### Open Webconcept-variant zonder integratie
+## Opzet en Componenten
+OpenWoo.app bestaat in essentie uit een aantal componenten die samenwerken rondom een integratievoorziening, het lijnt daarmee uit met de architectuurlagen van Common Ground. Daarbij is de keuze aan de ontsluitende overheid welke componenten van welke leveranciers zij inzet. Het is daarmee bewust de bedoeling dat de inrichting per overheid kan verschillen, zodat deze beter in het landschap van die betreffende overheid past. Binnen de OpenWoo.app kennen we momenteel de volgende componenten:
 
-Met deze variant kunnen Woo-verzoeken en convenanten eenvoudig worden beheerd vanuit de bestaande webomgeving en CMS. Dit vereist geen extra installatie of beheerinspanningen van de organisatie, op voorwaarde dat er al een OpenWebconcept-installatie met de benodigde plugins beschikbaar is.
+### Koppelvlak naar KOOP en Woogle voor de Landelijke Index
+Deze interface faciliteert een gestandaardiseerde verbinding met het Kennis- en Exploitatiecentrum Officiële Publicaties (KOOP) en Woogle van de WOOverheid van de UvA.
+### Federatieve Connectie
+Door gebruik te maken van een op FSC/NLX gebaseerde connectie, worden de zoekindexen van deelnemende organisaties samengevoegd tot één virtuele zoekindex.
+### Zoekpagina (Optioneel)
+Een op NL Design gebaseerd publicatieplatform dat belanghebbenden in staat stelt om naar relevante informatie te zoeken.
+### Open WooService
+Deze module verzamelt informatie uit verschillende bronnen, waardoor een gecentraliseerde toegang tot diverse categorieën van gegevens mogelijk wordt.
+### Open Index
+Een opgebouwde index van openbare informatie die samen met andere zoekindexen een landelijke federatie vormt.
+### Overige Bronnen (Optioneel)
+Bronnen zoals het Zaaksysteem, Raadsinformatiesysteem en archief kunnen optioneel worden gekoppeld, met ondersteuning voor handmatige uploads via het CMS van uw huidige website.
 
-**Nadelen:**
+## Varianten
+OpenWoo.app is bedacht om invulling te kunnen geven aan meerdere wensen vanuit overheden, daarbij is geen goed of slecht. Het is aan de betreffende overheid zelf om een voor haar passende manier te keizen die invulling geef aan wet en regelgeving.
 
-- Woo-verzoeken en convenanten moeten handmatig worden geüpload in de CMS-omgeving.
-- De integrale zoekvraag wordt alleen ondersteund op de in WordPress aanwezige gegevens.
+### Publiceren uit ZGW (e.g. Xxllnc, OpenZaak, Join of Fundament)
+De meeste organisaties zullen kiezen om te publiceren vanuit hun zaaksysteem, dat kan hun huidige systeem zijn of een kleine installatie die ze hier speciaal voor aanmaken.
 
-![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/OpenWebconceptZonder.svg)
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/VanuitZaakSysteem.svg)
+
 
 ### Open Webconcept met integratie
 
