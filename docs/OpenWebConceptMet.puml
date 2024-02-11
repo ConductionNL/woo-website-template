@@ -1,5 +1,7 @@
 @startuml
 title Open Webconcept met integratie
+footer: OpenWoo.app
+header: OpenWoo.app
 
 ' Publicatie platformen (Laag 5 UI)
 frame "Publicatie platformen " {
