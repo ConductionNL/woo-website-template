@@ -4,7 +4,7 @@ OpenWoo.app bestaat uit een collectie van Common Ground componenten waarbij u al
 
 Onderstaande treft u de bij ons bekende kosten per component die leveranciers in rekening brengen voor een SLA of SAAS. Als u een beter beeld wilt krijgen bij welke componenten uw organisatie wil toepassen kunt u kijken bij [architectuur](/docs/techniek/Architectuur.md).
 
-## Contactgegevens leveranciers
+## Contactgegevens (bekende) leveranciers
 
 | Leverancier                                    | Contactpersoon                                                                       |
 |------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -13,7 +13,9 @@ Onderstaande treft u de bij ons bekende kosten per component die leveranciers in
 | [Sim Groep](https://www.simgroep.nl/)          | [Twan Meijerink(t.meijerink@simgroep.nl)](mailto:t.meijerink@simgroep.nl)                                   |
 | [OpenGemeenten](https://www.opengemeenten.nl/) | [Jan-Thijs Oosterhoudt (hallo@opengemeenten.nl)](mailto:hallo@opengemeenten.nl) |
 
-## Frontend
+Wilt u leverancue worden en onderstaande componenten zelf ook aanbieden aan uw klanten? Neem dan contact op met Conduction en mail ons op <info@conduction.nl>. We voegen u graag toe!
+
+## Publicatieplatform
 
 Kijk op [de demopagina](https://conductionnl.github.io/woo-website-xxllnc/) voor een voorbeeld van de omgeving of op [de product homepage](https://openwoo.app/) voor een overzicht van de omgevingen die in ontwikkeling zijn.
 
@@ -68,6 +70,3 @@ Buiten het leveren van componenten om kan het ook zijn dat er nog overige dienst
 > **Opmerking**
 > NL Design tokens zijn een randvoorwaarde (vereiste) voor het gebruik van de react frontend. Als uw organisatie hier reeds over beschikt, hoeven deze uiteraard niet opnieuw te worden gemaakt. Wel is het mogelijk dat uw huidige token set moet worden uitgebreid; in dat geval volgt een maatwerkofferte. Let op! De prijsstelling is gebaseerd op een aangeleverde en volledige huisstijlgids. Indien deze niet beschikbaar is, moeten de tokens worden gereverse-engineerd vanaf uw website. Daar zijn extra kosten aan verbonden.
 
-## Leverancier worden?
-
-Bent u enthousiast over de Woo Website en wilt u deze ook aanbieden aan uw klanten? Neem dan contact op met Conduction en mail ons op <info@conduction.nl>.

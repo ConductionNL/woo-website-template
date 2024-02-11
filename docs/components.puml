@@ -1,5 +1,8 @@
 @startuml
 title Algemene Architectuur en keuze mogenlijkheden
+footer: OpenWoo.app
+header: OpenWoo.app
+
 
 ' Publicatie platformen (Laag 5 UI)
 frame "Publicatie platformen " {
