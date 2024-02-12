@@ -72,6 +72,7 @@
     "gatsby-plugin-breadcrumb": "^12.3.2",
     "gatsby-plugin-html-attributes": "^1.0.5",
     "gatsby-plugin-layout": "^4.13.1",
+    "gatsby-plugin-security-txt": "^1.2.1",
     "html-react-parser": "^5.1.1",
     "i18next": "^23.7.19",
     "jwt-decode": "^4.0.0",
