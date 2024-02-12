@@ -35,7 +35,7 @@
         "label": "Beveiliging",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/Product/Security"
+          "pathname": "/Product/SECURITY"
         },
         "handleClick": {
           "internalMarkdown": {
@@ -48,7 +48,7 @@
         "label": "Toegankelijkheid",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/Product/toegankelijkheid"
+          "pathname": "/Product/Toegankelijkheid"
         },
         "handleClick": {
           "internalMarkdown": {
