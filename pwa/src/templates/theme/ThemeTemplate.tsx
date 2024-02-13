@@ -597,7 +597,12 @@ export const ThemeTemplate: React.FC = () => {
         <div>
           <h3 className={styles.header}>Pagination:</h3>
           <Pagination
-            ariaLabels={{ previousPage: t("Previous page"), nextPage: t("Next page"), page: t("Page") }}
+            ariaLabels={{
+              pagination: t("Pagination"),
+              previousPage: t("Previous page"),
+              nextPage: t("Next page"),
+              page: t("Page"),
+            }}
             totalPages={15}
             {...{ currentPage, setCurrentPage }}
           />
