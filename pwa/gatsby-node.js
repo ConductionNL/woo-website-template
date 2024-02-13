@@ -8,7 +8,7 @@ exports.onCreateBabelConfig = ({ actions }) => {
 };
 
 exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
-  if (stage === "develop") {
+  if (stage === "develop" || stage === "build-javascript") {
     const config = getConfig();
     const miniCssExtractPlugin = config.plugins.find(
       (plugin) => plugin.constructor.name === "MiniCssExtractPlugin",
