@@ -36,7 +36,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
         src={window.sessionStorage.getItem("ANALYTICS_URL")}
       />
     ) : (
-      <script key={0} id="analytics" async />
+      <script key={0} id="analytics" />
     ),
   ];
   setHeadComponents(HeadComponents);

@@ -3,13 +3,13 @@ import _ from "lodash";
 import { Link } from "@utrecht/component-library-react/dist/css-module";
 import { navigate } from "gatsby";
 import { domToReact } from "html-react-parser";
-import { TGitHubDirectory } from "../../useGitHubDirectories";
+import { TMarkdownDirectory } from "../../useMarkdownDirectories";
 
 export const getAnchor = (
   props: any,
   children: any,
   options: any,
-  directories: TGitHubDirectory[],
+  directories: TMarkdownDirectory[],
   location: string,
 ) => {
   const conditions = ["://", "tel:", "mailto:"];
@@ -55,7 +55,7 @@ export const getAnchor = (
   return <Link {...attributes}>{domToReact(children, options)}</Link>;
 };
 
-const handleInternalLinks = (props: any, targetFile: string, location: string, directories: TGitHubDirectory[]) => {
+const handleInternalLinks = (props: any, targetFile: string, location: string, directories: TMarkdownDirectory[]) => {
   // Internal Links: same directory
   if (!props.href.includes("/")) {
     const targetDirectory = _.upperFirst(location.split("/").reverse()[1]);
