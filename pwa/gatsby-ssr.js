@@ -28,12 +28,16 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
   const isBrowser = () => typeof window !== "undefined";
   const HeadComponents = [<title key={0}>Woo Website Template</title>];
   const BodyComponents = [
-    <script
-      key={0}
-      id="analytics"
-      async
-      src={isBrowser() ? window.sessionStorage.getItem("ANALYTICS_URL") : ""}
-    />,
+    isBrowser() && window.sessionStorage.getItem("ANALYTICS_URL") ? (
+      <script
+        key={0}
+        id="analytics"
+        async
+        src={window.sessionStorage.getItem("ANALYTICS_URL")}
+      />
+    ) : (
+      <script key={0} id="analytics" />
+    ),
   ];
   setHeadComponents(HeadComponents);
   setPostBodyComponents(BodyComponents);

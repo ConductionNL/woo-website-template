@@ -13,7 +13,8 @@ export const useEnvironment = () => {
   const updateSessionStorage = () => {
     window.dispatchEvent(new Event("sessionStorageChange"));
     const analyticsElement = document.getElementById("analytics");
-    analyticsElement?.setAttribute("src", window.sessionStorage.getItem("ANALYTICS_URL") ?? "");
+    window.sessionStorage.getItem("ANALYTICS_URL") &&
+      analyticsElement?.setAttribute("src", window.sessionStorage.getItem("ANALYTICS_URL") ?? "");
   };
 
   React.useEffect(() => {
