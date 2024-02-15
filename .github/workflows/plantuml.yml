@@ -7,7 +7,9 @@ jobs:
     name: plantuml
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
       - name: plantuml
         id: plantuml
         uses: grassedge/generate-plantuml-action@v1.5
