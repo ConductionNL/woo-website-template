@@ -33,4 +33,6 @@ Er zijn keuses te maken qua publicaite platform.
 
 ## Architectuur
 
-![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/partners/Tilburg.svg)
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/partners/Tilburg.svg)
+
+## Scope
