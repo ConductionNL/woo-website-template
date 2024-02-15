@@ -21,7 +21,7 @@ frame "Services" {
 
 ' Integratie (Laag 3)
 frame "Integratie" {
-    database "Open Index"  as OI #008b6C
+    database "Open Index"  as OI #F16E06
     component "Federatieve Connectie"  as FCS #008b6C
     process "OpenWoo Service"  as OWS #F16E06
     component "Integratie Platform"  as IP #008b6C
