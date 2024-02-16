@@ -18,7 +18,7 @@ export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName 
   return (
     <PageHeader className={clsx(layoutClassName && layoutClassName)}>
       <div role="navigation" aria-label="skip" className={styles.container}>
-        <div className={styles.skipLinkContainer}>
+        <div>
           <SkipLink
             href="#filters"
             tabIndex={gatsbyContext.location.pathname === "/" ? 0 : -1}
