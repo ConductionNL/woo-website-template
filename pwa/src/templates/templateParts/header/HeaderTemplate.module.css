@@ -6,9 +6,6 @@
   padding-inline-end: var(--utrecht-page-margin-inline-end);
   display: flex;
 }
-.skipLinkContainer:focus-within {
-  margin-inline-end: 10%;
-}
 
 .navContainer {
   flex: 1;
@@ -38,4 +35,37 @@
 
 .languageSeperator {
   user-select: none;
+}
+
+.skipLink {
+  font-weight: var(--utrecht-skip-link-font-weight);
+  font-size: var(--utrecht-skip-link-font-size);
+  border-radius: var(--utrecht-skip-link-border-radius);
+  --_utrecht-focus-ring-box-shadow: 0 0 0
+    var(
+      --utrecht-skip-link-box-shadow-width,
+      var(--utrecht-focus-outline-width, 0)
+    )
+    var(--utrecht-focus-inverse-outline-color, transparent) !important;
+}
+
+.skipLink:focus {
+  outline-style: var(
+    --utrecht-skip-link-outline-style,
+    var(--utrecht-focus-outline-style, revert)
+  ) !important;
+  outline-color: var(
+    --utrecht-skip-link-outline-color,
+    var(--utrecht-focus-outline-color, revert)
+  ) !important;
+
+  inset-block-start: var(
+    --utrecht-skip-link-inset-block-start,
+    var(--_utrecht-skip-link-inset, 0)
+  ) !important;
+
+  inset-inline-start: var(
+    --utrecht-skip-link-inset-inline-start,
+    var(--_utrecht-skip-link-inset, 0)
+  ) !important;
 }
