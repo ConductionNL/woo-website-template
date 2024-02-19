@@ -26,7 +26,7 @@ export const wrapRootElement = ({ element }) => {
 
 export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
   const isBrowser = () => typeof window !== "undefined";
-  const HeadComponents = [<title key={0}>Woo Website Template</title>];
+  const HeadComponents = [<title key={0}>Woo Website</title>];
   const BodyComponents = [
     isBrowser() && window.sessionStorage.getItem("ANALYTICS_URL") ? (
       <script
