@@ -61,6 +61,9 @@ Een van de krachten van OpenWoo.app is het ondersteunen en automatisch publicere
 | Open PUB         | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) |                 |
 | Open PDC         | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) |                 |
 
+> **notice**
+> Via een StUF ↔ ZGW-koppelvlak is het in theorie ook mogelijk een zaaksysteem te koppelen aan de hand van StUF, dit is in de praktijk echter nog niet beproeft. Andere koppelvlakken en maatwerk zijn uiteraard bespreekbaar, neem daarvoor contact op met een leverancier.
+
 ![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Bronnen.svg)
 
 ## Totaal plaatje
