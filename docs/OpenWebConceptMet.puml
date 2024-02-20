@@ -15,7 +15,7 @@ frame "Services" {
 
 ' Integratie (Laag 3)
 frame "Integratie" {
-    database "Open Index"  as OI #1abc9c
+    database "Open Index"  as IO #1abc9c
 }
 
 ' Bronnen (Laag 2)
@@ -26,6 +26,6 @@ frame "Bronnen" {
 OWS -down-> CMS: Indexeerd
 OWS ..> OI: Slaat op in
 
-Searchsite -down-> IO : Bevraagd (API)
+Website -down-> IO : Bevraagd (API)
 
 @enduml

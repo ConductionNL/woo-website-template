@@ -4,92 +4,71 @@
 >
 > Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder.
 
-## Opzet en Componenten
-OpenWoo.app bestaat in essentie uit een aantal componenten die samenwerken rondom een integratievoorziening, het lijnt daarmee uit met de architectuurlagen van Common Ground. Daarbij is de keuze aan de ontsluitende overheid welke componenten van welke leveranciers zij inzet. Het is daarmee bewust de bedoeling dat de inrichting per overheid kan verschillen, zodat deze beter in het landschap van die betreffende overheid past. Binnen de OpenWoo.app kennen we momenteel de volgende componenten:
+## Versimpelde opzet
+OpenWoo.app bestaat in essentie uit een 3 tal onderdelen die samen oplossing vormen. 
 
-### Koppelvlak naar KOOP en Woogle voor de Landelijke Index
-Deze interface faciliteert een gestandaardiseerde verbinding met het Kennis- en Exploitatiecentrum Officiële Publicaties (KOOP) en Woogle van de WOOverheid van de UvA.
-### Federatieve Connectie
-Door gebruik te maken van een op FSC/NLX gebaseerde connectie, worden de zoekindexen van deelnemende organisaties samengevoegd tot één virtuele zoekindex.
-### Zoekpagina (Optioneel)
-Een op NL Design gebaseerd publicatieplatform dat belanghebbenden in staat stelt om naar relevante informatie te zoeken.
-### Open WooService
-Deze module verzamelt informatie uit verschillende bronnen, waardoor een gecentraliseerde toegang tot diverse categorieën van gegevens mogelijk wordt.
-### Open Index
-Een opgebouwde index van openbare informatie die samen met andere zoekindexen een landelijke federatie vormt.
-### Overige Bronnen (Optioneel)
-Bronnen zoals het Zaaksysteem, Raadsinformatiesysteem en archief kunnen optioneel worden gekoppeld, met ondersteuning voor handmatige uploads via het CMS van uw huidige website.
+![Basis Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/basis.svg)
 
-## Varianten
-OpenWoo.app is bedacht om invulling te kunnen geven aan meerdere wensen vanuit overheden, daarbij is geen goed of slecht. Het is aan de betreffende overheid zelf om een voor haar passende manier te keizen die invulling geef aan wet en regelgeving.
+### Publicatie platform 
+Woo publicaties moeten worden uiteraard ergens worden gepubliceerd, dat gebeurd via een organisatie speciefiek Woo publicatie platform. De OpenWoo.app ondersteund meerde mogenlijke publicatie platformen waarbij de keuze bij u als organisatie ligt of u het publicatie platform binnen uw website wilt integreren of niet
 
-### Publiceren uit ZGW (e.g. Xxllnc, OpenZaak, Join of Fundament)
-De meeste organisaties zullen kiezen om te publiceren vanuit hun zaaksysteem, dat kan hun huidige systeem zijn of een kleine installatie die ze hier speciaal voor aanmaken.
+| Component                     | Open Source | Leverancier(s)                                           | Beschrijving                                                      | Meer informatie | 
+|-------------------------------|-------------|----------------------------------------------------------|-------------------------------------------------------------------|-----------------|
+| Losse React pagina            | Ja          | [Conduction](https://conduction.nl/)                     | Een losse NL Design zoekpagina in de huisstijl van uw organisatie |                 |
+| Integratie in Open Webconcept | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) | Een NL Design weergavecomponent voor WordPress-websites           |                 |
+| Sim Site                      | ?           | SIM Groep                                                | Een weergavecomponent voor Sim Site                               |                 |
+| Drupal Site                   | ?           | "??"                                                     | Een weergavecomponent voor Drupal                                 |                 | 
+| TYPO3 thema site              | Ja          | [OpenGemeenten](https://www.opengemeenten.nl/)           | Een weergavecomponent voor TYPO3-websites                         |                 |
 
-![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/VanuitZaakSysteem.svg)
+Naast het locale publicatie platform ondersteund OpenWoo.app ook altijd de volgende landelijke publicatie platformen
 
-
-### Open Webconcept met integratie
-
-Het is ook mogelijk om een bestaande Open Webconcept-omgeving te combineren met de integratievoorziening. In dat geval gebruikt de integratievoorziening Open Webconcept, zowel als bron als dat het naar Open Webconcept toe publiceert. Dit betekent dat de organisatie de voordelen van de integratievoorziening kan benutten, terwijl de bestaande Open Webconcept-omgeving kan worden gebruikt om Woo-verzoeken en convenanten te beheren.
-
-**Nadelen**
-
-- Er moet een integratievoorziening worden geïnstalleerd of afgenomen
-
-![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/OpenWebConceptMet.svg)
-
-### (Losse) Frontend met integratie
-
-Er zijn diverse frontends die in theorie direct kunnen koppelen op de OpenWoo.app API.
-
-**Voordelen**
-
-- De frontend hoeft maar één API te koppelen voor toegang tot meerdere bronnen.
-- De gebruiker kan een integrale zoekvraag over meerdere bronnen heen stellen (bijvoorbeeld aan zowel een zaaksysteem als een raadsinformatiesysteem).
-- Als de frontend zelf een CMS is, kan deze ook als bron dienen (voor bijvoorbeeld nieuwsberichten en categorieomschrijvingen)
-- Componenten zijn te combineren (bijvoorbeeld de losstaande NL Design React voorkant op de Open Webconcept-verzoeken en -convenanten plugins).
-
-**Nadelen**
-
-- Er moet een integratievoorziening worden geïnstalleerd of afgenomen
-
-**Beschikbare componenten voor frontend**
-| Component | Framework | Open Source | Leveranciers | Beschrijving |
-|-------------|------|------|------------|--------------|
-| OpenWOO Site  | NL Design (React) | Ja | [Conduction](https://conduction.nl/) | Een losse NL Design zoekpagina in de huisstijl van uw organisatie |
-| OpenWoo Plugin | WordPress | Ja | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) | Een NL Design weergavecomponent voor WordPress-websites |
-| OpenGemeenten | TYPO3 | Ja | [OpenGemeenten](https://www.opengemeenten.nl/) | Een weergavecomponent voor TYPO3-websites |
-| SIM Drupal | Drupal | ? | [SIM Groep](https://www.simgroep.nl/) | Een weergavecomponent voor Drupal |
+- Een gestandaardiseerde verbinding met het Kennis- en Exploitatiecentrum Officiële Publicaties (KOOP)
+- Een federale zoekvraag via [koophulpje.nl](https://koophulpje.nl/).
+- Woogle van de WOOverheid van de UvA.
 
 > **notice**
 > Voor Open Source componenten bent u natuurlijk niet beperkt tot deze leveranciers, dit zijn de op dit moment bij ons bekende leveranciers.
 >
 > Weet u niet welk frontend framework uw organisatie op dit moment gebruikt? Kijk dan eens op [digimonitor](https://www.digimonitor.nl/cms-en/gemeenten/).
->
-> ![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/LosseFrontend.svg)
 
-### Bronnen met integratie
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Publicatie.svg)
 
-Als er wordt gekozen voor het implementeren van de integratievoorziening, wordt het mogelijk om geautomatiseerd te publiceren vanuit meerdere bronnen.
+### Motorblok
+Het kloppende hard (of motorblok) onder het publicatie platform is het [commonground](https://commonground.nl/) component [Open Index](https://openindex.online/) dat haar oorsprong vind in het [Open Catalogi](https://opencatalogi.nl/) project. Dit component stel ons in staat om snel en organisatie overstijgend te zoeken in meerdere Woo categorien tegelijkertijd. Hierbij word onder water gebruik gemaakt van een mongodb object store.
 
-Dit bespaart handmatig werk en vermindert de kans op fouten. Tevens ondersteunt het gebruik van het integratiemechanisme de integrale zoekvraag en is het mogelijk om ook gegevens uit andere bronnen te integreren, zoals een raadsinformatiesysteem of een Open Webconcept CMS.
+Het tweede component is de [OpenWoo service](https://openwoo.openservices.online/), gebaseerd op het commonground [open services](https://openservices.online/) framework. Deze service faciliteerd de data uitwissseling tussen de onderlinggende bronnen en de [Open Index](https://openindex.online/). 
 
-**Nadelen**
+| Component       | Leverancier   | Meer informatie                                   |
+|-----------------|---------------|---------------------------------------------------|
+| Open Index      | Conduction    | [Open Index](https://openindex.online/)           |
+| OpenWoo Service | Conduction    | [Lees meer](https://openwoo.openservices.online/) |
 
-- Er moet een integratievoorziening worden geïnstalleerd of afgenomen
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Integratie.svg)
 
-**Beschikbare componenten voor bronnen**
-| Component | Framework | Open Source | Leveranciers | Beschrijving |
-|-------------|------|------|------------|--------------|
-|Zaaksysteem.nl | ZGW | Ja | [Xxllnc](https://xxllnc.nl/) |--------------|
-|RX Fundament | ZGW | Nee | [Roxit](https://www.roxit.nl/) |--------------|
-|Decos JOIN | ZGW | Nee | [Decos](https://www.decos.com/nl) |--------------|
-|OpenZaak | ZGW | Ja | [Maykin Media](https://www.maykinmedia.nl/nl/) |--------------|
+### Bronnen
+Een van de krachten van OpenWoo.app is het ondersteunen en automatisch publiceren vanuit een groot aantal bronnen
+
+| Component        | Koppelvlak | Open Source | Leveranciers(s)                                  | Meer informatie |
+|------------------|------------|-------------|-----------------------------------------------|-----------------|
+| Zaaksysteem.nl   | Search     | Ja          | [Xxllnc](https://xxllnc.nl/)                  |                 |
+| RX Fundament     | ZGW        | Nee         | [Roxit](https://www.roxit.nl/)                |                 |
+| Decos JOIN       | ZGW        | Nee         | [Decos](https://www.decos.com/nl)             |                 |
+| OpenZaak         | ZGW        | Ja          | [Maykin Media](https://www.maykinmedia.nl/nl/) |                 |
+| SimSite          | Custom API | ?           | [SIM Groep](https://www.simgroep.nl/)                                      |                 |
+| Open Verzoeken   | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/)                                          |                 |
+| Open Convenanten | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) |                 |
+| Open Klachten    | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) |                 |
+| Open PUB         | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) |                 |
+| Open PDC         | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) |                 |
 
 ![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Bronnen.svg)
 
-### Hoe werkt dat scrapen vanuit de integratievoorziening?
+## Totaal plaatje
+Al deze zaken te samen geven ons een totaalbeeld van samenwerken componenten die als ecosysteem een oplossing leveren.
+
+![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Totaal.svg)
+
+## Hoe werkt dat scrapen vanuit de integratievoorziening?
 
 De integratievoorziening "scraped" elke nacht alle relevante informatie en bouwt hier een organisatie-specifieke index over op. De stappen zijn als volgt:
 

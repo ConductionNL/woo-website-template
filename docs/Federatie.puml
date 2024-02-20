@@ -2,22 +2,22 @@
 title Federatie
 
 ' User Interface Component
-interface "Landelijke API" as Api
+interface "Landelijke API" as Api #1abc9c
 
 ' Backend Components
-component "NLX/FSC/FDS" as NLX
-component "Intergratie voorziening Org 1" as Org1
-component "Intergratie voorziening Org 2" as Org2
-component "Intergratie voorziening Org 3" as Org3
-component "Bronnen" as BronnenOrg1
-component "Bronnen" as BronnenOrg2
-component "Bronnen" as BronnenOrg3
+component "NLX/FSC/FDS" as NLX #cce5ff
+component "Motorblok" as Org1 #1abc9c
+component "Motorblok" as Org2 #1abc9c
+component "Motorblok" as Org3 #1abc9c
+component "Bronnen" as BronnenOrg1 #cce5ff
+component "Bronnen" as BronnenOrg2 #cce5ff
+component "Bronnen" as BronnenOrg3 #cce5ff
 
 ' Relationships
 Api -down-> NLX : Connected trough outway
-NLX -down-> Org1 : Connected trough inway
-NLX -down-> Org2 : Connected trough inway
-NLX -down-> Org3 : Connected trough inway
+NLX -down-> Org1 : org 1 Connected trough inway
+NLX -down-> Org2 : org 2 Connected trough inway
+NLX -down-> Org3 : org 3 Connected trough inway
 Org1 -down-> BronnenOrg1 : Internal connection
 Org2 -down-> BronnenOrg2 : Internal connection
 Org3 -down-> BronnenOrg3 : Internal connection

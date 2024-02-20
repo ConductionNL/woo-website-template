@@ -25,7 +25,7 @@ Kijk op [de demopagina](https://conductionnl.github.io/woo-website-xxllnc/) voor
 | Integratie in Open Webconcept | Yard        | Onbekend | Onbekend      |
 | Integratie in Open Webconcept | Acato       | Onbekend | Onbekend      |
 | Sim Site                      | SIM Groep   | Onbekend | Onbekend      |
-| TYPO3                         | OpenGemeenten   | Onbekend | Onbekend      |
+| TYPO3 thema site              | OpenGemeenten   | Onbekend | Onbekend      |
 
 **Waarop zijn de maandelijkse kosten gebaseerd?**
 Los van hosting verwachten we naar aanleiding van eerdere ervaringen dat de frontend maandelijks moet worden bijgewerkt in verband met veiligheidsupdates, nieuwe functionaliteit of aanpassingen in NL Design. Met name de ontwikkelingen in de Woo zullen ervoor zorgen dat de pagina de komende jaren continu in beweging is.
