@@ -1,6 +1,6 @@
 # Configuratie
 
-Om te zorgen dat de Open WOO Website goed werkt, is het belangrijk dat de onderliggende (zaak)systemen op de juiste manier zijn geconfigureerd. Zo kunnen zij de informatie aanleveren die op de voorkant benodigd is voor het opbouwen van de index. Daarbij is het belangrijk om te weten welke waarden waar worden gebruikt en wat het effect is van configuratiekeuzes.
+Om te zorgen dat de OpenWoo-website goed werkt, is het belangrijk dat de onderliggende (zaak)systemen op de juiste manier zijn geconfigureerd. Zo kan het zaaksysteem de informatie aanleveren die op de voorkant nodig is voor het opbouwen van de index. Daarbij is het belangrijk om te weten welke waarden waar worden gebruikt en wat het effect is van configuratiekeuzes.
 
 - [Configuratie](#configuratie)
   - [Gebruik variabelen](#gebruik-variabelen)
@@ -35,7 +35,7 @@ In de overzichtspagina worden de properties op de volgende plekken weergegeven.
 
 ## Algemene inrichting zaaksysteem
 
-Voor het kunnen publiceren van zaken vanuit het zaaksysteem is het belangrijk dat het zaaksysteem beschikt over de juiste inrichting. Indien er via de Common Gateway (met Open Woo-plugin) zaken worden opgehaald, gelden daarvoor de volgende spelregels.
+Voor het kunnen publiceren van zaken vanuit het zaaksysteem is het belangrijk dat het zaaksysteem beschikt over de juiste inrichting. Indien er via de CommonGateway (met Open Woo-plugin) zaken worden opgehaald, gelden daarvoor de volgende spelregels.
 
 Zaken dienen te beschikken over de volgende properties (zaakattributen):
 
@@ -52,7 +52,7 @@ Zaken dienen te beschikken over de volgende properties (zaakattributen):
 Daarnaast is het mogelijk om bijlagen van publicaties te clusteren aan de hand van labels.
 
 > **Note**
-> Op dit moment doet Open WOO nog niets met thema's behalve ze weergeven bij de zaak. Er zijn echter plannen om in de toekomst een thema-overzichtspagina te maken en WOO-publicaties filterbaar te maken op thema.
+> Op dit moment doet OpenWoo nog niets met thema's behalve ze weergeven bij de zaak. Er zijn echter plannen om in de toekomst een thema-overzichtspagina te maken en Woo-publicaties filterbaar te maken op thema.
 
 ## Categorieën
 
@@ -106,7 +106,7 @@ Gebaseerd op: [VNG ZGW Standaard](https://vng.nl/projecten/zaakgericht-werken-ap
 
 ## Mapping vanuit zaaksysteem.nl search endpoint
 
-Gebaseerd op: [XXLLNC zaken mapping](https://github.com/CommonGateway/WooBundle/blob/main/Installation/Mapping/woo.xxllncCaseToWoo.mapping.json)
+Gebaseerd op: [xxllc-zaken mapping](https://github.com/CommonGateway/WooBundle/blob/main/Installation/Mapping/woo.xxllncCaseToWoo.mapping.json)
 
 | WOO Publicatie Object                       | Zaaksysteemveld                                  | Gebruik                               |
 |---------------------------------------------|--------------------------------------------------|---------------------------------------|
