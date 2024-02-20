@@ -24,7 +24,7 @@ frame "Bronnen" {
 }
 
 
-Searchsite -down-> IO : Bevraagd (API)
+Searchsite -down-> OI : Bevraagd (API)
 OWS -down-> ZRC: Indexeerd
 OWS ..> OI: Slaat op in
 ZRC ..-> OWS : Notifies of changes or deletes

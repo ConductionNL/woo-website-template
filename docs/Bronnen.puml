@@ -29,7 +29,7 @@ frame "Bronnen" {
 }
 
 ' Relationships
-Searchsite -down-> IO : Bevraagd (API)
+Searchsite -down-> OI : Bevraagd (API)
 OWS ..> OI: Slaat op in
 
 OWS -down-> CMS : Scrapes periodically\nUses as source

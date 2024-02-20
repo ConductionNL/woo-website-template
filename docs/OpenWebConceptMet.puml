@@ -26,6 +26,6 @@ frame "Bronnen" {
 OWS -down-> CMS: Indexeerd
 OWS ..> OI: Slaat op in
 
-Website -down-> IO : Bevraagd (API)
+Website -down-> OI : Bevraagd (API)
 
 @enduml
