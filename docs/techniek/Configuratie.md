@@ -41,6 +41,8 @@ Voor het kunnen publiceren van zaken vanuit het zaaksysteem is het belangrijk da
 - Voor de gedefineerde categeriën volgen we de [informatiecategorieen-en-werkdefinities](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/informatiecategorieen-en-werkdefinities) van koop
 - Naast deze categoerien mag een organisatie ook eigen categorien voeren maar dan worden alleen de algemene eigenschappen over genomen
 
+Het is niet per definitie nodig om alle eigenschappen in het bron systeem handmatig in te regelen en vullen, sommige eigenschapen kunnen worden overgenomen uit algemene metadata van een bron systeem. Kijk onder [Mappigns](#Mappigns) om te zien welke eigenschappen automatisch worden gevuld.
+
 ### Algemene eigenschappen
 Een aantal zaakatributen zijn noodzakenlijk voor het voor het goed werken van de OpenWoo.app, ze zijn dan ook altijd verplicht ongeacht de Woo categori.  
 
@@ -73,7 +75,7 @@ Een aantal zaakatributen zijn noodzakenlijk voor het voor het goed werken van de
 
 | Categorie | Omschrijving                                 | Eigenschappen                                                                                                                                                      | KOOP                                                                                                                                                                                                    |
 |-----------|----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1a        | Wetten en algemeen verbindende voorschriften | Valt buiten de OpenWoo.app                                                                                                                                                                   | Valt buiten de OpenWoo.app                                                                                                                                                                                                        |
+| 1a        | Wetten en algemeen verbindende voorschriften | Valt buiten de OpenWoo.app                                                                                                                                         | Valt buiten de OpenWoo.app                                                                                                                                                                                                        |
 | 1b        | Overige besluiten van algemene strekking     | Valt buiten de OpenWoo.app                                                                                                                                         | Valt buiten de OpenWoo.app                                                                                                                                                                              |
 | 1c        | Ontwerpen van wet- en regelgeving met adviesaanvraag | Valt buiten de OpenWoo.app                                                                                                                                         | Valt buiten de OpenWoo.app                                                                                                                                                                              |
 | 1d        | Organisatie en werkwijze                     | Valt buiten de OpenWoo.app                                                                                                                                         | Valt buiten de OpenWoo.app                                                                                                                                                                              |
@@ -86,7 +88,7 @@ Een aantal zaakatributen zijn noodzakenlijk voor het voor het goed werken van de
 | 2f        | Convenanten                                  | Geen aanvullende eigenschappen                                                                                                                                     | [definitie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/richtlijnen/2024/2/16/hulpmiddel-convenanten)                                                      |
 | 2g        | Jaarplannen en jaarverslagen                 | Nog niet vastgesteld                                                                                                                                               | Nog niet vastgesteld                                                                                                                                                                                    |
 | 2h        | Subsidieverplichtingen anders dan met beschikking | Nog niet vastgesteld                                                                                                                                               | Nog niet vastgesteld                                                                                                                                                                                    |
-| 2i        | Woo-verzoeken en -besluiten                  | `woo_datum_besluit`, `woo_datum_ontvangst`                                                                                                                         | [definitie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/publicaties/2023/07/20/werkdefinitie-woo-informatiecategorie-woo-verzoeken-en--besluiten)          |
+| 2i        | Woo-verzoeken en -besluiten                  | `woo_datum_besluit`, `woo_datum_ontvangst`,`woo_termijnoverschrijding`                                                                                                                        | [definitie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/publicaties/2023/07/20/werkdefinitie-woo-informatiecategorie-woo-verzoeken-en--besluiten)          |
 | 2j        | Onderzoeksrapporten                          | Geen aanvullende eigenschappen                                                                                                                                     | [definitie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/richtlijnen/2024/1/11/beslishulp-onderzoeksrapporten)                                              |
 | 2k        | Beschikkingen                                | nog niet vastgesteld                                                                                                                                               | Nog niet vastgesteld                                                                                                                                                                                    |
 | 2l        | Klachtoordelen                               | `woo_datum_ontvangst`, `woo_organisatieonderdeel`, `woo_functiebenaming`, `woo_gedraging`, `woo_bevindingen`, `woo_oordeel`, `woo_conclusies`, `woo_datum_besluit` | [definitie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/richtlijnen/2024/2/16/werkdefinitie-klachtoordelen)                                                |
@@ -96,8 +98,7 @@ Een aantal zaakatributen zijn noodzakenlijk voor het voor het goed werken van de
 
 
 ### Documenten/Bijlagen
-
-Bijlagen nemen een bijzondere positie in binnen de Open Woo Website, ze vormen de kern van de naar de bezoeker over te dragen informatie en zijn het centrale onderdeel van de Woo. De manier waarop deze worden getoond wordt beïnvloed door labels. Daarvoor gelden de volgende regels:
+Bijlagen nemen een bijzondere positie in binnen de OpenWoo.app, ze vormen de kern van de naar de bezoeker over te dragen informatie en zijn het centrale onderdeel van de Woo. De manier waarop deze worden getoond wordt beïnvloed door labels. Daarvoor gelden de volgende regels:
 
 | Label                   | Effect van label                                                                                              |
 |-------------------------|---------------------------------------------------------------------------------------------------------------|
@@ -110,11 +111,13 @@ Bijlagen nemen een bijzondere positie in binnen de Open Woo Website, ze vormen d
 > **Spelregels omtrend labels**
 >
 > - Het is mogelijk om als organisatie zelf extra labels toe te voegen, als deze het juist format volgen `woo_[[labelnaam]]]` worden deze automatisch overgenomen in de weergave door boven de rij `Bijlagen` een extra rij toe te voegen in de form `[[labelnaam]]: Alle hieraan gekoppelde bestanden`.
-> - Bestanden die geen andere label hebben dan `woo_publicatie` worden getoond onder bijlagen
-> - Als bestanden meerdere labels hebben worden ze op meerdere plekken getoond (met uitzondering van bijlagen)
+> - Bestanden die geen andere label hebben dan `woo_publicatie` worden getoond in de rij `Bijlagen`. 
+> - Als bestanden meerdere labels hebben worden ze op meerdere plekken getoond (met uitzondering van `Bijlagen` daar worden alleen bestanden getoond zonder label)
 > - Bestanden zonder het label `woo_publicatie` worden niet getoond (ook al zijn ze wel van een ander `woo_` label voorzien)
 
-## Mapping ZGW
+## Mappigns
+
+### Mapping ZGW
 
 Gebaseerd op: [VNG ZGW Standaard](https://vng.nl/projecten/zaakgericht-werken-api)
 
@@ -141,7 +144,7 @@ Gebaseerd op: [VNG ZGW Standaard](https://vng.nl/projecten/zaakgericht-werken-ap
 | metadata.verzoek.termijnoverschrijding      | case.dateTarget - case.dateOfCompletion          | Detail pagina                         |
 | bijlagen                                    | values.attribute.woo_publicatie                  | Metadata, Detail pagina               |
 
-## Mapping vanuit zaaksysteem.nl search endpoint
+### Mapping vanuit zaaksysteem.nl search endpoint
 
 Gebaseerd op: [xxllc-zaken mapping](https://github.com/CommonGateway/WooBundle/blob/main/Installation/Mapping/woo.xxllncCaseToWoo.mapping.json)
 
