@@ -127,24 +127,15 @@ Gebaseerd op: [VNG ZGW Standaard](https://vng.nl/projecten/zaakgericht-werken-ap
 
 Gebaseerd op: [xxllc-zaken mapping](https://github.com/CommonGateway/WooBundle/blob/main/Installation/Mapping/woo.xxllncCaseToWoo.mapping.json)
 
-| Eigenschap                | Zaaksysteemveld                                  | Gebruik                               |
-|---------------------------|--------------------------------------------------|---------------------------------------|
-| woo_titel                 | values.case.subject_external                     | Metadata, Index pagina, Detail pagina |
-| woo_termijnoverschrijding | case.dateTarget - case.dateOfCompletion          | Detail pagina                         |
+| Eigenschap                | Zaaksysteem.nl eigenschap               | 
+|---------------------------|-----------------------------------------|
+| woo_titel                 | values.case.subject_external            | 
+| woo_termijnoverschrijding | case.dateTarget - case.dateOfCompletion | 
+| woo_datum_ontvangst       | values.case.date_of_registration        | 
+| woo_id                    | object_id        | 
 
-
-| WOO Publicatie Object                       | Zaaksysteemveld                                  | Gebruik                               |
-| id                                          | object_id                                        | Metadata                              |
-| volgnummer                                  | (Empty)                                          | n.v.t                                 |
-| metadata.volgnummer                         | (Empty)                                          | Metadata                              |
-| metadata.verzoek.ontvangstdatum             | values.case.date_of_registration                 | Metadata, Detail pagina               |
-| metadata.verzoek.status                     | (Empty)                                          | Metadata                              |
-| metadata.verzoek.ontvangerInformatieverzoek | (Empty)                                          | Metadata                              |
-
-| bijlagen                                    | values.attribute.woo_publicatie                  | Metadata, Detail pagina               |
-
-> *note*
-> Voor de eigenschapen word steeds gekeken naar values.attribute.`eigenschap e.g. woo_beschrijving`
+> **Note**
+> Voor de eigenschapen word verder gekeken naar values.attribute.[`eigenschap e.g. woo_beschrijving`] 
 
 Bijlagen
 
