@@ -144,7 +144,7 @@ Response
 
 ### Metadata
 
-De kern gegevens van een WOO-publicatie zitten in het metadata-object, de inhoud van dit object is 'semi' vrij, hij kan per publicatie `categorie` verschillen. Daarnaast zijn er een paar algemene properties die altijd kunnen voorkomen in de metadata
+De kerngegevens van een Woo-publicatie zitten in het metadata-object, de inhoud van dit object is 'semi' vrij, hij kan per publicatie `categorie` verschillen. Daarnaast zijn er een paar algemene properties die altijd kunnen voorkomen in de metadata.
 
 #### Algemene properties
 
@@ -186,4 +186,4 @@ Er zijn twéé manieren waarop een bron kan worden gekoppeld, beide vereisen dat
 
 ## Het koppelen van een organisatie
 
-Zie voor het koppelen van een organisatie de [naar productie pagina](/docs/techniek/Productie.md).
+Zie voor het koppelen van een organisatie de [naar productiepagina](/docs/techniek/Productie.md).

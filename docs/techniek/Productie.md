@@ -4,10 +4,10 @@ Het in productie nemen van OpenWoo.app voor uw organisatie is makkelijker dan u 
 
 - (optioneel) Kies een [leverancier](/docs/product/Kosten.md) om de OpenWoo.app bij af te nemen. Of implementeer hem zelfstandig.
 - Verzamel van tevoren alle benodigde informatie
-- Vraag tijdig een PKI-certificaat en DNS wijziging aan bij uw ICT-leverancier(s)
+- Vraag tijdig een PKI-certificaat en DNS-wijziging aan bij uw ICT-leverancier(s)
 - Zorg dat u tijd beschikbaar hebt voor het grondig doortesten van de keten aan de hand van de testscenario's
 
-Als u de OpenWOO APP zelfstandig installeerd zult u de [acties voor leverancier](#acties-voor-leverancier) uiteraard zelf moeten uitvoeren.
+Als u de OpenWOO APP zelfstandig installeert zult u de [acties voor leverancier](#acties-voor-leverancier) uiteraard zelf moeten uitvoeren.
 
 ## Benodigde informatie voor de vormgeving
 
@@ -33,7 +33,7 @@ Voor de inrichting van OpenWoo.app heeft uw leverancier of u de volgende informa
   - Verplichte context pagina's waarvoor wordt doorverwezen naar uw eigen site (privacy, over deze pagina, toegankelijkheid)
   - Overige website waar u naar wilt verwijzen
 - Op welk (sub) domein moet de pagina worden getoond? b.v. open.`uw organisatienaam`.nl
-- Moet er gebruik worden gemaakt van een custom certificaat? bijvoorbeeld PKIo
+- Moet er gebruik worden gemaakt van een custom certificaat? Bijvoorbeeld PKIo
 - Wordt er gekoppeld op een of meerdere zaaksystemen? Zo ja, welke
 - Wordt er gekoppeld op een of meerdere raadsinformatiesystemen? Zo ja, welke
 - Wordt er gekoppeld op CMS van de huidige website? Zo ja, welke
