@@ -1,11 +1,11 @@
 @startuml
-title Open Webconcept met integratie
+title Motorblok
 footer: OpenWoo.app
 header: OpenWoo.app
 
 ' Publicatie platformen (Laag 5 UI)
 frame "Publicatie platformen " {
-    interface "Open Webconcept Website" as Website #cce5ff
+    interface "Afnemer" as Searchsite #1abc9c
 }
 
 ' Services(Laag 4)
@@ -20,12 +20,16 @@ frame "Integratie" {
 
 ' Bronnen (Laag 2)
 frame "Bronnen" {
-    database "Website (CMS)" as CMS #cce5ff
+    component "Bronnen" as Bronnen  #cce5ff
 }
 
-OWS -down-> CMS: Indexeerd
+' Relationships
+Searchsite -down-> OI : Bevraagd (API)
 OWS ..> OI: Slaat op in
 
-Website -down-> OI : Bevraagd (API)
+OWS -down-> Bronnen : Scrapes periodically\nUses as source
+
+' Notifications
+Bronnen -up-> OWS : Notifies of changes or deletes
 
 @enduml

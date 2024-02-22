@@ -1,11 +1,15 @@
 @startuml
-title Integratie op bronnen
+title Publicatie platformen
 footer: OpenWoo.app
 header: OpenWoo.app
 
 ' Publicatie platformen (Laag 5 UI)
 frame "Publicatie platformen " {
-    interface "Afnemer" as Searchsite #1abc9c
+    actor "KOOP"  as KOOP #cce5ff
+    actor   "WOOGLE" as WOOGLE #cce5ff
+    interface "Website" AS Website #1abc9c
+    interface "Thema site" as Themasite #1abc9c
+    interface "Zoek pagina" as Searchsite #1abc9c
 }
 
 ' Services(Laag 4)
@@ -29,6 +33,10 @@ frame "Bronnen" {
 }
 
 ' Relationships
+KOOP -down-> OI : Indexeerd (XML Sitemap)
+WOOGLE -down-> OI : Indexeerd (API)
+Website -down-> OI : Bevraagd (API)
+Themasite -down-> OI : Bevraagd (API)
 Searchsite -down-> OI : Bevraagd (API)
 OWS ..> OI: Slaat op in
 

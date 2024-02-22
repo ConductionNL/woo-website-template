@@ -24,9 +24,9 @@ frame "Bronnen" {
 }
 
 
+Searchsite -down-> OI : Bevraagd (API)
 OWS -down-> ZRC: Indexeerd
 OWS ..> OI: Slaat op in
-
-Searchsite -down-> IO : Bevraagd (API)
+ZRC ..-> OWS : Notifies of changes or deletes
 
 @enduml

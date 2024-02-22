@@ -1,8 +1,8 @@
 # Installatie
 
-Deze installatiehandleiding is bedoeld voor overheden en leveranciers die zelfstandig aan de slag willen met Open Woo Website. Als je Open Woo Website als SaaS wilt afnemen, kijk dan onder [kosten](/docs/product/Kosten.md).
+Deze installatiehandleiding is bedoeld voor overheden en leveranciers die zelfstandig aan de slag willen met OpenWoo-website. Als je OpenWoo-website als SaaS wilt afnemen, kijk dan onder [kosten](/docs/product/Kosten.md).
 
-Het Open Woo Website-template is gebaseerd op het Conduction [Productpage-template](https://github.com/ConductionNL/product-website-template) voor CommonGround. Hieronder tref je een verkorte installatiehandleiding aan die vooral focust op de onderliggende bronnen. Voor meer en uitgebreidere details kun je de documentatie van het Productpage-website-template gebruiken.
+Het template voor de OpenWoo-website is gebaseerd op de Conduction [Productpage-template](https://github.com/ConductionNL/product-website-template) voor Common Ground. Hieronder tref je een verkorte installatiehandleiding aan die vooral focust op de onderliggende bronnen. Voor meer en uitgebreidere details kun je de documentatie van het Productpage-website-template gebruiken.
 
 ## Randvoorwaarden
 
@@ -11,7 +11,7 @@ Om dit template te gebruiken, moet je beschikken over:
 - NL Design Token voor je organisatie ([lees hier hoe je die kunt verkrijgen](https://conductionnl.github.io/product-website-template/Features/NL_Design))
 - Een GitHub-organisatie en beheerdersrechten daarop OF (zie [Serverless Installatie](#serverless-installatie))
 - Een APACHE/NGINX-server (zie [Server Installatie](#server-installatie))
-- Een Open Webconcept CMS (WordPress) met de [Open Woo](https://github.com/OpenWebconcept/plugin-openwoo) en [Open Convenanten](https://github.com/OpenWebconcept/plugin-openconvenanten) plugins OF
+- Een Open Webconcept CMS (WordPress) met de [OpenWoo](https://github.com/OpenWebconcept/plugin-openwoo) en [Open Convenanten](https://github.com/OpenWebconcept/plugin-openconvenanten) plugins OF
 - Een Common Gateway-installatie (on-premise of SaaS) met de [Woo Bundle](https://github.com/ConductionNL/WooBundle/tree/main)
 
 ## Frontend
@@ -34,7 +34,7 @@ De Open WOO Website is in eerste instantie opgezet om serverless gebruikt te wor
 
 ### Server Installatie
 
-Als je de Open Woo Website liever vanaf een eigen server draait, kan dat uiteraard ook. In dat geval is er wel sprake van een ietwat ingewikkelder installatie waarvoor je beter de handleiding van het onderliggende framework kunt volgen.
+Als je de OpenWoo-website liever vanaf een eigen server draait, kan dat uiteraard ook. In dat geval is er wel sprake van een ietwat ingewikkelder installatie waarvoor je beter de handleiding van het onderliggende framework kunt volgen.
 
 > **Stappen**
 >
@@ -63,13 +63,13 @@ Configuratie vindt plaats via environment (env) waardes. In het geval van een se
 
 Voor de backend zijn twee opties beschikbaar. In beide gevallen moet de resulterende URL worden opgenomen onder `API_BASE_URL` in de frontend-configuratie.
 
-### Open Webconcept met Open Woo en Open Convenanten Plugin
+### Open Webconcept met OpenWoo en Open Convenanten Plugin
 
 In dit geval koppel je de React frontend rechtstreeks op een WordPress installatie, dat betekent dat alle publicaties handmatig moeten worden geüpload.
 
 Volg de installatiehandleiding op [https://github.com/OpenWebconcept/plugin-openwoo](https://github.com/OpenWebconcept/plugin-openwoo) en op [https://github.com/OpenWebconcept/plugin-openconvenanten](https://github.com/OpenWebconcept/plugin-openconvenanten).
 
-### Common Gateway met Open Woo Plugin
+### Common Gateway met OpenWoo-Plugin
 
 In dit geval koppel je de React frontend op een gateway installatie, dat betekent dat alle publicaties automatisch worden opgehaald uit bestaande bronnen
 
