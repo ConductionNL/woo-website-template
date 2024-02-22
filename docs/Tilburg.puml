@@ -28,7 +28,7 @@ frame "Integratie" {
 }
 
 ' Bronnen (Laag 2)
-frame "Bronnen" {
+frame "API" {
     database "Zaaksysteem (XXllNC)" as ZRC #008b6C
     database "Raadsinformatiesysteem (Notubiz)" as RIS #008b6C
     database "Bestuursinformatiesysteem (iBabs)" as BIS #008b6C

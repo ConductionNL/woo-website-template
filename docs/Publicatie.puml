@@ -23,7 +23,7 @@ frame "Integratie" {
 }
 
 ' Bronnen (Laag 2)
-frame "Bronnen" {
+frame "API" {
     component "Bronnen" as Bronnen  #cce5ff
 }
 

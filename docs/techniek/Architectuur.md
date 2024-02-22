@@ -8,7 +8,7 @@
 
 OpenWoo.app bestaat in essentie uit een drietal onderdelen die samen de totaaloplossing vormen.
 
-![Basis Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/basis.svg)
+![Basis Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Basis.svg)
 
 ### Publicatieplatform (onderdeel 1)
 

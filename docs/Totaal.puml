@@ -23,7 +23,7 @@ frame "Integratie" {
 }
 
 ' Bronnen (Laag 2)
-frame "Bronnen" {
+frame "API" {
     component "Zaaksysteem" as Zaaksysteem  #cce5ff
     component "CMS" as CMS  #cce5ff
     component "Raads informatie systeem" as Raadsinfo  #cce5ff
