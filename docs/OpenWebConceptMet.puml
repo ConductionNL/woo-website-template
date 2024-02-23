@@ -19,7 +19,7 @@ frame "Integratie" {
 }
 
 ' Bronnen (Laag 2)
-frame "Bronnen" {
+frame "API" {
     database "Website (CMS)" as CMS #cce5ff
 }
 
