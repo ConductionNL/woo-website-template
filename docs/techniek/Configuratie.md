@@ -33,18 +33,20 @@ In de overzichtspagina worden de properties op de volgende plekken weergegeven.
 
 ![img_4.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/img_4.png)
 
-## Algemene inrichting 
+## Algemene inrichting
+
 Voor het kunnen publiceren van zaken vanuit het zaaksysteem is het belangrijk dat het zaaksysteem beschikt over de juiste inrichting. Indien er via de [OpenWoo service](https://openwoo.openservices.online/) zaken worden opgehaald, gelden daarvoor de volgende spelregels.
 
 - OpenWoo.app kijkt alleen naar eigenschappen die vooraf worden gegaan door `woo_`
-- Er zijn algemene eigenschappen (geldend voor alle categorien) en specifieke eigenschapen (alleen geldend voor bepaalde categoerien)
-- Voor de gedefineerde categeriën volgen we de [informatiecategorieen-en-werkdefinities](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/informatiecategorieen-en-werkdefinities) van koop
-- Naast deze categoerien mag een organisatie ook eigen categorien voeren maar dan worden alleen de algemene eigenschappen over genomen
+- Er zijn algemene eigenschappen (geldend voor alle categorieën) en specifieke eigenschappen (alleen geldend voor bepaalde categorieën)
+- Voor de gedefinieerde categorieën volgen we de [informatiecategorieën-en-werkdefinities](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/informatiecategorieen-en-werkdefinities) van koop
+- Naast deze categorieën mag een organisatie ook eigen categorieën voeren, maar dan worden alleen de algemene eigenschappen over genomen
 
-Het is niet per definitie nodig om alle eigenschappen in het bron systeem handmatig in te regelen en vullen, sommige eigenschapen kunnen worden overgenomen uit algemene metadata van een bron systeem. Kijk onder [Mappigns](#Mappigns) om te zien welke eigenschappen automatisch worden gevuld.
+Het is niet per definitie nodig om alle eigenschappen in het bronsysteem handmatig in te regelen en vullen, sommige eigenschappen kunnen worden overgenomen uit algemene metadata van een bron systeem. Kijk onder [Mappings](#Mappings) om te zien welke eigenschappen automatisch worden gevuld.
 
 ### Algemene eigenschappen
-Een aantal zaakatributen zijn noodzakenlijk voor het voor het goed werken van de OpenWoo.app, ze zijn dan ook altijd verplicht ongeacht de Woo categori.  
+
+Een aantal zaakattributen zijn noodzakelijk voor het voor het goed werken van de OpenWoo.app, ze zijn dan ook altijd verplicht ongeacht de Woo-categorie.  
 
 | Property            | Verplicht | Gebruik                                                                                                 | Toegestane waardes |
 |---------------------|-----------|---------------------------------------------------------------------------------------------------------|--------------------|
@@ -55,6 +57,7 @@ Een aantal zaakatributen zijn noodzakenlijk voor het voor het goed werken van de
 | woo_beschrijving    | Nee       | De UITGEBREIDE beschrijving van de publicatie zoals online getoond                                      | string, max 2555 characters |
 
 ### Specifieke eigenschappen
+
 | Property            | Verplicht | Gebruik                                                                          | Toegestane waardes |
 |---------------------|-----------|----------------------------------------------------------------------------------|--------------------|
 | woo_datum_besluit   | Nee       | De datum waarop het besluit over de zaak genomen is                              | string formatted as date-time (e.g., 2023-09-12 09:00) or string formatted as date (e.g., 2023-09-12). If a date is presented instead of a date-time, the time will be automatically set to 00:00. |
@@ -84,7 +87,7 @@ Een aantal zaakatributen zijn noodzakenlijk voor het voor het goed werken van de
 | 2b        | Vergaderstukken Staten-Generaal              | Valt buiten de OpenWoo.app                                                                                                                                         | Valt buiten de OpenWoo.app                                                                                                                                                                              |
 | 2c        | Vergaderstukken decentrale overheden         | Geen aanvullende eigenschappen                                                                                                                                     | [definitie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/publicaties/2023/07/20/werkdefinitie-woo-informatiecategorie-vergaderstukken-decentrale-overheden) |
 | 2d        | Agenda's en besluitenlijsten bestuurscolleges | Geen aanvullende eigenschappen                                                                                                                                     | [definitie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/richtlijnen/2023/11/30/werkdefinitie-agendas-en-besluitenlijsten-bestuurscolleges)                 |
-| 2e        | Adviezen                                     | `woo_oprdachtgever`, `woo_onderdeel_taak`                                                                                                                          | [defintiie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/richtlijnen/2024/1/11/beslishulp-onderzoeksrapporten)                                              |
+| 2e        | Adviezen                                     | `woo_oprdachtgever`, `woo_onderdeel_taak`                                                                                                                          | [definitie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/richtlijnen/2024/1/11/beslishulp-onderzoeksrapporten)                                              |
 | 2f        | Convenanten                                  | Geen aanvullende eigenschappen                                                                                                                                     | [definitie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/richtlijnen/2024/2/16/hulpmiddel-convenanten)                                                      |
 | 2g        | Jaarplannen en jaarverslagen                 | Nog niet vastgesteld                                                                                                                                               | Nog niet vastgesteld                                                                                                                                                                                    |
 | 2h        | Subsidieverplichtingen anders dan met beschikking | Nog niet vastgesteld                                                                                                                                               | Nog niet vastgesteld                                                                                                                                                                                    |
@@ -94,10 +97,10 @@ Een aantal zaakatributen zijn noodzakenlijk voor het voor het goed werken van de
 | 2l        | Klachtoordelen                               | `woo_datum_ontvangst`, `woo_organisatieonderdeel`, `woo_functiebenaming`, `woo_gedraging`, `woo_bevindingen`, `woo_oordeel`, `woo_conclusies`, `woo_datum_besluit` | [definitie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/richtlijnen/2024/2/16/werkdefinitie-klachtoordelen)                                                |
 
 > **Note**
-> Nog niet vastgestelde categorien of categorien die buiten de OpenWoo.app vallen kunnen wel worden ontsloten via OpenWoo.app, daarbij kan gebruik worden gemaakt van de algemene eigenschappen en documenten/bijlagen. De specifieke eigenschappen worden echter pas opgenomen op het moment dat de categorie door KOOP is vastgesteld.
-
+> Nog niet vastgestelde categorieën of categorieën die buiten de OpenWoo.app vallen kunnen wel worden ontsloten via OpenWoo.app, daarbij kan gebruik worden gemaakt van de algemene eigenschappen en documenten/bijlagen. De specifieke eigenschappen worden echter pas opgenomen op het moment dat de categorie door KOOP is vastgesteld.
 
 ### Documenten/Bijlagen
+
 Bijlagen nemen een bijzondere positie in binnen de OpenWoo.app, ze vormen de kern van de naar de bezoeker over te dragen informatie en zijn het centrale onderdeel van de Woo. De manier waarop deze worden getoond wordt beïnvloed door labels. Daarvoor gelden de volgende regels:
 
 | Label                   | Effect van label                                                                                              |
@@ -110,9 +113,9 @@ Bijlagen nemen een bijzondere positie in binnen de OpenWoo.app, ze vormen de ker
 
 > **Spelregels omtrend labels**
 >
-> - Het is mogelijk om als organisatie zelf extra labels toe te voegen, als deze het juist format volgen `woo_[[labelnaam]]]` worden deze automatisch overgenomen in de weergave door boven de rij `Bijlagen` een extra rij toe te voegen in de form `[[labelnaam]]: Alle hieraan gekoppelde bestanden`.
-> - Bestanden die geen andere label hebben dan `woo_publicatie` worden getoond in de rij `Bijlagen`. 
-> - Als bestanden meerdere labels hebben worden ze op meerdere plekken getoond (met uitzondering van `Bijlagen` daar worden alleen bestanden getoond zonder label)
+> - Organisaties kunnen zelfstandig extra labels invoeren. Mits deze de structuur `woo_[[labelnaam]]]` aanhouden, worden ze direct geïntegreerd door een aanvullende rij boven `Bijlagen` te plaatsen met de aanduiding `[[labelnaam]]: Alle hieraan gekoppelde bestanden`.
+> - Bestanden die geen andere label hebben dan `woo_publicatie` worden getoond in de rij `Bijlagen`.
+> - Als bestanden die meerdere labels hebben worden ze op meerdere plekken getoond (met uitzondering van `Bijlagen` daar worden alleen bestanden getoond zonder label).
 > - Bestanden zonder het label `woo_publicatie` worden niet getoond (ook al zijn ze wel van een ander `woo_` label voorzien)
 
 ## Mappigns
@@ -128,21 +131,21 @@ Gebaseerd op: [VNG ZGW Standaard](https://vng.nl/projecten/zaakgericht-werken-ap
 | organisatie.naam                            | {{config}}                                       | Metadata                              |
 | organisatie.oin                             | {{config}}                                       | Metadata                              |
 | volgnummer                                  | (Empty)                                          | n.v.t                                 |
-| titel                                       | values.case.subject_external                     | Metadata, Index pagina, Detail pagina |
-| beschrijving                                | values.attribute.woo_beschrijving                | Metadata, Index pagina, Detail pagina |
-| samenvatting                                | values.attribute.woo_samenvatting                | Metadata, Index pagina, Detail pagina |
-| categorie                                   | values.attribute.woo_categorie                   | Metadata, Index pagina, Detail pagina |
-| publicatiedatum                             | values.attribute.woo_publicatiedatum             | Metadata, Index pagina, Detail pagina |
+| titel                                       | values.case.subject_external                     | Metadata, Indexpagina, Detailpagina |
+| beschrijving                                | values.attribute.woo_beschrijving                | Metadata, Indexpagina, Detailpagina |
+| samenvatting                                | values.attribute.woo_samenvatting                | Metadata, Indexpagina, Detailpagina |
+| categorie                                   | values.attribute.woo_categorie                   | Metadata, Indexpagina, Detailpagina |
+| publicatiedatum                             | values.attribute.woo_publicatiedatum             | Metadata, Indexpagina, Detailpagina |
 | metadata.besluitdatum                       | values.attribute.woo_datum_besluit               | Metadata                              |
 | metadata.volgnummer                         | (Empty)                                          | Metadata                              |
-| metadata.verzoek.ontvangstdatum             | values.case.date_of_registration                 | Metadata, Detail pagina               |
+| metadata.verzoek.ontvangstdatum             | values.case.date_of_registration                 | Metadata, Detailpagina               |
 | metadata.verzoek.status                     | (Empty)                                          | Metadata                              |
 | metadata.verzoek.ontvangerInformatieverzoek | (Empty)                                          | Metadata                              |
-| metadata.verzoek.informatieverzoek          | values.attribute.woo_informatieverzoek           | Detail pagina                         |
-| metadata.verzoek.inventarisatielijst        | values.attribute.woo_informatieverzoek           | Detail pagina                         |
-| metadata.verzoek.besluit                    | values.attribute.woo_informatieverzoek           | Detail pagina                         |
-| metadata.verzoek.termijnoverschrijding      | case.dateTarget - case.dateOfCompletion          | Detail pagina                         |
-| bijlagen                                    | values.attribute.woo_publicatie                  | Metadata, Detail pagina               |
+| metadata.verzoek.informatieverzoek          | values.attribute.woo_informatieverzoek           | Detailpagina                         |
+| metadata.verzoek.inventarisatielijst        | values.attribute.woo_informatieverzoek           | Detailpagina                         |
+| metadata.verzoek.besluit                    | values.attribute.woo_informatieverzoek           | Detailpagina                         |
+| metadata.verzoek.termijnoverschrijding      | case.dateTarget - case.dateOfCompletion          | Detailpagina                         |
+| bijlagen                                    | values.attribute.woo_publicatie                  | Metadata, Detailpagina               |
 
 ### Mapping vanuit zaaksysteem.nl search endpoint
 
@@ -155,21 +158,21 @@ Gebaseerd op: [xxllc-zaken mapping](https://github.com/CommonGateway/WooBundle/b
 | organisatie.naam                            | {{config}}                                       | Metadata                              |
 | organisatie.oin                             | {{config}}                                       | Metadata                              |
 | volgnummer                                  | (Empty)                                          | n.v.t                                 |
-| titel                                       | values.case.subject_external                     | Metadata, Index pagina, Detail pagina |
-| beschrijving                                | values.attribute.woo_beschrijving                | Metadata, Index pagina, Detail pagina |
-| samenvatting                                | values.attribute.woo_samenvatting                | Metadata, Index pagina, Detail pagina |
-| categorie                                   | values.attribute.woo_categorie                   | Metadata, Index pagina, Detail pagina |
-| publicatiedatum                             | values.attribute.woo_publicatiedatum             | Metadata, Index pagina, Detail pagina |
+| titel                                       | values.case.subject_external                     | Metadata, Indexpagina, Detailpagina |
+| beschrijving                                | values.attribute.woo_beschrijving                | Metadata, Indexpagina, Detailpagina |
+| samenvatting                                | values.attribute.woo_samenvatting                | Metadata, Indexpagina, Detailpagina |
+| categorie                                   | values.attribute.woo_categorie                   | Metadata, Indexpagina, Detailpagina |
+| publicatiedatum                             | values.attribute.woo_publicatiedatum             | Metadata, Indexpagina, Detailpagina |
 | metadata.besluitdatum                       | values.attribute.woo_datum_besluit               | Metadata                              |
 | metadata.volgnummer                         | (Empty)                                          | Metadata                              |
-| metadata.verzoek.ontvangstdatum             | values.case.date_of_registration                 | Metadata, Detail pagina               |
+| metadata.verzoek.ontvangstdatum             | values.case.date_of_registration                 | Metadata, Detailpagina               |
 | metadata.verzoek.status                     | (Empty)                                          | Metadata                              |
 | metadata.verzoek.ontvangerInformatieverzoek | (Empty)                                          | Metadata                              |
-| metadata.verzoek.informatieverzoek          | values.attribute.woo_informatieverzoek           | Detail pagina                         |
-| metadata.verzoek.inventarisatielijst        | values.attribute.woo_informatieverzoek           | Detail pagina                         |
-| metadata.verzoek.besluit                    | values.attribute.woo_informatieverzoek           | Detail pagina                         |
-| metadata.verzoek.termijnoverschrijding      | case.dateTarget - case.dateOfCompletion          | Detail pagina                         |
-| bijlagen                                    | values.attribute.woo_publicatie                  | Metadata, Detail pagina               |
+| metadata.verzoek.informatieverzoek          | values.attribute.woo_informatieverzoek           | Detailpagina                         |
+| metadata.verzoek.inventarisatielijst        | values.attribute.woo_informatieverzoek           | Detailpagina                         |
+| metadata.verzoek.besluit                    | values.attribute.woo_informatieverzoek           | Detailpagina                         |
+| metadata.verzoek.termijnoverschrijding      | case.dateTarget - case.dateOfCompletion          | Detailpagina                         |
+| bijlagen                                    | values.attribute.woo_publicatie                  | Metadata, Detailpagina               |
 
 Bijlagen
 
