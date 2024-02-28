@@ -23,7 +23,7 @@ const ResultsDisplaySwitch: React.FC<ResultsDisplaySwitchProps> = ({ layoutClass
       className={clsx(styles.container, layoutClassName && layoutClassName)}
     >
       <Button
-        appearance={isActive(displayKey, "cards") ? "primary-action-button" : "secondary-action-button"}
+        appearance={isActive(displayKey, "cards") ? "subtle-button" : "secondary-action-button"}
         className={styles.button}
         onClick={() => setDisplay({ [displayKey]: "cards" })}
         aria-label={t("Cards view")}

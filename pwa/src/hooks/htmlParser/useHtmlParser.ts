@@ -16,9 +16,21 @@ import { getCode } from "./code/getCode";
 import { getAlert } from "./alert/getAlert";
 import { useMarkdownDirectories } from "../useMarkdownDirectories";
 import { getSvg } from "./svg/getSvg";
+import { useTranslation } from "react-i18next";
+
+export type TAriaLabels = {
+  scrollRightButton: string;
+  scrollLeftButton: string;
+};
 
 export const useHtmlParser = (location: string) => {
   const { directories } = useMarkdownDirectories();
+  const { t } = useTranslation();
+
+  const ariabLabels = {
+    scrollLeftButton: t("Left scroll button"),
+    scrollRightButton: t("Right scroll button"),
+  };
 
   const options = {
     replace: ({ attribs, parent, children, name }: any) => {
@@ -89,7 +101,7 @@ export const useHtmlParser = (location: string) => {
       }
 
       if (attribs && (name === "code" || name === "pre")) {
-        return getCode(name, props, children, options);
+        return getCode(name, props, children, options, ariabLabels);
       }
     },
   };

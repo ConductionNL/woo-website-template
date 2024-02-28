@@ -56,6 +56,10 @@ import {
   Page,
   PageContent,
   RadioButton,
+  SpotlightSection,
+  Checkbox,
+  FormLabel,
+  FormField,
 } from "@utrecht/component-library-react";
 import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
@@ -77,6 +81,8 @@ import { useHeaderTopNavItems } from "../../hooks/useHeaderTopNavItems";
 import { useGatsbyContext } from "../../context/gatsby";
 import { SelectCreate } from "@conduction/components/lib/components/formFields";
 import { SELECT_CREATE, SELECT_MULTIPLE, SELECT_SINGLE } from "../../data/SelectData";
+import { Calendar } from "@utrecht/component-library-react/dist/Calendar";
+import { addWeeks, addYears } from "date-fns";
 
 export const ThemeTemplate: React.FC = () => {
   const [currentPage, setCurrentPage] = React.useState<number>(1);
@@ -129,6 +135,8 @@ export const ThemeTemplate: React.FC = () => {
     { label: "Default", value: "default" },
     { label: "Checked", value: "checked" },
   ];
+
+  const today = new Date();
 
   return (
     <Page>
@@ -246,6 +254,49 @@ export const ThemeTemplate: React.FC = () => {
               </Button>
             </ButtonGroup>
           </section>
+        </div>
+
+        <div>
+          <h3>Calendar</h3>
+          <section>
+            <FormField>
+              <Calendar
+                onCalendarClick={(date: string) => console.log(date)}
+                maxDate={addWeeks(new Date(), 2)}
+              />
+            </FormField>
+          </section>
+        </div>
+
+        <div>
+          <h3 className={styles.header}>Checkbox</h3>
+          <ButtonGroup className={styles.buttonContainer}>
+            <input type="checkbox"></input>
+            <FormField type="checkbox">
+              <Checkbox id="default" />
+              <FormLabel htmlFor="default" type="checkbox">
+                Default
+              </FormLabel>
+            </FormField>
+            <FormField type="checkbox">
+              <Checkbox checked id="checked" />
+              <FormLabel htmlFor="checked" type="checkbox">
+                Checked
+              </FormLabel>
+            </FormField>
+            <FormField type="checkbox">
+              <Checkbox disabled id="disabled" />
+              <FormLabel htmlFor="disabled" type="checkbox">
+                Disabled
+              </FormLabel>
+            </FormField>
+            <FormField type="checkbox">
+              <Checkbox checked disabled id="disabled" />
+              <FormLabel htmlFor="disabled" type="checkbox">
+                Checked Disabled
+              </FormLabel>
+            </FormField>
+          </ButtonGroup>
         </div>
 
         <div>
@@ -368,6 +419,63 @@ export const ThemeTemplate: React.FC = () => {
         <div>
           <h3 className={styles.header}>Seperator:</h3>
           <Separator />
+        </div>
+
+        <div>
+          <h3 className={styles.header}>Skip-link:</h3>
+          <span>
+            Press <Code>tab</Code> to see the Skip-Link
+          </span>
+        </div>
+
+        <div>
+          <h3 className={styles.header}>SpotlightSections:</h3>
+          <section className={styles.section}>
+            <span>Normal:</span>
+            <SpotlightSection>
+              <Heading2>SpotlightSection</Heading2>
+              <Paragraph>
+                <Link href="https://www.uabc.nl/?osc=uabc" external>
+                  This is a link in a SpotlightSection
+                </Link>
+              </Paragraph>
+              <Paragraph>
+                Paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis hic neque commodi.
+                Dignissimos soluta corrupti illo at eveniet autem blanditiis sit debitis quam quae officiis quisquam
+                alias, nulla doloremque ipsa.
+              </Paragraph>
+            </SpotlightSection>
+
+            <span>Info:</span>
+            <SpotlightSection aside type="info">
+              <Heading2>SpotlightSection Info</Heading2>
+              <Paragraph>
+                <Link href="https://www.uabc.nl/?osc=uabc" external>
+                  This is a link in a SpotlightSection
+                </Link>
+              </Paragraph>
+              <Paragraph>
+                Paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis hic neque commodi.
+                Dignissimos soluta corrupti illo at eveniet autem blanditiis sit debitis quam quae officiis quisquam
+                alias, nulla doloremque ipsa.
+              </Paragraph>
+            </SpotlightSection>
+
+            <span>Warning:</span>
+            <SpotlightSection aside type="warning">
+              <Heading2>SpotlightSection Warning</Heading2>
+              <Paragraph>
+                <Link href="https://www.uabc.nl/?osc=uabc" external>
+                  This is a link in a SpotlightSection
+                </Link>
+              </Paragraph>
+              <Paragraph>
+                Paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis hic neque commodi.
+                Dignissimos soluta corrupti illo at eveniet autem blanditiis sit debitis quam quae officiis quisquam
+                alias, nulla doloremque ipsa.
+              </Paragraph>
+            </SpotlightSection>
+          </section>
         </div>
 
         <div>
@@ -500,9 +608,11 @@ export const ThemeTemplate: React.FC = () => {
             <InputCheckbox name="default" label="default" {...{ register, errors, control }} />
             <InputCheckbox name="Checked" label="Checked" defaultChecked {...{ register, errors, control }} />
 
+            <InputCheckbox name="Disabled" label="Disabled" disabled {...{ register, errors, control }} />
+
             <InputCheckbox
-              name="Disabled"
-              label="Disabled"
+              name="CheckedDisabled"
+              label="Checked Disabled"
               defaultChecked
               disabled
               {...{ register, errors, control }}
@@ -511,7 +621,7 @@ export const ThemeTemplate: React.FC = () => {
         </div>
 
         <div>
-          <h3 className={styles.header}>Checkbox</h3>
+          <h3 className={styles.header}>Download Card</h3>
           <DownloadCard
             label={"Download.png"}
             labelTooltip={{
