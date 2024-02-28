@@ -2,15 +2,19 @@
 
 > **Ondersteuning en bijeenkomsten**
 >
+> 
 > Meer weten over deze oplossing? Dat kan! Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder. Uiteraard kan je ook altijd mailen naar [info@conduction.nl](mailto:info@conduction.nl)
 >
-> Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd. De eerst volgende [community meeting is 14](https://www.linkedin.com/events/openwoo-appcommunitymeeting7161351960980320256/comments/). 
+> Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd. 
+> [14 Maart 11:00 | Community Meeting](https://www.linkedin.com/events/openwoo-appcommunitymeetingmaar7164180127860383744/comments/). 
+> [25 Maart 13:13 | Webinar Sim-Groep](https://www.simgroep.nl/toekomstbestendige-woo-oplossing)
+> 
+> Terug kijken afgelopen webinars en meetings?
 >
-> Terug kijken afgelopen webinars?
->
-> - [OpenGemeente Woobinar 17-11-2023](https://vimeo.com/909134953)
-> - [xxllnc Demo 19-12-2023](https://www.youtube.com/watch?v=_FGpUYH1yd0)
-> - [xxllnc Woobinar 17-11-2023](https://www.youtube.com/watch?v=NCnLDEoPh5A)
+> - [14-02-2024 | Community meeting](https://www.youtube.com/watch?v=ri5U8x-lsxo)
+> - [30-01-2024 | OpenGemeente Woobinar](https://vimeo.com/909134953)
+> - [19-12-2023 | xxllnc Demo ](https://www.youtube.com/watch?v=_FGpUYH1yd0)
+> - [17-11-2023 | xxllnc Woobinar ](https://www.youtube.com/watch?v=NCnLDEoPh5A)
 
 De Wet Open Overheid (WOO) is een initiatief gericht op het verbeteren van de openbaarheid van overheidsinformatie. Het doel is om overheidsinformatie beter toegankelijk te maken voor iedereen. Meer informatie over de Wet Open Overheid kan [hier](https://www.open-overheid.nl/themas/wet-open-overheid/) worden gevonden.
 

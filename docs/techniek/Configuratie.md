@@ -39,6 +39,7 @@ Voor het kunnen publiceren van zaken vanuit het zaaksysteem is het belangrijk da
 - OpenWoo.app kijkt alleen naar eigenschappen die vooraf worden gegaan door `woo_`
 - Er zijn algemene eigenschappen (geldend voor alle categorien) en specifieke eigenschapen (alleen geldend voor bepaalde categoerien)
 - Voor de gedefineerde categeriën volgen we de [informatiecategorieen-en-werkdefinities](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/informatiecategorieen-en-werkdefinities) van koop
+- Voor de velden volgen we daarnaast ook [diwoo](https://standaarden.overheid.nl/diwoo/metadata/diwoo-handleiding-sitemapindex-en-sitemaps).
 - Naast deze categoerien mag een organisatie ook eigen categorien voeren maar dan worden alleen de algemene eigenschappen over genomen
 
 Het is niet per definitie nodig om alle eigenschappen in het bron systeem handmatig in te regelen en vullen, sommige eigenschapen kunnen worden overgenomen uit algemene metadata van een bron systeem. Kijk onder [Mappigns](#Mappigns) om te zien welke eigenschappen automatisch worden gevuld.
