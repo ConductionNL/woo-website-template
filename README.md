@@ -28,6 +28,12 @@ De implementatie van de Wet Open Overheid brengt twee kernuitdagingen met zich m
 
 Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Management Systeem (CMS) of door levering vanuit één systeem. Handmatige publicatie van alle overheidsinformatie zou een aanzienlijke personele inzet vereisen, wat onpraktisch is. Daarbij komt het voor dat verscheidende categorieën vaak verdeeld zijn over meerdere systemen, wat de situatie verder compliceert.
 
+## Deelnemende leveranciers
+
+| Conduction                                                                              | Xxllnc                                                                           | Open Gemeente                                                                                     | Sim Groep                                                                      | Acato                                                                          | Notubiz | Io |
+|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| [<img src="./docs/logos/conduction_svg.svg" height="30" />](https://www.conduction.nl/) | [<img src="./docs/logos/xxllnc_orgineel.svg" height="30" />](https://xxllnc.nl/) | [<img src="./docs/logos/opengemeente_orgineel.svg" height="30" />](https://www.opengemeenten.nl/) | [<img src="./docs/logos/sim_svg.svg" height="30" />](https://www.simgroep.nl/) | [<img src="./docs/logos/acato_orgineel.svg" height="30" />](https://acato.nl/) | [<img src="./docs/logos/notubiz_svg.svg" height="30" />](https://www.notubiz.nl/)| [<img src="./docs/logos/io_orgineel.svg" height="30" />](https://www.drupalvoorgemeenten.nl/)|
+
 ## Belangrijkste functionaliteiten en voordelen van OpenWoo.app:
 - **Centrale Index Pagina:** Een overzichtelijke locatie voor alle openbare data van uw organisatie, verbetert de vindbaarheid van informatie.
 - **Multibron Dataweergave:** Een naadloze integratie en presentatie van data uit diverse bronnen, zoals het zaaksysteem, websites, raadsinformatiesystemen en archieven.
