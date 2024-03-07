@@ -1,0 +1,54 @@
+@startuml
+title Publicatie platformen
+footer: OpenWoo.app
+header: OpenWoo.app
+
+' Publicatie platformen (Laag 5 UI)
+frame "Publicatie platformen " {
+    actor "KOOP"  as KOOP #cce5ff
+    actor   "WOOGLE" as WOOGLE #cce5ff
+    interface "Website" AS Website #1abc9c
+    interface "Thema site" as Themasite #1abc9c
+    interface "Zoek pagina" as Searchsite #1abc9c
+}
+
+' Services(Laag 4)
+frame "Services" {
+    process "OpenWoo Service"  as OWS #1abc9c
+}
+
+' Integratie (Laag 3)
+frame "Integratie" {
+    database "Open Index"  as OI #1abc9c
+}
+
+' Bronnen (Laag 2)
+frame "API" {
+    component "Zaaksysteem" as Zaaksysteem  #cce5ff
+    component "CMS" as CMS  #cce5ff
+    component "Raads informatie systeem" as Raadsinfo  #cce5ff
+    component "eDepot" as eDepot  #cce5ff
+    component "DMS" as DMS  #cce5ff
+    component "VTH" as VTH  #cce5ff
+}
+
+' Relationships
+KOOP -down-> OI : Indexeerd (XML Sitemap)
+WOOGLE -down-> OI : Indexeerd (API)
+Website -down-> OI : Bevraagd (API)
+Themasite -down-> OI : Bevraagd (API)
+Searchsite -down-> OI : Bevraagd (API)
+OWS ..> OI: Slaat op in
+
+OWS -down-> CMS : Scrapes periodically\nUses as source
+OWS -down-> Zaaksysteem : Scrapes periodically\nUses as source
+OWS -down-> Raadsinfo : Scrapes periodically\nUses as source
+OWS -down-> eDepot : Scrapes periodically\nUses as source
+OWS -down-> DMS : Scrapes periodically\nUses as source
+OWS -down-> VTH : Scrapes periodically\nUses as source
+
+' Notifications
+CMS -up-> OWS : Notifies of changes or deletes
+Zaaksysteem -up-> OWS : Notifies of changes or deletes
+
+@enduml

@@ -19,14 +19,14 @@ frame "Integratie" {
 }
 
 ' Bronnen (Laag 2)
-frame "Bronnen" {
+frame "API" {
     database "Zaaksysteem (ZGW)" as ZRC #cce5ff
 }
 
 
+Searchsite -down-> OI : Bevraagd (API)
 OWS -down-> ZRC: Indexeerd
 OWS ..> OI: Slaat op in
-
-Searchsite -down-> IO : Bevraagd (API)
+ZRC ..-> OWS : Notifies of changes or deletes
 
 @enduml

@@ -19,13 +19,13 @@ frame "Integratie" {
 }
 
 ' Bronnen (Laag 2)
-frame "Bronnen" {
+frame "API" {
     database "Website (CMS)" as CMS #cce5ff
 }
 
 OWS -down-> CMS: Indexeerd
 OWS ..> OI: Slaat op in
 
-Searchsite -down-> IO : Bevraagd (API)
+Website -down-> OI : Bevraagd (API)
 
 @enduml
