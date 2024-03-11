@@ -13,6 +13,7 @@ import Buren from "./../../static/configFiles/buren.json";
 import Albrandswaard from "./../../static/configFiles/albrandswaard.json";
 import StedeBroec from "./../../static/configFiles/stede-broec.json";
 import Lansingerland from "./../../static/configFiles/lansingerland.json";
+import Localhost from "./../../static/configFiles/localhost.json";
 import Waddinxveen from "./../../static/configFiles/waddinxveen.json";
 import RijssenHolten from "./../../static/configFiles/rijssen-holten.json";
 import HoekscheWaard from "./../../static/configFiles/hoeksche-waard.json";
@@ -147,6 +148,9 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "texel.openwoo.app":
       return Texel;
 
+    case "localhost":
+      return Localhost;
+
     default:
       return OpenWebconcept;
   }
@@ -172,6 +176,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Gouda", value: "gouda-theme" },
       { label: "Hoeksche Waard", value: "hoeksche-waard" },
       { label: "Lansingerland", value: "lansingerland" },
+      { label: "Localhost", value: "localhost" },
       { label: "Noordwijk", value: "noordwijk-theme" },
       { label: "Ridderkerk", value: "ridderkerk" },
       { label: "Rijssen-Holten", value: "rijssen-holten" },
