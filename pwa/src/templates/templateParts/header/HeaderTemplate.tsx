@@ -18,11 +18,15 @@ export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName 
   return (
     <PageHeader className={clsx(layoutClassName && layoutClassName)}>
       <div role="navigation" aria-label="skip" className={styles.container}>
-        <div className={styles.skipLinkContainer}>
-          <SkipLink href="#filters" tabIndex={gatsbyContext.location.pathname === "/" ? 0 : -1}>
+        <div>
+          <SkipLink
+            href="#filters"
+            tabIndex={gatsbyContext.location.pathname === "/" ? 0 : -1}
+            className={styles.skipLink}
+          >
             {t("Skip to filters")}
           </SkipLink>
-          <SkipLink href="#mainContent" tabIndex={0}>
+          <SkipLink href="#mainContent" tabIndex={0} className={styles.skipLink}>
             {t("Skip to main content")}
           </SkipLink>
         </div>
