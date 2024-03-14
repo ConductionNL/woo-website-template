@@ -2,15 +2,19 @@
 
 > **Ondersteuning en bijeenkomsten**
 >
+> 
 > Meer weten over deze oplossing? Dat kan! Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder. Uiteraard kan je ook altijd mailen naar [info@conduction.nl](mailto:info@conduction.nl)
 >
-> Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd. De eerst volgende [community meeting is 14](https://www.linkedin.com/events/openwoo-appcommunitymeeting7161351960980320256/comments/). 
+> Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd. 
+> [14 Maart 11:00 | Community Meeting](https://www.linkedin.com/events/openwoo-appcommunitymeetingmaar7164180127860383744/comments/). 
+> [25 Maart 13:13 | Webinar Sim-Groep](https://www.simgroep.nl/toekomstbestendige-woo-oplossing)
+> 
+> Terug kijken afgelopen webinars en meetings?
 >
-> Terug kijken afgelopen webinars?
->
-> - [OpenGemeente Woobinar 17-11-2023](https://vimeo.com/909134953)
-> - [xxllnc Demo 19-12-2023](https://www.youtube.com/watch?v=_FGpUYH1yd0)
-> - [xxllnc Woobinar 17-11-2023](https://www.youtube.com/watch?v=NCnLDEoPh5A)
+> - [14-02-2024 | Community meeting](https://www.youtube.com/watch?v=ri5U8x-lsxo)
+> - [30-01-2024 | OpenGemeente Woobinar](https://vimeo.com/909134953)
+> - [19-12-2023 | xxllnc Demo ](https://www.youtube.com/watch?v=_FGpUYH1yd0)
+> - [17-11-2023 | xxllnc Woobinar ](https://www.youtube.com/watch?v=NCnLDEoPh5A)
 
 De Wet Open Overheid (WOO) is een initiatief gericht op het verbeteren van de openbaarheid van overheidsinformatie. Het doel is om overheidsinformatie beter toegankelijk te maken voor iedereen. Meer informatie over de Wet Open Overheid kan [hier](https://www.open-overheid.nl/themas/wet-open-overheid/) worden gevonden.
 
@@ -23,6 +27,12 @@ De implementatie van de Wet Open Overheid brengt twee kernuitdagingen met zich m
    Overheden moeten informatie proactief te publiceren. Dit betekent dat publicatie onderdeel moet worden van het normale werkproces. Hiermee is het richting de toekomst niet haalbaar om Woo-publicaties handmatig via een apart systeem (bijvoorbeeld CMS-website) te laten verlopen.
 
 Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Management Systeem (CMS) of door levering vanuit één systeem. Handmatige publicatie van alle overheidsinformatie zou een aanzienlijke personele inzet vereisen, wat onpraktisch is. Daarbij komt het voor dat verscheidende categorieën vaak verdeeld zijn over meerdere systemen, wat de situatie verder compliceert.
+
+## Deelnemende leveranciers
+
+| Conduction                                                                              | Xxllnc                                                                           | Open Gemeente                                                                                     | Sim Groep                                                                      | Acato                                                                          | Notubiz | Io |
+|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/conduction_svg.svg" height="30" />](https://www.conduction.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/xxllnc_orgineel.svg" height="30" />](https://xxllnc.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/opengemeente_orgineel.svg" height="30" />](https://www.opengemeenten.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/sim_svg.svg" height="30" />](https://www.simgroep.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/acato_orgineel.svg" height="30" />](https://acato.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/notubiz_svg.svg" height="30" />](https://www.notubiz.nl/)| [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/io_orgineel.svg" height="30" />](https://www.drupalvoorgemeenten.nl/)|
 
 ## Belangrijkste functionaliteiten en voordelen van OpenWoo.app:
 - **Centrale Index Pagina:** Een overzichtelijke locatie voor alle openbare data van uw organisatie, verbetert de vindbaarheid van informatie.
@@ -65,10 +75,11 @@ Op dit moment wordt de OpenWoo.app al door een aantal organisaties gebruikt
 
 | Organisatie | Type | Woo Pagina | Woo Bron | Status |
 |-------------|------|------------|--------------|--------|
-| [Noordwijk](https://www.noordwijk.nl/) | Gemeente |  [Pagina](https://conductionnl.github.io/woo-website-noordwijk/) | Zaaksysteem.nl  | Acceptatie |
-| [Tubbergen](https://www.tubbergen.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-tubbergen/) | Zaaksysteem.nl  | Acceptatie |
+| [Noordwijk](https://www.noordwijk.nl/) | Gemeente |  [Pagina](open.noordwijk.nl) | Zaaksysteem.nl  | Productie |
 | [Epe](https://www.epe.nl/) | Gemeente |[Pagina](https://open.epe.nl/) | Zaaksysteem | Productie  |
+| [Tubbergen](https://www.tubbergen.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-tubbergen/) | Zaaksysteem.nl  | Acceptatie |
 | [Dinkelland](https://www.dinkelland.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-dinkelland/) | Zaaksysteem.nl | Acceptatie |
+| [Gouda](https://www.gouda.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-gouda/) | Zaaksysteem.nl | Acceptatie |
 | [Rotterdam (Alleen vormgeving)](https://www.rotterdam.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-rotterdam/) | Demo Omgeving                   | Demo       |
 | [Noaberkracht](https://www.dinkelland.nl/noaberkracht-dinkelland-tubbergen) | Samenwerkingsverband | [Pagina](https://conductionnl.github.io/woo-website-noaberkracht/) | Zaaksysteem.nl | Acceptatie |
 | [Leiden (Alleen vormgeving)](https://gemeente.leiden.nl/) | Gemeente | [Pagina](https://conductionnl.github.io/woo-website-leiden/) | Demo Omgeving           | Demo       |

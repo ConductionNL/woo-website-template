@@ -1,0 +1,25 @@
+@startuml
+title Basis Architectuur
+footer: OpenWoo.app
+header: OpenWoo.app
+
+' Publicatie platformen (Laag 5 UI)
+frame "UI (laag 5)" {
+    interface "Publicatie Platform" as pp #1abc9c
+}
+
+
+' Integratie (Laag 3)
+frame "Integratie (laag 3)" {
+    database "Motorblok"  as motorblok #1abc9c
+}
+
+' Bronnen (Laag 2)
+frame "Bronnen (laag 2)" {
+    database "bronnen" as bronnen #cce5ff
+}
+
+
+pp -down-> motorblok: Zoekt in
+motorblok -down-> bronnen: Haalt op uit
+@enduml

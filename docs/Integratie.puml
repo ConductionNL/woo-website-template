@@ -1,0 +1,35 @@
+@startuml
+title Motorblok
+footer: OpenWoo.app
+header: OpenWoo.app
+
+' Publicatie platformen (Laag 5 UI)
+frame "Publicatie platformen " {
+    interface "Afnemer" as Searchsite #1abc9c
+}
+
+' Services(Laag 4)
+frame "Services" {
+    process "OpenWoo Service"  as OWS #1abc9c
+}
+
+' Integratie (Laag 3)
+frame "Integratie" {
+    database "Open Index"  as OI #1abc9c
+}
+
+' Bronnen (Laag 2)
+frame "API" {
+    component "Bronnen" as Bronnen  #cce5ff
+}
+
+' Relationships
+Searchsite -down-> OI : Bevraagd (API)
+OWS ..> OI: Slaat op in
+
+OWS -down-> Bronnen : Scrapes periodically\nUses as source
+
+' Notifications
+Bronnen -up-> OWS : Notifies of changes or deletes
+
+@enduml
