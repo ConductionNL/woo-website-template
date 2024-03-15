@@ -41,6 +41,7 @@ export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName 
             tabIndex={
               gatsbyContext.location.pathname === "/theme" || gatsbyContext.location.pathname === "/theme/" ? 0 : -1
             }
+            className={styles.skipLink}
           >
             {t("Skip to current work")}
           </SkipLink>

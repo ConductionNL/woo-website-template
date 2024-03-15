@@ -105,6 +105,10 @@
 .dynamicSectionTitle {
   margin-block-end: 18px !important;
   color: var(--utrecht-page-footer-heading-color, inherit) !important;
+  font-family: var(
+    --utrecht-page-footer-heading-font-family,
+    inherit
+  ) !important;
 }
 
 .dynamicSectionContent {

@@ -14,6 +14,13 @@
   border-bottom-color: var(--conduction-card-header-hover-border-bottom-color);
 }
 
+.cardContainer:hover .title > * {
+  color: var(
+    --conduction-card-header-title-hover-color,
+    var(--conduction-card-header-title-color)
+  ) !important;
+}
+
 .title {
   overflow-wrap: break-word;
 }

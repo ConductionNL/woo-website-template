@@ -257,6 +257,13 @@
   ) !important;
 }
 
+.cardContainer:hover .title > * {
+  color: var(
+    --conduction-card-header-title-hover-color,
+    var(--conduction-card-wrapper-title-color)
+  ) !important;
+}
+
 .secondaryNavContainer {
   display: flex;
   justify-content: flex-end;
@@ -282,6 +289,17 @@
   background-color: unset;
   margin-inline-end: 8px;
   margin-inline-start: 18px;
+}
+
+@media only screen and (max-width: 992px) {
+  .logoDesktopNavigation {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .logoDesktopNavigation {
+    display: none;
+  }
 }
 
 .logoDesktop {

@@ -4,6 +4,10 @@
 
 .header {
   z-index: 2;
+  border-block-start: var(--utrecht-page-header-border-block-start);
+  border-block-end: var(--utrecht-page-header-border-block-end);
+  border-inline-start: var(--utrecht-page-header-border-inline-start);
+  border-inline-end: var(--utrecht-page-header-border-inline-end);
 }
 
 .pageContent {

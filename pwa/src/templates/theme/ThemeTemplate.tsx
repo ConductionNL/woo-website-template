@@ -260,10 +260,7 @@ export const ThemeTemplate: React.FC = () => {
           <h3>Calendar</h3>
           <section>
             <FormField>
-              <Calendar
-                onCalendarClick={(date: string) => console.log(date)}
-                maxDate={addWeeks(new Date(), 2)}
-              />
+              <Calendar onCalendarClick={(date: string) => console.log(date)} maxDate={addWeeks(new Date(), 2)} />
             </FormField>
           </section>
         </div>
@@ -314,6 +311,13 @@ export const ThemeTemplate: React.FC = () => {
           <p>abcdefghijklmnopqrstuvwxyz</p>
           <p>0123456789</p>
           <p>The lazy dog jumped over the quick brown fox</p>
+        </div>
+
+        <div>
+          <h3 className={styles.header}>Focus:</h3>
+          <span>
+            Press <Code>tab</Code> to see the Focus of the elements
+          </span>
         </div>
 
         <div>
@@ -666,13 +670,13 @@ export const ThemeTemplate: React.FC = () => {
 
             <span>NavBar:</span>
             <Container layoutClassName={styles.primaryNavContainer}>
-              <div className={clsx(styles.logoContainer)}>
+              <div className={clsx(styles.logoContainer, styles.logoDesktopNavigation)}>
                 <Logo variant="navbar" onClick={() => console.log("click")} />
               </div>
               <PrimaryTopNav
                 mobileLogo={
                   <div className={clsx(styles.logoContainer, styles.logoMobile)}>
-                    <Logo onClick={() => console.log("click")} />
+                    <Logo variant="navbar" onClick={() => console.log("click")} />
                   </div>
                 }
                 items={headerTopNavItems}
@@ -687,12 +691,12 @@ export const ThemeTemplate: React.FC = () => {
             <div>PrimaryTopNav:</div>
             <Container layoutClassName={styles.primaryNavContainer}>
               <div className={clsx(styles.logoContainer, styles.logoDesktop)}>
-                <Logo onClick={() => console.log("click")} />
+                <Logo variant="navbar" onClick={() => console.log("click")} />
               </div>
               <PrimaryTopNav
                 mobileLogo={
                   <div className={clsx(styles.logoContainer, styles.logoMobile)}>
-                    <Logo onClick={() => console.log("click")} />
+                    <Logo variant="navbar" onClick={() => console.log("click")} />
                   </div>
                 }
                 items={headerTopNavItems}
