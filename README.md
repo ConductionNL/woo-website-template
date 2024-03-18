@@ -17,7 +17,7 @@
 > - [19-12-2023 | xxllnc Demo ](https://www.youtube.com/watch?v=_FGpUYH1yd0)
 > - [17-11-2023 | xxllnc Woobinar ](https://www.youtube.com/watch?v=NCnLDEoPh5A)
 
-De Wet Open Overheid (WOO) is een initiatief gericht op het verbeteren van de openbaarheid van overheidsinformatie. Het doel is om overheidsinformatie beter toegankelijk te maken voor iedereen. Meer informatie over de Wet Open Overheid kan [hier](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking) worden gevonden.
+De Wet Open Overheid (Woo) is een initiatief gericht op het verbeteren van de openbaarheid van overheidsinformatie. Het doel is om overheidsinformatie beter toegankelijk te maken voor iedereen. Meer informatie over de Wet Open Overheid kan [hier](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking) worden gevonden.
 
 De implementatie van de Wet Open Overheid brengt twee kernuitdagingen met zich mee:
 
