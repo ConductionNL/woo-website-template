@@ -34,6 +34,14 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
   const queryClient = new QueryClient();
   const getItems = useOpenWoo(queryClient).getOne(wooItemId);
 
+  function stripHtml(html: any) {
+    let tmp = document.createElement("div");
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || "";
+  }
+
+  const sortAlphaNum = (a: any, b: any) => a.titel.localeCompare(b.titel, i18n.language, { numeric: true });
+
   return (
     <Page>
       <PageContent className={styles.container}>
@@ -98,7 +106,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       aria-label={`${t("Summary")}, ${getItems.data.samenvatting}`}
                     >
                       <TableCell>{t("Summary")}</TableCell>
-                      <TableCell>{getItems.data.samenvatting}</TableCell>
+                      <TableCell>{stripHtml(stripHtml(getItems.data.samenvatting))}</TableCell>
                     </TableRow>
                   )}
                   {getItems.data.beschrijving && (
@@ -108,7 +116,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       aria-label={`${t("Description")}, ${getItems.data.beschrijving}`}
                     >
                       <TableCell>{t("Description")}</TableCell>
-                      <TableCell>{getItems.data.beschrijving}</TableCell>
+                      <TableCell>{stripHtml(stripHtml(getItems.data.beschrijving))}</TableCell>
                     </TableRow>
                   )}
 
@@ -256,7 +264,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       <TableCell id="attachmentsName">{t("Attachments")}</TableCell>
                       <TableCell>
                         <UnorderedList id="attachmentsData">
-                          {getItems.data.bijlagen.map(
+                          {getItems.data.bijlagen.sort(sortAlphaNum).map(
                             (bijlage: any, idx: number) =>
                               bijlage.titel && (
                                 <UnorderedListItem key={idx}>
