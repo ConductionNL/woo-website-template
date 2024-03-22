@@ -69,6 +69,7 @@
     "date-fns": "^2.30.0",
     "dateformat": "^5.0.3",
     "dedent": "^1.5.1",
+    "es-abstract": "^1.22.5",
     "gatsby": "^5.13.3",
     "gatsby-plugin-breadcrumb": "^12.3.2",
     "gatsby-plugin-html-attributes": "^1.0.5",
