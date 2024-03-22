@@ -1,25 +1,41 @@
 @startuml
 title Federatie
 
-' User Interface Component
-interface "Landelijke API" as Api #1abc9c
 
-' Backend Components
-component "NLX/FSC/FDS" as NLX #cce5ff
-component "Motorblok" as Org1 #1abc9c
-component "Motorblok" as Org2 #1abc9c
-component "Motorblok" as Org3 #1abc9c
-component "Bronnen" as BronnenOrg1 #cce5ff
-component "Bronnen" as BronnenOrg2 #cce5ff
-component "Bronnen" as BronnenOrg3 #cce5ff
+frame "Landelijke voorziening 1" {
+    interface "Koophulpje" as KOOP #1abc9c
+    component "Landelijke API" as Api #1abc9c
+    component "NLX Outway" as NLX #cce5ff
+}
+
+frame "Organisatie 1" {
+    component "NLX Inway" as Org1 #cce5ff
+    component "Open Index" as OI1 #1abc9c
+    component "Bronnen" as BronnenOrg1 #cce5ff
+}
+
+frame "Organisatie 2" {
+    component "NLX Inway" as Org2 #cce5ff
+    component "Open Index" as OI2 #1abc9c
+    component "Bronnen" as BronnenOrg2 #cce5ff
+}
+
+frame "Organisatie 3" {
+    component "Open Index" as OI3 #1abc9c
+    component "Bronnen" as BronnenOrg3 #cce5ff
+}
 
 ' Relationships
-Api -down-> NLX : Connected trough outway
-NLX -down-> Org1 : org 1 Connected trough inway
-NLX -down-> Org2 : org 2 Connected trough inway
-NLX -down-> Org3 : org 3 Connected trough inway
-Org1 -down-> BronnenOrg1 : Internal connection
-Org2 -down-> BronnenOrg2 : Internal connection
-Org3 -down-> BronnenOrg3 : Internal connection
+KOOP -down-> Api : Ajax call
+Api -down-> NLX : Bevragen via NLX
 
+Api -down-> OI3 : Federatieve zoekvraag
+NLX -down-> Org1 : Federatieve zoekvraag
+NLX -down-> Org2 : Federatieve zoekvraag
+Org1 -down-> OI1 : Bevragen bij de bron
+Org2 -down-> OI2  : Bevragen bij de bron
+OI1 -down-> BronnenOrg1 : Internal connection
+OI1 --> OI2: Zoeken bij de buren
+OI2 -down-> BronnenOrg2 : Bevragen bij de bron
+OI3  -down-> BronnenOrg3 : Bevragen bij de bron
 @enduml

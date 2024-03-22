@@ -88,14 +88,17 @@ De integratievoorziening "scraped" elke nacht alle relevante informatie en bouwt
 
 Het bovenstaande proces zorgt ervoor dat het zaaksysteem leidend is en dat zaken zowel kunnen worden gepubliceerd als worden gedepubliceerd.
 
-## Federatie (via OpenCatalogi)
+## Integraal (Organisatiebreed) zoeken
+De kern van de Woo is het zoeken in de openbare informatie van een overheid organisatie, hierbij zou het in theorie niet mogen uitmaken in welke bron/applicatie informatie staat. Deze vorm van bron en domein overstijgend zoeken kennen we vanuit overheid architectuur al langer en noemen we doorgaans integrale zoekvraag.
 
-OpenWoo.app maakt gebruik van het federatieve stelsel van [OpenCatalogi](https://opencatalogi.nl/) om verschillende integratievoorzieningen samen te binden. Hierbij verhoudt de organisatiespecifieke voorziening zich tot wat we binnen OpenCatalogi een catalogus noemen.
+OpenWoo.app geeft invulling aan deze integrale zoekvraag door gebruik te maken van het commonground component [Open Index](), wat een standaardisatie is op reeds bestaande (en eventueel al binnen de organisatie beschikbare) tools. Waarin OpenWoo.app afwijkt is dat zij alleen publieke informatie in deze index opneemt waardoor een zoek index openbare informatie ontstaat. Dit heeft een aantal privacy, security en architectuur voordeelen.
 
-Dat betekent dat de integrale zoekvraag ook organisatie-overstijgend kan worden gesteld aan meerdere organisatie tegelijkertijd zonder dat er noodzaak is voor een landelijke index, dit concept is verder uitgewerkt in [koophulpje.nl](https://koophulpje.nl/) waarbij ook een voorziening is gerealiseerd voor het genereren van `robot.txt` en `sitemap.xml` bestanden. De facto is hiermee dus ook een landelijke Woo-API gerealiseerd met de beperking dat deze alleen organisaties bevat die participeren in OpenWoo.app
+Deze OpenIndex is echter ook buiten OpenWoo bruikbaar en kan bijvoorbeeld worden ingezet vanuit de website, zaaksysteem of klant contact centrum om burgers, inwoners en medewerkers van relevante informatie te voorzien.
 
-De reden dat we hebben gekozen voor OpenCatalogi is dat in deze `variant` van FSC géén PKI of overige certificaten nodig zijn. Dat lijnt beter uit met de gedachte dat dit open data betreft die conform de wet juist anoniem toegankelijk zou moeten zijn.
-
+## Federatief (Landelijk) zoeken
+OpenWoo.app maakt gebruik van de federatieve zoekvraag ontwikkeld binnen [OpenCatalogi](https://opencatalogi.nl/) om verschillende integrale zoekvragen virtueel samen te voegen.  Simpel gezegd roept de landelijke zoek API meerdere instanties van [Open Index]() aan en aggregeert de resultaten. Technisch zitten daar nog wat haken en ogen aan die binnen Open Index worden [uitgelegd]().
+Er word hierbij dus géén gebruik gemaakt van een landelijke index, het geen data duplicatie voorkomt en organisaties zelf in controlle houdt op hun publicaties. Dit dit concept is verder uitgewerkt in [koophulpje.nl](https://koophulpje.nl/) waarbij ook een voorziening is gerealiseerd voor het genereren van `robot.txt` en `sitemap.xml` bestanden (ten behoeve van KOOP). De facto is hiermee dus ook een landelijke Woo-API gerealiseerd met de beperking dat deze alleen organisaties bevat die participeren in OpenWoo.app
+De bevragingen tussen de federale zoekvraag en de verschillende organisaties kan via [NLX/FSC]( https://www.nlx.io/) lopen, of daarbuiten. Gezien het publieke bevragingen zijn op openbare informatie is NLX an zich niet verplicht en kan het inregelen van een PKI certificaat nodeloos complex zijn. Dat gezegd hebbende biedt NLX ook voordelen met betrekking tot het monitoren en loggen van verkeer.
 ![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Federatie.svg)
 
 ## Woo Publicatie-object
