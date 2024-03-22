@@ -33,9 +33,6 @@ export const Head: React.FC = () => {
         getPageTitle(translatedCrumbs, gatsbyContext.location) ?? "Error"
       }`}</title>
       <link rel="icon" type="svg" href={window.sessionStorage.getItem("FAVICON_URL") ?? ""} />
-      {window.sessionStorage.getItem("ANALYTICS_URL") || (
-        <script async src={window.sessionStorage.getItem("ANALYTICS_URL") ?? ""} />
-      )}
     </Helmet>
   );
 };
