@@ -13,6 +13,7 @@ import { navigate } from "gatsby";
 import { translateDate } from "../../../services/dateFormat";
 import { useTranslation } from "react-i18next";
 import { HorizontalOverflowWrapper } from "@conduction/components";
+import { removeHTMLFromString } from "../../../services/removeHTMLFromString";
 
 interface TableResultsTemplateProps {
   requests: any[];
@@ -55,15 +56,17 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
                 key={request._id}
                 onClick={() => navigate(request._id)}
                 tabIndex={0}
-                aria-label={`${request.titel},  ${
+                aria-label={`${removeHTMLFromString(removeHTMLFromString(request.titel))},  ${
                   request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")
                 } ${
                   window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true" ? `,${request.organisatie?.naam}` : ""
                 } ${window.sessionStorage.getItem("SHOW_CATEGORY") === "true" ? `, ${request.categorie}` : ""}, ${
-                  request.samenvatting ?? t("No summary available")
+                  removeHTMLFromString(removeHTMLFromString(request.samenvatting)) ?? t("No summary available")
                 }`}
               >
-                <TableCell>{request.titel ?? t("No subject available")}</TableCell>
+                <TableCell>
+                  {removeHTMLFromString(removeHTMLFromString(request.titel)) ?? t("No subject available")}
+                </TableCell>
                 <TableCell>
                   {request.publicatiedatum
                     ? translateDate(i18n.language, request.publicatiedatum)
@@ -90,7 +93,9 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
                   </>
                 )}
                 <TableCell>
-                  <div className={styles.description}>{request.samenvatting ?? t("No summary available")}</div>
+                  <div className={styles.description}>
+                    {removeHTMLFromString(removeHTMLFromString(request.samenvatting)) ?? t("No summary available")}
+                  </div>
                 </TableCell>
               </TableRow>
             ))}

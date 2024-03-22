@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
 import { CardHeader, CardHeaderDate, CardHeaderTitle, CardWrapper } from "@conduction/components";
 import { TOOLTIP_ID } from "../../../layout/Layout";
+import { removeHTMLFromString } from "../../../services/removeHTMLFromString";
 
 interface CardsResultsTemplateProps {
   requests: any[];
@@ -26,7 +27,7 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
             tabIndex={0}
             aria-label={`${
               request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")
-            }, ${request.titel}, ${request.samenvatting} ${
+            }, ${removeHTMLFromString(removeHTMLFromString(request.titel))}, ${removeHTMLFromString(removeHTMLFromString(request.samenvatting))} ${
               window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true" ? `,${request.organisatie?.naam}` : ""
             } ${
               window.sessionStorage.getItem("SHOW_CATEGORY") === "true"
@@ -39,11 +40,15 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
                 {request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")}
               </CardHeaderDate>
               <CardHeaderTitle className={styles.title}>
-                <Heading2>{request.titel ?? t("No title available")}</Heading2>
+                <Heading2>
+                  {removeHTMLFromString(removeHTMLFromString(request.titel)) ?? t("No title available")}
+                </Heading2>
               </CardHeaderTitle>
             </CardHeader>
 
-            <Paragraph className={styles.description}>{request.samenvatting}</Paragraph>
+            <Paragraph className={styles.description}>
+              {removeHTMLFromString(removeHTMLFromString(request.samenvatting))}
+            </Paragraph>
 
             {(window.sessionStorage.getItem("SHOW_CATEGORY") === "true" ||
               window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true") && (
