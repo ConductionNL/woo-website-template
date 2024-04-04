@@ -124,6 +124,13 @@
   align-items: center;
 }
 
+.multiRow {
+  display: flex;
+}
+.multiRow > div {
+  white-space: pre-wrap;
+}
+
 .iconLeft {
   margin-inline-end: var(--utrecht-icon-gap);
   color: var(--utrecht-page-footer-icon-color, inherit);
