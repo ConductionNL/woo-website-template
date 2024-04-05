@@ -81,9 +81,13 @@
   padding-block-end: var(--utrecht-breadcrumb-nav-padding-block-end);
 }
 
+.breadcrumbNavLink {
+  font-weight: var(--utrecht-breadcrumb-nav-link-font-weight);
+}
+
 .breadcrumbNavLink:hover {
   --utrecht-link-hover-color: var(
-    --utrecht-breadcrumb-link-hover-color
+    --utrecht-breadcrumb-nav-link-hover-color
   ) !important;
 }
 
