@@ -39,7 +39,7 @@ export const Head: React.FC = () => {
         img-src 'self' https://www.conduction.nl https://conduction.nl https://raw.githubusercontent.com/ConductionNL/woo-website-*;
         form-action 'self';
 
-        connect-src 'self' https://api.gateway.commonground.nu;
+        connect-src 'self' https://api.gateway.commonground.nu https://raw.githubusercontent.com/ConductionNL;
         `}
       ></meta>
       <title>{`Woo | ${window.sessionStorage.getItem("ORGANISATION_NAME")} | ${
