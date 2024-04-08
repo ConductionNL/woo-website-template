@@ -29,6 +29,19 @@ export const Head: React.FC = () => {
         class: window.sessionStorage.getItem("NL_DESIGN_THEME_CLASSNAME"),
       }}
     >
+      <meta
+        httpEquiv="Content-Security-Policy"
+        content={` 
+        default-src 'self';
+        base-uri 'self';
+        frame-src 'self';
+        frame-ancestors 'self';
+        img-src 'self' https://www.conduction.nl https://conduction.nl https://raw.githubusercontent.com/ConductionNL/woo-website-*;
+        form-action 'self';
+
+        connect-src 'self' https://api.gateway.commonground.nu;
+        `}
+      ></meta>
       <title>{`Woo | ${window.sessionStorage.getItem("ORGANISATION_NAME")} | ${
         getPageTitle(translatedCrumbs, gatsbyContext.location) ?? "Error"
       }`}</title>
@@ -36,3 +49,6 @@ export const Head: React.FC = () => {
     </Helmet>
   );
 };
+
+// script-src 'self';
+// media-src https://*.my-s3-endpoint.com;
