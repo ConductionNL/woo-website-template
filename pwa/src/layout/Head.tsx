@@ -26,19 +26,21 @@ export const Head: React.FC = () => {
         lang: currentLanguage,
       }}
       bodyAttributes={{
-        class: window.sessionStorage.getItem("NL_DESIGN_THEME_CLASSNAME"),
+        class: "zutphen-theme",
       }}
     >
       <meta
         httpEquiv="Content-Security-Policy"
-        content={` 
+        content={`
         default-src 'self';
         base-uri 'self';
         frame-src 'self';
-        frame-ancestors 'self';
-        img-src 'self' https://www.conduction.nl https://conduction.nl https://raw.githubusercontent.com/ConductionNL/woo-website-*;
+        img-src 'self' data: https://www.conduction.nl https://conduction.nl https://raw.githubusercontent.com/ConductionNL/ https://raw.githubusercontent.com/OpenCatalogi/ ;
         form-action 'self';
         connect-src 'self' https://api.gateway.commonground.nu https://raw.githubusercontent.com/ConductionNL/;
+        style-src 'self' 'unsafe-inline';
+        font-src * data:;
+        ${location.hostname === "localhost" && "script-src 'self' 'unsafe-eval';"}
         `}
       ></meta>
       <title>{`Woo | ${window.sessionStorage.getItem("ORGANISATION_NAME")} | ${
