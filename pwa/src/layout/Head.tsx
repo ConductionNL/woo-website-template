@@ -26,7 +26,7 @@ export const Head: React.FC = () => {
         lang: currentLanguage,
       }}
       bodyAttributes={{
-        class: "zutphen-theme",
+        class: window.sessionStorage.getItem("NL_DESIGN_THEME_CLASSNAME"),
       }}
     >
       <meta
