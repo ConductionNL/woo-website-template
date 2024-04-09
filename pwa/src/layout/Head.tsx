@@ -35,7 +35,7 @@ export const Head: React.FC = () => {
         default-src 'self';
         base-uri 'self';
         frame-src 'self';
-        img-src 'self' data: https://www.conduction.nl https://conduction.nl https://raw.githubusercontent.com/ConductionNL/ https://raw.githubusercontent.com/OpenCatalogi/ ;
+        img-src 'self' data: https://raw.githubusercontent.com/ConductionNL/;
         form-action 'self';
         connect-src 'self' https://api.gateway.commonground.nu https://raw.githubusercontent.com/ConductionNL/;
         style-src 'self' 'unsafe-inline';
@@ -50,6 +50,3 @@ export const Head: React.FC = () => {
     </Helmet>
   );
 };
-
-// script-src 'self';
-// media-src https://*.my-s3-endpoint.com;
