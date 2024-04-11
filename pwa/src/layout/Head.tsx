@@ -29,6 +29,20 @@ export const Head: React.FC = () => {
         class: window.sessionStorage.getItem("NL_DESIGN_THEME_CLASSNAME"),
       }}
     >
+      <meta
+        httpEquiv="Content-Security-Policy"
+        content={`
+        default-src 'self';
+        base-uri 'self';
+        frame-src 'self';
+        img-src 'self' data: https://raw.githubusercontent.com/ConductionNL/;
+        form-action 'self';
+        connect-src 'self' https://api.gateway.commonground.nu https://raw.githubusercontent.com/ConductionNL/;
+        style-src 'self' 'unsafe-inline';
+        font-src * data:;
+        ${location.hostname === "localhost" && "script-src 'self' 'unsafe-eval';"}
+        `}
+      ></meta>
       <title>{`Woo | ${window.sessionStorage.getItem("ORGANISATION_NAME")} | ${
         getPageTitle(translatedCrumbs, gatsbyContext.location) ?? "Error"
       }`}</title>

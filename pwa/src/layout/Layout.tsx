@@ -64,7 +64,7 @@ const Layout: React.FC<LayoutProps> = ({ children, pageContext, location }) => {
             <Document>
               <ToolTip id={TOOLTIP_ID} />
 
-              <Toaster position="bottom-right" />
+              {/* <Toaster position="bottom-right" /> Turned off for now */}
 
               <div className={styles.container}>
                 <Content {...{ children }} />
