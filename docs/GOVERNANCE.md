@@ -2,6 +2,12 @@
 
 Het succes en de continue verbetering van het OpenWoo.app project zijn afhankelijk van een effectieve governance-structuur. Een belangrijk onderdeel van deze structuur is de stuurgroep, die verantwoordelijk is voor het beoordelen en prioriteren van de issues die op GitHub worden ingediend, en voor het bepalen welke daarvan worden opgenomen in de roadmap van het project.
 
+## Community Meetings
+
+Iedereen die actief gebruik maakt OpenWoo.app of intresse heeft in de ontwikkeling hiervan is welkom op de maandenlijke community meeting. De community meetings zijn de plek waar we de roadmap doornemen daar proberen gemeenchapenlijk beslutien op te nemen
+
+De community meetings worden aangekondigd via openwoo.app.
+
 ## Stuurgroep
 
 De Stuurgroep is samengesteld uit verschillende leden die een breed scala aan perspectieven en expertise inbrengen in het project. De huidige deelnemende leden van de stuurgroep zijn:

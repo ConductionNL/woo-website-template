@@ -86,3 +86,5 @@ In onze opstelling maken we gebruik van NGINX- en PHP-containers om een duidelij
 * **Gegevensopslag buiten de cluster:** Voor gegevensopslag hanteren we de strategie om gegevens buiten de cluster te bewaren. Deze aanpak scheidt gegevens van de uitvoeringsomgeving en de netwerktoegangslaag, en biedt een extra beveiligingslaag. Gegevens die buiten de cluster zijn opgeslagen, kunnen grondig worden beschermd met specifieke beveiligingscontroles, versleuteling en back-upprocedures, onafhankelijk van de toepassing en netwerklagen.
 
 Deze driedelige benadering - NGINX-containers voor netwerktoegang, PHP-containers voor code-uitvoering en externe opslag voor gegevens - biedt ons een beveiligde, schaalbare en veerkrachtige architectuur. Het stelt ons in staat potentiële problemen te isoleren en elke laag onafhankelijk te beheren, waardoor onze mogelijkheid om onze diensten te onderhouden en te beveiligen wordt verbeterd.
+
+
