@@ -1,0 +1,68 @@
+@startuml
+title Algemene Architectuur en keuze mogenlijkheden
+footer: OpenWoo.app
+header: OpenWoo.app
+
+
+' Publicatie platformen (Laag 5 UI)
+frame "Publicatie platformen " {
+    interface "Woo Dashboard" AS OiDashboard #e5352c
+    actor "KOOP"  as KOOP #008b6C
+    actor   "WOOGLE" as WOOGLE #008b6C
+    interface "Website" AS Website #F16E06
+    interface "Thema site" as Themasite #F16E06
+    interface "Zoek pagina" as Searchsite #F16E06
+}
+
+' Services(Laag 4)
+frame "Services" {
+    process "Backend for frontend"  as OiBF #e5352c
+}
+
+' Integratie (Laag 3)
+frame "Integratie" {
+    database "Open Index"  as OI #F16E06
+    component "Federatieve Connectie"  as FCS #008b6C
+    process "OpenWoo Service"  as OWS #F16E06
+    component "Integratie Platform"  as IP #008b6C
+}
+
+' Bronnen (Laag 2)
+frame "API" {
+    database "Zaaksysteem (XXllNC)" as ZRC #008b6C
+    database "Raadsinformatiesysteem (Notubiz)" as RIS #008b6C
+    database "Bestuursinformatiesysteem (iBabs)" as BIS #008b6C
+    database "Website (Typo3)" as CMS #008b6C
+    database "DMS (Sharepoint)" as SP #008b6C
+    database "Archief (DeVault)" as DEPOT #008b6C
+}
+
+frame "Legenda" {
+    component "Herbruikbaar" #008b6C
+    component "Uitbreiden (doorontwikkeling)" #F16E06
+    component "Te ontwikkelen (nieuw)" #e5352c
+
+
+
+}
+
+OiDashboard -down-> OiBF
+OWS --> IP: Bevraagd via
+IP -down-> ZRC: Woo verzoeken
+IP -down-> SP: Convenanten
+IP -down-> RIS: Raadsstukken
+IP -down-> BIS: Bestuursstukken
+IP -down-> CMS: Organisatie gegevens
+IP -down-> DEPOT: Gearchiveerde gegevens
+OWS ..> OI: Slaat op in
+OiBF --> OI: Beheerd
+
+FCS --> OI : Bevraagd
+
+KOOP -down-> FCS : Indexeerd (XML Sitemap)
+WOOGLE -down-> FCS : Indexeerd (API)
+Website -down-> FCS : Bevraagd (API)
+Themasite -down-> FCS : Bevraagd (API)
+Searchsite -down-> FCS : Bevraagd (API)
+
+@enduml
