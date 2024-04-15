@@ -68,10 +68,11 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "xxllnc-theme":
       return Xxllnc;
 
-    case "open.zutphen.nl":
-    case "zutphen.koophulpje.nl":
-    case "zutphen.openwoo.app":
     case "zutphen-theme":
+    case "open.zutphen.nl":
+    case "zutphen.openwoo.app":
+    case "zutphen.koophulpje.nl":
+    case "acceptatie-open.zutphen.nl":
       return Zutphen;
 
     case "open.zuiddrecht.nl":
