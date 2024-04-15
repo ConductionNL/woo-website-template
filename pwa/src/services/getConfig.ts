@@ -26,46 +26,53 @@ import { TGroupedSelectOption } from "@conduction/components/lib/components/form
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
   switch (themeOrDomainName) {
-    case "open.epe.nl":
-    case "epe.koophulpje.nl":
-    case "epe.openwoo.app":
     case "epe-theme":
+    case "open.epe.nl":
+    case "epe.openwoo.app":
+    case "epe.koophulpje.nl":
+    case "acceptatie-open.epe.nl":
       return Epe;
 
-    case "open.noordwijk.nl":
-    case "noordwijk.koophulpje.nl":
-    case "noordwijk.openwoo.app":
     case "noordwijk-theme":
+    case "open.noordwijk.nl":
+    case "noordwijk.openwoo.app":
+    case "noordwijk.koophulpje.nl":
+    case "acceptatie-open.noordwijk.nl":
       return Noordwijk;
 
-    case "open.rotterdam.nl":
-    case "rotterdam.koophulpje.nl":
-    case "rotterdam.openwoo.app":
     case "rotterdam-theme":
+    case "open.rotterdam.nl":
+    case "rotterdam.openwoo.app":
+    case "rotterdam.koophulpje.nl":
+    case "acceptatie-open.rotterdam.nl":
       return Rotterdam;
 
-    case "open.noaberkracht.nl":
-    case "noaberkracht.koophulpje.nl":
-    case "noaberkracht.openwoo.app":
     case "noaberkracht-theme":
+    case "open.noaberkracht.nl":
+    case "noaberkracht.openwoo.app":
+    case "noaberkracht.koophulpje.nl":
+    case "acceptatie-open.noaberkracht.nl":
       return Noaberkracht;
 
-    case "open.tubbergen.nl":
-    case "tubbergen.koophulpje.nl":
-    case "tubbergen.openwoo.app":
     case "tubbergen-theme":
+    case "open.tubbergen.nl":
+    case "tubbergen.openwoo.app":
+    case "tubbergen.koophulpje.nl":
+    case "acceptatie-open.tubbergen.nl":
       return Tubbergen;
 
-    case "open.dinkelland.nl":
-    case "dinkelland.koophulpje.nl":
-    case "dinkelland.openwoo.app":
     case "dinkelland-theme":
+    case "open.dinkelland.nl":
+    case "dinkelland.openwoo.app":
+    case "dinkelland.koophulpje.nl":
+    case "acceptatie-open.dinkelland.nl":
       return Dinkelland;
 
-    case "open.xxllnc.nl":
-    case "xxllnc.koophulpje.nl":
-    case "xxllnc.openwoo.app":
     case "xxllnc-theme":
+    case "open.xxllnc.nl":
+    case "xxllnc.openwoo.app":
+    case "xxllnc.koophulpje.nl":
+    case "acceptatie-open.xxllnc.nl":
       return Xxllnc;
 
     case "zutphen-theme":
@@ -75,27 +82,30 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "acceptatie-open.zutphen.nl":
       return Zutphen;
 
-    case "open.zuiddrecht.nl":
-    case "zuiddrecht.koophulpje.nl":
-    case "zuiddrecht.openwoo.app":
     case "zuiddrecht-theme":
+    case "open.zuiddrecht.nl":
+    case "zuiddrecht.openwoo.app":
+    case "zuiddrecht.koophulpje.nl":
+    case "acceptatie-open.zuiddrecht.nl":
       return Zuiddrecht;
 
-    case "open.sloterburg.nl":
-    case "sloterburg.koophulpje.nl":
-    case "sloterburg.openwoo.app":
     case "sloterburg-theme":
+    case "open.sloterburg.nl":
+    case "sloterburg.openwoo.app":
+    case "sloterburg.koophulpje.nl":
+    case "acceptatie-open.sloterburg.nl":
       return Sloterburg;
 
-    case "open.gouda.nl":
-    case "gouda.koophulpje.nl":
-    case "gouda.openwoo.app":
     case "gouda-theme":
+    case "open.gouda.nl":
+    case "gouda.openwoo.app":
+    case "gouda.koophulpje.nl":
+    case "acceptatie-open.gouda.nl":
       return Gouda;
 
+    case "openwoo.app":
     case "koophulpje.nl":
     case "open-webconcept-theme":
-    case "openwoo.app":
       // case "localhost": // development purposes
       return OpenWebconcept;
 
