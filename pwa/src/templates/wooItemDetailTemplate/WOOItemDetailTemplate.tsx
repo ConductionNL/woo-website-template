@@ -23,6 +23,7 @@ import { QueryClient } from "react-query";
 import { useOpenWoo } from "../../hooks/openWoo";
 import { getPDFName } from "../../services/getPDFName";
 import { HorizontalOverflowWrapper } from "@conduction/components";
+import { removeHTMLFromString } from "../../services/removeHTMLFromString";
 
 interface WOOItemDetailTemplateProps {
   wooItemId: string;
@@ -33,6 +34,8 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
 
   const queryClient = new QueryClient();
   const getItems = useOpenWoo(queryClient).getOne(wooItemId);
+
+  const sortAlphaNum = (a: any, b: any) => a.titel.localeCompare(b.titel, i18n.language, { numeric: true });
 
   return (
     <Page>
@@ -58,7 +61,9 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
               tabIndex={0}
               aria-label={`${t("Title of woo request")}, ${getItems.data.titel !== "" ? getItems.data.titel : t("No title available")}`}
             >
-              {getItems.data.titel !== "" ? getItems.data.titel : t("No title available")}
+              {getItems.data.titel !== ""
+                ? removeHTMLFromString(removeHTMLFromString(getItems.data.titel))
+                : t("No title available")}
             </Heading1>
 
             <HorizontalOverflowWrapper
@@ -98,7 +103,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       aria-label={`${t("Summary")}, ${getItems.data.samenvatting}`}
                     >
                       <TableCell>{t("Summary")}</TableCell>
-                      <TableCell>{getItems.data.samenvatting}</TableCell>
+                      <TableCell>{removeHTMLFromString(removeHTMLFromString(getItems.data.samenvatting))}</TableCell>
                     </TableRow>
                   )}
                   {getItems.data.beschrijving && (
@@ -108,7 +113,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       aria-label={`${t("Description")}, ${getItems.data.beschrijving}`}
                     >
                       <TableCell>{t("Description")}</TableCell>
-                      <TableCell>{getItems.data.beschrijving}</TableCell>
+                      <TableCell>{removeHTMLFromString(removeHTMLFromString(getItems.data.beschrijving))}</TableCell>
                     </TableRow>
                   )}
 
@@ -256,7 +261,7 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       <TableCell id="attachmentsName">{t("Attachments")}</TableCell>
                       <TableCell>
                         <UnorderedList id="attachmentsData">
-                          {getItems.data.bijlagen.map(
+                          {getItems.data.bijlagen.sort(sortAlphaNum).map(
                             (bijlage: any, idx: number) =>
                               bijlage.titel && (
                                 <UnorderedListItem key={idx}>

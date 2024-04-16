@@ -1,0 +1,15 @@
+{
+  "GATSBY_SHOW_THEME_SWITCHER": "false",
+  "GATSBY_API_BASE_URL": "https://api.common-gateway.commonground.nu/api",
+  "GATSBY_NL_DESIGN_THEME_CLASSNAME": "gooise-meren-theme",
+  "GATSBY_FAVICON_URL": "https://gooisemeren.nl/favicon.ico",
+  "GATSBY_ORGANISATION_NAME": "Gemeente Gooise Meren",
+  "GATSBY_JUMBOTRON_IMAGE_URL": "https://gooisemeren.nl/fileadmin/_processed_/b/6/csm_header-voorjaar-naardertrekvaart_11ed39a196.jpg",
+  "GATSBY_FOOTER_LOGO_HREF": "https://www.gooisemeren.nl/",
+  "GATSBY_FOOTER_CONTENT": "https://raw.githubusercontent.com/ConductionNL/woo-website-gooisemeren/main/FooterContent.json",
+  "GATSBY_FOOTER_CONTENT_HEADER": "heading-3",
+  "GATSBY_OIDN_NUMBER": "",
+  "GATSBY_SHOW_CATEGORY": "true",
+  "GATSBY_SHOW_ORGANIZATION": "true",
+  "GATSBY_DATE_FULL_MONTH": "false"
+}
