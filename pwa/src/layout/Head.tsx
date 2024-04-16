@@ -37,7 +37,7 @@ export const Head: React.FC = () => {
         frame-src 'self';
         img-src 'self' data: https://raw.githubusercontent.com/ConductionNL/;
         form-action 'self';
-        connect-src 'self' https://api.gateway.commonground.nu https://raw.githubusercontent.com/ConductionNL/;
+        connect-src 'self' https://api.gateway.commonground.nu https://api.common-gateway.commonground.nu https://raw.githubusercontent.com/ConductionNL/;
         style-src 'self' 'unsafe-inline';
         font-src * data:;
         ${location.hostname === "localhost" && "script-src 'self' 'unsafe-eval';"}
