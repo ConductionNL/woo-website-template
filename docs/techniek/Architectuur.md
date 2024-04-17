@@ -101,6 +101,35 @@ Er word hierbij dus géén gebruik gemaakt van een landelijke index, het geen da
 De bevragingen tussen de federale zoekvraag en de verschillende organisaties kan via [NLX/FSC]( https://www.nlx.io/) lopen, of daarbuiten. Gezien het publieke bevragingen zijn op openbare informatie is NLX an zich niet verplicht en kan het inregelen van een PKI certificaat nodeloos complex zijn. Dat gezegd hebbende biedt NLX ook voordelen met betrekking tot het monitoren en loggen van verkeer.
 ![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Federatie.svg)
 
+## Commonground
+Als commonground applicatie is OpenWoo.app uitaard op te delen in componenten
+
+- Publicatie Platform (laag 5 Interactie)
+- Woo Service (laag 4 Services)
+- Open Index (laag 3 Integratie)
+
+![Common Ground](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/CommonGround.svg)
+
+## Domeinen
+OpenWoo.app is een organisatie specifieke applicatie waarvan de installaties onderling een federatief netwerk vormen. Dat kan het wat onduidenlijk maken wat waar leeft.
+
+| Type                  | Domein                                        | Status       | Type              |
+|-----------------------|-----------------------------------------------|--------------|-------------------|
+| Federatief            | koophulpje.nl                                 | productie    | Publicatie Pagina |
+| Federatief            | acceptatie.koophulpje.nl                      | acceptatie   | Publicatie Pagina |
+| Organisatie Specifiek | [organisatie_naam].koophulpje.nl              | productie    | Publicatie Pagina |
+| Organisatie Specifiek | acceptatie.[organisatie_naam].koophulpje.nl   | acceptatie   | Publicatie Pagina |
+| n.v.t                 | OpenWoo.app                                   | productie    | Product Pagina    |
+| n.v.t                 | acceptatie.OpenWoo.app                        | acceptatie   | Product Pagina    |
+| Organisatie Specifiek | [organisatie_naam].OpenWoo.app                | productie    | Publicatie Pagina |
+| Organisatie Specifiek | acceptatie.[organisatie_naam].OpenWoo.app     | acceptatie   | Publicatie Pagina |
+| Federatief            | api.OpenWoo.app                               | productie    | API               |
+| Federatief            | acceptatie.api.OpenWoo.app                    | acceptatie   | API               |
+| Organisatie Specifiek | api.[organisatie_naam].OpenWoo.app            | productie    | API               |
+| Organisatie Specifiek | acceptatie.api.[organisatie_naam].OpenWoo.app | acceptatie   | API               |
+
+Dit zijn de aangeboden domeinen vanuit OpenWoo.app, daarnaast zien de dat de meeste organisaties hun publicatie pagina ontsluiten op hun eigen domein e.g. open.[organisatie_naam].nl
+
 ## Woo Publicatie-object
 
 Het Woo Publicatie-object vormt de kern van zowel de Woo-API als de Woo-website. Dit object bevat alle essentiële informatie over een Woo-publicatie, inclusief metadata, publicatiedatum, bijlagen en andere relevante eigenschappen. Het dient als de centrale entiteit waaromheen de functionaliteiten van de API en de website zijn gebouwd. Door deze gecentraliseerde aanpak is het eenvoudiger om Woo-publicaties efficiënt te beheren, op te halen en weer te geven, en draagt het bij aan een coherente en gestroomlijnde gebruikerservaring.
