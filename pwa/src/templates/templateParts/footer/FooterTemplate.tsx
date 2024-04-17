@@ -29,6 +29,7 @@ type TDynamicContentItem = {
     ariaLabel: string;
     link?: string;
     markdownLink?: string;
+    multiRow?: string;
     label?: string;
     icon?: {
       icon: IconName;
@@ -47,6 +48,7 @@ export const FooterTemplate: React.FC = () => {
   const getFooterContent = _useFooterContent.getContent();
 
   // For development
+  // const [footerContent, setFooterContent] = React.useState<TDynamicContentItem[]>([]);
   // React.useEffect(() => {
   //   const data = require("./FooterContent.json");
   //   setFooterContent(data);
@@ -99,8 +101,11 @@ const DynamicSection: React.FC<{ content: TDynamicContentItem }> = ({ content })
           {/* Internal Link Github/Markdown link */}
           {item.markdownLink && <MarkdownLink {...{ item }} />}
 
+          {/* MultiRow */}
+          {item.multiRow && <MultiRow {...{ item }} />}
+
           {/* No Link */}
-          {!item.link && !item.markdownLink && <NoLink {...{ item }} />}
+          {!item.link && !item.markdownLink && !item.multiRow && <NoLink {...{ item }} />}
         </div>
       ))}
     </section>
@@ -268,6 +273,30 @@ const MarkdownLink: React.FC<LinkComponentProps> = ({ item }) => {
         <Icon className={styles.iconRight}>{parse(item.customIcon.icon)}</Icon>
       )}
     </Link>
+  );
+};
+
+const MultiRow: React.FC<LinkComponentProps> = ({ item }) => {
+  return (
+    <span className={styles.multiRow}>
+      {item.customIcon && item.customIcon.placement === "left" && (
+        <Icon className={styles.iconLeft}>{parse(item.customIcon.icon)}</Icon>
+      )}
+
+      {item.icon && item.icon.placement === "left" && (
+        <FontAwesomeIcon className={styles.iconLeft} icon={[item.icon.prefix, item.icon.icon]} />
+      )}
+
+      <div>{item.multiRow}</div>
+
+      {item.icon && item.icon.placement === "right" && (
+        <FontAwesomeIcon className={styles.iconRight} icon={[item.icon.prefix, item.icon.icon]} />
+      )}
+
+      {item.customIcon && item.customIcon.placement === "right" && (
+        <Icon className={styles.iconRight}>{parse(item.customIcon.icon)}</Icon>
+      )}
+    </span>
   );
 };
 
