@@ -121,7 +121,7 @@ Response
 }
 ````
 
-Vanuit een het weergeven van een zoekformulier is het goed mogelijk dat u alleen bestaande waardes wilt weergeven (bijvoorbeeld bij jaartal of categorie). U kunt daarvoor de content type `application/json+aggregations` gebruiken in combinatie met de de query-parameter `_query[]`, deze vertelt u welke zoekwaarden welke resultaten opleveren.
+Vanuit een het weergeven van een zoekformulier is het goed mogelijk dat u alleen bestaande waardes wilt weergeven (bijvoorbeeld bij jaartal of categorie). U kunt daarvoor de content type `application/json+aggregations` gebruiken in combinatie met de de query-parameter `_queries[]`, deze vertelt u welke zoekwaarden welke resultaten opleveren.
 
 ````cli
 GET 'https://api.gateway.commonground.nu/api/publicaties?_queries[]=categorie'
