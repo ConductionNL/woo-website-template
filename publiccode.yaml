@@ -13,7 +13,7 @@ releaseDate: '2023-10-01'
 categories: 
   - collaboration
   - it-development
-developmentStatus: beta
+developmentStatus: stable
 softwareType: softwareAddon
 description:
   en:
