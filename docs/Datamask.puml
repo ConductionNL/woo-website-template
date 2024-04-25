@@ -1,0 +1,47 @@
+@startuml
+title Samenwerking OpenWoo.app en Datamask
+footer: OpenWoo.app
+header: OpenWoo.app
+
+
+' Publicatie platformen (Laag 5 UI)
+frame "Publicatie platformen " {
+    actor "KOOP"  as KOOP #008b6C
+    actor   "WOOGLE" as WOOGLE #008b6C
+    interface "Website" AS Website #008b6C
+    interface "Publicatie pagina" as PublicatiePagina #F16E06
+}
+
+
+
+' Integratie (Laag 3)
+frame "Integratie" {
+    database "Open Index"  as OI #008b6C
+    component "Federatieve Connectie"  as FCS #008b6C
+    process "OpenWoo Service"  as OWS #008b6C
+}
+
+' Bronnen (Laag 2)
+frame "API" {
+    database "Datamask" as DatamaskDB #F16E06
+}
+
+frame "Legenda" {
+    component "OpenWoo.app" #008b6C
+    component "Datamask" #F16E06
+
+
+
+}
+
+OWS <-- DatamaskDB: Woo verzoeken
+OWS ..> OI: Slaat op in
+
+FCS --> OI : Bevraagd
+
+KOOP -down-> FCS : Indexeerd (XML Sitemap)
+WOOGLE -down-> FCS : Indexeerd (API)
+Website -down-> OI : Bevraagd (API)
+PublicatiePagina -down-> OI : Bevraagd (API)
+
+@enduml

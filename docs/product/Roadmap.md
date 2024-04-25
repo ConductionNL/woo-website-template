@@ -2,19 +2,17 @@
 
 Organisaties kunnen bijdragen aan deze roadmap door items aan te dragen, deze zelf op te pakken en uit te voeren, of door de uitvoering ervan te financieren.
 
-## Raadsinformatie Systemen (Medio December)
+## Raadsinformatie Systemen (Word momenteel ontwikkeld)
 
 **Inschatting: 40 uur per RIS**
 
 Medio september gaat de gebruikersgroep verkennen of het mogelijk is om ook de Raadsinformatiesystemen te ontsluiten via Open WOO. Deze ontwikkeling zal de dienstverlening naar de inwoners verbeteren door de transparantie van de gemeente te vergroten. Het draagt ook bij aan de invulling van de Wet Open Overheid door overheidsinformatie beter toegankelijk te maken.
 
-## Robot.txt en sitemap.xml (Medio December)
+## Inlezen vanuit sharepoint (Word momenteel onderzocht)
 
-**Inschatting: 20 uur**
+**Inschatting: 120 uur**
 
-Begin oktober wil KOOP graag de decentrale portalen harvesten om een centrale index op te bouwen. Dit zal de zoekbaarheid van overheidsinformatie verbeteren, wat de dienstverlening aan de inwoners ten goede komt. Het past ook binnen de kaders van de Wet Open Overheid door het vergroten van de toegankelijkheid van overheidsinformatie.
-
-## Aanleveren DROP (Geen ontwikkeling gepland)
+## Aanleveren DROP (Word momenteel onderzocht)
 
 **Inschatting: 120 uur**
 
@@ -87,7 +85,11 @@ Het is mogelijk om de openwoo.app te installeren via een Helm Chart. Dit maakt h
 
 De serverless Woo-pagina kan ook geinstalleerd worden via een GitHub Action. Door de installatie te automatiseren wordt het gemakkelijker om de website te installeren en te onderhouden, wat de operationele kosten verlaagt en de betrouwbaarheid verhoogt. Dit draagt bij aan de dienstverlening door de beschikbaarheid van de website te vergroten.
 
-## Roadmap WOO KOOP
+## Inmiddels afgerond
+
+### Robot.txt en sitemap.xml (Medio December)
+
+Begin oktober wil KOOP graag de decentrale portalen harvesten om een centrale index op te bouwen. Dit zal de zoekbaarheid van overheidsinformatie verbeteren, wat de dienstverlening aan de inwoners ten goede komt. Het past ook binnen de kaders van de Wet Open Overheid door het vergroten van de toegankelijkheid van overheidsinformatie.
 
 ### Woo 1.0
 
@@ -96,3 +98,4 @@ Voor de eerste opzet van de Woo-index van BZK is het belangrijk dat organisaties
 ### Woo 2.0
 
 BZK heeft de ambitie om aan de hand van een harvester een eigen index op te bouwen op open.overheid.nl. Deze harvester maakt gebruik van `robots.txt` en `sitemap.xml`-bestanden om de verschillende pagina's en metadata van de organisatiespecifieke index te vinden en over te nemen. Dat betekent dat ook binnen de 2.0 variant van Woo een eigen indexpagina noodzakelijk blijft. Sterker nog, de kwaliteit van de ontsluiting wordt in grote mate afhankelijk van de kwaliteit van de index.
+
