@@ -70,19 +70,8 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig, plugins }) => {
             },
           },
         ],
-      }
-    }
-
-    // find CSS minimizer
-    const minifyCssIndex = config.optimization.minimizer.findIndex(
-      minimizer => minimizer.constructor.name ===
-        'CssMinimizerPlugin'
-    )
-    // if found, overwrite existing CSS minimizer with the new one
-    if (minifyCssIndex > -1) {
-      config.optimization.minimizer[minifyCssIndex] =
-        plugins.minifyCss(options)
-    }
+      },
+    };
 
     actions.replaceWebpackConfig(config);
   }

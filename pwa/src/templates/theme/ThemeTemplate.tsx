@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as styles from "./ThemeTemplate.module.css";
 import clsx from "clsx";
+import ProcessSteps from "@gemeente-denhaag/process-steps";
 import { useFiltersContext } from "../../context/filters";
 import {
   CardHeader,
@@ -60,6 +61,13 @@ import {
   Checkbox,
   FormLabel,
   FormField,
+  DataList,
+  DataListItem,
+  DataListKey,
+  DataListValue,
+  Textbox,
+  FormFieldDescription,
+  Fieldset,
 } from "@utrecht/component-library-react";
 import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
@@ -137,6 +145,7 @@ export const ThemeTemplate: React.FC = () => {
   ];
 
   const today = new Date();
+  const todayIso: any = today.toISOString();
 
   return (
     <Page>
@@ -306,6 +315,20 @@ export const ThemeTemplate: React.FC = () => {
         </div>
 
         <div>
+          <h3 className={styles.header}>DataList:</h3>
+          <DataList>
+            <DataListItem>
+              <DataListKey>Data list Item 1</DataListKey>
+              <DataListValue value="data of dataList Item 1">data of dataList Item 1</DataListValue>
+            </DataListItem>
+            <DataListItem>
+              <DataListKey>Data list Item 2</DataListKey>
+              <DataListValue value="data of dataList Item 2">data of dataList Item 2</DataListValue>
+            </DataListItem>
+          </DataList>
+        </div>
+
+        <div>
           <h3 className={styles.header}>Document:</h3>
           <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
           <p>abcdefghijklmnopqrstuvwxyz</p>
@@ -318,6 +341,31 @@ export const ThemeTemplate: React.FC = () => {
           <span>
             Press <Code>tab</Code> to see the Focus of the elements
           </span>
+        </div>
+
+        <div>
+          <h3 className={styles.header}>FormField / FormLabel / FormSet:</h3>
+          <section className={styles.section}>
+            <Fieldset invalid={false}>
+              <FormField>
+                <p className="utrecht-form-field__label">
+                  <FormLabel htmlFor={"valid"}>Form field normal</FormLabel>
+                </p>
+                <Textbox id="valid" type="text" invalid={false} />
+              </FormField>
+            </Fieldset>
+            <Fieldset invalid={true}>
+              <FormField>
+                <p className="utrecht-form-field__label">
+                  <FormLabel htmlFor={"inValid"}>Form field invalid</FormLabel>
+                </p>
+
+                <FormFieldDescription invalid>Form field is required</FormFieldDescription>
+
+                <Textbox id={"inValid"} type="text" invalid={true} />
+              </FormField>
+            </Fieldset>
+          </section>
         </div>
 
         <div>
@@ -556,6 +604,105 @@ export const ThemeTemplate: React.FC = () => {
             ariaLabel={t("Enter search query")}
             {...{ register, errors }}
           />
+        </div>
+
+        <h2>Den Haag Components:</h2>
+        <div>
+          <div>
+            <h3 className={styles.header}>Process Steps:</h3>
+            <ProcessSteps
+              steps={[
+                {
+                  id: "cc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                  marker: 1,
+                  status: "checked",
+                  title: "Checked process step",
+                  meta: (
+                    <div>
+                      <Paragraph>This is a checked process step</Paragraph>
+                    </div>
+                  ),
+                },
+                {
+                  id: "12ca94b2-7179-4ae8-9032-dad49c294ff2",
+                  marker: 2,
+                  status: "checked",
+                  title: "Checked process step with multiple steps",
+                  steps: [
+                    {
+                      id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                      status: "checked",
+                      title: "checked process step 2-1",
+                    },
+                    {
+                      id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                      status: "checked",
+                      title: "checked process step 2-2",
+                    },
+                  ],
+                },
+                {
+                  id: "e51f2b4c-d62f-4347-8dc1-c83a9be0afc2",
+                  status: "current",
+                  marker: 3,
+                  title: "Current process step with steps",
+                  steps: [
+                    {
+                      id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                      status: "current",
+                      title: "current process step 3-1",
+                    },
+                    {
+                      id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                      status: "warning",
+                      title: "warning process step 3-2",
+                    },
+                    {
+                      id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                      status: "error",
+                      title: "error process step 3-3",
+                    },
+                  ],
+                },
+                {
+                  id: "1fc162c6-f1ab-4d1b-9007-d891cbd5614b",
+                  title: "process step normal",
+                  marker: 4,
+                  date: translateDate(i18n.language, todayIso),
+                  meta: (
+                    <Paragraph>
+                      This is a normal process step with a link{" "}
+                      <Link
+                        href="/"
+                        onClick={(e: any) => {
+                          e.preventDefault(), console.log("click");
+                        }}
+                        tabIndex={0}
+                      >
+                        A Link!
+                      </Link>
+                      .
+                    </Paragraph>
+                  ),
+                },
+                {
+                  id: "1fc162c6-f1ab-4d1b-9007-d891cbd5614b23r3",
+                  title: "process step warning",
+                  status: "warning",
+                  marker: 5,
+                  meta: <Paragraph>This process step has a warning.</Paragraph>,
+                },
+                {
+                  id: "1fc162c6-f1ab-4d1b-9007-d891cbd5614bfaefa",
+                  title: "error",
+                  status: "error",
+                  marker: 6,
+                  date: "zondag 26 mei 2024",
+                  meta: <Paragraph>This process step has an error.</Paragraph>,
+                },
+              ]}
+            />
+          </div>
         </div>
 
         <h2>OpenCatalogi Components:</h2>
