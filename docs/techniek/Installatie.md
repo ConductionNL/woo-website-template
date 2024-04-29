@@ -45,7 +45,7 @@ De Open WOO Website is in eerste instantie opgezet om serverless gebruikt te wor
 >
 > 4. Scroll naar Workflow permissions.
 > 5. Set permissions naar `Read and write permissions`.
-
+>
 > ![Workflow permissions](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/techniek/workflow-permissions.png)
 
 ### Server Installatie
