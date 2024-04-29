@@ -24,12 +24,12 @@ De Open WOO Website is in eerste instantie opgezet om serverless gebruikt te wor
 >
 > 1. Rechtsboven deze repo staat een knop ["gebruiken als template"](https://github.com/new?template_name=woo-website-template&template_owner=ConductionNL), druk daarop (of [klik hier](https://github.com/new?template_name=woo-website-template&template_owner=ConductionNL)) en maak een nieuwe repository aan op je GitHub-organisatie.
 > 2. [Zet de workflow permissions](#workflow-permissions) op `Read and write permissions`.
-> 3. Ga in de repository naar de folder `.github/workflows/`
+> 3. Ga op de main branch in de repository naar de folder `.github/workflows/`
 > 4. Verwijder de workflow `product-page-deploy` als deze er nog staat
 > 5. Open de workflow `woo-page-deploy` en pas de branche aan van `never` naar `main`
-> 6. Pas de verdere configuratie in `woo-page-deploy` aan zoals hieronder vermeld onder configuratie en sla deze op
+> 6. Pas de verdere configuratie in `woo-page-deploy` aan zoals [hieronder vermeld onder configuratie](#configuratie) en sla deze op
 > 7. Ga naar acties en wacht tot de actie "Deploy the WOO Page to GitHub Pages" succesvol is afgerond
-> 8. Ga naar settings->pages, selecteer onder source `deploy from branch` en geef als branche op `gh-pages`
+> 8. Ga naar settings -> pages, selecteer onder source `deploy from branch` en geef als branche op `gh-pages`
 > 9. Bovenaan de pagina verschijnt nu de URL waarop je je Open WOO Website kunt terugvinden
 > 10. Als je de Open WOO Website wilt hosten onder een subdomein van je organisatie en voorzien van een PKI-certificaat, kun je daarvoor de normale GitHub Pages-handleidingen volgen of een SLA afsluiten voor ondersteuning (zie [kosten](/docs/product/Kosten.md))
 
