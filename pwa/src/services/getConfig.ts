@@ -22,6 +22,8 @@ import Zutphen from "./../../static/configFiles/zutphen.json";
 import Sloterburg from "./../../static/configFiles/sloterburg.json";
 import Gouda from "./../../static/configFiles/gouda.json";
 import Zuiddrecht from "./../../static/configFiles/zuiddrecht.json";
+import GooiseMeren from "./../../static/configFiles/gooise-meren.json";
+import Roosendaal from "./../../static/configFiles/roosendaal.json";
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
@@ -102,6 +104,20 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "gouda.koophulpje.nl":
     case "acceptatie-open.gouda.nl":
       return Gouda;
+
+    case "gooisemeren-theme":
+    case "open.gooisemeren.nl":
+    case "gooisemeren.openwoo.app":
+    case "gooisemeren.koophulpje.nl":
+    case "acceptatie-open.gooisemeren.nl":
+      return GooiseMeren;
+
+    case "roosendaal-theme":
+    case "open.roosendaal.nl":
+    case "roosendaal.openwoo.app":
+    case "roosendaal.koophulpje.nl":
+    case "acceptatie-open.roosendaal.nl":
+      return Roosendaal;
 
     case "openwoo.app":
     case "koophulpje.nl":
