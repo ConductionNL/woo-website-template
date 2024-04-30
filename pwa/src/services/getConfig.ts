@@ -190,6 +190,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Alle overheidsorganisaties", value: "open-webconcept-theme" },
       // { label: "Conduction", value: "conduction-theme" },
       // { label: "XXLLNC", value: "xxllnc-theme" },
+      // { label: "Localhost", value: "localhost" },
     ],
   },
   {
@@ -203,7 +204,6 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Gouda", value: "gouda-theme" },
       { label: "Hoeksche Waard", value: "hoeksche-waard" },
       { label: "Lansingerland", value: "lansingerland" },
-      { label: "Localhost", value: "localhost" },
       { label: "Noordwijk", value: "noordwijk-theme" },
       { label: "Ridderkerk", value: "ridderkerk" },
       { label: "Rijssen-Holten", value: "rijssen-holten" },
