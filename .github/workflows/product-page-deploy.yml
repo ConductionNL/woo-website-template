@@ -8,12 +8,11 @@ on:
 permissions:
   contents: write
 
-# Lets cheat and use open catalogi for now
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Create an Open Catalogi page
+      - name: Create the Product Page
         uses: OpenCatalogi/productpage-action@1.0.9
         with:
           github_repository_name_as_prefix: false

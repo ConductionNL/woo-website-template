@@ -2,19 +2,37 @@
 
 Wij geloven in het integreren van beveiliging in de kern van ons ontwikkelingsproces. We maken gebruik van geautomatiseerde penetratietesten en scanning als onderdeel van onze Continuous Integration en Continuous Deployment (CI/CD) pipeline. Deze aanpak stelt ons in staat om mogelijke beveiligingskwetsbaarheden vroegtijdig te identificeren en aan te pakken, tijdens de ontwikkelingsfase in plaats van later in de productiefase.
 
-## Geautomatiseerde Penetratietesten
+## Design Principes
+Goede beveiliging begint bij het ontwerp, dat geld zeker voor de Woo. We hebben er dan ook bewust voor gekozen om van de Woo index en publicatie platform een apparte applicatie te maken ten opzichte van de afhandel applicatie voor Woo verzoeken en annonimeserings tool.
 
-Geautomatiseerde penetratietesttools zijn geïntegreerd in onze CI/CD-pipeline om aanvallen op onze systemen te simuleren en beveiligingszwaktes te identificeren. Deze tools voeren een reeks tests uit om te controleren op veelvoorkomende kwetsbaarheden, waaronder die vermeld staan in de OWASP Top 10.
+We hebben daardoor als design principe kunnen afspreken dat de index géén persoon gegeven mag bevatten. Ofwel alleen maar gegevens die daadwerkelijk mogen worden gepubliceerd. Hiermee geven we ultieme invulling aan het concept dataminimalisatie.
 
-De resultaten van deze tests worden vervolgens gebruikt om onze ontwikkelings- en beveiligingsteams te informeren over mogelijke kwetsbaarheden. Dit proces stelt ons in staat om deze kwetsbaarheden aan te pakken voordat de software wordt ingezet naar productie.
+Een tweede design principe betreft bronnen, vanuit bronnen willen we alleen publieke informatie ontvangen. Hierop moet de bron een harde garantie kunnen afgeven aan de hand van autorisatie en filtering. Op deze manier voorkomen we per abuis toch persoons informatie kunnen ophalen.
 
-## Scannen
+Als derde principe hanteren we dat de index bij de bevraging op een individueel object altijd de data live bij de bron moet ophalen. Dit betekend los van data bij de bron ook dat in het geval van een interventie (vernietiging van een document omdat er per abuis persoons gegevens zijn opgenomen) dit document per direct niet meer kan worden uitgeleverd aan de voorkant.
 
+Als vierde zou een bron altijd IP whitelisting moeten toepassen op de bevraging vanuit de OpenWoo service, zodat een eventueel ontvreemde authorisatie sleutel niet elders kan worden gebruikt. Gezamenlijk met filtering en sleutels formt dit de kern van onze multy layerd defence strategie.
+
+Gezamenlijk minimaliseren we op deze manier het risco bij een eventueel lek, in het meest extreme geval zou de volledige index en alle authorisatie sleutels kunnen worden onvreemd maar zou hierbij alsnog geen data worden verloren die niet reeds tot het publieke domein behoord.
+
+
+
+## Als onderdeel van de development
 Onze CI/CD-pipeline bevat ook geautomatiseerde scannertools die onze broncode, containers en cloud-infrastructuur controleren op beveiligingsproblemen.
-
 Broncodescanners analyseren onze code om beveiligingszwaktes te vinden, zoals die vermeld staan in de [OWASP](https://owasp.org/) Top 10-lijst van veelvoorkomende beveiligingsrisico's.
 Containerscanners inspecteren onze Docker- en andere containerimages op kwetsbaarheden, verkeerde configuraties en naleving van best practices. Dit sluit aan bij onze inzet om te voldoen aan de top tien tips voor containerbeveiliging.
 Cloudbeveiligingsscanners zorgen ervoor dat onze cloud-infrastructuur veilig is geconfigureerd, in overeenstemming met het principe van minimale rechten en andere best practices voor cloudbeveiliging.
+
+## Gedurende productie
+Security is echter geen 'one time' ding dat je eenmalig opzet, het vraagt continu aandacht en zorg. [Conduction]() neemt hier als beheerder van de code base verantwoordenlijkheid voor door het automatisch *dagenlijks* pentesten van zowel de productie als accepatie omgeving. Hierbij worden frontend en api los getest.
+De resultaten van deze tests worden vervolgens gebruikt om onze ontwikkelings- en beveiligingsteams te informeren over mogelijke kwetsbaarheden. Dit proces stelt ons in staat om deze kwetsbaarheden aan te pakken voordat de software wordt ingezet naar productie.
+## Zelf testen
+- Internet.nl
+
+
+
+## Scannen
+
 
 ## Naleving van de Top Tien Tips voor Containerbeveiliging
 
@@ -61,10 +79,12 @@ Ons systeem behandelt verschillende soorten gegevens, elk met verschillende beve
 
 ## Scheiding van Landingzone, Executionzone en Data
 
-In onze opstelling maken we gebruik van NGINX- en PHP-containers om een ​​duidelijke scheiding van verantwoordelijkheden te waarborgen tussen internet/netwerktoegang, code-uitvoering en gegevensopslag. Deze ontwerpbenadering bevordert een robuuste beveiliging en verbeterde beheerbaarheid van onze applicaties en diensten.
+In onze opstelling maken we gebruik van NGINX- en PHP-containers om een duidelijke scheiding van verantwoordelijkheden te waarborgen tussen internet/netwerktoegang, code-uitvoering en gegevensopslag. Deze ontwerpbenadering bevordert een robuuste beveiliging en verbeterde beheerbaarheid van onze applicaties en diensten.
 
 * **NGINX-containers als Landing Zone:** De eerste laag van onze architectuur bestaat uit NGINX-containers die dienen als een landing zone. NGINX is populaire open-source software die wordt gebruikt voor webserver, omgekeerde proxy, caching, load balancing en mediaserving, onder andere. In onze context gebruiken we het voornamelijk als een omgekeerde proxy en load balancer. Wanneer een verzoek binnenkomt vanaf het internet, komt het eerst bij de NGINX-container terecht. De rol van deze container is het verwerken van netwerkverkeer vanaf het internet, het uitvoeren van de nodige load balancing en het veilig doorsturen van verzoeken naar de juiste toepassingscontainers. Deze opstelling beschermt onze toepassingscontainers tegen directe blootstelling aan het internet en verbetert onze beveiligingspositie.
 * **PHP-containers als Execution Zone:** Nadat een verzoek is doorgestuurd door de NGINX-container, komt het terecht in de juiste PHP-container voor verwerking. Deze containers dienen als onze uitvoeringszone, waar toepassingslogica wordt uitgevoerd. Elke PHP-container draait een exemplaar van onze toepassing. Door de uitvoeringsomgeving op deze manier te isoleren, kunnen we ervoor zorgen dat problemen of kwetsbaarheden binnen één container geen invloed hebben op andere. Deze encapsulatie biedt een aanzienlijk beveiligingsvoordeel en maakt het gemakkelijker om individuele componenten van onze toepassing te beheren en schalen.
 * **Gegevensopslag buiten de cluster:** Voor gegevensopslag hanteren we de strategie om gegevens buiten de cluster te bewaren. Deze aanpak scheidt gegevens van de uitvoeringsomgeving en de netwerktoegangslaag, en biedt een extra beveiligingslaag. Gegevens die buiten de cluster zijn opgeslagen, kunnen grondig worden beschermd met specifieke beveiligingscontroles, versleuteling en back-upprocedures, onafhankelijk van de toepassing en netwerklagen.
 
 Deze driedelige benadering - NGINX-containers voor netwerktoegang, PHP-containers voor code-uitvoering en externe opslag voor gegevens - biedt ons een beveiligde, schaalbare en veerkrachtige architectuur. Het stelt ons in staat potentiële problemen te isoleren en elke laag onafhankelijk te beheren, waardoor onze mogelijkheid om onze diensten te onderhouden en te beveiligen wordt verbeterd.
+
+

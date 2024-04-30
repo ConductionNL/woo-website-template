@@ -5,12 +5,14 @@
 > 
 > Meer weten over deze oplossing? Dat kan! Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder. Uiteraard kan je ook altijd mailen naar [info@conduction.nl](mailto:info@conduction.nl)
 >
-> Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd. 
-> - [10 April 10:00 | Community Meeting](https://www.linkedin.com/events/openwoo-appcommunitymeetingapri7173404269205770241/comments/). 
-> - [25 Maart 13:13 | Webinar Sim-Groep](https://www.simgroep.nl/toekomstbestendige-woo-oplossing)
+> Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
+> 
+> - [8 Mei 13:00 | Community Meeting](https://www.linkedin.com/events/openwoo-appcommunitymeetingmei7184090446346768385/comments/).
 > 
 > Terug kijken afgelopen webinars en meetings?
 >
+> - [10-04-2024 | Community Meeting](https://www.youtube.com/watch?v=zMqElLzy0BM).
+> - [25-03-2024 | Sim-Groep Webinar](https://www.simgroep.nl/toekomstbestendige-woo-oplossing)
 > - [13-03-2024 | Community Meeting](https://www.youtube.com/watch?v=TNZghskRu5c).
 > - [14-02-2024 | Community meeting](https://www.youtube.com/watch?v=ri5U8x-lsxo)
 > - [30-01-2024 | OpenGemeente Woobinar](https://vimeo.com/909134953)
