@@ -13,3 +13,7 @@ body {
 .utrecht-link > svg {
   margin-inline-end: var(--utrecht-icon-gap);
 }
+
+.utrecht-link--html-a:any-link:hover {
+  font-weight: var(--utrecht-link-hover-font-weight);
+}
