@@ -75,6 +75,7 @@
     --utrecht-page-footer-link-text-underline-offset,
     inherit
   ) !important;
+  font-weight: var(--utrecht-page-footer-link-hover-font-weight) !important;
 }
 
 .withLoveConductionLink {
@@ -87,6 +88,7 @@
 
 .withLoveLink:hover > :first-child {
   color: var(--utrecht-page-footer-link-hover-color);
+  font-weight: var(--utrecht-page-footer-link-hover-font-weight) !important;
   transform: scale(1.2);
 }
 
