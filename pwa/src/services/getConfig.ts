@@ -24,6 +24,7 @@ import Gouda from "./../../static/configFiles/gouda.json";
 import Zuiddrecht from "./../../static/configFiles/zuiddrecht.json";
 import GooiseMeren from "./../../static/configFiles/gooise-meren.json";
 import Roosendaal from "./../../static/configFiles/roosendaal.json";
+import Moerdijk from "./../../static/configFiles/moerdijk.json";
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
@@ -118,6 +119,13 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "roosendaal.koophulpje.nl":
     case "acceptatie-open.roosendaal.nl":
       return Roosendaal;
+
+    case "moerdijk-theme":
+    case "open.moerdijk.nl":
+    case "moerdijk.openwoo.app":
+    case "moerdijk.koophulpje.nl":
+    case "acceptatie-open.moerdijk.nl":
+      return Moerdijk;
 
     case "openwoo.app":
     case "koophulpje.nl":
