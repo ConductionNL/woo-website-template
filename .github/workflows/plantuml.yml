@@ -1,6 +1,9 @@
 # Generates SVG files from UML files (for documentation purposes)
 name: generate plantuml
-on: push
+on:
+  push:
+    branches:
+      - never
 jobs:
   generate_plantuml:
     runs-on: ubuntu-latest
