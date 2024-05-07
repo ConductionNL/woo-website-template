@@ -98,6 +98,7 @@ export const ThemeTemplate: React.FC = () => {
   const [selectMaxWith, setSelectMaxWith] = React.useState<boolean>(true);
   const [refreshPieChartColor, setRefreshPieChartColor] = React.useState<boolean>(true);
   const [radioButtonChecked, setRadioButtonChecked] = React.useState<string>("checked");
+  const [tabIndex, setTabIndex] = React.useState(0);
 
   const { gatsbyContext } = useGatsbyContext();
 
@@ -972,7 +973,7 @@ export const ThemeTemplate: React.FC = () => {
 
         <div>
           <h3 className={styles.header}>Tabs:</h3>
-          <Tabs>
+          <Tabs selectedIndex={tabIndex} onSelect={(index: number) => setTabIndex(index)}>
             <TabList>
               <Tab>
                 <span>Eigen componenten</span>
