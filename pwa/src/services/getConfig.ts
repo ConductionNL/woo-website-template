@@ -24,6 +24,7 @@ import Gouda from "./../../static/configFiles/gouda.json";
 import Zuiddrecht from "./../../static/configFiles/zuiddrecht.json";
 import GooiseMeren from "./../../static/configFiles/gooise-meren.json";
 import Roosendaal from "./../../static/configFiles/roosendaal.json";
+import Moerdijk from "./../../static/configFiles/moerdijk.json";
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
@@ -119,6 +120,13 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "acceptatie-open.roosendaal.nl":
       return Roosendaal;
 
+    case "moerdijk-theme":
+    case "open.moerdijk.nl":
+    case "moerdijk.openwoo.app":
+    case "moerdijk.koophulpje.nl":
+    case "acceptatie-open.moerdijk.nl":
+      return Moerdijk;
+
     case "openwoo.app":
     case "koophulpje.nl":
     case "open-webconcept-theme":
@@ -190,6 +198,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Alle overheidsorganisaties", value: "open-webconcept-theme" },
       // { label: "Conduction", value: "conduction-theme" },
       // { label: "XXLLNC", value: "xxllnc-theme" },
+      // { label: "Localhost", value: "localhost" },
     ],
   },
   {
@@ -203,7 +212,6 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Gouda", value: "gouda-theme" },
       { label: "Hoeksche Waard", value: "hoeksche-waard" },
       { label: "Lansingerland", value: "lansingerland" },
-      { label: "Localhost", value: "localhost" },
       { label: "Noordwijk", value: "noordwijk-theme" },
       { label: "Ridderkerk", value: "ridderkerk" },
       { label: "Rijssen-Holten", value: "rijssen-holten" },
