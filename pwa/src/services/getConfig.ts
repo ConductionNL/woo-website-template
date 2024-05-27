@@ -1,182 +1,286 @@
-import Conduction from "./../../static/configFiles/conduction.json";
-import Dinkelland from "./../../static/configFiles/dinkelland.json";
-import Epe from "./../../static/configFiles/epe.json";
-import Noaberkracht from "./../../static/configFiles/noaberkracht.json";
-import Noordwijk from "./../../static/configFiles/noordwijk.json";
-import OpenWebconcept from "./../../static/configFiles/open-webconcept.json";
-import Rotterdam from "./../../static/configFiles/rotterdam.json";
-import Tubbergen from "./../../static/configFiles/tubbergen.json";
-import Xxllnc from "./../../static/configFiles/xxllnc.json";
-import Barendrecht from "./../../static/configFiles/barendrecht.json";
-import Ridderkerk from "./../../static/configFiles/ridderkerk.json";
-import Buren from "./../../static/configFiles/buren.json";
-import Albrandswaard from "./../../static/configFiles/albrandswaard.json";
-import StedeBroec from "./../../static/configFiles/stede-broec.json";
-import Lansingerland from "./../../static/configFiles/lansingerland.json";
-import Localhost from "./../../static/configFiles/localhost.json";
-import Waddinxveen from "./../../static/configFiles/waddinxveen.json";
-import RijssenHolten from "./../../static/configFiles/rijssen-holten.json";
-import HoekscheWaard from "./../../static/configFiles/hoeksche-waard.json";
-import Texel from "./../../static/configFiles/texel.json";
-import Zutphen from "./../../static/configFiles/zutphen.json";
-import Sloterburg from "./../../static/configFiles/sloterburg.json";
-import Gouda from "./../../static/configFiles/gouda.json";
-import Zuiddrecht from "./../../static/configFiles/zuiddrecht.json";
-import GooiseMeren from "./../../static/configFiles/gooise-meren.json";
-import Roosendaal from "./../../static/configFiles/roosendaal.json";
+// Municipalities
+import Albrandswaard from "./../../static/configFiles/municipalities/albrandswaard/albrandswaard.json";
+import AlbrandswaardAccept from "./../../static/configFiles/municipalities/albrandswaard/albrandswaard-accept.json";
+import Barendrecht from "./../../static/configFiles/municipalities/barendrecht/barendrecht.json";
+import BarendrechtAccept from "./../../static/configFiles/municipalities/barendrecht/barendrecht-accept.json";
+import Buren from "./../../static/configFiles/municipalities/buren/buren.json";
+import BurenAccept from "./../../static/configFiles/municipalities/buren/buren-accept.json";
+import Dinkelland from "./../../static/configFiles/municipalities/dinkelland/dinkelland.json";
+import DinkellandAccept from "./../../static/configFiles/municipalities/dinkelland/dinkelland.json";
+import Epe from "./../../static/configFiles/municipalities/epe/epe.json";
+import EpeAccept from "./../../static/configFiles/municipalities/epe/epe-accept.json";
+import GooiseMeren from "./../../static/configFiles/municipalities/gooise-meren/gooise-meren.json";
+import GooiseMerenAccept from "./../../static/configFiles/municipalities/gooise-meren/gooise-meren-accept.json";
+import Gouda from "./../../static/configFiles/municipalities/gouda/gouda.json";
+import GoudaAccept from "./../../static/configFiles/municipalities/gouda/gouda-accept.json";
+import HoekscheWaard from "./../../static/configFiles/municipalities/hoeksche-waard/hoeksche-waard.json";
+import HoekscheWaardAccept from "./../../static/configFiles/municipalities/hoeksche-waard/hoeksche-waard-accept.json";
+import Lansingerland from "./../../static/configFiles/municipalities/lansingerland/lansingerland.json";
+import LansingerlandAccept from "./../../static/configFiles/municipalities/lansingerland/lansingerland-accept.json";
+import Leiden from "./../../static/configFiles/municipalities/leiden/leiden.json";
+import LeidenAccept from "./../../static/configFiles/municipalities/leiden/leiden-accept.json";
+import Moerdijk from "./../../static/configFiles/municipalities/moerdijk/moerdijk.json";
+import MoerdijkAccept from "./../../static/configFiles/municipalities/moerdijk/moerdijk-accept.json";
+import Noordwijk from "./../../static/configFiles/municipalities/noordwijk/noordwijk.json";
+import NoordwijkAccept from "./../../static/configFiles/municipalities/noordwijk/noordwijk-accept.json";
+import Ridderkerk from "./../../static/configFiles/municipalities/ridderkerk/ridderkerk.json";
+import RidderkerkAccept from "./../../static/configFiles/municipalities/ridderkerk/ridderkerk-accept.json";
+import RijssenHolten from "./../../static/configFiles/municipalities/rijssen-holten/rijssen-holten.json";
+import RijssenHoltenAccept from "./../../static/configFiles/municipalities/rijssen-holten/rijssen-holten-accept.json";
+import Roosendaal from "./../../static/configFiles/municipalities/roosendaal/roosendaal.json";
+import RoosendaalAccept from "./../../static/configFiles/municipalities/roosendaal/roosendaal-accept.json";
+import Rotterdam from "./../../static/configFiles/municipalities/rotterdam/rotterdam.json";
+import RotterdamAccept from "./../../static/configFiles/municipalities/rotterdam/rotterdam-accept.json";
+import StedeBroec from "./../../static/configFiles/municipalities/stede-broec/stede-broec.json";
+import StedeBroecAccept from "./../../static/configFiles/municipalities/stede-broec/stede-broec-accept.json";
+import Texel from "./../../static/configFiles/municipalities/texel/texel.json";
+import TexelAccept from "./../../static/configFiles/municipalities/texel/texel-accept.json";
+import Tubbergen from "./../../static/configFiles/municipalities/tubbergen/tubbergen.json";
+import TubbergenAccept from "./../../static/configFiles/municipalities/tubbergen/tubbergen-accept.json";
+import Waddinxveen from "./../../static/configFiles/municipalities/waddinxveen/waddinxveen.json";
+import WaddinxveenAccept from "./../../static/configFiles/municipalities/waddinxveen/waddinxveen-accept.json";
+import Zutphen from "./../../static/configFiles/municipalities/zutphen/zutphen.json";
+import ZutphenAccept from "./../../static/configFiles/municipalities/zutphen/zutphen-accept.json";
+
+// Other
+import Conduction from "./../../static/configFiles/other/conduction/conduction.json";
+import ConductionAccept from "./../../static/configFiles/other/conduction/conduction-accept.json";
+import Localhost from "./../../static/configFiles/other/localhost/localhost.json";
+import Noaberkracht from "./../../static/configFiles/other/noaberkracht/noaberkracht.json";
+import NoaberkrachtAccept from "./../../static/configFiles/other/noaberkracht/noaberkracht-accept.json";
+import OpenWebconcept from "./../../static/configFiles/other/open-webconcept/open-webconcept.json";
+import OpenWebconceptAccept from "./../../static/configFiles/other/open-webconcept/open-webconcept-accept.json";
+import Sloterburg from "./../../static/configFiles/other/sloterburg/sloterburg.json";
+import SloterburgAccept from "./../../static/configFiles/other/sloterburg/sloterburg-accept.json";
+import Xxllnc from "./../../static/configFiles/other/xxllnc/xxllnc.json";
+import XxllncAccept from "./../../static/configFiles/other/xxllnc/xxllnc-accept.json";
+import Zuiddrecht from "./../../static/configFiles/other/zuiddrecht/zuiddrecht.json";
+import ZuiddrechtAccept from "./../../static/configFiles/other/zuiddrecht/zuiddrecht-accept.json";
+
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
   switch (themeOrDomainName) {
-    case "epe-theme":
-    case "open.epe.nl":
-    case "epe.openwoo.app":
-    case "epe.koophulpje.nl":
-    case "acceptatie-open.epe.nl":
-      return Epe;
+    // Municipalities
+    case "albrandswaard":
+    case "open.albrandswaard.nl":
+    case "albrandswaard.openwoo.app":
+    case "albrandswaard.koophulpje.nl":
+      return Albrandswaard;
+    case "acceptatie-open.albrandswaard.nl":
+      return AlbrandswaardAccept;
 
-    case "noordwijk-theme":
-    case "open.noordwijk.nl":
-    case "noordwijk.openwoo.app":
-    case "noordwijk.koophulpje.nl":
-    case "acceptatie-open.noordwijk.nl":
-      return Noordwijk;
+    case "barendrecht":
+    case "open.barendrecht.nl":
+    case "barendrecht.openwoo.app":
+    case "barendrecht.koophulpje.nl":
+      return Barendrecht;
+    case "acceptatie-open.barendrecht.nl":
+      return BarendrechtAccept;
 
-    case "rotterdam-theme":
-    case "open.rotterdam.nl":
-    case "rotterdam.openwoo.app":
-    case "rotterdam.koophulpje.nl":
-    case "acceptatie-open.rotterdam.nl":
-      return Rotterdam;
-
-    case "noaberkracht-theme":
-    case "open.noaberkracht.nl":
-    case "noaberkracht.openwoo.app":
-    case "noaberkracht.koophulpje.nl":
-    case "acceptatie-open.noaberkracht.nl":
-      return Noaberkracht;
-
-    case "tubbergen-theme":
-    case "open.tubbergen.nl":
-    case "tubbergen.openwoo.app":
-    case "tubbergen.koophulpje.nl":
-    case "acceptatie-open.tubbergen.nl":
-      return Tubbergen;
+    case "buren":
+    case "opem.buren.nl":
+    case "buren.openwoo.app":
+    case "buren.koophulpje.nl":
+      return Buren;
+    case "acceptatie.open.buren.nl":
+      return BurenAccept;
 
     case "dinkelland-theme":
     case "open.dinkelland.nl":
     case "dinkelland.openwoo.app":
     case "dinkelland.koophulpje.nl":
-    case "acceptatie-open.dinkelland.nl":
       return Dinkelland;
+    case "acceptatie-open.dinkelland.nl":
+      return DinkellandAccept;
 
-    case "xxllnc-theme":
-    case "open.xxllnc.nl":
-    case "xxllnc.openwoo.app":
-    case "xxllnc.koophulpje.nl":
-    case "acceptatie-open.xxllnc.nl":
-      return Xxllnc;
-
-    case "zutphen-theme":
-    case "open.zutphen.nl":
-    case "zutphen.openwoo.app":
-    case "zutphen.koophulpje.nl":
-    case "acceptatie-open.zutphen.nl":
-      return Zutphen;
-
-    case "zuiddrecht-theme":
-    case "open.zuiddrecht.nl":
-    case "zuiddrecht.openwoo.app":
-    case "zuiddrecht.koophulpje.nl":
-    case "acceptatie-open.zuiddrecht.nl":
-      return Zuiddrecht;
-
-    case "sloterburg-theme":
-    case "open.sloterburg.nl":
-    case "sloterburg.openwoo.app":
-    case "sloterburg.koophulpje.nl":
-    case "acceptatie-open.sloterburg.nl":
-      return Sloterburg;
-
-    case "gouda-theme":
-    case "open.gouda.nl":
-    case "gouda.openwoo.app":
-    case "gouda.koophulpje.nl":
-    case "acceptatie-open.gouda.nl":
-      return Gouda;
+    case "epe-theme":
+    case "open.epe.nl":
+    case "epe.openwoo.app":
+    case "epe.koophulpje.nl":
+      return Epe;
+    case "acceptatie-open.epe.nl":
+      return EpeAccept;
 
     case "gooisemeren-theme":
     case "open.gooisemeren.nl":
     case "gooisemeren.openwoo.app":
     case "gooisemeren.koophulpje.nl":
-    case "acceptatie-open.gooisemeren.nl":
       return GooiseMeren;
+    case "acceptatie-open.gooisemeren.nl":
+      return GooiseMerenAccept;
+
+    case "gouda-theme":
+    case "open.gouda.nl":
+    case "gouda.openwoo.app":
+    case "gouda.koophulpje.nl":
+      return Gouda;
+    case "acceptatie-open.gouda.nl":
+      return GoudaAccept;
+
+    case "hoeksche-waard":
+    case "open.hoeksche-waard.nl":
+    case "hoeksche-waard.openwoo.app":
+    case "hoeksche-waard.koophulpje.nl":
+      return HoekscheWaard;
+    case "acceptatie-open.hoeksche-waard.nl":
+      return HoekscheWaardAccept;
+
+    case "lansingerland":
+    case "open.lansingerland.nl":
+    case "lansingerland.openwoo.app":
+    case "lansingerland.koophulpje.nl":
+      return Lansingerland;
+    case "acceptatie-open.lansingerland.nl":
+      return LansingerlandAccept;
+
+    case "leiden-theme":
+    case "open.leiden.nl":
+    case "leiden.openwoo.app":
+    case "leiden.koophulpje.nl":
+      return Leiden;
+    case "acceptatie-open.leiden.nl":
+      return LeidenAccept;
+
+    case "moerdijk-theme":
+    case "open.moerdijk.nl":
+    case "moerdijk.openwoo.app":
+    case "moerdijk.koophulpje.nl":
+      return Moerdijk;
+    case "acceptatie-opens.moerdijk.nl":
+      return MoerdijkAccept;
+
+    case "noordwijk-theme":
+    case "open.noordwijk.nl":
+    case "noordwijk.openwoo.app":
+    case "noordwijk.koophulpje.nl":
+      return Noordwijk;
+    case "acceptatie-open.noordwijk.nl":
+      return NoordwijkAccept;
+
+    case "ridderkerk":
+    case "open.ridderkerk.nl":
+    case "ridderkerk.openwoo.app":
+    case "ridderkerk.koophulpje.nl":
+      return Ridderkerk;
+    case "acceptatie-open.ridderkerk.nl":
+      return RidderkerkAccept;
+
+    case "rijssen-holten":
+    case "open.rijssen-holten.nl":
+    case "rijssen-holten.openwoo.app":
+    case "rijssen-holten.koophulpje.nl":
+      return RijssenHolten;
+    case "acceptatie-open.rijssen-holten.nl":
+      return RijssenHoltenAccept;
 
     case "roosendaal-theme":
     case "open.roosendaal.nl":
     case "roosendaal.openwoo.app":
     case "roosendaal.koophulpje.nl":
-    case "acceptatie-open.roosendaal.nl":
       return Roosendaal;
+    case "acceptatie-open.roosendaal.nl":
+      return RoosendaalAccept;
 
-    case "openwoo.app":
-    case "koophulpje.nl":
-    case "open-webconcept-theme":
-      // case "localhost": // development purposes
-      return OpenWebconcept;
-
-    case "barendrecht":
-    case "barendrecht.koophulpje.nl":
-    case "barendrecht.openwoo.app":
-      return Barendrecht;
-
-    case "ridderkerk":
-    case "ridderkerk.koophulpje.nl":
-    case "ridderkerk.openwoo.app":
-      return Ridderkerk;
-
-    case "buren":
-    case "buren.koophulpje.nl":
-    case "buren.openwoo.app":
-      return Buren;
-
-    case "albrandswaard":
-    case "albrandswaard.koophulpje.nl":
-    case "albrandswaard.openwoo.app":
-      return Albrandswaard;
+    case "rotterdam-theme":
+    case "open.rotterdam.nl":
+    case "rotterdam.openwoo.app":
+    case "rotterdam.koophulpje.nl":
+      return Rotterdam;
+    case "acceptatie-open.rotterdam.nl":
+      return RotterdamAccept;
 
     case "stedebroec":
-    case "stedebroec.koophulpje.nl":
+    case "open.stedebroec.nl":
     case "stedebroec.openwoo.app":
+    case "stedebroec.koophulpje.nl":
       return StedeBroec;
-
-    case "lansingerland":
-    case "lansingerland.koophulpje.nl":
-    case "lansingerland.openwoo.app":
-      return Lansingerland;
-
-    case "waddinxveen":
-    case "waddinxveen.koophulpje.nl":
-    case "waddinxveen.openwoo.app":
-      return Waddinxveen;
-
-    case "rijssen-holten":
-    case "rijssen-holten.koophulpje.nl":
-    case "rijssen-holten.openwoo.app":
-      return RijssenHolten;
-
-    case "hoeksche-waard":
-    case "hoeksche-waard.koophulpje.nl":
-    case "hoeksche-waard.openwoo.app":
-      return HoekscheWaard;
+    case "acceptatie-open.stedebroec.nl":
+      return StedeBroecAccept;
 
     case "texel":
-    case "texel.koophulpje.nl":
+    case "open.texel.nl":
     case "texel.openwoo.app":
+    case "texel.koophulpje.nl":
       return Texel;
+    case "acceptatie-open.texel.nl":
+      return TexelAccept;
+
+    case "tubbergen-theme":
+    case "open.tubbergen.nl":
+    case "tubbergen.openwoo.app":
+    case "tubbergen.koophulpje.nl":
+      return Tubbergen;
+    case "acceptatie-open.tubbergen.nl":
+      return TubbergenAccept;
+
+    case "waddinxveen":
+    case "open.waddinxveen.nl":
+    case "waddinxveen.openwoo.app":
+    case "waddinxveen.koophulpje.nl":
+      return Waddinxveen;
+    case "acceptatie-open.waddinxveen.nl":
+      return WaddinxveenAccept;
+
+    case "zutphen-theme":
+    case "open.zutphen.nl":
+    case "zutphen.openwoo.app":
+    case "zutphen.koophulpje.nl":
+      return Zutphen;
+    case "acceptatie-open.zutphen.nl":
+      return ZutphenAccept;
+
+    // Other
+    case "conduction-theme":
+    case "open.conduction.nl":
+    case "conduction.openwoo.app":
+    case "conduction.koophulpje.nl":
+      return Conduction;
+    case "acceptatie-open.conduction.nl":
+      return ConductionAccept;
 
     case "localhost":
       return Localhost;
+
+    case "noaberkracht-theme":
+    case "open.noaberkracht.nl":
+    case "noaberkracht.openwoo.app":
+    case "noaberkracht.koophulpje.nl":
+      return Noaberkracht;
+    case "acceptatie-open.noaberkracht.nl":
+      return NoaberkrachtAccept;
+
+    case "open-webconcept-theme":
+    case "open.open-webconcept.nl":
+    case "openwoo.app":
+    case "koophulpje.nl":
+      return OpenWebconcept;
+    case "acceptatie-open.open-webconcept.nl":
+      return OpenWebconceptAccept;
+
+    case "sloterburg-theme":
+    case "open.sloterburg.nl":
+    case "sloterburg.openwoo.app":
+    case "sloterburg.koophulpje.nl":
+      return Sloterburg;
+    case "acceptatie-open.sloterburg.nl":
+      return SloterburgAccept;
+
+    case "xxllnc-theme":
+    case "open.xxllnc.nl":
+    case "xxllnc.openwoo.app":
+    case "xxllnc.koophulpje.nl":
+      return Xxllnc;
+    case "acceptatie-open.xxllnc.nl":
+      return XxllncAccept;
+
+    case "zuiddrecht-theme":
+    case "open.zuiddrecht.nl":
+    case "zuiddrecht.openwoo.app":
+    case "zuiddrecht.koophulpje.nl":
+      return Zuiddrecht;
+    case "acceptatie-open.zuiddrecht.nl":
+      return ZuiddrechtAccept;
 
     default:
       return OpenWebconcept;
@@ -186,12 +290,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
 export const availableThemes: TGroupedSelectOption[] = [
   {
     label: "Alle overheidsorganisaties",
-    options: [
-      { label: "Alle overheidsorganisaties", value: "open-webconcept-theme" },
-      // { label: "Conduction", value: "conduction-theme" },
-      // { label: "XXLLNC", value: "xxllnc-theme" },
-      // { label: "Localhost", value: "localhost" },
-    ],
+    options: [{ label: "Alle overheidsorganisaties", value: "open-webconcept-theme" }],
   },
   {
     label: "Gemeenten",
@@ -201,24 +300,42 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Buren", value: "buren" },
       { label: "Dinkelland", value: "dinkelland-theme" },
       { label: "Epe", value: "epe-theme" },
+      { label: "Gooise Meren", value: "gooise-meren-theme" },
       { label: "Gouda", value: "gouda-theme" },
       { label: "Hoeksche Waard", value: "hoeksche-waard" },
       { label: "Lansingerland", value: "lansingerland" },
+      { label: "Leiden", value: "leiden-theme" },
+      { label: "Moerdijk", value: "moerdijk-theme" },
       { label: "Noordwijk", value: "noordwijk-theme" },
       { label: "Ridderkerk", value: "ridderkerk" },
       { label: "Rijssen-Holten", value: "rijssen-holten" },
+      { label: "Roosendaal", value: "roosendaal-holten" },
       { label: "Rotterdam", value: "rotterdam-theme" },
-      { label: "Sloterburg", value: "sloterburg-theme" },
       { label: "Stede Broec", value: "stedebroec" },
       { label: "Texel", value: "texel" },
       { label: "Tubbergen", value: "tubbergen-theme" },
       { label: "Waddinxveen", value: "waddinxveen" },
-      { label: "Zuiddrecht", value: "zuiddrecht-theme" },
       { label: "Zutphen", value: "zutphen-theme" },
     ],
   },
   {
     label: "Regionale samenwerkingsorganen",
     options: [{ label: "Noaberkracht", value: "noaberkracht-theme" }],
+  },
+  {
+    label: "Fictieve Gemeenten",
+    options: [
+      // { label: "Sloterburg", value: "sloterburg-theme" },
+      // { label: "Zuiddrecht", value: "zuiddrecht-theme" },
+    ],
+  },
+  {
+    label: "Overige Thema's",
+    options: [
+      // { label: "Conduction", value: "conduction-theme" },
+      // { label: "Localhost", value: "localhost" },
+      // { label: "XXLLNC", value: "xxllnc-theme" },
+      // { label: "Open Webconcept", value: "open-webconcept-theme" },
+    ],
   },
 ];
