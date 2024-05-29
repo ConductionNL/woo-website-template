@@ -233,10 +233,10 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     // Other
     case "conduction-theme":
     case "open.conduction.nl":
-    case "conduction.openwoo.app":
     case "conduction.koophulpje.nl":
       return Conduction;
     case "acceptatie-open.conduction.nl":
+    case "conduction.openwoo.app":
       return ConductionAccept;
 
     case "localhost":
