@@ -43,7 +43,7 @@ Het tweede component is de [OpenWoo service](https://openwoo.openservices.online
 
 | Component       | Leverancier   | Meer informatie                                   |
 |-----------------|---------------|---------------------------------------------------|
-| Open Index      | Conduction    | [Open Index](https://openindex.online/)           |
+| Open Index      | Conduction    | [Open Index](https://index.openregisters.app/)           |
 | OpenWoo Service | Conduction    | [Lees meer](https://openwoo.openservices.online/) |
 
 ![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Integratie.svg)
