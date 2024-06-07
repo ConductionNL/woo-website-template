@@ -100,6 +100,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "epe.koophulpje.nl":
       return Epe;
     case "acceptatie-open.epe.nl":
+    case "epe.accept.openwoo.app":
       return EpeAccept;
 
     case "gooisemeren-theme":
