@@ -68,6 +68,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "albrandswaard.koophulpje.nl":
       return Albrandswaard;
     case "acceptatie-open.albrandswaard.nl":
+    case "albrandswaard.accept.openwoo.app":
       return AlbrandswaardAccept;
 
     case "barendrecht":
@@ -76,6 +77,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "barendrecht.koophulpje.nl":
       return Barendrecht;
     case "acceptatie-open.barendrecht.nl":
+    case "barendrecht.accept.openwoo.app":
       return BarendrechtAccept;
 
     case "buren":
@@ -84,6 +86,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "buren.koophulpje.nl":
       return Buren;
     case "acceptatie.open.buren.nl":
+    case "buren.accept.openwoo.app":
       return BurenAccept;
 
     case "dinkelland-theme":
@@ -92,6 +95,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "dinkelland.koophulpje.nl":
       return Dinkelland;
     case "acceptatie-open.dinkelland.nl":
+    case "dinkelland.accept.openwoo.app":
       return DinkellandAccept;
 
     case "epe-theme":
@@ -109,6 +113,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "gooisemeren.koophulpje.nl":
       return GooiseMeren;
     case "acceptatie-open.gooisemeren.nl":
+    case "gooisemeren.accept.openwoo.app":
       return GooiseMerenAccept;
 
     case "gouda-theme":
@@ -117,14 +122,16 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "gouda.koophulpje.nl":
       return Gouda;
     case "acceptatie-open.gouda.nl":
+    case "gouda.accept.openwoo.app":
       return GoudaAccept;
 
     case "hoeksche-waard":
-    case "open.hoeksche-waard.nl":
-    case "hoeksche-waard.openwoo.app":
-    case "hoeksche-waard.koophulpje.nl":
+    case "open.gemeentehw.nl":
+    case "gemeentehw.openwoo.app":
+    case "gemeentehw.koophulpje.nl":
       return HoekscheWaard;
-    case "acceptatie-open.hoeksche-waard.nl":
+    case "acceptatie-open.gemeentehw.nl":
+    case "gemeentehw.accept.openwoo.app":
       return HoekscheWaardAccept;
 
     case "lansingerland":
@@ -133,6 +140,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "lansingerland.koophulpje.nl":
       return Lansingerland;
     case "acceptatie-open.lansingerland.nl":
+    case "lansingerland.accept.openwoo.app":
       return LansingerlandAccept;
 
     case "leiden-theme":
@@ -141,6 +149,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "leiden.koophulpje.nl":
       return Leiden;
     case "acceptatie-open.leiden.nl":
+    case "leiden.accept.openwoo.app":
       return LeidenAccept;
 
     case "moerdijk-theme":
@@ -149,6 +158,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "moerdijk.koophulpje.nl":
       return Moerdijk;
     case "acceptatie-opens.moerdijk.nl":
+    case "moerdijk.accept.openwoo.app":
       return MoerdijkAccept;
 
     case "noordwijk-theme":
@@ -157,6 +167,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "noordwijk.koophulpje.nl":
       return Noordwijk;
     case "acceptatie-open.noordwijk.nl":
+    case "noordwijk.accept.openwoo.app":
       return NoordwijkAccept;
 
     case "ridderkerk":
@@ -165,6 +176,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "ridderkerk.koophulpje.nl":
       return Ridderkerk;
     case "acceptatie-open.ridderkerk.nl":
+    case "ridderkerk.accept.openwoo.app":
       return RidderkerkAccept;
 
     case "rijssen-holten":
@@ -173,6 +185,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "rijssen-holten.koophulpje.nl":
       return RijssenHolten;
     case "acceptatie-open.rijssen-holten.nl":
+    case "rijssen-holten.accept.openwoo.app":
       return RijssenHoltenAccept;
 
     case "roosendaal-theme":
@@ -181,6 +194,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "roosendaal.koophulpje.nl":
       return Roosendaal;
     case "acceptatie-open.roosendaal.nl":
+    case "roosendaal.accept.openwoo.app":
       return RoosendaalAccept;
 
     case "rotterdam-theme":
@@ -189,6 +203,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "rotterdam.koophulpje.nl":
       return Rotterdam;
     case "acceptatie-open.rotterdam.nl":
+    case "rotterdam.accept.openwoo.app":
       return RotterdamAccept;
 
     case "stedebroec":
@@ -197,6 +212,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "stedebroec.koophulpje.nl":
       return StedeBroec;
     case "acceptatie-open.stedebroec.nl":
+    case "stedebroec.accept.openwoo.app":
       return StedeBroecAccept;
 
     case "texel":
@@ -205,6 +221,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "texel.koophulpje.nl":
       return Texel;
     case "acceptatie-open.texel.nl":
+    case "texel.accept.openwoo.app":
       return TexelAccept;
 
     case "tubbergen-theme":
@@ -213,6 +230,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "tubbergen.koophulpje.nl":
       return Tubbergen;
     case "acceptatie-open.tubbergen.nl":
+    case "tubbergen.accept.openwoo.app":
       return TubbergenAccept;
 
     case "waddinxveen":
@@ -221,6 +239,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "waddinxveen.koophulpje.nl":
       return Waddinxveen;
     case "acceptatie-open.waddinxveen.nl":
+    case "waddinxveen.accept.openwoo.app":
       return WaddinxveenAccept;
 
     case "zutphen-theme":
@@ -229,6 +248,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "zutphen.koophulpje.nl":
       return Zutphen;
     case "acceptatie-open.zutphen.nl":
+    case "zutphen.accept.openwoo.app":
       return ZutphenAccept;
 
     // Other
@@ -237,7 +257,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "conduction.koophulpje.nl":
       return Conduction;
     case "acceptatie-open.conduction.nl":
-    case "conduction.openwoo.app":
+    case "conduction.accept.openwoo.app":
       return ConductionAccept;
 
     case "localhost":
@@ -249,6 +269,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "noaberkracht.koophulpje.nl":
       return Noaberkracht;
     case "acceptatie-open.noaberkracht.nl":
+    case "noaberkracht.accept.openwoo.app":
       return NoaberkrachtAccept;
 
     case "open-webconcept-theme":
@@ -257,6 +278,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "koophulpje.nl":
       return OpenWebconcept;
     case "acceptatie-open.open-webconcept.nl":
+    case "open-webconcept.accept.openwoo.app":
       return OpenWebconceptAccept;
 
     case "sloterburg-theme":
@@ -265,6 +287,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "sloterburg.koophulpje.nl":
       return Sloterburg;
     case "acceptatie-open.sloterburg.nl":
+    case "sloterburg.accept.openwoo.app":
       return SloterburgAccept;
 
     case "xxllnc-theme":
@@ -273,6 +296,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "xxllnc.koophulpje.nl":
       return Xxllnc;
     case "acceptatie-open.xxllnc.nl":
+    case "xxllnc.accept.openwoo.app":
       return XxllncAccept;
 
     case "zuiddrecht-theme":
@@ -281,6 +305,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "zuiddrecht.koophulpje.nl":
       return Zuiddrecht;
     case "acceptatie-open.zuiddrecht.nl":
+    case "zuiddrecht.accept.openwoo.app":
       return ZuiddrechtAccept;
 
     default:
