@@ -24,12 +24,16 @@
   background-color: var(--conduction-card-wrapper-background-color);
   cursor: default;
 
+  transition: none;
+
   border-width: var(--conduction-card-wrapper-border-width);
   border-style: var(--conduction-card-wrapper-border-style);
   border-color: var(--conduction-card-wrapper-border-color);
   border-bottom-width: var(--conduction-card-wrapper-border-width);
   border-bottom-style: var(--conduction-card-wrapper-border-style);
   border-bottom-color: var(--conduction-card-wrapper-border-color);
+  border-radius: var(--conduction-card-wrapper-border-radius);
+  box-shadow: var(--conduction-card-wrapper-box-shadow);
 }
 
 .description {

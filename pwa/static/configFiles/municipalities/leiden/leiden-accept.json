@@ -1,0 +1,16 @@
+{
+    "GATSBY_SHOW_THEME_SWITCHER": "false",
+    "GATSBY_API_BASE_URL": "https://leiden.accept.openwoo.app/api",
+    "GATSBY_NL_DESIGN_THEME_CLASSNAME": "leiden-theme",
+    "GATSBY_FAVICON_URL": "data:image/svg+xml,%3Csvg id='eVILmByvqh51' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 32 32' shape-rendering='geometricPrecision' text-rendering='geometricPrecision'%3E%3Cimage width='32' height='32' xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACQ0lEQVRYheXWTagOYRTA8R8h6aYpFqIkTRgLsZFvUtihLFggIXZKKVlYcFcWykYp8pHCgiSKtRDlK8qUZiEkdNMkSdLN4nnU9HLdeee+L8qp6Tk9p3nOf+Z8PIf/RfI0GZ2nyfDW/RFddNiDeViKJVEfh09dAcjTZCwWVBzOrXN+Y4A8TRIsig6XYXaT8xoB5GlyHSvxU0zblaYHTOuEcwb4A3maHMc93MLzrCj7O+GsNgA2Y3vU+/I0uYPbEejhnwCoynisjg98wTZMwUIh85NuArTKaNzPivIcxOYyU6iIhdjQzrl1EukuNv3GvgVrs6I8lhXlJnyo67wOwLcI8AYHW415mixBL0bmaTKxHcd1AY4IyTcZ53Gx4nxq3LsgdL6jv+r1QwXYg8VC3K9gt1AFY3EV+/EIn7GuSbnWSZat6In6GazDWdzIivIk5GlyrWmvqPPLeir6cszCGBz4sZkVZdnEeV2AqpzACyEpTzWJeROAPpS4KXz1FewTGtSBOGhMbgozWA6cxGH0462QeFPwVciFB9gYbS+xvl2Awagv4TKeCp2uGuv+CLI4K8r5mNuNMlyFQ1Ffg8cV2ww8y4rydZ4mmzW8NQcLwS6h1jMh8y9VbA8xJk+TVxHsd+26MQCh1fa2bmZF+QUr8jQZPpR5YSCAPnyMax/ex/VdXN9UQIY0rPwSICvKSUM5tB3pyFz3rwHsxZO/BpAV5WnMEW7RC8JMMaAM6zRAq+RpMgE7sBPTs6L8NMgrXQMZ1YnLq+PyHZzbnYV38hWDAAAAAElFTkSuQmCC' preserveAspectRatio='xMidYMid meet'/%3E%3C/svg%3E%0A",
+    "GATSBY_ORGANISATION_NAME": "Leiden",
+    "GATSBY_JUMBOTRON_IMAGE_URL": "https://raw.githubusercontent.com/ConductionNL/woo-website-leiden/main/jumbotron.jpg",
+    "GATSBY_FOOTER_LOGO_HREF": "https://gemeente.leiden.nl/",
+    "GATSBY_FOOTER_CONTENT": "https://raw.githubusercontent.com/ConductionNL/woo-website-leiden/main/docs/FooterContent.json",
+    "GATSBY_FOOTER_CONTENT_HEADER": "heading-3",
+    "GATSBY_OIDN_NUMBER": "",
+    "GATSBY_SHOW_CATEGORY": "true",
+    "GATSBY_SHOW_ORGANIZATION": "true",
+    "GATSBY_DATE_FULL_MONTH": "false"
+  }
+  
