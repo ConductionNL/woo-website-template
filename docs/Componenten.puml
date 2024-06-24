@@ -1,0 +1,36 @@
+@startuml
+title Motorblok
+footer: OpenWoo.app
+header: OpenWoo.app
+
+package "Layer 4 (Logic)" as layer4 {
+ [Synchronisaties] as service
+}
+
+package "Layer 2 (API)" as layer2 {
+
+package "Open Index" {
+ [Search API] as SearchAPI
+}
+package "Open Registers" {
+ [Admin API] as ObjectsAPI
+}
+}
+
+package "Layer 1 (Data)" {
+
+package "Search Index" {
+ [Elastic Search] as search
+}
+
+package "Object Store" {
+ [ORC] as db
+}
+}
+
+db .left.> search: Update
+ObjectsAPI .down.> db: Persist
+SearchAPI <.down. search: Lookup
+service .down.> ObjectsAPI: In synchroniseren van publicaties
+
+@enduml

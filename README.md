@@ -11,7 +11,7 @@
 > 
 > Terug kijken afgelopen webinars en meetings?
 >
-> - [12-04-2024 | Community Meeting](https://www.youtube.com/watch?v=ab_FEexYYMY).
+> - [12-06-2024 | Community Meeting](https://www.youtube.com/watch?v=ab_FEexYYMY).
 > - [09-05-2024 | Community Meeting](https://www.youtube.com/watch?v=Q0ElcTP-R4M).
 > - [10-04-2024 | Community Meeting](https://www.youtube.com/watch?v=zMqElLzy0BM).
 > - [25-03-2024 | Sim-Groep Webinar](https://www.simgroep.nl/toekomstbestendige-woo-oplossing)

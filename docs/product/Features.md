@@ -17,3 +17,16 @@ Automatiseer het publicatieproces en verminder handmatige inspanningen met de sl
 
 ## Toekomstbestendig en Veilig
 Bereid uw organisatie voor op toekomstige ontwikkelingen met configureerbare publicatietypen en verhoog de veiligheid en efficiëntie door het verminderen van directe bevragingen op bronnen.
+
+
+
+| Functionaliteit | Component | Laag | Beschrijving |
+| Publicatie platform | Woo Website Template  | 5 (UI) | 
+| Search (Openbaar) | Open Index | API (2) | Een zoek index met geavenceerde facet search opties
+| Search (Vertrouwlijk) |Open Index | API (2) |
+| Publicatie Register | Open Register | API (2) | Het publicatie register bevat de publicatie objecten, en onder
+| Publicatie Beheer | OpenWoo.plugin voor drupal (Io), OpenWoo app voor nextCloud (Conduction), React container (Acato) | 
+| Document Creatie |  OpenWoo app voor nextCloud (Conduction) | | Creert PDF versies van documenten en bijvoorbeeld voorbladen en inhouds opgaven |
+| Harvesting | Woo Service | 3(integratie) |
+| 
+
