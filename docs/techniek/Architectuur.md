@@ -8,23 +8,24 @@
 ## Doel van OpenWoo.app
 De OpenWoo.app heeft als doel om een ecosysteem van samenwerkende componenten te bieden dat voorziet in de volgende functionaliteit
 
-- Opslag en ontsluiting van documenten en metadata middels API's;
-- Het indexeren van documenten en metadata, en het ontsluiten van zoekresultaten middels API's;
-- Het werken met (concept) publicaties
-- Het uploaden, registreren en publiceren van documenten en metadata door medewerkers;
-- Het (door)zoeken, vinden en raadplegen van documenten en metadata door burgers;
-- Het beheren van autorisaties, configuratie en publicaties door beheerders;
-- Integratie met de landelijke voorziening PLOOI/KOOP, Woogle, Koophulpje, DSO.
-- Integratie met standaard gemeentenlijke bronnen zo als zaaksysteem, raadsinformatie systeem en website
-- Afhandenlings flow voor zowel publiceren als woo verzoeken
-- Generatie van documenten ten behoefe van publiceren en inhouds lijsten
-- Koppeling met annonimiserings software
-- Naar PDF kunnen omzeten van documenten
-- Archiveren
-- Opslaan van zoek filters en resultaten
-- Aboneren op nieuwe publicaties die voldoen aan een opgeslagen zoek filter
-- Het kunnen terugtrekken van publicaties t.b.v herstel op procedurele fouten
-- Help functie voor medewerkers aan de hand van werk instructies
+- [X] Opslag en ontsluiting van documenten en metadata middels API's;
+- [X] Het indexeren van documenten en metadata, en het ontsluiten van zoekresultaten middels API's;
+- [X] Het werken met (concept) publicaties
+- [X] Het uploaden, registreren en publiceren van documenten en metadata door medewerkers;
+- [X] Het (door)zoeken, vinden en raadplegen van documenten en metadata door burgers;
+- [X] Het beheren van autorisaties, configuratie en publicaties door beheerders;
+- [X] Integratie met de landelijke voorziening PLOOI/KOOP, Woogle, Koophulpje, DSO.
+- [X] Integratie met standaard gemeentenlijke bronnen zo als zaaksysteem, raadsinformatie systeem en website
+- [X] Afhandenlings flow voor zowel publiceren als woo verzoeken
+- [X] Het kunnen terugtrekken van publicaties t.b.v herstel op procedurele fouten
+- [X] Help functie voor medewerkers aan de hand van werk instructies
+- [X] Interne publicaties die niet openbaar toegankenlijk zijn
+- [ ] (Roadmap) Generatie van documenten ten behoefe van publiceren en inhouds lijsten
+- [ ] (Roadmap) Koppeling met annonimiserings software
+- [ ] (Roadmap) Naar PDF kunnen omzeten van documenten
+- [ ] (Roadmap) Archiveren
+- [ ] (Roadmap) Opslaan van zoek filters en resultaten
+- [ ] (Roadmap) Aboneren op nieuwe publicaties die voldoen aan een opgeslagen zoek filter
 
 We hebben deze functionaliteit opgedeeld in drie blokken
 1. Publicatieplatform
