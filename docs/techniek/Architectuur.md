@@ -4,9 +4,56 @@
 >
 > Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder.
 
+
+## Doel van OpenWoo.app
+De OpenWoo.app heeft als doel om een ecosysteem van samenwerkende componenten te bieden dat voorziet in de volgende functionaliteit
+
+- Opslag en ontsluiting van documenten en metadata middels API's;
+- Het indexeren van documenten en metadata, en het ontsluiten van zoekresultaten middels API's;
+- Het werken met (concept) publicaties
+- Het uploaden, registreren en publiceren van documenten en metadata door medewerkers;
+- Het (door)zoeken, vinden en raadplegen van documenten en metadata door burgers;
+- Het beheren van autorisaties, configuratie en publicaties door beheerders;
+- Integratie met de landelijke voorziening PLOOI/KOOP, Woogle, Koophulpje, DSO.
+- Integratie met standaard gemeentenlijke bronnen zo als zaaksysteem, raadsinformatie systeem en website
+- Afhandenlings flow voor zowel publiceren als woo verzoeken
+- Generatie van documenten ten behoefe van publiceren en inhouds lijsten
+- Koppeling met annonimiserings software
+- Naar PDF kunnen omzeten van documenten
+- Archiveren
+- Opslaan van zoek filters en resultaten
+- Aboneren op nieuwe publicaties die voldoen aan een opgeslagen zoek filter
+- Het kunnen terugtrekken van publicaties t.b.v herstel op procedurele fouten
+- Help functie voor medewerkers aan de hand van werk instructies
+
+We hebben deze functionaliteit opgedeeld in drie blokken
+1. Publicatieplatform
+2. Motorblok 
+3. Bronnen
+
+Secundair doel daarbij is wat idialistischer: om een gemeenschappenlijke codebase te realiseren die door meerdere leveranciers kan worden uitgeleverd en deze vanaf dag één te betrekken. Het voorkomgen van een locked in vraagt om een open source oplossing die door en door begrepen word door meerdere markt partijen. OpenWoo.app
+
 ## Hergebruik tot op het bot
 
 OpenWoo.app maakt voor haar onderliggende techniek en architectuur gebruik van [Open Catalogi](https://documentatie.opencatalogi.nl/) meer informatie technsiche informatie over publiceren naar het federatief datastelsel vind je dan ook in de [architectuur documentatie van open catalogi](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/).
+
+Daar waar we het binnen Open Catalogi over burgers hebben defineren we voor de woo de (sub)doelgroepen inwoners, onderzoekers, journalisten, raadsleden en ondernemers. Het ORC als opslag voor publicaties vertolkt richting de WOO ook de rol van Openbare Documenten Registratie Component (ODRC). Waarbij het configureerdbaar is of documenten daadwerkenlijk worden overgenomen naar het ORC of bij iedere inzage uit de bron worden gehaald (in welk geval alleen de metadata wordt overgenomen). Deze configuratie keuze wordt met name aangeboden om bronsystemen te ontzien of om trage bronsystemen heen te werken. In Elastic Search (die de rol van search vertolkt) worden ten allertijde alleen de metedata gegevens van bestanden opgenomen.
+
+## Uitdagingen
+Bij het ontwikkelen van een publicatie voorziening komen een aantal uitdagingen in beeld
+
+- Woo gegeves staan vaak opgeslagen in bronnen die niet makkenlijk toegangenlijk zijn
+- De scope van de WOO (alle niet vertrouwelijke gegevens) in combinatie met het concept actieve openbaarmaken raakt de volledige informatie huishouden
+- Handmatig publiceren kan daarmee geen eindoplossing zijn, maar eigenlijk ook al geen tussen oplossing
+- Er mogen géén fouten worden gemaakt met annonimisren, dit vraagt om een afgebakende proces flow met checks en balances rondom publiceren
+
+Dat leid tot de conclusie dat we niet op zoek zijn naar een WOO publicatie platform maar een algemene publicatie voorzienen die één of meerdere publicatie kanalen kan 'voeden', daarbij denken we naast de WOO Index (koop) ook nadrukenlijk aan een organisatie eigen publicatie platform, Woogle en bijvoorbeeld een gemeentenlijke website. In het verlengde hiervan liggen ook DROP, SDG, Algoritme registers en WHO als kanalen die vanuit een generiek publicatie platform moeten kunnen worden ontsloten. 
+
+## Belangrijkste verschillen ten opzicht van OpenWoo.app 1.0
+
+**Splitsing opslag en search** Binnen de OpenWoo.app 1.0 werd er één mongoDB instance als opslag en search gebruikt, we hebben deze zowel qua opslag uit elkaar getrokken in een elastic search en orc instansie als vereeld over twee aparte api's (zoeken en beheer).
+**Lostrekken integratie component** De 1.0 versie was direct gebouwd op de common gateway, een integratie voorziening. Vanaf 2.0 zijn de zoek api en beheer api gepositioneerd als losse componenten die (desgewenst) ook op NLX/FSC kunnen worden ontsloten.
+**Publicatie flow** De 1.0 versie was gebouwd op de gedachte dat objecten vanuit de bron altijd automatisch moesten worden gepubliceerd. In de 2.0 is dit omgedraaid en wordt er vanuit gegaan dat er actief beheer is op publicaties en dat ze pas worden gepubliceerd als daarte is geacodeerd. Wel kunnen er nog steeds automatische spelregels worden afgesproken.
 
 ### Publicatieplatform (onderdeel 1)
 
@@ -114,9 +161,6 @@ De woo service "scraped" elke nacht alle relevante informatie en synchronyseerd 
 Het bovenstaande proces zorgt ervoor dat het zaaksysteem leidend is en dat zaken zowel kunnen worden gepubliceerd als worden gedepubliceerd.
 
 
-
-
-
 ## Integraal (Organisatiebreed) zoeken
 De kern van de Woo is het zoeken in de openbare informatie van een overheid organisatie, hierbij zou het in theorie niet mogen uitmaken in welke bron/applicatie informatie staat. Deze vorm van bron en domein overstijgend zoeken kennen we vanuit overheid architectuur al langer en noemen we doorgaans integrale zoekvraag.
 
@@ -151,9 +195,15 @@ OpenWoo.app is een organisatie specifieke applicatie waarvan de installaties ond
 
 Dit zijn de aangeboden domeinen vanuit OpenWoo.app, daarnaast zien de dat de meeste organisaties hun publicatie pagina ontsluiten op hun eigen domein e.g. open.[organisatie_naam].nl
 
-## Woo Publicatie-object
+## Documenten vs Publicatie Objecten
+Vanuit de WOO denken we doorgaans aan documenten die gepubliceerd moeten worden, vanuit OpenWoo.app denken we echter in publicatie objecten waar een of meer documenten aan kunnen worden gekoppeld. Publicatie objecten omvatten de metadata waarmee documenten kunnen worden gevonden, geclusterd en weergegeven (zo als bijvoorbeeld thema's en typen). Publicatie objecten kunnen ook aan elkaar worden gerelateerd, dat is met name relavant in de casus van raads informatie systemen waarbij een stuk hoort bij een agenda item dat hoort bij een agenda bij een vergadering en gekopeld kan zijn aan stem gedrag van personen of facties.
 
-Het Woo Publicatie-object vormt de kern van zowel de Woo-API als de Woo-website. Dit object bevat alle essentiële informatie over een Woo-publicatie, inclusief metadata, publicatiedatum, bijlagen en andere relevante eigenschappen. Het dient als de centrale entiteit waaromheen de functionaliteiten van de API en de website zijn gebouwd. Door deze gecentraliseerde aanpak is het eenvoudiger om Woo-publicaties efficiënt te beheren, op te halen en weer te geven, en draagt het bij aan een coherente en gestroomlijnde gebruikerservaring.
+Het onderling aan elkaar relateren van publicatie objecten leid onderwater tot een 3 dimensionaal datamodel en is een van de redenen waarom er binnen OpenWoo.app is gekozen voor linked data. 
+
+## Metadata
+Ieder publicatie object beschickt over een type (bijvoorbeeld woo_verzoek) en een voorgedefineerde metadata set. De metadataset beschrijft wat er in de publicatie aan gegevens wordt verwacht en typeerd dese (bijvoorbeeld heeft titel, de titel is een string) en biedt daarmee context voor de weergave van de publicatie. Dit bied de search UI de mogenlijkheid om cards te maken die geoptimaliseerd zijn voor specifieke WOO categorien en een algemene card voor niet op voorhand gedefineerde of onbekende categorien.
+
+Dat laatste kan voorkomen als een organisatie zelf metedata sets toevoegd, dat mag. Het is mogenlijk voor organisaties om zelf extra metadata beschrijvingen te defineren en hierop te publiceren. Organisaties zijn daarmee ook niet gelimiteerd tot de door KOOP gedefineerde categorien. Dit is ook een van de redenen waarom zoeken UI de faceted search MOET implementeren (zie ook de [architectuur documentatie van open catalogi](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/)). Het is niet op voorhand voorspelbaar op welke aspecten kan worden gezocht, dit is afhankenlijk van de publicaties en gedefineerde metadata zo als gepubliceerd door deelnemende organisaties.
 
 ## Roadmap
 

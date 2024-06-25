@@ -1,5 +1,8 @@
 # Features
 
+Een federaale search API
+
+
 ## Centrale Index Pagina
 Een overzichtelijke locatie voor alle openbare data van uw organisatie, verbetert de vindbaarheid van informatie.
 
