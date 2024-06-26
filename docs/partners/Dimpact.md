@@ -1,8 +1,8 @@
 # Dimpact
 
-Dimpact heeft als samenwerkings- en inkooporganisatie vanuit diverse van haar leden de vraag gekregen om te verkennen hoe een eventuele in het kader van de Wet open overheid zou kunnen worden vormgegeven. Dimpact heeft deze verkenning in eerste instantie gemeenschappelijk met de gemeente Rotterdam uitgevoerd.
+Dimpact heeft als samenwerkings- en inkooporganisatie vanuit diverse van haar leden de vraag gekregen om te verkennen hoe een eventuele proof-of-concept(PoC) in het kader van de Wet open overheid zou kunnen worden vormgegeven. Dimpact heeft deze verkenning in eerste instantie gemeenschappelijk met de gemeente Rotterdam uitgevoerd.
 
-Tijdens deze verkenning is Dimpact de oplossing OpenWoo.app tegengekomen voor het publiceren van Woo verzoeken naar een publicatie pagina én landelijke platformen zo als KOOP. Vanuit hergebruik heeft Dimpact de wens om deze oplossing in te zetten en zich eventueel aan te sluiten bij de OpenWoo.app community.
+Tijdens deze verkenning is Dimpact de oplossing OpenWoo.app tegengekomen voor het publiceren van Woo verzoeken naar een publicatiepagina én landelijke platformen zoals KOOP. Vanuit hergebruik heeft Dimpact de wens om deze oplossing in te zetten en zich mogelijk aan te sluiten bij de OpenWoo.app community.
 
 ## Overwegingen
 
