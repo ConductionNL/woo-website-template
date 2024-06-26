@@ -1,6 +1,6 @@
 # Testscenario's
 
-Om de Open WOO Website zelfstandig te kunnen installeren of doorontwikkelen, is het belangrijk om ook over herbruikbare testscenario's te beschikken. Daarnaast wilt u als afnemer ook graag weten of uw SAAS of SLA product graag werkt. Daarvoor hebben we de volgende testscripts uitgeschreven.
+Om de Open WOO Website zelfstandig te kunnen installeren of doorontwikkelen, is het belangrijk om ook over herbruikbare testscenario's te beschikken. Daarnaast wilt u als afnemer ook graag weten of uw SAAS of SLA-product graag werkt. Daarvoor hebben we de volgende testscripts uitgeschreven.
 
 We kunnen de testscripts opsplitsen in de volgende categorieën:
 
@@ -114,11 +114,11 @@ Zorg ervoor dat het zaaksysteem is geconfigureerd zoals beschreven in de documen
 
 1. Voeg een nieuwe WOO-publicatie toe in het zaaksysteem met een publicatiedatum die nu is of in het verleden en met de categorie `Woo-verzoeken en -besluiten`.
 2. Voeg meerdere bijlagen toe, waarvan:
-   - Minimaal één gelabeld als besluit (en publiek)
-   - Minimaal één gelabeld als informatieverzoek (en publiek)
-   - Minimaal één gelabeld als inventarisatielijst (en publiek)
-   - Minimaal één niet-gelabeld (en publiek)
-   - Minimaal één niet publiek
+   - Minimaal één gelabeld als besluit (en publiek)
+   - Minimaal één gelabeld als informatieverzoek (en publiek)
+   - Minimaal één gelabeld als inventarisatielijst (en publiek)
+   - Minimaal één niet-gelabeld (en publiek)
+   - Minimaal één niet publiek
 3. Geef een onderwerp op
 4. Geef een omschrijving op
 5. Geef meerdere thema's op, gescheiden door een komma
@@ -142,15 +142,15 @@ Verwijder alle testdata uit het zaaksysteem en de WOO-website.
 
 ## Technische test
 
-Naast functioneele tests is het ook belangrijk om te controleren of de website voldoet aan de teschnsiche eisen voor overheids websites.
+Naast functionele tests is het ook belangrijk om te controleren of de website voldoet aan de technische eisen voor overheidswebsites.
 
 ### WCAG
 
-Er is een [WCAG raportage](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/WCAG-Raportage.pdf) beschickbaar voor de website.
+Er is een [WCAG raportage](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/WCAG-Raportage.pdf) beschikbaar voor de website.
 
-U kunt de test zelf herhalen, vervang in de volgende url https://conductionnl.github.io/woo-website-xxllnc/ door het addres van uw OpenWOO app
+U kunt de test zelf herhalen, vervang in de volgende URL <https://conductionnl.github.io/woo-website-xxllnc/> door het adres van uw OpenWoo.app
 [https://accessibe.com/accessscan?website=https://conductionnl.github.io/woo-website-xxllnc/](https://accessibe.com/accessscan?website=https://conductionnl.github.io/woo-website-xxllnc/)
 
 ### Pentest
 
-Er is een [Pentest raportage](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/PENTEST-Raportage.pdf) beschickbaar voor de website.
+Er is een [Pentest raportage](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/PENTEST-Raportage.pdf) beschikbaar voor de website.
