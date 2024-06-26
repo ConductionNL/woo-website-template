@@ -46,8 +46,8 @@ https://tubbergen.openwoo.app
 https://tubbergen.accept.openwoo.app
 https://waddinxveen.openwoo.app
 https://waddinxveen.accept.openwoo.app
-https://zupthen.openwoo.app
-https://zupthen.accept.openwoo.app
+https://zutphen.openwoo.app
+https://zutphen.accept.openwoo.app
 `;
 
 export const connectSrcOther = `
