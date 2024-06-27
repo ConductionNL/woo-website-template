@@ -4,19 +4,17 @@ Het succes en de continue verbetering van het OpenWoo.app project zijn afhankeli
 
 ## Open Webconcept
 
-OpenWoo.app is een doorontwikkeling van de OpenWoo wordpress plugin uit OpenWebconcept. Vanuit die oorsprong is OpenWoo.app eigenlijk een subcommunity van OpenWebconcept. De community staat echter nadrukkenlijk open voor niet OWC afnemers en leveranciers.
+OpenWoo.app is een doorontwikkeling van de OpenWoo WordPress-plugin uit Open Webconcept. Vanuit die oorsprong is OpenWoo.app eigenlijk een subcommunity van OpenWebconcept. De community staat echter nadrukkelijk open voor niet OWC-afnemers en leveranciers.
 
 De gemeente Gouda vormt hierin de linking pin
 
-
-Gemeenten zo als Noordwijk, Gouda, Barendrecht, Allbaserwaard, Ridderkerk en Hoeksewaard vormen met de deelname aan 
-
+Gemeenten zo als Noordwijk, Gouda, Barendrecht, Alblasserwaard, Ridderkerk en Hoeksche Waard vormen met de deelname aan
 
 ## Community Meetings
 
-Iedereen die actief gebruik maakt OpenWoo.app of intresse heeft in de ontwikkeling hiervan is welkom op de maandenlijke community meeting. De community meetings zijn de plek waar we de roadmap doornemen daar proberen gemeenchapenlijk beslutien op te nemen
+Iedereen die actief gebruik maakt OpenWoo.app of interesse heeft in de ontwikkeling hiervan is welkom op de maandelijkse community meeting. De community meetings zijn de plek waar we de roadmap doornemen daar proberen gemeenschappelijk besluiten op te nemen
 
-De community meetings worden aangekondigd via openwoo.app, linkedin en per mail aan de bekenende leveranciers en afnemeners.
+De community meetings worden aangekondigd via openwoo.app, LinkedIn en per mail aan de bekende leveranciers en afnemers.
 
 ## Stuurgroep
 
