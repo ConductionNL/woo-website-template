@@ -7,10 +7,10 @@
     "GATSBY_FOOTER_LOGO_HREF": "https://www.moerdijk.nl/",
     "GATSBY_FOOTER_CONTENT": "https://raw.githubusercontent.com/ConductionNL/woo-website-moerdijk/main/FooterContent.json",
     "GATSBY_FOOTER_CONTENT_HEADER": "heading-2",
-    "GATSBY_OIDN_NUMBER": "",
+    "GATSBY_OIDN_NUMBER": "00000001805329316000",
     "GATSBY_SHOW_CATEGORY": "true",
-    "GATSBY_SHOW_ORGANIZATION": "true",
-    "GATSBY_JUMBOTRON_IMAGE_URL": "https://raw.githubusercontent.com/ConductionNL/woo-website-moerdijk/main/images/jumbotron.jpg",
+    "GATSBY_SHOW_ORGANIZATION": "false",
+    "GATSBY_JUMBOTRON_IMAGE_URL": "https://raw.githubusercontent.com/ConductionNL/woo-website-moerdijk/main/jumbotron.jpg",
     "GATSBY_DATE_FULL_MONTH": "false"
   }
   
