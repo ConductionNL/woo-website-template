@@ -157,7 +157,7 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "moerdijk.openwoo.app":
     case "moerdijk.koophulpje.nl":
       return Moerdijk;
-    case "acceptatie-opens.moerdijk.nl":
+    case "acceptatie-open.moerdijk.nl":
     case "moerdijk.accept.openwoo.app":
       return MoerdijkAccept;
 
