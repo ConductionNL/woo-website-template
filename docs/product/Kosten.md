@@ -35,7 +35,7 @@ U kunt meerdere bronnen koppelen, sommige van deze bronnen vragen daarvoor zelf 
 
 | Component        | Leveranciers(s)                                          | Eenmalig | Maandelijks | Meer informatie |
 |------------------|----------------------------------------------------------|----------|-------------|-------------|
-| Zaaksysteem.nl   | [Xxllnc](https://xxllnc.nl/)                             |  € 3000,-  | n.v.t     |                 |
+| Zaaksysteem.nl   | [Xxllnc](https://xxllnc.nl/)                             |  € 3000,-  | Onbekend    |                 |
 | RX Fundament     | [Roxit](https://www.roxit.nl/)                           | Onbekend | Onbekend     |                 |
 | Decos JOIN       | [Decos](https://www.decos.com/nl)                        | Onbekend | Onbekend     |                 |
 | OpenZaak         | [Maykin Media](https://www.maykinmedia.nl/nl/)           | Onbekend | Onbekend     |                 |
