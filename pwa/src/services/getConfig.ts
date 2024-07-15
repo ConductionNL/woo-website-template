@@ -6,7 +6,7 @@ import BarendrechtAccept from "./../../static/configFiles/municipalities/barendr
 import Buren from "./../../static/configFiles/municipalities/buren/buren.json";
 import BurenAccept from "./../../static/configFiles/municipalities/buren/buren-accept.json";
 import Dinkelland from "./../../static/configFiles/municipalities/dinkelland/dinkelland.json";
-import DinkellandAccept from "./../../static/configFiles/municipalities/dinkelland/dinkelland.json";
+import DinkellandAccept from "./../../static/configFiles/municipalities/dinkelland/dinkelland-accept.json";
 import Epe from "./../../static/configFiles/municipalities/epe/epe.json";
 import EpeAccept from "./../../static/configFiles/municipalities/epe/epe-accept.json";
 import GooiseMeren from "./../../static/configFiles/municipalities/gooise-meren/gooise-meren.json";
