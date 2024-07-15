@@ -16,7 +16,7 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 | Integratie in Open Webconcept | [Yard](https://www.yard.nl/) of [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
 | Sim Site                      | [SIMgroep](https://www.simgroep.nl)                       | Onbekend | Onbekend     |                 |
 | Drupal Site                   | "??"                                                       | Onbekend | Onbekend     |                 |
-| TYPO3 themasite              | [OpenGemeenten](https://www.opengemeenten.nl/)             | Onbekend | Onbekend     |                 |
+| TYPO3 themasite              | [OpenGemeenten](https://www.opengemeenten.nl/)             | € 6000.- | € 250.-     |                 |
 
 > **notice**
 > Weet u niet welk frontend framework uw organisatie op dit moment gebruikt? Kijk dan eens op [digimonitor](https://www.digimonitor.nl/cms-en/gemeenten/).
