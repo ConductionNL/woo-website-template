@@ -1,6 +1,6 @@
 # Configuratie
 
-Om te zorgen dat de OpenWoo-website goed werkt, is het belangrijk dat de onderliggende (zaak)systemen op de juiste manier zijn geconfigureerd. Zo kan het zaaksysteem de informatie aanleveren die op de voorkant nodig is voor het opbouwen van de index. Daarbij is het belangrijk om te weten welke waarden waar worden gebruikt en wat het effect is van configuratiekeuzes.
+Om te zorgen dat de OpenWoo-website goed werkt, is het belangrijk dat de onderliggende (zaak)systemen op de juiste manier zijn geconfigureerd. Zo kan het zaaksysteem de informatie aanleveren die aan de voorkant nodig is voor het opbouwen van de index. Daarbij is het belangrijk om te weten welke waarden waar worden gebruikt en wat het effect is van configuratiekeuzes.
 
 - [Configuratie](#configuratie)
   - [Gebruik variabelen](#gebruik-variabelen)
@@ -8,7 +8,7 @@ Om te zorgen dat de OpenWoo-website goed werkt, is het belangrijk dat de onderli
   - [Categorieën](#categorieën)
   - [Bijlagen](#bijlagen)
   - [Mapping ZGW](#mapping-zgw)
-  - [Mapping vanuit zaaksysteem.nl search endpoint](#mapping-vanuit-zaaksysteemnl-search-endpoint)
+  - [Mapping vanuit het zaaksysteem.nl search endpoint](#mapping-vanuit-zaaksysteemnl-search-endpoint)
 
 ## Gebruik variabelen
 
@@ -38,16 +38,16 @@ In de overzichtspagina worden de properties op de volgende plekken weergegeven.
 Voor het kunnen publiceren van zaken vanuit het zaaksysteem is het belangrijk dat het zaaksysteem beschikt over de juiste inrichting. Indien er via de [OpenWoo service](https://openwoo.openservices.online/) zaken worden opgehaald, gelden daarvoor de volgende spelregels.
 
 - OpenWoo.app kijkt alleen naar eigenschappen die vooraf worden gegaan door `woo_`
-- Er zijn algemene eigenschappen (geldend voor alle categorien) en specifieke eigenschapen (alleen geldend voor bepaalde categoerien)
-- Voor de gedefineerde categeriën volgen we de [informatiecategorieen-en-werkdefinities](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/informatiecategorieen-en-werkdefinities) van koop
+- Er zijn algemene eigenschappen (geldend voor alle categorieën) en specifieke eigenschappen (alleen geldend voor bepaalde categorieën)
+- Voor de gedefinieerde categorieën volgen we de [informatiecategorieën-en-werkdefinities](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/informatiecategorieen-en-werkdefinities) van KOOP
 - Voor de velden volgen we daarnaast ook [diwoo](https://standaarden.overheid.nl/diwoo/metadata/diwoo-handleiding-sitemapindex-en-sitemaps).
-- Naast deze categoerien mag een organisatie ook eigen categorien voeren maar dan worden alleen de algemene eigenschappen over genomen
+- Naast deze categorieën mag een organisatie ook eigen categorieën voeren maar dan worden alleen de algemene eigenschappen overgenomen
 
 Het is niet per definitie nodig om alle eigenschappen in het bron systeem handmatig in te regelen en vullen, sommige eigenschapen kunnen worden overgenomen uit algemene metadata van een bron systeem. Kijk onder [Mappings](#Mappings) om te zien welke eigenschappen automatisch worden gevuld.
 
 ### Algemene eigenschappen
 
-Een aantal zaakatributen zijn noodzakenlijk voor het voor het goed werken van de OpenWoo.app, ze zijn dan ook altijd verplicht ongeacht de Woo categori.  
+Een aantal zaakattributen zijn noodzakelijk voor het goed werken van de OpenWoo.app, ze zijn dan ook altijd verplicht ongeacht de Woo-categorie.
 
 | Property            | Verplicht | Gebruik                                                                                                 | Toegestane waardes |
 |---------------------|-----------|---------------------------------------------------------------------------------------------------------|--------------------|
@@ -77,6 +77,8 @@ Een aantal zaakatributen zijn noodzakenlijk voor het voor het goed werken van de
 > **Note**
 > Op dit moment doet OpenWoo nog niets met thema's behalve ze weergeven bij de zaak. Er zijn echter plannen om in de toekomst een thema-overzichtspagina te maken en Woo-publicaties filterbaar te maken op thema.
 
+## Categorieën
+
 ### Eigenschappen naar categorie
 
 | Categorie | Omschrijving                                 | Eigenschappen                                                                                                                                                       | KOOP                                                                                                                                                                                                    |
@@ -100,7 +102,7 @@ Een aantal zaakatributen zijn noodzakenlijk voor het voor het goed werken van de
 | 2l        | Klachtoordelen                               | `woo_datum_ontvangst`, `woo_organisatieonderdeel`, `woo_functiebenaming`, `woo_gedraging`, `woo_bevindingen`, `woo_oordeel`, `woo_conclusies`, `woo_datum_besluit`,`woo_termijnoverschrijding` | [definitie](https://www.open-overheid.nl/onderwerpen/actieve-openbaarmaking/instrumenten-en-diensten/richtlijnen/2024/2/16/werkdefinitie-klachtoordelen)                                                |
 
 > **Note**
-> Nog niet vastgestelde categorien of categorien die buiten de OpenWoo.app vallen kunnen wel worden ontsloten via OpenWoo.app, daarbij kan gebruik worden gemaakt van de algemene eigenschappen en documenten/bijlagen. De specifieke eigenschappen worden echter pas opgenomen op het moment dat de categorie door KOOP is vastgesteld.
+> Nog niet vastgestelde categorieën of categorieën die buiten de OpenWoo.app vallen kunnen wel worden ontsloten via OpenWoo.app, daarbij kan gebruik worden gemaakt van de algemene eigenschappen en documenten/bijlagen. De specifieke eigenschappen worden echter pas opgenomen op het moment dat de categorie door KOOP is vastgesteld.
 
 ### Documenten/Bijlagen
 
@@ -116,12 +118,12 @@ Bijlagen nemen een bijzondere positie in binnen de OpenWoo.app, ze vormen de ker
 
 > **Spelregels omtrend labels**
 >
-> - Het is mogelijk om als organisatie zelf extra labels toe te voegen, als deze het juist format volgen `woo_[[labelnaam]]]` worden deze automatisch overgenomen in de weergave door boven de rij `Bijlagen` een extra rij toe te voegen in de form `[[labelnaam]]: Alle hieraan gekoppelde bestanden`.
+> - Het is mogelijk om als organisatie zelf extra labels toe te voegen, als deze het juiste format volgen. `woo_[[labelnaam]]]` wordt deze automatisch overgenomen in de weergave door boven de rij `Bijlagen` een extra rij toe te voegen in de vorm `[[labelnaam]]: Alle hieraan gekoppelde bestanden`.
 > - Bestanden die geen andere label hebben dan `woo_publicatie` worden getoond in de rij `Bijlagen`.
 > - Als bestanden meerdere labels hebben worden ze op meerdere plekken getoond (met uitzondering van `Bijlagen` daar worden alleen bestanden getoond zonder label)
 > - Bestanden zonder het label `woo_publicatie` worden niet getoond (ook al zijn ze wel van een ander `woo_` label voorzien)
 
-## Mappigns
+## Mappings
 
 ### Mapping ZGW
 
@@ -139,7 +141,7 @@ Gebaseerd op: [xxllc-zaken mapping](https://github.com/CommonGateway/WooBundle/b
 | woo_id                    | object_id        |
 
 > **Note**
-> Voor de eigenschapen word verder gekeken naar values.attribute.[`eigenschap e.g. woo_beschrijving`]
+> Voor de eigenschapen wordt verder gekeken naar values.attribute.[`eigenschap e.g. woo_beschrijving`]
 
 Bijlagen
 
@@ -153,7 +155,7 @@ Bijlagen
 
 ## Configuratie
 
-Als laatste zijn er ook een aantal waarde op het publicatie object die worden gezet aan de hand van configuratie in de [OpenWoo service](https://openwoo.openservices.online/), te weten
+Als laatste zijn er ook een aantal waarde op het publicatieobject die worden gezet aan de hand van configuratie in de [OpenWoo service](https://openwoo.openservices.online/), te weten
 
 | Eigenchap        | Invulling                           | Gebruik |
 |------------------|-------------------------------------|-------------------|
