@@ -115,77 +115,151 @@ Is de ODRC API een standaard API?
 
 ## **Aan te tonen functionaliteiten bij PoC OpenWoo.app**
 
-ODRC / gebruikersinterface “Model- en publicatiebeheer”
+Onderstaande functionaliteien worden ondersteund, of worden op zeer korte termijn gerealiseerd.
 
-Inloggen (met SSO?)
-Modelbeheer:
+## ODRC / gebruikersinterface “Model- en publicatiebeheer”
+
+1. Inloggen (met SSO?)
+
+- SSO via ADFS of SAML via Nextcloud
+
+2. Modelbeheer:
 Toevoegen, wijzigen en intrekken/verwijderen van extra informatiecategorieën, rekening houdend met TOOI-waardelijst
 Toevoegen, wijzigen en intrekken/verwijderen van organisaties, rekening houdend met TOOI-waardelijst
 Toevoegen, wijzigen en intrekken/verwijderen van organisatie-onderdelen
 Toevoegen, wijzigen en intrekken/verwijderen van extra metadata-velden (per informatiecategorie)
 Toevoegen, wijzigen en intrekken/verwijderen van thema’s / onderwerpen
-Publicatiebeheer:
-Wijzigen en intrekken/verwijderen van een concept-publicatie
-Wijzigen en intrekken/verwijderen van een publicatie
-Waarderen archief
-Raadplegen logging / audittrail van een (concept-)publicati
-Rapportages
-Help-functie
 
-ODPC / gebruikersinterface “Autorisatiebeheer”:
+De OpenWoo.app ondersteund het CRUD + intrekken van alle beovenstaande functionaliteiten voor het beheer van de modellen.
 
-Inloggen (met SSO?)
-Toevoegen, wijzigen en verwijderen van autorisatiegroepen
-Medewerkers toevoegen aan en verwijderen uit een autorisatiegroep
-Een autorisatiegroep autoriseren voor:
-Informatiecategorieën (cq “publiceren van”)
-organisaties (cq “publiceren namens”)
-organisatie-onderdelen (cq “publiceren namens”)
-thema’s / onderwerpen (cq “publicatie hoort bij”)
-Raadplegen logging van (wijzigingen in) autorisaties
-Help-functie
+3. Publicatiebeheer:
 
-ODPC / gebruikersinterface “Publiceren”
+- a. Wijzigen en intrekken/verwijderen van een concept-publicatie
+- b. Wijzigen en intrekken/verwijderen van een publicatie
+- c. Waarderen archief
+- d. Raadplegen logging / audittrail van een (concept-)publicati
+- e. Rapportages
 
-Inloggen (met SSO?)
-Aanmaken nieuwe (concept-)publicatie, met o.a.:
-Uploaden een of meerdere bestanden
-Selecteren een of meerdere informatiecategorieën
-Selecteren organisatie
-Selecteren een of meerdere thema’s / onderwerpen
-Verplichte DiWoo-velden
-Invullen extra metadata-velden
-Opslaan als concept of direct publiceren
-Een concept-publicatie muteren en alsnog publiceren
-Een publicatie intrekken
-Help-functie
+De OpenWoo.app ondersteund het CRUD + intrekken van alle beovenstaande functionaliteiten voor het beheer van de publicaties.
 
-ODBP / gebruikersinterface “Contentbeheer”
+4. Help-functie
 
-Inloggen (met SSO?)
-Wijzigen welkomstpagina
-Aanmaken, wijzigen en verwijderen webpagina met overzicht andere relevante websites
-Raadplegen rapportage bezoekers- / gebruiks-statistieken
-Help-functie
+Er wordt nagedacht over help-functies binnen de beheerinterface. Denk hierbij aan tooltips, documentatie voor zowel gebruikers, beheerders en ontwikkelaars van het ODRC.
 
-ODBP / gebruikersinterface “Zoeken en raadplegen”
+## ODPC / gebruikersinterface “Autorisatiebeheer”
 
-Huisstijl / NL design
-Raadplegen welkomstpagina (zie 17) en overige pagina’s (zie 18)
-Zoeken met behulp van een zoekbalk:
-Full-tekst
-In metadata-waarde
-Gebruik van bolean operators
-Zoeken met behulp van filters
-Raadplegen lijst met zoekresultaten
-Openen van een zoekresultaat en raadplegen van een publicatie
-Downloaden van een publicatie
-Help-functie
+5. Inloggen (met SSO?)
 
-Technisch
+- Dit gebeurd op een dezelfde manier als het inloggen voor het ODRC, via ADFS, LDAP of SAML.
 
-ODRC API:
-Raadplegen model (zie 2)
-Creëren, raadplegen, updaten en verwijderen van (concept-)publicaties
-Search API
-Genereren sitemap(-index)
+6. Toevoegen, wijzigen en verwijderen van autorisatiegroepen
+
+- Gebruikers kunnen autorisatiegroepen toevoegen, wijzigen en verwijderen. Deze groepen worden beheerd via LDAP.
+
+7. Medewerkers toevoegen aan en verwijderen uit een autorisatiegroep
+
+- Medewerkers kunnen worden toegevoegd aan of verwijderd uit een autorisatiegroep. Dit wordt beheerd via LDAP.
+
+8. Een autorisatiegroep autoriseren voor:
+
+- a. Informatiecategorieën (cq “publiceren van”)
+- b. organisaties (cq “publiceren namens”)
+- c. organisatie-onderdelen (cq “publiceren namens”)
+- d. thema’s / onderwerpen (cq “publicatie hoort bij”)
+
+- Configuratie en Authorisatieschema's: De configuratie en authorisatieschema's voor bovenstaande autorisaties worden al ondersteund via LDAP. De beheerinterface voor het uitvoeren van deze taken wordt momenteel ontwikkeld.
+
+9. Raadplegen logging van (wijzigingen in) autorisaties
+
+- Het is een herleidbaar audittrail dat inzichtelijk wordt gemaakt voor het raadplegen van de logging.
+
+10. Help-functie
+
+Er wordt nagedacht over help-functies binnen de beheerinterface. Denk hierbij aan tooltips, documentatie voor zowel gebruikers, beheerders en ontwikkelaars van het ODPC.
+
+## ODPC / gebruikersinterface “Publiceren”
+
+11. Inloggen (met SSO?)
+
+- Dit gebeurd op een dezelfde manier als het inloggen voor het ODRC, via ADFS, LDAP of SAML.
+
+12. aanmaken nieuwe (concept-)publicatie, met o.a.:
+
+- a. Uploaden een of meerdere bestanden
+- b. Selecteren een of meerdere informatiecategorieën
+- c. Selecteren organisatie
+- d. Selecteren een of meerdere thema’s / onderwerpen
+- e. Verplichte DiWoo-velden
+- f. Invullen extra metadata-velden
+- g. Opslaan als concept of direct publiceren
+
+Alle bovenstaande functionaliteit wordt ondersteund in het publicaitemodal in de beheerinterface voor publicaties.
+
+13. Een concept-publicatie muteren en alsnog publiceren
+
+14. Een publicatie intrekken
+
+Publicaites intrekken wordt al ondersteund door het verwijderen van een verplicht veld. Zo is een conceptpublicatie ook al gelijk ondersteund. Met andere woorden, een publicicatie zonder alle verplichte velden ís een concept-publicatie. Let wel op dat als een publicatie eenmaal is gepubliceerd en een derde partij een kopie heeft gemaakt, de OpenWoo.app daar niets meer aan kan doen. In dat geval moet er contact opgenomen worden met bijv. WooGle of KOOP.
+
+15. Help-functie
+
+Er wordt nagedacht over help-functies binnen de beheerinterface. Denk hierbij aan tooltips, documentatie voor zowel gebruikers, beheerders en ontwikkelaars van het ODPC.
+
+## ODBP / gebruikersinterface “Contentbeheer”
+
+16. Inloggen (met SSO?)
+
+- Dit gebeurd op een dezelfde manier als het inloggen voor het ODRC, via ADFS, LDAP of SAML.
+
+17. Wijzigen welkomstpagina
+
+Dit wordt ondersteund.
+
+18. Aanmaken, wijzigen en verwijderen webpagina met overzicht andere relevante websites
+
+@rubenvdlinde - dit via Acato front?
+
+19. Raadplegen rapportage bezoekers- / gebruiks-statistieken
+
+Dit wordt ondersteund door bijvoorbeeld Google Analystics, Nextcloud Analystics,  maar er kan gedacht worden aan dit op te lossen via Elastic(Stack) in hoeverre hier vraag naar is.
+
+20. Help-functie
+
+Er wordt nagedacht over help-functies binnen de gebruikersinterface. Denk hierbij aan tooltips, documentatie voor zowel gebruikers, beheerders en ontwikkelaars van het ODBP.
+
+## ODBP / gebruikersinterface “Zoeken en raadplegen”
+
+21. Huisstijl / NL design
+22. Raadplegen welkomstpagina (zie 17) en overige pagina’s (zie 18)
+23. Zoeken met behulp van een zoekbalk:
+
+- a. Full-tekst
+- b. 25. In metadata-waarde
+
+24. Gebruik van boolean operators
+25. Zoeken met behulp van filters
+26. Raadplegen lijst met zoekresultaten
+27. Openen van een zoekresultaat en raadplegen van een publicatie
+28. Downloaden van een publicatie
+
+Alle bovenstaande functionalitiet wordt ondersteund.
+
+29. Help-functie
+
+Er wordt nagedacht over help-functies binnen de gebruikersinterface. Denk hierbij aan tooltips, documentatie voor zowel gebruikers, beheerders en ontwikkelaars van het ODBP.
+
+## Technisch
+
+29. ODRC API:
+
+- a. Raadplegen model (zie 2)
+- b. Creëren, raadplegen, updaten en verwijderen van (concept-)publicaties
+
+Wordt ondersteund via API. Sterker nog, de interfaces sturen de API aan.
+
+30. Search API
+
+Deze is ontwikkeld en wordt (vanzelfsprekend) doorontwikkeld
+31. Genereren sitemap(-index)
+
+- voor zolang dat nodig is voor KOOP, ondersteunen we dat.
