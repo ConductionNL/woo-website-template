@@ -18,37 +18,102 @@ Kun je ook andere applicaties aansluiten op de API's van de oplossing? Bijv. web
 
 Hoe ziet de technologiestack van de oplossing eruit? Taal, frameworks, databases, etc.
 
-- De technologiestack van OpenWoo.app maakt gebruik van een combinatie van moderne technologieën die zorgen voor flexibiliteit, schaalbaarheid, en efficiëntie. Door het gebruik van PHP en het Laravel framework wordt een robuuste basis gelegd voor de webapplicatie. MongoDB en Elasticsearch bieden krachtige oplossingen voor gegevensbeheer en zoekfunctionaliteiten. De API Gateway en RESTful API's zorgen voor gestandaardiseerde en veilige communicatie tussen verschillende applicaties en diensten. Ten slotte biedt Nextcloud een betrouwbare oplossing voor bestandsbeheer en samenwerking.
+- De technologiestack van OpenWoo.app maakt gebruik van een combinatie van moderne technologieën die zorgen voor flexibiliteit, schaalbaarheid, en efficiëntie. Door het gebruik van PHP wordt een stevige, doch voor developers bekende, basis gelegd voor de webapplicatie. MongoDB en Elasticsearch bieden krachtige oplossingen voor gegevensbeheer en zoekfunctionaliteiten. De API Gateway en RESTful API's zorgen voor gestandaardiseerde en veilige communicatie tussen verschillende applicaties en diensten. Ten slotte biedt Nextcloud een betrouwbare oplossing voor bestandsbeheer en samenwerking.
+
+### Technologiestack van OpenWoo.app
+
+| Component          | Technologie       | Opmerking                                                   |
+|--------------------|-------------------|-------------------------------------------------------------|
+| Taal               | PHP               | Flexibele en breed ondersteunde webontwikkelingstaal        |
+| Database           | MongoDB           | NoSQL database voor gestructureerde en ongestructureerde gegevens |
+| Zoekfunctionaliteit| Elasticsearch     | Voor snelle en efficiënte zoekfunctionaliteiten             |
+| API Management     | API Gateway       | Beheer en routering van API-verzoeken                       |
+| API's              | RESTful API's     | Gestandaardiseerde communicatie tussen applicaties          |
+| Bestandsbeheer     | Nextcloud         | Veilige en schaalbare oplossing voor bestandsbeheer         |
 
 Welke bestaande componenten (zoals Elastic of KeyCloak) worden gebruikt?
 
+- OpenWoo.app maakt gebruik van diverse bestaande componenten om een robuuste, veilige en schaalbare oplossing te bieden. Hieronder staan de belangrijkste componenten die in de technologiestack worden gebruikt:
+
+- Elasticsearch wordt gebruitk voor geavanceerde zoekfunctionaliteit en datatoegang. Elasticsearch wordt tevens gebruikt voor doorzoekbaarheid en analyse. Daarnaast is Nextcloud vooral gekozen omdat het industriestandaarden zoals Keycloak, Splunk en Nagios ondersteund.
+
 Zijn er automatische tests? Welke soort (unit, end-to-end)? Wat is de dekkingsgraad?
+
+- Er worden momenteel unit tests geschreven in de overgang naar een MVP. Nextcloud vereist dit ook voor plaatsing in de Nextcloud appstore.
+
 Zijn er installatiescripts? Is er een Helm chart? Zijn voldoende omgevingsvariabelen ontsloten voor een volledige automatische installatie?
 
-Bronnen
+- Er is een docker-compose voor het draaien in een container. De instructies zijn [hier](https://github.com/ConductionNL/opencatalogi?tab=readme-ov-file#open-catalog) te vinden. Er is een officiele Helm-chart, we kijken ernaar om deze uit te breiden zodat dit inclusief de app is gebeurd.
+
+Na installatie zijn er enige vereiste, zoals een API-sleutel voor MongoDB en clusternaam en voor het activeren van Elastic een sleutel en index. We kiezen er expres voor niet omgevingsvariableen niet allemaal mee te geven.
+
+## Bronnen
+
 Welke bronnen kunnen nu worden aangesloten?
+
+- Momenteel de volgende bronnen:
+- (xxllnc) zaaksysteem.nl
+- Elasticsearch
+- ZGW-api bronnen
+- Bronnen met een REST API
+
 Is er een adapter framework of iets anders voor het aansluiten van nieuwe bronnen?
+
+- Ja, zolang bronnen gebruik maken van de ZGW-api's of RESTful API, dan is aansluiting nu al ondersteund.
+
 Worden bronnen via streaming aangesloten? Of is dat batch (bijv. 's nachts of ieder uur)?
 
-Zoeken
+- Er is een cronjob die elke 10 minuten een synchronisatie met de bronnen uitvoert. Hierdoor hoeft er niet lang gewacht te worden voor de publicaites op de publicatiepagina getoond worden. Dit geeft tevens ook een buffer voor een check of er mogelijk toch iets onjuist is gepubliceerd.
+
+## Zoeken
+
 Hoe verhoudt de zoekindex zich tot de ODRC?
+
+De zoekindex
+
 Slaat Elastic alle gegevens (docs) zelf op?
+
+- Elastic slaat in principe alles op. Er is een keuze te maken wat je naar Elasticsearch stuurt natuurlijk.
+
 Is de API voor zoeken een Elastic API of specifieke API voor WOO?
 
-SaaS
+- Er bestaat een specifieke API voor OpenWoo.app, die bovenop Elasticsearch gezet is. Wel is het mogelijk Elastic direct te bevragen
+
+### SaaS
+
 Dimpact wil de oplossing als SaaS-dienst aanbieden aan haar leden. Wat is er nodig om de oplossing als SaaS aan te bieden?
 Hoe ziet een gemeentelijke implementatie eruit? Ervan uitgaande dat alle technische integratie al gedaan is bij installatie.
 
-Authenticatie en autorisatie
+- Voor het aanbieden van SaaS voor de leden van Dimpact moet er gedacht worden aan multitenancy om aan de diverse leden en hun speicfieke eisen te voldoen. Hiervoor moeten we met de leden in kwesite in gesprek gaan en uitzoeken of er maatwerk nodig is. Indien dit niet het geval is, dan zou het enkel om configureerwerk gaan en kan het implementatieproces snel verlopen. Ter verduidelijking, de snelste organisaite die we hebben aangesloten duurde 2 weken. Aan de andere kant zijn er een gemeente die het traject zelf uitstrijkt over meerdere maanden. Kortom, om OpenWoo.app als SaaS-dienst aan te bieden, wordt er gebruik gemaakt van een multi-tenant architectuur om afzonderlijke omgevingen voor verschillende gemeenten te beheren. Dit omvat het creëren van tenants, het schalen van resources, integratie met SSO en AD/LDAP systemen, en het bieden van beveiliging, compliance, en ondersteuning. Een gemeentelijke implementatie omvat voorbereiding, technische integratie, configuratie, training, livegang, en nazorg.
+
+## Authenticatie en autorisatie
+
 Kan de oplossing worden aangesloten op AD (OIDC)?
+
+- Ja, Nextcloud werkt met LDAP voor het AD, of (onder andere) ADFS voor SSO.
+
 Hoe worden rollen en rechten ingeregeld? Kan de oplossing rollen uit AD gebruiken?
+
+- Dit werkt via [LDAP](https://docs.nextcloud.com/server/latest/admin_manual/configuration_user/user_auth_ldap.html). De oplossing kan dus de rollen uit het AD overnemen.
+
 Kunnen beide bij installatie worden ingericht via de Helm chart?
 
-Standaarden
+- Dit zou kunnendoor gebruik te maken van [Openldap](https://kb.symas.com/using-openldap-with-nextcloud), maar hebben we zelf nog niet eerder gedaan.
+
+## Standaarden
+
 Welke standaarden worden nu al gebruikt en ondersteund? TMLO, ZGW API's, etc.
+
+- ZGW api
+- REST API (OpenAPI)
+- MDTO (voorheen TMLO)
+- JSON-LD
+
 Is de ODRC API een standaard API?
 
-Aan te tonen functionaliteiten bij PoC OpenWoo.app
+- Het is een API die volgens de NL API strategie functioneert, met 'reguliere' endpoints en convenience endpoints.
+
+## **Aan te tonen functionaliteiten bij PoC OpenWoo.app**
 
 ODRC / gebruikersinterface “Model- en publicatiebeheer”
 
