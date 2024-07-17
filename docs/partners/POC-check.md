@@ -228,7 +228,7 @@ Er wordt nagedacht over help-functies binnen de beheerinterface. Denk hierbij aa
 
 16. Inloggen (met SSO?)
 
-- Dit gebeurd op een dezelfde manier als het inloggen voor het ODRC, via ADFS, LDAP of SAML.
+Dit gebeurd op een dezelfde manier als het inloggen voor het ODRC, via ADFS, LDAP of SAML.
 
 17. Wijzigen welkomstpagina
 
@@ -236,7 +236,7 @@ Dit wordt ondersteund.
 
 18. Aanmaken, wijzigen en verwijderen webpagina met overzicht andere relevante websites
 
-@rubenvdlinde - dit via Acato front?
+Deze functie wordt niet direct door Open Catalogi ondersteund, althans contect en url beheer zo als we dat kennen binnen CMS systemen. We kunnen natuurlijk prima een metedata type toevoegen (of de gebruiker zelf) voor pagina's. Op dezelfde manier als waarop we die kennen voor producten en diensten (SDG) en nieuwsberichten.
 
 19. Raadplegen rapportage bezoekers- / gebruiks-statistieken
 
@@ -278,7 +278,16 @@ Wordt ondersteund via API. Sterker nog, de interfaces sturen de API aan.
 
 30. Search API
 
-Deze is ontwikkeld en wordt (vanzelfsprekend) doorontwikkeld
+De search API is het kloppende hard van Open Catalogi. Het  ondersteund naast full tekst search twee belangrijke mogenlijkheden
+- Agregeted search (ofwel federatief over organisaties zoeken)
+- Faceted search (van te voren zien hoeveel zoek resutleren een een aanpassing in de zoekopdracht opleverd)
+
+De documentatie van de search API is aan uitbreiding onderhevig maar bevind zich momenteel op [stoplight](https://conduction.stoplight.io/docs/open-catalogi/6yuj08rgf7w44-open-catalogi-api) (een api design tool).
+
 31. Genereren sitemap(-index)
 
-- voor zolang dat nodig is voor KOOP, ondersteunen we dat.
+Op dit moment heeft OpenWoo.app een tweetal keer meegedaan aan de beproeving van de sitemap xml koppeling naar KOOP. Een keer met als onderligende bron zaaksysteem.nl en een keer met Notubiz. Bijde keren zijn de gegevens succesvol overgebracht naar KOOP (en trouwens ook woogle) wel merken we hierbij de volgende problemen op.
+
+ - Het sitemap xml format slaat de gegevens plat, hierdoor verdwijnen onderlinge verbanden tussen publicaties. Een voorbeeld hiervan is een raadsstuk, daarvan wil je eigenlijk zien dat het daarvoor in een commisie is behandeld en daarvoor bij B&W. In de opbouw van KOOP gaat deze context verloren. Terwijl juist dit intressant is voor het transperant maken van besluit vorming.
+ - KOOP ondersteund geen video bestanden
+ - KOOP ondersteund alleen documenten waardoor sommige objecten (e.g. raads agenda's) moeten worden omgeslagen naar PDF en minder toegankenlijk worden.
