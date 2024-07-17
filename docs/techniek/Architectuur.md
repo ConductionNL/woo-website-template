@@ -37,9 +37,34 @@ Secundair doel daarbij is wat idealistischer: om een gemeenschappelijke codebase
 
 ## Hergebruik tot op het bot
 
-OpenWoo.app maakt voor haar onderliggende techniek en architectuur gebruik van [OpenCatalogi](https://documentatie.opencatalogi.nl/). Meer technische informatie over publiceren naar het federatief datastelsel vind je dan ook in de [architectuurdocumentatie van OpenCatalogi](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/).
+OpenWoo.app maakt voor haar onderliggende techniek en architectuur gebruik van [OpenCatalogi](https://documentatie.opencatalogi.nl/). Meer technische informatie over publiceren naar het federatief datastelsel vind je dan ook in de [architectuurdocumentatie van OpenCatalogi](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/). Er zijn echter een paar zaken die we binnen OpenWoo.app aanvullend regelen.
 
-Daar waar we het binnen Open Catalogi over burgers hebben definiëren we voor de Woo de (sub)doelgroepen, inwoners, onderzoekers, journalisten, raadsleden en ondernemers. Het ORC als opslag voor publicaties vertolkt richting de WOO ook de rol van Openbare Documenten Registratie Component (ODRC). Waarbij het configureerbaar is of documenten daadwerkelijk worden overgenomen naar het ORC of bij iedere inzage uit de bron worden gehaald (in welk geval alleen de metadata wordt overgenomen). Deze configuratie keuze wordt met name aangeboden om bronsystemen te ontzien of om trage bronsystemen heen te werken. In Elastic Search (die de rol van search vertolkt) worden ten allestijden alleen de metadata gegevens van bestanden opgenomen.
+1. In plaats van de standaard Open Catalogi voorkant gebruikeren en een publicatie pagina die geoptimalisseerd is voor de WOO, dit kan een (sub)site zijn bij de website leverancier van de gemeente, of een van de twee losstaande react pagina's. We laten de keuze hiervoor bewust bij de deelnemende overheden zelf.
+
+2. We gebruiken een aantal aanvullende metadata moddelen in plaats van DCAT en PublicCode, deze wordenn landelijk onderhouden.
+
+3. We maken gebruik van een lose WOO (micro) service die vanuit verschillende bronnen (o.a. zaaksystemen en raadsinformatie systemen) informatie ophaalt en klaar zet als publicatie. Of en hoe publicaties vervolgens automatisch worden gepubliseerd is een configuratie keuze.
+
+4. Er is naast de standaard beheer omgeving van Open Catalogi ook een Publicatie Taak applicatie beschickbaar die specifiek gericht is op het (handmatig) verwerken van WOO verzoeken en beheren van publicacties
+
+In een meer algemene zin hebben we bij OpenWoo.app voor andere (sub)doelgroepen gekozen dan binnen Open Catalogi, inwoners, onderzoekers, journalisten, raadsleden en ondernemers staan centraal. 
+
+## Codebases
+Voor de installatie van OpenWoo.app zijn meerdere codebases bechickbaar, dat heeft zowel een historische achtergrond als dat het een bewuste keuze is om van (met name UI) componenten meerdere versies te hebben. Omdat deze ook nog eens over verschillede organisaties verdeeld zijn kan het moeilijk zijn om overzicht te houden op welke code waar staat. We houden daarom hier een overizcht bij van de extra componenten en codebases ten opzichte van de standaard Open Catalogi componenten.
+
+| Codebase | Rol | Leverancier | Licentie |
+|----------|------------------------------|             |          |  
+| [Github]()         | Taakapplicatie publiceren, Publicatie Platform    | IO Digital            |          |  
+| [Github]()         | Taakapplicatie publiceren    | Acato            |          |  
+| [Github]()         | Publicatie Platform    | Acato            |          |  
+| [Github](https://github.com/OpenWebconcept/plugin-openwoo)         | Publicatie Platform    | Yard            | EUPL         |  
+| [Github](https://github.com/ConductionNL/woo-website-template)         | Publicatie Platform    | Conduction            | EUPL         |  
+| [Github](https://github.com/ConductionNL/plugin-openwoo)         | Synchronysatie Service      | Conduction            | EUPL        |  
+
+
+Hierop zijn een paar opmerkingen te maken
+- We gebruiken de synchronisatie service van Open Catalogi niet (die is immers gericht op Github, Gitlab en Dcat), in plaats daarvan is er een WOO synchronysatie service gericht op ZGW, STUF, DRC en ORI.
+- We gebruiken voorkant van Open Catalogi niet (die is immers sotware en data gericht), in plaats daarvan hebben meerdere leveranciers eigen publicatie platformen ontwikkeld.
 
 ## Uitdagingen
 
