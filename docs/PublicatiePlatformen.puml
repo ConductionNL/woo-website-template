@@ -15,7 +15,7 @@ frame "Publicatie platformen " {
 }
 
 ' API's (Laag 2)
-frame "Integratie" {
+frame "API's (Laag 2)" {
     database "Search API"  as OI #1abc9c
 }
 
@@ -28,5 +28,4 @@ KoopHulpje -down-> OI : Bevraagd (API)
 Website -down-> OI : Bevraagd (API)
 Themasite -down-> OI : Bevraagd (API)
 Searchsite -down-> OI : Bevraagd (API)
-
 @enduml
