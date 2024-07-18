@@ -42,7 +42,9 @@ Keycloak, Splunk, Nagios, Apache spark, PRometheus, Loki, Gravana, Harbour, Open
 
 ### Zijn er automatische tests? Welke soort (unit, end-to-end)? Wat is de dekkingsgraad?
 
-- We draaiden bijde soorten test, voor end-to-end testing maken we gebruik van [vitest](https://vitest.dev/) en voor unit tests van [php-unit](https://phpunit.de/index.html). De test covaradges wisselt wat rond de xx procent.
+- We draaiden bijde soorten test, voor end-to-end testing maken we gebruik van [vitest](https://vitest.dev/) en voor unit tests van [php-unit](https://phpunit.de/index.html). De test covaradges wisselt wat rond de 60 procent, het doel is om dat voor 12 augustus naar 80% te hebben.
+
+![alt text](image.png)
 
 ### Zijn er installatiescripts? Is er een Helm chart? Zijn voldoende omgevingsvariabelen ontsloten voor een volledige automatische installatie?
 
