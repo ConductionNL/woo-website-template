@@ -205,6 +205,25 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       </TableRow>
                     )}
 
+                  {getItems.data.metadata?.verzoek?.convenant && getItems.data.metadata?.verzoek?.convenant?.url && (
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Convenant")}, ${
+                        getItems.data.metadata?.verzoek?.convenant?.titel ??
+                        getPDFName(getItems.data.metadata?.verzoek?.convenant?.url)
+                      }`}
+                    >
+                      <TableCell>{t("Convenant")}</TableCell>
+                      <TableCell>
+                        <Link href={getItems.data.metadata?.verzoek?.convenant?.url} target="blank">
+                          {getItems.data.metadata?.verzoek?.convenant?.titel ??
+                            getPDFName(getItems.data.metadata?.verzoek?.convenant?.url)}
+                        </Link>
+                      </TableCell>
+                    </TableRow>
+                  )}
+
                   {getItems.data.metadata?.verzoek?.besluit && getItems.data.metadata?.verzoek?.besluit?.url && (
                     <TableRow
                       className={styles.tableRow}
