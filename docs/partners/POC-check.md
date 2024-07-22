@@ -4,7 +4,7 @@
 
 ### Voldoet de oplossing aan de CG architectuur. Zie ook figuur 5 in de PSA.
 
-- Ja, de architectuur voldoent aan de CG architectuur (het heeft immers status goud). In princiepe is de OpenWoo.app een implementatie van de [open catalogi architectuur](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/) aangevuld met een aantal extra componenten en inrichtingen. De aanvullingen staan beschreven in de [OpenWoo](https://openwoo.app/Techniek/Architectuur/) architectuur.
+Ja, de architectuur voldoent aan de CG architectuur (het heeft immers status goud). In princiepe is de OpenWoo.app een implementatie van de [open catalogi architectuur](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/) aangevuld met een aantal extra componenten en inrichtingen. De aanvullingen staan beschreven in de [OpenWoo](https://openwoo.app/Techniek/Architectuur/) architectuur.
 
 ### Wordt er een scheiding gemaakt tussen gegevens ontsloten door API's aan de ene kant en applicaties aan de andere kant. Slaat de applicatie zelf nog gegevens op direct in een database? Welke?
 
