@@ -6,13 +6,15 @@
 
 Ja, de architectuur voldoet aan de common ground architectuur (het heeft immers status [goud](https://app.powerbi.com/view?r=eyJrIjoiOWU4MjlmYTktNjE2MS00OGRhLTgwMjYtZWZhNTFhZmRhZjI2IiwidCI6IjZlZjAyOWFiLTNmZDctNGQ5OC05YjBlLWQxZjVmZWRlYTZkMSIsImMiOjh9&pageName=ffe4f1f9018d7bd035bc)). In principe is de OpenWoo.app een implementatie van de [open catalogi architectuur](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/) aangevuld met een aantal extra componenten en inrichtingen. De aanvullingen staan beschreven in de [OpenWoo](https://openwoo.app/Techniek/Architectuur/) architectuur. Deze komen neer op diverse extra frontends (de publicatiepagina's van de leveranciers) en een service voor het inladen van gegevens uit diverse bronnen.
 
-Versimpeld komt de architectuur daarmee neer op ![architectuur versimpeld](https://raw.githubusercontent.com/OpenCatalogi/.github/main/docs/handleidingen/components_commonground.svg).
+Versimpeld komt de architectuur daarmee neer op: 
+![architectuur versimpeld](https://raw.githubusercontent.com/OpenCatalogi/.github/main/docs/handleidingen/components_commonground.svg).
 
 De componenten zijn allen los te draaien en vervangbaar, en juist de inzet van meerdere frontends toont aan dat de applicatie voldoet aan een goede architecturale scheiding. De codebases van open catalogi zelf zijn terug te vinden onder [open catalogi architectuur](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/) en de aanvullende codebases van OpenWoo.app onder [OpenWoo architectuur](https://openwoo.app/Techniek/Architectuur/).
 
-Als we de verschillende oplossingen in kaart brengen die invulling geven aan de bovenstaande componenten komen we uit op de volgende plaat.
+Als we de verschillende oplossingen in kaart brengen die invulling geven aan de bovenstaande componenten komen we uit op de volgende plaat:
+ ![architectuur componenten](https://raw.githubusercontent.com/OpenCatalogi/.github/main/docs/handleidingen/components.svg). 
 
- ![architectuur componenten](https://raw.githubusercontent.com/OpenCatalogi/.github/main/docs/handleidingen/components_commonground.svg).
+  
 
 ### Wordt er een scheiding gemaakt tussen gegevens ontsloten door API's aan de ene kant en applicaties aan de andere kant? Slaat de applicatie zelf nog gegevens op direct in een database? Welke?
 
