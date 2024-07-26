@@ -14,16 +14,46 @@ De componenten zijn allen los te draaien en vervangbaar, en juist de inzet van m
 Als we de verschillende oplossingen in kaart brengen die invulling geven aan de bovenstaande componenten komen we uit op de volgende plaat:
  ![architectuur componenten](https://raw.githubusercontent.com/OpenCatalogi/.github/main/docs/handleidingen/components.svg). 
 
-  
+Opmerkingen
+- Documenten worden (bij voorkeur) alléén opgeslagen in het document managment systeem
+- Metadata over documenten wordt opgeslagen in de object store
 
+  
 ### Wordt er een scheiding gemaakt tussen gegevens ontsloten door API's aan de ene kant en applicaties aan de andere kant? Slaat de applicatie zelf nog gegevens op direct in een database? Welke?
 
-Ja, er wordt een duidelijke scheiding gemaakt tussen gegevens ontsloten door API's en applicaties. OpenWoo.app is ontworpen volgens de Common Ground principes, waarbij gegevens worden ontsloten via API's. Dit betekent dat de applicatie zelf niet direct gegevens opslaat, maar gebruikmaakt van API's om toegang te krijgen tot de benodigde data. Dit geldt bijvoorbeeld voor Publicaties en Bestanden. De beheerinterface beschikt daarnaast echter wel over een eigen database voor het opslaan van configuratie zoals rollen, rechten, logging, etc.
-
+Ja, er wordt een duidelijke scheiding gemaakt tussen gegevens ontsloten door API's en applicaties. OpenWoo.app is ontworpen volgens de Common Ground principes, waarbij gegevens worden ontsloten via API's. Dit betekent dat de applicatie zelf niet direct gegevens opslaat, maar gebruikmaakt van API's om toegang te krijgen tot de benodigde data. Dit geldt bijvoorbeeld voor Publicaties en Bestanden. De beheerinterface beschikt daarnaast echter wel over een eigen database voor het opslaan van configuratie zoals rollen, rechten, logging, etc. 
 Het is belangrijk om te vermelden dat OpenCatalogi beschikt over drie mogelijkheden voor het opslaan van data:
 - Opslag in MongoDB (hierbij wordt Open Catalogi zelf een register)
 - Opslag in Overige Objecten en Document Registratie Component
 - Opslag in de interne PostgreSQL database van de beheeromgeving (alleen bedoeld voor demo en development)
+
+In afwijking van de Dimpact architectuur kiest Open Catalogi (en daarmee OpenWoo.app) ervoor om documenten en metadata daaruit los op te slaan, metadata wordt opgeslagen als object en een document binnen een DMS (via DRC) de overweging hier achter is dat objecten en documenten gebaad zijn bij gespecialiseerde systemen waarbij met name rondom documnenten die inzet van een DMS binnen een overheid gangbaar is.
+
+![alt text](dimpact_architectuur_publicatieplatform.png)
+
+Daarmee is de volgende vertaal tabel te maken van de Dimpact Publicatie PSA naar OpenWoo.app
+
+| Doel | Dimpact component | OpenWoo.app component | Repository | 
+| ------ | ------------------|-----------------------|-------|
+| Ambtenaar | Openbare Documenten Publicitie Component (Publiceren)| Publicatie Afhandel Component | Nog niet openbaar |
+| Beheerder | Openbaar Documenten Burger Portaal (Contenbeheer)| Technische Beheer Omgeving | [OpenCatalogi.app](https://github.com/ConductionNL/opencatalogi) |
+| Burger | Openbaar Documenten Burger Portaal (Zoeken en raadplegen)| Publicatie Platform | Nog niet openbaar |
+| Opslag | Openbaar Documenten Registratie Component (Model en publicatiebeheer)| Technische Beheer Omgeving |  [OpenCatalogi.app](https://github.com/ConductionNL/opencatalogi) |
+| Opslag | Openbaar Documenten Registratie Component (ODRC API)| Overige Objecten + Document Registratie Component | [Objects-api](https://github.com/maykinmedia/objects-api) , [Open zaak](https://github.com/open-zaak/open-zaak) |
+| Index | Search Engine | Search Engine  | [Elastic](https://github.com/ConductionNL/opencatalogi) |
+
+Hierbij hanteren we overigens scheiding tussen laag 1 en 2 waarbij op laag twee gebruik wordt gemaakt van "convience" api's die bronnen combineren, te weten
+
+- **Publicatie API** Gebruikt:
+- - Objects API (voor publicatie objecten en meta data over documenten)
+- - Documenten API (voor documenten)
+- **Search API** Gebruikt:
+- - Elastic API (voor zoeken)
+- - Documenten API (voor ophalen en uitleveren van documenten)
+
+Voor bijde API's is de documentatie te vinden op [stoplight](https://conduction.stoplight.io/docs/open-catalogi/6yuj08rgf7w44-open-catalogi-api)
+
+
 
 ### Kun je ook andere applicaties aansluiten op de API's van de oplossing? Bijv. website, portaal of een mobiele app?
 
@@ -39,7 +69,7 @@ In een bredere context zijn naast koophulje (de sitemapxml adaptor voor koop) oo
 - **Laag 2** Op de backend zijn we recentelijk overgestapt van Conduction's eigen oude Common Gateway (PHP+React) naar het Nextcloud framework (PHP+Vue). Er zijn veel redenen voor deze overstap, die uitgelegd staan in een [blog](https://documentatie.opencatalogi.nl/Handleidingen/Nextcloud/), maar kort samengevat is Nextcloud als framework echt gericht op Kubernetes (en bevat dus van zichzelf integratie voor logging, monitoring, ADFS, etc.).
 - **Laag 1** Op de datalaag wordt er door Nextcloud zelf gebruik gemaakt van [PostgreSQL](https://www.postgresql.org/). Vanuit applicatieoogpunt schrijven we de overige data bij voorkeur weg naar objectregistraties (zoals overige objecten of MongoDB) en documenten naar een gespecialiseerd documentmanagementsysteem (zoals documentregistratiecomponent). Voor zoekfuncties wordt weggeschreven naar een gespecialiseerde zoekindex (Elastic Search).
 
-Let op: Voor veel overheden blijkt deze opzet (te) complex. We bieden daarom ook de optie aan om de volledige setup te draaien vanuit de PostgreSQL van de Nextcloud-installatie. Er kan in de configuratie per opslagtype (object, document, zoekfunctie) worden aangegeven of een externe bron moet worden gebruikt of de interne PostgreSQL.
+
 
 ### Welke bestaande componenten (zoals Elastic of KeyCloak) worden gebruikt?
 
@@ -88,10 +118,17 @@ Momenteel de volgende bronnen:
 - ZGW-API-bronnen (DRC en ZRC)
 - ORI-API-bronnen (Notubiz en andere raadsinformatiesysteemleveranciers)
 - Objectregistraties (MongoDB en overige objecten)
-- KOOP en WOOGLE
 - SharePoint
 - StUF en ZDS
 - Bronnen met een REST API kunnen in theorie worden geconfigureerd
+
+Daarnaast zijn er ook diverse afnemeners van de search api
+- KOOP
+- WOOGLE
+- IO (website)
+- Acatao (publicatie platform)
+- Yard (website)
+
 
 ### Is er een adapter framework of iets anders voor het aansluiten van nieuwe bronnen?
 
@@ -101,7 +138,7 @@ Deze adapter voorziet in het ontsluiten van bronnen náár het publicatieregiste
 
 ### Worden bronnen via streaming aangesloten? Of is dat batch (bijv. 's nachts of ieder uur)?
 
-Beide, bij voorkeur gebruiken we een pubsub-patroon zoals notificaties bij ZGW of een tussenvorm via een datadistributiesysteem (haal nu deze stufzaak op). Maar in de praktijk ondersteunen lang niet alle pakketten dit. In die gevallen grijpen we terug op batchverwerking. Hoe vaak die draaien hangt van de bron af en is per bron instelbaar. Dat kan elk uur of elke nacht. Maar als de bron bijvoorbeeld kan filteren op items die afgelopen x minuten zijn gewijzigd, kijken we graag iedere 5 tot 10 minuten even (als het antwoord dan leeg is, zijn we ook niet excessief aan het vragen).
+Beide, bij voorkeur gebruiken we een [pubsub-patroon](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) zoals notificaties bij ZGW. Bij pubsub nemen we een notificatie op CRUD acties op bron objecten (bijvoorbeeld zaken van het type w00-verzoeken) en werken we het publicatie opbject bij op het moment dat er iets wijzigd in de onderligende zaak. Zo zorgen we dat gegevens altijd bij zijn, en we niet afhankenlijk zijn van nachtenlijk crawlen of harvesten. Maar in de praktijk ondersteunen lang niet alle pakketten dit. In die gevallen grijpen we terug op batchverwerking. Hoe vaak die draaien hangt van de bron af en is per bron instelbaar. Dat kan elk uur of elke nacht. Maar als de bron bijvoorbeeld kan filteren op items die afgelopen x minuten zijn gewijzigd, kijken we graag iedere 5 tot 10 minuten even (als het antwoord dan leeg is, zijn we ook niet excessief aan het vragen).
 
 ## Zoeken
 
@@ -139,7 +176,7 @@ Ja, Nextcloud werkt met LDAP voor het AD, of (onder andere) ADFS voor SSO. Hierv
 
 ### Hoe worden rollen en rechten ingeregeld? Kan de oplossing rollen uit AD gebruiken?
 
-Dit werkt via [LDAP](https://docs.nextcloud.com/server/latest/admin_manual/configuration_user/user_auth_ldap.html). De oplossing kan dus de rollen uit het AD overnemen. Het toekennen van specifieke rechten aan rollen (bijvoorbeeld publiceren) gebeurt vervolgens in de applicatie zelf.
+Dit werkt via [LDAP](https://docs.nextcloud.com/server/latest/admin_manual/configuration_user/user_auth_ldap.html). De oplossing kan dus de rollen uit het AD overnemen. Het toekennen van specifieke rechten aan rollen (bijvoorbeeld publiceren) gebeurt vervolgens in de applicatie zelf. Ook kunnen in de applicatie rollen worden aangemaakt waardoor er flexibiliteit is ten aanzien van de rollen structuur van de afnemende overheid.
 
 ### Kunnen beide bij installatie worden ingericht via de Helm-chart?
 
