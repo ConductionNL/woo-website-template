@@ -2,38 +2,39 @@
 
 ## Common Ground Architectuur
 
-### Voldoet de oplossing aan de CG architectuur? Zie ook figuur 5 in de PSA.
+### Voldoet de oplossing aan de CG architectuur? Zie ook figuur 5 in de PSA
 
-Ja, de architectuur voldoet aan de common ground architectuur (het heeft immers status [goud](https://app.powerbi.com/view?r=eyJrIjoiOWU4MjlmYTktNjE2MS00OGRhLTgwMjYtZWZhNTFhZmRhZjI2IiwidCI6IjZlZjAyOWFiLTNmZDctNGQ5OC05YjBlLWQxZjVmZWRlYTZkMSIsImMiOjh9&pageName=ffe4f1f9018d7bd035bc)). In principe is de OpenWoo.app een implementatie van de [open catalogi architectuur](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/) aangevuld met een aantal extra componenten en inrichtingen. De aanvullingen staan beschreven in de [OpenWoo](https://openwoo.app/Techniek/Architectuur/) architectuur. Deze komen neer op diverse extra frontends (de publicatiepagina's van de leveranciers) en een service voor het inladen van gegevens uit diverse bronnen.
+Ja, de architectuur voldoet aan de Common Ground-architectuur (het heeft immers status [goud](https://app.powerbi.com/view?r=eyJrIjoiOWU4MjlmYTktNjE2MS00OGRhLTgwMjYtZWZhNTFhZmRhZjI2IiwidCI6IjZlZjAyOWFiLTNmZDctNGQ5OC05YjBlLWQxZjVmZWRlYTZkMSIsImMiOjh9&pageName=ffe4f1f9018d7bd035bc)). In principe is de OpenWoo.app een implementatie van de [OpenCatalogi-architectuur](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/) aangevuld met een aantal extra componenten en inrichtingen. De aanvullingen staan beschreven in de [OpenWoo](https://openwoo.app/Techniek/Architectuur/) architectuur. Deze komen neer op diverse extra frontends (de publicatiepagina's van de leveranciers) en een service voor het inladen van gegevens uit diverse bronnen.
 
-Versimpeld komt de architectuur daarmee neer op: 
+Versimpeld komt de architectuur daarmee neer op:
 ![architectuur versimpeld](https://raw.githubusercontent.com/OpenCatalogi/.github/main/docs/handleidingen/components_commonground.svg).
 
-De componenten zijn allen los te draaien en vervangbaar, en juist de inzet van meerdere frontends toont aan dat de applicatie voldoet aan een goede architecturale scheiding. De codebases van open catalogi zelf zijn terug te vinden onder [open catalogi architectuur](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/) en de aanvullende codebases van OpenWoo.app onder [OpenWoo architectuur](https://openwoo.app/Techniek/Architectuur/).
+Alle componenten zijn los te draaien en vervangbaar, en de inzet van meerdere frontends toont aan dat de applicatie voldoet aan een goede architecturale scheiding. De codebases van OpenCatalogi zelf zijn terug te vinden onder [OpenCatalogi architectuur](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/) en de aanvullende codebases van OpenWoo.app onder [OpenWoo architectuur](https://openwoo.app/Techniek/Architectuur/).
 
 Als we de verschillende oplossingen in kaart brengen die invulling geven aan de bovenstaande componenten komen we uit op de volgende plaat:
- ![architectuur componenten](https://raw.githubusercontent.com/OpenCatalogi/.github/main/docs/handleidingen/components.svg). 
+ ![architectuur componenten](https://raw.githubusercontent.com/OpenCatalogi/.github/main/docs/handleidingen/components.svg).
 
 Opmerkingen
-- Documenten worden (bij voorkeur) alléén opgeslagen in het document managment systeem
-- Metadata over documenten wordt opgeslagen in de object store
 
-  
+- Documenten worden (bij voorkeur) alléén opgeslagen in het documentmanagmentsysteem(DMS)
+- Metadata over documenten wordt opgeslagen in de objectstore
+
 ### Wordt er een scheiding gemaakt tussen gegevens ontsloten door API's aan de ene kant en applicaties aan de andere kant? Slaat de applicatie zelf nog gegevens op direct in een database? Welke?
 
-Ja, er wordt een duidelijke scheiding gemaakt tussen gegevens ontsloten door API's en applicaties. OpenWoo.app is ontworpen volgens de Common Ground principes, waarbij gegevens worden ontsloten via API's. Dit betekent dat de applicatie zelf niet direct gegevens opslaat, maar gebruikmaakt van API's om toegang te krijgen tot de benodigde data. Dit geldt bijvoorbeeld voor Publicaties en Bestanden. De beheerinterface beschikt daarnaast echter wel over een eigen database voor het opslaan van configuratie zoals rollen, rechten, logging, etc. 
+Ja, er wordt een duidelijke scheiding gemaakt tussen gegevens ontsloten door API's en applicaties. OpenWoo.app is ontworpen volgens de Common Ground principes, waarbij gegevens worden ontsloten via API's. Dit betekent dat de applicatie zelf niet direct gegevens opslaat, maar gebruikmaakt van API's om toegang te krijgen tot de benodigde data. Dit geldt bijvoorbeeld voor Publicaties en Bestanden. De beheerinterface beschikt daarnaast echter wel over een eigen database voor het opslaan van configuratie zoals rollen, rechten, logging, etc.
 Het is belangrijk om te vermelden dat OpenCatalogi beschikt over drie mogelijkheden voor het opslaan van data:
-- Opslag in MongoDB (hierbij wordt Open Catalogi zelf een register)
+
+- Opslag in MongoDB (hierbij wordt OpenCatalogi zelf een register)
 - Opslag in Overige Objecten en Document Registratie Component
 - Opslag in de interne PostgreSQL database van de beheeromgeving (alleen bedoeld voor demo en development)
 
-In afwijking van de Dimpact architectuur kiest Open Catalogi (en daarmee OpenWoo.app) ervoor om documenten en metadata daaruit los op te slaan, metadata wordt opgeslagen als object en een document binnen een DMS (via DRC) de overweging hier achter is dat objecten en documenten gebaad zijn bij gespecialiseerde systemen waarbij met name rondom documnenten die inzet van een DMS binnen een overheid gangbaar is.
+In afwijking van de Dimpact-architectuur kiest OpenCatalogi (en daarmee OpenWoo.app) ervoor om documenten en de metadata daarvan los op te slaan. Metadata wordt opgeslagen als object en een document binnen een DMS (via DRC). De overweging hierachter is dat objecten en documenten gebaat zijn bij gespecialiseerde systemen, waarbij met name rondom documenten de inzet van een DMS binnen een overheid gangbaar is.
 
 ![alt text](dimpact_architectuur_publicatieplatform.png)
 
-Daarmee is de volgende vertaal tabel te maken van de Dimpact Publicatie PSA naar OpenWoo.app
+Daarmee is de volgende vertaaltabel te maken van de Dimpact Publicatie-PSA naar OpenWoo.app
 
-| Doel | Dimpact component | OpenWoo.app component | Repository | 
+| Doel | Dimpact component | OpenWoo.app component | Repository |
 | ------ | ------------------|-----------------------|-------|
 | Ambtenaar | Openbare Documenten Publicitie Component (Publiceren)| Publicatie Afhandel Component | Nog niet openbaar |
 | Beheerder | Openbaar Documenten Burger Portaal (Contenbeheer)| Technische Beheer Omgeving | [OpenCatalogi.app](https://github.com/ConductionNL/opencatalogi) |
@@ -42,7 +43,7 @@ Daarmee is de volgende vertaal tabel te maken van de Dimpact Publicatie PSA naar
 | Opslag | Openbaar Documenten Registratie Component (ODRC API)| Overige Objecten + Document Registratie Component | [Objects-api](https://github.com/maykinmedia/objects-api) , [Open zaak](https://github.com/open-zaak/open-zaak) |
 | Index | Search Engine | Search Engine  | [Elastic](https://github.com/ConductionNL/opencatalogi) |
 
-Hierbij hanteren we overigens scheiding tussen laag 1 en 2 waarbij op laag twee gebruik wordt gemaakt van "convience" api's die bronnen combineren, te weten
+Hierbij hanteren we overigens scheiding tussen laag 1 en 2 waarbij op laag twee gebruik wordt gemaakt van "convience" APIs die bronnen combineren, te weten
 
 - **Publicatie API** Gebruikt:
 - - Objects API (voor publicatie objecten en meta data over documenten)
@@ -51,25 +52,21 @@ Hierbij hanteren we overigens scheiding tussen laag 1 en 2 waarbij op laag twee 
 - - Elastic API (voor zoeken)
 - - Documenten API (voor ophalen en uitleveren van documenten)
 
-Voor bijde API's is de documentatie te vinden op [stoplight](https://conduction.stoplight.io/docs/open-catalogi/6yuj08rgf7w44-open-catalogi-api)
-
-
+Voor beide API's is de documentatie te vinden op [stoplight](https://conduction.stoplight.io/docs/open-catalogi/6yuj08rgf7w44-open-catalogi-api)
 
 ### Kun je ook andere applicaties aansluiten op de API's van de oplossing? Bijv. website, portaal of een mobiele app?
 
-Zeker, sterker nog, dat is gangbaar. Er zijn op dit moment vijf verschillende publicatieplatformen aangesloten op de Open Catalogi API, waarvan vier onderdeel zijn van de OpenWoo.app community. In de [OpenWoo](https://openwoo.app/Techniek/Architectuur/) staat een overzicht met verwijzingen naar de codebases. Daarnaast maken Koop (via koophulpje), Woogle en een tweetal gemeenten ook direct gebruik van de API. Er zijn op dit moment geen mobiele apps die gebruik maken van de API, maar er zijn wel organisaties die overwegen om deze in hun omgeving op te nemen (voor lokaal nieuws, met name het OpenWeb-concept).
+Zeker, sterker nog, dat is gangbaar. Er zijn op dit moment vijf verschillende publicatieplatformen aangesloten op de OpenCatalogi-API, waarvan vier onderdeel zijn van de OpenWoo.app community. In de [OpenWoo](https://openwoo.app/Techniek/Architectuur/) staat een overzicht met verwijzingen naar de codebases. Daarnaast maken Koop (via Koophulpje.nl), WooGLe en een tweetal gemeenten ook direct gebruik van de API. Er zijn op dit moment geen mobiele apps die gebruik maken van de API, maar er zijn wel organisaties die overwegen om deze in hun omgeving op te nemen (voor lokaal nieuws, met name het OpenWeb-concept).
 
-In een bredere context zijn naast koophulje (de sitemapxml adaptor voor koop) ook andere adapters in verkenning of ontwikkeling die de API weer omslaan naar externe bronnen (voor publiceren vanuit open catalogi). Voorbeelden hiervan zijn DROP en SDG.
+In een bredere context zijn naast Koophulpje.nl (de sitemap.xml-adaptor voor KOOP) ook andere adapters in verkenning of ontwikkeling die de API weer omslaan naar externe bronnen (voor publiceren vanuit OpenCatalogi). Voorbeelden hiervan zijn DROP en SDG.
 
 ## Technologie
 
-### Hoe ziet de technologiestack van de oplossing eruit? Taal, frameworks, databases, etc.
+### Hoe ziet de technologiestack van de oplossing eruit? Taal, frameworks, databases, etc
 
 - **Laag 5 en 4** Voor de publicatieplatformen (inwoners frontends) wisselen technologiestacks per leverancier. Conduction en Acato bouwen statische voorkanten aan de hand van het NL Design React framework (bijvoorbeeld de UI van de gemeente Tilburg) en IO Digital volledige PHP WordPress-plugins.
 - **Laag 2** Op de backend zijn we recentelijk overgestapt van Conduction's eigen oude Common Gateway (PHP+React) naar het Nextcloud framework (PHP+Vue). Er zijn veel redenen voor deze overstap, die uitgelegd staan in een [blog](https://documentatie.opencatalogi.nl/Handleidingen/Nextcloud/), maar kort samengevat is Nextcloud als framework echt gericht op Kubernetes (en bevat dus van zichzelf integratie voor logging, monitoring, ADFS, etc.).
 - **Laag 1** Op de datalaag wordt er door Nextcloud zelf gebruik gemaakt van [PostgreSQL](https://www.postgresql.org/). Vanuit applicatieoogpunt schrijven we de overige data bij voorkeur weg naar objectregistraties (zoals overige objecten of MongoDB) en documenten naar een gespecialiseerd documentmanagementsysteem (zoals documentregistratiecomponent). Voor zoekfuncties wordt weggeschreven naar een gespecialiseerde zoekindex (Elastic Search).
-
-
 
 ### Welke bestaande componenten (zoals Elastic of KeyCloak) worden gebruikt?
 
@@ -87,23 +84,23 @@ Daarnaast is het belangrijk om te vermelden dat de keuze voor Nextcloud als basi
 
 ### Zijn er automatische tests? Welke soort (unit, end-to-end)? Wat is de dekkingsgraad?
 
-We draaien beide soorten tests. Voor end-to-end testing maken we gebruik van [Vitest](https://vitest.dev/) en voor unit tests van [PHPUnit](https://phpunit.de/index.html) en [Jest](https://jestjs.io/). De test coverage wisselt rond de 60 procent. Het doel is om dat voor 12 augustus naar 80% te hebben. Meer documentatie hierover is opgenomen in de [GitBook](https://conduction.gitbook.io/opencatalogi-nextcloud/developers/verder-documentatie) van de Open Catalogi Nextcloud-app.
+We draaien beide soorten tests. Voor end-to-end testing maken we gebruik van [Vitest](https://vitest.dev/) en voor unit tests van [PHPUnit](https://phpunit.de/index.html) en [Jest](https://jestjs.io/). De test coverage wisselt rond de 60 procent. Het doel is om dat voor 12 augustus naar 80% te hebben. Meer documentatie hierover is opgenomen in de [GitBook](https://conduction.gitbook.io/opencatalogi-nextcloud/developers/verder-documentatie) van de OpenCatalogi Nextcloud-app.
 
 ![alt text](image.png)
 
 ### Zijn er installatiescripts? Is er een Helm-chart? Zijn voldoende omgevingsvariabelen ontsloten voor een volledige automatische installatie?
 
-Zeker, goede installeerbaarheid was een drijfveer achter deze stackkeuze. Simpel gezegd komen alle Open Catalogi-installaties neer op drie stappen, met een extra stap voor OpenWoo.app:
+Zeker, goede installeerbaarheid was een drijfveer achter deze stackkeuze. Simpel gezegd komen alle OpenCatalogi-installaties neer op drie stappen, met een extra stap voor OpenWoo.app:
 
 1. Installeer Nextcloud:
    - Via Helm, zie [Artifact Hub](https://artifacthub.io/packages/helm/nextcloud/nextcloud)
    - Als Azure-app, zie de [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/nextcloudgmbh1597841818906.nextcloud?tab=overview)
    - Via OpenShift, zie de [OpenShift-catalogus](https://catalog.redhat.com/software/container-stacks/detail/65e9dc6f6365ba88288a412c)
-2. Activeer de Open Catalogi-app, instructie op de [Open Catalogi GitBook](https://conduction.gitbook.io/opencatalogi-nextcloud/developers/installatie-via-nextcloud-lokaal-deel-2-een-app-toevoegen)
-3. Configureer de Nextcloud-app, instructie op de [Open Catalogi GitBook](https://conduction.gitbook.io/opencatalogi-nextcloud/developers/installatie-via-nextcloud-lokaal-deel-2-een-app-toevoegen)
+2. Activeer de OpenCatalogi-app, instructie op de [OpenCatalogi GitBook](https://conduction.gitbook.io/opencatalogi-nextcloud/developers/installatie-via-nextcloud-lokaal-deel-2-een-app-toevoegen)
+3. Configureer de Nextcloud-app, instructie op de [OpenCatalogi GitBook](https://conduction.gitbook.io/opencatalogi-nextcloud/developers/installatie-via-nextcloud-lokaal-deel-2-een-app-toevoegen)
 4. Installeer de WooPublicatie-pagina, instructies op de [OpenWoo.app GitHub](https://github.com/ConductionNL/woo-website-template)
 
-Deze stappen staan ook nader beschreven in de nieuwe [Open Catalogi GitBook](https://conduction.gitbook.io/opencatalogi-nextcloud).
+Deze stappen staan ook nader beschreven in de nieuwe [OpenCatalogi GitBook](https://conduction.gitbook.io/opencatalogi-nextcloud).
 
 Voor (lokaal) ontwikkelen en demo's is er ook een `docker-compose` voor het draaien in een container. De instructies zijn [hier](https://conduction.gitbook.io/opencatalogi-nextcloud/developers/installatie-via-docker) te vinden. Deze wordt momenteel door Acato getest (so far so good).
 
@@ -114,6 +111,7 @@ Na installatie zijn er enige (optionele) vereisten, zoals een API-sleutel voor M
 ### Welke bronnen kunnen nu worden aangesloten?
 
 Momenteel de volgende bronnen:
+
 - (xxllnc) zaaksysteem.nl
 - ZGW-API-bronnen (DRC en ZRC)
 - ORI-API-bronnen (Notubiz en andere raadsinformatiesysteemleveranciers)
@@ -123,16 +121,16 @@ Momenteel de volgende bronnen:
 - Bronnen met een REST API kunnen in theorie worden geconfigureerd
 
 Daarnaast zijn er ook diverse afnemeners van de search api
-- KOOP
-- WOOGLE
-- IO (website)
-- Acatao (publicatie platform)
-- Yard (website)
 
+- KOOP
+- WooGLe
+- IO (website)
+- Acato (publicatieplatform)
+- Yard (website)
 
 ### Is er een adapter framework of iets anders voor het aansluiten van nieuwe bronnen?
 
-Ja, momenteel gebruiken we voor dit specifieke stukje van het ecosysteem nog wel de CommonGateway. Dat werkt aardig (Acato heeft daar nu ook de eerste koppelingen mee gemapped), maar we willen deze eigenlijk ook overzetten naar een Nextcloud-app voor Kubernetes. Voor zaakgericht werken, objectregistraties en open raadsinformatie is er nu al een adapter voor ondersteuning en Tilburg en Acato zijn aan het afronden op StUF en SharePoint.
+Ja, momenteel gebruiken we voor dit specifieke stukje van het ecosysteem nog wel de CommonGateway. Dat werkt aardig (Acato heeft daar nu ook de eerste koppelingen mee gemapped), maar we willen deze eigenlijk ook overzetten naar een Nextcloud-app voor Kubernetes. Voor zaakgerichtwerken, objectregistraties en open raadsinformatie is er nu al een adapter voor ondersteuning en Tilburg en Acato zijn aan het afronden op StUF en SharePoint.
 
 Deze adapter voorziet in het ontsluiten van bronnen náár het publicatieregister toe. Omdat Dimpact binnen de MVP gebruikmaakt van handmatig publiceren, is de CommonGateway voor de MVP out of scope. In een bredere context geldt dat we de CommonGateway in Q3 gaan uitfaseren. Het doel is om bij de inwerkingtreding Woo (1 november) alles op Nextcloud te draaien.
 
@@ -153,6 +151,7 @@ Dat hangt van de configuratiekeuzes van de gemeente af, maar bij voorkeur slaan 
 ### Is de API voor zoeken een Elastic API of specifieke API voor WOO?
 
 Het is een specifieke API voor de WOO die binnen de parameters valt van wat Elastic zelf ook kan leveren met wat configuratie. Met andere woorden, de Elastic-instantie kan ook direct worden bevraagd. De adapter erbovenop voorziet echter in twee extra functionaliteiten die wij binnen de WOO wenselijk vinden:
+
 - Federatief zoeken over meerdere Elastic Search-instanties
 - Ophalen documenten door routeren naar bijvoorbeeld DRC in plaats van Elastic.
 
@@ -166,7 +165,7 @@ Daarnaast ondersteunen we best een flink aantal monitoring- en dashboardtools, h
 
 ### Hoe ziet een gemeentelijke implementatie eruit? Ervan uitgaande dat alle technische integratie al gedaan is bij installatie?
 
-Hiervoor is een handleiding beschikbaar op https://openwoo.app/Techniek/Productie/.
+Hiervoor is een handleiding beschikbaar op <https://openwoo.app/Techniek/Productie/>.
 
 ## Authenticatie en autorisatie
 
@@ -184,9 +183,9 @@ Ja, voor zover wij weten zijn alle configuratieopties (dus ook adapters) via de 
 
 ## Standaarden
 
-### Welke standaarden worden nu al gebruikt en ondersteund? TMLO, ZGW API's, etc.
+### Welke standaarden worden nu al gebruikt en ondersteund? TMLO, ZGW API's, etc
 
-- ZGW 
+- ZGW
 - REST API (OpenAPI)
 - MDTO (voorheen TMLO)
 - JSON-LD
@@ -194,7 +193,7 @@ Ja, voor zover wij weten zijn alle configuratieopties (dus ook adapters) via de 
 - Geo-JSON
 - NFC/NLX
 
-Zie voor meer standaarden de [Open Catalogi Architectuur](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/).
+Zie voor meer standaarden de [OpenCatalogi Architectuur](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/).
 
 ### Is de ODRC API een standaard API?
 
@@ -304,7 +303,7 @@ Dit wordt ondersteund.
 
 18. Aanmaken, wijzigen en verwijderen webpagina met overzicht andere relevante websites
 
-Deze functie wordt niet direct door Open Catalogi ondersteund, althans content en url-beheer zoals we dat kennen binnen CMS-systemen. We kunnen natuurlijk prima een metadatatype toevoegen (of de gebruiker zelf) voor pagina's. Op dezelfde manier als waarop we die kennen voor producten en diensten (SDG) en nieuwsberichten.
+Deze functie wordt niet direct door OpenCatalogi ondersteund, althans content en url-beheer zoals we dat kennen binnen CMS-systemen. We kunnen natuurlijk prima een metadatatype toevoegen (of de gebruiker zelf) voor pagina's. Op dezelfde manier als waarop we die kennen voor producten en diensten (SDG) en nieuwsberichten.
 
 19. Raadplegen rapportage bezoekers-/gebruiksstatistieken
 
@@ -346,7 +345,8 @@ Wordt ondersteund via API. Sterker nog, de interfaces sturen de API aan.
 
 30. Search API
 
-De search API is het kloppende hart van Open Catalogi. Het ondersteunt naast full-text search twee belangrijke mogelijkheden:
+De search API is het kloppende hart van OpenCatalogi. Het ondersteunt naast full-text search twee belangrijke mogelijkheden:
+
 - Aggregated search (ofwel federatief over organisaties zoeken)
 - Faceted search (van te voren zien hoeveel zoekresultaten een aanpassing in de zoekopdracht oplevert)
 
