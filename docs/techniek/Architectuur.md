@@ -15,17 +15,17 @@ De OpenWoo.app heeft als doel om een ecosysteem van samenwerkende componenten te
 - [X] Het (door)zoeken, vinden en raadplegen van documenten en metadata door burgers;
 - [X] Het beheren van autorisaties, configuratie en publicaties door beheerders;
 - [X] Integratie met de landelijke voorziening PLOOI/KOOP, WooGLe, Koophulpje, DSO.
-- [X] Integratie met standaard gemeentenlijke bronnen zoals zaaksysteem, raadsinformatiesysteem en website
+- [X] Integratie met standaard gemeentelijke bronnen zoals een zaaksysteem, raadsinformatiesysteem of website
 - [X] Afhandelingsflow voor zowel publiceren als Woo-verzoeken
 - [X] Het kunnen terugtrekken van publicaties t.b.v herstel op procedurele fouten
 - [X] Help functie voor medewerkers aan de hand van werk instructies
 - [X] Interne publicaties die niet openbaar toegankelijk zijn
-- [ ] (Roadmap) Generatie van documenten ten behoefe van publiceren en inhoudslijsten
+- [ ] (Roadmap) Generatie van documenten ten behoeve van publiceren en inhoudslijsten
 - [ ] (Roadmap) Koppeling met anonimiseringssoftware
 - [ ] (Roadmap) Naar PDF kunnen omzetten van documenten
 - [ ] (Roadmap) Archiveren
 - [ ] (Roadmap) Opslaan van zoekfilters en resultaten
-- [ ] (Roadmap) Abboneren op nieuwe publicaties die voldoen aan een opgeslagen zoekfilter
+- [ ] (Roadmap)  Abonneren op nieuwe publicaties die voldoen aan een opgeslagen zoekfilter
 
 We hebben deze functionaliteit opgedeeld in drie blokken
 
@@ -33,53 +33,54 @@ We hebben deze functionaliteit opgedeeld in drie blokken
 2. Motorblok
 3. Bronnen
 
-Secundair doel daarbij is wat idealistischer: om een gemeenschappelijke codebase te realiseren die door meerdere leveranciers kan worden uitgeleverd en deze vanaf dag één te betrekken. Het voorkomen van een locked in vraagt om een open source oplossing die door en door begrepen wordt door meerdere markt partijen.
+Secundair doel daarbij is wat idealistischer: om een gemeenschappelijke codebase te realiseren die door meerdere leveranciers kan worden uitgeleverd en deze vanaf dag één te betrekken. Het voorkomen van een lock-in vraagt om een open source oplossing die door en door begrepen wordt door meerdere markt partijen.
 
 ## Hergebruik tot op het bot
 
 OpenWoo.app maakt voor haar onderliggende techniek en architectuur gebruik van [OpenCatalogi](https://documentatie.opencatalogi.nl/). Meer technische informatie over publiceren naar het federatief datastelsel vind je dan ook in de [architectuurdocumentatie van OpenCatalogi](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/). Er zijn echter een paar zaken die we binnen OpenWoo.app aanvullend regelen.
 
-1. In plaats van de standaard Open Catalogi voorkant gebruikeren en een publicatie pagina die geoptimalisseerd is voor de WOO, dit kan een (sub)site zijn bij de website leverancier van de gemeente, of een van de twee losstaande react pagina's. We laten de keuze hiervoor bewust bij de deelnemende overheden zelf.
+1. In plaats van de standaard OpenCatalogi-voorkant gebruikt OpenWoo en een publicatiepagina die geoptimaliseerd is voor de Woo, dit kan een (sub)site zijn bij de website leverancier van de gemeente, of een van de twee losstaande React pagina's. We laten de keuze hiervoor bewust bij de deelnemende overheden zelf.
 
-2. We gebruiken een aantal aanvullende metadata moddelen in plaats van DCAT en PublicCode, deze wordenn landelijk onderhouden.
+2. We gebruiken een aantal aanvullende metadata modellen in plaats van DCAT en PublicCode, deze worden landelijk onderhouden.
 
-3. We maken gebruik van een lose WOO (micro) service die vanuit verschillende bronnen (o.a. zaaksystemen en raadsinformatie systemen) informatie ophaalt en klaar zet als publicatie. Of en hoe publicaties vervolgens automatisch worden gepubliseerd is een configuratie keuze.
+3. We maken gebruik van een losse WOO (micro) service die vanuit verschillende bronnen (o.a. zaaksystemen en raadsinformatie systemen) informatie ophaalt en klaar zet als publicatie. Of en hoe publicaties vervolgens automatisch worden gepubliceerd is een configuratie keuze.
 
-4. Er is naast de standaard beheer omgeving van Open Catalogi ook een Publicatie Taak applicatie beschickbaar die specifiek gericht is op het (handmatig) verwerken van WOO verzoeken en beheren van publicacties
+4. Er is naast de standaard beheer omgeving van Open Catalogi ook een Publicatie Taak applicatie beschikbaar die specifiek gericht is op het (handmatig) verwerken van Woo-verzoeken en beheren van publicaties.
 
-In een meer algemene zin hebben we bij OpenWoo.app voor andere (sub)doelgroepen gekozen dan binnen Open Catalogi, inwoners, onderzoekers, journalisten, raadsleden en ondernemers staan centraal. 
+In een meer algemene zin hebben we bij OpenWoo.app voor andere (sub)doelgroepen gekozen dan binnen Open Catalogi, inwoners, onderzoekers, journalisten, raadsleden en ondernemers staan centraal.
 
 ## Codebases
-Voor de installatie van OpenWoo.app zijn meerdere codebases bechickbaar, dat heeft zowel een historische achtergrond als dat het een bewuste keuze is om van (met name UI) componenten meerdere versies te hebben. Omdat deze ook nog eens over verschillede organisaties verdeeld zijn kan het moeilijk zijn om overzicht te houden op welke code waar staat. We houden daarom hier een overizcht bij van de extra componenten en codebases ten opzichte van de standaard Open Catalogi componenten.
+
+Voor de installatie van OpenWoo.app zijn meerdere codebases beschikbaar, dat heeft zowel een historische achtergrond als dat het een bewuste keuze is om van (met name UI) componenten meerdere versies te hebben. Omdat deze ook nog eens over verschillende organisaties verdeeld zijn, kan het moeilijk zijn om overzicht te houden op welke code waar staat. We houden daarom hier een overzicht bij van de extra componenten en codebases ten opzichte van de standaard OpenCatalogi-componenten.
 
 | Codebase | Rol | Leverancier | Licentie |
 |----------|------------------------------|             |          |  
-| [Github]()         | Taakapplicatie publiceren, Publicatie Platform    | IO Digital            |          |  
+| [Github]()         | Taakapplicatie publiceren, Publicatieplatform    | IO Digital            |          |  
 | [Github]()         | Taakapplicatie publiceren    | Acato            |          |  
-| [Github]()         | Publicatie Platform    | Acato            |          |  
-| [Github](https://github.com/OpenWebconcept/plugin-openwoo)         | Publicatie Platform    | Yard            | EUPL         |  
-| [Github](https://github.com/ConductionNL/woo-website-template)         | Publicatie Platform    | Conduction            | EUPL         |  
-| [Github](https://github.com/ConductionNL/plugin-openwoo)         | Synchronysatie Service      | Conduction            | EUPL        |  
-
+| [Github]()         | Publicatieplatform    | Acato            |          |  
+| [Github](https://github.com/OpenWebconcept/plugin-openwoo)         | Publicatieplatform    | Yard            | EUPL         |  
+| [Github](https://github.com/ConductionNL/woo-website-template)         | Publicatieplatform    | Conduction            | EUPL         |  
+| [Github](https://github.com/ConductionNL/plugin-openwoo)         | Synchronisatieservice      | Conduction            | EUPL        |  
 
 Hierop zijn een paar opmerkingen te maken
-- We gebruiken de synchronisatie service van Open Catalogi niet (die is immers gericht op Github, Gitlab en Dcat), in plaats daarvan is er een WOO synchronysatie service gericht op ZGW, STUF, DRC en ORI.
-- We gebruiken voorkant van Open Catalogi niet (die is immers sotware en data gericht), in plaats daarvan hebben meerdere leveranciers eigen publicatie platformen ontwikkeld.
+
+- We gebruiken de synchronisatie service van Open Catalogi niet (die is immers gericht op GitHub, GitLab en DCAT), in plaats daarvan is er een Woo-synchronisatieservice gericht op ZGW, STUF, DRC en ORI.
+- We gebruiken voorkant van Open Catalogi niet (die is immers software en datagericht), in plaats daarvan hebben meerdere leveranciers eigen publicatieplatformen ontwikkeld.
 
 ## Uitdagingen
 
 Bij het ontwikkelen van een publicatie voorziening komen een aantal uitdagingen in beeld
 
 - Woo gegevens staan vaak opgeslagen in bronnen die niet makkelijk toegankelijk zijn
-- De scope van de WOO (alle niet vertrouwelijke gegevens) in combinatie met het concept actieve openbaarmaking raakt de volledige informatie huishouden
-- Handmatig publiceren kan daarmee geen eindoplossing zijn, maar eigenlijk ook al geen tussen oplossing
+- De scope van de Woo (alle niet vertrouwelijke gegevens) in combinatie met het concept actieve openbaarmaking raakt de volledige informatie huishouden
+- Handmatig publiceren kan daarmee geen eindoplossing zijn, maar eigenlijk ook al geen tussenoplossing
 - Er mogen géén fouten worden gemaakt met anonimiseren, dit vraagt om een afgebakende proces flow met checks en balances rondom publiceren
 
-Dat leidt tot de conclusie dat we niet op zoek zijn naar een WOO-publicatieplatform maar een algemene publicatie voorzienen die één of meerdere publicatie kanalen kan 'voeden', daarbij denken we naast de WOO-Index (koop) ook nadrukkelijk aan een organisatie eigen publicatie platform, WooGLe en bijvoorbeeld een gemeentelijke website. In het verlengde hiervan liggen ook DROP, SDG, Algoritme registers en WHO als kanalen die vanuit een generiek publicatie platform moeten kunnen worden ontsloten.
+Dat leidt tot de conclusie dat we niet op zoek zijn naar een WOO-publicatieplatform maar een algemene publicatie voorzienen die één of meerdere publicatie kanalen kan 'voeden', daarbij denken we naast de WOO-Index (koop) ook nadrukkelijk aan een organisatie eigen publicatie platform, WooGLe en bijvoorbeeld een gemeentelijke website. In het verlengde hiervan liggen ook DROP, SDG, Algoritme registers en WHO als kanalen die vanuit een generiek publicatieplatform moeten kunnen worden ontsloten.
 
 ## Belangrijkste verschillen ten opzicht van OpenWoo.app 1.0
 
-**Splitsing opslag en search** Binnen de OpenWoo.app 1.0 werd er één mongoDB instance als opslag en search gebruikt, we hebben deze zowel qua opslag uit elkaar getrokken in een Elasticsearch en ORC-instantie als verdeeld over twee aparte API's (zoeken en beheer).
+**Splitsing opslag en search** Binnen de OpenWoo.app 1.0 werd er één MongoDB-instance als opslag en search gebruikt, we hebben deze zowel qua opslag uit elkaar getrokken in een Elasticsearch en ORC-instantie als verdeeld over twee aparte API's (zoeken en beheer).
 **Lostrekken integratie component** De 1.0 versie was direct gebouwd op de Common Gateway, een integratie voorziening. Vanaf 2.0 zijn de zoek-API en beheer-API gepositioneerd als losse componenten die (desgewenst) ook op NLX/FSC kunnen worden ontsloten.
 **Publicatie flow** De 1.0 versie was gebouwd op de gedachte dat objecten vanuit de bron altijd automatisch moesten worden gepubliceerd. In de 2.0 is dit omgedraaid en wordt er vanuit gegaan dat er actief beheer is op publicaties en dat ze pas worden gepubliceerd als daartoe is geaccordeerd. Wel kunnen er nog steeds automatische spelregels worden afgesproken.
 
@@ -87,12 +88,12 @@ Dat leidt tot de conclusie dat we niet op zoek zijn naar een WOO-publicatieplatf
 
 Woo-publicaties moeten worden uiteraard ergens worden gepubliceerd, dat gebeurd via een organisatie specifiek Woo-publicatieplatform. Open Catalogi kent haar eigen zoeken UI, maar voor de gemiddelde gemeente is die te generiek. Daarom zijn er vanuit het OpenWoo.app project een aantal alternatieve user interfaces beschikbaar waarbij de overheid zelf kan kiezen welke interface het beste bij haar past. Hierbij kunt u zowel kiezen voor de zoekinterface als los component als voor een integratie binnen uw huidige website.
 
-Let op, alle interfaces maken onderwater gebruik van de [zoeken-API](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/#de-zoek-api). U kunt de interfaces dan ook niet gebruiken zonder een Open Catalogi zoeken-API.
+Let op, alle interfaces maken onderwater gebruik van de [zoeken-API](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/#de-zoek-api). De interface is dan ook niet te gebruiken zonder een OpenCatalogi zoeken-API.
 .
 
 | Component                     | Open Source | Leverancier(s)                                           | Beschrijving                                                      | Meer informatie |
 |-------------------------------|-------------|----------------------------------------------------------|-------------------------------------------------------------------|-----------------|
-| Open Catalogi zoeken-Ui          | Ja          | [Conduction](https://conduction.nl/)                     | Een losse NL Design zoekpagina in de huisstijl van uw organisatie | |
+| OpenCatalogi zoeken-Ui          | Ja          | [Conduction](https://conduction.nl/)                     | Een losse NL Design zoekpagina in de huisstijl van uw organisatie | |
 | OpenWoo.app default zoeken-Ui           | Ja          | [Conduction](https://conduction.nl/), [Shift2](https://www.shift2.nl/)                     | Een losse NL Design zoekpagina in de huisstijl van uw organisatie |
 | Tilburgse frontend           | Ja          | [Acato](https://acato.nl/)                    | Een losse NL Design zoekpagina in de huisstijl van uw organisatie |                  |
 | Integratie in Open Webconcept | Ja          | [Yard](https://www.yard.nl/), [Conduction](https://conduction.nl/) | Een NL Design weergavecomponent voor WordPress-websites           |                 |
@@ -116,11 +117,11 @@ Naast het lokale publicatieplatform ondersteund OpenWoo.app ook altijd de volgen
 
 ### Motorblok (onderdeel 2)
 
-Het kloppende hart (of motorblok) onder het publicatieplatform is het [Common Ground](https://commonground.nl/) project [Open Catalogi](https://documentatie.opencatalogi.nl/) vanuit dit project nemen we een 2-tal componenten over; te weten [Open Index](https://openindex.online/) en [Open Registers](https://openregisters.app/).
+Het kloppende hart (of motorblok) onder het publicatieplatform is het [Common Ground](https://commonground.nl/) project [OpenCatalogi](https://documentatie.opencatalogi.nl/) vanuit dit project nemen we een tweetal componenten over; te weten [Open Index](https://openindex.online/) en [Open Registers](https://openregisters.app/).
 
 **Open Index** stelt ons in staat om snel en organisatie-overstijgend te zoeken in meerdere Woo-categorieën tegelijkertijd. Hierbij wordt onder water gebruik gemaakt van Elasticsearch. Open Index normaliseert en standaardiseert Elasticsearch voor ons door het toevoegen van JSON-ld, contextuele metadata, organisaties, directory en catalogi waardoor de onderliggende infrastructuur ontstaat voor een federatieve zoekvraag. Het vormt daarmee het hard van zoeken in OpenWoo.app. Meer informatie over hoe we de techniek van Open Index inzetten vind je in de [architectuurdocumentatie van OpenCatalogi](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/).
 
-**Open Registers** levert voor ons een publicatie register waar publicaties binnen komen (automatisch aan de hand van synchronisatie of handmatig) en we deze behandelen voordat ze verder worden gecommuniceerd naar Open Index.
+**Open Registers** levert voor ons een publicatieregister waar publicaties binnen komen (automatisch aan de hand van synchronisatie of handmatig) en we deze behandelen voordat ze verder worden gecommuniceerd naar Open Index.
 
 Er is dus een bewuste en harde scheiding tussen de werkbak (Open Registers) en de publicatiebak (Open Index) waarbij de zoek-API (en daarmee de burger interface) gebruik maakt van de zoekbak. De medewerkers maken via de Admin-UI en beheerinterface gebruik van Open Registers om publicaties te behandelen. Onder het behandelen van publicatie verstaan we onder andere:
 
@@ -132,7 +133,7 @@ Er is dus een bewuste en harde scheiding tussen de werkbak (Open Registers) en d
 - Eventueel terugtrekken van publicaties
 - Archiveren
 
-Hierbij dient te worden opgemerkt dat het publicatieprincipe niet allen de WOO maar ook WHO en DSO ondersteund.
+Hierbij dient te worden opgemerkt dat het publicatieprincipe niet alleen de Woo, maar ook [WHO](https://wetten.overheid.nl/BWBR0036795/2024-06-19/0) en [DSO](https://iplo.nl/digitaal-stelsel/) ondersteund.
 
 Afhankelijk van de specifieke configuratie wensen van overheden kunnen sommige van deze handelingen worden geautomatiseerd (bijvoorbeeld terugtrekken van en DSO-publicatie die ter inzage ligt na het verloop van de termijn). Hiervoor ondersteunen we twee patronen
 
@@ -199,7 +200,7 @@ Deze Open Index is echter ook buiten OpenWoo bruikbaar en kan bijvoorbeeld worde
 
 ## Federatief (Landelijk) zoeken
 
-OpenWoo.app maakt gebruik van de federatieve zoekvraag ontwikkeld binnen [OpenCatalogi](https://opencatalogi.nl/) om verschillende integrale zoekvragen virtueel samen te voegen.  Simpel gezegd roept de landelijke zoek API meerdere instanties van [Open Index]() aan en aggregeert de resultaten. Technisch zitten daar nog wat haken en ogen aan die binnen Open Index worden [uitgelegd]().
+OpenWoo.app maakt gebruik van de federatieve zoekvraag ontwikkeld binnen [OpenCatalogi](https://opencatalogi.nl/) om verschillende integrale zoekvragen virtueel samen te voegen.  Simpel gezegd roept de landelijke zoek-API meerdere instanties van [Open Index](https://index.openregisters.app) aan en aggregeert de resultaten. Technisch zitten daar nog wat haken en ogen aan die binnen Open Index worden [uitgelegd]().
 Er wordt hierbij dus géén gebruik gemaakt van een landelijke index, het geen data duplicatie voorkomt en organisaties zelf in controle houdt op hun publicaties. Dit dit concept is verder uitgewerkt in [koophulpje.nl](https://koophulpje.nl/) waarbij ook een voorziening is gerealiseerd voor het genereren van `robot.txt` en `sitemap.xml` bestanden (ten behoeve van KOOP). De facto is hiermee dus ook een landelijke Woo-API gerealiseerd met de beperking dat deze alleen organisaties bevat die participeren in OpenWoo.app
 De bevragingen tussen de federale zoekvraag en de verschillende organisaties kan via [NLX/FSC]( https://www.nlx.io/) lopen, of daarbuiten. Gezien het publieke bevragingen zijn op openbare informatie is NLX an sich niet verplicht en kan het inregelen van een PKI-certificaat nodeloos complex zijn. Dat gezegd hebbende biedt NLX ook voordelen met betrekking tot het monitoren en loggen van verkeer.
 ![OpenWeb Architecture](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Federatie.svg)
@@ -225,15 +226,15 @@ OpenWoo.app is een organisatie specifieke applicatie waarvan de installaties ond
 
 Dit zijn de aangeboden domeinen vanuit OpenWoo.app, daarnaast zien de dat de meeste organisaties hun publicatiepagina ontsluiten op hun eigen domein e.g. open.[organisatie_naam].nl
 
-## Documenten vs Publicatie Objecten
+## Documenten vs Publicatieobjecten
 
-Vanuit de WOO denken we doorgaans aan documenten die gepubliceerd moeten worden, vanuit OpenWoo.app denken we echter in publicatie objecten waar een of meer documenten aan kunnen worden gekoppeld. Publicatie objecten omvatten de metadata waarmee documenten kunnen worden gevonden, geclusterd en weergegeven (zoals bijvoorbeeld thema's en typen). Publicatie objecten kunnen ook aan elkaar worden gerelateerd, dat is met name relevant in de casus van raadsinformatiesystemen waarbij een stuk hoort bij een agenda-item dat hoort bij een agenda bij een vergadering en gekoppeld kan zijn aan stemgedrag van personen of facties.
+Vanuit de Woo denken we doorgaans aan documenten die gepubliceerd moeten worden. Vanuit OpenWoo.app denken we echter in termen van publicatieobjecten waaraan één of meer documenten kunnen worden gekoppeld. Publicatieobjecten bevatten de metadata waarmee documenten kunnen worden gevonden, geclusterd en weergegeven, zoals thema's en typen. Ook kunnen publicatieobjecten aan elkaar worden gerelateerd. Dit is vooral relevant in raadsinformatiesystemen, waar een stuk hoort bij een agenda-item, dat weer hoort bij een agenda van een vergadering en gekoppeld kan zijn aan stemgedrag van personen of fracties.
 
 Het onderling aan elkaar relateren van publicatieobjecten leidt onder water tot een driedimensionaal datamodel en is een van de redenen waarom er binnen OpenWoo.app is gekozen voor linked data.
 
 ## Metadata
 
-Ieder publicatie object beschikt over een type (bijvoorbeeld woo_verzoek) en een voorgedefinieerde metadata set. De metadataset beschrijft wat er in de publicatie aan gegevens wordt verwacht en typeert deze (bijvoorbeeld heeft titel, de titel is een string) en biedt daarmee context voor de weergave van de publicatie. Dit bied de search UI de mogelijkheid om cards te maken die geoptimaliseerd zijn voor specifieke WOO-categorieën en een algemene card voor niet op voorhand gedefinieerde of onbekende categorieën.
+Ieder publicatie object beschikt over een type (bijvoorbeeld woo_verzoek) en een voorgedefinieerde metadataset. De metadataset beschrijft wat er in de publicatie aan gegevens wordt verwacht en typeert deze (bijvoorbeeld heeft titel, de titel is een string) en biedt daarmee context voor de weergave van de publicatie. Dit biedt de search UI de mogelijkheid om cards te maken die geoptimaliseerd zijn voor specifieke WOO-categorieën en een algemene card voor niet op voorhand gedefinieerde of onbekende categorieën.
 
 Dat laatste kan voorkomen als een organisatie zelf metadata sets toevoegt, dat mag. Het is mogelijk voor organisaties om zelf extra metadata beschrijvingen te definiëren en hierop te publiceren. Organisaties zijn daarmee ook niet gelimiteerd tot de door KOOP gedefinieerde categorieën. Dit is ook een van de redenen waarom zoeken in de UI de faceted search MOET implementeren (zie ook de [architectuur documentatie van open catalogi](https://documentatie.opencatalogi.nl/Handleidingen/Architectuur/)). Het is niet op voorhand voorspelbaar op welke aspecten kan worden gezocht, dit is afhankelijk van de publicaties en gedefinieerde metadata zoals gepubliceerd door deelnemende organisaties.
 

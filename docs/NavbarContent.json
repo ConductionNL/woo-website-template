@@ -78,7 +78,7 @@
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "docs",
+            "directoryName": "/docs",
             "fileName": "GOVERNANCE"
           }
         }

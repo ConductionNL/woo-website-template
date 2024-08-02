@@ -6,7 +6,7 @@ Het succes en de continue verbetering van het OpenWoo.app project zijn afhankeli
 
 OpenWoo.app is een doorontwikkeling van de OpenWoo WordPress-plugin uit Open Webconcept. Vanuit die oorsprong is OpenWoo.app eigenlijk een subcommunity van OpenWebconcept. De community staat echter nadrukkelijk open voor niet OWC-afnemers en leveranciers.
 
-De gemeente Gouda vormt hierin de linking pin
+De gemeente Gouda vormt hierin de linking pin.
 
 Gemeenten zo als Noordwijk, Gouda, Barendrecht, Alblasserwaard, Ridderkerk en Hoeksche Waard vormen met de deelname aan
 
