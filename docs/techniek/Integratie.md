@@ -24,11 +24,11 @@ Als u vanuit uw casus een API nodig heeft zonder throttling, ratelimit of namens
 
 ### Documentatie
 
-Voor de API is een [redoc documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/oas.yaml) beschikbaar met voorbeelden van de verschillende API-endpoints, calls en resultaten. Omdat de API daarnaast kan worden gebruikt zonder authenticatie is deze ook goed te beproeven via onze [Postman-collectie](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/Woo.postman_collection.json). We raden developers van ook van harte aan om aan de hand van deze collectie te spelen en te ontwikkelen.
+Voor de API is een [Stoplight documentatie](https://conduction.stoplight.io/studio/open-catalogi?) beschikbaar met voorbeelden van de verschillende API-endpoints, calls en resultaten. Omdat de API daarnaast kan worden gebruikt zonder authenticatie is deze ook goed te beproeven via onze [Postman-collectie](https://github.com/ConductionNL/opencatalogi/blob/feature/docs/postmancollection/docs/assets/Opencatalogi%20CRUD.postman_collection.json). We raden developers van ook van harte aan om aan de hand van deze collectie te spelen en te ontwikkelen.
 
 ### Voorbeelden
 
-In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo-publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.gateway.commonground.nu/api/publicaties>. Er zijn 4 voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties vindt u terug in de [Redoc documentatie](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/oas.yaml)).
+In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de Woo-publicaties van OpenWoo.app, het endpoint daarvoor is: <https://api.gateway.commonground.nu/api/publicaties>. Er zijn een aantal voor de hand liggende zoekparameters waarmee gezocht wordt (overige opties zijn terug te vinden in de [Stoplight documentatie](https://conduction.stoplight.io/studio/open-catalogi?)).
 
 1. Op een of meerdere zoek woorden, b.v. `_search=test`
 2. Op organisatie, dit gaat aan de hand van OIN (de volledige OIN-lijst vind u [hier](https://oinregister.logius.nl/oin-register)) b.v. `oin=00000001001299992000`
@@ -36,88 +36,76 @@ In het merendeel van de gevallen zult u een zoekvraag willen uitvoeren binnen de
 4. Op datum, Hierbij kunt u een begin en eindatum opgeven om een periode (bijvoorbeeld jaar) te doorzoeken publicatiedatum[after]=2022-12-31T23:59:59Z&publicatiedatum[before]=2024-01-01T00:00:00Z&
 
 ````cli
-GET 'https://api.gateway.commonground.nu/api/publicaties?extend[]=all&_search=Afvalwaterakkoord&_order[publicatiedatum]=desc&_limit=12&_page=1'
+GET 'https://api.gateway.commonground.nu/api/publicaties?extend[]=all&_search=verzoek&_order[publicatiedatum]=desc&_limit=12&_page=1'
 
 Response
 
 {
     "results": [
         {
-            "_id": "3c75db6d-55b5-48da-aef8-a5768dd8ec89",
-            "id": "3082",
-            "titel": "Afvalwaterakkoord",
-            "beschrijving": null,
-            "samenvatting": "In dit bestuursakkoord is afgesproken door de koepelorganisaties, dat het waterschap en de gemeenten moeten samenwerken in de afvalwaterketen &quot;als ware het één bedrijf’.",
-            "categorie": "Convenant",
-            "publicatiedatum": "2023-11-24 11:31:47",
-            "portalUrl": "https://conductionnl.github.io/woo-website-epe/19cdec3f-896f-4765-8d62-c6c8570926b7",
-            "bijlagen": [
-                {                    
-                    "id": null,
-                    "titel": "Naam_Bijlage",
-                    "categorie": null,
-                    "type": null,
-                    "status": null,
-                    "url": "https://openpub.ridderkerk.nl/wp-content/uploads/sites/3/2023/02/ondertekend-afvalwaterakkoord-Ridderkerk-2022.pdf"
-                }
-            ],
-            "themas": [
-                {
-                    "hoofdthema": "Milieu",
-                    "subthema": null,
-                    "aanvullendThema": null
-                }
-            ],
-            "organisatie": {
-                "naam": "Gemeente Ridderkerk",
-                "rsin": null,
-                "tooi": null,
-                "oidn": "ridderkerk",
-                "id": "37165afb-0e33-4813-8f66-d504501e6128"
-            },
-            "metadata": {
-                "volgnummer": null,
-                "besluitdatum": "2022-12-21",
-                "verzoek": {
-                    "inventarisatielijst": {
-                        "categorie": null,
-                        "type": null,
-                        "status": "accepted",
-                        "url": "http://localhost/api/view-file/f9358a25-ee51-4079-a1d1-e98d53c4ca80",
-                        "titel": "Temporarily title so a object gets created for file fetching and url genering.",
-                        "id": null
-                    },
-                    "informatieverzoek": {
-                        "categorie": null,
-                        "type": null,
-                        "status": "accepted",
-                        "url": "http://localhost/api/view-file/f723f34c-ef3d-453b-b395-fe60b5127cde",
-                        "titel": "Temporarily title so a object gets created for file fetching and url genering.",
-                        "id": null
-                    },
-                    "besluit": {
-                        "categorie": null,
-                        "type": null,
-                        "status": "accepted",
-                        "url": "http://localhost/api/view-file/4b7978e8-6cf9-469e-b27c-08f895e5f653",
-                        "titel": "Temporarily title so a object gets created for file fetching and url genering.",
-                        "id": null
-                    },
-                    "termijnoverschrijding": null,
-                    "ontvangstdatum": "2023-10-02T10:31:12Z",
-                    "ontvangerInformatieverzoek": null,
-                    "status": null
+            "_id": "385628ef-dd81-4ab2-98e1-3051ab1b3ef6",
+            "_self": {
+                "id": "385628ef-dd81-4ab2-98e1-3051ab1b3ef6",
+                "name": "informatieverzoek evenementenvergunning",
+                "self": "/api/publicaties/385628ef-dd81-4ab2-98e1-3051ab1b3ef6",
+                "schema": {
+                    "id": "40c1041c-1526-4494-b191-244fdd30aefd",
+                    "name": "Publicatie",
+                    "ref": "https://commongateway.nl/woo.publicatie.schema.json"
                 },
-                "id": "8e1084b5-ba4d-4d33-a5c2-f98e7f893f07"
+                "level": 1,
+                "dateCreated": "2024-07-03T07:51:59+00:00",
+                "dateModified": "2024-08-02T12:26:46+00:00",
+                "dateDeleted": null,
+                "database": {
+                    "id": null,
+                    "name": null,
+                    "ref": null
+                },
+                "owner": {
+                    "id": "06ef47a7-a2f1-4589-af59-b00a611d5692",
+                    "name": "Default User",
+                    "ref": "https://docs.commongateway.nl/user/default.user.json"
+                },
+                "organization": {
+                    "id": "a1c8e0b6-2f78-480d-a9fb-9792142f4761",
+                    "name": "Default Organization",
+                    "ref": "https://docs.commongateway.nl/organization/default.organization.json"
+                },
+                "application": {
+                    "id": null,
+                    "name": null,
+                    "ref": null
+                },
+                "synchronizations": [
+                    {
+                        "id": "c04f118a-d853-48c4-a8d4-d4d86ef11b36",
+                        "source": {
+                            "id": "f1cf401b-fbbc-4416-b2da-519eac0163b9",
+                            "ref": "https://commongateway.woo.nl/source/conduction.zaaksysteem.source.json",
+                            "name": "Conduction zaaksysteem",
+                            "description": "Conduction zaaksysteem api",
+                            "location": "https://openwoo.zaaksysteem.net/api"
+                        },
+                        "endpoint": null,
+                        "sourceId": "001046b9-0a9b-4068-a6bf-3e7efcf75c67",
+                        "dateCreated": "2024-07-03T07:51:59+00:00",
+                        "dateModified": "2024-07-03T07:52:00+00:00",
+                        "lastChecked": null,
+                        "lastSynced": null,
+                        "sourceLastChanged": null
+                    }
+                ]
             }
         }
+        // 1 enkele voorbeeld publicaite, in dit geval zijn het er 64
     ],
-    "count": 1,
+    "count": 12,
     "limit": 12,
-    "total": 1,
+    "total": 64,
     "offset": 0,
     "page": 1,
-    "pages": 1
+    "pages": 6
 }
 ````
 
@@ -125,7 +113,7 @@ Vanuit een het weergeven van een zoekformulier is het goed mogelijk dat u alleen
 
 ````cli
 GET 'https://api.gateway.commonground.nu/api/publicaties?_queries[]=categorie'
-Content-Type: application/json+aggregations
+Accept: application/json+aggregations
 
 Response
 
@@ -168,7 +156,7 @@ De kerngegevens van een Woo-publicatie zitten in het metadata-object, de inhoud 
 | Property              | Verplicht     | Gebruik      | Toegestane waardes    |
 |-----------------------|---------------|--------------|-----------------------|
 
-#### Klachten
+#### Klachtoordelen
 
 | Property              | Verplicht     | Gebruik      | Toegestane waardes    |
 |-----------------------|---------------|--------------|-----------------------|
@@ -183,8 +171,8 @@ De kerngegevens van een Woo-publicatie zitten in het metadata-object, de inhoud 
 Er zijn twéé manieren waarop een bron kan worden gekoppeld, beide vereisen dat de bron beschikt over een koppelvlak dat benaderbaar is door de OpenWoo.app.
 
 1. **De bron biedt een reeds door OpenWoo.app ondersteund koppelvlak aan of ontwikkelt deze.** Dit is vanuit de OpenWoo.app natuurlijk de snelste route
-2. **OpenWoo.app ontwikkeld ondersteuning voor een bron specifiek koppelvlak.** Deze route vergt minder van de aan te sluiten bron (die zal doorgaans al over een koppelvlak zo als API beschikken). Maar vergt inspanning aan de kant van de OpenWoo.app leveranciers. Daarnaast zal de OpenWoo.app community akkoord moeten gaan met de ontwikkeling en bekostiging (in de praktijk zal de aanvragen worden gevraagd de kosten te dekken).
+2. **OpenWoo.app ontwikkeld ondersteuning voor een bron specifiek koppelvlak.** Deze route vergt minder van de aan te sluiten bron (die zal doorgaans al over een koppelvlak zoals een API beschikken). Maar vergt inspanning aan de kant van de OpenWoo.app leveranciers. Daarnaast zal de OpenWoo.app community akkoord moeten gaan met de ontwikkeling en bekostiging (in de praktijk zal de aanvragen worden gevraagd de kosten te dekken).
 
 ## Het koppelen van een organisatie
 
-Zie voor het koppelen van een organisatie de [naar productiepagina](/docs/techniek/Productie.md).
+Zie voor het koppelen van een organisatie de [naar productiepagina](../techniek/Productie.md).

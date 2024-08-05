@@ -7,13 +7,13 @@ Het in productie nemen van OpenWoo.app voor uw organisatie is makkelijker dan u 
 - Vraag tijdig een PKI-certificaat en DNS-wijziging aan bij uw ICT-leverancier(s)
 - Zorg dat u tijd beschikbaar hebt voor het grondig doortesten van de keten aan de hand van de testscenario's
 
-Als u de OpenWOO APP zelfstandig installeert zult u de [acties voor leverancier](#acties-voor-leverancier) uiteraard zelf moeten uitvoeren.
+Als u de OpenWoo.app zelfstandig installeert zult u de [acties voor leverancier](#acties-voor-leverancier) uiteraard zelf moeten uitvoeren.
 
 ## Benodigde informatie voor de vormgeving
 
 Om de vormgeving van OpenWoo.app aan te passen aan uw organisatie, heeft uw leverancier of u de volgende informatie nodig:
 
-- Logo in vector formaat (e.g. .svg, .eps of .ai)
+- Logo in vector formaat (e.g. `.svg`, `.eps` of `.ai`)
 - Huisstijlhandboek of website die als voorbeeld gebruikt kan worden
 - Contactgegevens (naam, e-mailadres, telefoonnummer en functie) van een medewerker die eventuele vragen over de huisstijl kan beantwoorden.
 
@@ -24,7 +24,7 @@ Om te beoordelen of uw organisatie NL Design tokens nodig heeft of moet aanpasse
 Voor de inrichting van OpenWoo.app heeft uw leverancier of u de volgende informatie nodig:
 
 - Welke afbeelding moet er worden getoond in de jumbotron? (afbeelding boven aan de landingspagina)
-- Welke contactgegevens moeten er in de footer worden getoond? Denk daarbij aan
+- Welke contactgegevens moeten er in de footer worden getoond? Denk daarbij aan:
   - Adresgegevens (bezoekadres en postadres)
   - Email
   - Telefoonnummer
