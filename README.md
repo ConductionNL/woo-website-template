@@ -14,7 +14,7 @@
 > - [12-06-2024 | Community Meeting](https://www.youtube.com/watch?v=ab_FEexYYMY).
 > - [09-05-2024 | Community Meeting](https://www.youtube.com/watch?v=Q0ElcTP-R4M).
 > - [10-04-2024 | Community Meeting](https://www.youtube.com/watch?v=zMqElLzy0BM).
-> - [25-03-2024 | Sim-Groep Webinar](https://www.simgroep.nl/toekomstbestendige-woo-oplossing)
+> - [25-03-2024 | SHIFT2 Webinar](https://www.simgroep.nl/toekomstbestendige-woo-oplossing)
 > - [13-03-2024 | Community Meeting](https://www.youtube.com/watch?v=TNZghskRu5c).
 > - [14-02-2024 | Community meeting](https://www.youtube.com/watch?v=ri5U8x-lsxo)
 > - [30-01-2024 | OpenGemeente Woobinar](https://vimeo.com/909134953)
