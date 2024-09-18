@@ -1,36 +1,43 @@
 # Datamask
-OpenWoo.app en Datamask willen graag een gemeenschappenlijek propositie voeren voor de WOO
+
+OpenWoo.app en Datamask willen graag een gemeenschappelijke propositie voeren voor de WOO
 
 ## Product Datamask
-Datamask zet de kracht van haar reeds bestaande koppelingen vanuit haar anonimiserings tool (en e.v.t. publicatie platform) in 
+
+Datamask zet de kracht van haar reeds bestaande koppelingen vanuit haar anonimiseringstool (en e.v.t. publicatie platform) in
 
 Heeft wel
-- Anonimesering
+
+- Anonimisering
 - Zoekindex a.h.v huidige koppelingen
 - Organisatie breder publicatie pagina
 - Beheerschermen en configuratie op de inrichting
 
 Heeft niet
+
 - Federatief en organisatie overkoepelend zoeken
 
 ## Product OpenWoo.app
+
 Datamask zet de kracht van haar data federalisatie en common ground netwerk in.
 
 Heeft wel
+
 - Federaliseren van indexen
 - NL Design voorkant
 - Volledig open source
 - Koppeling met Koop
-- Meezoeken in andere organisaties (samenwerkings verbanden, provincies etc)
-- Ondersteuning vanuit het common ground programma
+- Meezoeken in andere organisaties (samenwerkingsverbanden, provincies etc.)
+- Ondersteuning vanuit het Common Ground programma
 
-Heeft niet
-- Anonimeseringstool
-- Beheers interface op het koppelvlak
+Heeft geen
+
+- Anonimiseringstool
+- Beheerinterface op het koppelvlak
 
 ## Samenwerking
-De samenwerking kan er redelijk simpel uitzien, Datamask kan als aditionele funtionaliteit publiceren richting OpenWoo.app (daarvoor moet de betreffende afnemer wel over het motorblok van OpenWoo.app en Datamask beschicken). Vervolgens kan OpenWoo.app deze data beschickbaar maken op haar federale netwerk en door publiceren naar KOOP en WOOGLE aanvullend kan Datamask ook gegevens ophalen vanuit OpenWoo.app en zo ook aanvullende catageorien naast verzoeken weergeven in haar publicatie platform.
 
+De samenwerking kan er redelijk simpel uitzien, Datamask kan als additionele functionaliteit publiceren richting OpenWoo.app (daarvoor moet de betreffende afnemer wel over het motorblok van OpenWoo.app en Datamask beschikken). Vervolgens kan OpenWoo.app deze data beschikbaar maken op haar federale netwerk en door publiceren naar KOOP en WooGLe aanvullend kan Datamask ook gegevens ophalen vanuit OpenWoo.app en zo ook aanvullende categorieën naast verzoeken weergeven in haar publicatie platform.
 
 ## Architectuur
 
