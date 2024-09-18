@@ -15,6 +15,8 @@ import Gouda from "./../../static/configFiles/municipalities/gouda/gouda.json";
 import GoudaAccept from "./../../static/configFiles/municipalities/gouda/gouda-accept.json";
 import HoekscheWaard from "./../../static/configFiles/municipalities/hoeksche-waard/hoeksche-waard.json";
 import HoekscheWaardAccept from "./../../static/configFiles/municipalities/hoeksche-waard/hoeksche-waard-accept.json";
+import HofvanTwente from "./../../static/configFiles/municipalities/hof-van-twente/hof-van-twente.json";
+import HofvanTwenteAccept from "./../../static/configFiles/municipalities/hof-van-twente/hof-van-twente-accept.json";
 import Lansingerland from "./../../static/configFiles/municipalities/lansingerland/lansingerland.json";
 import LansingerlandAccept from "./../../static/configFiles/municipalities/lansingerland/lansingerland-accept.json";
 import Leiden from "./../../static/configFiles/municipalities/leiden/leiden.json";
@@ -133,6 +135,15 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "acceptatie-open.gemeentehw.nl":
     case "gemeentehw.accept.openwoo.app":
       return HoekscheWaardAccept;
+
+    case "hof-van-twente-theme":
+    case "open.hofvantwente.nl":
+    case "hofvantwente.openwoo.app":
+    case "hofvantwente.koophulpje.nl":
+      return HofvanTwente;
+    case "acceptatie-open.hofvantwente.nl":
+    case "hofvantwente.accept.openwoo.app":
+      return HofvanTwenteAccept;
 
     case "lansingerland":
     case "open.lansingerland.nl":
@@ -329,6 +340,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Gooise Meren", value: "gooise-meren-theme" },
       { label: "Gouda", value: "gouda-theme" },
       { label: "Hoeksche Waard", value: "hoeksche-waard" },
+      { label: "Hof van Twente", value: "open-webconcept-theme" },
       { label: "Lansingerland", value: "lansingerland" },
       { label: "Leiden", value: "leiden-theme" },
       { label: "Moerdijk", value: "moerdijk-theme" },
