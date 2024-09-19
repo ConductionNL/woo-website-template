@@ -74,11 +74,11 @@
         "label": "Community",
         "type": "internalMarkdown",
         "current": {
-          "pathname": "/GOVERNANCE"
+          "pathname": "/Product/GOVERNANCE"
         },
         "handleClick": {
           "internalMarkdown": {
-            "directoryName": "/docs",
+            "directoryName": "Product",
             "fileName": "GOVERNANCE"
           }
         }
