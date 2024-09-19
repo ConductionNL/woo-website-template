@@ -1,0 +1,15 @@
+{
+  "GATSBY_SHOW_THEME_SWITCHER": "false",
+  "GATSBY_API_BASE_URL": "https://gemeentehw.accept.openwoo.app/api",
+  "GATSBY_NL_DESIGN_THEME_CLASSNAME": "open-webconcept-theme",
+  "GATSBY_FAVICON_URL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAC7UlEQVRYhe2WTUgVURTHfz0GkQgXESJCA0VJzCIixIWIWWNQLmwSWtgiXkGraNlaWrQoCYIgIxfNIqKiYAgqogY/CKOIsJIhzEXNwuRljwiRkIe0uPfm8TZPn6C0yD883pn/vefjnnPuB6xjHf87NlQ8081XAznScFbSfuQ1AmeBT8ClOEjmVhKAU6HzDuAu4ODmT5OGt7TzKuAJsEXPnAGu6DEH6NT8wzhISlmmcxUG2gNsAqq1bNAknANsFXIv8ED/LpczvJABN58DtgPTpOEPwdcAjUKnIORWy95LAD/ycsBxwR8oF4DMQD+qjl9w802Cb7HmDQp5n2VvWP/vAmoF/15O8iPP0UFqw26+Djilx2uAk0s4GdJGqoBmwSdxkJjstFk6A8J5F/Ad+OZHXrtTRuErbr4TOAJ0Cb4EjGh5L6ovDIaFXC4zoHqjRsvnTQC2Qg/ZDfqGNJwpE/QA/Km/7I1JYEKP7UD1mcG0cWI3U7ndUckqG4A6ycdBMq/lQ5bO0xxuvhbwyji0YVbpoJrT4GMcJFNathczJORua+yxnS6AeeA5qhFl91Za//2WvUEddDuLm/Z1HCSfcxkKh0nDg8A91HYyeEsa/tRy5ioz6l8Axv3Ia0WdpBJ9oGotFWZZ2OfNQJUYW3aVqAarF/ykdjwEbBb8GHAb1EnYIAZGSENzmZTb/3b9J+IgmdRym6WzR/8kikC3ubQc4A5wAlX7PjFRZmYeeKHl3SzsY4CNfuTFqNW7LI0EOBYHSWIIB9Vs/UCBNBwXk6WxUXE/tFlG61mc9iwUgIvAtThIfskBhzSUq5PoBa6iuv+C4Hcu48yghOqbm8B927HB0g8SdUaUSMOiofzIawGeoa5mgzkgBcZRW/cV6gAqsgwyA/AjrwN1D7wDbtiPCT/y6lA1LwLTQFGcdivCXy8i7fyRoLYB5+QcfepNsQrIOvOPWt/BajhaSQAfrO+xtQwg61F6HZX2LmAUOLOWAazjn+M3zrbSaI+Ix4cAAAAASUVORK5CYII=",
+  "GATSBY_ORGANISATION_NAME": "Gemeente Hoeksche Waard",
+  "GATSBY_JUMBOTRON_IMAGE_URL": "https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/pwa/src/assets/jumbotron/jumbotronHoekscheWaard.jpg",
+  "GATSBY_FOOTER_LOGO_HREF": "https://www.gemeentehw.nl/",
+  "GATSBY_FOOTER_CONTENT": "https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/FooterContent.json",
+  "GATSBY_FOOTER_CONTENT_HEADER": "",
+  "GATSBY_OIDN_NUMBER": "00000001825766096000",
+  "GATSBY_SHOW_CATEGORY": "true",
+  "GATSBY_SHOW_ORGANIZATION": "",
+  "GATSBY_DATE_FULL_MONTH": "false"
+}

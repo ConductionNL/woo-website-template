@@ -1,55 +1,80 @@
 @startuml
-title Algemene Architectuur en keuze mogenlijkheden
-footer: OpenWoo.app
-header: OpenWoo.app
+title: Open Catalogi
+footer: Open Catalogi | Components
+header: Components
 
+interface "F5 extern (port 443)" as f5extern
+interface "F5 intern (port 443)" as f5intern
 
-' Publicatie platformen (Laag 5 UI)
-frame "Publicatie platformen " {
-    actor "KOOP"  as KOOP #1abc9c
-    actor   "WOOGLE" as WOOGLE #1abc9c
-    interface "Website" AS Website #cce5ff
-    interface "Thema site" as Themasite #cce5ff
-    interface "Zoek pagina" as Searchsite #1abc9c
+interface "Hipp (outd of scope)" as hipp
+
+cloud "Azure"{
+ [ADFS]  as identity
 }
 
-' Services(Laag 4)
-frame "Services" {
-    process "OpenWoo Service"  as OWS #1abc9c
-}
-
-' Integratie (Laag 3)
-frame "Integratie" {
-    database "Open Index"  as OI #1abc9c
-    component "Federatieve Connectie"  as FCS #1abc9c
-}
-
-' Bronnen (Laag 2)
-frame "Bronnen" {
-    database "Zaaksysteem (ZGW)" as ZRC #cce5ff
-    database "Raadsinformatiesysteem (RIS)" as RIS #cce5ff
-    database "Website (CMS)" as CMS #cce5ff
-    database "Archief" as DEPOT #cce5ff
-}
-
-frame "Legenda" {
-    component "Standaard onderdeel" #1abc9c
-    component "Optioneel" #cce5ff
+cloud "Internet"{
+actor "User" as user
+actor "Admin" as adminUser
+actor "Externe Catalogus" as externalCatalouge
 
 }
 
-OWS -down-> ZRC: Indexeerd
-OWS -down-> RIS: Indexeerd
-OWS -down-> CMS: Indexeerd
-OWS -down-> DEPOT: Indexeerd
-OWS ..> OI: Slaat op in
 
-FCS ..> OI : Bevraagd
+cloud "Kubernetes"{
 
-KOOP -down-> FCS : Indexeerd (XML Sitemap)
-WOOGLE -down-> FCS : Indexeerd (API)
-Website -down-> FCS : Bevraagd (API)
-Themasite -down-> FCS : Bevraagd (API)
-Searchsite -down-> FCS : Bevraagd (API)
+package "Layer 5 (interaction)" {
+package "React NL Design" {
+ [User Interface]  as ui
+}
+
+package "Vue NL Design" {
+ [Admin Interface]  as admin
+}
+}
+
+
+package "Layer 4 (Logic)" as layer4 {
+ [Synchronysations]  as service
+}
+
+
+package "Layer 2 (API)" as layer2 {
+
+
+package "Open Catalogi App" {
+ [Search API] as SearchAPI
+ [CRUD API] as ObjectsAPI
+}
+
+
+}
+
+}
+
+package "Layer 1 (data)" {
+
+package "Search index" {
+ [Elastic Search]  as search
+}
+
+package "Object Store" {
+ [ORC]  as db
+}
+}
+
+externalCatalouge <..> hipp: PKIO
+hipp <..> SearchAPI: Catalogus uitwisselingen
+
+
+user <..> f5extern: Browser ANONIEM
+adminUser <..> f5intern : Browser MET JWT Claim
+f5extern <..> ui: Alleen openbare endpoints en objecten
+f5intern <..> admin: Alle endpionts
+ui <..> SearchAPI: Alle endpionts
+admin <..> ObjectsAPI: Alle endpionts
+ObjectsAPI  .down.> db: Persist
+SearchAPI  .down.> search: Look up
+layer2 .down.> identity: AUTH
+service .down.> ObjectsAPI: AUTH
 
 @enduml

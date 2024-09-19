@@ -185,27 +185,46 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     </TableRow>
                   )}
 
-                  {getItems.data.metadata?.verzoek?.informatieverzoek && (
+                  {getItems.data.metadata?.verzoek?.informatieverzoek &&
+                    getItems.data.metadata?.verzoek?.informatieverzoek?.url && (
+                      <TableRow
+                        className={styles.tableRow}
+                        tabIndex={0}
+                        aria-label={`${t("Information request")}, ${
+                          getItems.data.metadata?.verzoek?.informatieverzoek?.titel ??
+                          getPDFName(getItems.data.metadata?.verzoek?.informatieverzoek?.url)
+                        }`}
+                      >
+                        <TableCell>{t("Information request")}</TableCell>
+                        <TableCell>
+                          <Link href={getItems.data.metadata?.verzoek?.informatieverzoek?.url} target="blank">
+                            {getItems.data.metadata?.verzoek?.informatieverzoek?.titel ??
+                              getPDFName(getItems.data.metadata?.verzoek?.informatieverzoek?.url)}
+                          </Link>
+                        </TableCell>
+                      </TableRow>
+                    )}
+
+                  {getItems.data.metadata?.verzoek?.convenant && getItems.data.metadata?.verzoek?.convenant?.url && (
                     <TableRow
                       className={styles.tableRow}
                       tabIndex={0}
-                      aria-label={`${t("Information request")}, ${
-                        getItems.data.metadata?.verzoek?.informatieverzoek?.titel ??
-                        getPDFName(getItems.data.metadata?.verzoek?.informatieverzoek?.url)
+                      aria-label={`${t("Convenant")}, ${
+                        getItems.data.metadata?.verzoek?.convenant?.titel ??
+                        getPDFName(getItems.data.metadata?.verzoek?.convenant?.url)
                       }`}
                     >
-                      <TableCell>{t("Information request")}</TableCell>
+                      <TableCell>{t("Convenant")}</TableCell>
                       <TableCell>
-                        <Link href={getItems.data.metadata?.verzoek?.informatieverzoek?.url} target="blank">
-                          {getItems.data.metadata?.verzoek?.informatieverzoek?.titel ??
-                            getPDFName(getItems.data.metadata?.verzoek?.informatieverzoek?.url)}
+                        <Link href={getItems.data.metadata?.verzoek?.convenant?.url} target="blank">
+                          {getItems.data.metadata?.verzoek?.convenant?.titel ??
+                            getPDFName(getItems.data.metadata?.verzoek?.convenant?.url)}
                         </Link>
                       </TableCell>
                     </TableRow>
                   )}
 
-                  {(getItems.data.metadata?.verzoek?.besluit ||
-                    (getItems.data.metadata?.verzoek?.besluit ?? getItems.data.metadata?.verzoek?.besluit?.url)) && (
+                  {getItems.data.metadata?.verzoek?.besluit && getItems.data.metadata?.verzoek?.besluit?.url && (
                     <TableRow
                       className={styles.tableRow}
                       tabIndex={0}
@@ -233,24 +252,25 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     </TableRow>
                   )}
 
-                  {getItems.data.metadata?.verzoek?.inventarisatielijst && (
-                    <TableRow
-                      className={styles.tableRow}
-                      tabIndex={0}
-                      aria-label={`${t("Inventory list")}, ${
-                        getItems.data.metadata?.verzoek?.inventarisatielijst?.titel ??
-                        getPDFName(getItems.data.metadata?.verzoek?.inventarisatielijst?.url)
-                      }`}
-                    >
-                      <TableCell>{t("Inventory list")}</TableCell>
-                      <TableCell>
-                        <Link href={getItems.data.metadata?.verzoek?.inventarisatielijst?.url} target="blank">
-                          {getItems.data.metadata?.verzoek?.inventarisatielijst?.titel ??
-                            getPDFName(getItems.data.metadata?.verzoek?.inventarisatielijst?.url)}
-                        </Link>
-                      </TableCell>
-                    </TableRow>
-                  )}
+                  {getItems.data.metadata?.verzoek?.inventarisatielijst &&
+                    getItems.data.metadata?.verzoek?.inventarisatielijst?.url && (
+                      <TableRow
+                        className={styles.tableRow}
+                        tabIndex={0}
+                        aria-label={`${t("Inventory list")}, ${
+                          getItems.data.metadata?.verzoek?.inventarisatielijst?.titel ??
+                          getPDFName(getItems.data.metadata?.verzoek?.inventarisatielijst?.url)
+                        }`}
+                      >
+                        <TableCell>{t("Inventory list")}</TableCell>
+                        <TableCell>
+                          <Link href={getItems.data.metadata?.verzoek?.inventarisatielijst?.url} target="blank">
+                            {getItems.data.metadata?.verzoek?.inventarisatielijst?.titel ??
+                              getPDFName(getItems.data.metadata?.verzoek?.inventarisatielijst?.url)}
+                          </Link>
+                        </TableCell>
+                      </TableRow>
+                    )}
 
                   {!_.isEmpty(getItems.data.bijlagen) && (
                     <TableRow
@@ -263,7 +283,8 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                         <UnorderedList id="attachmentsData">
                           {getItems.data.bijlagen.sort(sortAlphaNum).map(
                             (bijlage: any, idx: number) =>
-                              bijlage.titel && (
+                              bijlage.titel &&
+                              bijlage.url && (
                                 <UnorderedListItem key={idx}>
                                   <Link
                                     href={bijlage.url?.length !== 0 ? bijlage.url : "#"}

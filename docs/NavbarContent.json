@@ -71,6 +71,19 @@
         }
       },
       {
+        "label": "Community",
+        "type": "internalMarkdown",
+        "current": {
+          "pathname": "/Product/GOVERNANCE"
+        },
+        "handleClick": {
+          "internalMarkdown": {
+            "directoryName": "Product",
+            "fileName": "GOVERNANCE"
+          }
+        }
+      },
+      {
         "label": "Veel gestelde vragen",
         "type": "internalMarkdown",
         "current": {
