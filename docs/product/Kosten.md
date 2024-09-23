@@ -21,7 +21,8 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 
 
 > **notice**
-> Weet u niet welk frontend framework uw organisatie op dit moment gebruikt? Kijk dan eens op [digimonitor](https://www.digimonitor.nl/cms-en/gemeenten/).
+> Weet u niet welk frontend framework of website uw organisatie op dit moment gebruikt? Kijk dan eens op [digimonitor](https://www.digimonitor.nl/cms-en/gemeenten/). Er zijn mogelijkheden voor zowel integratie, 
+> als losstaande pagina's.
 
 ## Motorblok
 
