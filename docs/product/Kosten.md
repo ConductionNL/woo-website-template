@@ -12,16 +12,16 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 
 | Component                     | Leverancier(s)                                             | Eenmalig | Maandelijks | Meer informatie |
 |-------------------------------|------------------------------------------------------------|-------------|-------------|-------------|
-| Losse React pagina            | [Conduction](https://conduction.nl/)                       | € 1750,- | € 250.-     |                 |
-| Integratie in Open Webconcept | [Yard](https://www.yard.nl/) of [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
-| Sim Site                      | [SIMgroep](https://www.simgroep.nl)                       | Onbekend | Onbekend     |                 |
+| [Losse React pagina](https:cunduction.openwoo.app)            | [Conduction](https://conduction.nl/)                       | € 1750,- | € 250.-     |                 |
+| [Integratie in Open Webconcept](https://alkmaar.accept02.yard.nl/) | [Yard](https://www.yard.nl/) of [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
+| SIMsite                      | [Shift2](https://www.shift2.nl/))                       | Onbekend | Onbekend     |                 |
 | Drupal Site                   | "??"                                                       | Onbekend | Onbekend     |                 |
 | TYPO3 themasite              | [OpenGemeenten](https://www.opengemeenten.nl/oplossingen/website-en-koppeling-voor-de-wet-open-overheid)             | € 4000.- | € 250.-     |                 |
 | TYPO3 sub-themasite              | [OpenGemeenten](https://www.opengemeenten.nl/oplossingen/website-en-koppeling-voor-de-wet-open-overheid)             | € 1200.- | € 250.-     |                 |
 
 
 > **notice**
-> Weet u niet welk frontend framework of website uw organisatie op dit moment gebruikt? Kijk dan eens op [digimonitor](https://www.digimonitor.nl/cms-en/gemeenten/). Er zijn mogelijkheden voor zowel integratie, 
+> Weet u niet welk frontend framework, pagina of website uw organisatie op dit moment gebruikt? Kijk dan eens op [Digimonitor](https://www.digimonitor.nl/cms-en/gemeenten/). Er zijn mogelijkheden voor zowel integratie, 
 > als losstaande pagina's.
 
 ## Motorblok
