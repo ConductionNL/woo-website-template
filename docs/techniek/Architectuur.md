@@ -30,7 +30,7 @@ De OpenWoo.app heeft als doel om een ecosysteem van samenwerkende componenten te
 We hebben deze functionaliteit opgedeeld in drie blokken
 
 1. Publicatieplatform
-2. Motorblok
+2. Motorblok (Woo-service en [Open Index](https://index.openregisters.app/))
 3. Bronnen
 
 Secundair doel daarbij is wat idealistischer: om een gemeenschappelijke codebase te realiseren die door meerdere leveranciers kan worden uitgeleverd en deze vanaf dag één te betrekken. Het voorkomen van een lock-in vraagt om een open source oplossing die door en door begrepen wordt door meerdere markt partijen.
