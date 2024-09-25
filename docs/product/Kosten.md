@@ -26,11 +26,12 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 
 ## Motorblok
 
-Het motorblok bestaat uit twee componenten [OpenIndex](https://openindex.online/) en [OpenWoo-service](https://openwoo.openservices.online/). Voor het overzicht en kostenbeheersing worden deze componenten in het jaar 2024 als één dienst aangeboden.
+Het motorblok bestaat uit twee componenten [OpenIndex](https://index.openregisters.app/) en [OpenWoo-service](https://openwoo.openservices.online/). Voor het overzicht en kostenbeheersing worden deze componenten in het jaar 2024 als één integratie aangeboden.
 
 | Component | Leverancier                                                          | Eenmalig | Maandelijks | Meer informatie |
 |-----------|----------------------------------------------------------------------|----------|-------------|-------------|
-| Motorblok | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) | € 3000,-  | € 250.-      |                 |
+| OpenWoo-service | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) | € 3000,-  | € 250.-      |                 |
+| Open Index | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) |  | € 250.-      |                 |
 
 ## Bronnen
 
