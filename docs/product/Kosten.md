@@ -30,8 +30,8 @@ Het motorblok bestaat uit twee componenten [OpenIndex](https://index.openregiste
 
 | Component | Leverancier                                                          | Eenmalig | Maandelijks | Meer informatie |
 |-----------|----------------------------------------------------------------------|----------|-------------|-------------|
-| OpenWoo-service | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) | € 3000,-  | € 250.-      |                 |
-| Open Index | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) |  | € 250.-      |                 |
+| OpenWoo-service | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) | € 3000,-  | € 150.-      |                 |
+| Open Index | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) |  | € 150.-      |                 |
 
 ## Bronnen
 
