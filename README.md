@@ -6,11 +6,11 @@
 > Meer weten over deze oplossing? Dat kan! Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder. Uiteraard kan je ook altijd mailen naar [info@conduction.nl](mailto:info@conduction.nl)
 >
 > Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
->
-> - [10 Juli 10:00 | Community Meeting](https://www.linkedin.com/events/7206649524776284161/comments/?originTrackingId=BVZjR39lT72%2BfNaik99cew%3D%3D).
->
 > Terug kijken afgelopen webinars en meetings?
->
+> - [09-10-2024 | Community Meeting](https://www.youtube.com/watch?v=mlfE48JNsRE&list=PLAztWZApv5nXNXucmRDlOfzN8w7f3n6GJ&index=11)
+> - [11-09-2024 | Community Meeting](https://www.youtube.com/watch?v=041vJRcDddo&list=PLAztWZApv5nXNXucmRDlOfzN8w7f3n6GJ&index=10)
+> - [14-08-2024 | Community Meeting](https://www.youtube.com/watch?v=0uCh5aueM8U&list=PLAztWZApv5nXNXucmRDlOfzN8w7f3n6GJ&index=9)
+> - [10-07-10:00 | Community Meeting](https://www.linkedin.com/events/7206649524776284161/comments/?originTrackingId=BVZjR39lT72%2BfNaik99cew%3D%3D).
 > - [12-06-2024 | Community Meeting](https://www.youtube.com/watch?v=ab_FEexYYMY).
 > - [09-05-2024 | Community Meeting](https://www.youtube.com/watch?v=Q0ElcTP-R4M).
 > - [10-04-2024 | Community Meeting](https://www.youtube.com/watch?v=zMqElLzy0BM).
