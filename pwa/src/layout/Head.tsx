@@ -6,7 +6,7 @@ import { getPageTitle } from "../services/getPageTitle";
 import { useGatsbyContext } from "../context/gatsby";
 import { useTranslation } from "react-i18next";
 import { languageOptions } from "../data/languageOptions";
-import { connectSrcStandard, connectSrcMunicipalities, connectSrcOther } from "../data/connectSrc";
+import { connectSrcStandard, connectSrcMunicipalities, connectSrcOther, connectSrcLocal } from "../data/connectSrc";
 
 export const Head: React.FC = () => {
   const { gatsbyContext } = useGatsbyContext();
@@ -38,7 +38,9 @@ export const Head: React.FC = () => {
         frame-src 'self';
         img-src 'self' data: https://raw.githubusercontent.com/ConductionNL/;
         form-action 'self';
-        connect-src 'self' ${connectSrcStandard} ${connectSrcMunicipalities} ${connectSrcOther};
+        connect-src 'self' ${connectSrcStandard} ${connectSrcMunicipalities} ${connectSrcOther} ${
+          window.location.hostname === "localhost" ? connectSrcLocal : ""
+        };
         style-src 'self' 'unsafe-inline';
         font-src * data:;
         ${location.hostname === "localhost" && "script-src 'self' 'unsafe-eval';"}
