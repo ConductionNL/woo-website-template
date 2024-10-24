@@ -21,9 +21,9 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
         {requests.map((request) => (
           <CardWrapper
             role="region"
-            key={request._id}
+            key={request.id}
             className={styles.cardContainer}
-            onClick={() => navigate(request._id)}
+            onClick={() => navigate(request.id)}
             tabIndex={0}
             aria-label={`${
               request.published ? translateDate(i18n.language, request.published) : t("N/A")

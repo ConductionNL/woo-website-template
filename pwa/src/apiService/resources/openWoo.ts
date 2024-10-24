@@ -15,13 +15,14 @@ export default class OpenWoo {
   }
 
   public getAll = async (filters: IFiltersContext, currentPage: number, limit: number): Promise<any> => {
-    let endpoint = `/search/publications?extend[]=all${filtersToQueryParams(
+    let endpoint = `/search/publications?extend[]=catalog${filtersToQueryParams(
       filters,
     )}&_order[published]=desc&_limit=${limit}&_page=${currentPage}`;
 
-    if (window.sessionStorage.getItem("OIDN_NUMBER")) {
-      endpoint += `&organisatie.oin=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
-    }
+    // TODO: Uncomment this when filtering on oin is available in the API
+    // if (window.sessionStorage.getItem("OIDN_NUMBER")) {
+    //   endpoint += `&organization.oin=${window.sessionStorage.getItem("OIDN_NUMBER")}`;
+    // }
 
     const { data } = await this._send(this._instance, "GET", endpoint);
 
@@ -29,7 +30,7 @@ export default class OpenWoo {
   };
 
   public getOne = async (id: string): Promise<any> => {
-    const { data } = await this._send(this._instance, "GET", `/search/publications/${id}`);
+    const { data } = await this._send(this._instance, "GET", `/search/publications/${id}?extend[]=attachments`);
 
     return data;
   };

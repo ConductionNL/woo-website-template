@@ -6,6 +6,7 @@
   "author": "Conduction",
   "keywords": ["gatsby"],
   "scripts": {
+    "dev": "gatsby develop",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build --prefix-paths",

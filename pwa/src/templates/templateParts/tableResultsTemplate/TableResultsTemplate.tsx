@@ -53,8 +53,8 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
             {requests.map((request) => (
               <TableRow
                 className={styles.tableRow}
-                key={request._id}
-                onClick={() => navigate(request._id)}
+                key={request.id}
+                onClick={() => navigate(request.id)}
                 tabIndex={0}
                 aria-label={`${removeHTMLFromString(removeHTMLFromString(request.title))},  ${
                   request.published ? translateDate(i18n.language, request.published) : t("N/A")
