@@ -56,20 +56,22 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
                 key={request._id}
                 onClick={() => navigate(request._id)}
                 tabIndex={0}
-                aria-label={`${removeHTMLFromString(removeHTMLFromString(request.titel))},  ${
-                  request.publicatiedatum ? translateDate(i18n.language, request.publicatiedatum) : t("N/A")
+                aria-label={`${removeHTMLFromString(removeHTMLFromString(request.title))},  ${
+                  request.published ? translateDate(i18n.language, request.published) : t("N/A")
                 } ${
-                  window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true" ? `,${request.organisatie?.naam}` : ""
-                } ${window.sessionStorage.getItem("SHOW_CATEGORY") === "true" ? `, ${request.categorie}` : ""}, ${
-                  removeHTMLFromString(removeHTMLFromString(request.samenvatting)) ?? t("No summary available")
+                  window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true"
+                    ? `,${request.catalog?.organization?.title ?? request.organization?.title}`
+                    : ""
+                } ${window.sessionStorage.getItem("SHOW_CATEGORY") === "true" ? `, ${request.category}` : ""}, ${
+                  removeHTMLFromString(removeHTMLFromString(request.summary)) ?? t("No summary available")
                 }`}
               >
                 <TableCell>
-                  {removeHTMLFromString(removeHTMLFromString(request.titel)) ?? t("No subject available")}
+                  {removeHTMLFromString(removeHTMLFromString(request.title)) ?? t("No subject available")}
                 </TableCell>
                 <TableCell>
-                  {request.publicatiedatum
-                    ? translateDate(i18n.language, request.publicatiedatum)
+                  {request.published
+                    ? translateDate(i18n.language, request.published)
                     : t("No publication date available")}
                 </TableCell>
                 {(window.sessionStorage.getItem("SHOW_CATEGORY") === "true" ||
@@ -77,7 +79,9 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
                   <>
                     {window.sessionStorage.getItem("SHOW_ORGANIZATION") === "true" && (
                       <TableCell className={styles.categoryAndMunicipality}>
-                        {request.organisatie?.naam ?? t("No municipality available")}
+                        {request.catalog?.organization?.title ??
+                          request.organization?.title ??
+                          t("No municipality available")}
                       </TableCell>
                     )}
                     {window.sessionStorage.getItem("SHOW_CATEGORY") === "true" && (
@@ -87,14 +91,14 @@ export const TableResultsTemplate: React.FC<TableResultsTemplateProps> = ({ requ
                             styles.categoryAndMunicipality,
                         )}
                       >
-                        {request.categorie ?? t("No category available")}
+                        {request.category ?? t("No category available")}
                       </TableCell>
                     )}
                   </>
                 )}
                 <TableCell>
                   <div className={styles.description}>
-                    {removeHTMLFromString(removeHTMLFromString(request.samenvatting)) ?? t("No summary available")}
+                    {removeHTMLFromString(removeHTMLFromString(request.summary)) ?? t("No summary available")}
                   </div>
                 </TableCell>
               </TableRow>

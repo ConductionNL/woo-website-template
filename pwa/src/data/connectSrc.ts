@@ -66,3 +66,9 @@ https://xxllnc.accept.openwoo.app
 https://zuiddrecht.openwoo.app
 https://zuiddrecht.accept.openwoo.app
 `;
+
+export const connectSrcLocal = `
+http://localhost:8000 
+http://localhost:8080
+http://localhost:3000
+`;

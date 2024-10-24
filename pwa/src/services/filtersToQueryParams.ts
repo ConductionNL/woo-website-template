@@ -9,6 +9,15 @@ export const filtersToQueryParams = (filters: any): string => {
     .map(([key, value]) => {
       if (!value) return null;
 
+      if (typeof value === "string") {
+        switch (key) {
+          case "categorie":
+            return `category=${value}`;
+          default:
+            return `${key}=${value}`;
+        }
+      }
+
       const formattedValue = Array.isArray(value)
         ? value.map((v: string) => v.replace(/\s+/g, "_")).join(`&${key}[]=`)
         : (value as string);
@@ -37,8 +46,8 @@ export const filtersToUrlQueryParams = (filters: Record<string, any>): string =>
         ? value.map((v: string) => v.replace(/\s+/g, "_")).join(`&${key}[]=`)
         : (value as string).replace(/\s+/g, "_");
 
-      if (key == "publicatiedatum[after]") return;
-      if (key == "publicatiedatum[before]")
+      if (key == "published[after]") return;
+      if (key == "published[before]")
         return `year=${
           generateYearsArray(currentYear - 1995).find((year: any) => {
             return year.before === value;
