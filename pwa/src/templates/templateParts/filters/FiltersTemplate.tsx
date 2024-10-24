@@ -76,8 +76,8 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   const onSubmit = (data: any) => {
     setFilters({
       _search: data._search,
-      "publicatiedatum[after]": data.year?.after,
-      "publicatiedatum[before]": data.year?.before,
+      "published[after]": data.year?.after,
+      "published[before]": data.year?.before,
       categorie: data.category?.value,
     });
   };
@@ -113,7 +113,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
   React.useEffect(() => {
     if (!getCategories.isSuccess) return;
 
-    const categoriesWithData = getCategories.data.categorie.map((category: any) => ({
+    const categoriesWithData = getCategories.data.facets.category.map((category: any) => ({
       label: _.upperFirst(category._id.toLowerCase()),
       value: _.upperFirst(category._id.toLowerCase()),
     }));
@@ -140,7 +140,7 @@ export const FiltersTemplate: React.FC<FiltersTemplateProps> = ({ isLoading }) =
           isClearable
           defaultValue={generateYearsArray(currentYear - 2021).find((year: any) => {
             return (
-              year.after === filters["publicatiedatum[after]"] && year.before === filters["publicatiedatum[before]"]
+              year.after === filters["published[after]"] && year.before === filters["published[before]"]
             );
           })}
           {...{ register, errors, control }}
