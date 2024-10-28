@@ -7,7 +7,7 @@ env: # Change these to your preferences any image url can also be a base encoded
   USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX: "true"
 
   GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
-  API_BASE_URL: "https://api.gateway.commonground.nu/api"
+  API_BASE_URL: "https://tilburg.accept.commonground.nu/apps/opencatalogi/api"
   NL_DESIGN_THEME_CLASSNAME: "conduction-theme"
   DEV_ENVIRONMENT: "true"
   SHOW_CATEGORY: "true"
