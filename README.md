@@ -1,6 +1,5 @@
 # Over de Woo en OpenWoo.app
 
-
 > **Ondersteuning en bijeenkomsten**
 >
 >
