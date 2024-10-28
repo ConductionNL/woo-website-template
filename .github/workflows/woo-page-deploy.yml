@@ -35,8 +35,8 @@ jobs:
       - name: Get the WOO Website Template Code
         uses: actions/checkout@v2
         with:
-          repository: ConductionNL/woo-website-template
-          ref: development
+          repository: ConductionNL/woo-website-template-apiv2
+          ref: main
 
       # With special thanxs to https://github.com/SpicyPizza/create-envfile
       - name: Make envfile
