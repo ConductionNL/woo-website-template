@@ -26,6 +26,9 @@ De OpenWoo.app heeft als doel om een ecosysteem van samenwerkende componenten te
 - [ ] (Roadmap) Archiveren
 - [ ] (Roadmap) Opslaan van zoekfilters en resultaten
 - [ ] (Roadmap)  Abonneren op nieuwe publicaties die voldoen aan een opgeslagen zoekfilter
+- [ ] (Roadmap) Anonimiseren in de regie-interface
+- [ ] (Roadmap) Advies over taalniveau
+- [ ] (Roadmap) Federatieve zoekvraag
 
 We hebben deze functionaliteit opgedeeld in drie blokken
 
@@ -157,15 +160,17 @@ Een van de krachten van OpenWoo.app is het ondersteunen en (automatisch) publice
 | Component        | Koppelvlak | Open Source | Leveranciers(s)                                  | Meer informatie |
 |------------------|------------|-------------|-----------------------------------------------|-----------------|
 | Zaaksysteem.nl   | Search     | Ja          | [Xxllnc](https://xxllnc.nl/)                  |                 |
+| Notubiz         | ZGW         | Nee         | [Notubiz)](https://www.notubiz.nl/)           |                 | 
 | RX Fundament     | ZGW        | Nee         | [Roxit](https://www.roxit.nl/)                |                 |
 | Decos JOIN       | ZGW        | Nee         | [Decos](https://www.decos.com/nl)             |                 |
 | OpenZaak         | ZGW        | Ja          | [Maykin Media](https://www.maykinmedia.nl/nl/) |                 |
-| SimSite          | Custom API | ?           | [SIM Groep](https://www.simgroep.nl/)                                      |                 |
-| Open Verzoeken   | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/)                                          |                 |
+| SimSite          | Custom API | ?           | [Shift2](https://www.shift2.nl/)          |                 |
+| Open Verzoeken   | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) |                 |
 | Open Convenanten | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) |                 |
 | Open Klachten    | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) |                 |
 | Open PUB         | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) |                 |
 | Open PDC         | Custom API | Ja          | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) |                 |
+
 
 > **notice**
 > Er zijn meer koppelvlakken en daarmee bronnen beschickbaar (bijvoorbeeld StUF en ZDS). Bovenstaande is slechts een overzicht van de bij ons bekende en beproefte bronnen. Andere koppelvlakken en maatwerk zijn uiteraard ook mogenlijk, neem daarvoor contact op met een leverancier.  
