@@ -19,6 +19,14 @@
     --conduction-card-header-title-hover-color,
     var(--conduction-card-header-title-color)
   ) !important;
+  text-decoration: var(
+    --conduction-card-header-title-hover-text-decoration,
+    var(--conduction-card-wrapper-title-text-decoration)
+  ) !important;
+  text-underline-offset: var(
+    --conduction-card-header-title-hover-text-underline-offset,
+    var(--conduction-card-wrapper-title-text-underline-offset)
+  ) !important;
 }
 
 .title {
