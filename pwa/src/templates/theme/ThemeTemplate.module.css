@@ -266,6 +266,14 @@
     --conduction-card-header-title-hover-color,
     var(--conduction-card-wrapper-title-color)
   ) !important;
+  text-decoration: var(
+    --conduction-card-header-title-hover-text-decoration,
+    var(--conduction-card-wrapper-title-text-decoration)
+  ) !important;
+  text-underline-offset: var(
+    --conduction-card-header-title-hover-text-underline-offset,
+    var(--conduction-card-wrapper-title-text-underline-offset)
+  ) !important;
 }
 
 .secondaryNavContainer {
@@ -293,6 +301,10 @@
   background-color: unset;
   margin-inline-end: 8px;
   margin-inline-start: 18px;
+}
+
+.spotlightSection {
+  border-radius: var(--utrecht-spotlight-section-border-radius);
 }
 
 @media only screen and (max-width: 992px) {

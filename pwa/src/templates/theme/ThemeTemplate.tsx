@@ -722,7 +722,7 @@ export const ThemeTemplate: React.FC = () => {
               rounded
               animate
               animationDuration={1750}
-              label={({ dataEntry }) => dataEntry.title}
+              label={({ dataEntry }: any) => dataEntry.title}
               labelStyle={{
                 fontSize: getTokenValue(styles.ratingFontSize),
                 fontFamily: getTokenValue(styles.ratingFontFamily),
