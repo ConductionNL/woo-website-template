@@ -16,4 +16,5 @@ body {
 
 .utrecht-link--html-a:any-link:hover {
   font-weight: var(--utrecht-link-hover-font-weight);
+  text-decoration-color: var(--utrecht-link-hover-text-decoration-color);
 }
