@@ -6,18 +6,18 @@
 > Meer weten over deze oplossing? Dat kan! Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder. Uiteraard kan je ook altijd mailen naar [info@conduction.nl](mailto:info@conduction.nl)
 >
 > Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
->
-> - [10 Juli 10:00 | Community Meeting](https://www.linkedin.com/events/7206649524776284161/comments/?originTrackingId=BVZjR39lT72%2BfNaik99cew%3D%3D).
->
 > Terug kijken afgelopen webinars en meetings?
->
+> - [09-10-2024 | Community Meeting](https://www.youtube.com/watch?v=mlfE48JNsRE&list=PLAztWZApv5nXNXucmRDlOfzN8w7f3n6GJ&index=11)
+> - [11-09-2024 | Community Meeting](https://www.youtube.com/watch?v=041vJRcDddo&list=PLAztWZApv5nXNXucmRDlOfzN8w7f3n6GJ&index=10)
+> - [14-08-2024 | Community Meeting](https://www.youtube.com/watch?v=0uCh5aueM8U&list=PLAztWZApv5nXNXucmRDlOfzN8w7f3n6GJ&index=9)
+> - [10-07-10:00 | Community Meeting](https://www.linkedin.com/events/7206649524776284161/comments/?originTrackingId=BVZjR39lT72%2BfNaik99cew%3D%3D).
 > - [12-06-2024 | Community Meeting](https://www.youtube.com/watch?v=ab_FEexYYMY).
 > - [09-05-2024 | Community Meeting](https://www.youtube.com/watch?v=Q0ElcTP-R4M).
 > - [10-04-2024 | Community Meeting](https://www.youtube.com/watch?v=zMqElLzy0BM).
 > - [25-03-2024 | SHIFT2](https://www.shift2.nl/een-toekomstbestendige-woo-oplossing)
 > - [13-03-2024 | Community Meeting](https://www.youtube.com/watch?v=TNZghskRu5c).
 > - [14-02-2024 | Community meeting](https://www.youtube.com/watch?v=ri5U8x-lsxo)
-> - [30-01-2024 | OpenGemeente Woobinar](https://vimeo.com/909134953)
+> - [30-01-2024 | OpenGemeenten Woobinar](https://vimeo.com/909134953)
 > - [19-12-2023 | xxllnc Demo](https://www.youtube.com/watch?v=_FGpUYH1yd0)
 > - [17-11-2023 | xxllnc Woobinar](https://www.youtube.com/watch?v=NCnLDEoPh5A)
 
@@ -35,7 +35,7 @@ Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Ma
 
 ## Deelnemende leveranciers
 
-| Conduction                                                                              | Xxllnc                                                                           | Open Gemeente                                                                                     | Sim                                                                      | Acato                                                                                                                                                  | Notubiz | Io |
+| Conduction                                                                              | Xxllnc                                                                           | OpenGemeenten                                                                                     | SHIFT2                                                                     | Acato                                                                                                                                                  | Notubiz | Io |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
 | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/conduction_svg.svg" height="30" />](https://www.conduction.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/xxllnc_orgineel.svg" height="30" />](https://xxllnc.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/opengemeente_orgineel.svg" height="30" />](https://www.opengemeenten.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/sim_svg.svg" height="30" />](https://www.simgroep.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/acato_orgineel.svg" height="20" />](https://acato.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/notubiz_svg.svg" height="30" />](https://www.notubiz.nl/)| [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/io_orgineel.svg" height="30" />](https://www.drupalvoorgemeenten.nl/)|
 
@@ -43,20 +43,20 @@ Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Ma
 
 - **Centrale Index Pagina:** Een overzichtelijke locatie voor alle openbare data van uw organisatie voor verbeterde vindbaarheid van informatie.
 - **Multibron Dataweergave:** Een naadloze integratie en presentatie van data uit diverse bronnen, zoals het zaaksysteem, websites, raadsinformatiesystemen en archieven.
-- **Keuze uit Publicatieplatformen:** Met opties zoals NL Design React en Open Gemeente Typo 3, biedt OpenWoo.app flexibiliteit in de manier waarop uw gegevens gepubliceerd worden, terwijl het tegelijkertijd eenvoudig integreerbaar is in uw huidige website.
-- **Automatische Data-aanlevering:** Efficiënte aanlevering bij landelijke indexen zoals KOOP en Woogle, door middel van sitemap.xml-bestanden en API's, vergroot het bereik en de zichtbaarheid van uw gegevens.
+- **Keuze uit Publicatieplatformen:** Met opties zoals NL Design React en OpenGemeenten TYPO3, biedt OpenWoo.app flexibiliteit in de manier waarop uw gegevens gepubliceerd worden, terwijl het tegelijkertijd eenvoudig integreerbaar is in uw huidige website.
+- **Automatische Data-aanlevering:** Efficiënte aanlevering bij landelijke indexen zoals KOOP en WooGLe, door middel van `sitemap.xml`-bestanden en API's, vergroot het bereik en de zichtbaarheid van uw gegevens.
 - **Proactieve Publicatie:** Automatiseer het publicatieproces en verminder handmatige inspanningen met de slimme, proactieve publicatiefuncties van OpenWoo.app.
 - **Toekomstbestendig en Veilig:** Bereid uw organisatie voor op toekomstige ontwikkelingen met configureerbare publicatietypen en verhoog de veiligheid en efficiëntie door het verminderen van directe bevragingen op bronnen.
 
 ![epe.png](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/epe.png "Woo Website van de Gemeente Epe")
 
-Wil je meer weten over de functionaliteiten van de Open Woo-app? Kijk dan op de [architectuur pagina](/docs/product/Features.md).
+Wil je meer weten over de functionaliteiten van de Open Woo-app? Kijk dan op de [architectuurpagina](/docs/product/Features.md).
 
 ## Oplossing van OpenWoo.app
 
 OpenWoo.app gaat verder dan alleen deze basisfunctionaliteiten door een geïntegreerde oplossing aan te bieden die bestaat uit essentiële componenten:
 
-- **Koppelvlak naar KOOP en Woogle voor de Landelijke Index:** Deze interface faciliteert een gestandaardiseerde verbinding met het Kennis- en Exploitatiecentrum Officiële Publicaties (KOOP) en Woogle van de WOOverheid van de UvA.
+- **Koppelvlak naar KOOP en WooGLe voor de Landelijke Index:** Deze interface faciliteert een gestandaardiseerde verbinding met het Kennis- en Exploitatiecentrum Officiële Publicaties (KOOP) en WooGLe van de WOOverheid van de UvA.
 - **Federatieve Connectie:** Door gebruik te maken van een op FSC/NLX gebaseerde connectie, worden de zoekindexen van deelnemende organisaties samengevoegd tot één virtuele zoekindex.
 - **Zoekpagina (Optioneel):** Een op NL Design gebaseerd publicatieplatform dat belanghebbenden in staat stelt om naar relevante informatie te zoeken.
 - **Open WooService:** Deze module verzamelt informatie uit verschillende bronnen, waardoor een gecentraliseerde toegang tot diverse categorieën van gegevens mogelijk wordt.
@@ -71,9 +71,7 @@ De OpenWoo.app architectuur is bewust ontworpen om gemeenten de keuze te geven i
 - Liever publiceren uit je huidige website? dat kan ook!
 - Of wil je bij KOOP aanleveren vanuit een kleine openzaak installatie? dan kan dat natuurlijk ook.
 
-![Website Architectuur](https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/docs/components.svg "Website Architectuur")
-
-Wil je meer weten over de architectuur van de OpenWoo.app en uit welke componenten het bestaat? Kijk dan op de [architectuur pagina](/docs/techniek/Architectuur.md).
+Wil je meer weten over de architectuur van de OpenWoo.app en uit welke componenten het bestaat? Kijk dan op de [architectuurpagina](/docs/techniek/Architectuur.md).
 
 ## Praktijkvoorbeelden
 
@@ -82,17 +80,20 @@ Op dit moment wordt de OpenWoo.app al door een aantal organisaties gebruikt
 | Organisatie | Type | Woo Pagina | Woo Bron | Status |
 |-------------|------|------------|--------------|--------|
 | [Noordwijk](https://www.noordwijk.nl/) | Gemeente |  [Pagina](open.noordwijk.nl) | Zaaksysteem.nl  | Productie |
-| [Epe](https://www.epe.nl/) | Gemeente |[Pagina](https://open.epe.nl/) | Zaaksysteem | Productie  |
-| [Roosendaal](https://www.roosendaal.nl/) | Gemeente |[Pagina](https://open.roosendaal.nl/) | Zaaksysteem | Productie  |
-| [Zutphen](https://www.zutphen.nl/) | Gemeente |[Pagina](https://open.zutphen.nl/) | Zaaksysteem | Productie  |
-| [Tubbergen](https://www.tubbergen.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-tubbergen/) | Zaaksysteem.nl  | Acceptatie |
-| [Dinkelland](https://www.dinkelland.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-dinkelland/) | Zaaksysteem.nl | Acceptatie |
+| [Epe](https://www.epe.nl/) | Gemeente |[Pagina](https://open.epe.nl/) | Zaaksysteem.nl | Productie  |
+| [Roosendaal](https://www.roosendaal.nl/) | Gemeente |[Pagina](https://open.roosendaal.nl/) | Zaaksysteem.nl | Productie  |
+| [Zutphen](https://www.zutphen.nl/) | Gemeente |[Pagina](https://open.zutphen.nl/) | Zaaksysteem.nl | Productie  |
+| [Tubbergen](https://www.tubbergen.nl/) | Gemeente |[Pagina](https://acceptatie-open.tubbergen.nl) | Zaaksysteem.nl  | Productie |
+| [Dinkelland](https://www.dinkelland.nl/) | Gemeente |[Pagina](https://acceptatie-open.dinkelland.nl) | Zaaksysteem.nl | Productie |
+| [Moerdijk](https://www.moerdijk.nl/) | Gemeente |[Pagina](https://acceptatie-open.moerdijk.nl/) | Zaaksysteem.nl | Acceptatie |
+| [Gooise Meren](https://www.gooisemeren.nl/) | Gemeente |[Pagina](https://acceptatie-open.gooisemeren.nl) | Zaaksysteem.nl | Acceptatie |
+| [Hof van Twente](https://www.hofvantwente.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-hofvantwente/) | Zaaksysteem.nl | Acceptatie |
 | [Gouda](https://www.gouda.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-gouda/) | Zaaksysteem.nl | Acceptatie |
 | [Rotterdam (Alleen vormgeving)](https://www.rotterdam.nl/) | Gemeente |[Pagina](https://conductionnl.github.io/woo-website-rotterdam/) | Demo Omgeving                   | Demo       |
-| [Noaberkracht](https://www.dinkelland.nl/noaberkracht-dinkelland-tubbergen) | Samenwerkingsverband | [Pagina](https://conductionnl.github.io/woo-website-noaberkracht/) | Zaaksysteem.nl | Acceptatie |
+| [Noaberkracht](https://www.dinkelland.nl/noaberkracht-dinkelland-tubbergen) | Samenwerkingsverband | [Pagina](https://acceptatie-open.noaberkracht.nl) | Zaaksysteem.nl | Productie |
 | [Leiden (Alleen vormgeving)](https://gemeente.leiden.nl/) | Gemeente | [Pagina](https://conductionnl.github.io/woo-website-leiden/) | Demo Omgeving           | Demo       |
 | [Xxllnc (Demo omgeving)](https://xxllnc.nl/) | Leverancier | [Pagina](https://conductionnl.github.io/woo-website-xxllnc/) | Demo Omgeving           | Demo       |
 
 ## Toekomstplannen
 
-Er komen steeds meer toepassingen voor het publiceren van overheidsinformatie. Denk bijvoorbeeld aan het publiceren van datasets, algoritmes en besluiten. Deze toepassingen zullen in de toekomst ook onderdeel worden van de Wet Open Overheid. Daarom is het belangrijk dat de Open WOO App flexibel is en kan worden aangepast aan de veranderende behoeften van de overheid. Kijk voor meer informatie over onze ontwikkelplannen op de [roadmap](/docs/product/Roadmap.md)
+Er komen steeds meer toepassingen voor het publiceren van overheidsinformatie. Denk bijvoorbeeld aan het publiceren van datasets, algoritmes en besluiten. Deze toepassingen zullen in de toekomst ook onderdeel worden van de Wet Open Overheid. Daarom is het belangrijk dat de OpenWoo.App flexibel is en kan worden aangepast aan de veranderende behoeften van de overheid. Kijk voor meer informatie over onze ontwikkelplannen op de [roadmap](/docs/product/Roadmap.md)
