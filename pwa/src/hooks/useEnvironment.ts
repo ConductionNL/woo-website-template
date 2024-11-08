@@ -50,8 +50,8 @@ export const useEnvironment = () => {
     updateSessionStorage();
   };
 
-  const initiateFromJSON = (themeOrDomainName: string) => {
-    const config = getConfig(themeOrDomainName);
+  const initiateFromJSON = (themeOrDomainName: string, host: string) => {
+    const config = getConfig(themeOrDomainName, host);
 
     if (!config) return; // no config found, nothing else to do
 
@@ -75,7 +75,6 @@ export const useEnvironment = () => {
     window.sessionStorage.setItem("SHOW_ORGANIZATION", config.GATSBY_SHOW_ORGANIZATION ?? "");
     window.sessionStorage.setItem("ANALYTICS_URL", config.GATSBY_ANALYTICS_URL ?? "");
     window.sessionStorage.setItem("DATE_FULL_MONTH", config.GATSBY_DATE_FULL_MONTH ?? "");
-
 
     updateSessionStorage();
   };

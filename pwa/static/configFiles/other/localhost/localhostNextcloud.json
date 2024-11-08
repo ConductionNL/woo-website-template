@@ -1,0 +1,15 @@
+{
+  "GATSBY_SHOW_THEME_SWITCHER": "false",
+  "GATSBY_API_BASE_URL": "http://localhost:8080/index.php/apps/opencatalogi/api",
+  "GATSBY_NL_DESIGN_THEME_CLASSNAME": "conduction-theme",
+  "GATSBY_FAVICON_URL": "data:image/svg+xml,%3Csvg id='Laag_1' data-name='Laag 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 259.81 300'%3E%3Cpath d='M129.9,0,0,75V225l129.9,75,129.91-75V75Zm96.8,205.89-96.8,55.88L33.1,205.89V94.11l96.8-55.89,96.8,55.89Z' style='fill:%234376fc'/%3E%3Cpolygon points='129.59 112.23 160.01 129.79 195.41 109.35 129.59 71.35 61.47 110.67 61.47 189.33 129.59 228.65 195.41 190.65 160.01 170.21 129.59 187.77 96.88 168.88 96.88 131.12 129.59 112.23' style='fill:%234376fc'/%3E%3C/svg%3E",
+  "GATSBY_ORGANISATION_NAME": "Conduction",
+  "GATSBY_JUMBOTRON_IMAGE_URL": "https://www.conduction.nl/wp-content/uploads/2021/07/cropped-Conduction_HOME_0000_afb1-1.png",
+  "GATSBY_FOOTER_LOGO_HREF": "https://www.conduction.nl/",
+  "GATSBY_FOOTER_CONTENT": "https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/pwa/src/templates/templateParts/footer/FooterContent.json",
+  "GATSBY_FOOTER_CONTENT_HEADER": "",
+  "GATSBY_OIDN_NUMBER": "",
+  "GATSBY_SHOW_CATEGORY": "true",
+  "GATSBY_SHOW_ORGANIZATION": "true",
+  "GATSBY_DATE_FULL_MONTH": "false"
+}

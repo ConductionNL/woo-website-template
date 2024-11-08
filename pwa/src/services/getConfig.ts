@@ -48,6 +48,7 @@ import ZutphenAccept from "./../../static/configFiles/municipalities/zutphen/zut
 import Conduction from "./../../static/configFiles/other/conduction/conduction.json";
 import ConductionAccept from "./../../static/configFiles/other/conduction/conduction-accept.json";
 import Localhost from "./../../static/configFiles/other/localhost/localhost.json";
+import LocalhostNextcloud from "./../../static/configFiles/other/localhost/localhostNextcloud.json";
 import Noaberkracht from "./../../static/configFiles/other/noaberkracht/noaberkracht.json";
 import NoaberkrachtAccept from "./../../static/configFiles/other/noaberkracht/noaberkracht-accept.json";
 import OpenWebconcept from "./../../static/configFiles/other/open-webconcept/open-webconcept.json";
@@ -61,7 +62,7 @@ import ZuiddrechtAccept from "./../../static/configFiles/other/zuiddrecht/zuiddr
 
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
-export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
+export const getConfig = (themeOrDomainName: string, host: string): Record<string, any> | undefined => {
   switch (themeOrDomainName) {
     // Municipalities
     case "albrandswaard":
@@ -272,6 +273,9 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
       return ConductionAccept;
 
     case "localhost":
+      if (host === "localhost:8083") {
+        return LocalhostNextcloud;
+      }
       return Localhost;
 
     case "noaberkracht-theme":
@@ -347,7 +351,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Noordwijk", value: "noordwijk-theme" },
       { label: "Ridderkerk", value: "ridderkerk" },
       { label: "Rijssen-Holten", value: "rijssen-holten" },
-      { label: "Roosendaal", value: "roosendaal-holten" },
+      { label: "Roosendaal", value: "roosendaal-theme" },
       { label: "Rotterdam", value: "rotterdam-theme" },
       { label: "Stede Broec", value: "stedebroec" },
       { label: "Texel", value: "texel" },
