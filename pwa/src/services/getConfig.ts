@@ -3,6 +3,7 @@ import Albrandswaard from "./../../static/configFiles/municipalities/albrandswaa
 import AlbrandswaardAccept from "./../../static/configFiles/municipalities/albrandswaard/albrandswaard-accept.json";
 import Barendrecht from "./../../static/configFiles/municipalities/barendrecht/barendrecht.json";
 import BarendrechtAccept from "./../../static/configFiles/municipalities/barendrecht/barendrecht-accept.json";
+import Barneveld from "./../../static/configFiles/municipalities/barneveld/barneveld.json";
 import BarneveldAccept from "./../../static/configFiles/municipalities/barneveld/barneveld-accept.json";
 import Buren from "./../../static/configFiles/municipalities/buren/buren.json";
 import BurenAccept from "./../../static/configFiles/municipalities/buren/buren-accept.json";
@@ -82,7 +83,10 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "acceptatie-open.barendrecht.nl":
     case "barendrecht.accept.openwoo.app":
       return BarendrechtAccept;
-
+      
+    
+    case "barneveld.openwoo.app":
+        return Barendrecht;
     case "barneveld.accept.openwoo.app":
       return BarneveldAccept;
       
