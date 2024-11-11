@@ -79,14 +79,14 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "open.barendrecht.nl":
     case "barendrecht.openwoo.app":
     case "barendrecht.koophulpje.nl":
-      return Barneveld;
+      return Barendrecht;
     case "acceptatie-open.barendrecht.nl":
     case "barendrecht.accept.openwoo.app":
       return BarendrechtAccept;
       
     
     case "barneveld.openwoo.app":
-        return Barendrecht;
+        return Barneveld;
     case "barneveld.accept.openwoo.app":
       return BarneveldAccept;
       
