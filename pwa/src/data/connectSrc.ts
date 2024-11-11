@@ -4,6 +4,7 @@ https://api.common-gateway.commonground.nu
 https://raw.githubusercontent.com/ConductionNL/ 
 https://api.github.com https://conductionnl.github.io 
 https://api.accept.common-gateway.commonground.nu
+https://opencatalogi.accept.commonground.nu
 `;
 export const connectSrcMunicipalities = `
 https://albrandswaard.openwoo.app
