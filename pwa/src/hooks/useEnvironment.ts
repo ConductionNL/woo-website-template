@@ -87,6 +87,12 @@ export const useEnvironment = () => {
         break;
     }
 
+    switch (window.location.pathname) {
+      case "/woo-website-template-apiv2/":
+        window.sessionStorage.setItem("SHOW_THEME_SWITCHER", "true");
+        break;
+    }
+
     if (process.env.GATSBY_SHOW_THEME_SWITCHER === "true") window.sessionStorage.setItem("SHOW_THEME_SWITCHER", "true");
   };
 
