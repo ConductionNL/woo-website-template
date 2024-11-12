@@ -8,7 +8,7 @@ env: # Change these to your preferences any image url can also be a base encoded
 
   GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
   API_BASE_URL: "https://opencatalogi.accept.commonground.nu/apps/opencatalogi/api"
-  NL_DESIGN_THEME_CLASSNAME: "conduction-theme"
+  NL_DESIGN_THEME_CLASSNAME: "open-webconcept-theme"
   DEV_ENVIRONMENT: "false"
   SHOW_CATEGORY: "true"
   SHOW_ORGANIZATION: "true"

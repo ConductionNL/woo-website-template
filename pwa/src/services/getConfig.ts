@@ -374,7 +374,7 @@ export const availableThemes: TGroupedSelectOption[] = [
   {
     label: "Overige Thema's",
     options: [
-      // { label: "Conduction", value: "conduction-theme" },
+      { label: "Conduction", value: "conduction-theme" },
       // { label: "Localhost", value: "localhost" },
       // { label: "XXLLNC", value: "xxllnc-theme" },
       // { label: "Open Webconcept", value: "open-webconcept-theme" },
