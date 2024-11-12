@@ -30,7 +30,7 @@ export const useEnvironment = () => {
     window.sessionStorage.setItem(
       "API_BASE_URL",
       process.env.GATSBY_DEV_ENVIRONMENT === "true"
-        ? "https://api.gateway.commonground.nu/api"
+        ? "https://opencatalogi.accept.commonground.nu/apps/opencatalogi/api"
         : process.env.GATSBY_API_BASE_URL ?? "",
     );
     window.sessionStorage.setItem("NL_DESIGN_THEME_CLASSNAME", process.env.GATSBY_NL_DESIGN_THEME_CLASSNAME ?? "");
@@ -59,7 +59,7 @@ export const useEnvironment = () => {
     window.sessionStorage.setItem(
       "API_BASE_URL",
       process.env.GATSBY_DEV_ENVIRONMENT === "true"
-        ? "https://api.gateway.commonground.nu/api"
+        ? "https://opencatalogi.accept.commonground.nu/apps/opencatalogi/api"
         : config.GATSBY_API_BASE_URL ?? "",
     );
     window.sessionStorage.setItem("NL_DESIGN_THEME_CLASSNAME", config.GATSBY_NL_DESIGN_THEME_CLASSNAME ?? "");
