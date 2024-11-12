@@ -18,7 +18,7 @@ Indien u als organisatie of leverancier OpenWoo.app wilt koppelen aan een huidig
 
 ### Locatie en Authenticatie
 
-De API staat online en is beschikbaar op [https://api.gateway.commonground.nu/api/publicaties](https://api.gateway.commonground.nu/api/publicaties). Voor het stellen van zoekvragen is géén authenticatie vereist (het doel van OpenWOO.app is immers het verspreiden van openbare informatie). Er is echter wel sprake van throttling op response tijden (de API reageert langzamer) en rate-limiting (het aantal bevragingen per minuut en uur zijn beperkt) zonder authenticatie. Ook zijn alleen de GET (ophalen) acties toegestaan zonder authenticatie.
+De API staat online en er kunnen HTTP-methods aangeroepen worden op [https://api.gateway.commonground.nu/api/publicaties](https://api.gateway.commonground.nu/api/publicaties). Voor het stellen van zoekvragen is géén authenticatie vereist (het doel van OpenWOO.app is immers het verspreiden van openbare informatie). Er is echter wel sprake van throttling op response tijden (de API reageert langzamer) en rate-limiting (het aantal bevragingen per minuut en uur zijn beperkt) zonder authenticatie. Ook zijn alleen de GET (ophalen) acties toegestaan zonder authenticatie.
 
 Als u vanuit uw casus een API nodig heeft zonder throttling, ratelimit of namens een organisatie wil wijzigingen (d.w.z POST, PUT, DELETE API requests wilt doen) dan kunt u een mail sturen naar <info@conduction.nl>.
 

@@ -71,7 +71,7 @@ Een aantal zaakattributen zijn noodzakelijk voor het voor het goed werken van de
 | woo_bevindingen           | Nee       |  | string, max 2555 characters |
 | woo_oordeel               | Nee       |  | string, max 2555 characters |
 | woo_conclusies            | Nee       |                                                                                 | string, max 2555 characters |
-| woo_oprdachtgever         | Nee       |                                                                                 | string, max 2555 characters |
+| woo_opdrachtgever         | Nee       |                                                                                 | string, max 2555 characters |
 | woo_onderdeel_taak        | Nee       |                                                                                 | string, max 2555 characters |
 
 > **Note**

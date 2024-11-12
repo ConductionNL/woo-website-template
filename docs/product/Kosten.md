@@ -12,22 +12,26 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 
 | Component                     | Leverancier(s)                                             | Eenmalig | Maandelijks | Meer informatie |
 |-------------------------------|------------------------------------------------------------|-------------|-------------|-------------|
-| Losse React pagina            | [Conduction](https://conduction.nl/)                       | € 1750,- | € 250.-     |                 |
-| Integratie in Open Webconcept | [Yard](https://www.yard.nl/) of [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
-| Sim Site                      | [SIMgroep](https://www.simgroep.nl)                       | Onbekend | Onbekend     |                 |
+| [Losse React pagina](https:cunduction.openwoo.app)            | [Conduction](https://conduction.nl/)                       | € 1750,- | € 250.-     |                 |
+| [Integratie in Open Webconcept](https://alkmaar.accept02.yard.nl/) | [Yard](https://www.yard.nl/) of [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
+| SIMsite                      | [Shift2](https://www.shift2.nl/))                       | Onbekend | Onbekend     |                 |
 | Drupal Site                   | "??"                                                       | Onbekend | Onbekend     |                 |
-| TYPO3 themasite              | [[OpenGemeenten](https://www.opengemeenten.nl/](https://www.opengemeenten.nl/oplossingen/website-en-koppeling-voor-de-wet-open-overheid))             | € 6000.- | € 250.-     |                 |
+| TYPO3 themasite              | [OpenGemeenten](https://www.opengemeenten.nl/oplossingen/website-en-koppeling-voor-de-wet-open-overheid)             | € 4000.- | € 250.-     |                 |
+| TYPO3 sub-themasite              | [OpenGemeenten](https://www.opengemeenten.nl/oplossingen/website-en-koppeling-voor-de-wet-open-overheid)             | € 1200.- | € 250.-     |                 |
+
 
 > **notice**
-> Weet u niet welk frontend framework uw organisatie op dit moment gebruikt? Kijk dan eens op [digimonitor](https://www.digimonitor.nl/cms-en/gemeenten/).
+> Weet u niet welk frontend framework, pagina of website uw organisatie op dit moment gebruikt? Kijk dan eens op [Digimonitor](https://www.digimonitor.nl/cms-en/gemeenten/). Er zijn mogelijkheden voor zowel integratie, 
+> als losstaande pagina's.
 
 ## Motorblok
 
-Het motorblok bestaat uit twee componenten [OpenIndex](https://openindex.online/) en [OpenWoo-service](https://openwoo.openservices.online/). Voor het overzicht en kostenbeheersing worden deze componenten in het jaar 2024 als één dienst aangeboden.
+Het motorblok bestaat uit twee componenten [OpenIndex](https://index.openregisters.app/) en [OpenWoo-service](https://openwoo.openservices.online/). Voor het overzicht en kostenbeheersing worden deze componenten in het jaar 2024 als één integratie aangeboden.
 
 | Component | Leverancier                                                          | Eenmalig | Maandelijks | Meer informatie |
 |-----------|----------------------------------------------------------------------|----------|-------------|-------------|
-| Motorblok | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) | € 3000,-  | € 250.-      |                 |
+| OpenWoo-service | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) | € 3000,-  | € 150.-      |                 |
+| Open Index | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) |  | € 150.-      |                 |
 
 ## Bronnen
 

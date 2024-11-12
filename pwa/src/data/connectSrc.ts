@@ -10,6 +10,7 @@ https://albrandswaard.openwoo.app
 https://albrandswaard.accept.openwoo.app
 https://barendrecht.openwoo.app
 https://barendrecht.accept.openwoo.app
+https://barneveld.accept.openwoo.app
 https://buren.openwoo.app
 https://buren.accept.openwoo.app
 https://dinkelland.openwoo.app
@@ -22,6 +23,8 @@ https://gouda.openwoo.app
 https://gouda.accept.openwoo.app
 https://gemeentehw.openwoo.app
 https://gemeentehw.accept.openwoo.app
+https://hofvantwente.openwoo.app
+https://hofvantwente.accept.openwoo.app
 https://lansingerland.openwoo.app
 https://lansingerland.accept.openwoo.app
 https://leiden.openwoo.app
