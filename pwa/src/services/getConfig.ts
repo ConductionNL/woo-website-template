@@ -85,7 +85,10 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
       return BarendrechtAccept;
       
     
+    case "barneveld":
+    case "open.barneveld.nl":
     case "barneveld.openwoo.app":
+    case "barneveld.koophulpje.nl":
         return Barneveld;
     case "barneveld.accept.openwoo.app":
       return BarneveldAccept;
