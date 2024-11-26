@@ -68,6 +68,7 @@ https://zuiddrecht.openwoo.app
 https://zuiddrecht.accept.openwoo.app
 https://tilburg.accept.commonground.nu
 https://bct.accept.commonground.nu
+https://noordwijk.accept.commonground.nu
 `;
 
 export const connectSrcLocal = `
