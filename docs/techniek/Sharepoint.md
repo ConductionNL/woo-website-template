@@ -4,11 +4,11 @@
 
 Sharepoint kan gebruikt worden als bron voor Woo publicaties.
 
-Het is de bedoeling dat er per categorie een folder is, omdat daar een endpoint voor gegeneerd wordt waar publicaties van opgehaald kan worden. Bijvoorbeeld: `/_api/Web/GetFolderByServerRelativePath(decodedurl='/WOO/Woo-verzoeken en -besluiten')/folders`
+Het is de bedoeling dat er per categorie een folder is, omdat daar een endpoint voor gegenereerd wordt waar publicaties van opgehaald kan worden. Bijvoorbeeld: `/_api/Web/GetFolderByServerRelativePath(decodedurl='/WOO/Woo-verzoeken en -besluiten')/folders`
 
 ![Overzicht categorie folders](overzicht-categorie-folders.png)
 
-1 folder representeert 1 publicatie.
+1 folder in een categorie folder representeert 1 publicatie.
 ![Overzicht woo verzoeken](overzicht-woo-verzoeken.png)
 
 Met daarin de bijbehorende bijlagen/documenten.
@@ -48,3 +48,6 @@ Voorbeeld alle velden waaronder optionele velden.
 ![All columns](all-columns.png)
 
 ## Publicatie metadata wijzigen
+
+Om de publicatie velden die geconfigureerd zijn in te vullen of te wijzigen moet je naar een van je categorie mappen en klik je op grid edit. Na het invullen van de velden kan je linksboven op exit grid klikken en wordt er opgeslagen. 
+![Edit grid](edit-grid.png)
