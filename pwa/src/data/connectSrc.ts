@@ -15,6 +15,8 @@ https://buren.openwoo.app
 https://buren.accept.openwoo.app
 https://dinkelland.openwoo.app
 https://dinkelland.accept.openwoo.app
+https://ede.openwoo.app
+https://ede.accept.openwoo.app
 https://epe.openwoo.app
 https://epe.accept.openwoo.app
 https://gooisemeren.openwoo.app
