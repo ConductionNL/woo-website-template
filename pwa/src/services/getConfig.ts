@@ -9,6 +9,9 @@ import Dinkelland from "./../../static/configFiles/municipalities/dinkelland/din
 import DinkellandAccept from "./../../static/configFiles/municipalities/dinkelland/dinkelland-accept.json";
 import Epe from "./../../static/configFiles/municipalities/epe/epe.json";
 import EpeAccept from "./../../static/configFiles/municipalities/epe/epe-accept.json";
+
+import Ede from "./../../static/configFiles/municipalities/ede/ede.json";
+import EdeAccept from "./../../static/configFiles/municipalities/ede/ede-accept.json";
 import GooiseMeren from "./../../static/configFiles/municipalities/gooise-meren/gooise-meren.json";
 import GooiseMerenAccept from "./../../static/configFiles/municipalities/gooise-meren/gooise-meren-accept.json";
 import Gouda from "./../../static/configFiles/municipalities/gouda/gouda.json";
@@ -109,6 +112,15 @@ export const getConfig = (themeOrDomainName: string, host: string): Record<strin
     case "acceptatie-open.epe.nl":
     case "epe.accept.openwoo.app":
       return EpeAccept;
+
+    case "ede-theme":
+    case "open.ede.nl":
+    case "ede.openwoo.app":
+    case "ede.koophulpje.nl":
+      return Ede;
+    case "acceptatie-open.ede.nl":
+    case "ede.accept.openwoo.app":
+      return EdeAccept;
 
     case "gooisemeren-theme":
     case "open.gooisemeren.nl":
