@@ -271,6 +271,86 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                         </TableCell>
                       </TableRow>
                     )}
+                  {getItems.data.metadata?.verzoek?.organisatieonderdeel && (
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Organizational unit")}, ${getItems.data.metadata?.verzoek?.organisatieonderdeel}`}
+                    >
+                      <TableCell>{t("Organizational unit")}</TableCell>
+                      <TableCell>{getItems.data.metadata?.verzoek?.organisatieonderdeel}</TableCell>
+                    </TableRow>
+                  )}
+                  {getItems.data.metadata?.verzoek?.functiebenaming && (
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Job title")}, ${getItems.data.metadata?.verzoek?.functiebenaming}`}
+                    >
+                      <TableCell>{t("Job title")}</TableCell>
+                      <TableCell>{getItems.data.metadata?.verzoek?.functiebenaming}</TableCell>
+                    </TableRow>
+                  )}
+                  {getItems.data.metadata?.verzoek?.gedraging && (
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Behavior")}, ${getItems.data.metadata?.verzoek?.gedraging}`}
+                    >
+                      <TableCell>{t("Behavior")}</TableCell>
+                      <TableCell>{getItems.data.metadata?.verzoek?.gedraging}</TableCell>
+                    </TableRow>
+                  )}
+                  {getItems.data.metadata?.verzoek?.bevindingen && (
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Findings")}, ${getItems.data.metadata?.verzoek?.bevindingen}`}
+                    >
+                      <TableCell>{t("Findings")}</TableCell>
+                      <TableCell>{getItems.data.metadata?.verzoek?.bevindingen}</TableCell>
+                    </TableRow>
+                  )}
+                  {getItems.data.metadata?.verzoek?.oordeel && (
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Judgement")}, ${getItems.data.metadata?.verzoek?.oordeel}`}
+                    >
+                      <TableCell>{t("Judgement")}</TableCell>
+                      <TableCell>{getItems.data.metadata?.verzoek?.oordeel}</TableCell>
+                    </TableRow>
+                  )}
+                  {getItems.data.metadata?.verzoek?.conclusies && (
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Conclusions")}, ${getItems.data.metadata?.verzoek?.conclusies}`}
+                    >
+                      <TableCell>{t("Conclusions")}</TableCell>
+                      <TableCell>{getItems.data.metadata?.verzoek?.conclusies}</TableCell>
+                    </TableRow>
+                  )}
+                  {getItems.data.metadata?.verzoek?.opdrachtgever && (
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Client")}, ${getItems.data.metadata?.verzoek?.opdrachtgever}`}
+                    >
+                      <TableCell>{t("Client")}</TableCell>
+                      <TableCell>{getItems.data.metadata?.verzoek?.opdrachtgever}</TableCell>
+                    </TableRow>
+                  )}
+                  {getItems.data.metadata?.verzoek?.onderdeelTaak && (
+                    <TableRow
+                      className={styles.tableRow}
+                      tabIndex={0}
+                      aria-label={`${t("Part task")}, ${getItems.data.metadata?.verzoek?.onderdeelTaak}`}
+                    >
+                      <TableCell>{t("Part task")}</TableCell>
+                      <TableCell>{getItems.data.metadata?.verzoek?.onderdeelTaak}</TableCell>
+                    </TableRow>
+                  )}
 
                   {!_.isEmpty(getItems.data.bijlagen) && (
                     <TableRow
