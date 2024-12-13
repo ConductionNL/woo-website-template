@@ -53,6 +53,8 @@ https://waddinxveen.openwoo.app
 https://waddinxveen.accept.openwoo.app
 https://zutphen.openwoo.app
 https://zutphen.accept.openwoo.app
+https://noordwijk.accept.commonground.nu
+https://ede.accept.commonground.nu
 `;
 
 export const connectSrcOther = `
@@ -70,8 +72,6 @@ https://zuiddrecht.openwoo.app
 https://zuiddrecht.accept.openwoo.app
 https://tilburg.accept.commonground.nu
 https://bct.accept.commonground.nu
-https://noordwijk.accept.commonground.nu
-https://ede.accept.commonground.nu
 `;
 
 export const connectSrcLocal = `

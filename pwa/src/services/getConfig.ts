@@ -352,6 +352,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Barendrecht", value: "barendrecht" },
       { label: "Buren", value: "buren" },
       { label: "Dinkelland", value: "dinkelland-theme" },
+      { label: "Ede", value: "ede-theme" },
       { label: "Epe", value: "epe-theme" },
       { label: "Gooise Meren", value: "gooise-meren-theme" },
       { label: "Gouda", value: "gouda-theme" },
