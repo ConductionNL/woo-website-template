@@ -8,7 +8,7 @@
   "GATSBY_FOOTER_LOGO_HREF": "https://www.ede.nl/",
   "GATSBY_FOOTER_CONTENT": "https://raw.githubusercontent.com/ConductionNL/woo-website-ede/main/FooterContent.json",
   "GATSBY_FOOTER_CONTENT_HEADER": "heading-2",
-  "GATSBY_OIDN_NUMBER": "00000001001104524000",
+  "GATSBY_OIDN_NUMBER": "",
   "GATSBY_SHOW_CATEGORY": "true",
   "GATSBY_SHOW_ORGANIZATION": "",
   "GATSBY_DATE_FULL_MONTH": "false"
