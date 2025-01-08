@@ -11,6 +11,7 @@ https://albrandswaard.openwoo.app
 https://albrandswaard.accept.openwoo.app
 https://barendrecht.openwoo.app
 https://barendrecht.accept.openwoo.app
+https://barneveld.prod.openwoo.app
 https://buren.openwoo.app
 https://buren.accept.openwoo.app
 https://dinkelland.openwoo.app
