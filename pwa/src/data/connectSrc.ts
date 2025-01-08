@@ -27,6 +27,7 @@ https://gemeentehw.openwoo.app
 https://gemeentehw.accept.openwoo.app
 https://hofvantwente.openwoo.app
 https://hofvantwente.accept.openwoo.app
+https://hofvantwente.prod.openwoo.app
 https://lansingerland.openwoo.app
 https://lansingerland.accept.openwoo.app
 https://leiden.openwoo.app
