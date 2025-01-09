@@ -3,13 +3,14 @@ import Albrandswaard from "./../../static/configFiles/municipalities/albrandswaa
 import AlbrandswaardAccept from "./../../static/configFiles/municipalities/albrandswaard/albrandswaard-accept.json";
 import Barendrecht from "./../../static/configFiles/municipalities/barendrecht/barendrecht.json";
 import BarendrechtAccept from "./../../static/configFiles/municipalities/barendrecht/barendrecht-accept.json";
+import Barneveld from "./../../static/configFiles/municipalities/barneveld/barneveld.json";
+import BarneveldAccept from "./../../static/configFiles/municipalities/barneveld/barneveld-accept.json";
 import Buren from "./../../static/configFiles/municipalities/buren/buren.json";
 import BurenAccept from "./../../static/configFiles/municipalities/buren/buren-accept.json";
 import Dinkelland from "./../../static/configFiles/municipalities/dinkelland/dinkelland.json";
 import DinkellandAccept from "./../../static/configFiles/municipalities/dinkelland/dinkelland-accept.json";
 import Epe from "./../../static/configFiles/municipalities/epe/epe.json";
 import EpeAccept from "./../../static/configFiles/municipalities/epe/epe-accept.json";
-
 import Ede from "./../../static/configFiles/municipalities/ede/ede.json";
 import EdeAccept from "./../../static/configFiles/municipalities/ede/ede-accept.json";
 import GooiseMeren from "./../../static/configFiles/municipalities/gooise-meren/gooise-meren.json";
@@ -86,6 +87,17 @@ export const getConfig = (themeOrDomainName: string, host: string): Record<strin
     case "barendrecht.accept.openwoo.app":
       return BarendrechtAccept;
 
+    case "barneveld":
+    case "open.barneveld.nl":
+    case "barneveld.openwoo.app":
+    case "barneveld.koophulpje.nl":
+    case "barneveld.prod.commonground.nu":
+      return Barneveld;
+    case "acceptatie-open.barneveld.nl":
+    case "barneveld.accept.openwoo.app":
+    case "barneveld.accept.commonground.nu":
+      return BarneveldAccept;
+
     case "buren":
     case "opem.buren.nl":
     case "buren.openwoo.app":
@@ -153,9 +165,11 @@ export const getConfig = (themeOrDomainName: string, host: string): Record<strin
     case "open.hofvantwente.nl":
     case "hofvantwente.openwoo.app":
     case "hofvantwente.koophulpje.nl":
+    case "hofvantwente.prod.commonground.nu":
       return HofvanTwente;
     case "acceptatie-open.hofvantwente.nl":
     case "hofvantwente.accept.openwoo.app":
+    case "hofvantwente.accept.commonground.nu":
       return HofvanTwenteAccept;
 
     case "lansingerland":
