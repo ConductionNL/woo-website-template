@@ -90,7 +90,7 @@ export const getConfig = (themeOrDomainName: string, host: string): Record<strin
     case "barneveld":
     case "open.barneveld.nl":
     case "barneveld.openwoo.app":
-    case "barneveld.prod.openwoo.app"
+    case "barneveld.prod.openwoo.app":
     case "barneveld.koophulpje.nl":
     case "barneveld.prod.commonground.nu":
       return Barneveld;
@@ -120,7 +120,7 @@ export const getConfig = (themeOrDomainName: string, host: string): Record<strin
     case "epe-theme":
     case "open.epe.nl":
     case "epe.openwoo.app":
-    case "epe.prod.openwoo.app"
+    case "epe.prod.openwoo.app":
     case "epe.koophulpje.nl":
       return Epe;
     case "acceptatie-open.epe.nl":
@@ -167,7 +167,7 @@ export const getConfig = (themeOrDomainName: string, host: string): Record<strin
     case "open.hofvantwente.nl":
     case "hofvantwente.openwoo.app":
     case "hofvantwente.koophulpje.nl":
-    case "hofvantwente.prod.openwoo.app"
+    case "hofvantwente.prod.openwoo.app":
     case "hofvantwente.prod.commonground.nu":
       return HofvanTwente;
     case "acceptatie-open.hofvantwente.nl":
