@@ -23,6 +23,7 @@ https://ede.openwoo.app
 https://ede.accept.openwoo.app
 https://epe.openwoo.app
 https://epe.accept.openwoo.app
+https://epe.prod.openwoo.app
 https://gooisemeren.openwoo.app
 https://gooisemeren.accept.openwoo.app
 https://gouda.openwoo.app
