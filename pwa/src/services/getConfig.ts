@@ -3,12 +3,16 @@ import Albrandswaard from "./../../static/configFiles/municipalities/albrandswaa
 import AlbrandswaardAccept from "./../../static/configFiles/municipalities/albrandswaard/albrandswaard-accept.json";
 import Barendrecht from "./../../static/configFiles/municipalities/barendrecht/barendrecht.json";
 import BarendrechtAccept from "./../../static/configFiles/municipalities/barendrecht/barendrecht-accept.json";
+import Barneveld from "./../../static/configFiles/municipalities/barneveld/barneveld.json";
+import BarneveldAccept from "./../../static/configFiles/municipalities/barneveld/barneveld-accept.json";
 import Buren from "./../../static/configFiles/municipalities/buren/buren.json";
 import BurenAccept from "./../../static/configFiles/municipalities/buren/buren-accept.json";
 import Dinkelland from "./../../static/configFiles/municipalities/dinkelland/dinkelland.json";
 import DinkellandAccept from "./../../static/configFiles/municipalities/dinkelland/dinkelland-accept.json";
 import Epe from "./../../static/configFiles/municipalities/epe/epe.json";
 import EpeAccept from "./../../static/configFiles/municipalities/epe/epe-accept.json";
+import Ede from "./../../static/configFiles/municipalities/ede/ede.json";
+import EdeAccept from "./../../static/configFiles/municipalities/ede/ede-accept.json";
 import GooiseMeren from "./../../static/configFiles/municipalities/gooise-meren/gooise-meren.json";
 import GooiseMerenAccept from "./../../static/configFiles/municipalities/gooise-meren/gooise-meren-accept.json";
 import Gouda from "./../../static/configFiles/municipalities/gouda/gouda.json";
@@ -48,6 +52,7 @@ import ZutphenAccept from "./../../static/configFiles/municipalities/zutphen/zut
 import Conduction from "./../../static/configFiles/other/conduction/conduction.json";
 import ConductionAccept from "./../../static/configFiles/other/conduction/conduction-accept.json";
 import Localhost from "./../../static/configFiles/other/localhost/localhost.json";
+import LocalhostNextcloud from "./../../static/configFiles/other/localhost/localhostNextcloud.json";
 import Noaberkracht from "./../../static/configFiles/other/noaberkracht/noaberkracht.json";
 import NoaberkrachtAccept from "./../../static/configFiles/other/noaberkracht/noaberkracht-accept.json";
 import OpenWebconcept from "./../../static/configFiles/other/open-webconcept/open-webconcept.json";
@@ -61,7 +66,7 @@ import ZuiddrechtAccept from "./../../static/configFiles/other/zuiddrecht/zuiddr
 
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
-export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
+export const getConfig = (themeOrDomainName: string, host: string): Record<string, any> | undefined => {
   switch (themeOrDomainName) {
     // Municipalities
     case "albrandswaard":
@@ -82,8 +87,21 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "barendrecht.accept.openwoo.app":
       return BarendrechtAccept;
 
+    case "barneveld":
+    case "barneveld-theme":
+    case "open.barneveld.nl":
+    case "barneveld.openwoo.app":
+    case "barneveld.prod.openwoo.app":
+    case "barneveld.koophulpje.nl":
+    case "barneveld.prod.commonground.nu":
+      return Barneveld;
+    case "acceptatie-open.barneveld.nl":
+    case "barneveld.accept.openwoo.app":
+    case "barneveld.accept.commonground.nu":
+      return BarneveldAccept;
+
     case "buren":
-    case "opem.buren.nl":
+    case "open.buren.nl":
     case "buren.openwoo.app":
     case "buren.koophulpje.nl":
       return Buren;
@@ -103,11 +121,21 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "epe-theme":
     case "open.epe.nl":
     case "epe.openwoo.app":
+    case "epe.prod.openwoo.app":
     case "epe.koophulpje.nl":
       return Epe;
     case "acceptatie-open.epe.nl":
     case "epe.accept.openwoo.app":
       return EpeAccept;
+
+    case "ede-theme":
+    case "open.ede.nl":
+    case "ede.openwoo.app":
+    case "ede.koophulpje.nl":
+      return Ede;
+    case "acceptatie-open.ede.nl":
+    case "ede.accept.openwoo.app":
+      return EdeAccept;
 
     case "gooisemeren-theme":
     case "open.gooisemeren.nl":
@@ -140,9 +168,12 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "open.hofvantwente.nl":
     case "hofvantwente.openwoo.app":
     case "hofvantwente.koophulpje.nl":
+    case "hofvantwente.prod.openwoo.app":
+    case "hofvantwente.prod.commonground.nu":
       return HofvanTwente;
     case "acceptatie-open.hofvantwente.nl":
     case "hofvantwente.accept.openwoo.app":
+    case "hofvantwente.accept.commonground.nu":
       return HofvanTwenteAccept;
 
     case "lansingerland":
@@ -272,6 +303,9 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
       return ConductionAccept;
 
     case "localhost":
+      if (host === "localhost:8083") {
+        return LocalhostNextcloud;
+      }
       return Localhost;
 
     case "noaberkracht-theme":
@@ -336,6 +370,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Barendrecht", value: "barendrecht" },
       { label: "Buren", value: "buren" },
       { label: "Dinkelland", value: "dinkelland-theme" },
+      { label: "Ede", value: "ede-theme" },
       { label: "Epe", value: "epe-theme" },
       { label: "Gooise Meren", value: "gooise-meren-theme" },
       { label: "Gouda", value: "gouda-theme" },
@@ -347,7 +382,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Noordwijk", value: "noordwijk-theme" },
       { label: "Ridderkerk", value: "ridderkerk" },
       { label: "Rijssen-Holten", value: "rijssen-holten" },
-      { label: "Roosendaal", value: "roosendaal-holten" },
+      { label: "Roosendaal", value: "roosendaal-theme" },
       { label: "Rotterdam", value: "rotterdam-theme" },
       { label: "Stede Broec", value: "stedebroec" },
       { label: "Texel", value: "texel" },
@@ -370,7 +405,7 @@ export const availableThemes: TGroupedSelectOption[] = [
   {
     label: "Overige Thema's",
     options: [
-      // { label: "Conduction", value: "conduction-theme" },
+      { label: "Conduction", value: "conduction-theme" },
       // { label: "Localhost", value: "localhost" },
       // { label: "XXLLNC", value: "xxllnc-theme" },
       // { label: "Open Webconcept", value: "open-webconcept-theme" },

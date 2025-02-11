@@ -51,7 +51,7 @@ module.exports = {
       options: {
         intro: `${process.env.GATSBY_SECURITY_TXT_INTRO ?? "Information related to reporting security vulnerabilities of this site."}`,
         contact: `${process.env.GATSBY_SECURITY_TXT_CONTACT ?? "mailto:info@conduction.nl"}`,
-        expires: `${process.env.GATSBY_SECURITY_TXT_EXPIRES ?? "2024-12-31T23:00:00.000Z"}`,
+        expires: `${process.env.GATSBY_SECURITY_TXT_EXPIRES ?? "2025-12-31T23:00:00.000Z"}`,
         encryption: `${process.env.GATSBY_SECURITY_TXT_ENCRYPTION ?? ""}`,
         acknowledgements: `${process.env.GATSBY_SECURITY_TXT_ACKNOWLEDGEMENTS ?? ""}`,
         languages: `${process.env.GATSBY_SECURITY_TXT_LANGUAGES ?? "nl, en"}`,

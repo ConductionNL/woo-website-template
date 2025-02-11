@@ -38,8 +38,13 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
   const sortAlphaNum = (a: any, b: any) => a.title.localeCompare(b.title, i18n.language, { numeric: true });
 
   const sortAttachments = (withLabels: boolean) => {
+    const labels = ["Informatieverzoek", "Convenant", "Besluit", "Inventarisatielijst"];
     const attachments = getItems.data.attachments.filter((attachment: any) =>
-      withLabels ? attachment?.labels?.length > 0 : !attachment?.labels || attachment?.labels?.length === 0,
+      withLabels
+        ? attachment?.labels?.length > 0
+        : !attachment?.labels ||
+          !labels.some((label) => attachment?.labels?.includes(label)) ||
+          attachment?.labels?.length === 0,
     );
 
     return attachments;
@@ -302,7 +307,8 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                                       href={bijlage.accessUrl?.length !== 0 ? bijlage.accessUrl : "#"}
                                       target={bijlage.accessUrl?.length !== 0 ? "blank" : ""}
                                     >
-                                      {bijlage.title}.{getExtension(bijlage)}
+                                      {bijlage.labels?.length > 0 ? `${bijlage.labels[0]}:` : ""} {bijlage.title}.
+                                      {getExtension(bijlage)}
                                     </Link>
                                   </UnorderedListItem>
                                 ),

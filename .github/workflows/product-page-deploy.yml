@@ -3,7 +3,7 @@ name: Deploy the Product Page to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - never
 
 permissions:
   contents: write

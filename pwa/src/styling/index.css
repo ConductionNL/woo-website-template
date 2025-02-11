@@ -23,6 +23,9 @@
 @import "../../node_modules/@conduction/theme/municipalities/gooise-meren-design-tokens/dist/index.css";
 @import "../../node_modules/@conduction/theme/municipalities/moerdijk-design-tokens/dist/index.css";
 @import "../../node_modules/@conduction/theme/municipalities/hof-van-twente-design-tokens/dist/index.css";
+@import "../../node_modules/@conduction/theme/municipalities/lansingerland-design-tokens/dist/index.css";
+@import "../../node_modules/@conduction/theme/municipalities/bct-design-tokens/dist/index.css";
+@import "../../node_modules/@conduction/theme/municipalities/ede-design-tokens/dist/index.css";
 
 /* Design Tokens maintained by Frameless */
 @import "../../node_modules/@utrecht/design-tokens/dist/theme.css";

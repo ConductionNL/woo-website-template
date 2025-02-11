@@ -7,25 +7,25 @@ env: # Change these to your preferences any image url can also be a base encoded
   USE_GITHUB_REPOSITORY_NAME_AS_PATH_PREFIX: "true"
 
   GITHUB_REPOSITORY_NAME: ${{ github.event.repository.name }}
-  API_BASE_URL: "https://api.gateway.commonground.nu/api"
-  NL_DESIGN_THEME_CLASSNAME: "conduction-theme"
-  DEV_ENVIRONMENT: "true"
+  API_BASE_URL: "https://opencatalogi.accept.commonground.nu/apps/opencatalogi/api"
+  NL_DESIGN_THEME_CLASSNAME: "open-webconcept-theme"
+  DEV_ENVIRONMENT: "false"
   SHOW_CATEGORY: "true"
   SHOW_ORGANIZATION: "true"
   FAVICON_URL: "data:image/svg+xml,%3Csvg id='Laag_1' data-name='Laag 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 259.81 300'%3E%3Cpath d='M129.9,0,0,75V225l129.9,75,129.91-75V75Zm96.8,205.89-96.8,55.88L33.1,205.89V94.11l96.8-55.89,96.8,55.89Z' style='fill:%234376fc'/%3E%3Cpolygon points='129.59 112.23 160.01 129.79 195.41 109.35 129.59 71.35 61.47 110.67 61.47 189.33 129.59 228.65 195.41 190.65 160.01 170.21 129.59 187.77 96.88 168.88 96.88 131.12 129.59 112.23' style='fill:%234376fc'/%3E%3C/svg%3E"
   ORGANISATION_NAME: "Conduction"
-  JUMBOTRON_IMAGE_URL: "https://raw.githubusercontent.com/ConductionNL/${{github.event.repository.name}}/main/jumbotron.jpg"
+  JUMBOTRON_IMAGE_URL: "https://raw.githubusercontent.com/ConductionNL/woo-website-conduction/main/cropped-Conduction_HOME_0000_afb1-1.png"
   FOOTER_LOGO_URL: "true"
   FOOTER_LOGO_HREF: "https://conduction.nl/"
-  FOOTER_CONTENT: "https://raw.githubusercontent.com/ConductionNL/${{github.event.repository.name}}/main/FooterContent.json"
-  FOOTER_CONTENT_HEADER: "heading-2"
+  FOOTER_CONTENT: "https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/pwa/src/templates/templateParts/footer/FooterContent.json"
+  FOOTER_CONTENT_HEADER: "heading-3"
   # OIDN_NUMBER: " "
   ENV_VARS_SET: "true"
 
 on:
   push:
     branches:
-      - never
+      - main
 
 jobs:
   build:
@@ -35,8 +35,8 @@ jobs:
       - name: Get the WOO Website Template Code
         uses: actions/checkout@v2
         with:
-          repository: ConductionNL/woo-website-template
-          ref: development
+          repository: ConductionNL/woo-website-template-apiv2
+          ref: main
 
       # With special thanxs to https://github.com/SpicyPizza/create-envfile
       - name: Make envfile

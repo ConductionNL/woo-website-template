@@ -30,7 +30,7 @@ export const useEnvironment = () => {
     window.sessionStorage.setItem(
       "API_BASE_URL",
       process.env.GATSBY_DEV_ENVIRONMENT === "true"
-        ? "https://api.gateway.commonground.nu/api"
+        ? "https://opencatalogi.accept.commonground.nu/apps/opencatalogi/api"
         : process.env.GATSBY_API_BASE_URL ?? "",
     );
     window.sessionStorage.setItem("NL_DESIGN_THEME_CLASSNAME", process.env.GATSBY_NL_DESIGN_THEME_CLASSNAME ?? "");
@@ -50,8 +50,8 @@ export const useEnvironment = () => {
     updateSessionStorage();
   };
 
-  const initiateFromJSON = (themeOrDomainName: string) => {
-    const config = getConfig(themeOrDomainName);
+  const initiateFromJSON = (themeOrDomainName: string, host: string) => {
+    const config = getConfig(themeOrDomainName, host);
 
     if (!config) return; // no config found, nothing else to do
 
@@ -59,7 +59,7 @@ export const useEnvironment = () => {
     window.sessionStorage.setItem(
       "API_BASE_URL",
       process.env.GATSBY_DEV_ENVIRONMENT === "true"
-        ? "https://api.gateway.commonground.nu/api"
+        ? "https://opencatalogi.accept.commonground.nu/apps/opencatalogi/api"
         : config.GATSBY_API_BASE_URL ?? "",
     );
     window.sessionStorage.setItem("NL_DESIGN_THEME_CLASSNAME", config.GATSBY_NL_DESIGN_THEME_CLASSNAME ?? "");
@@ -76,7 +76,6 @@ export const useEnvironment = () => {
     window.sessionStorage.setItem("ANALYTICS_URL", config.GATSBY_ANALYTICS_URL ?? "");
     window.sessionStorage.setItem("DATE_FULL_MONTH", config.GATSBY_DATE_FULL_MONTH ?? "");
 
-
     updateSessionStorage();
   };
 
@@ -84,6 +83,12 @@ export const useEnvironment = () => {
     switch (window.location.hostname) {
       case "koophulpje.nl":
         // case "localhost": // development purposes
+        window.sessionStorage.setItem("SHOW_THEME_SWITCHER", "true");
+        break;
+    }
+
+    switch (window.location.pathname) {
+      case "/woo-website-template-apiv2/":
         window.sessionStorage.setItem("SHOW_THEME_SWITCHER", "true");
         break;
     }

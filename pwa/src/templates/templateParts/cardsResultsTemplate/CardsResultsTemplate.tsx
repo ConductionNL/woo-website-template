@@ -23,7 +23,7 @@ export const CardsResultsTemplate: React.FC<CardsResultsTemplateProps> = ({ requ
             role="region"
             key={request.id}
             className={styles.cardContainer}
-            onClick={() => navigate(request.id)}
+            onClick={() => navigate(request.id.toString())}
             tabIndex={0}
             aria-label={`${
               request.published ? translateDate(i18n.language, request.published) : t("N/A")
