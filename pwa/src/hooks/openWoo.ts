@@ -31,5 +31,18 @@ export const useOpenWoo = (queryClient: QueryClient) => {
       },
     );
 
-  return { getAll, getOne };
+  const getAttachments = (requestId: string) =>
+    useQuery<any, Error>(
+      ["OpenWoo-Attachments", requestId, window.sessionStorage.getItem("OIDN_NUMBER")],
+      () => API?.OpenWoo.getAttachments(requestId),
+      {
+        initialData: () => queryClient.getQueryData<any[]>("OpenWoo")?.find((_OpenWoo) => _OpenWoo.id === requestId),
+        onError: (error) => {
+          throw new Error(error.message);
+        },
+        enabled: !!requestId,
+      },
+    );
+
+  return { getAll, getOne, getAttachments };
 };
