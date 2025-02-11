@@ -30,7 +30,17 @@ export default class OpenWoo {
   };
 
   public getOne = async (id: string): Promise<any> => {
-    const { data } = await this._send(this._instance, "GET", `/search/publications/${id}?extend[]=attachments&extend[]=themes`);
+    const { data } = await this._send(
+      this._instance,
+      "GET",
+      `/search/publications/${id}?extend[]=attachments&extend[]=themes`,
+    );
+
+    return data;
+  };
+
+  public getAttachments = async (id: string): Promise<any> => {
+    const { data } = await this._send(this._instance, "GET", `/search/publications/${id}/attachments`);
 
     return data;
   };

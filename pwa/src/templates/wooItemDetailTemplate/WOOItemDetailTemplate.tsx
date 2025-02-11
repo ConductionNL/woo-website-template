@@ -35,23 +35,54 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
   const queryClient = new QueryClient();
   const getItems = useOpenWoo(queryClient).getOne(wooItemId);
 
+  const getAttachments = useOpenWoo(queryClient).getAttachments(wooItemId);
+
   const sortAlphaNum = (a: any, b: any) => a.title.localeCompare(b.title, i18n.language, { numeric: true });
 
   const sortAttachments = (withLabels: boolean) => {
-    const labels = ["Informatieverzoek", "Convenant", "Besluit", "Inventarisatielijst"];
-    const attachments = getItems.data.attachments.filter((attachment: any) =>
-      withLabels
-        ? attachment?.labels?.length > 0
-        : !attachment?.labels ||
-          !labels.some((label) => attachment?.labels?.includes(label)) ||
-          attachment?.labels?.length === 0,
+    const filterdAttachments = getAttachments.data.results.filter((attachment: any) =>
+      withLabels ? attachment?.labels?.length > 0 : !attachment?.labels || attachment?.labels?.length === 0,
     );
+
+    let multipleLabels: any[] = [];
+    let singleLabels: any[] = [];
+
+    filterdAttachments.map((attachment: any) => {
+      if (attachment.labels.length > 1) {
+        multipleLabels.push(attachment);
+      } else {
+        singleLabels.push(attachment);
+      }
+    });
+
+    const newAttachments: any[] = [];
+    multipleLabels.map((attachment: any) => {
+      attachment.labels.map((label: any, idx: number) => {
+        newAttachments.push({
+          ...attachment,
+          labels: [attachment.labels[idx]],
+        });
+      });
+    });
+
+    const attachments = [...newAttachments, ...singleLabels];
 
     return attachments;
   };
 
-  const getLabeledAttachment = (label: string) => {
-    return sortAttachments(true).find((attachment: any) => attachment.labels.includes(label));
+  const getLabel = (label: string) => {
+    switch (_.upperFirst(label)) {
+      case "Informatieverzoek":
+        return t("Information request");
+      case "Convenant":
+        return t("Convenant");
+      case "Besluit":
+        return t("Decision");
+      case "Inventarisatielijst":
+        return t("Inventory list");
+      default:
+        return t(_.upperFirst(label));
+    }
   };
 
   const getExtension = (attachment: any) => {
@@ -204,90 +235,27 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                     </TableRow>
                   )}
 
-                  {getLabeledAttachment("Informatieverzoek") && (
-                    <TableRow
-                      className={styles.tableRow}
-                      tabIndex={0}
-                      aria-label={`${t("Information request")}, ${
-                        getLabeledAttachment("Informatieverzoek").title ??
-                        getPDFName(getLabeledAttachment("Informatieverzoek").accessUrl)
-                      }.${getExtension(getLabeledAttachment("Informatieverzoek"))}`}
-                    >
-                      <TableCell>{t("Information request")}</TableCell>
-                      <TableCell>
-                        <Link href={getLabeledAttachment("Informatieverzoek").accessUrl} target="blank">
-                          {`${
-                            getLabeledAttachment("Informatieverzoek").title ??
-                            getPDFName(getLabeledAttachment("Informatieverzoek").accessUrl)
-                          }.${getExtension(getLabeledAttachment("Informatieverzoek"))}`}
-                        </Link>
-                      </TableCell>
-                    </TableRow>
-                  )}
+                  {getAttachments.isSuccess &&
+                    sortAttachments(true).length > 0 &&
+                    sortAttachments(true).map((attachment: any, idx: number) => (
+                      <TableRow
+                        className={styles.tableRow}
+                        key={idx}
+                        tabIndex={0}
+                        aria-label={`${getLabel(attachment.labels)}, ${
+                          attachment.title ?? getPDFName(attachment.accessUrl)
+                        }.${getExtension(attachment)}`}
+                      >
+                        <TableCell>{getLabel(attachment.labels[0])}</TableCell>
+                        <TableCell>
+                          <Link href={attachment.accessUrl} target="blank">
+                            {`${attachment.title ?? getPDFName(attachment.accessUrl)}.${getExtension(attachment)}`}
+                          </Link>
+                        </TableCell>
+                      </TableRow>
+                    ))}
 
-                  {getLabeledAttachment("Convenant") && (
-                    <TableRow
-                      className={styles.tableRow}
-                      tabIndex={0}
-                      aria-label={`${t("Convenant")}, ${
-                        getLabeledAttachment("Convenant").title ??
-                        getPDFName(getLabeledAttachment("Convenant").accessUrl)
-                      }.${getExtension(getLabeledAttachment("Convenant"))}`}
-                    >
-                      <TableCell>{t("Convenant")}</TableCell>
-                      <TableCell>
-                        <Link href={getLabeledAttachment("Convenant").accessUrl} target="blank">
-                          {`${
-                            getLabeledAttachment("Convenant").title ??
-                            getPDFName(getLabeledAttachment("Convenant").accessUrl)
-                          }.${getExtension(getLabeledAttachment("Convenant"))}`}
-                        </Link>
-                      </TableCell>
-                    </TableRow>
-                  )}
-
-                  {getLabeledAttachment("Besluit") && (
-                    <TableRow
-                      className={styles.tableRow}
-                      tabIndex={0}
-                      aria-label={`${t("Decision")}, ${
-                        getLabeledAttachment("Besluit").title ?? getPDFName(getLabeledAttachment("Besluit").accessUrl)
-                      }.${getExtension(getLabeledAttachment("Besluit"))}`}
-                    >
-                      <TableCell>{t("Decision")}</TableCell>
-                      <TableCell>
-                        <Link href={getLabeledAttachment("Besluit").accessUrl} target="blank">
-                          {`${
-                            getLabeledAttachment("Besluit").title ??
-                            getPDFName(getLabeledAttachment("Besluit").accessUrl)
-                          }.${getExtension(getLabeledAttachment("Besluit"))}`}
-                        </Link>
-                      </TableCell>
-                    </TableRow>
-                  )}
-
-                  {getLabeledAttachment("Inventarisatielijst") && (
-                    <TableRow
-                      className={styles.tableRow}
-                      tabIndex={0}
-                      aria-label={`${t("Inventory list")}, ${
-                        getLabeledAttachment("Inventarisatielijst").title ??
-                        getPDFName(getLabeledAttachment("Inventarisatielijst").accessUrl)
-                      }.${getExtension(getLabeledAttachment("Inventarisatielijst"))}`}
-                    >
-                      <TableCell>{t("Inventory list")}</TableCell>
-                      <TableCell>
-                        <Link href={getLabeledAttachment("Inventarisatielijst").accessUrl} target="blank">
-                          {`${
-                            getLabeledAttachment("Inventarisatielijst").title ??
-                            getPDFName(getLabeledAttachment("Inventarisatielijst").accessUrl)
-                          }.${getExtension(getLabeledAttachment("Inventarisatielijst"))}`}
-                        </Link>
-                      </TableCell>
-                    </TableRow>
-                  )}
-
-                  {!_.isEmpty(sortAttachments(false)) && (
+                  {getAttachments.isSuccess && !_.isEmpty(sortAttachments(false)) && (
                     <TableRow
                       className={styles.tableRow}
                       tabIndex={0}
@@ -300,15 +268,13 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                             .sort(sortAlphaNum)
                             .map(
                               (bijlage: any, idx: number) =>
-                                bijlage.title &&
-                                bijlage.accessUrl && (
+                                bijlage.title && (
                                   <UnorderedListItem key={idx}>
                                     <Link
                                       href={bijlage.accessUrl?.length !== 0 ? bijlage.accessUrl : "#"}
                                       target={bijlage.accessUrl?.length !== 0 ? "blank" : ""}
                                     >
-                                      {bijlage.labels?.length > 0 ? `${bijlage.labels[0]}:` : ""} {bijlage.title}.
-                                      {getExtension(bijlage)}
+                                      {bijlage.title}
                                     </Link>
                                   </UnorderedListItem>
                                 ),
