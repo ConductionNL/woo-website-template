@@ -229,7 +229,9 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       <TableCell id="themesName">{t("Themes")}</TableCell>
                       <TableCell id="themesData">
                         {getItems.data.themes.map((theme: any, idx: number) => (
-                          <span key={idx}>{theme.title + (idx !== getItems.data.themes?.length - 1 ? ", " : "")}</span>
+                          <span key={idx}>
+                            {theme.title ? theme.title + (idx !== getItems.data.themes?.length - 1 ? ", " : "") : theme}
+                          </span>
                         ))}
                       </TableCell>
                     </TableRow>
