@@ -246,12 +246,12 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                         tabIndex={0}
                         aria-label={`${getLabel(attachment.labels)}, ${
                           attachment.title ?? getPDFName(attachment.accessUrl)
-                        }.${getExtension(attachment)}`}
+                        }`}
                       >
                         <TableCell>{getLabel(attachment.labels[0])}</TableCell>
                         <TableCell>
                           <Link href={attachment.accessUrl} target="blank">
-                            {`${attachment.title ?? getPDFName(attachment.accessUrl)}.${getExtension(attachment)}`}
+                            {`${attachment.title ?? getPDFName(attachment.accessUrl)}`}
                           </Link>
                         </TableCell>
                       </TableRow>
