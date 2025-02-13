@@ -33,7 +33,7 @@ export default class OpenWoo {
     const { data } = await this._send(
       this._instance,
       "GET",
-      `/search/publications/${id}?extend[]=attachments&extend[]=themes`,
+      `/search/publications/${id}?extend[]=themes`,
     );
 
     return data;
