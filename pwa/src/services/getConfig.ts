@@ -173,6 +173,7 @@ export const getConfig = (themeOrDomainName: string, host: string): Record<strin
       return HofvanTwente;
     case "acceptatie-open.hofvantwente.nl":
     case "hofvantwente.accept.openwoo.app":
+    case "hofvantwente-v2.accept.openwoo.app"
     case "hofvantwente.accept.commonground.nu":
       return HofvanTwenteAccept;
 
@@ -375,7 +376,7 @@ export const availableThemes: TGroupedSelectOption[] = [
       { label: "Gooise Meren", value: "gooise-meren-theme" },
       { label: "Gouda", value: "gouda-theme" },
       { label: "Hoeksche Waard", value: "hoeksche-waard" },
-      { label: "Hof van Twente", value: "open-webconcept-theme" },
+      { label: "Hof van Twente", value: "hof-van-twente-theme" },
       { label: "Lansingerland", value: "lansingerland" },
       { label: "Leiden", value: "leiden-theme" },
       { label: "Moerdijk", value: "moerdijk-theme" },
