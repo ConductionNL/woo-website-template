@@ -173,7 +173,7 @@ export const getConfig = (themeOrDomainName: string, host: string): Record<strin
       return HofvanTwente;
     case "acceptatie-open.hofvantwente.nl":
     case "hofvantwente.accept.openwoo.app":
-    case "hofvantwente-v2.accept.openwoo.app"
+    case "hofvantwente-v2.accept.openwoo.app":
     case "hofvantwente.accept.commonground.nu":
       return HofvanTwenteAccept;
 
