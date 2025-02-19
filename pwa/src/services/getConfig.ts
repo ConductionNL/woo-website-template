@@ -400,7 +400,7 @@ export const availableThemes: TGroupedSelectOption[] = [
     label: "Fictieve Gemeenten",
     options: [
       // { label: "Sloterburg", value: "sloterburg-theme" },
-      // { label: "Zuiddrecht", value: "zuiddrecht-theme" },
+      { label: "Zuiddrecht", value: "zuiddrecht-theme" },
     ],
   },
   {
