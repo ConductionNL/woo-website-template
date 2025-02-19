@@ -5,7 +5,7 @@
 Sharepoint kan gebruikt worden als bron voor Woo publicaties.
 
 Er moet een folder zijn voor de publicaties zodat daar een endpoint voor gegenereerd wordt waar publicaties van opgehaald kan worden. Bijvoorbeeld: `/_api/Web/GetFolderByServerRelativePath(decodedurl='/WOO/Woo-verzoeken en -besluiten')/folders`
-Het makkelijkste is om alle publicaties in 1 folder ipv hier in het slechte voorbeeld te splitsen.
+Het makkelijkste is om alle publicaties in 1 folder ipv hier in het voorbeeld te splitsen.
 
 ![Overzicht categorie folders](overzicht-categorie-folders.png)
 
