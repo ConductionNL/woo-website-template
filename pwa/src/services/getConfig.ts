@@ -58,9 +58,6 @@ import Sloterburg from "./../../static/configFiles/other/sloterburg/sloterburg.j
 import SloterburgAccept from "./../../static/configFiles/other/sloterburg/sloterburg-accept.json";
 import Xxllnc from "./../../static/configFiles/other/xxllnc/xxllnc.json";
 import XxllncAccept from "./../../static/configFiles/other/xxllnc/xxllnc-accept.json";
-import Zuiddrecht from "./../../static/configFiles/other/zuiddrecht/zuiddrecht.json";
-import ZuiddrechtAccept from "./../../static/configFiles/other/zuiddrecht/zuiddrecht-accept.json";
-
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
@@ -320,15 +317,6 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "acceptatie-open.xxllnc.nl":
     case "xxllnc.accept.openwoo.app":
       return XxllncAccept;
-
-    case "zuiddrecht-theme":
-    case "open.zuiddrecht.nl":
-    case "zuiddrecht.openwoo.app":
-    case "zuiddrecht.koophulpje.nl":
-      return Zuiddrecht;
-    case "acceptatie-open.zuiddrecht.nl":
-    case "zuiddrecht.accept.openwoo.app":
-      return ZuiddrechtAccept;
 
     default:
       return OpenWebconcept;
