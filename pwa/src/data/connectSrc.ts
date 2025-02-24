@@ -64,7 +64,7 @@ https://zutphen.openwoo.app
 https://zutphen.accept.openwoo.app
 https://noordwijk.accept.commonground.nu
 https://ede.accept.commonground.nu
-https://admin.open.ede.nl/
+https://documenten.open.ede.nl/
 `;
 
 export const connectSrcOther = `
