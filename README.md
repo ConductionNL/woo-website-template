@@ -2,7 +2,7 @@
 
 Ondersteuning en bijeenkomsten
 
-Wil je meer weten over deze oplossing? We hebben een speciaal Slack kanaal binnen Common Ground waar we graag helpen. Je kunt ook altijd contact opnemen via info@conduction.nl. Bezoek ook OpenWoo.app voor meer informatie.
+Wil je meer weten over deze oplossing? We hebben een speciaal Slack kanaal binnen Common Ground waar we graag helpen. Je kunt ook altijd contact opnemen via info@conduction.nl. Bezoek ook [OpenWoo.app](OpenWoo.app) voor meer informatie.
 
 ## Woo-container configureren en starten
 Voor het opzetten van de Woo-container en image kun je de laatste versie van het image vinden hier.
