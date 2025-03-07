@@ -71,9 +71,9 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
 
     const attachmentsAll = [...newAttachments, ...singleLabels];
 
-    const sortedLabels = [...new Set(allLabels)];
+    const uniqueLabels = [...new Set(allLabels)];
 
-    const sortedAttachments = sortedLabels.map((label: any) => {
+    const sortedAttachments = uniqueLabels.map((label: any) => {
       const attachmentsWithLabel = attachmentsAll.filter((attachment: any) => attachment.labels.includes(label));
 
       return {
