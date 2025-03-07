@@ -67,4 +67,7 @@ export const nl = {
   "Language select": "Taal kiezen",
   "Details table": "Detail tabel",
   "Title of woo request": "Titel van Woo verzoek",
+  "There are": "Er zijn",
+  "With the label": "Met het label",
+  "These are": "Dit zijn",
 };
