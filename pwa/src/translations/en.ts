@@ -67,4 +67,7 @@ export const en = {
   "Language select": "Language select",
   "Details table": "Details table",
   "Title of woo request": "Title of woo request",
+  "There are": "There are",
+  "With the label": "With the label",
+  "These are": "These are",
 };

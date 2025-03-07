@@ -47,11 +47,15 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
     let multipleLabels: any[] = [];
     let singleLabels: any[] = [];
 
+    let allLabels: any[] = [];
+
     filterdAttachments.map((attachment: any) => {
       if (attachment.labels.length > 1) {
         multipleLabels.push(attachment);
+        allLabels.push(...attachment.labels);
       } else {
         singleLabels.push(attachment);
+        allLabels.push(attachment.labels[0]);
       }
     });
 
@@ -65,9 +69,20 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
       });
     });
 
-    const attachments = [...newAttachments, ...singleLabels];
+    const attachmentsAll = [...newAttachments, ...singleLabels];
 
-    return attachments;
+    const sortedLabels = [...new Set(allLabels)];
+
+    const sortedAttachments = sortedLabels.map((label: any) => {
+      const attachmentsWithLabel = attachmentsAll.filter((attachment: any) => attachment.labels.includes(label));
+
+      return {
+        attachments: [...attachmentsWithLabel],
+        label,
+      };
+    });
+
+    return withLabels ? sortedAttachments : attachmentsAll;
   };
 
   const getLabel = (label: string) => {
@@ -239,21 +254,48 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
 
                   {getAttachments.isSuccess &&
                     sortAttachments(true).length > 0 &&
-                    sortAttachments(true).map((attachment: any, idx: number) => (
+                    sortAttachments(true).map((sortedAttachments: any, idx: number) => (
                       <TableRow
                         className={styles.tableRow}
                         key={idx}
                         tabIndex={0}
-                        aria-label={`${getLabel(attachment.labels)}, ${
-                          attachment.title ?? getPDFName(attachment.accessUrl)
-                        }`}
+                        aria-label={
+                          sortedAttachments.attachments.length === 1
+                            ? `${getLabel(sortedAttachments.label)}, ${
+                                sortedAttachments.attachments[0].title ??
+                                getPDFName(sortedAttachments.attachments[0].accessUrl)
+                              }`
+                            : `${getLabel(sortedAttachments.label)}, ${t("There are")} ${
+                                sortedAttachments.attachments.length
+                              } ${t("Attachments")} ${t("With the label")} ${getLabel(
+                                sortedAttachments.label,
+                              )}, ${t("These are")} ${sortedAttachments.attachments
+                                .map((attachment: any) => attachment.title ?? getPDFName(attachment.accessUrl))
+                                .join(", ")}`
+                        }
                       >
-                        <TableCell>{getLabel(attachment.labels[0])}</TableCell>
-                        <TableCell>
-                          <Link href={attachment.accessUrl} target="blank">
-                            {`${attachment.title ?? getPDFName(attachment.accessUrl)}`}
-                          </Link>
-                        </TableCell>
+                        <TableCell>{getLabel(sortedAttachments.label)}</TableCell>
+
+                        {sortedAttachments.attachments.length > 1 && (
+                          <TableCell>
+                            <UnorderedList id="labelAttachmentsData">
+                              {sortedAttachments.attachments.map((attachment: any, idx: number) => (
+                                <UnorderedListItem key={idx}>
+                                  <Link href={attachment.accessUrl} target="blank">
+                                    {`${attachment.title ?? getPDFName(attachment.accessUrl)}`}
+                                  </Link>
+                                </UnorderedListItem>
+                              ))}
+                            </UnorderedList>
+                          </TableCell>
+                        )}
+                        {sortedAttachments.attachments.length === 1 && (
+                          <TableCell>
+                            <Link href={sortedAttachments.attachments[0].accessUrl} target="blank">
+                              {`${sortedAttachments.attachments[0].title ?? getPDFName(sortedAttachments.attachments[0].accessUrl)}`}
+                            </Link>
+                          </TableCell>
+                        )}
                       </TableRow>
                     ))}
 
