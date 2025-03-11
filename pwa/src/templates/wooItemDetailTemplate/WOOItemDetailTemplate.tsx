@@ -24,6 +24,7 @@ import { useOpenWoo } from "../../hooks/openWoo";
 import { getPDFName } from "../../services/getPDFName";
 import { HorizontalOverflowWrapper } from "@conduction/components";
 import { removeHTMLFromString } from "../../services/removeHTMLFromString";
+import { log } from "console";
 
 interface WOOItemDetailTemplateProps {
   wooItemId: string;
@@ -100,6 +101,55 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
     }
   };
 
+  const getName = (name: string) => {
+    
+    const formattedName = name.replace(/_/g, ' ')
+    console.log(formattedName);
+    
+    switch (_.upperFirst(formattedName)) {
+      case "Bevindingen":
+        return t("Findings");
+      case "Conclusies":
+        return t("Conclusions");
+      case "Functiebenaming":
+        return t("Job title");
+      case "Gedraging":
+        return t("Behavior");
+      case "Onderdeel taak":
+        return t("Part of task");
+      case "Oordeel":
+        return t("Judgement");
+      case "Opdrachtgever":
+        return t("Client");
+      case "Organisatieonderdeel":
+        return t("Organizational unit");
+      default:
+        return t(_.upperFirst(formattedName));
+    }
+  };
+
+  function isDate(str: string) {
+    var regex = /^(\d{4})-(\d{2})-(\d{2})(?:T.*)?$/;
+    var match = str.match(regex);
+    if (!match) {
+      return false;
+    }
+    var year = parseInt(match[1], 10);
+    var month = parseInt(match[2], 10);
+    var day = parseInt(match[3], 10);
+    if (month < 1 || month > 12) {
+      return false;
+    }
+    var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+      daysInMonth[1] = 29;
+    }
+    if (day < 1 || day > daysInMonth[month - 1]) {
+      return false;
+    }
+    return true;
+  }
+  
   const getExtension = (attachment: any) => {
     if (attachment.extension) {
       return attachment.extension;
@@ -213,31 +263,42 @@ export const WOOItemDetailTemplate: React.FC<WOOItemDetailTemplateProps> = ({ wo
                       </TableCell>
                     </TableRow>
                   )}
-
-                  {getItems.data.metadata?.verzoek?.ontvangstdatum && (
-                    <TableRow
-                      className={styles.tableRow}
-                      tabIndex={0}
-                      aria-label={`${t("Registration date")}, ${translateDate(i18n.language, getItems.data.metadata?.verzoek?.ontvangstdatum) ?? "-"}`}
-                    >
-                      <TableCell>{t("Registration date")}</TableCell>
-
-                      <TableCell>
-                        {translateDate(i18n.language, getItems.data.metadata?.verzoek?.ontvangstdatum) ?? "-"}
-                      </TableCell>
-                    </TableRow>
-                  )}
-
-                  {getItems.data.metadata?.besluitdatum && (
-                    <TableRow
-                      className={styles.tableRow}
-                      tabIndex={0}
-                      aria-label={`${t("Decision date")}, ${translateDate(i18n.language, getItems.data.metadata?.besluitdatum) ?? "-"}`}
-                    >
-                      <TableCell>{t("Decision date")} </TableCell>
-                      <TableCell>{translateDate(i18n.language, getItems.data.metadata?.besluitdatum) ?? "-"}</TableCell>
-                    </TableRow>
-                  )}
+ 
+                {
+                  getItems.data.data &&
+                  Object.entries(getItems.data.data).map(([key, value]: [string, any]) => {
+                    console.log("key", key);
+                    console.log("value", value);
+                    
+                    if (!!value) {
+                      let formattedValue: string;
+                      if (typeof value === "string") {
+                        const isValidDate = isDate(value);
+                        formattedValue = isValidDate
+                          ? translateDate(i18n.language, new Date(value)) ?? "-"
+                          : value;
+                      } else if (value instanceof Date) {
+                        formattedValue = translateDate(i18n.language, value) ?? "-";
+                      } else {
+                        formattedValue = String(value);
+                      }
+  
+                      return (
+                        !!value && (
+                          <TableRow
+                          key={key}
+                          className={styles.tableRow}
+                          tabIndex={0}
+                          aria-label={`${getName(key)}, ${formattedValue}`}
+                        >
+                          <TableCell>{getName(key)}</TableCell>
+                          <TableCell>{formattedValue}</TableCell>
+                        </TableRow>
+                        )
+                      );
+                    }
+                  })
+                }
 
                   {!_.isEmpty(getItems.data.themes) && (
                     <TableRow className={styles.tableRow} tabIndex={0} aria-labelledby={"themesName themesData"}>
