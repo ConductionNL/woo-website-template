@@ -12,7 +12,7 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 
 | Component                     | Leverancier(s)                                             | Eenmalig | Maandelijks | Meer informatie |
 |-------------------------------|------------------------------------------------------------|-------------|-------------|-------------|
-| [Losse React pagina](https://zuiddrecht.openwoo.app)            | [Conduction](https://conduction.nl/)                       | € 1750,- | € 250.-     |                 |
+| [Losse React pagina](https://zuiddrecht.accept.openwoo.app)            | [Conduction](https://conduction.nl/)                       | € 1750,- | € 250.-     |                 |
 | [Integratie in Open Webconcept](https://alkmaar.accept02.yard.nl/) | [Yard](https://www.yard.nl/) of [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
 | SIMsite                      | [Shift2](https://www.shift2.nl/))                       | Onbekend | Onbekend     |                 |
 | Drupal Site                   | "??"                                                       | Onbekend | Onbekend     |                 |
