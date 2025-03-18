@@ -26,7 +26,7 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 
 ## Motorblok
 
-Het motorblok bestaat uit twee componenten [Open Register](https://index.openregisters.app/) en [Open Connector](https://www.conduction.nl/). Voor het overzicht en kostenbeheersing worden deze componenten in het jaar 2024 als één integratie aangeboden.
+Het motorblok bestaat uit twee componenten [Open Register](https://index.openregisters.app/) en [Open Connector](https://openconnector.app/). Voor het overzicht en kostenbeheersing worden deze componenten in het jaar 2024 als één integratie aangeboden.
 
 | Component | Leverancier                                                          | Eenmalig | Maandelijks | Meer informatie |
 |-----------|----------------------------------------------------------------------|----------|-------------|-------------|
