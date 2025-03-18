@@ -26,12 +26,12 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 
 ## Motorblok
 
-Het motorblok bestaat uit twee componenten [OpenRegister](https://index.openregisters.app/) en [OpeConnector](https://www.conduction.nl/). Voor het overzicht en kostenbeheersing worden deze componenten in het jaar 2024 als één integratie aangeboden.
+Het motorblok bestaat uit twee componenten [Open Register](https://index.openregisters.app/) en [Open Connector](https://www.conduction.nl/). Voor het overzicht en kostenbeheersing worden deze componenten in het jaar 2024 als één integratie aangeboden.
 
 | Component | Leverancier                                                          | Eenmalig | Maandelijks | Meer informatie |
 |-----------|----------------------------------------------------------------------|----------|-------------|-------------|
-| OpenConnector | [Conduction](https://conduction.nl/) | € 1750,-  | € 250.-      |                 |
-| OpenRegister | [Conduction](https://conduction.nl/) | € 1750,- | € 250.-      |                 |
+| Open Connector | [Conduction](https://conduction.nl/) | € 1750,-  | € 250.-      |                 |
+| Open Register | [Conduction](https://conduction.nl/) | € 1750,- | € 250.-      |                 |
 
 ## Bronnen
 
@@ -70,7 +70,7 @@ Buiten het leveren van componenten om kan het ook zijn dat er nog overige dienst
 |------------------------------------------------|--------------------------------------------------------------------------------------|
 | [Conduction](https://conduction.nl/)           | [Ruben van der Linde (info@conduction.nl)](mailto:info@conduction.nl)                |
 | [xxllnc](https://xxllnc.nl/)                   | [Arthur van Ulden (sales.zaakgericht@xxllnc.nl)](mailto:sales.zaakgericht@xxllnc.nl) |
-| [SIMgroep](https://www.simgroep.nl/)          | [Twan Meijerink(t.meijerink@simgroep.nl)](mailto:t.meijerink@simgroep.nl)             |                            |
+| [Shift2](https://www.shift2.nl/)          | [Twan Meijerink(t.meijerink@simgroep.nl)](mailto:t.meijerink@simgroep.nl)             |                            |
 | [OpenGemeenten](https://www.opengemeenten.nl/) | [Jan-Thijs Oosterhoudt (hallo@opengemeenten.nl)](mailto:hallo@opengemeenten.nl)      |
 
 Wilt u leverancier worden en onderstaande componenten zelf ook aanbieden aan uw klanten? Neem dan contact op met Conduction en mail ons op [info@conduction.nl](mailto:info@conduction.n). We voegen u graag toe!
