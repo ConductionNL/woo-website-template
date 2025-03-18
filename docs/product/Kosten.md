@@ -13,7 +13,7 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 | Component                     | Leverancier(s)                                             | Eenmalig | Maandelijks | Meer informatie |
 |-------------------------------|------------------------------------------------------------|-------------|-------------|-------------|
 | [Losse React pagina](https://zuiddrecht.accept.openwoo.app)            | [Conduction](https://conduction.nl/)                       | € 1750,- | € 250.-     |                 |
-| [Integratie in Open Webconcept](https://alkmaar.accept02.yard.nl/) | [Yard](https://www.yard.nl/) of [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
+| [Integratie in Open Webconcept](https://www.alkmaar.nl/bestuur-en-organisatie/open-alkmaar/woo-verzoeken/) | [Yard](https://www.yard.nl/) of [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
 | SIMsite                      | [Shift2](https://www.shift2.nl/))                       | Onbekend | Onbekend     |                 |
 | Drupal Site                   | "??"                                                       | Onbekend | Onbekend     |                 |
 | TYPO3 themasite              | [OpenGemeenten](https://www.opengemeenten.nl/oplossingen/website-en-koppeling-voor-de-wet-open-overheid)             | € 4000.- | € 250.-     |                 |
@@ -26,12 +26,12 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 
 ## Motorblok
 
-Het motorblok bestaat uit twee componenten [OpenIndex](https://index.openregisters.app/) en [OpenWoo-service](https://openwoo.openservices.online/). Voor het overzicht en kostenbeheersing worden deze componenten in het jaar 2024 als één integratie aangeboden.
+Het motorblok bestaat uit twee componenten [Open Register](https://index.openregisters.app/) en [Open Connector](https://openconnector.app/). Voor het overzicht en kostenbeheersing worden deze componenten in het jaar 2024 als één integratie aangeboden.
 
 | Component | Leverancier                                                          | Eenmalig | Maandelijks | Meer informatie |
 |-----------|----------------------------------------------------------------------|----------|-------------|-------------|
-| OpenWoo-service | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) | € 3000,-  | € 250.-      |                 |
-| Open Index | [Conduction](https://conduction.nl/) of [xxllnc](https://xxllnc.nl/) |  | € 250.-      |                 |
+| Open Connector | [Conduction](https://conduction.nl/) | € 1750,-  | € 250.-      |                 |
+| Open Register | [Conduction](https://conduction.nl/) | € 1750,- | € 250.-      |                 |
 
 ## Bronnen
 
@@ -39,7 +39,7 @@ U kunt meerdere bronnen koppelen, sommige van deze bronnen vragen daarvoor zelf 
 
 | Component        | Leveranciers(s)                                          | Eenmalig | Maandelijks | Meer informatie |
 |------------------|----------------------------------------------------------|----------|-------------|-------------|
-| Zaaksysteem.nl   | [Xxllnc](https://xxllnc.nl/)                             |  € 3000,-  | Onbekend    |                 |
+| Zaaksysteem.nl   | [Xxllnc](https://xxllnc.nl/)                             | Onbekend | Onbekend     |                 |
 | RX Fundament     | [Roxit](https://www.roxit.nl/)                           | Onbekend | Onbekend     |                 |
 | Decos JOIN       | [Decos](https://www.decos.com/nl)                        | Onbekend | Onbekend     |                 |
 | OpenZaak         | [Maykin Media](https://www.maykinmedia.nl/nl/)           | Onbekend | Onbekend     |                 |
@@ -70,7 +70,7 @@ Buiten het leveren van componenten om kan het ook zijn dat er nog overige dienst
 |------------------------------------------------|--------------------------------------------------------------------------------------|
 | [Conduction](https://conduction.nl/)           | [Ruben van der Linde (info@conduction.nl)](mailto:info@conduction.nl)                |
 | [xxllnc](https://xxllnc.nl/)                   | [Arthur van Ulden (sales.zaakgericht@xxllnc.nl)](mailto:sales.zaakgericht@xxllnc.nl) |
-| [SIMgroep](https://www.simgroep.nl/)          | [Twan Meijerink(t.meijerink@simgroep.nl)](mailto:t.meijerink@simgroep.nl)                                   |
-| [OpenGemeenten](https://www.opengemeenten.nl/) | [Jan-Thijs Oosterhoudt (hallo@opengemeenten.nl)](mailto:hallo@opengemeenten.nl) |
+| [Shift2](https://www.shift2.nl/)          | [Twan Meijerink(t.meijerink@simgroep.nl)](mailto:t.meijerink@simgroep.nl)             |                            |
+| [OpenGemeenten](https://www.opengemeenten.nl/) | [Jan-Thijs Oosterhoudt (hallo@opengemeenten.nl)](mailto:hallo@opengemeenten.nl)      |
 
 Wilt u leverancier worden en onderstaande componenten zelf ook aanbieden aan uw klanten? Neem dan contact op met Conduction en mail ons op [info@conduction.nl](mailto:info@conduction.n). We voegen u graag toe!
