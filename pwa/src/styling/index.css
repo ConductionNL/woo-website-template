@@ -24,6 +24,7 @@
 @import "../../node_modules/@conduction/theme/municipalities/moerdijk-design-tokens/dist/index.css";
 @import "../../node_modules/@conduction/theme/municipalities/hof-van-twente-design-tokens/dist/index.css";
 @import "../../node_modules/@conduction/theme/municipalities/lansingerland-design-tokens/dist/index.css";
+@import "../../node_modules/@conduction/theme/municipalities/migrato-design-tokens/dist/index.css";
 
 /* Design Tokens maintained by Frameless */
 @import "../../node_modules/@utrecht/design-tokens/dist/theme.css";
@@ -62,3 +63,11 @@
 
 /* Skeleton Design Tokens */
 @import "./design-tokens/skeleton-design-tokens.css";
+
+/* Custom Design Tokens */
+/* @import "../components/tilburg/css/_ac-card.scss";
+@import "../components/tilburg/css/_ac-flex.scss"; */
+@import "./design-tokens/_tokens-custom.scss";
+@import "./design-tokens/_tokens-dimpact.scss";
+@import "./design-tokens/_tokens-migrato.scss";
+@import "./design-tokens/vng-design-tokens.css";

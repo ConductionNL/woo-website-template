@@ -1,0 +1,28 @@
+$screen-xxs: 320px;
+$screen-xxs-min: $screen-xxs;
+
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+
+$screen-md: 1024px;
+$screen-md-min: $screen-md;
+
+$screen-lg: 1280px;
+$screen-lg-min: $screen-lg;
+
+$screen-xl: 1400px;
+$screen-xl-min: $screen-xl;
+
+$screen-xxl: 1700px;
+$screen-xxl-min: $screen-xxl;
+
+$screen-xxs-max: ($screen-xs-min - 1);
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+$screen-lg-max: ($screen-xl-min - 1);
+$screen-xl-max: 99999px;
+$screen-xxl-max: 99999px;

@@ -15,6 +15,7 @@ import { IconPack, library } from "@fortawesome/fontawesome-svg-core";
 import { useEnvironment } from "../hooks/useEnvironment";
 import { ToolTip } from "@conduction/components";
 import { Helmet } from "react-helmet";
+import { BrowserRouter } from "react-router-dom";
 
 export const TOOLTIP_ID = "cb8f47c3-7151-4a46-954d-784a531b01e6";
 
@@ -57,22 +58,24 @@ const Layout: React.FC<LayoutProps> = ({ children, pageContext, location }) => {
 
   return (
     <>
-      <GlobalProvider value={[globalContext, setGlobalContext]}>
-        <Head />
-        <APIProvider value={API}>
-          <Surface>
-            <Document>
-              <ToolTip id={TOOLTIP_ID} />
+      <BrowserRouter>
+        <GlobalProvider value={[globalContext, setGlobalContext]}>
+          <Head />
+          <APIProvider value={API}>
+            <Surface>
+              <Document>
+                <ToolTip id={TOOLTIP_ID} />
 
-              {/* <Toaster position="bottom-right" /> Turned off for now */}
+                {/* <Toaster position="bottom-right" /> Turned off for now */}
 
-              <div className={styles.container}>
-                <Content {...{ children }} />
-              </div>
-            </Document>
-          </Surface>
-        </APIProvider>
-      </GlobalProvider>
+                <div className={styles.container}>
+                  <Content {...{ children }} />
+                </div>
+              </Document>
+            </Surface>
+          </APIProvider>
+        </GlobalProvider>
+      </BrowserRouter>
     </>
   );
 };

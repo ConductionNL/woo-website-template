@@ -4,9 +4,7 @@
   "private": true,
   "description": "Product Website Template",
   "author": "Conduction",
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "scripts": {
     "dev": "gatsby develop",
     "develop": "gatsby develop",
@@ -26,14 +24,15 @@
     "prepare": "cd .. && husky install"
   },
   "dependencies": {
+    "@amsterdam/design-system-react": "^0.14.1",
     "@conduction/components": "2.2.51",
-    "@conduction/theme": "1.1.38",
+    "@conduction/theme": "file:../../conduction-theme",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "6.5.2",
     "@fortawesome/free-regular-svg-icons": "6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@gemeente-denhaag/process-steps": "0.1.0-alpha.145",
+    "@gemeente-denhaag/components-react": "^2.0.7",
     "@nl-design-system-unstable/amsterdam-design-tokens": "^1.0.0-alpha.161",
     "@nl-design-system-unstable/bodegraven-reeuwijk-design-tokens": "^1.0.0-alpha.154",
     "@nl-design-system-unstable/borne-design-tokens": "^1.0.0-alpha.154",
@@ -94,6 +93,8 @@
     "react-minimal-pie-chart": "^8.4.0",
     "react-paginate": "^8.2.0",
     "react-query": "^3.39.3",
+    "react-router": "^7.2.0",
+    "react-router-dom": "^7.2.0",
     "react-select": "^5.8.0",
     "sass": "^1.72.0",
     "showdown": "^2.1.0",

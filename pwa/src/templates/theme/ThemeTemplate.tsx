@@ -1,7 +1,14 @@
 import * as React from "react";
 import * as styles from "./ThemeTemplate.module.css";
 import clsx from "clsx";
-import ProcessSteps from "@gemeente-denhaag/process-steps";
+import {
+  Sidenav,
+  SidenavList,
+  SidenavItem,
+  SidenavLink,
+  SidenavLinkLabel,
+  ProcessSteps,
+} from "@gemeente-denhaag/components-react";
 import { useFiltersContext } from "../../context/filters";
 import {
   CardHeader,
@@ -68,6 +75,11 @@ import {
   Textbox,
   FormFieldDescription,
   Fieldset,
+  StatusBadge,
+  Select,
+  SelectOption,
+  Accordion,
+  AccordionProvider,
 } from "@utrecht/component-library-react";
 import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
@@ -78,6 +90,8 @@ import {
   faCircleCheck,
   faCircleInfo,
   faCircleUser,
+  faCube,
+  faDashboard,
   faWarning,
 } from "@fortawesome/free-solid-svg-icons";
 import { getTokenValue } from "../../services/getTokenValue";
@@ -91,14 +105,17 @@ import { SelectCreate } from "@conduction/components/lib/components/formFields";
 import { SELECT_CREATE, SELECT_MULTIPLE, SELECT_SINGLE } from "../../data/SelectData";
 import { Calendar } from "@utrecht/component-library-react/dist/Calendar";
 import { addWeeks, addYears } from "date-fns";
+import { AcCard, AcFlex, AcLink } from "../../components/tilburg/components";
 
 export const ThemeTemplate: React.FC = () => {
   const [currentPage, setCurrentPage] = React.useState<number>(1);
   const [buttonsDisabled, setButtonsDisabled] = React.useState<boolean>(false);
   const [selectMaxWith, setSelectMaxWith] = React.useState<boolean>(true);
+  const [accordionMaxWith, setAccordionMaxWith] = React.useState<boolean>(true);
   const [refreshPieChartColor, setRefreshPieChartColor] = React.useState<boolean>(true);
   const [radioButtonChecked, setRadioButtonChecked] = React.useState<string>("checked");
   const [tabIndex, setTabIndex] = React.useState(0);
+  const [sidenavCurrent, setSidenavCurrent] = React.useState<string>("dashboard");
 
   const { gatsbyContext } = useGatsbyContext();
 
@@ -152,7 +169,17 @@ export const ThemeTemplate: React.FC = () => {
     <Page>
       <PageContent className={styles.container}>
         <h2>Utrecht Components:</h2>
+        <div>
+          <h3 className={styles.header}>Accordion:</h3>
+          <div>
+            <button onClick={() => setAccordionMaxWith(!accordionMaxWith)}>toggle maxwith</button>:{" "}
+            <span>{accordionMaxWith.toString()}</span>
+          </div>
 
+          <div className={clsx(accordionMaxWith && styles.accordionMaxWith)}>
+            <AccordionProvider sections={[{ label: "Accordion Item Header", body: "Accordion Item Content" }]} />
+          </div>
+        </div>
         <div>
           <h3 className={styles.header}>Alerts:</h3>
           <section className={styles.section}>
@@ -186,6 +213,50 @@ export const ThemeTemplate: React.FC = () => {
         <div>
           <h3 className={styles.header}>Badge / DataBadge:</h3>
           <DataBadge className={styles.tagWidth}>DataBadge</DataBadge>
+        </div>
+
+        <div>
+          <h3 className={styles.header}>Status Badge:</h3>
+          <section className={styles.sectionColumn}>
+            <span className={styles.statusBadgeLabel}>Default:</span>
+            <StatusBadge className={styles.tagWidth}>StatusBadge</StatusBadge>
+
+            <span className={styles.statusBadgeLabel}>Success:</span>
+            <StatusBadge className={styles.tagWidth} status="success">
+              StatusBadge
+            </StatusBadge>
+
+            <span className={styles.statusBadgeLabel}>Warning:</span>
+            <StatusBadge className={styles.tagWidth} status="warning">
+              StatusBadge
+            </StatusBadge>
+
+            <span className={styles.statusBadgeLabel}>Error:</span>
+            <StatusBadge className={styles.tagWidth} status="error">
+              StatusBadge
+            </StatusBadge>
+
+            <span className={styles.statusBadgeLabel}>Safe:</span>
+            <StatusBadge className={styles.tagWidth} status="safe">
+              StatusBadge
+            </StatusBadge>
+            <span className={styles.statusBadgeLabel}>Danger:</span>
+            <StatusBadge className={styles.tagWidth} status="danger">
+              StatusBadge
+            </StatusBadge>
+            <span className={styles.statusBadgeLabel}>Active:</span>
+            <StatusBadge className={styles.tagWidth} status="active">
+              StatusBadge
+            </StatusBadge>
+            <span className={styles.statusBadgeLabel}>Valid:</span>
+            <StatusBadge className={styles.tagWidth} status="valid">
+              StatusBadge
+            </StatusBadge>
+            <span className={styles.statusBadgeLabel}>Invalid:</span>
+            <StatusBadge className={styles.tagWidth} status="invalid">
+              StatusBadge
+            </StatusBadge>
+          </section>
         </div>
 
         <div>
@@ -469,6 +540,15 @@ export const ThemeTemplate: React.FC = () => {
           ))}
         </div>
 
+        <div id={"currentwork"}>
+          <h3 className={styles.header}>Select:</h3>
+          <Select>
+            <SelectOption value="1">Option 1</SelectOption>
+            <SelectOption value="2">Option 2</SelectOption>
+            <SelectOption value="3">Option 3</SelectOption>
+          </Select>
+        </div>
+
         <div>
           <h3 className={styles.header}>Seperator:</h3>
           <Separator />
@@ -609,101 +689,122 @@ export const ThemeTemplate: React.FC = () => {
 
         <h2>Den Haag Components:</h2>
         <div>
-          <div>
-            <h3 className={styles.header}>Process Steps:</h3>
-            <ProcessSteps
-              steps={[
-                {
-                  id: "cc18f54d-aadd-498f-b518-2fc74ce8e9b6",
-                  marker: 1,
-                  status: "checked",
-                  title: "Checked process step",
-                  meta: (
-                    <div>
-                      <Paragraph>This is a checked process step</Paragraph>
-                    </div>
-                  ),
-                },
-                {
-                  id: "12ca94b2-7179-4ae8-9032-dad49c294ff2",
-                  marker: 2,
-                  status: "checked",
-                  title: "Checked process step with multiple steps",
-                  steps: [
-                    {
-                      id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
-                      status: "checked",
-                      title: "checked process step 2-1",
-                    },
-                    {
-                      id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
-                      status: "checked",
-                      title: "checked process step 2-2",
-                    },
-                  ],
-                },
-                {
-                  id: "e51f2b4c-d62f-4347-8dc1-c83a9be0afc2",
-                  status: "current",
-                  marker: 3,
-                  title: "Current process step with steps",
-                  steps: [
-                    {
-                      id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
-                      status: "current",
-                      title: "current process step 3-1",
-                    },
-                    {
-                      id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
-                      status: "warning",
-                      title: "warning process step 3-2",
-                    },
-                    {
-                      id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
-                      status: "error",
-                      title: "error process step 3-3",
-                    },
-                  ],
-                },
-                {
-                  id: "1fc162c6-f1ab-4d1b-9007-d891cbd5614b",
-                  title: "process step normal",
-                  marker: 4,
-                  date: translateDate(i18n.language, todayIso),
-                  meta: (
-                    <Paragraph>
-                      This is a normal process step with a link{" "}
-                      <Link
-                        href="/"
-                        onClick={(e: any) => {
-                          e.preventDefault(), console.log("click");
-                        }}
-                        tabIndex={0}
-                      >
-                        A Link!
-                      </Link>
-                      .
-                    </Paragraph>
-                  ),
-                },
-                {
-                  id: "1fc162c6-f1ab-4d1b-9007-d891cbd5614b23r3",
-                  title: "process step warning",
-                  status: "warning",
-                  marker: 5,
-                  meta: <Paragraph>This process step has a warning.</Paragraph>,
-                },
-                {
-                  id: "1fc162c6-f1ab-4d1b-9007-d891cbd5614bfaefa",
-                  title: "error",
-                  status: "error",
-                  marker: 6,
-                  date: "zondag 26 mei 2024",
-                  meta: <Paragraph>This process step has an error.</Paragraph>,
-                },
-              ]}
-            />
-          </div>
+          <h3 className={styles.header}>Process Steps:</h3>
+          <ProcessSteps
+            steps={[
+              {
+                id: "cc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                marker: 1,
+                status: "checked",
+                title: "Checked process step",
+                meta: (
+                  <div>
+                    <Paragraph>This is a checked process step</Paragraph>
+                  </div>
+                ),
+              },
+              {
+                id: "12ca94b2-7179-4ae8-9032-dad49c294ff2",
+                marker: 2,
+                status: "checked",
+                title: "Checked process step with multiple steps",
+                steps: [
+                  {
+                    id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                    status: "checked",
+                    title: "checked process step 2-1",
+                  },
+                  {
+                    id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                    status: "checked",
+                    title: "checked process step 2-2",
+                  },
+                ],
+              },
+              {
+                id: "e51f2b4c-d62f-4347-8dc1-c83a9be0afc2",
+                status: "current",
+                marker: 3,
+                title: "Current process step with steps",
+                steps: [
+                  {
+                    id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                    status: "current",
+                    title: "current process step 3-1",
+                  },
+                  {
+                    id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                    status: "warning",
+                    title: "warning process step 3-2",
+                  },
+                  {
+                    id: "dc18f54d-aadd-498f-b518-2fc74ce8e9b6",
+                    status: "error",
+                    title: "error process step 3-3",
+                  },
+                ],
+              },
+              {
+                id: "1fc162c6-f1ab-4d1b-9007-d891cbd5614b",
+                title: "process step normal",
+                marker: 4,
+                date: translateDate(i18n.language, todayIso),
+                meta: (
+                  <Paragraph>
+                    This is a normal process step with a link{" "}
+                    <Link
+                      href="/"
+                      onClick={(e: any) => {
+                        e.preventDefault(), console.log("click");
+                      }}
+                      tabIndex={0}
+                    >
+                      A Link!
+                    </Link>
+                    .
+                  </Paragraph>
+                ),
+              },
+              {
+                id: "1fc162c6-f1ab-4d1b-9007-d891cbd5614b23r3",
+                title: "process step warning",
+                status: "warning",
+                marker: 5,
+                meta: <Paragraph>This process step has a warning.</Paragraph>,
+              },
+              {
+                id: "1fc162c6-f1ab-4d1b-9007-d891cbd5614bfaefa",
+                title: "error",
+                status: "error",
+                marker: 6,
+                date: "zondag 26 mei 2024",
+                meta: <Paragraph>This process step has an error.</Paragraph>,
+              },
+            ]}
+          />
+        </div>
+        <div>
+          <h3 className={styles.header}>SideNav:</h3>
+          <Sidenav>
+            <SidenavList>
+              <SidenavItem>
+                <SidenavLink onClick={() => setSidenavCurrent("dashboard")} current={sidenavCurrent === "dashboard"}>
+                  <FontAwesomeIcon icon={faDashboard} />
+                  Dashboard
+                </SidenavLink>
+              </SidenavItem>
+
+              <SidenavItem>
+                <SidenavLink
+                  onClick={() => setSidenavCurrent("voorzieningen")}
+                  current={sidenavCurrent === "voorzieningen"}
+                >
+                  <FontAwesomeIcon icon={faCube} />
+                  Voorzieningen
+                </SidenavLink>
+              </SidenavItem>
+            </SidenavList>
+          </Sidenav>
         </div>
 
         <h2>OpenCatalogi Components:</h2>
@@ -731,6 +832,34 @@ export const ThemeTemplate: React.FC = () => {
               labelPosition={0}
             />
           </div>
+        </div>
+
+        <h2>Tilburg Components:</h2>
+        <div>
+          <h3 className={styles.header}>Card:</h3>
+          <AcCard searchResult padding="md" skeleton={false}>
+            <Heading3>Heading3</Heading3>
+            <Paragraph>Paragraph</Paragraph>
+            <AcFlex justifyContent="between" className="meta">
+              <AcFlex alignItems="center" spacing="sm">
+                <Paragraph small>Paragraph</Paragraph>
+                <Paragraph small>Paragraph</Paragraph>
+                <Paragraph small>Paragraph</Paragraph>
+              </AcFlex>
+              <AcLink href={`/theme`}>
+                <span className="sr-only">Paragraph</span>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </AcLink>
+            </AcFlex>
+          </AcCard>
+        </div>
+
+        <div>
+          <h3 className={styles.header}>Link:</h3>
+          <AcLink href={`/publicatie/1`}>
+            <span className="sr-only">Link</span>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </AcLink>
         </div>
 
         <h2>Conduction Components:</h2>
@@ -833,7 +962,7 @@ export const ThemeTemplate: React.FC = () => {
           </section>
         </div>
 
-        <div id={"currentwork"}>
+        <div>
           <h3 className={styles.header}>TopNavigation:</h3>
           <section className={styles.section}>
             <div>PrimaryTopNav:</div>

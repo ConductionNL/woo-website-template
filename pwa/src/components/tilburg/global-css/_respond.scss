@@ -1,0 +1,17 @@
+@mixin respond-min($minWidth) {
+  @media screen and (min-width: $minWidth) {
+    @content;
+  }
+}
+
+@mixin respond-max($maxWidth) {
+  @media screen and (max-width: $maxWidth) {
+    @content;
+  }
+}
+
+@mixin respond-minmax($minWidth, $maxWidth) {
+  @media screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+    @content;
+  }
+}

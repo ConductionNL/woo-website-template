@@ -21,6 +21,15 @@
   margin-block-end: var(--utrecht-space-block-lg);
 }
 
+.sectionColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionColumn > *:not(:last-child, .statusBadgeLabel) {
+  margin-block-end: var(--utrecht-space-block-lg);
+}
+
 .header {
   margin-block-start: 0px;
   margin-block-end: 10px;
@@ -62,6 +71,9 @@
 
 .SelectMaxWith {
   max-width: 250px;
+}
+.accordionMaxWith {
+  max-width: 500px;
 }
 
 /* Component CSS */
