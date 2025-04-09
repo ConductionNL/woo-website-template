@@ -24,7 +24,8 @@
     "prepare": "cd .. && husky install"
   },
   "dependencies": {
-    "@amsterdam/design-system-react": "^0.14.1",
+    "@amsterdam/design-system-react": "^0.9.0",
+    "@amsterdam/design-system-css": "^0.9.0",
     "@conduction/components": "2.2.51",
     "@conduction/theme": "file:../../conduction-theme",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -63,7 +64,7 @@
     "@types/qs": "^6.9.14",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.23",
-    "@utrecht/component-library-react": "^3.0.1-alpha.27",
+    "@utrecht/component-library-react": "9.0.3",
     "@utrecht/design-tokens": "^1.0.0-alpha.640",
     "axios": "^1.6.8",
     "clsx": "^2.1.0",

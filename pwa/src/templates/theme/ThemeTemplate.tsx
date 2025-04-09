@@ -78,9 +78,9 @@ import {
   StatusBadge,
   Select,
   SelectOption,
-  Accordion,
   AccordionProvider,
-} from "@utrecht/component-library-react";
+} from "@utrecht/component-library-react/dist/css-module";
+import { Pagination as AmsPagination, DateInput } from "@amsterdam/design-system-react";
 import { useTranslation } from "react-i18next";
 import { navigate } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -111,6 +111,7 @@ export const ThemeTemplate: React.FC = () => {
   const [currentPage, setCurrentPage] = React.useState<number>(1);
   const [buttonsDisabled, setButtonsDisabled] = React.useState<boolean>(false);
   const [selectMaxWith, setSelectMaxWith] = React.useState<boolean>(true);
+  const [utrechtSelectMaxWith, setUtrechtSelectMaxWith] = React.useState<boolean>(true);
   const [accordionMaxWith, setAccordionMaxWith] = React.useState<boolean>(true);
   const [refreshPieChartColor, setRefreshPieChartColor] = React.useState<boolean>(true);
   const [radioButtonChecked, setRadioButtonChecked] = React.useState<string>("checked");
@@ -542,11 +543,38 @@ export const ThemeTemplate: React.FC = () => {
 
         <div id={"currentwork"}>
           <h3 className={styles.header}>Select:</h3>
-          <Select>
-            <SelectOption value="1">Option 1</SelectOption>
-            <SelectOption value="2">Option 2</SelectOption>
-            <SelectOption value="3">Option 3</SelectOption>
-          </Select>
+          <section className={styles.section}>
+            <div>
+              <button onClick={() => setUtrechtSelectMaxWith(!utrechtSelectMaxWith)}>toggle maxwith</button>:{" "}
+              <span>{utrechtSelectMaxWith.toString()}</span>
+            </div>
+            <span>Normal</span>
+            <div className={clsx(utrechtSelectMaxWith && styles.SelectMaxWith)}>
+              <Select>
+                <SelectOption value="1">Option 1</SelectOption>
+                <SelectOption value="2">Option 2</SelectOption>
+                <SelectOption value="3">Option 3</SelectOption>
+              </Select>
+            </div>
+
+            <span>Disabled</span>
+            <div className={clsx(utrechtSelectMaxWith && styles.SelectMaxWith)}>
+              <Select disabled>
+                <SelectOption value="1">Option 1</SelectOption>
+                <SelectOption value="2">Option 2</SelectOption>
+                <SelectOption value="3">Option 3</SelectOption>
+              </Select>
+            </div>
+
+            <span>Invalid</span>
+            <div className={clsx(utrechtSelectMaxWith && styles.SelectMaxWith)}>
+              <Select invalid>
+                <SelectOption value="1">Option 1</SelectOption>
+                <SelectOption value="2">Option 2</SelectOption>
+                <SelectOption value="3">Option 3</SelectOption>
+              </Select>
+            </div>
+          </section>
         </div>
 
         <div>
@@ -860,6 +888,33 @@ export const ThemeTemplate: React.FC = () => {
             <span className="sr-only">Link</span>
             <FontAwesomeIcon icon={faChevronRight} />
           </AcLink>
+        </div>
+
+        <h2>Amsterdam Components:</h2>
+        <div>
+          <h3 className={styles.header}>DateInput:</h3>
+          <DateInput />
+        </div>
+
+        <div>
+          <h3 className={styles.header}>Pagination:</h3>
+          <AmsPagination
+            totalPages={15}
+            page={1}
+            nextLabel=""
+            previousLabel=""
+            onPageChange={(page) => console.log(page)}
+          />
+          <Pagination
+            ariaLabels={{
+              pagination: t("Pagination"),
+              previousPage: t("Previous page"),
+              nextPage: t("Next page"),
+              page: t("Page"),
+            }}
+            totalPages={15}
+            {...{ currentPage, setCurrentPage }}
+          />
         </div>
 
         <h2>Conduction Components:</h2>

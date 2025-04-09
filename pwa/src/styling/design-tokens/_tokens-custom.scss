@@ -3,70 +3,7 @@
 .dimpact-theme,
 .opencatalogi-theme,
 .migrato-theme {
-  --ams-pagination-button-border-color: transparent;
-  --ams-pagination-button-background-color: transparent;
-  --ams-pagination-button-active-border-color: transparent;
-  --ams-pagination-button-active-background-color: transparent;
-  --ams-pagination-button-active-text-decoration: underline;
-  --ams-pagination-button-text-decoration: none;
-  --ams-pagination-button-hover-border-color: transparent;
-  --ams-pagination-button-hover-background-color: transparent;
-  --ams-pagination-button-hover-text-decoration: underline;
-  --ams-pagination-button-focus-text-decoration: none;
-  --ams-pagination-button-border-radius: 0px;
-  --ams-pagination-button-current-border-color: transparent;
-  --ams-pagination-button-current-text-decoration: none;
-  --ams-pagination-relative-link-disabled-border-color: transparent;
-  --ams-pagination-relative-link-disabled-background-color: transparent;
-  --ams-pagination-relative-link-border-radius: 0px;
-  --ams-pagination-relative-link-text-decoration: none;
-  --ams-pagination-relative-link-hover-text-decoration: underline;
-  --ams-pagination-relative-link-hover-border-color: transparent;
-  --ams-pagination-relative-link-hover-background-color: transparent;
-  --ams-pagination-relative-link-focus-text-decoration: none;
-  --ams-pagination-relative-link-active-text-decoration: underline;
-  --ams-pagination-relative-link-active-border-color: transparent;
-  --ams-pagination-relative-link-active-background-color: transparent;
-  --ams-pagination-relative-link-border-color: transparent;
-  --ams-pagination-relative-link-background-color: transparent;
-  --ams-pagination-relative-link-padding-inline-end: 0px;
-  --ams-pagination-relative-link-padding-inline-start: 0px;
-
-  --ams-date-input-background-color: var(--utrecht-textbox-background-color);
-  --ams-date-input-box-shadow: '';
-  --ams-date-input-color: var(--utrecht-textbox-color);
-  --ams-date-input-font-family: var(--utrecht-textbox-font-family);
-  --ams-date-input-font-size: var(--utrecht-textbox-font-size);
-  --ams-date-input-font-weight: var(--utrecht-textbox-font-weight);
-  --ams-date-input-line-height: var(--utrecht-textbox-line-height);
-  --ams-date-input-min-block-size: var(--utrecht-textbox-min-block-size);
-  --ams-date-input-min-inline-size: var(--utrecht-textbox-min-inline-size);
-  --ams-date-input-outline-offset: var(--utrecht-textbox-outline-offset);
-  --ams-date-input-padding-block: var(--utrecht-textbox-padding-block-start);
-  --ams-date-input-padding-inline: var(--utrecht-textbox-padding-inline-start);
-  --ams-date-input-calender-picker-indicator-background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=');
-  --ams-date-input-hover-calender-picker-indicator-background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=');
-  --ams-date-input-border-color: var(--utrecht-textbox-border-color);
-  --ams-date-input-border-style: solid;
-  --ams-date-input-border-width: var(--utrecht-textbox-border-width);
-  --ams-date-input-border-radius: var(--utrecht-textbox-border-radius);
-  --ams-date-input-margin-block: var(--utrecht-textbox-margin-block);
-
   --utrecht-link-icon-margin-inline: var(--tilburg-space-text-beetle);
-
-  --utrecht-textbox-border-block-end-width: auto;
-  --utrecht-textbox-max-inline-size: 400px;
-  --utrecht-skip-link-border-color: transparent;
-  --utrecht-skip-link-focus-border-color: transparent;
-  --utrecht-select-max-inline-size: 400px;
-  --utrecht-select-border-bottom-width: auto;
-  --utrecht-link-text-underline-offset: auto;
-  --utrecht-link-text-decoration-thickness: auto;
-  --utrecht-link-hover-text-decoration-thickness: auto;
-  --utrecht-link-focus-text-decoration-thickness: auto;
-  --utrecht-form-label-checkbox-font-weight: var(
-    --tilburg-typography-font-weight-normal
-  );
 
   --tilburg-status-badge-background-color: var(--tilburg-color-pink-100);
   --tilburg-status-badge-padding-block: var(--tilburg-space-block-flea);
@@ -85,7 +22,9 @@
   --tilburg-form-control-placeholder-color: var(--tilburg-color-gray-600);
   --tilburg-form-control-read-only-color: var(--tilburg-color-gray-950);
   --tilburg-form-control-read-only-border-color: var(--tilburg-color-gray-500);
-  --tilburg-form-control-read-only-background-color: var(--tilburg-color-gray-50);
+  --tilburg-form-control-read-only-background-color: var(
+    --tilburg-color-gray-50
+  );
   --tilburg-form-control-invalid-color: var(--tilburg-color-red-300);
   --tilburg-form-control-invalid-border-width: var(--tilburg-border-width-md);
   --tilburg-form-control-invalid-border-color: var(--tilburg-color-red-300);
@@ -100,7 +39,9 @@
   --tilburg-form-control-focus-background-color: var(--tilburg-color-white);
   --tilburg-form-control-disabled-color: var(--tilburg-color-gray-500);
   --tilburg-form-control-disabled-border-color: var(--tilburg-color-gray-500);
-  --tilburg-form-control-disabled-background-color: var(--tilburg-color-gray-50);
+  --tilburg-form-control-disabled-background-color: var(
+    --tilburg-color-gray-50
+  );
   --tilburg-form-control-disabled-accent-color: var(--tilburg-color-gray-500);
   --tilburg-form-control-active-color: var(--tilburg-color-gray-950);
   --tilburg-form-control-active-border-width: var(--tilburg-border-width-md);
@@ -116,11 +57,10 @@
   --tilburg-box-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
   --tilburg-box-shadow-sm: [object Object];
 
-  
   --tilburg-box-shadow-lg: 0 1ratpx rgba(0, 0, 0, 0.1);
   --tilburg-box-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
   --tilburg-box-shadow-sm: [object Object];
-  --tilburg-typography-font-family-secondary: 'Roboto', sans-serif;
+  --tilburg-typography-font-family-secondary: "Roboto", sans-serif;
   --tilburg-typography-font-family-primary: TradeGothicCondensed18;
   --tilburg-typography-font-weight-bold: 700;
   --tilburg-typography-font-weight-normal: 400;

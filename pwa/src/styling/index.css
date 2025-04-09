@@ -1,5 +1,8 @@
 /* Package includes */
 @import "react-loading-skeleton/dist/skeleton.css";
+@import "@amsterdam/design-system-css/dist/pagination/pagination.css";
+/* @import '@amsterdam/design-system-css/dist/date-input/date-input.css'; */
+
 
 /* Design Tokens maintained by Conduction */
 @import "../../node_modules/@conduction/theme/conduction-design-tokens/dist/index.css";
