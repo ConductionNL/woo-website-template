@@ -5,9 +5,11 @@
 >
 > Meer weten over deze oplossing? Dat kan! Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder. Uiteraard kan je ook altijd mailen naar [info@conduction.nl](mailto:info@conduction.nl)
 >
-> Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
+> Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd. Iedere tweede woensdag van de maand is de community meeting.
+> De meeting is iedere maand te volgen [via deze link](https://meet.google.com/uvg-qspd-zbd)
 > Terug kijken afgelopen webinars en meetings?
 >
+> - [09-04-2025 | Community Meeting](https://youtu.be/dIc9XSkXdRQ)
 > - [12-03-2025 | Community Meeting](https://youtu.be/M9xOWcUOK2s)
 > - [15-01-2025 | Community Meeting](https://youtu.be/uV-hQwdz2Bo)
 > - [11-12-2024 | Community Meeting](https://www.youtube.com/watch?v=7vJ88exALJs)
