@@ -5,25 +5,64 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: var(--tilburg-color-white);
-  border-radius: var(--tilburg-border-radius-md);
-  border: var(--tilburg-border-width-sm) solid var(--tilburg-color-gray-200);
+  background-color: var(
+    --tilburg-search-card-background-color,
+    var(--tilburg-color-white)
+  );
+  border-radius: var(
+    --tilburg-search-card-border-radius,
+    var(--tilburg-border-radius-md)
+  );
+  border: var(
+      --tilburg-search-card-border-width,
+      var(--tilburg-border-width-sm)
+    )
+    var(--tilburg-search-card-border-style, solid)
+    var(--tilburg-search-card-border-color, var(--tilburg-color-gray-200));
+  padding-inline-start: var(--tilburg-search-card-padding-inline-start);
+  padding-inline-end: var(--tilburg-search-card-padding-inline-end);
+  padding-block-start: var(--tilburg-search-card-padding-block-start);
+  padding-block-end: var(--tilburg-search-card-padding-block-end);
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--tilburg-search-card-title-color, inherit);
+    font-weight: var(--tilburg-search-card-title-font-weight, inherit);
+  }
+
+  &:hover {
+    :is(h1, h2, h3, h4, h5, h6) {
+      color: var(--tilburg-search-card-hover-title-color, inherit);
+      font-weight: var(--tilburg-search-card-hover-title-font-weight, inherit);
+    }
+  }
 
   &__content {
     display: flex;
     flex-direction: column;
-    gap: var(--tilburg-space-block-snail);
+    gap: var(
+      --tilburg-search-card-content-gap,
+      var(--tilburg-space-block-snail)
+    );
   }
 
   img {
     aspect-ratio: 16/9;
-    border-top-left-radius: var(--tilburg-border-radius-md);
-    border-top-right-radius: var(--tilburg-border-radius-md);
+    border-top-left-radius: var(
+      --tilburg-search-card-border-radius,
+      var(--tilburg-border-radius-md)
+    );
+    border-top-right-radius: var(
+      --tilburg-search-card-border-radius,
+      var(--tilburg-border-radius-md)
+    );
     object-fit: cover;
   }
 
   &--blue {
-    background-color: var(--tilburg-color-blue-100);
+    background-color: var(
+      --tilburg-search-card-blue-background-color,
+      var(--tilburg-color-blue-100)
+    );
     border: 0;
   }
 
@@ -37,13 +76,19 @@
         inset: 0;
         inline-size: 100%;
         block-size: 100%;
-        border-radius: var(--tilburg-border-radius-md);
-        border: 2px solid transparent;
+        border-radius: var(
+          --tilburg-search-card-border-radius,
+          var(--tilburg-border-radius-md)
+        );
+        border: var(--tilburg-search-card-border-width, 2px)
+          var(--tilburg-search-card-border-style, solid)
+          var(--tilburg-search-card-border-color, transparent);
         z-index: 1;
         transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       svg {
+        color: var(--tilburg-search-card-icon-color, inherit);
         transition: translate 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
@@ -53,7 +98,12 @@
         }
 
         svg {
-          translate: var(--tilburg-space-block-beetle) 0;
+          color: var(--tilburg-search-card-hover-icon-color, inherit);
+          translate: var(
+              --tilburg-search-card-hover-translate,
+              var(--tilburg-space-block-beetle)
+            )
+            0;
         }
       }
     }
@@ -63,13 +113,19 @@
     a {
       &:where(:hover, :focus-visible) {
         &:after {
-          box-shadow: var(--tilburg-box-shadow-md);
+          box-shadow: var(
+            --tilburg-search-card-hover-box-shadow,
+            var(--tilburg-box-shadow-md)
+          );
         }
       }
     }
 
     .meta p {
-      color: var(--tilburg-color-blue-500);
+      color: var(
+        --tilburg-search-card-meta-color,
+        var(--tilburg-color-blue-500)
+      );
       font-weight: bold;
     }
   }
@@ -77,25 +133,37 @@
   &--padding {
     &-sm {
       .ac-card__content {
-        padding: var(--tilburg-space-block-mouse);
+        padding: var(
+          --tilburg-search-card-padding-sm,
+          var(--tilburg-space-block-mouse)
+        );
       }
     }
 
     &-md {
       .ac-card__content {
-        padding: var(--tilburg-space-block-rabbit);
+        padding: var(
+          --tilburg-search-card-padding-md,
+          var(--tilburg-space-block-rabbit)
+        );
       }
     }
 
     &-default {
       .ac-card__content {
-        padding: var(--tilburg-space-block-cat);
+        padding: var(
+          --tilburg-search-card-padding-default,
+          var(--tilburg-space-block-cat)
+        );
       }
     }
 
     &-lg {
       .ac-card__content {
-        padding: var(--tilburg-space-block-dog);
+        padding: var(
+          --tilburg-search-card-padding-lg,
+          var(--tilburg-space-block-dog)
+        );
       }
     }
   }

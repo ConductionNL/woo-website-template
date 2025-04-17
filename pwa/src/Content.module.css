@@ -8,7 +8,7 @@
   border-block-end: var(--utrecht-page-header-border-block-end);
   border-inline-start: var(--utrecht-page-header-border-inline-start);
   border-inline-end: var(--utrecht-page-header-border-inline-end);
-  display: var(--utrecht-page-header-display, grid);
+  display: var(--utrecht-page-header-display, grid) !important;
 }
 
 .pageContent {

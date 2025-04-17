@@ -541,7 +541,7 @@ export const ThemeTemplate: React.FC = () => {
           ))}
         </div>
 
-        <div id={"currentwork"}>
+        <div>
           <h3 className={styles.header}>Select:</h3>
           <section className={styles.section}>
             <div>
@@ -884,7 +884,7 @@ export const ThemeTemplate: React.FC = () => {
 
         <div>
           <h3 className={styles.header}>Link:</h3>
-          <AcLink href={`/publicatie/1`}>
+          <AcLink href={`/theme`}>
             <span className="sr-only">Link</span>
             <FontAwesomeIcon icon={faChevronRight} />
           </AcLink>
@@ -896,7 +896,7 @@ export const ThemeTemplate: React.FC = () => {
           <DateInput />
         </div>
 
-        <div>
+        <div id="currentwork">
           <h3 className={styles.header}>Pagination:</h3>
           <AmsPagination
             totalPages={15}
@@ -904,16 +904,6 @@ export const ThemeTemplate: React.FC = () => {
             nextLabel=""
             previousLabel=""
             onPageChange={(page) => console.log(page)}
-          />
-          <Pagination
-            ariaLabels={{
-              pagination: t("Pagination"),
-              previousPage: t("Previous page"),
-              nextPage: t("Next page"),
-              page: t("Page"),
-            }}
-            totalPages={15}
-            {...{ currentPage, setCurrentPage }}
           />
         </div>
 
@@ -1052,6 +1042,13 @@ export const ThemeTemplate: React.FC = () => {
             totalPages={15}
             {...{ currentPage, setCurrentPage }}
           />
+          {/* <AmsPagination
+            totalPages={15}
+            page={1}
+            nextLabel=""
+            previousLabel=""
+            onPageChange={(page) => console.log(page)}
+          /> */}
         </div>
 
         <div>
