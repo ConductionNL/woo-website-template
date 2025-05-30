@@ -10,12 +10,6 @@
     --tilburg-search-card-border-radius,
     var(--tilburg-border-radius-md)
   );
-  border: var(
-      --tilburg-search-card-border-width,
-      var(--tilburg-border-width-sm)
-    )
-    var(--tilburg-search-card-border-style, solid)
-    var(--tilburg-search-card-border-color, var(--tilburg-color-gray-200));
   padding-inline-start: var(--tilburg-search-card-padding-inline-start);
   padding-inline-end: var(--tilburg-search-card-padding-inline-end);
   padding-block-start: var(--tilburg-search-card-padding-block-start);

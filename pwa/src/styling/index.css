@@ -75,6 +75,5 @@
 @import "../components/tilburg/css/_ac-navigation.module.css";
 @import "../components/tilburg/css/_ac-footer.module.css";
 @import "./design-tokens/_tokens-custom.scss";
-@import "./design-tokens/_tokens-dimpact.scss";
 @import "./design-tokens/_tokens-migrato.scss";
 @import "./design-tokens/vng-design-tokens.css";

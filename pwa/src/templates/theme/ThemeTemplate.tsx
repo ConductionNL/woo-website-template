@@ -872,25 +872,8 @@ export const ThemeTemplate: React.FC = () => {
           <h3 className={styles.header}>Header:</h3>
           <span>Check the header at the top of the page</span>
         </div>
-        <div>
-          <h3 className={styles.header}>Search Card:</h3>
-          <AcCard searchResult padding="md" skeleton={false}>
-            <Heading3>Heading3</Heading3>
-            <Paragraph>Paragraph</Paragraph>
-            <AcFlex justifyContent="between" className="meta">
-              <AcFlex alignItems="center" spacing="sm">
-                <Paragraph small>Paragraph</Paragraph>
-                <Paragraph small>Paragraph</Paragraph>
-                <Paragraph small>Paragraph</Paragraph>
-              </AcFlex>
-              <AcLink href={`/theme`}>
-                <span className="sr-only">Paragraph</span>
-                <FontAwesomeIcon icon={faChevronRight} />
-              </AcLink>
-            </AcFlex>
-          </AcCard>
-        </div>
-        <div>
+
+        <div id="currentwork">
           <h3 className={styles.header}>Search Card:</h3>
           <AcCard searchResult padding="md" skeleton={false}>
             <Heading3>Heading3</Heading3>
@@ -923,7 +906,7 @@ export const ThemeTemplate: React.FC = () => {
           <DateInput />
         </div>
 
-        <div id="currentwork">
+        <div>
           <h3 className={styles.header}>Pagination:</h3>
           <AmsPagination
             totalPages={15}
