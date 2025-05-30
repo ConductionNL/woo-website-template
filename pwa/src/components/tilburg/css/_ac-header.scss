@@ -1,0 +1,120 @@
+@use '../global/breakpoints' as *;
+@use '../global/mixins/respond' as *;
+
+.ac-header {
+  --navigation-bar-height: 96px;
+  min-height: 50px;
+
+  position: relative;
+
+  @include respond-max($screen-md) {
+    --navigation-bar-height: 72px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--tilburg-space-column-mouse);
+  }
+
+  &__navigation-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    block-size: var(--navigation-bar-height);
+    background-color: var(--tilburg-header-background-color);
+  }
+
+  &__logo {
+    > * {
+      display: flex;
+      align-items: center;
+      margin-inline-start: 1rem;
+      gap: var(--tilburg-space-column-pig);
+      color: var(--tilburg-logo-color);
+      font-size: var(--tilburg-typography-font-size-3xl);
+      font-weight: var(--tilburg-typography-font-weight-bold);
+      font-family: var(--tilburg-typography-font-family-primary), sans-serif;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      @include respond-max($screen-md) {
+        gap: var(--tilburg-space-column-rabbit);
+        font-size: var(--tilburg-typography-font-size-2xl);
+      }
+
+      @include respond-max($screen-sm) {
+        font-size: var(--tilburg-typography-font-size-xl);
+      }
+    }
+
+    // small visual correction due to font-family rendering
+    .logo-text {
+      margin-block-start: 1rem;
+      color: var(--tilburg-header-logo-color, inherit);
+      @include respond-max($screen-sm) {
+        word-break: break-word;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+      inline-size: var(--navigation-bar-height);
+      block-size: var(--navigation-bar-height);
+    }
+  }
+
+  &__navigation-secondary {
+    background-color: var(
+      --conduction-primary-top-nav-background-color,
+      var(--tilburg-color-gray-50)
+    );
+
+    @include respond-max($screen-md) {
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &:has(.container:empty) {
+      padding: 0;
+    }
+  }
+  &__navigation-breadcrumb {
+    padding-block-start: var(
+      --utrecht-breadcrumb-nav-padding-block-start,
+      var(--tilburg-space-block-mouse)
+    );
+    padding-block-end: var(
+      --utrecht-breadcrumb-nav-padding-block-end,
+      var(--tilburg-space-block-mouse)
+    );
+    background-color: var(
+      --utrecht-breadcrumb-nav-background-color,
+      var(--tilburg-color-gray-50)
+    );
+
+    @include respond-max($screen-md) {
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &:has(.container:empty) {
+      padding: 0;
+    }
+  }
+
+  // remove margin from unnecessary p tag wrapper
+  p:has([class*='skip-link']) {
+    margin: 0;
+  }
+
+  // remove padding from first breadcrumb item to align with container
+  ol .utrecht-breadcrumb-nav__item:first-of-type a {
+    padding-inline-start: 0;
+  }
+}

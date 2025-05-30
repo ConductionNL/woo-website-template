@@ -3,7 +3,6 @@
 @import "@amsterdam/design-system-css/dist/pagination/pagination.css";
 /* @import '@amsterdam/design-system-css/dist/date-input/date-input.css'; */
 
-
 /* Design Tokens maintained by Conduction */
 @import "../../node_modules/@conduction/theme/conduction-design-tokens/dist/index.css";
 @import "../../node_modules/@conduction/theme/municipalities/leiden-design-tokens/dist/index.css";
@@ -72,6 +71,8 @@
 /* Custom Design Tokens */
 /* @import "../components/tilburg/css/_ac-card.scss";
 @import "../components/tilburg/css/_ac-flex.scss"; */
+@import "../components/tilburg/css/_ac-header.module.css";
+@import "../components/tilburg/css/_ac-navigation.module.css";
 @import "./design-tokens/_tokens-custom.scss";
 @import "./design-tokens/_tokens-dimpact.scss";
 @import "./design-tokens/_tokens-migrato.scss";

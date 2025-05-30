@@ -85,3 +85,7 @@
     var(--_utrecht-skip-link-inset, 0)
   ) !important;
 }
+
+.changeButton {
+  float: inline-end;
+}

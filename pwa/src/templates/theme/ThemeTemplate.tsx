@@ -864,7 +864,34 @@ export const ThemeTemplate: React.FC = () => {
 
         <h2>Tilburg Components:</h2>
         <div>
-          <h3 className={styles.header}>Card:</h3>
+          <h3 className={styles.header}>Footer:</h3>
+          <span>Check the footer at the bottom of the page</span>
+        </div>
+
+        <div>
+          <h3 className={styles.header}>Header:</h3>
+          <span>Check the header at the top of the page</span>
+        </div>
+        <div>
+          <h3 className={styles.header}>Search Card:</h3>
+          <AcCard searchResult padding="md" skeleton={false}>
+            <Heading3>Heading3</Heading3>
+            <Paragraph>Paragraph</Paragraph>
+            <AcFlex justifyContent="between" className="meta">
+              <AcFlex alignItems="center" spacing="sm">
+                <Paragraph small>Paragraph</Paragraph>
+                <Paragraph small>Paragraph</Paragraph>
+                <Paragraph small>Paragraph</Paragraph>
+              </AcFlex>
+              <AcLink href={`/theme`}>
+                <span className="sr-only">Paragraph</span>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </AcLink>
+            </AcFlex>
+          </AcCard>
+        </div>
+        <div>
+          <h3 className={styles.header}>Search Card:</h3>
           <AcCard searchResult padding="md" skeleton={false}>
             <Heading3>Heading3</Heading3>
             <Paragraph>Paragraph</Paragraph>
