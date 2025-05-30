@@ -61,6 +61,8 @@ import XxllncAccept from "./../../static/configFiles/other/xxllnc/xxllnc-accept.
 import Zuiddrecht from "./../../static/configFiles/other/zuiddrecht/zuiddrecht.json";
 import ZuiddrechtAccept from "./../../static/configFiles/other/zuiddrecht/zuiddrecht-accept.json";
 
+import OudeIjsselstreek from "./../../static/configFiles/municipalities/oude-ijsselstreek/oude-ijsselstreek.json";
+
 import { TGroupedSelectOption } from "@conduction/components/lib/components/formFields/select/select";
 
 export const getConfig = (themeOrDomainName: string): Record<string, any> | undefined => {
@@ -279,6 +281,10 @@ export const getConfig = (themeOrDomainName: string): Record<string, any> | unde
     case "conduction.accept.openwoo.app":
       return ConductionAccept;
 
+    case "oude-ijsselstreek-theme":
+    case "open.oude-ijsselstreek.nl":
+    case "oude-ijsselstreek.koophulpje.nl":
+      return OudeIjsselstreek;
     case "localhost":
       return Localhost;
 
