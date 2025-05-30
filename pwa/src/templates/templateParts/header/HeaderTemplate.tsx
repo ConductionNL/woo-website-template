@@ -21,7 +21,7 @@ interface HeaderTemplateProps {
 export const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ layoutClassName }) => {
   const { t, i18n } = useTranslation();
   const { gatsbyContext } = useGatsbyContext();
-  const [utrechtHeader, setUtrechtHeader] = React.useState(false);
+  const [utrechtHeader, setUtrechtHeader] = React.useState(true);
 
   const translatedCrumbs = [
     { crumbLabel: "OpenCatalogi", pathname: "/" },
