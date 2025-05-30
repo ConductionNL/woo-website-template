@@ -1,0 +1,326 @@
+[
+  {
+    "id": "fb3351dd-5798-4da9-a82c-e06b3a831879",
+    "objectType": "menu",
+    "_route": "opencatalogi.objects.update",
+    "name": "primaryTopnav",
+    "position": 1,
+    "items": [
+      {
+        "name": "Registreren",
+        "slug": "/register",
+        "link": "/register",
+        "description": "",
+        "icon": "PERSON_ADD",
+        "items": []
+      },
+      {
+        "name": "Inloggen",
+        "slug": "login",
+        "link": "/login",
+        "description": "",
+        "icon": "KEY",
+        "items": []
+      }
+    ],
+    "@self": {
+      "id": "fb3351dd-5798-4da9-a82c-e06b3a831879",
+      "uri": "",
+      "version": "0.0.1",
+      "register": "1",
+      "schema": "6",
+      "schemaVersion": null,
+      "files": [],
+      "relations": {
+        "id": "fb3351dd-5798-4da9-a82c-e06b3a831879"
+      },
+      "locked": null,
+      "owner": "Remko Huisman",
+      "folder": "",
+      "application": null,
+      "organisation": null,
+      "validation": null,
+      "geo": null,
+      "retention": null,
+      "size": "1137",
+      "updated": "2025-05-01T13:59:46+00:00",
+      "created": "2025-05-01T13:57:17+00:00",
+      "published": "2025-05-01T13:57:17+00:00",
+      "depublished": null,
+      "deleted": null
+    }
+  },
+  {
+    "id": "540a7e80-de89-4968-9eb0-38797c66ede3",
+    "objectType": "menu",
+    "_route": "opencatalogi.objects.update",
+    "name": "SecondaryTopNav",
+    "position": 2,
+    "items": [
+      {
+        "name": "Home",
+        "slug": "/",
+        "link": "/",
+        "description": "Button to home",
+        "icon": "",
+        "items": []
+      },
+      {
+        "name": "GEMMA",
+        "slug": "/gemma",
+        "link": "/gemma",
+        "description": "Button to GEMMA",
+        "icon": "",
+        "items": []
+      }
+    ],
+    "@self": {
+      "id": "540a7e80-de89-4968-9eb0-38797c66ede3",
+      "uri": "",
+      "version": "0.0.1",
+      "register": "1",
+      "schema": "6",
+      "schemaVersion": null,
+      "files": [],
+      "relations": {
+        "id": "540a7e80-de89-4968-9eb0-38797c66ede3"
+      },
+      "locked": null,
+      "owner": "Remko Huisman",
+      "folder": "",
+      "application": null,
+      "organisation": null,
+      "validation": null,
+      "geo": null,
+      "retention": null,
+      "size": "1130",
+      "updated": "2025-05-01T13:59:59+00:00",
+      "created": "2025-05-01T13:57:26+00:00",
+      "published": "2025-05-01T13:57:26+00:00",
+      "depublished": null,
+      "deleted": null
+    }
+  },
+  {
+    "id": "25618925-0ae5-4d8a-9702-d81c3a60f2e1",
+    "objectType": "menu",
+    "name": "Footer",
+    "position": 3,
+    "items": [
+      {
+        "name": "FAQ",
+        "slug": "/over-ons",
+        "link": "/over-ons",
+        "description": "FAQ",
+        "icon": "",
+        "items": []
+      },
+      {
+        "name": "Onderwerpen VNG",
+        "slug": "/mijn-omgeving",
+        "link": "https://vng.nl/rubrieken",
+        "description": "Onderwerpen VNG",
+        "icon": "",
+        "items": []
+      },
+      {
+        "name": "Privacyverklaring",
+        "slug": "https://www.softwarecatalogus.nl/Privacyverklaring%20softwarecatalogus",
+        "link": "https://www.softwarecatalogus.nl/Privacyverklaring%20softwarecatalogus",
+        "description": "Privacyverklaring",
+        "icon": "",
+        "items": []
+      },
+      {
+        "name": "Over VNG Realisatie",
+        "slug": "https://vng.nl/artikelen/vng-realisatie",
+        "link": "https://vng.nl/artikelen/vng-realisatie",
+        "description": "Over VNG Realisatie",
+        "icon": "",
+        "items": []
+      },
+      {
+        "name": "Vacatures",
+        "slug": "https://vng.nl/artikelen/werken-bij-de-vng",
+        "link": "https://vng.nl/artikelen/werken-bij-de-vng",
+        "description": "Vacatures",
+        "icon": "",
+        "items": []
+      }
+    ],
+    "@self": {
+      "id": "25618925-0ae5-4d8a-9702-d81c3a60f2e1",
+      "uri": "",
+      "version": "0.0.1",
+      "register": "1",
+      "schema": "6",
+      "schemaVersion": null,
+      "files": [],
+      "relations": {
+        "items.1.link": "https://vng.nl/rubrieken",
+        "items.2.slug": "https://www.softwarecatalogus.nl/Privacyverklaring%20softwarecatalogus",
+        "items.2.link": "https://www.softwarecatalogus.nl/Privacyverklaring%20softwarecatalogus",
+        "items.3.slug": "https://vng.nl/artikelen/vng-realisatie",
+        "items.3.link": "https://vng.nl/artikelen/vng-realisatie",
+        "items.4.slug": "https://vng.nl/artikelen/werken-bij-de-vng",
+        "items.4.link": "https://vng.nl/artikelen/werken-bij-de-vng"
+      },
+      "locked": null,
+      "owner": "Remko Huisman",
+      "folder": "",
+      "application": null,
+      "organisation": null,
+      "validation": null,
+      "geo": null,
+      "retention": null,
+      "size": "2353",
+      "updated": "2025-05-12T15:09:03+00:00",
+      "created": "2025-05-12T15:08:06+00:00",
+      "published": null,
+      "depublished": null,
+      "deleted": null
+    }
+  },
+  {
+    "id": "c5825402-865c-4c04-9592-9d693e80e5ad",
+    "objectType": "menu",
+    "name": "Footer2",
+    "position": 3,
+    "items": [
+      {
+        "name": "Contact",
+        "slug": "/contact",
+        "link": "/contact",
+        "description": "Contact",
+        "icon": "",
+        "items": []
+      },
+      {
+        "name": "Agenda VNG",
+        "slug": "https://vng.nl/agenda",
+        "link": "https://vng.nl/agenda",
+        "description": "Agenda VNG",
+        "icon": "",
+        "items": []
+      },
+      {
+        "name": "Nieuws",
+        "slug": "https://vng.nl/nieuws",
+        "link": "https://vng.nl/nieuws",
+        "description": "Nieuws",
+        "icon": "",
+        "items": []
+      },
+      {
+        "name": "Meld aan VNG Realisatie",
+        "slug": "mailto:softwarecatalogus@vng.nl?subject=Softwarecatalogus: Terugmelding GEMMA Softwarecatalogus&amp;body=Hierbij ontvangt u mijn op- en aanmerkingen over de pagina https://www.softwarecatalogus.nl/swchome in de GEMMA softwarecatalogus.",
+        "link": "mailto:softwarecatalogus@vng.nl?subject=Softwarecatalogus: Terugmelding GEMMA Softwarecatalogus&amp;body=Hierbij ontvangt u mijn op- en aanmerkingen over de pagina https://www.softwarecatalogus.nl/swchome in de GEMMA softwarecatalogus.",
+        "description": "Meld aan VNG Realisatie",
+        "icon": "",
+        "items": []
+      }
+    ],
+    "@self": {
+      "id": "c5825402-865c-4c04-9592-9d693e80e5ad",
+      "uri": "",
+      "version": "0.0.1",
+      "register": "1",
+      "schema": "6",
+      "schemaVersion": null,
+      "files": [],
+      "relations": {
+        "items.1.slug": "https://vng.nl/agenda",
+        "items.1.link": "https://vng.nl/agenda",
+        "items.2.slug": "https://vng.nl/nieuws",
+        "items.2.link": "https://vng.nl/nieuws"
+      },
+      "locked": null,
+      "owner": "Remko Huisman",
+      "folder": "",
+      "application": null,
+      "organisation": null,
+      "validation": null,
+      "geo": null,
+      "retention": null,
+      "size": "2078",
+      "updated": "2025-05-12T15:10:25+00:00",
+      "created": "2025-05-12T15:09:13+00:00",
+      "published": null,
+      "depublished": null,
+      "deleted": null
+    }
+  },
+  {
+    "id": "865ee263-6c00-4fc1-8a7e-f75fabba503e",
+    "objectType": "menu",
+    "name": "Footer3",
+    "position": 3,
+    "items": [
+      {
+        "name": "Twitter",
+        "slug": "https://twitter.com/VNGRealisatie",
+        "link": "https://twitter.com/VNGRealisatie",
+        "description": "Twitter",
+        "icon": "",
+        "items": []
+      },
+      {
+        "name": "LinkedIn",
+        "slug": "https://www.linkedin.com/company/vng-realisatie/",
+        "link": "https://www.linkedin.com/company/vng-realisatie/",
+        "description": "LinkedIn",
+        "icon": "",
+        "items": []
+      },
+      {
+        "name": "Youtube",
+        "slug": "https://www.youtube.com/channel/UCg0bWcCn9Shnt57-L7hSbow",
+        "link": "https://www.youtube.com/channel/UCg0bWcCn9Shnt57-L7hSbow",
+        "description": "Youtube",
+        "icon": "",
+        "items": []
+      },
+      {
+        "name": "Nieuwsbrief GEMMA",
+        "slug": "https://www.gemmaonline.nl/index.php/GEMMA_nieuwsbrief",
+        "link": "https://www.gemmaonline.nl/index.php/GEMMA_nieuwsbrief",
+        "description": "Nieuwsbrief GEMMA",
+        "icon": "",
+        "items": []
+      }
+    ],
+    "@self": {
+      "id": "865ee263-6c00-4fc1-8a7e-f75fabba503e",
+      "uri": "",
+      "version": "0.0.1",
+      "register": "1",
+      "schema": "6",
+      "schemaVersion": null,
+      "files": [],
+      "relations": {
+        "items.0.slug": "https://twitter.com/VNGRealisatie",
+        "items.0.link": "https://twitter.com/VNGRealisatie",
+        "items.1.slug": "https://www.linkedin.com/company/vng-realisatie/",
+        "items.1.link": "https://www.linkedin.com/company/vng-realisatie/",
+        "items.2.slug": "https://www.youtube.com/channel/UCg0bWcCn9Shnt57-L7hSbow",
+        "items.2.link": "https://www.youtube.com/channel/UCg0bWcCn9Shnt57-L7hSbow",
+        "items.3.slug": "https://www.gemmaonline.nl/index.php/GEMMA_nieuwsbrief",
+        "items.3.link": "https://www.gemmaonline.nl/index.php/GEMMA_nieuwsbrief"
+      },
+      "locked": null,
+      "owner": "Remko Huisman",
+      "folder": "",
+      "application": null,
+      "organisation": null,
+      "validation": null,
+      "geo": null,
+      "retention": null,
+      "size": "2284",
+      "updated": "2025-05-12T15:10:50+00:00",
+      "created": "2025-05-12T15:10:32+00:00",
+      "published": null,
+      "depublished": null,
+      "deleted": null
+    }
+  }
+]

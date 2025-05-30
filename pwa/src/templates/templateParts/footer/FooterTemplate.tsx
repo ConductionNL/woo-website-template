@@ -13,11 +13,12 @@ import {
 } from "@utrecht/component-library-react/dist/css-module";
 import { navigate } from "gatsby-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faExternalLinkAlt, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import { Logo } from "@conduction/components";
 import { IconPrefix, IconName } from "@fortawesome/fontawesome-svg-core";
 import { useFooterContent } from "../../../hooks/footerContent";
+import { AcContainer } from "../../../components/tilburg/components";
 
 export const DEFAULT_FOOTER_CONTENT_URL =
   "https://raw.githubusercontent.com/ConductionNL/woo-website-template/main/pwa/src/templates/templateParts/footer/FooterContent.json";
@@ -44,8 +45,17 @@ type TDynamicContentItem = {
 };
 
 export const FooterTemplate: React.FC = () => {
+  const [utrechtFooter, setUtrechtFooter] = React.useState(false);
+
   const _useFooterContent = useFooterContent();
   const getFooterContent = _useFooterContent.getContent();
+
+  const hostname = typeof window !== "undefined" && window.location.hostname;
+
+  const tilburgFooterContent = require("./TilburgFooterContent.json");
+  const footerItems = tilburgFooterContent.filter((item: any) =>
+    hostname === "horstadmaas.accept.opencatalogi.nl" ? item.position > 1 : item.position > 2,
+  );
 
   // For development
   // const [footerContent, setFooterContent] = React.useState<TDynamicContentItem[]>([]);
@@ -54,29 +64,103 @@ export const FooterTemplate: React.FC = () => {
   //   setFooterContent(data);
   // }, []);
 
-  return (
-    <PageFooter className={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.contentGrid}>
-          {getFooterContent.data?.map((content: any, idx: string) => <DynamicSection key={idx} {...{ content }} />)}
-        </div>
+  return utrechtFooter ? (
+    <div>
+      <button className={styles.changeButton} onClick={() => setUtrechtFooter(true)}>
+        Change footer to Tilburg
+      </button>
+      <PageFooter className={styles.footer}>
+        <div className={styles.container}>
+          <div className={styles.contentGrid}>
+            {getFooterContent.data?.map((content: any, idx: string) => <DynamicSection key={idx} {...{ content }} />)}
+          </div>
 
-        <div className={styles.logoAndConduction}>
-          {window.sessionStorage.getItem("FOOTER_LOGO_URL") !== "false" && (
-            <Logo
-              variant="footer"
-              onClick={() =>
-                window.sessionStorage.getItem("FOOTER_LOGO_HREF")
-                  ? open(window.sessionStorage.getItem("FOOTER_LOGO_HREF") ?? "")
-                  : navigate("/")
-              }
-            />
-          )}
+          <div className={styles.logoAndConduction}>
+            {window.sessionStorage.getItem("FOOTER_LOGO_URL") !== "false" && (
+              <Logo
+                variant="footer"
+                onClick={() =>
+                  window.sessionStorage.getItem("FOOTER_LOGO_HREF")
+                    ? open(window.sessionStorage.getItem("FOOTER_LOGO_HREF") ?? "")
+                    : navigate("/")
+                }
+              />
+            )}
 
-          <WithLoveByConduction />
+            <WithLoveByConduction />
+          </div>
         </div>
-      </div>
-    </PageFooter>
+      </PageFooter>
+    </div>
+  ) : (
+    <div>
+      <button className={styles.changeButton} onClick={() => setUtrechtFooter(true)}>
+        Change footer to Utrecht
+      </button>
+      <footer className="ac-footer">
+        <h2 className="sr-only">Footer</h2>
+        <section>
+          <AcContainer className="ac-footer__container">
+            {footerItems.map((footerItem: any, index: number) => (
+              <nav
+                className="ac-footer__links"
+                key={`footer-menu-${index + 1}`}
+                aria-label={`Footer menu ${index + 1}`}
+              >
+                {footerItem.items.map((item: any, index: number) =>
+                  item.link ? (
+                    item.link.includes("http") || item.link.includes("https") ? (
+                      <>
+                        <a href={item.link} target="_blank" className="ac-footer__link">
+                          {hostname === "open-dimpact.accept.commonground.nu" ||
+                          hostname === "dimpact.opencatalogi.nl" ? (
+                            <>
+                              {item.icon ? (
+                                <item.icon className="ac-footer__link-icon" />
+                              ) : (
+                                <FontAwesomeIcon className="ac-footer__link-icon" icon={faExternalLinkAlt} />
+                              )}
+                              {item.name}
+                              <span className="sr-only">Opent in een nieuw tabblad</span>
+                            </>
+                          ) : (
+                            <>
+                              {item.name}
+                              <span className="sr-only">Opent in een nieuw tabblad</span>
+                              <FontAwesomeIcon className="ac-footer__link-icon" icon={faExternalLinkAlt} />
+                            </>
+                          )}
+                        </a>
+                      </>
+                    ) : (
+                      <Link className="ac-footer__link" to={item.link}>
+                        {hostname === "open-dimpact.accept.commonground.nu" ||
+                          (hostname === "dimpact.opencatalogi.nl" && <Icon icon={item.icon} />)}
+                        {item.name}
+                        {hostname !== "open-dimpact.accept.commonground.nu" &&
+                          hostname !== "dimpact.opencatalogi.nl" && <Icon icon={item.icon} />}
+                      </Link>
+                    )
+                  ) : (
+                    <div className="ac-footer__link">
+                      {hostname === "open-dimpact.accept.commonground.nu" ||
+                        (hostname === "dimpact.opencatalogi.nl" && <Icon icon={item.icon} />)}
+                      {item.name}
+                      {hostname !== "open-dimpact.accept.commonground.nu" && hostname !== "dimpact.opencatalogi.nl" && (
+                        <Icon icon={item.icon} />
+                      )}
+                    </div>
+                  ),
+                )}
+              </nav>
+            ))}
+            <div className="ac-footer__logo">
+              <Logo variant="footer" />
+            </div>
+          </AcContainer>
+        </section>
+      </footer>
+    </div>
   );
 };
 

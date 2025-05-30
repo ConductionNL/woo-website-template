@@ -73,6 +73,7 @@
 @import "../components/tilburg/css/_ac-flex.scss"; */
 @import "../components/tilburg/css/_ac-header.module.css";
 @import "../components/tilburg/css/_ac-navigation.module.css";
+@import "../components/tilburg/css/_ac-footer.module.css";
 @import "./design-tokens/_tokens-custom.scss";
 @import "./design-tokens/_tokens-dimpact.scss";
 @import "./design-tokens/_tokens-migrato.scss";
