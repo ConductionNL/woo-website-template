@@ -52,7 +52,7 @@
     // small visual correction due to font-family rendering
     .logo-text {
       margin-block-start: 1rem;
-      color: var(--tilburg-header-logo-color, inherit);
+      color: var(--tilburg-header-logo-text-color, inherit);
       @include respond-max($screen-sm) {
         word-break: break-word;
       }

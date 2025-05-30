@@ -45,7 +45,7 @@ type TDynamicContentItem = {
 };
 
 export const FooterTemplate: React.FC = () => {
-  const [utrechtFooter, setUtrechtFooter] = React.useState(false);
+  const [utrechtFooter, setUtrechtFooter] = React.useState(true);
 
   const _useFooterContent = useFooterContent();
   const getFooterContent = _useFooterContent.getContent();
@@ -66,7 +66,7 @@ export const FooterTemplate: React.FC = () => {
 
   return utrechtFooter ? (
     <div>
-      <button className={styles.changeButton} onClick={() => setUtrechtFooter(true)}>
+      <button className={styles.changeButton} onClick={() => setUtrechtFooter(false)}>
         Change footer to Tilburg
       </button>
       <PageFooter className={styles.footer}>

@@ -56,7 +56,7 @@
 
 .ac-header__logo .logo-text {
   margin-block-start: 1rem;
-  color: var(--tilburg-header-logo-color, inherit);
+  color: var(--tilburg-header-logo-text-color, inherit);
 }
 
 @media screen and (max-width: 576px) {
