@@ -14,9 +14,10 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 |-------------------------------|------------------------------------------------------------|-------------|-------------|-------------|
 | [Losse React pagina](https://zuiddrecht.accept.openwoo.app)            | [Conduction](https://conduction.nl/)                       | € 1750,- | € 250.-     |                 |
 | [Integratie in Open Webconcept](https://www.alkmaar.nl/bestuur-en-organisatie/open-alkmaar/woo-verzoeken/) | [Yard](https://www.yard.nl/) of [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
-| SIMsite                      | [Shift2](https://www.shift2.nl/))                       | Onbekend | Onbekend     |                 |
-| Drupal Site                   | "??"                                                       | Onbekend | Onbekend     |                 |
-| TYPO3 themasite              | [OpenGemeenten](https://www.opengemeenten.nl/oplossingen/website-en-koppeling-voor-de-wet-open-overheid)             | € 4000.- | € 250.-     |                 |
+| Wordpress plugin             | [Acato](https://acato.nl/)                       | Onbekend | Onbekend     |                 |
+| SIMsite                      | [Shift2](https://www.shift2.nl/)                       | Onbekend | Onbekend     |                 |
+| Drupal Site                   | [IO](https://www.iodigital.com/nl)                                                      | Onbekend | Onbekend     |                 |
+| TYPO3 themasite              | [OpenGemeenten](https://www.opengemeenten.nl/oplossingen/website-en-koppeling-voor-de-wet-open-overheid)             | € 5000.- | € 250.-     |                 |
 | TYPO3 sub-themasite              | [OpenGemeenten](https://www.opengemeenten.nl/oplossingen/website-en-koppeling-voor-de-wet-open-overheid)             | € 1200.- | € 250.-     |                 |
 
 
@@ -26,7 +27,7 @@ Als organisatie dient u te beschikken over minimaal één publicatieplatform
 
 ## Motorblok
 
-Het motorblok bestaat uit twee componenten [Open Register](https://index.openregisters.app/) en [Open Connector](https://openconnector.app/). Voor het overzicht en kostenbeheersing worden deze componenten in het jaar 2024 als één integratie aangeboden.
+Het motorblok bestaat uit twee componenten [Open Register](https://index.openregisters.app/) en [Open Connector](https://openconnector.app/). 
 
 | Component | Leverancier                                                          | Eenmalig | Maandelijks | Meer informatie |
 |-----------|----------------------------------------------------------------------|----------|-------------|-------------|
@@ -39,9 +40,13 @@ U kunt meerdere bronnen koppelen, sommige van deze bronnen vragen daarvoor zelf 
 
 | Component        | Leveranciers(s)                                          | Eenmalig | Maandelijks | Meer informatie |
 |------------------|----------------------------------------------------------|----------|-------------|-------------|
-| Zaaksysteem.nl   | [Xxllnc](https://xxllnc.nl/)                             | Onbekend | Onbekend     |                 |
-| RX Fundament     | [Roxit](https://www.roxit.nl/)                           | Onbekend | Onbekend     |                 |
+| RegieTool        | [Conduction](https://openwoo.app/)                       | € 3000,- | € 150,-(hosting) | + 10 euro per gebruiker per maand                |
+| Corsa/Liber      | [BCT](https://bctsoftware.com/)                          | Onbekend | Onbekend     |                 |
+| xxllnc Zaken     | [xxllnc](https://xxllnc.nl/)                             | Onbekend | Onbekend     |                 |
+| RX.Mission       | [Roxit](https://www.roxit.nl/)                           | Onbekend | Onbekend     |                 |
 | Decos JOIN       | [Decos](https://www.decos.com/nl)                        | Onbekend | Onbekend     |                 |
+| Djuma            | [Visma Circle](https://www.vismacircle.nl/))             | Onbekend | Onbekend     |                 |
+| Notubiz          | [Notubiz](https://www.notubiz.nl/))                      | Onbekend | Onbekend     |                 |
 | OpenZaak         | [Maykin Media](https://www.maykinmedia.nl/nl/)           | Onbekend | Onbekend     |                 |
 | SimSite          | [SIM Groep](https://www.simgroep.nl/)                    | Onbekend | Onbekend     |                 |
 | Open Verzoeken   | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
@@ -50,7 +55,6 @@ U kunt meerdere bronnen koppelen, sommige van deze bronnen vragen daarvoor zelf 
 | Open PUB         | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
 | Open PDC         | [Yard](https://www.yard.nl/), [Acato](https://acato.nl/) | Onbekend | Onbekend     |                 |
 
-Mocht u nog niet beschikken over xxllnc Zaken (zaaksysteem.nl) maar wel behoefte hebben aan een manier om de documenten conform een ingericht proces te gaan publiceren en achteraf correct te kunnen archiveren? Neem dan contact op via: [sales.zaakgericht@xxllnc.nl](mailto:sales.zaakgericht@xxllnc.nl). Wij gaan graag in gesprek over de mogelijkheden hiervoor!
 
 ## Overige
 
@@ -69,7 +73,7 @@ Buiten het leveren van componenten om kan het ook zijn dat er nog overige dienst
 | Leverancier                                    | Contactpersoon                                                                       |
 |------------------------------------------------|--------------------------------------------------------------------------------------|
 | [Conduction](https://conduction.nl/)           | [Ruben van der Linde (info@conduction.nl)](mailto:info@conduction.nl)                |
-| [xxllnc](https://xxllnc.nl/)                   | [Arthur van Ulden (sales.zaakgericht@xxllnc.nl)](mailto:sales.zaakgericht@xxllnc.nl) |
+| [xxllnc](https://xxllnc.nl/)                   | [xxllnc sales](mailto:sales.zaakgericht@xxllnc.nl) |
 | [Shift2](https://www.shift2.nl/)          | [Twan Meijerink(t.meijerink@simgroep.nl)](mailto:t.meijerink@simgroep.nl)             |                            |
 | [OpenGemeenten](https://www.opengemeenten.nl/) | [Jan-Thijs Oosterhoudt (hallo@opengemeenten.nl)](mailto:hallo@opengemeenten.nl)      |
 
