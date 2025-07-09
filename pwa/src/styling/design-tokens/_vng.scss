@@ -123,6 +123,7 @@
     --utrecht-accordion-panel-border-color: transparent;
     --utrecht-accordion-section-border-width: auto;
     --utrecht-accordion-border-radius: 0px;
+  
     --utrecht-separator-color: var(--tilburg-color-gray-300);
     --utrecht-separator-width: 100%;
     --utrecht-separator-block-size: 1px;
@@ -130,6 +131,7 @@
     --utrecht-separator-block-end: 0;
     --utrecht-separator-margin-block-start: var(--tilburg-space-block-cat);
     --utrecht-separator-margin-block-end: var(--tilburg-space-block-cat);
+  
     --tilburg-status-badge-border-color: transparent;
     --tilburg-status-badge-warning-border-color: transparent;
     --tilburg-status-badge-negative-border-color: transparent;
@@ -735,7 +737,7 @@
       --tilburg-form-control-disabled-border-color
     );
     --utrecht-select-disabled-background-color: #e9e9e9;
-    
+  
     --utrecht-select-focus-border-width: var(
       --tilburg-form-control-focus-border-width
     );
@@ -1098,7 +1100,7 @@
       --tilburg-form-control-accent-color
     );
     --utrecht-table-cell-line-height: var(--tilburg-typography-line-height-md);
-    
+  
     --tilburg-header-background-color: #ffffff;
     --tilburg-footer-background-color: #004589;
     --tilburg-footer-color: #ffffff;
@@ -1158,16 +1160,16 @@
     --denhaag-sidenav-link-color: #333333;
     --denhaag-sidenav-link-label-gap: 0.5rem;
     --denhaag-sidenav-item-font-weight: 400;
-     /* --denhaag-sidenav-item-font-size: var(--tilburg-typography-font-size-lg); */
+    // --denhaag-sidenav-item-font-size: var(--tilburg-typography-font-size-lg);
     --denhaag-sidenav-item-font-size: 16px;
     --denhaag-sidenav-item-font-family: var(--utrecht-document-font-family);
     --denhaag-sidenav-row-gap: 5px;
-
+  
     --utrecht-code-background-color: var(--tilburg-color-code-background-color);
     --utrecht-code-color: var(--tilburg-document-color);
     --utrecht-code-font-size: inherit;
-    /* --utrecht-code-font-family: inherit; */
-    /* --utrecht-code-line-height: inherit; */
+    // --utrecht-code-font-family: inherit;
+    // --utrecht-code-line-height: inherit;
   
     --conduction-tabs-tab-background-color: transparent;
     --conduction-tabs-tab-color: var(--utrecht-document-color);
@@ -1281,11 +1283,7 @@
     --conduction-primary-top-nav-hover-color: #ffffff;
     --conduction-primary-top-nav-background-color: #0078c8;
     --conduction-primary-top-nav-color: #ffffff;
-
-    --utrecht-page-margin-inline-end: 24px;
-    --utrecht-page-margin-inline-start: 24px;
-    --utrecht-page-max-inline-size: 1140px;
-
+  
     --conduction-tooltip-z-index: 9999;
     --conduction-tooltip-border-radius: 0px;
     --conduction-tooltip-border-color: unset;
@@ -1403,6 +1401,5 @@
     --denhaag-step-marker-connector-default-outline-color: var(
       --tilburg-color-gray-200
     );
-
   }
   

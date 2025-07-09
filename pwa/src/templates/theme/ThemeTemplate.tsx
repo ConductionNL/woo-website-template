@@ -808,6 +808,15 @@ export const ThemeTemplate: React.FC = () => {
                 date: "zondag 26 mei 2024",
                 meta: <Paragraph>This process step has an error.</Paragraph>,
               },
+              {
+                id: "1fc162c6-f1ab-4d1b-9007-d891cbd5614bfaefa",
+                title: "disabled",
+                // @ts-ignore
+                status: "disabled",
+                marker: 7,
+                date: "zondag 26 mei 2024",
+                meta: <Paragraph>This process step is disabled.</Paragraph>,
+              },
             ]}
           />
         </div>
