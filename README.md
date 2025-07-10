@@ -8,6 +8,7 @@
 > Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
 > Terug kijken afgelopen webinars en meetings?
 >
+> - [10-07-2025 | Community Meeting](https://youtu.be/FMP7HNBD3DQ)
 > - [11-06-2025 | Community Meeting](https://youtu.be/132V-PRl-m8?si=AC55H5cDrBdWSlLO)
 > - [14-05-2025 | Community Meeting](https://youtu.be/sNKKI-nJpTc?si=XR16iXqWXswM6ZFp)
 > - [09-04-2025 | Community Meeting](https://www.youtube.com/watch?v=dIc9XSkXdRQ)
