@@ -32,6 +32,7 @@ type TDynamicContentItem = {
     markdownLink?: string;
     multiRow?: string;
     label?: string;
+    title?: string;
     icon?: {
       icon: IconName;
       prefix: IconPrefix;
@@ -173,6 +174,12 @@ const DynamicSection: React.FC<{ content: TDynamicContentItem }> = ({ content })
 
       {content.items.map((item, idx) => (
         <div key={idx} className={styles.dynamicSectionContent}>
+          {item.title && (
+            <DynamicItemHeading
+              heading={window.sessionStorage.getItem("FOOTER_CONTENT_HEADER") ?? ""}
+              title={item.title}
+            />
+          )}
           {item.label && <strong>{t(item.label)}</strong>}
           {/* External Link */}
           {item.link && item.link.includes("http") && <ExternalLink {...{ item }} />}
@@ -210,6 +217,25 @@ const DynamicSectionHeading: React.FC<{ content: TDynamicContentItem; heading?: 
       return <Heading5 className={styles.dynamicSectionTitle}>{t(content.title)}</Heading5>;
     default:
       return <Heading3 className={styles.dynamicSectionTitle}>{t(content.title)}</Heading3>;
+  }
+};
+
+const DynamicItemHeading: React.FC<{ title: string; heading?: string }> = ({ title, heading }) => {
+  const { t } = useTranslation();
+
+  switch (heading) {
+    case "heading-1":
+      return <Heading1 className={styles.dynamicItemHeading}>{t(title)}</Heading1>;
+    case "heading-2":
+      return <Heading2 className={styles.dynamicItemHeading}>{t(title)}</Heading2>;
+    case "heading-3":
+      return <Heading3 className={styles.dynamicItemHeading}>{t(title)}</Heading3>;
+    case "heading-4":
+      return <Heading4 className={styles.dynamicItemHeading}>{t(title)}</Heading4>;
+    case "heading-5":
+      return <Heading5 className={styles.dynamicItemHeading}>{t(title)}</Heading5>;
+    default:
+      return <Heading3 className={styles.dynamicItemHeading}>{t(title)}</Heading3>;
   }
 };
 

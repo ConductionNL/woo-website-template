@@ -111,13 +111,19 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.dynamicSectionTitle {
+.dynamicSectionTitle,
+.dynamicItemHeading {
   margin-block-end: 18px !important;
   color: var(--utrecht-page-footer-heading-color, inherit) !important;
   font-family: var(
     --utrecht-page-footer-heading-font-family,
     inherit
   ) !important;
+}
+
+.dynamicItemHeading {
+  margin-block-start: 12px !important;
+  margin-block-end: 12px !important;
 }
 
 .dynamicSectionContent {
