@@ -5,6 +5,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  transition: var(--tilburg-search-card-transition);
   background-color: var(
     --tilburg-search-card-background-color,
     var(--tilburg-color-white)
@@ -68,6 +69,12 @@
 
   &--category,
   &--search-result {
+    &:hover {
+      background-color: var(
+        --tilburg-search-card-hover-background-color,
+        inherit
+      );
+    }
     a {
       &:after {
         content: "";

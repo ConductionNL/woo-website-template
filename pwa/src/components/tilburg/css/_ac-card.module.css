@@ -25,6 +25,10 @@
   font-weight: var(--tilburg-search-card-hover-title-font-weight, inherit);
 }
 
+.ac-card:hover {
+  transition: var(--tilburg-search-card-transition);
+}
+
 .ac-card__content {
   display: flex;
   flex-direction: column;
@@ -50,6 +54,12 @@
   );
   border: 0;
 }
+
+.ac-card--category:hover,
+.ac-card--search-result:hover {
+  background-color: var(--tilburg-search-card-hover-background-color, inherit);
+}
+
 .ac-card--category a:after,
 .ac-card--search-result a:after {
   content: "";
