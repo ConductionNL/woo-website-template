@@ -4,9 +4,7 @@
   "private": true,
   "description": "Product Website Template",
   "author": "Conduction",
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "scripts": {
     "dev": "gatsby develop",
     "develop": "gatsby develop",
@@ -28,8 +26,8 @@
   "dependencies": {
     "@amsterdam/design-system-css": "^0.9.0",
     "@amsterdam/design-system-react": "^0.9.0",
-    "@conduction/components": "2.2.52",
-    "@conduction/theme": "1.1.47",
+    "@conduction/components": "2.2.53",
+    "@conduction/theme": "1.1.49",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "6.5.2",
     "@fortawesome/free-regular-svg-icons": "6.5.2",
