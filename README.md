@@ -95,7 +95,7 @@ Op dit moment wordt de OpenWoo.app al door een aantal organisaties gebruikt
 | [Dinkelland](https://www.dinkelland.nl/) | Gemeente |[Pagina](https://open.dinkelland.nl) | Zaaksysteem.nl | Productie |
 | [Moerdijk](https://www.moerdijk.nl/) | Gemeente |[Pagina](https://open.moerdijk.nl/) | Zaaksysteem.nl | Productie |
 | [Gooise Meren](https://www.gooisemeren.nl/) | Gemeente |[Pagina](https://open.gooisemeren.nl) | Zaaksysteem.nl | Productie |
-| [Hof van Twente](https://www.hofvantwente.nl/) | Gemeente |[Pagina](https://open.hofvantwente.nl/)) | Zaaksysteem.nl | Productie |
+| [Hof van Twente](https://www.hofvantwente.nl/) | Gemeente |[Pagina](https://open.hofvantwente.nl/) | Zaaksysteem.nl | Productie |
 | [Gouda](https://www.gouda.nl/) | Gemeente |[Pagina](https://open.gouda.nl/) | Zaaksysteem.nl | Productie |
 | [Tilburg](https://www.tilburg.nl/) | Gemeente |[Pagina](https://open.tilburg.nl/) | Zaaksysteem.nl, Sharepoint, RXMission, Notubiz | Productie |
 | [Noaberkracht](https://www.dinkelland.nl/noaberkracht-dinkelland-tubbergen) | Samenwerkingsverband | [Pagina](https://open.noaberkracht.nl) | Zaaksysteem.nl | Productie |
