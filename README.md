@@ -8,24 +8,14 @@
 > Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
 > Terug kijken afgelopen webinars en meetings?
 >
+> - [12-11-2025 | Community Meeting](https://youtu.be/Jh2Ap_Cuya8)
 > - [10-07-2025 | Community Meeting](https://youtu.be/FMP7HNBD3DQ)
 > - [11-06-2025 | Community Meeting](https://youtu.be/132V-PRl-m8?si=AC55H5cDrBdWSlLO)
 > - [14-05-2025 | Community Meeting](https://youtu.be/sNKKI-nJpTc?si=XR16iXqWXswM6ZFp)
 > - [09-04-2025 | Community Meeting](https://www.youtube.com/watch?v=dIc9XSkXdRQ)
 > - [12-03-2025 | Community Meeting](https://youtu.be/M9xOWcUOK2s)
 > - [15-01-2025 | Community Meeting](https://youtu.be/uV-hQwdz2Bo)
-> - [11-12-2024 | Community Meeting](https://www.youtube.com/watch?v=7vJ88exALJs)
-> - [13-11-2024 | Community Meeting](https://www.youtube.com/watch?v=ujQPlU3NBT0)
-> - [09-10-2024 | Community Meeting](https://www.youtube.com/watch?v=mlfE48JNsRE&list=PLAztWZApv5nXNXucmRDlOfzN8w7f3n6GJ&index=11)
-> - [11-09-2024 | Community Meeting](https://www.youtube.com/watch?v=041vJRcDddo&list=PLAztWZApv5nXNXucmRDlOfzN8w7f3n6GJ&index=10)
-> - [14-08-2024 | Community Meeting](https://www.youtube.com/watch?v=0uCh5aueM8U&list=PLAztWZApv5nXNXucmRDlOfzN8w7f3n6GJ&index=9)
-> - [10-07-10:00 | Community Meeting](https://www.linkedin.com/events/7206649524776284161/comments/?originTrackingId=BVZjR39lT72%2BfNaik99cew%3D%3D).
-> - [12-06-2024 | Community Meeting](https://www.youtube.com/watch?v=ab_FEexYYMY).
-> - [09-05-2024 | Community Meeting](https://www.youtube.com/watch?v=Q0ElcTP-R4M).
-> - [10-04-2024 | Community Meeting](https://www.youtube.com/watch?v=zMqElLzy0BM).
 > - [25-03-2024 | SHIFT2](https://www.shift2.nl/een-toekomstbestendige-woo-oplossing)
-> - [13-03-2024 | Community Meeting](https://www.youtube.com/watch?v=TNZghskRu5c).
-> - [14-02-2024 | Community meeting](https://www.youtube.com/watch?v=ri5U8x-lsxo)
 > - [30-01-2024 | OpenGemeenten Woobinar](https://vimeo.com/909134953)
 > - [19-12-2023 | xxllnc Demo](https://www.youtube.com/watch?v=_FGpUYH1yd0)
 > - [17-11-2023 | xxllnc Woobinar](https://www.youtube.com/watch?v=NCnLDEoPh5A)
