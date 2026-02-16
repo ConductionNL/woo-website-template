@@ -8,6 +8,7 @@
 > Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
 > Terug kijken afgelopen webinars en meetings?
 >
+> - [11-02-2026 | Community Meeting](https://youtu.be/D-5Y-r7Yqfo)
 > - [14-01-2026 | Community Meeting](https://youtu.be/DnsTPHM80SQ?si=gMBGYsf9EvuM6_lg)
 > - [10-12-2025 | Community Meeting](https://youtu.be/jjS1DnILE1o?si=FqvAvUTtdxScehPa)
 > - [12-11-2025 | Community Meeting](https://youtu.be/Jh2Ap_Cuya8)
@@ -57,7 +58,7 @@ Wil je meer weten over de functionaliteiten van de Open Woo-app? Kijk dan op de 
 
 OpenWoo.app gaat verder dan alleen deze basisfunctionaliteiten door een geïntegreerde oplossing aan te bieden die bestaat uit essentiële componenten:
 
-- **Koppelvlak naar KOOP en WooGLe voor de Landelijke Index:** Deze interface faciliteert een gestandaardiseerde verbinding met het Kennis- en Exploitatiecentrum Officiële Publicaties (KOOP) en WooGLe van de WOOverheid van de UvA.
+- **Koppelvlak naar KOOP voor de Landelijke Index:** Deze interface faciliteert een gestandaardiseerde verbinding met het Kennis- en Exploitatiecentrum Officiële Publicaties (KOOP) en WooGLe van de WOOverheid van de UvA.
 - **Federatieve Connectie:** Door gebruik te maken van een op FSC/NLX gebaseerde connectie, worden de zoekindexen van deelnemende organisaties samengevoegd tot één virtuele zoekindex.
 - **Zoekpagina (Optioneel):** Een op NL Design gebaseerd publicatieplatform dat belanghebbenden in staat stelt om naar relevante informatie te zoeken.
 - **Open Woo - OpenConnector:** Deze module verzamelt informatie uit verschillende bronnen, waardoor een gecentraliseerde toegang tot diverse categorieën van gegevens mogelijk wordt.
