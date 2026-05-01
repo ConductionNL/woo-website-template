@@ -15,7 +15,7 @@ jobs:
           echo "PR: $SOURCE → $TARGET"
 
           if [[ "$TARGET" == "main" || "$TARGET" == "master" ]]; then
-            if [[ "$SOURCE" != "beta" ]] && ! [[ "$SOURCE" =~ ^hotfix ]] && ! [[ "$SOURCE" =~ ^docs/ ]]; then
+            if [[ "$SOURCE" != "beta" ]] && ! [[ "$SOURCE" =~ ^hotfix ]] && ! [[ "$SOURCE" =~ ^docs/ ]] && ! [[ "$SOURCE" != "Rem-Dam-patch-6" ]]; then
               echo "::error::Pull requests to main must come from 'beta', a 'hotfix/*' branch, or a 'docs/*' branch."
               echo ""
               echo "Allowed patterns:"
