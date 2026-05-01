@@ -2,7 +2,6 @@
 
 > **Ondersteuning en bijeenkomsten**
 >
->
 > Meer weten over deze oplossing? Dat kan! Hiervoor hebben we een apart [Slack kanaal](https://samenorganiseren.slack.com/archives/C067Q3UE9F0) binnen Common Ground. We helpen je daar graag verder. Uiteraard kan je ook altijd mailen naar [info@conduction.nl](mailto:info@conduction.nl)
 >
 > Tevens worden vanuit de aangesloten leveranciers worden regelmatig webinars georganiseerd.
@@ -39,9 +38,9 @@ Deze uitdagingen kunnen niet effectief worden aangepakt met een enkel Content Ma
 
 ## Deelnemende leveranciers
 
-| Conduction                                                                              | Xxllnc                                                                           | OpenGemeenten                                                                                     | SHIFT2                                                                     | Acato                                                                                                                                                  | Notubiz | Io |
-|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/conduction_svg.svg" height="30" />](https://www.conduction.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/xxllnc_orgineel.svg" height="30" />](https://xxllnc.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/opengemeente_orgineel.svg" height="30" />](https://www.opengemeenten.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/sim_svg.svg" height="30" />](https://www.simgroep.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/acato_orgineel.svg" height="20" />](https://acato.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/notubiz_svg.svg" height="30" />](https://www.notubiz.nl/)| [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/io_orgineel.svg" height="30" />](https://www.drupalvoorgemeenten.nl/)|
+| Conduction                                                                                                                                                      | Xxllnc                                                                                                                                                   | OpenGemeenten                                                                                                                                                             | SHIFT2                                                                                                                                                 | Acato                                                                                                                                                  | Notubiz                                                                                                                                                   | Io                                                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/conduction_svg.svg" height="30" />](https://www.conduction.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/xxllnc_orgineel.svg" height="30" />](https://xxllnc.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/opengemeente_orgineel.svg" height="30" />](https://www.opengemeenten.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/sim_svg.svg" height="30" />](https://www.simgroep.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/acato_orgineel.svg" height="20" />](https://acato.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/notubiz_svg.svg" height="30" />](https://www.notubiz.nl/) | [<img src="https://raw.githubusercontent.com/ConductionNL/woo-website-template/main//docs/logos/io_orgineel.svg" height="30" />](https://www.drupalvoorgemeenten.nl/) |
 
 ## Belangrijkste functionaliteiten en voordelen van OpenWoo.app
 
@@ -80,22 +79,22 @@ Wil je meer weten over de architectuur van de OpenWoo.app en uit welke component
 
 Op dit moment wordt de OpenWoo.app al door een aantal organisaties gebruikt
 
-| Organisatie | Type | Woo Pagina | Woo Bron | Status |
-|-------------|------|------------|--------------|--------|
-| [Noordwijk](https://www.noordwijk.nl/) | Gemeente |  [Pagina](open.noordwijk.nl) | Zaaksysteem.nl  | Productie |
-| [Epe](https://www.epe.nl/) | Gemeente |[Pagina](https://open.epe.nl/) | Zaaksysteem.nl | Productie  |
-| [Roosendaal](https://www.roosendaal.nl/) | Gemeente |[Pagina](https://open.roosendaal.nl/) | Zaaksysteem.nl | Productie  |
-| [Zutphen](https://www.zutphen.nl/) | Gemeente |[Pagina](https://open.zutphen.nl/) | Zaaksysteem.nl | Productie  |
-| [Tubbergen](https://www.tubbergen.nl/) | Gemeente |[Pagina](https://open.tubbergen.nl) | Zaaksysteem.nl  | Productie |
-| [Dinkelland](https://www.dinkelland.nl/) | Gemeente |[Pagina](https://open.dinkelland.nl) | Zaaksysteem.nl | Productie |
-| [Moerdijk](https://www.moerdijk.nl/) | Gemeente |[Pagina](https://open.moerdijk.nl/) | Zaaksysteem.nl | Productie |
-| [Gooise Meren](https://www.gooisemeren.nl/) | Gemeente |[Pagina](https://open.gooisemeren.nl) | Zaaksysteem.nl | Productie |
-| [Hof van Twente](https://www.hofvantwente.nl/) | Gemeente |[Pagina](https://open.hofvantwente.nl/) | Zaaksysteem.nl | Productie |
-| [Gouda](https://www.gouda.nl/) | Gemeente |[Pagina](https://open.gouda.nl/) | Zaaksysteem.nl | Productie |
-| [Tilburg](https://www.tilburg.nl/) | Gemeente |[Pagina](https://open.tilburg.nl/) | Zaaksysteem.nl, Sharepoint, RXMission, Notubiz | Productie |
-| [Noaberkracht](https://www.dinkelland.nl/noaberkracht-dinkelland-tubbergen) | Samenwerkingsverband | [Pagina](https://open.noaberkracht.nl) | Zaaksysteem.nl | Productie |
-| [Hoeksche Waard](https://www.gemeentehw.nl/) | Gemeente | [Pagina](https://hoekschewaard.accept.openwoo.app/) | DECOS    | Acceptatie  |
-| [Helmond](https://www.helmond.nl/) | Gemeente | [Pagina](https://helmond.accept.openwoo.app/) | Djuma           | Acceptatie       |
+| Organisatie                                                                 | Type                 | Woo Pagina                                          | Woo Bron                                       | Status     |
+| --------------------------------------------------------------------------- | -------------------- | --------------------------------------------------- | ---------------------------------------------- | ---------- |
+| [Noordwijk](https://www.noordwijk.nl/)                                      | Gemeente             | [Pagina](open.noordwijk.nl)                         | Zaaksysteem.nl                                 | Productie  |
+| [Epe](https://www.epe.nl/)                                                  | Gemeente             | [Pagina](https://open.epe.nl/)                      | Zaaksysteem.nl                                 | Productie  |
+| [Roosendaal](https://www.roosendaal.nl/)                                    | Gemeente             | [Pagina](https://open.roosendaal.nl/)               | Zaaksysteem.nl                                 | Productie  |
+| [Zutphen](https://www.zutphen.nl/)                                          | Gemeente             | [Pagina](https://open.zutphen.nl/)                  | Zaaksysteem.nl                                 | Productie  |
+| [Tubbergen](https://www.tubbergen.nl/)                                      | Gemeente             | [Pagina](https://open.tubbergen.nl)                 | Zaaksysteem.nl                                 | Productie  |
+| [Dinkelland](https://www.dinkelland.nl/)                                    | Gemeente             | [Pagina](https://open.dinkelland.nl)                | Zaaksysteem.nl                                 | Productie  |
+| [Moerdijk](https://www.moerdijk.nl/)                                        | Gemeente             | [Pagina](https://open.moerdijk.nl/)                 | Zaaksysteem.nl                                 | Productie  |
+| [Gooise Meren](https://www.gooisemeren.nl/)                                 | Gemeente             | [Pagina](https://open.gooisemeren.nl)               | Zaaksysteem.nl                                 | Productie  |
+| [Hof van Twente](https://www.hofvantwente.nl/)                              | Gemeente             | [Pagina](https://open.hofvantwente.nl/)             | Zaaksysteem.nl                                 | Productie  |
+| [Gouda](https://www.gouda.nl/)                                              | Gemeente             | [Pagina](https://open.gouda.nl/)                    | Zaaksysteem.nl                                 | Productie  |
+| [Tilburg](https://www.tilburg.nl/)                                          | Gemeente             | [Pagina](https://open.tilburg.nl/)                  | Zaaksysteem.nl, Sharepoint, RXMission, Notubiz | Productie  |
+| [Noaberkracht](https://www.dinkelland.nl/noaberkracht-dinkelland-tubbergen) | Samenwerkingsverband | [Pagina](https://open.noaberkracht.nl)              | Zaaksysteem.nl                                 | Productie  |
+| [Hoeksche Waard](https://www.gemeentehw.nl/)                                | Gemeente             | [Pagina](https://hoekschewaard.accept.openwoo.app/) | DECOS                                          | Acceptatie |
+| [Helmond](https://www.helmond.nl/)                                          | Gemeente             | [Pagina](https://helmond.accept.openwoo.app/)       | Djuma                                          | Acceptatie |
 
 ## Toekomstplannen
 
