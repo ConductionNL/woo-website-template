@@ -1,0 +1,14 @@
+name: Branch Protection
+
+on:
+  pull_request:
+    branches: [main, beta]
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  branch-protection:
+    uses: ConductionNL/woo-website-template/.github/workflows/branch-protection-check.yml@update-workflow
+    secrets: inherit
