@@ -10,5 +10,5 @@ permissions:
 
 jobs:
   branch-protection:
-    uses: ConductionNL/woo-website-template/.github/workflows/branch-protection-check.yml@update-workflow
+    uses: ConductionNL/woo-website-template/.github/workflows/branch-protection-check.yml@main
     secrets: inherit
