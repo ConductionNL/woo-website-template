@@ -1,0 +1,44 @@
+name: Branch Protection check
+
+on:
+  workflow_call:
+
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate source branch
+        run: |
+          TARGET="${{ github.base_ref }}"
+          SOURCE="${{ github.head_ref }}"
+
+          echo "PR: $SOURCE → $TARGET"
+
+          if [[ "$TARGET" == "main" || "$TARGET" == "master" ]]; then
+            if [[ "$SOURCE" != "beta" ]] && ! [[ "$SOURCE" =~ ^hotfix ]] && ! [[ "$SOURCE" =~ ^docs/ ]] && ! [[ "$SOURCE" != "Rem-Dam-patch-6" ]]; then
+              echo "::error::Pull requests to main must come from 'beta', a 'hotfix/*' branch, or a 'docs/*' branch."
+              echo ""
+              echo "Allowed patterns:"
+              echo "  beta → main"
+              echo "  hotfix/* → main"
+              echo "  docs/* → main"
+              echo ""
+              echo "Your branch '$SOURCE' does not match any allowed pattern."
+              exit 1
+            fi
+
+          elif [[ "$TARGET" == "beta" ]]; then
+            if [[ "$SOURCE" != "development" ]] && ! [[ "$SOURCE" =~ ^hotfix ]] && [[ "$SOURCE" != "main" ]] && [[ "$SOURCE" != "master" ]]; then
+              echo "::error::Pull requests to beta must come from 'development', 'main', or a 'hotfix/*' branch."
+              echo ""
+              echo "Allowed patterns:"
+              echo "  development → beta"
+              echo "  hotfix/* → beta"
+              echo "  main → beta (backport)"
+              echo ""
+              echo "Your branch '$SOURCE' does not match any allowed pattern."
+              exit 1
+            fi
+          fi
+
+          echo "✓ Branch check passed: $SOURCE → $TARGET"
